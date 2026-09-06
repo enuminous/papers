@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>EFMW Lab — Monolithic candidate physics</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<style>
+  :root{
+    --bg:#07090e;--panel:#10151f;--ink:#e8eef8;--muted:#8b97ab;
+    --line:#1e2a3d;--accent:#7ad7ff;--warm:#ffb86b;--good:#7dffb3;--bad:#ff6b8a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 ui-sans-serif,system-ui,Segoe UI,sans-serif}
+  header{padding:28px 22px 10px;border-bottom:1px solid var(--line)}
+  header h1{margin:0;font-size:28px;letter-spacing:.02em}
+  header p{color:var(--muted);max-width:72ch;margin:8px 0 0}
+  nav{display:flex;gap:8px;flex-wrap:wrap;padding:14px 22px}
+  nav button{background:#182132;border:1px solid var(--line);color:var(--ink);padding:8px 12px;border-radius:999px;cursor:pointer}
+  nav button.on{background:#1c3a4f;border-color:var(--accent);color:var(--accent)}
+  main{padding:0 22px 48px;display:grid;gap:18px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+  .row{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+  @media(max-width:900px){.row{grid-template-columns:1fr}}
+  label{display:block;color:var(--muted);font-size:12px;margin:10px 0 4px}
+  input[type=range]{width:100%}
+  canvas{width:100%;background:#0b1018;border-radius:12px;border:1px solid var(--line)}
+  .eq{overflow-x:auto;padding:8px 0}
+  .zoo{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+  .zoo a{display:block;padding:10px;border:1px solid var(--line);border-radius:12px;color:var(--ink);text-decoration:none;background:#0d1420}
+  .zoo a:hover{border-color:var(--accent)}
+  .muted{color:var(--muted)}
+  .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .actions button,.actions a{background:#183046;border:1px solid var(--accent);color:var(--accent);padding:8px 12px;border-radius:10px;cursor:pointer;text-decoration:none}
+  .pill{display:inline-block;border:1px solid var(--line);padding:2px 8px;border-radius:999px;color:var(--muted);font-size:12px}
+  footer{color:var(--muted);padding:8px 22px 40px;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="pill">github.com/enuminous · candidate models</div>
+  <h1>EFMW Lab</h1>
+  <p>Single-page experiment bench for the public Einstein–Feynman–Maxwell–Wright corpus: Monolithic 102 equations, Lean-derived candidate laws, and the Zoo of adversarial test frameworks. Tune parameters, watch the kinematics, export a share card.</p>
+</header>
+<nav>
+  <button class="on" data-tab="laws">Candidate laws</button>
+  <button data-tab="eqs">Core equations</button>
+  <button data-tab="zoo">Zoo repos</button>
+  <button data-tab="share">Share / PNG</button>
+</nav>
+<main>
+<section class="card" id="laws">
+  <div class="row">
+    <div>
+      <h2>I. Scalar preferred cone</h2>
+      <p class="muted">Source-free reduction of the original EFMW scalar equation. Characteristic speed \(v = c/\sqrt{1-\alpha^2}\). \(\alpha=0\) recovers lightlike propagation.</p>
+      <div class="eq" data-tex="\Box\phi - \frac{\alpha^2}{c^2}\partial_t^2\phi = \frac{4\pi}{c^2}(E+Pc)"></div>
+      <label>α (coupling) = <span id="aVal">0.35</span></label>
+      <input id="alpha" type="range" min="0" max="0.85" step="0.01" value="0.35"/>
+      <p>Phase speed relative to \(c\): <b id="vchar">1.07</b> c</p>
+      <canvas id="wave" height="220"></canvas>
+    </div>
+    <div>
+      <h2>III. Rotation–curvature degeneracy</h2>
+      <p class="muted">Homogeneous rotation term \(\Omega_U^2/a^2\) is algebraically degenerate with spatial curvature: \(k_{\rm eff}=k-\Omega_U^2\).</p>
+      <div class="eq" data-tex="k_{\mathrm{eff}}=k-\Omega_U^2"></div>
+      <label>k = <span id="kVal">0.20</span></label>
+      <input id="k" type="range" min="-1" max="1" step="0.01" value="0.20"/>
+      <label>Ω<sub>U</sub> = <span id="ouVal">0.40</span></label>
+      <input id="ou" type="range" min="0" max="1.2" step="0.01" value="0.40"/>
+      <p>\(k_{\rm eff}\) = <b id="keff">0.04</b></p>
+      <canvas id="cosmo" height="220"></canvas>
+    </div>
+  </div>
+  <div class="row" style="margin-top:16px">
+    <div>
+      <h2>II. Wright–Bianchi exchange</h2>
+      <p class="muted">If \(I_{\mu\nu}\) is embedded in Einstein’s equation, covariant conservation forces an exchange between matter, scalar stress, and curvature.</p>
+      <div class="eq" data-tex="G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G(T_{\mu\nu}+\kappa I_{\mu\nu})"></div>
+      <label>κ (info coupling) = <span id="kapVal">0.25</span></label>
+      <input id="kappa" type="range" min="0" max="1" step="0.01" value="0.25"/>
+      <canvas id="exchange" height="180"></canvas>
+    </div>
+    <div>
+      <h2>IV. Recursive coherence–Lyapunov</h2>
+      <p class="muted">Order parameter on a double-well \(U(\Phi)=\frac{a}{4}\Phi^4-\frac{b}{2}\Phi^2\). Gradient flow drives \(\Phi\) toward a coherent well.</p>
+      <div class="eq" data-tex="U(\Phi)=\frac{a}{4}\Phi^4-\frac{b}{2}\Phi^2"></div>
+      <label>Φ₀ = <span id="phiVal">0.20</span></label>
+      <input id="phi0" type="range" min="-1.4" max="1.4" step="0.01" value="0.20"/>
+      <canvas id="lyap" height="180"></canvas>
+    </div>
+  </div>
+</section>
+
+<section class="card" id="eqs" hidden>
+  <h2>Signature equations from Monolithic_102_EFMW</h2>
+  <p class="muted">Preserved corpus labels. Status in the source ranges from standard operators to working hypotheses and hypothetical extensions.</p>
+  <div class="eq" data-tex="I_{\mu\nu}=\nabla_\mu\phi\nabla_\nu\phi-\tfrac12 g_{\mu\nu}\nabla_\alpha\phi\nabla^\alpha\phi-g_{\mu\nu}V(\phi)+R_{\mu\nu}"></div>
+  <p>ME-006 Wright informational tensor</p>
+  <div class="eq" data-tex="G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}+8\pi G\kappa I_{\mu\nu}"></div>
+  <p>ME-007 / ME-008 modified Einstein / unity field</p>
+  <div class="eq" data-tex="\tau_\Phi\dot\Phi=b\Phi-a\Phi^3-\kappa_\Phi\|x-m\|^2-\eta_\Phi\|\dot x-\dot m\|^2+\gamma R+\sigma\xi(t)"></div>
+  <p>ME-024 coherence order-parameter kernel</p>
+  <p><a href="https://github.com/enuminous/Monolithic_102_EFMW" style="color:var(--accent)">Open the 102-equation archive</a>
+     · <a href="https://enuminous.substack.com/p/candidate-physics-from-the-efmwaristotle" style="color:var(--accent)">Candidate-law note</a></p>
+</section>
+
+<section class="card" id="zoo" hidden>
+  <h2>EFMW Zoo — public experiment repos</h2>
+  <p class="muted">Each animal is a specialized adversarial viewpoint on complex-system claims. Click through to the live GitHub repos.</p>
+  <div class="zoo" id="zooGrid"></div>
+</section>
+
+<section class="card" id="share" hidden>
+  <h2>Share this run</h2>
+  <p class="muted">URL updates live. PNG is drawn from the current parameter set so people can quote a specific experiment.</p>
+  <p>Share link: <code id="shareUrl"></code></p>
+  <div class="actions">
+    <button id="copy">Copy URL</button>
+    <button id="png">Download PNG card</button>
+    <a href="https://github.com/enuminous" target="_blank">All repos</a>
+  </div>
+  <canvas id="card" width="1200" height="675" style="margin-top:14px"></canvas>
+</section>
+</main>
+<footer>
+  Independent corpus by Matthew Chenoweth Wright / Monolithic LLC. This page is an interface to public GitHub + Substack material. It does not certify empirical validity. Falsifiers from the candidate-law note: scalar speed indistinguishable from c ⇒ α≈0; unused extra cosmological observables leave rotation/curvature degenerate; coherence score with no predictive lift over residuals knocks out Law IV.
+</footer>
+<script>
+const $ = s => document.querySelector(s);
+const animals = [
+  ["Tortoise","minimal falsifiable scaffold"],["Eagle","early gradient-loss warning"],
+  ["Wolf","weak multi-channel failure"],["Bat","hostile baseline attacks"],
+  ["Horse","human–system loop"],["Lynx","novelty of behavior"],
+  ["Butterfly","perturbation spread"],["Axolotl","regenerative state"],
+  ["Bonobo","cooperative signaling"],["Rhino","robust mass/inertia"],
+  ["Falcon","fast pursuit tracking"],["Whale","long-memory fields"],
+  ["Cobra","strike latency"],["Phoenix","recovery after collapse"],
+  ["Termite","swarm construction"],["Mole","hidden-state inference"],
+  ["Orca","coordinated hunt"],["Salmon","return-path memory"],
+  ["Weasel","narrow-gap search"],["Bison","herd coherence"],
+  ["EFMW","tutor / overview app"],["Monolithic_102_EFMW","102-equation corpus"]
+];
+$("#zooGrid").innerHTML = animals.map(([n,d]) =>
+  `<a href="https://github.com/enuminous/${n}" target="_blank"><b>${n}</b><br><span class="muted">${d}</span></a>`
+).join("");
+
+document.querySelectorAll("nav button").forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll("nav button").forEach(x=>x.classList.remove("on"));
+    b.classList.add("on");
+    ["laws","eqs","zoo","share"].forEach(id => $("#"+id).hidden = b.dataset.tab!==id);
+    if(b.dataset.tab==="share") drawCard();
+  };
+});
+
+function state(){
+  return {
+    a:+$("#alpha").value, k:+$("#k").value, ou:+$("#ou").value,
+    kap:+$("#kappa").value, phi:+$("#phi0").value
+  };
+}
+function applyHash(){
+  const h=new URLSearchParams(location.hash.slice(1));
+  if(h.has("a")) $("#alpha").value=h.get("a");
+  if(h.has("k")) $("#k").value=h.get("k");
+  if(h.has("ou")) $("#ou").value=h.get("ou");
+  if(h.has("kap")) $("#kappa").value=h.get("kap");
+  if(h.has("phi")) $("#phi0").value=h.get("phi");
+}
+function writeHash(){
+  const s=state();
+  const q=`a=${s.a}&k=${s.k}&ou=${s.ou}&kap=${s.kap}&phi=${s.phi}`;
+  history.replaceState(null,"","#"+q);
+  $("#shareUrl").textContent=location.href;
+}
+applyHash();
+
+function vchar(a){return 1/Math.sqrt(1-a*a)}
+let t=0, Phi= +$("#phi0").value, dPhi=0;
+function tick(){
+  const s=state();
+  $("#aVal").textContent=s.a.toFixed(2);
+  $("#kVal").textContent=s.k.toFixed(2);
+  $("#ouVal").textContent=s.ou.toFixed(2);
+  $("#kapVal").textContent=s.kap.toFixed(2);
+  $("#phiVal").textContent=s.phi.toFixed(2);
+  $("#vchar").textContent=vchar(s.a).toFixed(3);
+  $("#keff").textContent=(s.k-s.ou*s.ou).toFixed(3);
+  writeHash();
+  drawWave(s.a,t);
+  drawCosmo(s.k,s.ou);
+  drawEx(s.kap);
+  stepLyap(s.phi);
+  t+=0.04;
+  requestAnimationFrame(tick);
+}
+function drawWave(a,t){
+  const c=$("#wave"),x=c.getContext("2d");
+  const W=c.width=c.clientWidth,H=c.height=220;
+  x.fillStyle="#0b1018";x.fillRect(0,0,W,H);
+  const v=vchar(a);
+  x.strokeStyle="#2a3b55";x.beginPath();x.moveTo(0,H/2);x.lineTo(W,H/2);x.stroke();
+  x.strokeStyle="#7ad7ff";x.beginPath();
+  for(let i=0;i<W;i++){
+    const y=H/2+Math.sin((i/W*8*Math.PI)-t*v*3)*42*(1+0.15*a);
+    i?x.lineTo(i,y):x.moveTo(i,y);
+  }
+  x.stroke();
+  x.fillStyle="#ffb86b";x.fillText("lightlike marker c",12,18);
+  x.strokeStyle="#ffb86b55";x.beginPath();
+  for(let i=0;i<W;i++){
+    const y=H/2+Math.sin((i/W*8*Math.PI)-t*3)*18;
+    i?x.lineTo(i,y):x.moveTo(i,y);
+  }
+  x.stroke();
+}
+function drawCosmo(k,ou){
+  const c=$("#cosmo"),x=c.getContext("2d");
+  const W=c.width=c.clientWidth,H=c.height=220;
+  x.fillStyle="#0b1018";x.fillRect(0,0,W,H);
+  const keff=k-ou*ou;
+  function H2(kk,a){return 0.7 + 0.3/(a*a) - kk/(a*a)}
+  x.strokeStyle="#7ad7ff";x.beginPath();
+  for(let i=0;i<W;i++){
+    const a=0.4+i/W*1.6, y=H-30-H2(k,a)*40;
+    i?x.lineTo(i,y):x.moveTo(i,y);
+  }
+  x.stroke();
+  x.strokeStyle="#ffb86b";x.beginPath();
+  for(let i=0;i<W;i++){
+    const a=0.4+i/W*1.6, y=H-30-H2(keff,a)*40;
+    i?x.lineTo(i,y):x.moveTo(i,y);
+  }
+  x.stroke();
+  x.fillStyle="#8b97ab";
+  x.fillText("cyan: EFMW (k,ΩU)   amber: ΛCDM(k_eff)",12,18);
+}
+function drawEx(kap){
+  const c=$("#exchange"),x=c.getContext("2d");
+  const W=c.width=c.clientWidth,H=c.height=180;
+  x.fillStyle="#0b1018";x.fillRect(0,0,W,H);
+  const parts=[["T",0.45],["κ I_φ",0.25+kap*0.35],["κ R",0.12+kap*0.2]];
+  let X=40;
+  parts.forEach(([n,w],i)=>{
+    const ww=w* (W-80);
+    x.fillStyle=["#7ad7ff","#ffb86b","#7dffb3"][i];
+    x.fillRect(X,80,ww,36);
+    x.fillStyle="#e8eef8";x.fillText(n,X+6,74);
+    X+=ww+8;
+  });
+  x.fillStyle="#8b97ab";x.fillText("budget of sources in Gμν  (schematic)",12,24);
+}
+function U(P){return 0.25*P*P*P*P - 0.5*P*P}
+function dU(P){return P*P*P - P}
+function stepLyap(targetInit){
+  // slowly attract from slider only when user changes it a lot
+  if(Math.abs(Phi-targetInit)>1.2) {Phi=targetInit; dPhi=0}
+  dPhi += -0.04*dU(Phi) - 0.08*dPhi;
+  Phi += dPhi;
+  const c=$("#lyap"),x=c.getContext("2d");
+  const W=c.width=c.clientWidth,H=c.height=180;
+  x.fillStyle="#0b1018";x.fillRect(0,0,W,H);
+  x.strokeStyle="#7ad7ff";x.beginPath();
+  for(let i=0;i<W;i++){
+    const p=-1.6+i/W*3.2, y=H-30-U(p)*55;
+    i?x.lineTo(i,y):x.moveTo(i,y);
+  }
+  x.stroke();
+  const px=(Phi+1.6)/3.2*W, py=H-30-U(Phi)*55;
+  x.fillStyle="#ff6b8a";x.beginPath();x.arc(px,py,6,0,6.28);x.fill();
+  x.fillStyle="#8b97ab";x.fillText("ball = Φ(t) on U(Φ)",12,20);
+}
+function drawCard(){
+  const s=state(), c=$("#card"),x=c.getContext("2d");
+  const W=c.width,H=c.height;
+  x.fillStyle="#07090e";x.fillRect(0,0,W,H);
+  x.fillStyle="#7ad7ff";x.font="bold 42px sans-serif";
+  x.fillText("EFMW experiment card",48,80);
+  x.fillStyle="#e8eef8";x.font="22px sans-serif";
+  x.fillText("github.com/enuminous · candidate physics bench",48,120);
+  x.font="28px ui-monospace,monospace";
+  const lines=[
+    `α = ${s.a.toFixed(2)}   v_char = ${vchar(s.a).toFixed(3)} c`,
+    `k = ${s.k.toFixed(2)}   ΩU = ${s.ou.toFixed(2)}   keff = ${(s.k-s.ou*s.ou).toFixed(3)}`,
+    `κ = ${s.kap.toFixed(2)}   Φ = ${s.phi.toFixed(2)}`,
+    "Laws: preferred cone · Wright–Bianchi · rot/curv degeneracy · Lyapunov coherence"
+  ];
+  lines.forEach((L,i)=>{x.fillText(L,48,210+i*56)});
+  x.fillStyle="#8b97ab";x.font="18px sans-serif";
+  x.fillText("Not a claim of established physics. Replay parameters in the URL hash.",48,H-48);
+}
+$("#copy").onclick=()=>{navigator.clipboard.writeText(location.href)};
+$("#png").onclick=()=>{
+  drawCard();
+  const a=document.createElement("a");
+  a.download="efmw-experiment.png";
+  a.href=$("#card").toDataURL("image/png");
+  a.click();
+};
+document.querySelectorAll("[data-tex]").forEach(el=>{
+  if(window.katex) katex.render(el.dataset.tex, el, {throwOnError:false, displayMode:true});
+});
+tick();
+</script>
+</body>
+</html>
