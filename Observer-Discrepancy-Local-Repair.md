@@ -49,7 +49,7 @@ For gain \(\eta\in\mathbb R\), the synchronous repair rule is
 T_\eta(x)_i=x_i-\eta r_i(x).
 \]
 
-The Lean source proves that if \(r\) is locally determined, then the coordinate update \(T_\eta(x)_i\) is locally determined too. This is an information-flow result: the update at \(i\) reads only \(x_i\) and the declared neighbors through the residual rule.
+The Lean source contains a proof script for the claim that if \(r\) is locally determined, then the coordinate update \(T_\eta(x)_i\) is locally determined too. This is an information-flow result: the update at \(i\) reads only \(x_i\) and the declared neighbors through the residual rule.
 
 ### Proposition 1 — Fixed point characterization
 
@@ -108,7 +108,7 @@ Starting at \((0,1)\), the system alternates exactly between \((0,1)\) and \((1,
 
 For non-uniqueness, the identity update \(I(x)=x\) fixes every state. It has at least the distinct equilibria \((0,0)\) and \((1,0)\). The example falsifies an unconditional uniqueness claim. It is a counterexample to uniqueness without contraction, not an instance of the nonzero-residual repair rule in Proposition 1.
 
-The examples are exact algebraic checks in the source. They do not establish a general instability criterion or describe measured EFMW behavior.
+The source contains direct proof scripts for these exact finite facts, but those scripts remain pending kernel validation. The examples do not establish a general instability criterion or describe measured EFMW behavior.
 
 ## 5. Formalization and evidence status
 
