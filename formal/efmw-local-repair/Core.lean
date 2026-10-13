@@ -143,7 +143,7 @@ def identityPair (x : ℝ × ℝ) : ℝ × ℝ := x
 theorem identityPair_has_two_fixed_points :
     identityPair (0, 0) = (0, 0) ∧
     identityPair (1, 0) = (1, 0) ∧
-    (0, 0 : ℝ × ℝ) ≠ (1, 0) := by
+    ((0, 0) : ℝ × ℝ) ≠ (1, 0) := by
   norm_num [identityPair]
 
 end EFMW.LocalRepair
