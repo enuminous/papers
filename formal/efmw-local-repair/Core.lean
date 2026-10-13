@@ -144,6 +144,9 @@ theorem identityPair_has_two_fixed_points :
     identityPair (0, 0) = (0, 0) ∧
     identityPair (1, 0) = (1, 0) ∧
     ((0, 0) : ℝ × ℝ) ≠ (1, 0) := by
-  norm_num [identityPair]
+  refine ⟨rfl, rfl, ?_⟩
+  intro h
+  have hfirst := congrArg Prod.fst h
+  norm_num at hfirst
 
 end EFMW.LocalRepair
