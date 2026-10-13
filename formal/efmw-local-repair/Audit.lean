@@ -1,13 +1,13 @@
 import Lean
 import EFMWLocalRepair
-import EFMWLocalRepair.Core
+import Core
 
 /-! Audit every safe declaration defined in the listed project modules. -/
 
 open Lean in
 run_cmd do
   let env ← getEnv
-  let modules : Array Name := #[`EFMWLocalRepair, `EFMWLocalRepair.Core]
+  let modules : Array Name := #[`EFMWLocalRepair, `Core]
   let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
   let mut count := 0
   let mut theoremCount := 0
