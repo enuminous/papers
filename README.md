@@ -43,6 +43,7 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 - [OPH_FINITE_LATTICE_PROGRESS_AND_FORMALIZATION.md](OPH_FINITE_LATTICE_PROGRESS_AND_FORMALIZATION.md)
 - [Observer-Discrepancy-Local-Repair.md](Observer-Discrepancy-Local-Repair.md)
 - [One-Brain-To-Rule-Them-All.md](One-Brain-To-Rule-Them-All.md)
+- [Recursive-Coherence-Monitoring-Synthetic-Control-Degradation.md](Recursive-Coherence-Monitoring-Synthetic-Control-Degradation.md)
 - [Self-Replicating-Prompt-Injections-Coherence-Parasites.md](Self-Replicating-Prompt-Injections-Coherence-Parasites.md)
 - [Systemic-Corpus-Valuation.md](Systemic-Corpus-Valuation.md)
 - [THEOREMS_IN_PLAIN_ENGLISH.md](THEOREMS_IN_PLAIN_ENGLISH.md)
