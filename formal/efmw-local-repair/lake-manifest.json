@@ -111,6 +111,6 @@
       "configFile": "lakefile.toml"
     }
   ],
-  "name": "efmw-local-repair",
+  "name": "\u00abefmw-local-repair\u00bb",
   "lakeDir": ".lake"
 }
