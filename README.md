@@ -32,6 +32,7 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [From Finite Certificates to Continuum Scalar Dynamics: A Verified Bridge for the Frozen EFMW C1 Action](EFMW-C1-Scalar-Continuum-Bridge.md) — 14 October 2026. Real polynomial semantics, conditional scalar action variation, and verified GitHub execution; explicit assumptions and remaining physical obligations.
 - [ARISTOTLE_156_TOTAL_NOVELTY_AUDIT.md](ARISTOTLE_156_TOTAL_NOVELTY_AUDIT.md)
 - [CLAUDE-EFMW-EXP-001.md](CLAUDE-EFMW-EXP-001.md)
 - [Devs2.0-EFMW.md](Devs2.0-EFMW.md)
