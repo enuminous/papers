@@ -92,7 +92,7 @@ for \(c\ne0\) and ContDiff ℝ 2 f. The proof unfolds the explicit metric, Hessi
 | Build and axiom audit | Build both Lean packages; run source-correspondence checks, strict axiom audits, audit rejection controls, and dependency-pin checks. | **Pass.** Both jobs in workflow run 38793976970 completed successfully. |
 | Novelty screen | Compare the flat operator with standard mathematical-physics formulations. | **Equivalent / reparameterized.** The flat d’Alembertian with this signature is established; novelty is not claimed. |
 
-No Zoo-animal sweep or empirical study is reported in this paper. The evidence is a proof-checked symbolic identity and its repository verification record. The standard flat expression is given, for example, in the TU Delft *Introduction to Quantum Mechanics*, section 6.1.2, equation 6.13, with the same mostly-negative spatial signs and the \(c\)-scaled time derivative. The broader theory of wave operators on Lorentzian manifolds is treated by Bär, Ginoux, and Pfäffle [5, 6].
+No Zoo-animal sweep or empirical study is reported in this paper. The evidence is a proof-checked symbolic identity and its repository verification record. The standard flat expression is given, for example, in the TU Delft *Introduction to Quantum Mechanics*, section 6.1.2, equation 6.13, with the same mostly-negative spatial signs and the \(c\)-scaled time derivative. The broader theory of wave operators on Lorentzian manifolds is treated by Bär, Ginoux, and Pfäffle [5].
 
 ## 4. What the proof establishes—and what it does not
 
