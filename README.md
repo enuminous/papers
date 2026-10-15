@@ -32,6 +32,9 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [ME-003 in Flat Minkowski Spacetime: A Formal Discovery Paper](ME-003_Flat_Minkowski_Specialization_Discovery.md) — 15 October 2026. Lean-verified equality between the scalar metric contraction and ME-004 under explicit flat (+---) assumptions; the complete covariant formalization remains open.
+## Documents
+
 - [From Finite Certificates to Continuum Scalar Dynamics: A Verified Bridge for the Frozen EFMW C1 Action](EFMW-C1-Scalar-Continuum-Bridge.md) — 14 October 2026. Real polynomial semantics, conditional scalar action variation, and verified GitHub execution; explicit assumptions and remaining physical obligations.
 - [ARISTOTLE_156_TOTAL_NOVELTY_AUDIT.md](ARISTOTLE_156_TOTAL_NOVELTY_AUDIT.md)
 - [CLAUDE-EFMW-EXP-001.md](CLAUDE-EFMW-EXP-001.md)
