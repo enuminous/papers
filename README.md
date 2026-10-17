@@ -32,6 +32,7 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [Exact Parity in a Three-Prime Elliptic-Curve Image: A Lean-Verified Contribution to a Birch–Swinnerton-Dyer Audit](BSD-Three-Prime-Parity-and-Fixed-Invariants.md) — 17 October 2026. Constructive parity characterization of the 2,800-element image of four named points, fixed-invariant coefficient specification, and regulator normalization. Includes the 52-declaration [proof package](formal/bsd-parity/README.md); the actual L-function bridge and BSD remain unproved by this work.
 - [Two Paths to Rotation: From Cosmological Motivation to Clifford Algebra](Two-Paths-to-Rotation.md) — 17 October 2026. Proposed joint paper by Matthew Chenoweth Wright and Chris Forrester, pending Forrester's review and authorship acceptance. Traces the documented pathways and derives the rigid-rotation bridge, with explicit mathematical and cosmological limits.
 - [ME-003 in Flat Minkowski Spacetime: A Formal Discovery Paper](ME-003_Flat_Minkowski_Specialization_Discovery.md) — 15 October 2026. Lean-verified equality between the scalar metric contraction and ME-004 under explicit flat (+---) assumptions; the complete covariant formalization remains open.
 - [From Finite Certificates to Continuum Scalar Dynamics: A Verified Bridge for the Frozen EFMW C1 Action](EFMW-C1-Scalar-Continuum-Bridge.md) — 14 October 2026. Real polynomial semantics, conditional scalar action variation, and verified GitHub execution; explicit assumptions and remaining physical obligations.

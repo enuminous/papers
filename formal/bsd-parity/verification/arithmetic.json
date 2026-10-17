@@ -1,0 +1,94 @@
+{
+  "curve_coefficients": [
+    1,
+    -1,
+    0,
+    -79,
+    289
+  ],
+  "named_points": [
+    [
+      6,
+      -1
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      -2
+    ],
+    [
+      7,
+      3
+    ]
+  ],
+  "finite_curves": [
+    {
+      "prime": 5,
+      "curve_order": 10,
+      "generator": [
+        1,
+        0
+      ],
+      "point_logs": [
+        9,
+        5,
+        8,
+        7
+      ],
+      "extra_point_8_7_log": 4
+    },
+    {
+      "prime": 13,
+      "curve_order": 20,
+      "generator": [
+        0,
+        4
+      ],
+      "point_logs": [
+        6,
+        8,
+        17,
+        10
+      ],
+      "extra_point_8_7_log": 4
+    },
+    {
+      "prime": 19,
+      "curve_order": 28,
+      "generator": [
+        0,
+        2
+      ],
+      "point_logs": [
+        9,
+        21,
+        5,
+        25
+      ],
+      "extra_point_8_7_log": 22
+    }
+  ],
+  "joined_image_card": 2800,
+  "product_card": 5600,
+  "image_equals_even_parity_kernel": true,
+  "every_compatible_triple_has_verified_constructive_preimage": true,
+  "alternative_point_check": {
+    "point": [
+      8,
+      7
+    ],
+    "logs": [
+      4,
+      4,
+      22
+    ],
+    "rational_identity": "Q = -P1 - P4",
+    "enlarges_joined_image": false
+  },
+  "proves_BSD": false,
+  "proves_analytic_rank": false,
+  "proves_global_frame_saturation": false
+}

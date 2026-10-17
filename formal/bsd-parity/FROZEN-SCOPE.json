@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-17",
+  "upstream_commit": "916ab476012852778edd9ca63aecf200a8e90ed1",
+  "source_audit": "BSD-Zoo-Audit-2026-10-17",
+  "targets": [
+    "Prove an exact parity characterization of the joined finite-prime reduction image of the four displayed points.",
+    "Keep the refined coefficient product fixed before asserting equality, define the regulator as a determinant and track basis change."
+  ],
+  "not_claimed": [
+    "Universal BSD",
+    "Exact vanishing of the actual quadratic L-function coefficient",
+    "A complete construction of canonical heights or the actual L-function",
+    "Novelty of established finite-group or determinant identities"
+  ],
+  "success_criteria": [
+    "New Lean declarations compile with only allowed foundational axioms.",
+    "Finite curve arithmetic uses explicit coefficient model and is checked against Mathlib point formulas.",
+    "Every result identifies mathematical interpretation still requiring proof."
+  ]
+}

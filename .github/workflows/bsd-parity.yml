@@ -1,0 +1,51 @@
+name: BSD parity verification
+
+on:
+  push:
+    paths:
+      - 'formal/bsd-parity/**'
+      - 'BSD-Three-Prime-Parity-and-Fixed-Invariants.md'
+      - '.github/workflows/bsd-parity.yml'
+  pull_request:
+    paths:
+      - 'formal/bsd-parity/**'
+      - 'BSD-Three-Prime-Parity-and-Fixed-Invariants.md'
+      - '.github/workflows/bsd-parity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: formal/bsd-parity
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Check published package digests
+        run: sha256sum --check SHA256SUMS
+      - uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865 # v1
+        with:
+          lake-package-directory: formal/bsd-parity
+          auto-config: false
+          build: true
+          test: false
+          lint: false
+          use-mathlib-cache: true
+          use-github-cache: true
+      - name: Verify arithmetic and theorem axioms
+        run: bash verify.sh
+      - name: Check dependency pins and record result
+        run: |
+          git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json
+          {
+            echo '## BSD parity verification passed'
+            echo "Commit: $GITHUB_SHA"
+            echo "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+            echo "Toolchain: $(cat lean-toolchain)"
+            echo 'Passed: package digests, Lean build, exact arithmetic, named-theorem axiom audit, unchanged dependency declarations.'
+            echo 'Scope: finite reduction image and fixed-invariant specifications; no BSD proof claimed.'
+          } >> "$GITHUB_STEP_SUMMARY"

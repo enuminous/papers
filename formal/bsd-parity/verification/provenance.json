@@ -1,0 +1,68 @@
+{
+  "upstream_target_commit": "916ab476012852778edd9ca63aecf200a8e90ed1",
+  "lean_toolchain": "leanprover/lean4:v4.28.0",
+  "upstream_toolchain": "leanprover/lean4:v4.30.0-rc1",
+  "upstream_source_imported": false,
+  "dependencies": [
+    {
+      "name": "mathlib",
+      "manifest_commit": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+      "actual_commit": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+      "tracked_changes": ""
+    },
+    {
+      "name": "plausible",
+      "manifest_commit": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+      "actual_commit": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+      "tracked_changes": ""
+    },
+    {
+      "name": "LeanSearchClient",
+      "manifest_commit": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "actual_commit": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "tracked_changes": ""
+    },
+    {
+      "name": "importGraph",
+      "manifest_commit": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+      "actual_commit": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+      "tracked_changes": ""
+    },
+    {
+      "name": "proofwidgets",
+      "manifest_commit": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+      "actual_commit": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+      "tracked_changes": ""
+    },
+    {
+      "name": "aesop",
+      "manifest_commit": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+      "actual_commit": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+      "tracked_changes": ""
+    },
+    {
+      "name": "Qq",
+      "manifest_commit": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+      "actual_commit": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+      "tracked_changes": ""
+    },
+    {
+      "name": "batteries",
+      "manifest_commit": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+      "actual_commit": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+      "tracked_changes": "D docs/README.md"
+    },
+    {
+      "name": "Cli",
+      "manifest_commit": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+      "actual_commit": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+      "tracked_changes": ""
+    }
+  ],
+  "notes": [
+    "Standalone package, not an upstream build or modification.",
+    "Local dependencies reuse a previously downloaded Mathlib cache.",
+    "Batteries has a pre-existing deleted README.md; no tracked Lean source is changed.",
+    "The host runtime uses a path-lookup compatibility shim; normal installations do not need it."
+  ]
+}
