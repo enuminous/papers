@@ -32,9 +32,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [Two Paths to Rotation: From Cosmological Motivation to Clifford Algebra](Two-Paths-to-Rotation.md) — 17 October 2026. Proposed joint paper by Matthew Chenoweth Wright and Chris Forrester, pending Forrester's review and authorship acceptance. Traces the documented pathways and derives the rigid-rotation bridge, with explicit mathematical and cosmological limits.
 - [ME-003 in Flat Minkowski Spacetime: A Formal Discovery Paper](ME-003_Flat_Minkowski_Specialization_Discovery.md) — 15 October 2026. Lean-verified equality between the scalar metric contraction and ME-004 under explicit flat (+---) assumptions; the complete covariant formalization remains open.
-## Documents
-
 - [From Finite Certificates to Continuum Scalar Dynamics: A Verified Bridge for the Frozen EFMW C1 Action](EFMW-C1-Scalar-Continuum-Bridge.md) — 14 October 2026. Real polynomial semantics, conditional scalar action variation, and verified GitHub execution; explicit assumptions and remaining physical obligations.
 - [ARISTOTLE_156_TOTAL_NOVELTY_AUDIT.md](ARISTOTLE_156_TOTAL_NOVELTY_AUDIT.md)
 - [CLAUDE-EFMW-EXP-001.md](CLAUDE-EFMW-EXP-001.md)
