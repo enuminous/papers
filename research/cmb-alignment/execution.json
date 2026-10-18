@@ -1,0 +1,6 @@
+{
+  "started_utc": "2026-10-18T17:22:00.283Z",
+  "completed_utc": "2026-10-18T17:22:11.681Z",
+  "engine": "functions.exec V8 isolate; same dependency-free core as committed benchmark.js",
+  "code_io": "core evaluated directly; no Python or FITS pipeline executed"
+}

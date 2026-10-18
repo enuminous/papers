@@ -1,0 +1,136 @@
+{
+  "data_level": "Published rounded summary A23 measurements; not newly extracted from raw CMB maps.",
+  "source": {
+    "authors": "Copi, Huterer, Schwarz, Starkman",
+    "title": "Large-scale alignments from WMAP and Planck",
+    "journal": "MNRAS 449, 3458 (2015)",
+    "url": "https://arxiv.org/pdf/1311.4562v3",
+    "doi": "10.1093/mnras/stv501",
+    "tables": [
+      4,
+      5
+    ]
+  },
+  "selection": "Every compatible maximum-angular-momentum alignment value in retrieved Tables 4 and 5 is included; no minimum-p map selection. Values are correlated views of the same sky, not 13 independent detections.",
+  "rounding": "Half a unit of the last displayed decimal is a transcription precision interval, not an observational confidence interval.",
+  "systematic_scope": "Reweighting is restricted to ideal isotropic axis null. Original map reconstruction, noise, beams, masks and systematics are not re-estimated. DQ correction is the authors' specified treatment, not a claim of uniquely optimal present-day cleaning.",
+  "measurements": [
+    {
+      "id": "planck2013_wiener_nilc",
+      "map": "NILC",
+      "release": "Planck 2013",
+      "treatment": "Wiener-filtered; values reproduced from Planck 2013 Table 17",
+      "A": 0.974,
+      "A_rounding_halfwidth": 0.0005,
+      "source_table": "Copi et al. 2015 Table 4"
+    },
+    {
+      "id": "planck2013_wiener_sevem",
+      "map": "SEVEM",
+      "release": "Planck 2013",
+      "treatment": "Wiener-filtered; values reproduced from Planck 2013 Table 17",
+      "A": 0.988,
+      "A_rounding_halfwidth": 0.0005,
+      "source_table": "Copi et al. 2015 Table 4"
+    },
+    {
+      "id": "planck2013_wiener_smica",
+      "map": "SMICA",
+      "release": "Planck 2013",
+      "treatment": "Wiener-filtered; values reproduced from Planck 2013 Table 17",
+      "A": 0.977,
+      "A_rounding_halfwidth": 0.0005,
+      "source_table": "Copi et al. 2015 Table 4"
+    },
+    {
+      "id": "wmap_7yr_wmap_ilc_uncorrected",
+      "map": "WMAP ILC",
+      "release": "WMAP 7yr",
+      "treatment": "uncorrected; authors' full-sky/inpainting treatment",
+      "A": 0.9999,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5"
+    },
+    {
+      "id": "wmap_7yr_wmap_ilc_doppler_quadrupole_corrected",
+      "map": "WMAP ILC",
+      "release": "WMAP 7yr",
+      "treatment": "Doppler-quadrupole-corrected; authors' full-sky/inpainting treatment",
+      "A": 0.9966,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5"
+    },
+    {
+      "id": "wmap_9yr_wmap_ilc_uncorrected",
+      "map": "WMAP ILC",
+      "release": "WMAP 9yr",
+      "treatment": "uncorrected; authors' full-sky/inpainting treatment",
+      "A": 0.9985,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5"
+    },
+    {
+      "id": "wmap_9yr_wmap_ilc_doppler_quadrupole_corrected",
+      "map": "WMAP ILC",
+      "release": "WMAP 9yr",
+      "treatment": "Doppler-quadrupole-corrected; authors' full-sky/inpainting treatment",
+      "A": 0.9948,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5"
+    },
+    {
+      "id": "planck_2013_nilc_uncorrected",
+      "map": "NILC",
+      "release": "Planck 2013",
+      "treatment": "uncorrected; authors' full-sky/inpainting treatment",
+      "A": 0.9902,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5"
+    },
+    {
+      "id": "planck_2013_nilc_doppler_quadrupole_corrected",
+      "map": "NILC",
+      "release": "Planck 2013",
+      "treatment": "Doppler-quadrupole-corrected; authors' full-sky/inpainting treatment",
+      "A": 0.9988,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5"
+    },
+    {
+      "id": "planck_2013_sevem_uncorrected",
+      "map": "SEVEM",
+      "release": "Planck 2013",
+      "treatment": "uncorrected; authors' full-sky/inpainting treatment",
+      "A": 0.9915,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5"
+    },
+    {
+      "id": "planck_2013_sevem_doppler_quadrupole_corrected",
+      "map": "SEVEM",
+      "release": "Planck 2013",
+      "treatment": "Doppler-quadrupole-corrected; authors' full-sky/inpainting treatment",
+      "A": 0.9995,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5"
+    },
+    {
+      "id": "planck_2013_smica_uncorrected",
+      "map": "SMICA",
+      "release": "Planck 2013",
+      "treatment": "uncorrected; authors' full-sky/inpainting treatment",
+      "A": 0.9809,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5"
+    },
+    {
+      "id": "planck_2013_smica_doppler_quadrupole_corrected",
+      "map": "SMICA",
+      "release": "Planck 2013",
+      "treatment": "Doppler-quadrupole-corrected; authors' full-sky/inpainting treatment",
+      "A": 0.9965,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5"
+    }
+  ]
+}

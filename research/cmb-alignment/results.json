@@ -1,0 +1,1572 @@
+{
+  "protocol_id": "EFMW-CMB-ALIGNMENT-NULL-001",
+  "protocol_version": "1.0.0",
+  "verification": {
+    "checks": [
+      {
+        "name": "Galactic x",
+        "error": 0,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Galactic y",
+        "error": 6.123233995736766e-17,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Headless antipodes",
+        "error": 0,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Orthogonal axes",
+        "error": 0,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Common rotation invariance",
+        "error": 1.1102230246251565e-16,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Uniform sphere unit length",
+        "error": 0,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Planar m=+-ell axis l=2",
+        "error": 0,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Angular momentum trace l=2",
+        "error": 0,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Random alm trace l=2",
+        "error": 3.552713678800501e-15,
+        "tolerance": 1e-10,
+        "pass": true
+      },
+      {
+        "name": "Eigenpair residual l=2",
+        "error": 2.175583928816829e-15,
+        "tolerance": 1e-10,
+        "pass": true
+      },
+      {
+        "name": "Tensor rotation equivariance l=2",
+        "error": -2.220446049250313e-16,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "alm z rotation equivariance l=2",
+        "error": 0,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Planar m=+-ell axis l=3",
+        "error": 0,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Angular momentum trace l=3",
+        "error": 0,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "Random alm trace l=3",
+        "error": 2.842170943040401e-14,
+        "tolerance": 1e-10,
+        "pass": true
+      },
+      {
+        "name": "Eigenpair residual l=3",
+        "error": 2.1316282072803006e-14,
+        "tolerance": 1e-10,
+        "pass": true
+      },
+      {
+        "name": "Tensor rotation equivariance l=3",
+        "error": -2.220446049250313e-16,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "alm z rotation equivariance l=3",
+        "error": 0,
+        "tolerance": 1e-11,
+        "pass": true
+      },
+      {
+        "name": "RNG deterministic repeat",
+        "error": 0,
+        "tolerance": 0,
+        "pass": true
+      }
+    ],
+    "rng_first_uint32": [
+      2436903937,
+      2311198004,
+      3001827881,
+      3896286455,
+      2761435146,
+      2413752058,
+      3452957197,
+      2217811684
+    ]
+  },
+  "primary": {
+    "n": 1000000,
+    "mean": 0.500117797782245,
+    "variance": 0.08341496945258595,
+    "decile_counts": [
+      100168,
+      100099,
+      99625,
+      99513,
+      100307,
+      99943,
+      100057,
+      100381,
+      100056,
+      99851
+    ],
+    "ks_distance_to_uniform": 0.0007222003883526895,
+    "reject_at_005_count": 50136
+  },
+  "gaussian_harmonic_check": {
+    "n": 20000,
+    "mean": 0.500842783708426,
+    "variance": 0.08274608880362787,
+    "decile_counts": [
+      1954,
+      2015,
+      2000,
+      1931,
+      2055,
+      2072,
+      2022,
+      1984,
+      1952,
+      2015
+    ],
+    "ks_distance_to_uniform": 0.006377569049404452,
+    "reject_at_005_count": 1014
+  },
+  "harmonic_axes_abs_z": [
+    {
+      "n": 20000,
+      "mean": 0.5004246261778466,
+      "variance": 0.08343973034682689,
+      "decile_counts": [
+        2038,
+        1969,
+        1979,
+        1943,
+        2005,
+        2070,
+        2015,
+        2005,
+        1911,
+        2065
+      ],
+      "ks_distance_to_uniform": 0.004409811229677152,
+      "reject_at_005_count": 1029
+    },
+    {
+      "n": 20000,
+      "mean": 0.4975512697161933,
+      "variance": 0.0831310918581335,
+      "decile_counts": [
+        1984,
+        2049,
+        2087,
+        1916,
+        2003,
+        2001,
+        2028,
+        2016,
+        1929,
+        1987
+      ],
+      "ks_distance_to_uniform": 0.006605583682230798,
+      "reject_at_005_count": 958
+    }
+  ],
+  "look_elsewhere": {
+    "n": 100000,
+    "mean": 0.9747336779538528,
+    "variance": 0.0005284635540122553,
+    "decile_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1115,
+      98885
+    ],
+    "ks_distance_to_uniform": 0.8904649223402072,
+    "reject_at_005_count": 86194
+  },
+  "observations": [
+    {
+      "id": "planck2013_wiener_nilc",
+      "map": "NILC",
+      "release": "Planck 2013",
+      "treatment": "Wiener-filtered; values reproduced from Planck 2013 Table 17",
+      "A": 0.974,
+      "A_rounding_halfwidth": 0.0005,
+      "source_table": "Copi et al. 2015 Table 4",
+      "separation_degrees": 13.093923320570502,
+      "p_exact": 0.026000000000000023,
+      "p_rounding_range": [
+        0.025500000000000023,
+        0.026500000000000024
+      ],
+      "single_pair": {
+        "threshold": 0.974,
+        "exceedances": 26228,
+        "n": 1000000,
+        "p_mc": 0.026228973771026228,
+        "wilson95": [
+          0.02591658818999175,
+          0.026543051747282387
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.974,
+        "exceedances": 530,
+        "n": 20000,
+        "p_mc": 0.02654867256637168,
+        "wilson95": [
+          0.024363292149139563,
+          0.02881856599599151
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.974,
+        "exceedances": 62513,
+        "n": 100000,
+        "p_mc": 0.6251337486625134,
+        "wilson95": [
+          0.622124885501348,
+          0.628125501233097
+        ]
+      },
+      "bonferroni36": 0.9360000000000008
+    },
+    {
+      "id": "planck2013_wiener_sevem",
+      "map": "SEVEM",
+      "release": "Planck 2013",
+      "treatment": "Wiener-filtered; values reproduced from Planck 2013 Table 17",
+      "A": 0.988,
+      "A_rounding_halfwidth": 0.0005,
+      "source_table": "Copi et al. 2015 Table 4",
+      "separation_degrees": 8.885124270228085,
+      "p_exact": 0.01200000000000001,
+      "p_rounding_range": [
+        0.01150000000000001,
+        0.012500000000000011
+      ],
+      "single_pair": {
+        "threshold": 0.988,
+        "exceedances": 12070,
+        "n": 1000000,
+        "p_mc": 0.01207098792901207,
+        "wilson95": [
+          0.011857841408181488,
+          0.012285907303422756
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.988,
+        "exceedances": 240,
+        "n": 20000,
+        "p_mc": 0.012049397530123494,
+        "wilson95": [
+          0.01058190616083744,
+          0.013605521029920676
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.988,
+        "exceedances": 35559,
+        "n": 100000,
+        "p_mc": 0.3555964440355596,
+        "wilson95": [
+          0.35262869160619914,
+          0.3585624028689772
+        ]
+      },
+      "bonferroni36": 0.4320000000000004
+    },
+    {
+      "id": "planck2013_wiener_smica",
+      "map": "SMICA",
+      "release": "Planck 2013",
+      "treatment": "Wiener-filtered; values reproduced from Planck 2013 Table 17",
+      "A": 0.977,
+      "A_rounding_halfwidth": 0.0005,
+      "source_table": "Copi et al. 2015 Table 4",
+      "separation_degrees": 12.312251505818914,
+      "p_exact": 0.02300000000000002,
+      "p_rounding_range": [
+        0.02250000000000002,
+        0.02350000000000002
+      ],
+      "single_pair": {
+        "threshold": 0.977,
+        "exceedances": 23199,
+        "n": 1000000,
+        "p_mc": 0.0231999768000232,
+        "wilson95": [
+          0.02290578317614245,
+          0.02349588003259982
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.977,
+        "exceedances": 471,
+        "n": 20000,
+        "p_mc": 0.02359882005899705,
+        "wilson95": [
+          0.021538089558824112,
+          0.025744901599037983
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.977,
+        "exceedances": 57700,
+        "n": 100000,
+        "p_mc": 0.5770042299577004,
+        "wilson95": [
+          0.5739350925581698,
+          0.5800589918224924
+        ]
+      },
+      "bonferroni36": 0.8280000000000007
+    },
+    {
+      "id": "wmap_7yr_wmap_ilc_uncorrected",
+      "map": "WMAP ILC",
+      "release": "WMAP 7yr",
+      "treatment": "uncorrected; authors' full-sky/inpainting treatment",
+      "A": 0.9999,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5",
+      "separation_degrees": 0.810291437065655,
+      "p_exact": 0.00009999999999998899,
+      "p_rounding_range": [
+        0.000049999999999988984,
+        0.00014999999999998898
+      ],
+      "single_pair": {
+        "threshold": 0.9999,
+        "exceedances": 92,
+        "n": 1000000,
+        "p_mc": 0.000092999907000093,
+        "wilson95": [
+          0.00007502412149082159,
+          0.0001128166157474156
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.9999,
+        "exceedances": 5,
+        "n": 20000,
+        "p_mc": 0.0002999850007499625,
+        "wilson95": [
+          0.00010678963454394949,
+          0.0005851504035326238
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.9999,
+        "exceedances": 358,
+        "n": 100000,
+        "p_mc": 0.0035899641003589965,
+        "wilson95": [
+          0.0032284071247966565,
+          0.003969730949900289
+        ]
+      },
+      "bonferroni36": 0.0035999999999996035
+    },
+    {
+      "id": "wmap_7yr_wmap_ilc_doppler_quadrupole_corrected",
+      "map": "WMAP ILC",
+      "release": "WMAP 7yr",
+      "treatment": "Doppler-quadrupole-corrected; authors' full-sky/inpainting treatment",
+      "A": 0.9966,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5",
+      "separation_degrees": 4.726070715601736,
+      "p_exact": 0.0033999999999999586,
+      "p_rounding_range": [
+        0.0033499999999999585,
+        0.0034499999999999587
+      ],
+      "single_pair": {
+        "threshold": 0.9966,
+        "exceedances": 3556,
+        "n": 1000000,
+        "p_mc": 0.003556996443003557,
+        "wilson95": [
+          0.0034412227167471402,
+          0.0036745914069666228
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.9966,
+        "exceedances": 66,
+        "n": 20000,
+        "p_mc": 0.0033498325083745812,
+        "wilson95": [
+          0.002594930763312946,
+          0.004195837854821389
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.9966,
+        "exceedances": 11528,
+        "n": 100000,
+        "p_mc": 0.11528884711152888,
+        "wilson95": [
+          0.11331538652080007,
+          0.11727417006454584
+        ]
+      },
+      "bonferroni36": 0.12239999999999851
+    },
+    {
+      "id": "wmap_9yr_wmap_ilc_uncorrected",
+      "map": "WMAP ILC",
+      "release": "WMAP 9yr",
+      "treatment": "uncorrected; authors' full-sky/inpainting treatment",
+      "A": 0.9985,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5",
+      "separation_degrees": 3.1386114987545652,
+      "p_exact": 0.0014999999999999458,
+      "p_rounding_range": [
+        0.001449999999999946,
+        0.0015499999999999457
+      ],
+      "single_pair": {
+        "threshold": 0.9985,
+        "exceedances": 1616,
+        "n": 1000000,
+        "p_mc": 0.001616998383001617,
+        "wilson95": [
+          0.0015391655002325944,
+          0.0016966635282841362
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.9985,
+        "exceedances": 32,
+        "n": 20000,
+        "p_mc": 0.0016499175041247937,
+        "wilson95": [
+          0.0011336372618005737,
+          0.002257784278924517
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.9985,
+        "exceedances": 5274,
+        "n": 100000,
+        "p_mc": 0.052749472505274946,
+        "wilson95": [
+          0.05137177227293597,
+          0.05414258902453182
+        ]
+      },
+      "bonferroni36": 0.05399999999999805
+    },
+    {
+      "id": "wmap_9yr_wmap_ilc_doppler_quadrupole_corrected",
+      "map": "WMAP ILC",
+      "release": "WMAP 9yr",
+      "treatment": "Doppler-quadrupole-corrected; authors' full-sky/inpainting treatment",
+      "A": 0.9948,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5",
+      "separation_degrees": 5.845580909272243,
+      "p_exact": 0.005199999999999982,
+      "p_rounding_range": [
+        0.005149999999999983,
+        0.005249999999999982
+      ],
+      "single_pair": {
+        "threshold": 0.9948,
+        "exceedances": 5333,
+        "n": 1000000,
+        "p_mc": 0.005333994666005334,
+        "wilson95": [
+          0.005192138973343411,
+          0.005477661497878149
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.9948,
+        "exceedances": 100,
+        "n": 20000,
+        "p_mc": 0.0050497475126243686,
+        "wilson95": [
+          0.004113011324666333,
+          0.006077104370877246
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.9948,
+        "exceedances": 17128,
+        "n": 100000,
+        "p_mc": 0.17128828711712882,
+        "wilson95": [
+          0.16895753870349944,
+          0.17362771561323714
+        ]
+      },
+      "bonferroni36": 0.18719999999999937
+    },
+    {
+      "id": "planck_2013_nilc_uncorrected",
+      "map": "NILC",
+      "release": "Planck 2013",
+      "treatment": "uncorrected; authors' full-sky/inpainting treatment",
+      "A": 0.9902,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5",
+      "separation_degrees": 8.02797443611264,
+      "p_exact": 0.009800000000000031,
+      "p_rounding_range": [
+        0.009750000000000031,
+        0.00985000000000003
+      ],
+      "single_pair": {
+        "threshold": 0.9902,
+        "exceedances": 9878,
+        "n": 1000000,
+        "p_mc": 0.009878990121009878,
+        "wilson95": [
+          0.009686041344011999,
+          0.010073724208483022
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.9902,
+        "exceedances": 198,
+        "n": 20000,
+        "p_mc": 0.009949502524873756,
+        "wilson95": [
+          0.008618910164088056,
+          0.0113693235781057
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.9902,
+        "exceedances": 30008,
+        "n": 100000,
+        "p_mc": 0.3000869991300087,
+        "wilson95": [
+          0.29724724972430433,
+          0.30292810937463094
+        ]
+      },
+      "bonferroni36": 0.3528000000000011
+    },
+    {
+      "id": "planck_2013_nilc_doppler_quadrupole_corrected",
+      "map": "NILC",
+      "release": "Planck 2013",
+      "treatment": "Doppler-quadrupole-corrected; authors' full-sky/inpainting treatment",
+      "A": 0.9988,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5",
+      "separation_degrees": 2.80718925110326,
+      "p_exact": 0.0011999999999999789,
+      "p_rounding_range": [
+        0.001149999999999979,
+        0.0012499999999999788
+      ],
+      "single_pair": {
+        "threshold": 0.9988,
+        "exceedances": 1288,
+        "n": 1000000,
+        "p_mc": 0.001288998711001289,
+        "wilson95": [
+          0.0012195945299174323,
+          0.0013602370185866045
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.9988,
+        "exceedances": 26,
+        "n": 20000,
+        "p_mc": 0.0013499325033748313,
+        "wilson95": [
+          0.0008873454127417631,
+          0.0019041913496169907
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.9988,
+        "exceedances": 4269,
+        "n": 100000,
+        "p_mc": 0.04269957300426996,
+        "wilson95": [
+          0.04145450687670315,
+          0.04396062652432755
+        ]
+      },
+      "bonferroni36": 0.04319999999999924
+    },
+    {
+      "id": "planck_2013_sevem_uncorrected",
+      "map": "SEVEM",
+      "release": "Planck 2013",
+      "treatment": "uncorrected; authors' full-sky/inpainting treatment",
+      "A": 0.9915,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5",
+      "separation_degrees": 7.475757390769447,
+      "p_exact": 0.008499999999999952,
+      "p_rounding_range": [
+        0.008449999999999952,
+        0.008549999999999952
+      ],
+      "single_pair": {
+        "threshold": 0.9915,
+        "exceedances": 8545,
+        "n": 1000000,
+        "p_mc": 0.008545991454008545,
+        "wilson95": [
+          0.008366476664249264,
+          0.00872729912953563
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.9915,
+        "exceedances": 165,
+        "n": 20000,
+        "p_mc": 0.008299585020748963,
+        "wilson95": [
+          0.007087395649118733,
+          0.009601471812060166
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.9915,
+        "exceedances": 26645,
+        "n": 100000,
+        "p_mc": 0.26645733542664574,
+        "wilson95": [
+          0.2637188815551351,
+          0.26919906120975257
+        ]
+      },
+      "bonferroni36": 0.3059999999999983
+    },
+    {
+      "id": "planck_2013_sevem_doppler_quadrupole_corrected",
+      "map": "SEVEM",
+      "release": "Planck 2013",
+      "treatment": "Doppler-quadrupole-corrected; authors' full-sky/inpainting treatment",
+      "A": 0.9995,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5",
+      "separation_degrees": 1.8119271380739088,
+      "p_exact": 0.0004999999999999449,
+      "p_rounding_range": [
+        0.0004499999999999449,
+        0.000549999999999945
+      ],
+      "single_pair": {
+        "threshold": 0.9995,
+        "exceedances": 546,
+        "n": 1000000,
+        "p_mc": 0.000546999453000547,
+        "wilson95": [
+          0.0005020932562651731,
+          0.0005937439929418542
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.9995,
+        "exceedances": 17,
+        "n": 20000,
+        "p_mc": 0.0008999550022498875,
+        "wilson95": [
+          0.0005307884848425495,
+          0.001360921109966698
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.9995,
+        "exceedances": 1791,
+        "n": 100000,
+        "p_mc": 0.017919820801791983,
+        "wilson95": [
+          0.017106326335366406,
+          0.01875071081952391
+        ]
+      },
+      "bonferroni36": 0.017999999999998018
+    },
+    {
+      "id": "planck_2013_smica_uncorrected",
+      "map": "SMICA",
+      "release": "Planck 2013",
+      "treatment": "uncorrected; authors' full-sky/inpainting treatment",
+      "A": 0.9809,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5",
+      "separation_degrees": 11.21625822603549,
+      "p_exact": 0.019100000000000006,
+      "p_rounding_range": [
+        0.019050000000000004,
+        0.019150000000000007
+      ],
+      "single_pair": {
+        "threshold": 0.9809,
+        "exceedances": 19230,
+        "n": 1000000,
+        "p_mc": 0.019230980769019232,
+        "wilson95": [
+          0.018962674338595407,
+          0.019501019363529846
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.9809,
+        "exceedances": 388,
+        "n": 20000,
+        "p_mc": 0.019449027548622568,
+        "wilson95": [
+          0.017578724471456187,
+          0.021405860585671576
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.9809,
+        "exceedances": 50894,
+        "n": 100000,
+        "p_mc": 0.5089449105508945,
+        "wilson95": [
+          0.5058412363200169,
+          0.51203807685353
+        ]
+      },
+      "bonferroni36": 0.6876000000000002
+    },
+    {
+      "id": "planck_2013_smica_doppler_quadrupole_corrected",
+      "map": "SMICA",
+      "release": "Planck 2013",
+      "treatment": "Doppler-quadrupole-corrected; authors' full-sky/inpainting treatment",
+      "A": 0.9965,
+      "A_rounding_halfwidth": 0.00005,
+      "source_table": "Copi et al. 2015 Table 5",
+      "separation_degrees": 4.795108108052421,
+      "p_exact": 0.0034999999999999476,
+      "p_rounding_range": [
+        0.0034499999999999475,
+        0.0035499999999999477
+      ],
+      "single_pair": {
+        "threshold": 0.9965,
+        "exceedances": 3661,
+        "n": 1000000,
+        "p_mc": 0.003661996338003662,
+        "wilson95": [
+          0.0035445188403251606,
+          0.0037812944766853498
+        ]
+      },
+      "harmonic_check": {
+        "threshold": 0.9965,
+        "exceedances": 69,
+        "n": 20000,
+        "p_mc": 0.0034998250087495625,
+        "wilson95": [
+          0.002727228767461244,
+          0.00436348223985626
+        ]
+      },
+      "any_36_pairs": {
+        "threshold": 0.9965,
+        "exceedances": 11833,
+        "n": 100000,
+        "p_mc": 0.11833881661183389,
+        "wilson95": [
+          0.11634271743098357,
+          0.12034660483437559
+        ]
+      },
+      "bonferroni36": 0.1259999999999981
+    }
+  ],
+  "positive_control": {
+    "separation_degrees": 5,
+    "A": 0.9961946980917455,
+    "p_exact": 0.003805301908254455,
+    "single_pair": {
+      "threshold": 0.9961946980917455,
+      "exceedances": 3982,
+      "n": 1000000,
+      "p_mc": 0.003982996017003983,
+      "wilson95": [
+        0.0038604576642762675,
+        0.004107353186527153
+      ]
+    },
+    "meaning": "Deliberately inserted alignment; sensitivity check only."
+  },
+  "posthoc_single_axis": {
+    "A_max": 1,
+    "p_correct_null": 1,
+    "reason": "Fit the reference axis to each realization, including nulls."
+  },
+  "spin_control": {
+    "n_objects": 100000,
+    "n_realizations": 64,
+    "unit": "dimensionless unit vectors",
+    "runs": [
+      {
+        "realization": 0,
+        "resultant": [
+          117.59186389091332,
+          -283.5017000914802,
+          -200.2592922290787
+        ],
+        "norm_over_sqrt_N": 1.1588996700844736,
+        "cos_to_z": -0.5464454796255024
+      },
+      {
+        "realization": 1,
+        "resultant": [
+          -88.54154957408575,
+          -170.74928543266662,
+          242.99362831935287
+        ],
+        "norm_over_sqrt_N": 0.9800042238712562,
+        "cos_to_z": 0.7840918474433993
+      },
+      {
+        "realization": 2,
+        "resultant": [
+          71.2832429801849,
+          179.16726656254025,
+          -194.3035115939565
+        ],
+        "norm_over_sqrt_N": 0.8656561947736943,
+        "cos_to_z": -0.709798714218718
+      },
+      {
+        "realization": 3,
+        "resultant": [
+          25.94215890048979,
+          341.87751647839633,
+          60.30095298681408
+        ],
+        "norm_over_sqrt_N": 1.1008607396622534,
+        "cos_to_z": 0.1732175103052267
+      },
+      {
+        "realization": 4,
+        "resultant": [
+          -51.92201535589763,
+          -100.08001015291029,
+          -15.86355799390003
+        ],
+        "norm_over_sqrt_N": 0.36004939359830235,
+        "cos_to_z": -0.1393280365050783
+      },
+      {
+        "realization": 5,
+        "resultant": [
+          -102.15120067134511,
+          2.8115906737892318,
+          150.35132929170504
+        ],
+        "norm_over_sqrt_N": 0.5748764655166976,
+        "cos_to_z": 0.827051859512883
+      },
+      {
+        "realization": 6,
+        "resultant": [
+          -259.7506164022832,
+          -216.20634058324927,
+          -252.1942064780742
+        ],
+        "norm_over_sqrt_N": 1.3334822166450946,
+        "cos_to_z": -0.598064297532182
+      },
+      {
+        "realization": 7,
+        "resultant": [
+          13.32574594902059,
+          71.14148414960144,
+          375.89097576215863
+        ],
+        "norm_over_sqrt_N": 1.210506967892104,
+        "cos_to_z": 0.9819618282589825
+      },
+      {
+        "realization": 8,
+        "resultant": [
+          -209.02776622827045,
+          148.98129167348142,
+          315.5364416697994
+        ],
+        "norm_over_sqrt_N": 1.286278656997457,
+        "cos_to_z": 0.7757369175281296
+      },
+      {
+        "realization": 9,
+        "resultant": [
+          56.543111127910535,
+          102.5902252299406,
+          10.488315018359572
+        ],
+        "norm_over_sqrt_N": 0.37191238861696346,
+        "cos_to_z": 0.08917950918146474
+      },
+      {
+        "realization": 10,
+        "resultant": [
+          243.0510785186772,
+          276.8535403803401,
+          13.647534998133779
+        ],
+        "norm_over_sqrt_N": 1.1657957145304063,
+        "cos_to_z": 0.03701960343742447
+      },
+      {
+        "realization": 11,
+        "resultant": [
+          -57.548748932155675,
+          -20.86059866260822,
+          35.44731881050393
+        ],
+        "norm_over_sqrt_N": 0.2236858397635444,
+        "cos_to_z": 0.5011236496052519
+      },
+      {
+        "realization": 12,
+        "resultant": [
+          -145.09713685415434,
+          153.3250291792425,
+          -357.7494539343752
+        ],
+        "norm_over_sqrt_N": 1.3135692425084882,
+        "cos_to_z": -0.8612436021672462
+      },
+      {
+        "realization": 13,
+        "resultant": [
+          137.33368392085686,
+          -129.08654027915026,
+          -181.7823733650148
+        ],
+        "norm_over_sqrt_N": 0.8280622373151195,
+        "cos_to_z": -0.6942066820586283
+      },
+      {
+        "realization": 14,
+        "resultant": [
+          61.916813590194714,
+          30.03729574099826,
+          74.67518033273518
+        ],
+        "norm_over_sqrt_N": 0.32112791062630525,
+        "cos_to_z": 0.7353569924043526
+      },
+      {
+        "realization": 15,
+        "resultant": [
+          33.74916177165104,
+          -112.54285472660604,
+          11.322848800569773
+        ],
+        "norm_over_sqrt_N": 0.37327077270077796,
+        "cos_to_z": 0.09592498108660917
+      },
+      {
+        "realization": 16,
+        "resultant": [
+          83.8909191895879,
+          -11.07877038340466,
+          -403.5401456654072
+        ],
+        "norm_over_sqrt_N": 1.3038599412488299,
+        "cos_to_z": -0.9787140069634807
+      },
+      {
+        "realization": 17,
+        "resultant": [
+          -61.190087257259535,
+          -12.972968230048355,
+          -139.16075387829915
+        ],
+        "norm_over_sqrt_N": 0.4824752854108221,
+        "cos_to_z": -0.9120984151277828
+      },
+      {
+        "realization": 18,
+        "resultant": [
+          -38.62965124184865,
+          -41.731678344882354,
+          90.38965375348926
+        ],
+        "norm_over_sqrt_N": 0.3376991625429837,
+        "cos_to_z": 0.8464255007994917
+      },
+      {
+        "realization": 19,
+        "resultant": [
+          -23.521720093893126,
+          -166.4549188843204,
+          -5.3738096142187715
+        ],
+        "norm_over_sqrt_N": 0.5318777036756758,
+        "cos_to_z": -0.03194997266402471
+      },
+      {
+        "realization": 20,
+        "resultant": [
+          -341.81495696990186,
+          173.17015195078065,
+          -1.3863080209121108
+        ],
+        "norm_over_sqrt_N": 1.2117231044463959,
+        "cos_to_z": -0.0036178982381007657
+      },
+      {
+        "realization": 21,
+        "resultant": [
+          -385.2861741341313,
+          -363.49263732446485,
+          122.4566861120984
+        ],
+        "norm_over_sqrt_N": 1.7192090429658866,
+        "cos_to_z": 0.22524430313750043
+      },
+      {
+        "realization": 22,
+        "resultant": [
+          -70.63253956154915,
+          37.607760281930986,
+          53.42803906928748
+        ],
+        "norm_over_sqrt_N": 0.3042672285529005,
+        "cos_to_z": 0.555282588857697
+      },
+      {
+        "realization": 23,
+        "resultant": [
+          76.33665453749532,
+          -59.17645145535043,
+          169.6948222159408
+        ],
+        "norm_over_sqrt_N": 0.6174582570483944,
+        "cos_to_z": 0.8690824670559968
+      },
+      {
+        "realization": 24,
+        "resultant": [
+          197.94623480969886,
+          104.62760920891107,
+          -197.2109176251106
+        ],
+        "norm_over_sqrt_N": 0.943513616831507,
+        "cos_to_z": -0.6609715726641842
+      },
+      {
+        "realization": 25,
+        "resultant": [
+          -194.2706251688248,
+          -247.87224300618863,
+          -118.80378796998411
+        ],
+        "norm_over_sqrt_N": 1.0644062414906348,
+        "cos_to_z": -0.35295787453738553
+      },
+      {
+        "realization": 26,
+        "resultant": [
+          -25.462240981055835,
+          -88.48623349525893,
+          -215.78682383755222
+        ],
+        "norm_over_sqrt_N": 0.7419035825217022,
+        "cos_to_z": -0.9197662182204381
+      },
+      {
+        "realization": 27,
+        "resultant": [
+          40.81878946291621,
+          -111.42465829986206,
+          258.8692318419926
+        ],
+        "norm_over_sqrt_N": 0.9005271081145875,
+        "cos_to_z": 0.9090413618672735
+      },
+      {
+        "realization": 28,
+        "resultant": [
+          235.53305710691527,
+          73.78050832070831,
+          319.83589833648875
+        ],
+        "norm_over_sqrt_N": 1.2775538589934292,
+        "cos_to_z": 0.7916769293986886
+      },
+      {
+        "realization": 29,
+        "resultant": [
+          -334.0836450468861,
+          201.28819490026342,
+          164.7068466716446
+        ],
+        "norm_over_sqrt_N": 1.3388695404502144,
+        "cos_to_z": 0.3890213093737103
+      },
+      {
+        "realization": 30,
+        "resultant": [
+          -141.00032676445795,
+          -120.55276965620193,
+          -71.01459365850314
+        ],
+        "norm_over_sqrt_N": 0.628149145760364,
+        "cos_to_z": -0.35750723309570676
+      },
+      {
+        "realization": 31,
+        "resultant": [
+          -278.4849289635381,
+          4.082038502624621,
+          31.43794148368761
+        ],
+        "norm_over_sqrt_N": 0.8863343774383092,
+        "cos_to_z": 0.11216477953035912
+      },
+      {
+        "realization": 32,
+        "resultant": [
+          158.34934117029638,
+          -118.64642800922944,
+          -340.77887026267126
+        ],
+        "norm_over_sqrt_N": 1.246120889584629,
+        "cos_to_z": -0.8647936307754811
+      },
+      {
+        "realization": 33,
+        "resultant": [
+          -99.72700615686789,
+          -280.227037703296,
+          -247.76261344691738
+        ],
+        "norm_over_sqrt_N": 1.2241690285210742,
+        "cos_to_z": -0.6400212383045374
+      },
+      {
+        "realization": 34,
+        "resultant": [
+          46.27154761027854,
+          173.07000441938098,
+          91.08534472808242
+        ],
+        "norm_over_sqrt_N": 0.6355377453165817,
+        "cos_to_z": 0.4532180077815364
+      },
+      {
+        "realization": 35,
+        "resultant": [
+          352.4523973975145,
+          -101.99685848748227,
+          -153.97239361610264
+        ],
+        "norm_over_sqrt_N": 1.2583065984426969,
+        "cos_to_z": -0.38695136878202363
+      },
+      {
+        "realization": 36,
+        "resultant": [
+          128.91749807376868,
+          -38.640294850547455,
+          -12.15403894893825
+        ],
+        "norm_over_sqrt_N": 0.4273232308043841,
+        "cos_to_z": -0.08994232720906752
+      },
+      {
+        "realization": 37,
+        "resultant": [
+          -26.819766014990847,
+          -129.36350302890136,
+          -92.30950481677428
+        ],
+        "norm_over_sqrt_N": 0.5096593023238711,
+        "cos_to_z": -0.5727518041410984
+      },
+      {
+        "realization": 38,
+        "resultant": [
+          334.61670449279916,
+          -225.85380801143856,
+          -98.60916357161477
+        ],
+        "norm_over_sqrt_N": 1.3141615146517664,
+        "cos_to_z": -0.23728404124894587
+      },
+      {
+        "realization": 39,
+        "resultant": [
+          74.25108470536786,
+          159.26845779946535,
+          -99.27055687410757
+        ],
+        "norm_over_sqrt_N": 0.6382343510955769,
+        "cos_to_z": -0.49185861553298715
+      },
+      {
+        "realization": 40,
+        "resultant": [
+          -14.718127420711577,
+          58.59188010071732,
+          -24.202823920175433
+        ],
+        "norm_over_sqrt_N": 0.20580107808804482,
+        "cos_to_z": -0.3718933355782343
+      },
+      {
+        "realization": 41,
+        "resultant": [
+          -258.11577892340836,
+          168.9228433080181,
+          184.84212437970564
+        ],
+        "norm_over_sqrt_N": 1.1372127912827292,
+        "cos_to_z": 0.5139953798133867
+      },
+      {
+        "realization": 42,
+        "resultant": [
+          -3.266249711350376,
+          -225.9512787512398,
+          272.98213091818616
+        ],
+        "norm_over_sqrt_N": 1.1206421933745447,
+        "cos_to_z": 0.7703130395512631
+      },
+      {
+        "realization": 43,
+        "resultant": [
+          -33.41436894983445,
+          14.782704506674984,
+          -138.52414982486516
+        ],
+        "norm_over_sqrt_N": 0.4530340880060684,
+        "cos_to_z": -0.9669290589433986
+      },
+      {
+        "realization": 44,
+        "resultant": [
+          -22.133106932137256,
+          102.10091789664311,
+          -128.7346081836149
+        ],
+        "norm_over_sqrt_N": 0.5242811383408268,
+        "cos_to_z": -0.7764814443599707
+      },
+      {
+        "realization": 45,
+        "resultant": [
+          -365.69478818227503,
+          -6.358007535615067,
+          225.7726929928176
+        ],
+        "norm_over_sqrt_N": 1.3592145204666222,
+        "cos_to_z": 0.5252709800967532
+      },
+      {
+        "realization": 46,
+        "resultant": [
+          94.9655638501624,
+          -249.51698215379886,
+          88.6612063953653
+        ],
+        "norm_over_sqrt_N": 0.889595369929498,
+        "cos_to_z": 0.3151672791753193
+      },
+      {
+        "realization": 47,
+        "resultant": [
+          -47.140104095552466,
+          -16.89555381712244,
+          121.42266969243065
+        ],
+        "norm_over_sqrt_N": 0.41534460232635645,
+        "cos_to_z": 0.9244665601905954
+      },
+      {
+        "realization": 48,
+        "resultant": [
+          72.8050445219943,
+          191.29544482132908,
+          126.530895951204
+        ],
+        "norm_over_sqrt_N": 0.7609506511427278,
+        "cos_to_z": 0.5258236194248718
+      },
+      {
+        "realization": 49,
+        "resultant": [
+          -23.116210642858963,
+          -144.13938958098544,
+          199.87181538296863
+        ],
+        "norm_over_sqrt_N": 0.7826829844052291,
+        "cos_to_z": 0.8075430145746216
+      },
+      {
+        "realization": 50,
+        "resultant": [
+          215.90595429467902,
+          137.4297930689742,
+          78.0786333559081
+        ],
+        "norm_over_sqrt_N": 0.8461595718870254,
+        "cos_to_z": 0.2917964012948983
+      },
+      {
+        "realization": 51,
+        "resultant": [
+          -330.26471666659114,
+          162.51689223897625,
+          93.31322257919237
+        ],
+        "norm_over_sqrt_N": 1.2008075651243733,
+        "cos_to_z": 0.24573655907134173
+      },
+      {
+        "realization": 52,
+        "resultant": [
+          -267.16074724868895,
+          230.13710798753613,
+          -14.537405033130199
+        ],
+        "norm_over_sqrt_N": 1.1160165298437206,
+        "cos_to_z": -0.041192321030876215
+      },
+      {
+        "realization": 53,
+        "resultant": [
+          44.712970078163025,
+          -122.4683918461442,
+          101.20979673042893
+        ],
+        "norm_over_sqrt_N": 0.521930834965766,
+        "cos_to_z": 0.6132105209147315
+      },
+      {
+        "realization": 54,
+        "resultant": [
+          -72.614804125302,
+          36.608275345692505,
+          13.649722936563194
+        ],
+        "norm_over_sqrt_N": 0.26075641004943584,
+        "cos_to_z": 0.16553462252988668
+      },
+      {
+        "realization": 55,
+        "resultant": [
+          -50.20172590474766,
+          281.0611381995493,
+          -56.015110056847334
+        ],
+        "norm_over_sqrt_N": 0.9200721126331471,
+        "cos_to_z": -0.19252331282783824
+      },
+      {
+        "realization": 56,
+        "resultant": [
+          -45.71640925672819,
+          267.1609177205424,
+          -52.33630868373439
+        ],
+        "norm_over_sqrt_N": 0.8729492266979233,
+        "cos_to_z": -0.1895894225054628
+      },
+      {
+        "realization": 57,
+        "resultant": [
+          39.61852518542011,
+          231.12478789832863,
+          366.28432430233806
+        ],
+        "norm_over_sqrt_N": 1.3753272386909796,
+        "cos_to_z": 0.8421942817867861
+      },
+      {
+        "realization": 58,
+        "resultant": [
+          109.53616694902527,
+          236.9698024900925,
+          -85.9306889041327
+        ],
+        "norm_over_sqrt_N": 0.8691199138071628,
+        "cos_to_z": -0.3126573140570216
+      },
+      {
+        "realization": 59,
+        "resultant": [
+          176.94432364366483,
+          -98.4790930834369,
+          -4.000993868801743
+        ],
+        "norm_over_sqrt_N": 0.6404953816866162,
+        "cos_to_z": -0.019753855986385464
+      },
+      {
+        "realization": 60,
+        "resultant": [
+          -2.434791646478494,
+          145.1822526471411,
+          191.88109146384522
+        ],
+        "norm_over_sqrt_N": 0.7609347406671388,
+        "cos_to_z": 0.7974156737972775
+      },
+      {
+        "realization": 61,
+        "resultant": [
+          207.79344875963773,
+          198.88557216220002,
+          403.7516883346252
+        ],
+        "norm_over_sqrt_N": 1.5676383957876578,
+        "cos_to_z": 0.8144575609443001
+      },
+      {
+        "realization": 62,
+        "resultant": [
+          141.62115875446148,
+          110.23359340258854,
+          -349.30779923079535
+        ],
+        "norm_over_sqrt_N": 1.2418693019994704,
+        "cos_to_z": -0.8894722240509947
+      },
+      {
+        "realization": 63,
+        "resultant": [
+          -228.66976790159032,
+          109.82033447996321,
+          56.5693556307815
+        ],
+        "norm_over_sqrt_N": 0.8218908724030217,
+        "cos_to_z": 0.21765421124377846
+      }
+    ],
+    "abs_cos_summary": {
+      "n": 64,
+      "mean": 0.520830733905134,
+      "variance": 0.09411887251930831,
+      "decile_counts": [
+        8,
+        6,
+        5,
+        7,
+        2,
+        8,
+        4,
+        8,
+        9,
+        7
+      ],
+      "ks_distance_to_uniform": 0.11406303955126307,
+      "reject_at_005_count": 3
+    },
+    "mean_resultant_squared_over_N": 0.8967900836820479
+  },
+  "fingerprint": {
+    "primary_first10": [
+      0.5647589983992597,
+      0.9036184913926553,
+      0.6929034776922237,
+      0.06101775086276409,
+      0.021962107734368186,
+      0.723575006583939,
+      0.6152185708473888,
+      0.019001035481417877,
+      0.08345541145586303,
+      0.5328462010810119
+    ],
+    "harmonic_first10": [
+      0.8030563865392732,
+      0.9119099852578838,
+      0.7296086230427358,
+      0.5530543741057588,
+      0.6153635872734693,
+      0.5212399228959478,
+      0.4574619546929067,
+      0.6407511763807108,
+      0.6574317588917019,
+      0.9020138592378965
+    ],
+    "family_first10": [
+      0.9946709500869505,
+      0.955235097694886,
+      0.958603814406986,
+      0.9628618145779404,
+      0.9920357561186999,
+      0.9937100993692631,
+      0.9811221719398733,
+      0.9879145019921138,
+      0.9686325521306814,
+      0.9680055470744295
+    ]
+  },
+  "recovered_universe003": {
+    "source_status": "summary arithmetic recomputed from preserved output; original Python merger code not rerun here",
+    "n": 128,
+    "cos_mean": -0.028951139839306476,
+    "abs_cos_mean": 0.4570788373982065,
+    "first_fixed_axis_p": 0.5343178303283878,
+    "first_empirical_rank_p": 0.453125,
+    "maximum_abs_cos": 0.9731466276484975,
+    "minimum_single_run_p": 0.026853372351502536,
+    "probability_any_of_128_at_least_this_aligned": 0.9693224909532033,
+    "summary_errors": {
+      "cos_mean": 3.469446951953614e-18,
+      "abs_cos_mean": -5.551115123125783e-17,
+      "fixed_p": 0,
+      "rank_p": 0
+    }
+  }
+}

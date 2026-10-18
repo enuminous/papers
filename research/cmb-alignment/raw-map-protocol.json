@@ -1,0 +1,48 @@
+{
+  "id": "EFMW-CMB-ALIGNMENT-NULL-001-OBS-1",
+  "frozen_utc": "2026-10-18T17:25:18.410Z",
+  "classification": "Secondary observational reproduction; frozen after published summary values and baseline simulation were known, before pixel download and harmonic extraction. Not an independent new sky or discovery preregistration.",
+  "input": {
+    "url": "https://lambda.gsfc.nasa.gov/data/map/dr5/dfp/ilc/wmap_ilc_9yr_v5.fits",
+    "name": "wmap_ilc_9yr_v5.fits",
+    "release": "WMAP DR5 9-year ILC v5, released 2012-11-11",
+    "nside": 512,
+    "ordering": "NESTED on disk; convert to RING with healpy.read_map(nest=False)",
+    "frame": "Galactic",
+    "unit": "mK thermodynamic",
+    "temperature_column": 0
+  },
+  "processing": {
+    "mask": "none: use the publicly bias-corrected full-sky ILC; do not inpaint or fit a Galactic cut",
+    "remove": "fit and remove full-sky monopole and dipole via healpy.remove_dipole",
+    "alm": "healpy.map2alm(lmax=10,mmax=10,iter=3,pol=False,use_weights=False,use_pixel_weights=False)",
+    "beam": "no deconvolution; symmetric smoothing rescales each ell without changing its axis",
+    "numerical_check": "repeat with iter=0 and 5; report axis/statistic shifts, no significance-based choice",
+    "axis": "same power tensor as null; independent NumPy Hermitian angular-momentum implementation and numpy.linalg.eigh; headless axes displayed in northern Galactic hemisphere"
+  },
+  "treatments": [
+    {
+      "name": "uncorrected",
+      "purpose": "diagnostic for kinematic quadrupole sensitivity; ideal-null p is nominal and not instrument-corrected"
+    },
+    {
+      "name": "DQ_corrected",
+      "purpose": "primary within this secondary raw-map check",
+      "beta": 0.001231,
+      "l_degrees": 263.99,
+      "b_degrees": 48.26,
+      "T0_K": 2.7255,
+      "formula": "subtract a_DQ(2,m)=T0*beta^2*(8*pi/15)*conj(Y_2m(beta_hat)) in matching temperature units; leading beta^2 contribution only",
+      "source": "Copi et al. (2015), section 3.3; blackbody approximation, no frequency-dependent correction or satellite-velocity term"
+    }
+  ],
+  "statistics": {
+    "single": "A23=abs(dot(n2,n3)); p_ideal=1-A23",
+    "scan": "max A_lk over the 36 ell pairs in 2..10; re-use frozen family null seed 2026101803 and N=100000 without tuning",
+    "uncertainty": "report Monte Carlo Wilson interval, numerical extraction variation separately; no observational uncertainty inferred from MC error",
+    "axes": "record all ell=2..10 axes and complex alm coefficients, input SHA256, size, source URL and software versions"
+  },
+  "exclusions": "No mapmaking/beam/noise/foreground simulations, masks/inpainting comparisons, or temperature-polarization likelihood. Thus not an end-to-end observational significance or a global anomaly p-value.",
+  "success": "Arithmetic and independent axis implementations agree; published rounded statistic is used only as a comparison, not fitted target.",
+  "baseline_unchanged": true
+}
