@@ -28,6 +28,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Verify archived checksums
         run: sha256sum --check SHA256SUMS
+      - name: Validate prediction lock without executing its new seed
+        run: node prediction-lock/v1/check.cjs
       - name: Reproduce frozen null and independent axis scoring
         run: |
           node --version

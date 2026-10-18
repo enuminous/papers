@@ -2,6 +2,8 @@
 
 **Reproducibility companion, 18 October 2026.** This directory supports [R-001](../../EFMW-Zoo-R001-Primordial-Recursion-Boundary.md) and [Great Recursion](../../great-recursion-primordial-rotation.md). It is an evidence audit and numerical baseline, not a new cosmology paper or a reconstruction of the historical simulation. The separate bouncing-geometry tests are outside its scope.
 
+**Prediction lock:** [EFMW-CMB-PRED-001 v1.0.0](prediction-lock/v1/LOCK.md) freezes the implications of the separately recovered October 16 C1Q model: zero background/linear-scalar vorticity and an isotropic ideal unlensed Gaussian TT-axis distribution. A rotating extension is unspecified. The new numerical test is frozen but unexecuted at lock publication; the already-known WMAP result is excluded from prospective confirmation.
+
 ## Findings
 
 A **January 23, 2025 narrative matching the 100,000-object claim was recovered** in the author's archived article, *Foundations of a Dynamic Cosmos*. Its section 3.1.1 describes Gaussian spins and assigned directional momenta. However, no corresponding executable package, complete parameters, original seed, numerical output array, or CMB sky-map product was recovered. The narrative establishes that the claim was documented, not that its computation or physical interpretation was verified. Some equations and results are external images whose contents could not be inspected; their contents are not assumed absent. See the bounded [provenance ledger](PROVENANCE.md).

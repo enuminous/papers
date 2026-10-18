@@ -1,0 +1,164 @@
+{
+  "id": "EFMW-CMB-PRED-001",
+  "version": "1.0.0",
+  "frozen_utc": "2026-10-18T17:54:47.651533+00:00",
+  "frozen_pacific": "2026-10-18T10:54:47.651533-07:00",
+  "status": "LOCKED_MODEL_PREDICTIONS; NO_NEW_OBSERVATION_SCORED",
+  "registration": "Internal repository freeze; Git commit records publication. Not an external preregistration and not blind to the known temperature anomaly.",
+  "parent_assessment_commit": "a10f4b35235d815997cf81c1dd7481b732d507be",
+  "source_model": {
+    "id": "EFMW-COSMO-C1Q",
+    "version": "1.0.0",
+    "freeze_date_pacific": "2026-10-16",
+    "archive_name": "EFMW-Cosmology-C1Q-v1.0.0.zip",
+    "archive_sha256": "515ebaa0eb07244aa34bd1a224ae190a6d889b44ee9408ba5ad6ad5c6ce07a5f",
+    "archive_bytes": 22231006,
+    "snapshots": [
+      {
+        "archive_path": "EFMW-Cosmology-C1Q-v1.0.0/FREEZE.json",
+        "snapshot": "source/C1Q-FREEZE.json",
+        "sha256": "498a7451cd53aeec70a8695d958cfc24c259d3324d7989815a662a4025d842e9"
+      },
+      {
+        "archive_path": "EFMW-Cosmology-C1Q-v1.0.0/config/model.json",
+        "snapshot": "source/C1Q-model.json",
+        "sha256": "87720fbae2c6d4519396f19e91079148d6957b2dd1b84f27ebbb1279acf7bf3d"
+      },
+      {
+        "archive_path": "EFMW-Cosmology-C1Q-v1.0.0/docs/MODEL.md",
+        "snapshot": "source/C1Q-MODEL.md",
+        "sha256": "0119254f6d8ed6d7a6aaf3b3766c6b2fe1ac6dbbf3c67e9575e421685864054e"
+      },
+      {
+        "archive_path": "EFMW-Cosmology-C1Q-v1.0.0/docs/PERTURBATIONS.md",
+        "snapshot": "source/C1Q-PERTURBATIONS.md",
+        "sha256": "86de8bddd30f5080c38d16633f17de9ecdd88f24e76eb2ee40ba443c9e0899f0"
+      },
+      {
+        "archive_path": "EFMW-Cosmology-C1Q-v1.0.0/config/class_c1q.ini",
+        "snapshot": "source/C1Q-class.ini",
+        "sha256": "28d06798d8f0ca104ec540805b51a8c7c897667e538ce9dd5af7a56744fcb6f2"
+      }
+    ],
+    "interpretation": "GR plus canonical quadratic quintessence and standard matter; no rotation term. Equivalent physical class is not novel EFMW rotation."
+  },
+  "predictions": [
+    {
+      "id": "P1",
+      "target": "Background fundamental comoving-fluid vorticity and retained linear scalar-mode vorticity",
+      "value": 0,
+      "unit": "s^-1",
+      "status": "Conditional mathematical prediction of the frozen model",
+      "scope": "Exact FLRW background and linear scalar perturbations with zero primordial vectors; excludes nonlinear vector generation and astrophysical local spins from this assertion."
+    },
+    {
+      "id": "P2",
+      "target": "Full-sky unlensed linear Gaussian TT quadrupole-octopole axis alignment",
+      "statistic": "A23=abs(dot(n2,n3))",
+      "distribution": "Uniform(0,1)",
+      "mean": 0.5,
+      "variance": 0.08333333333333333,
+      "tail": "P(A23>=a)=1-a for 0<=a<=1",
+      "axis_definition": "Largest-eigenvalue axis of Q_ij=Re[(L_i a)^dagger(L_j a)]; n equivalent to -n",
+      "scope": "Independent isotropic Gaussian multipoles with positive C_l. Not the fully processed instrumental, foreground-contaminated or lensed-sky likelihood."
+    },
+    {
+      "id": "P3",
+      "target": "Absolute preferred Galactic direction",
+      "value": null,
+      "meaning": "No preferred direction in the ensemble; every headless direction is equally distributed. One realization may align by chance."
+    }
+  ],
+  "fixed_probability_predictions": [
+    {
+      "angle_degrees": 1,
+      "probability_separation_at_most_angle": 0.00015230484360873042
+    },
+    {
+      "angle_degrees": 5,
+      "probability_separation_at_most_angle": 0.003805301908254455
+    },
+    {
+      "angle_degrees": 10,
+      "probability_separation_at_most_angle": 0.01519224698779198
+    }
+  ],
+  "coordinates": {
+    "frame": "right-handed Galactic Cartesian",
+    "x": "l=0,b=0",
+    "y": "l=90,b=0",
+    "z": "north Galactic pole",
+    "axes": "headless",
+    "units": "degrees in records; radians in trigonometry"
+  },
+  "new_computational_test": {
+    "status": "NOT_EXECUTED_AT_LOCK",
+    "purpose": "Prospective numerical calibration of the P2 distribution; not physical validation or a recreation of the historical PBH simulation.",
+    "n": 100000,
+    "seed_uint32": 2026101810,
+    "generator": "xoshiro128** with explicit SplitMix32 initialization in pinned benchmark.cjs",
+    "draw_order": "For each i=0..N-1: core.alm(2,rng), core.alm(3,rng), then compute both axes and A23; cached Box-Muller state is shared and retained.",
+    "sampling": "C_l=1; a_l0 real N(0,1); positive-m real and imaginary parts N(0,1/2); a_l,-m=(-1)^m conjugate(a_lm).",
+    "primary_statistic": "D_N=sup_a |F_N(a)-a|, two-sided empirical CDF discrepancy",
+    "alpha": 0.01,
+    "threshold_rule": "D_N <= sqrt(log(2/alpha)/(2*N)); finite-sample Dvoretzky-Kiefer-Wolfowitz bound under independent uniform draws",
+    "threshold": 0.005146997846583986,
+    "formal_test_count": 1,
+    "diagnostics_only": [
+      "sample mean",
+      "sample variance",
+      "counts at the three fixed angular windows",
+      "first ten draws"
+    ],
+    "compatible_label": "COMPATIBLE_WITH_LOCKED_DISTRIBUTION",
+    "failure_label": "CALIBRATION_FLAG",
+    "interpretation": "A flag may be a stochastic tail event or implementation defect; it is not a physical falsification of EFMW. Compatibility is not validation of the cosmology.",
+    "stop_rule": "One fixed-N execution; retain every result. No seed/threshold/sample-size change after seeing output. Deterministic reruns are reproduction, not extra independent evidence."
+  },
+  "implementation": {
+    "core": "../../benchmark.cjs",
+    "core_sha256": "a0cb6f6efa99de0a5ac5dd55878548d6d3b5706a775b540b938b47a827913e66",
+    "runtime": "Node >=20; record actual Node/V8 versions with output.",
+    "pinned_parent_protocol": "../../protocol.json",
+    "parent_protocol_sha256": "c7231d00fe30447ec52bf20774fe3c7e2843d8a880edf4b836e8517cc0b0a578"
+  },
+  "known_evidence": {
+    "temperature_analysis": "WMAP9 ILC axes, its DQ variants, all 13 published variants in observations.json, and previous null results were known before this lock.",
+    "WMAP_corrected_A23": 0.9947838886818041,
+    "WMAP_file_sha256": "4501090f824f9140e916339f9e8e490333f6ffe4257a6ee6a02526c8640099a9",
+    "restriction": "Never count any of these results or another reduction of the same sky as a new independent discovery under this lock."
+  },
+  "observational_readiness": {
+    "enabled": false,
+    "status": "NOT_READY",
+    "evaluation_file_manifest": null,
+    "likelihood_revision": null,
+    "nuisance_pipeline": null,
+    "joint_selection_calibration": null,
+    "independence_attestation": null,
+    "requirements": [
+      "Freeze exact data release/files/checksums and predeclared eligibility without inspecting the target statistic.",
+      "Freeze foreground, mask/inpainting, kinematic correction, calibration, beam/noise and lensing treatments with matched null processing.",
+      "Freeze the complete statistic/map/axis/model search; repeat any selection on every null realization.",
+      "For polarization conditioned on known temperature, include TE correlation and shared cosmic variance; do not assume independent T and E axes.",
+      "Name actual unexamined observables and document information already seen; a new satellite observing the same sky is not an independent cosmic realization.",
+      "Select physical likelihood, uncertainty and decision thresholds before evaluating those data."
+    ]
+  },
+  "rotating_extension": {
+    "status": "UNSPECIFIED; NOT_A_PREDICTION_OF_C1Q_1.0.0",
+    "rotation_amplitude": null,
+    "absolute_axis": null,
+    "vorticity_evolution": null,
+    "CMB_transfer_operator": null,
+    "required_before_lock": [
+      "Covariant equations, field/observer definitions, source terms, units and initial/boundary conditions.",
+      "Derived nonzero vorticity or explicitly labeled inherited initial rotation, with zero-source/isotropic controls.",
+      "Quantitative TT/TE/EE and, where applicable, handedness/redshift predictions with fixed parameters and uncertainty.",
+      "Likelihood comparison with non-rotating anisotropic alternatives and held-out observables."
+    ],
+    "rule": "A rotating extension requires a new model and a new versioned prediction lock; no retrofitting this v1 after seeing future results."
+  },
+  "revision_policy": "Append-only versions. Preserve v1, its failures and known-data ledger. Physics, seeds, data, estimator, thresholds or search changes require a new version before evaluation. A digest proves byte identity, not blindness or correctness.",
+  "zoo_status": "Freeze/anti-circularity discipline applied; no canonical animal operation or full-Zoo certification claimed."
+}
