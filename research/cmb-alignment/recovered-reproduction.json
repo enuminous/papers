@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "source_sha256": "a8f242c77a99458880eaf5467e434d6cf1cfe4e0af2ef557a268989b8c7423f3",
+  "scope": "Recovered October 18 Universe 003; not the January 2025 historical claim.",
+  "adaptation": "Omitted final two I/O statements via AST; all numerical statements unchanged.",
+  "null_runs": 128,
+  "biased_control_runs": 32,
+  "objects_per_run": 100000,
+  "maximum_absolute_difference_from_saved_json": 0.0,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  }
+}

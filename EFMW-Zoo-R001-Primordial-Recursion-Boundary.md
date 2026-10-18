@@ -114,11 +114,21 @@ Note also that \(\omega/H\) is **undefined at the bounce** because \(H(0)=0\); i
 | EFMW action-derived bounce | OPEN |
 | Defined physical recursion operator | OPEN |
 | Lean kernel audit and independent numerical build | NOT PERFORMED |
-| CMB / primordial-black-hole empirical alignment | NOT VERIFIED |
+| Historical primordial-black-hole empirical alignment | NOT VERIFIED; see the distinct observational companion below |
 
 ## 8. Conclusion
 
 The R-001 candidate is a mathematically regular, prescribed bouncing geometry supporting a continuous phenomenological rotational amplitude. This does **not** establish that EFMW produces a recursion event, that the universe globally rotates, or that primordial rotational motion is unavoidable. The constructive contribution of this test is the explicit separation of geometric regularity, dynamical admissibility, rotational inheritance, and observational confirmation. The next decisive result must be a constrained solution of specified equations of motion that produces a measurable rotational signature without inserting it by assumption.
+
+## 9. Observational follow-up: 18 October 2026
+
+The [CMB alignment reproducibility companion](research/cmb-alignment/README.md) now supplies a provenance ledger, frozen isotropic-null code, saved numerical products and an independently extracted WMAP measurement. It does not repeat or validate this paper's bouncing-geometry calculation.
+
+A January 23, 2025 archived article explicitly describes the 100,000-object simulation, so a matching historical **narrative** is now identified. Its executable, original seed, complete physical parameters, outputs and generated sky maps remain unrecovered. The separate October 18 Universe 003 toy ensemble is reproducible but is not that historical simulation.
+
+For the specified WMAP nine-year ILC map with leading Doppler-quadrupole subtraction, the quadrupole and octopole dispersion axes are 5.85464 degrees apart. The ideal preselected single-pair isotropic-Gaussian probability is 0.521611%; the frozen Monte Carlo maximum-over-36-pairs test for multipoles 2–10 gives 17.17283%. This declared comparison family is not a reconstruction of the full historical search. Instrumental and foreground uncertainties are not fully marginalized.
+
+Thus a particular CMB alignment is reproducible, while its attribution to primordial black holes, EFMW dynamics or global cosmic rotation remains unestablished. Statistical anisotropy, a preferred observational axis and physical vorticity remain distinct claims.
 
 ## Related work and background
 
@@ -128,4 +138,4 @@ The R-001 candidate is a mathematically regular, prescribed bouncing geometry su
 - [Planck Collaboration, *Planck 2015 results. XVIII. Background geometry and topology of the Universe*](https://arxiv.org/abs/1502.01593) — background cosmological constraints.
 - [Saadeh et al., *How Isotropic is the Universe?* (2016)](https://arxiv.org/abs/1605.07178) — stringent anisotropic cosmology constraints.
 
-**Disclosure:** This is a theoretical toy-model analysis based on symbolic identities and tabulated evaluations. No external experimental dataset, source-code simulation, or formal theorem-prover run was executed to establish its physical validity.
+**Disclosure:** Sections 1–8 are a theoretical toy-model analysis based on symbolic identities and tabulated evaluations. No external dataset, source-code simulation or formal theorem-prover run established the physical validity of that geometry. The separate section 9 companion executes statistical controls, a recovered toy ensemble and a public CMB-map measurement; none establishes the proposed bounce or EFMW cosmology.

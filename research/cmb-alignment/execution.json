@@ -1,6 +1,26 @@
 {
   "started_utc": "2026-10-18T17:22:00.283Z",
   "completed_utc": "2026-10-18T17:22:11.681Z",
-  "engine": "functions.exec V8 isolate; same dependency-free core as committed benchmark.js",
-  "code_io": "core evaluated directly; no Python or FITS pipeline executed"
+  "engine": "functions.exec V8 isolate; same dependency-free core as benchmark.cjs",
+  "code_io": "Initial execution evaluated the core directly; subsequent Node/Python checks are recorded below.",
+  "local_verification": {
+    "completed_utc": "2026-10-18T17:34:14.533383+00:00",
+    "node": "v24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "benchmark": "PASS: complete saved-result comparison and numerical/null diagnostics",
+    "map": "PASS: fresh WMAP extraction matches archived coefficients and axes; checksum enforced",
+    "cross_implementation": "PASS: NumPy Hermitian eigensolver versus independent JavaScript axis implementation",
+    "raw_null_scoring": "PASS: same frozen stream fingerprints and exact exceedance counts",
+    "recovered_universe003": "PASS: all 128 null and 32 biased toy runs exactly reproduce the saved JSON",
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "healpy": "1.18.1",
+    "astropy": "7.1.0"
+  },
+  "scope_limits": [
+    "Not a recreation of the January 2025 historical simulation.",
+    "No end-to-end instrument, foreground, masking or polarization likelihood.",
+    "Local and CI replication verify the implementation, not independent cosmic realizations or EFMW dynamics."
+  ]
 }

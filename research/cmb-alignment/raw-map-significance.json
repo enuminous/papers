@@ -1,0 +1,104 @@
+{
+  "input_sha256": "4501090f824f9140e916339f9e8e490333f6ffe4257a6ee6a02526c8640099a9",
+  "plan": "EFMW-CMB-ALIGNMENT-NULL-001-OBS-1",
+  "null_reuse": "Same frozen seeds, draw order and N as results.json. No extra or selected Monte Carlo seed.",
+  "source_level": "New WMAP9 ILC pixel measurement; ideal isotropic-Gaussian directional-null calibration.",
+  "cross_implementation": {
+    "maximum_axis_antipodal_difference": 0,
+    "maximum_A23_difference": 3.3306690738754696e-16
+  },
+  "treatments": {
+    "uncorrected": {
+      "A23": 0.9984750295877909,
+      "separation_degrees": 3.1646344024242574,
+      "n2_galactic_degrees": [
+        240.34230888119885,
+        59.92527857161764
+      ],
+      "n3_galactic_degrees": [
+        238.14225680012015,
+        62.91023103718738
+      ],
+      "p23_ideal_exact": 0.0015249704122091146,
+      "single_pair": {
+        "threshold": 0.9984750295877909,
+        "exceedances": 1639,
+        "n": 1000000,
+        "p_mc": 0.00163999836000164,
+        "wilson95": [
+          0.0015616082313457558,
+          0.001720220620464548
+        ]
+      },
+      "scan_max_pair": {
+        "ell_pair": [
+          2,
+          3
+        ],
+        "A": 0.9984750295877909
+      },
+      "any_36_pairs": {
+        "threshold": 0.9984750295877909,
+        "exceedances": 5360,
+        "n": 100000,
+        "p_mc": 0.05360946390536095,
+        "wilson95": [
+          0.05222112557238049,
+          0.05501316965453366
+        ]
+      },
+      "bonferroni36": 0.054898934839528124,
+      "iteration_A_range": [
+        0.9984750295877909,
+        0.9984751203430504
+      ],
+      "note": "DQ not removed: p is nominal, not a fully specified observation-level null."
+    },
+    "DQ_corrected": {
+      "A23": 0.9947838886818041,
+      "separation_degrees": 5.854637551790675,
+      "n2_galactic_degrees": [
+        236.0330889459612,
+        57.150357742353556
+      ],
+      "n3_galactic_degrees": [
+        238.14225680012015,
+        62.91023103718738
+      ],
+      "p23_ideal_exact": 0.005216111318195882,
+      "single_pair": {
+        "threshold": 0.9947838886818041,
+        "exceedances": 5347,
+        "n": 1000000,
+        "p_mc": 0.005347994652005348,
+        "wilson95": [
+          0.005205952696214467,
+          0.005491847667446659
+        ]
+      },
+      "scan_max_pair": {
+        "ell_pair": [
+          2,
+          3
+        ],
+        "A": 0.9947838886818041
+      },
+      "any_36_pairs": {
+        "threshold": 0.9947838886818041,
+        "exceedances": 17172,
+        "n": 100000,
+        "p_mc": 0.17172828271717283,
+        "wilson95": [
+          0.16939514536315323,
+          0.17407007515004433
+        ]
+      },
+      "bonferroni36": 0.18778000745505175,
+      "iteration_A_range": [
+        0.9947838886818041,
+        0.9947840172050383
+      ],
+      "note": "Leading blackbody DQ correction; uncertainty, foregrounds, masks and instrumental systematics not marginalized."
+    }
+  }
+}

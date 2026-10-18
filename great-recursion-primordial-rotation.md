@@ -383,6 +383,12 @@ The proposed paradigm change is therefore not the statement that the Big Bang ha
 
 If the answer is experimentally yes, cosmic origin is better described not merely as an expansion from an initial state, but as the evolution of an already dynamical one—the **Great Recursion**.
 
+## Observational follow-up: 18 October 2026
+
+The [R-001 CMB alignment companion](research/cmb-alignment/README.md) investigates the historical 100,000-primordial-black-hole account and supplies a frozen isotropic benchmark and raw WMAP measurement. A matching January 2025 narrative was recovered, but its original simulation products remain unresolved. The separate October toy ensemble does not supply a CMB transfer model.
+
+The specified Doppler-corrected WMAP quadrupole–octopole alignment has ideal single-pair p=0.00521611; the declared multipole-2–10, 36-pair search has Monte Carlo p=0.171728. These are conditional directional tests, with observational systematics and the historical selection history incompletely modeled. They neither identify a cosmic rotation vector nor break this paper's scalar curvature–rotation degeneracy. A physical directional prediction, nuisance-controlled comparison and independent discriminating observables are still required.
+
 ## References and provenance
 
 1. Wright, M. C., *EFMW Post-156 Theorem & Zoo Audit*, `enuminous/EFMW_Post156_Zoo_Audit`, 2026.

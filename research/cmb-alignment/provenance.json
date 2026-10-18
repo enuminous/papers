@@ -1,0 +1,180 @@
+{
+  "audit_date": "2026-10-18",
+  "scope": "Bounded authenticated repository and research-record search; no claim of exhaustive absence.",
+  "repositories": [
+    {
+      "repository": "enuminous/papers",
+      "entries": 88,
+      "truncated": false,
+      "scope": "Recursive tree inventory; candidate paths selectively inspected, not every blob/history.",
+      "inventory_response_sha": "05b69a68b0cfc006ee27814c0744b21748348488"
+    },
+    {
+      "repository": "enuminous/medium",
+      "entries": 1104,
+      "truncated": false,
+      "scope": "Recursive tree inventory; candidate paths selectively inspected, not every blob/history.",
+      "inventory_response_sha": "5e64689cdfd37eb2dd11cc39b588a83b5296aaa0"
+    },
+    {
+      "repository": "enuminous/Medium2",
+      "entries": 1006,
+      "truncated": false,
+      "scope": "Recursive tree inventory; candidate paths selectively inspected, not every blob/history.",
+      "inventory_response_sha": "56e6d7a9ff216c0b4147a132d1d187d3ea3f3f33"
+    },
+    {
+      "repository": "enuminous/Medium3",
+      "entries": 311,
+      "truncated": false,
+      "scope": "Recursive tree inventory; candidate paths selectively inspected, not every blob/history.",
+      "inventory_response_sha": "a32030695867bd7c4896b0876e1bb0e88f995b14"
+    },
+    {
+      "repository": "enuminous/Multiverse-Simulator",
+      "entries": 124,
+      "truncated": false,
+      "scope": "Recursive tree inventory; candidate paths selectively inspected, not every blob/history.",
+      "inventory_response_sha": "0c091ef90e81d0485703418cc844bb7d31c92e9a"
+    },
+    {
+      "repository": "enuminous/EFMW",
+      "entries": 18,
+      "truncated": false,
+      "scope": "Recursive tree inventory; candidate paths selectively inspected, not every blob/history.",
+      "inventory_response_sha": "0f321ef83d4ffdec7540035a24280aaa5c1bb30e"
+    },
+    {
+      "repository": "enuminous/EFMW-FULL",
+      "entries": 56,
+      "truncated": false,
+      "scope": "Recursive tree inventory; candidate paths selectively inspected, not every blob/history.",
+      "inventory_response_sha": "c7c2054d2cc88f38a0f09c72207ab2aaf3fede26"
+    },
+    {
+      "repository": "enuminous/efmw-research-cache",
+      "entries": 10,
+      "truncated": false,
+      "scope": "Recursive tree inventory; candidate paths selectively inspected, not every blob/history.",
+      "inventory_response_sha": "67dffe3e4a57ecae93cb4e0731ffe73b060b5657"
+    },
+    {
+      "repository": "enuminous/docs",
+      "entries": 43,
+      "truncated": false,
+      "scope": "Recursive tree inventory; candidate paths selectively inspected, not every blob/history.",
+      "inventory_response_sha": "c088c3ad03cc7fb06d7b4fa545aac885ac809057"
+    },
+    {
+      "repository": "enuminous/EFMW-Axioms",
+      "entries": 18,
+      "truncated": false,
+      "scope": "Recursive tree inventory; candidate paths selectively inspected, not every blob/history.",
+      "inventory_response_sha": "248dcbf323b8ee3f25ccfcf346d29516d77019a1"
+    }
+  ],
+  "search_terms": [
+    "Axis of Evil",
+    "primordial",
+    "black hole",
+    "CMB",
+    "100000",
+    "100_000",
+    "100,000",
+    "rotation",
+    "recursion",
+    "Universe",
+    "simulation"
+  ],
+  "search_limits": [
+    "Repository enumeration returned 100 entries and an empty subsequent page despite additional known repositories. Direct repository lookups supplemented this incomplete inventory.",
+    "Code indexing missed known narrative content. Zero indexed hits do not establish absence.",
+    "Recursive default-branch tree inventories were not truncated, but only candidate blobs were read.",
+    "Not a search of all branch histories, deleted files, gists, private disks, attachments or inaccessible chat records.",
+    "External Medium equation/figure images could not be inspected; no claim is made about their complete numerical content."
+  ],
+  "historical_article": {
+    "title": "Foundations of a Dynamic Cosmos: Resolving Anomalies with Rotational Potentials, Linear Potentials, and Quantum Light",
+    "article_date": "2025-01-23",
+    "html_export_date": "2025-08-19",
+    "repository": "enuminous/medium",
+    "path": "2025-01-23_Foundations-of-a-Dynamic-Cosmos--Resolving-Anomalies-with-Rotational-Potentials--Linear-Potentials--79279ea03332.html",
+    "archive_commit": "61f5f441628563a313ed64a295f69c7baeb71c72",
+    "archive_commit_date": "2025-08-21T17:55:36Z",
+    "blob_sha": "1515b3b1941bd3e5d88c5f58509491bd1bdcce23",
+    "matching_evidence": "Section 3.1.1 states 100,000 proto black holes, Gaussian spin assignments and directional anisotropic momenta; narrative relates simulations to Axis of Evil.",
+    "recovery_status": "Matching narrative recovered; original executable, seed, complete physical parameters, raw outputs and sky maps not recovered.",
+    "external_image_count": 20,
+    "chronology_note": "Article date is preserved content metadata, not an execution timestamp. Repository ingestion is months later."
+  },
+  "recovered_research_records": [
+    {
+      "name": "recursion_run3.py",
+      "created_at": "2026-10-18T15:02:30.088758Z",
+      "modified_at": "2026-10-18T15:02:33.127188Z",
+      "version_id": "1",
+      "size_bytes": 3356
+    },
+    {
+      "name": "recursion_run3_results.json",
+      "created_at": "2026-10-18T15:02:30.978868Z",
+      "modified_at": "2026-10-18T15:02:36.989277Z",
+      "version_id": "1",
+      "size_bytes": 5225
+    },
+    {
+      "name": "recursion_run2.py",
+      "created_at": "2026-10-18T14:59:12.949213Z",
+      "modified_at": "2026-10-18T14:59:15.475844Z",
+      "version_id": "1",
+      "size_bytes": 2320
+    },
+    {
+      "name": "Universe_005_Audit.md",
+      "created_at": "2026-10-18T15:10:18.263485Z",
+      "modified_at": "2026-10-18T15:10:18.263485Z",
+      "version_id": null,
+      "size_bytes": 2475
+    },
+    {
+      "name": "recursion_run2_results.json",
+      "created_at": "2026-10-18T14:59:13.645986Z",
+      "modified_at": "2026-10-18T14:59:18.617012Z",
+      "version_id": "1",
+      "size_bytes": 3872
+    },
+    {
+      "name": "Universe_003_Audit.md",
+      "created_at": "2026-10-18T15:02:28.865609Z",
+      "modified_at": "2026-10-18T15:02:28.865609Z",
+      "version_id": null,
+      "size_bytes": 3428
+    },
+    {
+      "name": "Universe_004_Audit.md",
+      "created_at": "2026-10-18T15:06:56.007769Z",
+      "modified_at": "2026-10-18T15:06:56.007769Z",
+      "version_id": null,
+      "size_bytes": 5050
+    }
+  ],
+  "original_recovery_inventory": {
+    "narrative": "recovered",
+    "code": "not recovered",
+    "seeds": "not recovered",
+    "parameters": "partial narrative only",
+    "physical_units": "not recovered as complete executable specification",
+    "raw_numerical_outputs": "not recovered",
+    "sky_maps": "not recovered",
+    "alignment_statistic": "not recovered as executable definition",
+    "isotropic_controls": "not recovered"
+  },
+  "observed_map": {
+    "source": "NASA LAMBDA WMAP DR5 ILC v5",
+    "url": "https://lambda.gsfc.nasa.gov/data/map/dr5/dfp/ilc/wmap_ilc_9yr_v5.fits",
+    "sha256": "4501090f824f9140e916339f9e8e490333f6ffe4257a6ee6a02526c8640099a9",
+    "bytes": 25174080,
+    "scope": "Public observed CMB map; not an EFMW-generated sky"
+  }
+}
+

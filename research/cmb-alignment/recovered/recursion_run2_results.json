@@ -1,0 +1,132 @@
+{
+  "seed": 20261018,
+  "initial_count": 100000,
+  "initial_mass": 106267.62235740971,
+  "initial_J_vector": [
+    64.21045403672335,
+    224.53106564946987,
+    -135.4733551402332
+  ],
+  "initial_J_norm": 269.9818730993628,
+  "final_remnants": 4,
+  "final_mass": 85186.57762724614,
+  "mass_radiated": 21081.044730163554,
+  "mass_conservation_error": -1.4551915228366852e-11,
+  "final_J_vector": [
+    15.946367110415324,
+    60.1704011419681,
+    -32.756122805261064
+  ],
+  "final_J_norm": 70.34008372783498,
+  "radiated_J_vector": [
+    48.26408692630876,
+    164.36066450750212,
+    -102.71723233497194
+  ],
+  "J_conservation_error_norm": 8.4980435916157e-13,
+  "rebound_assumed_J_inheritance_fraction": 0.65,
+  "post_rebound_J_vector": [
+    10.36513862176996,
+    39.11076074227927,
+    -21.291479823419692
+  ],
+  "boundary_export_J_vector": [
+    5.581228488645363,
+    21.059640399688835,
+    -11.464642981841372
+  ],
+  "rebound_J_balance_error": 0.0,
+  "post_rebound_mass": 83482.84607470121,
+  "boundary_energy_export": 1703.7315525449228,
+  "post_rebound_mass_balance_error": 0.0,
+  "stages": [
+    {
+      "round": 1,
+      "objects": 50000,
+      "mass_remaining": 104672.51588488453,
+      "radiated_energy_mass_units": 1595.106472525164,
+      "net_J_remnant": 243.2795854768309,
+      "angular_momentum_residual": 7.690948182093285e-13
+    },
+    {
+      "round": 2,
+      "objects": 25000,
+      "mass_remaining": 103108.350163073,
+      "radiated_energy_mass_units": 3159.272194336706,
+      "net_J_remnant": 230.00542473695572,
+      "angular_momentum_residual": 9.36192298695494e-13
+    },
+    {
+      "round": 3,
+      "objects": 12500,
+      "mass_remaining": 101566.64653284411,
+      "radiated_energy_mass_units": 4700.975824565581,
+      "net_J_remnant": 206.00122180891285,
+      "angular_momentum_residual": 5.347512718068054e-13
+    },
+    {
+      "round": 4,
+      "objects": 6250,
+      "mass_remaining": 100047.24912275645,
+      "radiated_energy_mass_units": 6220.373234653269,
+      "net_J_remnant": 183.53222217090615,
+      "angular_momentum_residual": 1.0581124154774833e-12
+    },
+    {
+      "round": 5,
+      "objects": 3125,
+      "mass_remaining": 98543.78765786462,
+      "radiated_energy_mass_units": 7723.834699545083,
+      "net_J_remnant": 168.27772387008955,
+      "angular_momentum_residual": 8.120107751870849e-13
+    },
+    {
+      "round": 10,
+      "objects": 98,
+      "mass_remaining": 91349.18625152721,
+      "radiated_energy_mass_units": 14918.43610588249,
+      "net_J_remnant": 103.57379336526185,
+      "angular_momentum_residual": 8.521774560998068e-13
+    },
+    {
+      "round": 11,
+      "objects": 49,
+      "mass_remaining": 89898.71475394737,
+      "radiated_energy_mass_units": 16368.907603462349,
+      "net_J_remnant": 94.51072655396979,
+      "angular_momentum_residual": 8.521774560998068e-13
+    },
+    {
+      "round": 12,
+      "objects": 25,
+      "mass_remaining": 88600.10044189026,
+      "radiated_energy_mass_units": 17667.521915519443,
+      "net_J_remnant": 86.0366084103909,
+      "angular_momentum_residual": 8.503982542366192e-13
+    },
+    {
+      "round": 13,
+      "objects": 13,
+      "mass_remaining": 87475.98333860231,
+      "radiated_energy_mass_units": 18791.639018807393,
+      "net_J_remnant": 76.07260759641295,
+      "angular_momentum_residual": 8.436030657126042e-13
+    },
+    {
+      "round": 14,
+      "objects": 7,
+      "mass_remaining": 86260.72432394409,
+      "radiated_energy_mass_units": 20006.898033465626,
+      "net_J_remnant": 73.19294626200683,
+      "angular_momentum_residual": 8.4980435916157e-13
+    },
+    {
+      "round": 15,
+      "objects": 4,
+      "mass_remaining": 85186.57762724614,
+      "radiated_energy_mass_units": 21081.044730163554,
+      "net_J_remnant": 70.34008372783498,
+      "angular_momentum_residual": 8.4980435916157e-13
+    }
+  ]
+}

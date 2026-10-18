@@ -1,0 +1,49 @@
+name: CMB alignment reproducibility
+
+on:
+  push:
+    paths:
+      - 'research/cmb-alignment/**'
+      - '.github/workflows/cmb-alignment.yml'
+  pull_request:
+    paths:
+      - 'research/cmb-alignment/**'
+      - '.github/workflows/cmb-alignment.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: research/cmb-alignment
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify archived checksums
+        run: sha256sum --check SHA256SUMS
+      - name: Reproduce frozen null and independent axis scoring
+        run: |
+          node --version
+          node run.cjs --check
+          node score_raw.cjs --check
+      - name: Install pinned map-analysis packages
+        run: |
+          python3.12 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check -r requirements-map.txt
+      - name: Download and measure the public WMAP map
+        run: |
+          .venv/bin/python measure_wmap.py --data "$RUNNER_TEMP/wmap_ilc_9yr_v5.fits" --out "$RUNNER_TEMP/wmap-reproduction.json"
+          .venv/bin/python verify_map.py "$RUNNER_TEMP/wmap-reproduction.json"
+      - name: Reproduce recovered October toy ensemble
+        run: .venv/bin/python verify_recovered.py
+      - name: Check archived products stayed unchanged
+        run: |
+          sha256sum --check SHA256SUMS
+          git diff --exit-code -- .
