@@ -1,0 +1,156 @@
+{
+  "id": "EFMW-C1-LOCAL-VORT-001",
+  "version": "1.0.0",
+  "freeze_utc": "2026-10-18T18:18:34.036271+00:00",
+  "status_at_freeze": "analytical_candidate; not yet numerically evaluated",
+  "purpose": "Test an explicit nonzero local Landau-frame vorticity solution in a two-scalar, fixed-background specialization of C1. Not the C1Q cosmology, global rotation, a CMB prediction, or a historical simulation recreation.",
+  "parent_repository_commit": "e5a544cd24178d2be7c9bc6fb8394b1540b949e2",
+  "source_archive_sha256": "515ebaa0eb07244aa34bd1a224ae190a6d889b44ee9408ba5ad6ad5c6ce07a5f",
+  "source_candidate_commit": "2e392b9fb5bbfa35667cd562787e23cadcc1623f",
+  "sources": {
+    "C1-CANDIDATE.md": {
+      "archive_member": "EFMW-Cosmology-C1Q-v1.0.0/sources/C1-CANDIDATE.md",
+      "sha256": "eae3e359b0ef9eaf7c077d559ef16d296c861e59e082d233af5fce31be08c7bf"
+    },
+    "C1-conventions.json": {
+      "archive_member": "EFMW-Cosmology-C1Q-v1.0.0/sources/C1-conventions.json",
+      "sha256": "9c0c467638da6825d537692459a577c005be3f1e1aabe79fb0fcb73ad3472d7d"
+    }
+  },
+  "action": "-1/2 ((partial phi)^2+(partial chi)^2) on prescribed Minkowski spacetime; C1 fields F,W active; E inactive; all masses, xi, g, h zero; no gauge or other fields",
+  "units": {
+    "natural": "c=hbar=1",
+    "coordinates": "y=(tau,xi,eta,zeta)=(t,x,y,z)/L",
+    "scalar_amplitude": "Phi_star has mass dimension one; normalized stress = T L^2/Phi_star^2",
+    "physical_vorticity": "omega_hat/L in natural units; angular rate c omega_hat/L in s^-1 for L in metres"
+  },
+  "metric": [
+    -1,
+    1,
+    1,
+    1
+  ],
+  "orientation": "right-handed x,y,z; epsilon^{0123}=+1; no Galactic axis identification",
+  "fields": [
+    "phi/Phi_star=tau*(p+alpha*xi)",
+    "chi/Phi_star=tau*(q+beta*eta)"
+  ],
+  "parameters": {
+    "p": 1.0,
+    "q": 1.0,
+    "alpha": 1.0,
+    "beta": 2.0
+  },
+  "domain": {
+    "tau": [
+      0.0,
+      0.1
+    ],
+    "xi": [
+      -0.2,
+      0.2
+    ],
+    "eta": [
+      -0.2,
+      0.2
+    ],
+    "zeta": "arbitrary; profiles independent of zeta"
+  },
+  "initial_data": "At tau=0 fields and spatial gradients vanish; field time derivatives have prescribed inhomogeneous orthogonal spatial gradients. Total energy-frame velocity and vorticity vanish. Initial data are not homogeneous/isotropic.",
+  "congruence": "unique future-directed unit timelike eigenvector T^{mu nu}u_nu=-rho_L u^mu",
+  "vorticity": "omega_hat^mu=(1/2) epsilon^{mu nu rho sigma} u_nu partial_{y^rho} u_sigma",
+  "prediction": {
+    "definitions": "f=p+alpha*xi; g=q+beta*eta; A=f^2+g^2; d1=r+alpha^2*tau^2; d2=r+beta^2*tau^2; vx=-tau*alpha*f/d1; vy=-tau*beta*g/d2; s=1-vx^2-vy^2",
+    "root": "r-A+tau^2*(alpha^2*f^2/d1+beta^2*g^2/d2)=0; physical branch r -> A as tau -> 0, s>0",
+    "omega_hat_z": "2*tau^3*alpha*beta*f*g*r*(alpha^2-beta^2)/(s^2*d1^2*d2^2)",
+    "other_components": "omega_hat^0=omega_hat^x=omega_hat^y=0",
+    "origin_small_tau": "omega_hat^z=-(3/2)*tau^3+O(tau^5)",
+    "individual_fields": "each normalized timelike scalar-gradient congruence has identically zero projected vorticity",
+    "isotropic_orientations": "Haar rotation of the entire initial configuration: E[omega_vector]=0, E[omega_i omega_j]=|omega|^2 delta_ij/3; nonzero realization RMS does not select a universal axis"
+  },
+  "verification": {
+    "symbolic": [
+      "Klein-Gordon residuals zero",
+      "stress conservation zero",
+      "implicit root derivative identities",
+      "spatial curl and velocity-time cross product equal the proposed expression",
+      "origin cubic coefficient -3/2",
+      "individual scalar Frobenius three-form zero"
+    ],
+    "grid": {
+      "tau": [
+        0.0,
+        0.025,
+        0.05,
+        0.075,
+        0.1
+      ],
+      "xi": [
+        -0.2,
+        -0.1,
+        0.0,
+        0.1,
+        0.2
+      ],
+      "eta": [
+        -0.2,
+        -0.1,
+        0.0,
+        0.1,
+        0.2
+      ],
+      "zeta": 0.0
+    },
+    "independent_numerics": "4x4 mixed stress eigenvector, followed by fourth-order centered finite differences and full Levi-Civita contraction; compare to scalar-root analytical expression",
+    "finite_difference_steps": [
+      0.002,
+      0.001,
+      0.0005
+    ],
+    "small_tau_origin": [
+      0.02,
+      0.01,
+      0.005,
+      0.0025
+    ],
+    "controls": [
+      "zero initial flow",
+      "homogeneous initial momenta",
+      "remove either scalar",
+      "equal orthogonal gradient magnitudes",
+      "common proper spatial rotations",
+      "reflection of x: axial-vector transformation",
+      "time reversal: omega_hat_z odd in tau",
+      "individual scalar congruences"
+    ],
+    "absolute_tolerances": {
+      "eigenvector_vs_root_velocity": 1e-11,
+      "unit_timelike_residual": 1e-11,
+      "stress_eigen_residual": 1e-10,
+      "finite_difference_vorticity_finest": 2e-08,
+      "zero_controls_finest": 2e-08,
+      "rotation_reflection_vorticity_finest": 2e-08,
+      "small_tau_cubic_coefficient_finest": 0.001
+    },
+    "convergence": "Report every step and every error. Finest-step absolute gate is primary numerical criterion; no mandatory ratio near roundoff or a zero signal.",
+    "orientation_null": {
+      "generator": "numpy.random.Generator(PCG64(2026101820))",
+      "seed": 2026101820,
+      "n": 10000,
+      "draw_order": "array shape (10000,4), C order, independent standard_normal; normalize each quaternion; components (w,x,y,z); standard active proper rotation matrix",
+      "distribution": "Haar SO(3), obtained from uniform S^3 unit quaternions; rotates full configuration, not only output vector",
+      "expectations": "mean rotated vorticity zero, normalized second moment identity/3",
+      "diagnostic_gate": "report component means and second moments; each mean absolute < 6/sqrt(3N), each second-moment deviation absolute < 6/sqrt(N). Broad fixed engineering controls, not discovery significance."
+    }
+  },
+  "no_data_used": "No CMB maps, historical PBH outputs, or prediction-lock v1 seed are consumed. This is a conditional mathematical construction.",
+  "exclusions": [
+    "No Einstein constraint/evolution solution",
+    "No globally finite-energy solution claimed",
+    "No scale L or field amplitude selected by C1",
+    "No EFMW-specific coupling responsible: all such couplings are zero",
+    "No coherent cosmological axis, rotation rate, CMB transfer or likelihood",
+    "No contradiction of C1Q v1 single-field/linear scope"
+  ],
+  "change_rule": "Keep this file and source snapshots immutable. Corrections require an explicit new protocol version or a documented implementation-only correction that does not alter predictions, parameters, tolerances, seed, or scientific scope."
+}
