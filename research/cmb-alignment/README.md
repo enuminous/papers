@@ -4,6 +4,8 @@
 
 **Prediction lock:** [EFMW-CMB-PRED-001 v1.0.0](prediction-lock/v1/LOCK.md) freezes the implications of the separately recovered October 16 C1Q model: zero background/linear-scalar vorticity and an isotropic ideal unlensed Gaussian TT-axis distribution. A rotating extension is unspecified. The new numerical test is frozen but unexecuted at lock publication; the already-known WMAP result is excluded from prospective confirmation.
 
+**Nonzero derivation:** [EFMW-C1-LOCAL-VORT-001](nonzero-vorticity/v1/DERIVATION.md) now demonstrates a conditional local mechanism in the parent C1 action: two free canonical scalar fields develop nonzero vorticity of their **combined Landau energy flow** from zero initial flow. Each scalar's own congruence remains irrotational. The initial scalar momenta have prescribed spatial gradients; gravity is a fixed background. The exact formula, independent stress-eigenvector calculation, ablations and 10,000 isotropic orientation controls pass their frozen checks. This is neither a C1Q v1 amendment nor a prediction of global cosmic rotation or CMB alignment.
+
 ## Findings
 
 A **January 23, 2025 narrative matching the 100,000-object claim was recovered** in the author's archived article, *Foundations of a Dynamic Cosmos*. Its section 3.1.1 describes Gaussian spins and assigned directional momenta. However, no corresponding executable package, complete parameters, original seed, numerical output array, or CMB sky-map product was recovered. The narrative establishes that the claim was documented, not that its computation or physical interpretation was verified. Some equations and results are external images whose contents could not be inspected; their contents are not assumed absent. See the bounded [provenance ledger](PROVENANCE.md).
@@ -105,6 +107,7 @@ Planck's broader isotropy analyses and temperature/polarization checks provide o
 | This rejects every isotropic cosmology | **Unsupported**; null and search family matter |
 | EFMW caused the observed alignment | **Not demonstrated**; no quantitative forward prediction |
 | A preferred observational axis proves global cosmic rotation | **Invalid inference without a physical model and independent observables** |
+| Parent C1 permits nonzero local composite-energy vorticity from zero flow | **Demonstrated conditionally**, in the separately frozen two-scalar construction; no exact initial isotropy or dynamical gravity |
 
 A reproducible historical claim needs an immutable source revision, environment, seeds or full RNG states, all initial distributions and physical units, evolution equations, resolution/convergence records, raw outputs, and the exact transformation to temperature/polarization maps. The original selection history and failed runs matter. A new reconstruction must be labeled as such and compared with, not substituted for, any recovered historical output.
 
@@ -112,7 +115,7 @@ A physical EFMW test additionally needs a covariant dynamical model and a specif
 
 Before a new measurement, freeze the EFMW-to-sky transfer model and its parameters, the baseline cosmology, nuisance priors, map treatments, comparison family, and a likelihood or score. Compare full simulated skies with identical processing, include isotropic and injected-anisotropy controls, ablate the claimed rotational source, and test held-out predictions. An observed anisotropic pattern must distinguish rotation from non-rotating anisotropic alternatives. Expansion history retains the curvature degeneracy discussed in Great Recursion.
 
-The Zoo principle Freeze → Predict → Score → Ablate → Replicate guides these obligations. Only the computational null, prescribed controls, and observation extraction have been exercised here. The canonical Tortoise temporal prediction/Brier experiment was **not** run, and no animal-pass or full-Zoo certification is claimed. EFMW prediction and physical ablation remain open.
+The Zoo principle Freeze → Predict → Score → Ablate → Replicate guides these obligations. The computational null, prescribed controls, observation extraction, and the linked conditional local-vorticity derivation have been exercised here. That derivation adds a mathematical prediction and field-removal ablations; it does not supply a cosmological prediction or observational physical ablation. The canonical Tortoise temporal prediction/Brier experiment was **not** run, and no animal-pass or full-Zoo certification is claimed.
 
 The null distribution, harmonic estimator and CMB anomaly are established statistical/observational ideas. The contribution here is the traceable provenance audit, frozen implementation, independent reproduction, and narrower evidentiary conclusion—not a new law or evidence for universal rotation.
 

@@ -130,6 +130,8 @@ For the specified WMAP nine-year ILC map with leading Doppler-quadrupole subtrac
 
 Thus a particular CMB alignment is reproducible, while its attribution to primordial black holes, EFMW dynamics or global cosmic rotation remains unestablished. Statistical anisotropy, a preferred observational axis and physical vorticity remain distinct claims.
 
+A subsequent [conditional nonzero-vorticity derivation](research/cmb-alignment/nonzero-vorticity/v1/DERIVATION.md) supplies an explicit local solution in a fixed-background, two-scalar specialization of the parent C1 action. Its combined Landau energy flow develops nonzero vorticity from zero initial flow, while each scalar flow remains irrotational. Symbolic identities, independent stress-tensor numerics, ablations and frozen orientation controls verify that result. Spatially varying initial scalar momenta are supplied, and no Einstein-constraint solution or cosmological axis is derived. This distinct local mechanism does not alter the R-001 ansatz's failure to generate its assigned rotational amplitude, and does not establish a bounce or the historical PBH interpretation.
+
 ## Related work and background
 
 - [Wright, *From Big Bang to Great Recursion*](great-recursion-primordial-rotation.md) — earlier EFMW oriented-rotation hypothesis and curvature/rotation identifiability issues.

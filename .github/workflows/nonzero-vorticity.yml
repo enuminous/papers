@@ -1,0 +1,42 @@
+name: C1 local nonzero vorticity
+
+on:
+  push:
+    paths:
+      - 'research/cmb-alignment/nonzero-vorticity/**'
+      - '.github/workflows/nonzero-vorticity.yml'
+  pull_request:
+    paths:
+      - 'research/cmb-alignment/nonzero-vorticity/**'
+      - '.github/workflows/nonzero-vorticity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: research/cmb-alignment/nonzero-vorticity/v1
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify immutable protocol and unchanged C1Q lock
+        run: |
+          sha256sum --check FREEZE.sha256
+          node ../../prediction-lock/v1/check.cjs
+      - name: Install pinned analysis packages
+        run: |
+          python3.12 -m venv "$RUNNER_TEMP/efmw-local-vorticity-venv"
+          "$RUNNER_TEMP/efmw-local-vorticity-venv/bin/python" -m pip install --disable-pip-version-check -r requirements.txt
+      - name: Reproduce exact identities and independent stress eigenvector measurements
+        run: '"$RUNNER_TEMP/efmw-local-vorticity-venv/bin/python" verify.py --check --out "$RUNNER_TEMP/efmw-local-vorticity-rerun.json"'
+      - name: Confirm archived files stayed unchanged
+        run: |
+          sha256sum --check SHA256SUMS
+          git diff --exit-code -- .
