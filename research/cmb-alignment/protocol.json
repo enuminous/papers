@@ -1,0 +1,78 @@
+{
+  "id": "EFMW-CMB-ALIGNMENT-NULL-001",
+  "version": "1.0.0",
+  "frozen_utc": "2026-10-18T17:19:44.623Z",
+  "status": "Prospective computational protocol fixed before new simulations and before extracting numerical observational axes; not an external preregistration and not prospective to historical CMB anomaly discovery.",
+  "purpose": "Independent isotropic directional-null baseline and assessment of recovered records; not a recreation of the historical 100000-PBH simulation.",
+  "rng": {
+    "name": "xoshiro128**",
+    "seeding": "four SplitMix32 words, explicit uint32 arithmetic; source controls exact definition",
+    "uniform": "(next_uint32 + 0.5)/4294967296",
+    "seeds": {
+      "axis_null": 2026101801,
+      "harmonic_check": 2026101802,
+      "look_elsewhere": 2026101803,
+      "positive_control": 2026101804,
+      "pbh_spin_control": 2026101805
+    }
+  },
+  "coordinates": {
+    "frame": "right-handed Galactic Cartesian",
+    "x": "l=0 deg,b=0 deg",
+    "y": "l=90 deg,b=0 deg",
+    "z": "b=90 deg",
+    "formula": "(cos b cos l, cos b sin l, sin b)",
+    "axis": "headless; n equivalent to -n",
+    "angles": "degrees for input/output, radians in trigonometry"
+  },
+  "primary": {
+    "name": "quadrupole-octopole maximum-angular-momentum-dispersion alignment",
+    "statistic": "A23=abs(dot(n2,n3))",
+    "axis_definition": "n_l is the eigenvector of the largest eigenvalue of Q_ij=Re[(L_i a)^dagger(L_j a)]",
+    "tail": "P(A >= A_observed)",
+    "null": "statistically isotropic full-sky independent Gaussian multipoles imply independent uniform headless n_l and A23~Uniform(0,1)",
+    "n_null": 1000000,
+    "alpha": 0.05,
+    "monte_carlo_p": "(exceedances+1)/(N+1)",
+    "uncertainty": "95% Wilson interval for underlying tail probability; Monte Carlo error only"
+  },
+  "sampling": {
+    "uniform_sphere": "z=2u-1, phi=2*pi*v, n=(sqrt(1-z*z)*cos(phi),sqrt(1-z*z)*sin(phi),z)",
+    "gaussian_alm": "C_l=1; a_l0~N(0,1) real; Re a_lm, Im a_lm~N(0,1/2) independently for m>0; a_l,-m=(-1)^m conjugate(a_lm)",
+    "normal": "Box-Muller, cos and sin outputs in fixed order",
+    "harmonic_check_realizations": 20000,
+    "ell": [
+      2,
+      3
+    ],
+    "units": "null coefficients arbitrary dimensionless normalization; axes invariant to each positive C_l scale"
+  },
+  "multiplicity": {
+    "finite_family": "all 36 unordered pairs from ell=2..10",
+    "n_null": 100000,
+    "statistic": "max abs(dot(n_l,n_k)); all axes resampled each realization",
+    "report": "family tail at primary observed threshold and Bonferroni min(1,36*p); neither reconstructs unknown historical search",
+    "free_axis": "If reference axis is fitted to same single vector, max |dot(n,r)|=1 for every null draw, hence p=1."
+  },
+  "controls": {
+    "positive": "fixed 5 degree separated axes; tests statistic sensitivity only, not physical prediction",
+    "pbh": "100000 independent isotropic unit spin directions, 64 fixed sequential RNG realizations; record resultant norm/sqrt(N) and headless cosine to fixed z; no mergers or physical time, masses, units, sky transfer or EFMW equation",
+    "diagnostics": "bin counts, mean A, exact vs MC tail, harmonic vs uniform-axis null; test rotational invariance and known extreme harmonic coefficients"
+  },
+  "observation_plan": {
+    "preferred": "published maximum-angular-momentum-dispersion quadrupole/octopole axes or separation from official Planck/WMAP papers, exact method/release cited",
+    "fallback": "published summary reanalysis only if raw FITS bytes or analysis runtime unavailable; no claim of pixel-map reproduction",
+    "variants": "report all retrieved compatible component-separation/correction variants; never select minimum p",
+    "systematics": [
+      "foreground residuals",
+      "mask and inpainting",
+      "kinematic Doppler quadrupole",
+      "beam and anisotropic noise",
+      "mapmaking/calibration and scanning",
+      "common-sky dependence between missions"
+    ],
+    "prohibitions": "Do not treat multipole-vector-area normals as angular-momentum axes; do not invent a global p over undocumented statistics or infer vorticity from headless alignment."
+  },
+  "interpretation": "Statistical anisotropy, a preferred observational axis, and fluid/spacetime vorticity are separate. Gaussian isotropic null differs from all isotropic non-Gaussian models.",
+  "stop": "Run fixed N once; preserve failed checks and amendments; do not tune seed, estimator, ell range or thresholds to observation."
+}
