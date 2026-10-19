@@ -5,6 +5,8 @@
 **Monolithic LLC — Mathematics and Elite Squad Dynamics: Swarm Buzzkill for the Buzzards**  
 19 October 2026
 
+**Substack publication:** [Read *The Universe Has Been Formally Diagnosed* on eNuminous Substack](https://enuminous.substack.com/p/the-universe-has-been-formally-diagnosed)
+
 > **Editor's note:** "this is too goddamned good."
 
 **Classification:** Mathematical satire / fictional parody. **Not** an empirical report, a psychiatric assessment, a new theorem, or evidence that the universe possesses consciousness, that Many-Worlds is experimentally verified, or that EFMW predicts cosmic rotation. The Ricks, Morty, talking universe, mathematical lobster, and ducks are fictional characters. The term “mathematical psychotic break” describes the absurdist *fictional plot*; it is not a clinical diagnosis.
