@@ -6,6 +6,7 @@
 **Monolithic LLC — October 20, 2026**
 
 Summary for Technical and Commercial Readers
+
 What the Monolithic Zoo is. A claim-evaluation architecture, not a theory of nature. A scientific or mathematical claim arrives in whatever form it lives in: prose, equation, Lean theorem, simulation, report. The Zoo returns a structured record separating what is syntactically well formed, what is formally derivable from stated assumptions, what the implementation actually corresponds to, what the evidence supports, and what remains an open obligation. Its analytic procedures, the animals, each target a distinct failure mode: circularity, scope inflation, missing provenance, unstated dimensions, correlation read as causation, post hoc selection. The animal names are organizational. They are not themselves a claim of novelty.
 
 What it has caught in practice. Three examples, all drawn from the author's own corpus, which is the harder test than auditing someone else.
