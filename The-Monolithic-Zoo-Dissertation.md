@@ -7,23 +7,41 @@
 
 Summary for Technical and Commercial Readers
 
-What the Monolithic Zoo is. A claim-evaluation architecture, not a theory of nature. A scientific or mathematical claim arrives in whatever form it lives in: prose, equation, Lean theorem, simulation, report. The Zoo returns a structured record separating what is syntactically well formed, what is formally derivable from stated assumptions, what the implementation actually corresponds to, what the evidence supports, and what remains an open obligation. Its analytic procedures, the animals, each target a distinct failure mode: circularity, scope inflation, missing provenance, unstated dimensions, correlation read as causation, post hoc selection. The animal names are organizational. They are not themselves a claim of novelty.
+What the Monolithic Zoo is. 
 
-What it has caught in practice. Three examples, all drawn from the author's own corpus, which is the harder test than auditing someone else.
+A claim-evaluation architecture, not a theory of nature. A scientific or mathematical claim arrives in whatever form it lives in: prose, equation, Lean theorem, simulation, report. The Zoo returns a structured record separating what is syntactically well formed, what is formally derivable from stated assumptions, what the implementation actually corresponds to, what the evidence supports, and what remains an open obligation. Its analytic procedures, the animals, each target a distinct failure mode: circularity, scope inflation, missing provenance, unstated dimensions, correlation read as causation, post hoc selection. The animal names are organizational. They are not themselves a claim of novelty.
 
-Necessity versus permission. For the source-free scalar wave equation, the constant field is a solution. The equation therefore does not entail a nonzero rotational state. The Zoo's counterexample defeats a universal necessity claim without denying that rotational solutions exist in a larger theory, or that physical systems rotate.
+What it has caught in practice. 
 
-An identifiability degeneracy. The Post-156 audit examines the effective relation between rotation and expansion. In a model whose curvature contribution carries the same inverse-square scale factor, the combination can be absorbed into an effective curvature parameter. Expansion-only evidence cannot separate the two. The correct output is a demand for an independent directional or rotational observable, not a detection claim.
+Three examples, all drawn from the author's own corpus, which is the harder test than auditing someone else.
 
-Denominator discipline. The portfolio's 181 registry entries are not 181 theorems freshly checked in that repository. The 102 equations classify as 15 conditional standard survivors, 28 structural survivors, 12 requiring empirical test, and 47 open specifications. The 774,180 potential evaluation slots are combinations in an index, not completed tests. An additional 46-module Lean 4 package pins Lean 4.19.0 without Mathlib and reports a 90-comparison reference runner, while disclosing that 17 rank-aggregation modules operate on supplied feature columns rather than formalizing upstream feature extraction. An audit system that refuses to inflate its own numbers is the product.
+Necessity versus permission. 
 
-What is not established. There is no independent demonstration that the Zoo detects consequential scientific defects better than a matched conventional review. That question is open, and this document says so in its own text.
+For the source-free scalar wave equation, the constant field is a solution. The equation therefore does not entail a nonzero rotational state. The Zoo's counterexample defeats a universal necessity claim without denying that rotational solutions exist in a larger theory, or that physical systems rotate.
 
-The experiment that would settle it. A preregistered corpus of labelled claims: sound theorems and proofs, false statements with counterexamples, sound proofs of misleading specifications, reports with leakage or incorrect denominators, and improperly attributed material. Items are developed and labelled by independent experts, with holdouts inaccessible during operator design. Comparators are matched on time, computation, search access, and prior context: a single structured model reviewer, an ensemble at the same budget, static verification and unit-test tooling, and expert human review where practical. The primary outcome is recall of consequential defects at a fixed false-positive rate, with blinded adjudication and uncertainty intervals. Ablations remove provenance checking, counterexample search, and the proof kernel one at a time, with negative controls including bogus citations, circular proofs, duplicated conclusions, and prompt-injection contamination. Results are published whether or not they flatter the system.
+An identifiability degeneracy. 
 
-What a bounded engagement looks like. Two shapes. A single-artifact audit freezes one flagship theorem and its stated product connection at a pinned commit, reproduces the Lean build and axiom dependencies, attacks the construction's assumptions, traces one product claim back to the theorem, and documents the findings in a separate repository. A comparative study runs the benchmark above on a specified class of claims and reports results against the organization's current review process. Scope, data handling, deliverables, and acceptance criteria are agreed in writing before work begins.
+The Post-156 audit examines the effective relation between rotation and expansion. In a model whose curvature contribution carries the same inverse-square scale factor, the combination can be absorbed into an effective curvature parameter. Expansion-only evidence cannot separate the two. The correct output is a demand for an independent directional or rotational observable, not a detection claim.
 
-**Document status:** Scholarly technical dissertation-style manuscript, not a university-submitted or degree-awarded dissertation. The evidence survey covers identified repository documents inspected on October 20, 2026. It is not a new independent execution of every Lean build, regression suite, or scientific experiment.
+Denominator discipline. 
+
+The portfolio's 181 registry entries are not 181 theorems freshly checked in that repository. The 102 equations classify as 15 conditional standard survivors, 28 structural survivors, 12 requiring empirical test, and 47 open specifications. The 774,180 potential evaluation slots are combinations in an index, not completed tests. An additional 46-module Lean 4 package pins Lean 4.19.0 without Mathlib and reports a 90-comparison reference runner, while disclosing that 17 rank-aggregation modules operate on supplied feature columns rather than formalizing upstream feature extraction. An audit system that refuses to inflate its own numbers is the product.
+
+What is not established. 
+
+There is no independent demonstration that the Zoo detects consequential scientific defects better than a matched conventional review. That question is open, and this document says so in its own text.
+
+The experiment that would settle it. 
+
+A preregistered corpus of labelled claims: sound theorems and proofs, false statements with counterexamples, sound proofs of misleading specifications, reports with leakage or incorrect denominators, and improperly attributed material. Items are developed and labelled by independent experts, with holdouts inaccessible during operator design. Comparators are matched on time, computation, search access, and prior context: a single structured model reviewer, an ensemble at the same budget, static verification and unit-test tooling, and expert human review where practical. The primary outcome is recall of consequential defects at a fixed false-positive rate, with blinded adjudication and uncertainty intervals. Ablations remove provenance checking, counterexample search, and the proof kernel one at a time, with negative controls including bogus citations, circular proofs, duplicated conclusions, and prompt-injection contamination. Results are published whether or not they flatter the system.
+
+What a bounded engagement looks like. 
+
+Two shapes. A single-artifact audit freezes one flagship theorem and its stated product connection at a pinned commit, reproduces the Lean build and axiom dependencies, attacks the construction's assumptions, traces one product claim back to the theorem, and documents the findings in a separate repository. A comparative study runs the benchmark above on a specified class of claims and reports results against the organization's current review process. Scope, data handling, deliverables, and acceptance criteria are agreed in writing before work begins.
+
+**Document status:** 
+
+Scholarly technical dissertation-style manuscript, not a university-submitted or degree-awarded dissertation. The evidence survey covers identified repository documents inspected on October 20, 2026. It is not a new independent execution of every Lean build, regression suite, or scientific experiment.
 
 ## Abstract
 
