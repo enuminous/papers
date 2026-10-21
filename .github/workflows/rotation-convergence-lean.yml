@@ -1,0 +1,38 @@
+name: RC-001 Lean formal bridge
+on:
+  push:
+    paths:
+      - "research/rotation-convergence-001/**"
+      - ".github/workflows/rotation-convergence-lean.yml"
+  pull_request:
+    paths:
+      - "research/rotation-convergence-001/**"
+  workflow_dispatch:
+
+jobs:
+  lean-bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: research/rotation-convergence-001
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Lean 4.28
+        uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+          use-github-cache: true
+          lake-package-directory: research/rotation-convergence-001
+      - name: Verify toolchain
+        run: lake --version
+      - name: Get mathlib cache
+        run: lake exe cache get
+      - name: Compile narrow hinge/curl bridge
+        run: lake env lean RotationBridge.lean
+      - name: Ban incomplete proofs and unchecked additional axioms
+        run: |
+          if grep -nE '(^|[^[:alnum:]_])(sorry|admit|axiom)([^[:alnum:]_]|$)' RotationBridge.lean; then
+            echo 'Incomplete proof or axiom token found' >&2
+            exit 1
+          fi
