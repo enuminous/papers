@@ -5,6 +5,8 @@
 **Matthew Chenoweth Wright / Monolithic LLC**
 **September 2026**
 
+**Experimental companion, 22 October 2026:** [DEV2-001 reproducible draft](research/dev2-001/README.md) operationalizes the provenance and criticism claim in section 16. **DRAFT, NOT FROZEN; no experimental result.**
+
 ### Abstract
 
 *Devs* imagines the ultimate centralized prediction machine: enough information about the present, combined with sufficiently complete physical laws, allows the reconstruction of the past and prediction of the future.

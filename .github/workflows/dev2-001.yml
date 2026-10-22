@@ -1,0 +1,28 @@
+name: DEV2-001 draft infrastructure
+on:
+  push:
+    paths:
+      - 'research/dev2-001/**'
+      - '.github/workflows/dev2-001.yml'
+  pull_request:
+    paths:
+      - 'research/dev2-001/**'
+      - '.github/workflows/dev2-001.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Offline checks only; no model experiment
+        run: |
+          python3 --version
+          git --version
+          python3 -m unittest discover -s research/dev2-001/tests -v
+          python3 research/dev2-001/prepare.py --out /tmp/dev2-development-plan.json
+          python3 research/dev2-001/planning.py
