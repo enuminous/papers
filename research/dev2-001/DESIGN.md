@@ -1,6 +1,6 @@
-# Decisions to approve before freeze
+# Design comparison and approval status
 
-**Recommendation only, 22 October 2026. No chosen values are represented as Matthew's approval.**
+**22 October 2026: Matthew approved the 120 / 240 / 120 mix and 20-point minimum improvement. Other proposed settings remain pending; the experiment is not frozen.**
 
 ## Question allocation
 
@@ -14,7 +14,7 @@ For a fixed evaluation total of 480 independent evidence families:
 | Design | Answerable / absent / contradictory | Approximate primary 95% half-width | Tradeoff |
 |---|---:|---:|---|
 | Balanced | 160 / 160 / 160 | 10.5 percentage points | Best coverage of all three categories; weakest primary precision of these choices |
-| **Recommended** | **120 / 240 / 120** | **8.6 points** | Half the sample addresses the primary claim while retaining substantial utility checks |
+| **Selected by Matthew** | **120 / 240 / 120** | **8.6 points** | Half the sample addresses the primary claim while retaining substantial utility checks |
 | Primary-heavy | 60 / 360 / 60 | 7.0 points | Tighter primary estimate; poor precision for answerability and conflict safeguards |
 
 These are planning approximations, not power guarantees. For paired binary
@@ -41,9 +41,10 @@ Dependence across families remains a limitation to audit, not something a
 bootstrap can automatically repair.
 
 The current ten-version corpus may be too small for 120 substantive conflict
-families. An evidence inventory must precede acceptance of that target. Options
-are to expand the pinned corpus with authentic versions, or revise the sample
-mix and acknowledge weaker Tier C precision. This is a curation problem, not a
+families. Matthew has selected that target, but an evidence inventory must still
+establish feasibility before freeze. Options are to expand the pinned corpus with
+authentic versions, or obtain approval for a revised sample mix and acknowledge
+weaker Tier C precision. This is a curation problem, not a
 reason to synthesize conflicts and call them historical facts.
 
 ## Pass margin
@@ -51,7 +52,7 @@ reason to synthesize conflicts and call them historical facts.
 | Absolute margin | Example baseline 40% → C at threshold | Interpretation |
 |---|---|---|
 | 10 points | 40% → 30% | Detects a modest gain; change the proposed 10-point kill boundary to avoid an overlapping pass/kill definition |
-| **20 points** | **40% → 20%** | Meaningful reduction in unsupported answers; preserves Boardy's starting suggestion |
+| **20 points — selected by Matthew** | **40% → 20%** | Meaningful reduction in unsupported answers; adopts Boardy's suggested margin |
 | 30 points | 40% → 10% | Demands a large effect and makes floor effects more likely |
 
 All choices should also require a 95% paired interval excluding zero, resource
@@ -62,7 +63,9 @@ already handle absence well; that is an informative result, not a reason to
 weaken it. Development-only estimates can inform a revised design **before**
 freezing; never select the threshold after examining held-out outcomes.
 
-The proposed rule is **observed gain >=20 points and interval above zero**.
+The draft combines the approved margin with an uncertainty condition:
+**observed gain >=20 points and interval above zero**. The margin approval alone
+does not finalize the full decision rule.
 It is not “the true gain is at least 20 points.” To substantiate that stronger
 claim the lower bound would have to exceed 20 points. Under a symmetric normal
 approximation, an experiment whose true gain is exactly 20 points has roughly
@@ -113,8 +116,10 @@ these general methods, not claimed reproductions of those papers' full systems.
 
 ## Decision record
 
-No approval has been recorded. After Matthew chooses a mix and margin, record
-the actual decision, date and source in `THRESHOLDS.json`; preserve rejected
-alternatives here. If choosing 10 points, also set a non-overlapping kill boundary
-(for example zero). Do not change `status` to `FROZEN` until every gate in
-`REPRODUCIBILITY.md` is met.
+Matthew's explicit selections on 22 October 2026 are recorded in
+[`APPROVALS.md`](APPROVALS.md) and `THRESHOLDS.json.parameter_approvals`:
+120 answerable / 240 absent / 120 contradictory questions, and a 20-percentage-point
+minimum absolute improvement. The alternatives above were not selected.
+The full protocol is still unapproved and unfrozen. Do not change `status` to
+`FROZEN` until the remaining decisions and every gate in `REPRODUCIBILITY.md`
+are complete. Any later parameter revision needs its own prospective record.

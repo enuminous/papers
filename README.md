@@ -32,7 +32,7 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
-- [DEV2-001: Provenance and Adversarial Criticism Benchmark](research/dev2-001/README.md) — 22 October 2026. Executable **unfrozen draft** associated with *Devs 2.0*: pinned corpus, question schema, three original arms and two conventional baselines, independent human scoring, paired analysis, and design choices awaiting approval. No model experiment or physics validation is reported.
+- [DEV2-001: Provenance and Adversarial Criticism Benchmark](research/dev2-001/README.md) — 22 October 2026. Executable **unfrozen draft** associated with *Devs 2.0*: pinned corpus, question schema, three original arms and two conventional baselines, independent human scoring and paired analysis. Matthew approved the 120 / 240 / 120 question mix and 20-point minimum improvement; remaining design and freeze requirements are pending. No model experiment or physics validation is reported.
 
 - [External Formalization of an EFMW Inspired Residual Core in Weaver OS](Weaver-OS-EFMW-Residual-Core-Formalization.md) — 22 October 2026. Pinned-source review of an attributed external Lean package: twelve conventional EWMA theorems, five modeled authority-boundary theorems, and a successful CI record, with explicit limits on novelty, independence, empirical validation, and runtime safety.
 

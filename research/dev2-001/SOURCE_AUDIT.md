@@ -19,9 +19,11 @@
   Indexed code search initially missed even the prose file; this is why the
   repository-tree inspection was necessary. This is a bounded search, not a
   guarantee about every private or unpushed project.
-- Available newer email and prior-decision context did not disclose approval of
+- At the initial draft's source check, available newer email and prior-decision context did not disclose approval of
   the question mix, performance margin, model, token budget, sample size or freeze.
-  Boardy's 20-point and 1.5× figures remain suggestions.
+  At that point Boardy's 20-point and 1.5× figures remained suggestions. Matthew
+  subsequently selected the question mix and 20-point margin in this conversation;
+  see [APPROVALS.md](APPROVALS.md). The 1.5× cap remains a proposal.
 
 ## Source pin and history limitations
 
@@ -46,7 +48,8 @@ all await independent review. No held-out questions have been invented or run.
 | Scoring, pairing, budgets and refusal of unfrozen evaluation | Software checks; see test suite and CI |
 | Development absent labels are semantically correct | Supported only as draft candidates; independent review unresolved |
 | Sufficient genuine contradictory version families | Unresolved |
-| Matthew approved numerical criteria | Not recorded |
+| Matthew approved question mix and minimum improvement | Recorded: 120 / 240 / 120 and 20 percentage points; see APPROVALS.md |
+| Matthew approved the full decision-rule package and freeze | Not recorded; remains pending |
 | Provenance plus criticism reduces false assertions | Hypothesis; no model experiment executed |
 | Architecture outperforms conventional D/E baselines | Unresolved |
 | Novel architecture or new EFMW physics is established | Not established by this task or benchmark |

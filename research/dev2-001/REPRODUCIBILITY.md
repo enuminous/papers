@@ -98,9 +98,11 @@ families in a contrast. Do not use fabricated examples as research evidence.
 
 Complete all of these before any held-out generation:
 
-1. Record Matthew's actual mix and margin decision, approval date/source, and
-   approval of accompanying failure, budget, utility and reproduction rules.
-   Set `recommendation_only: false` only after approval. Check that pass and kill
+1. The mix and margin decision is recorded in `APPROVALS.md` and
+   `THRESHOLDS.json.parameter_approvals`. Complete the approval record for the
+   accompanying failure, budget, utility and reproduction rules.
+   The top-level approval fields and `recommendation_only` concern the complete
+   rule package; set `recommendation_only: false` only after full approval. Check that pass and kill
    boundaries do not overlap if changing margins.
 2. Curate the complete holdout with two human reviewers, evidence spans, whole-
    corpus absence audits, neutral wording, genuine conflict explanations, and

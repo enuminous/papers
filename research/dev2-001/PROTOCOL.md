@@ -2,6 +2,11 @@
 
 **DRAFT, NOT FROZEN. No official result. Proposed settings are not adopted requirements.**
 
+**Decision update, 22 October 2026:** Matthew approved the 120 answerable /
+240 absent / 120 contradictory evaluation mix and 20-percentage-point minimum
+absolute improvement. See [APPROVALS.md](APPROVALS.md). Other proposed numerical
+settings and the complete freeze remain pending.
+
 ## 1. Target and limits
 
 At equal available token ceilings, compare the same model answering directly
@@ -149,7 +154,7 @@ support. Record optional confidence only if its event is clearly defined;
 calibration is exploratory and must report coverage, not compare selected
 confident responses as if they were complete samples.
 
-## 6. Proposed decision rules, all awaiting approval
+## 6. Decision rules: margin approved, remaining settings proposed
 
 - **Pass pending replication:** observed primary improvement at least 0.20;
   lower 95% bound strictly above zero; mean total-token ratio C/A at most 1.5;

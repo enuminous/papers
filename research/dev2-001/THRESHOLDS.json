@@ -48,5 +48,26 @@
       360,
       60
     ]
+  },
+  "approval_scope_note": "Top-level approved_by, approved_at, approval_reference and recommendation_only describe full-protocol approval. The parameter_approvals below record the two approved selections; remaining proposed settings and freeze are not approved.",
+  "parameter_approvals": {
+    "evaluation_counts": {
+      "value": {
+        "answerable": 120,
+        "absent": 240,
+        "contradictory": 120
+      },
+      "approved_by": "Matthew Chenoweth Wright",
+      "approved_at": "2026-10-22",
+      "date_timezone": "America/Los_Angeles",
+      "approval_reference": "APPROVALS.md#decision-2026-10-22-evaluation-mix-and-minimum-improvement"
+    },
+    "pass_absolute_improvement": {
+      "value": 0.2,
+      "approved_by": "Matthew Chenoweth Wright",
+      "approved_at": "2026-10-22",
+      "date_timezone": "America/Los_Angeles",
+      "approval_reference": "APPROVALS.md#decision-2026-10-22-evaluation-mix-and-minimum-improvement"
+    }
   }
 }

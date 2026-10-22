@@ -10,6 +10,7 @@ It does **not** validate EFMW physics, demonstrate a new law, or establish novel
 
 - [Protocol](PROTOCOL.md): target, arms, budgets, scoring, failure and release rules.
 - [Design decision brief](DESIGN.md): category distributions, pass thresholds and statistical consequences.
+- [Approval record](APPROVALS.md): Matthew's selected question mix and minimum improvement.
 - [Scoring manual](SCORING.md): two independent human raters, blinding and adjudication.
 - [Reproducibility guide](REPRODUCIBILITY.md): exact commands, adapter contract and freeze procedure.
 - [Run report template](RUN.md): a report to complete only after a real run.
@@ -47,21 +48,23 @@ model access, spending authorization or completed model run is implied here.
 The adapter contract and orchestration are executable, but an actual provider
 integration still needs development testing before freeze.
 
-## Recommended design awaiting Matthew's decision
+## Approved question mix and minimum improvement
 
-**480 evaluation questions: 120 answerable, 240 absent, 120 contradictory**;
-60 separately authored development questions; at least one independent evidence
-family per evaluation question under this proposed design. Do not pad the corpus
-with paraphrases to meet the sample size. If 120 genuine conflict families cannot
-be found, revise the corpus or the proposed design **before** freeze.
+Matthew approved **480 evaluation questions: 120 answerable, 240 absent,
+120 contradictory**, and a **20-percentage-point minimum absolute improvement**
+on 22 October 2026. See the [decision record](APPROVALS.md).
 
-Proposed primary pass: C reduces absent-tier false assertions versus A by at
-least **20 percentage points**, paired 95% bootstrap interval above zero,
-mean total tokens at most **1.5×**, and answerability/conflict guardrails met.
-All numbers, including the additional guardrails, remain proposals.
+The 60-item development target and independent-family minima remain proposed.
+Do not pad the corpus with paraphrases. If the approved mix cannot be curated,
+document the gap and obtain a revised design **before** freeze.
+
+The draft combines the approved 20-point margin with a paired 95% bootstrap
+interval above zero, mean total tokens at most **1.5×**, and answerability/conflict
+guardrails. Approval of the margin does not by itself adopt those other proposed
+numerical settings or the complete decision rule.
 
 Approval of the mix and margin alone does not freeze the experiment. A complete
 reviewed holdout, pinned model/adapter, price schedule, retrieval coverage review,
-human scoring roles and dated approval record must also be committed first.
+human scoring roles and approval of the remaining design rules must also be committed first.
 The analyzer never automatically issues `SUPPORTED`; independent reproduction
 and a reviewed release record are required.

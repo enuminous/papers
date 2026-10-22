@@ -1,7 +1,7 @@
 DEV2-001: Provenance and Adversarial Criticism Benchmark
 Status: DRAFT, NOT FROZEN. No official result.
 
-**Implementation companion (22 October 2026):** [Reproducible draft package](research/dev2-001/README.md) · [Executable protocol](research/dev2-001/PROTOCOL.md) · [Design decisions awaiting approval](research/dev2-001/DESIGN.md). The original proposal below is preserved. The companion is also unfrozen and reports no experimental success.
+**Implementation companion (22 October 2026):** [Reproducible draft package](research/dev2-001/README.md) · [Executable protocol](research/dev2-001/PROTOCOL.md) · [Design comparison](research/dev2-001/DESIGN.md) · [Approved mix and margin](research/dev2-001/APPROVALS.md). Matthew selected 120 / 240 / 120 questions and a 20-point minimum improvement. The original proposal below is preserved. The companion is also unfrozen and reports no experimental success.
 
 1. The one-sentence claim
 At matched token budget, an agent required to declare a provenance status for every assertion and then subjected to an adversarial criticism pass produces a lower false-assertion rate on questions whose answers are absent from the corpus than the same model answering the same questions without those constraints.

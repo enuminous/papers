@@ -8,7 +8,7 @@ Never present this template or synthetic test outputs as a completed experiment.
 ## Identity and provenance
 
 - Run ID, date, operator: NOT RUN
-- Actual design approval and source: NOT APPROVED
+- Parameter approval: 120 / 240 / 120 questions and 20-point margin approved by Matthew on 22 October 2026; see [APPROVALS.md](APPROVALS.md) in the package root. Full-protocol approval and freeze: PENDING.
 - Freeze commit / result commit / result parent: NOT CREATED
 - Package, corpus manifest, questions and adapter digests: NOT RECORDED
 - Model snapshot, tokenizer, Python/Git and adapter environment: NOT SELECTED
