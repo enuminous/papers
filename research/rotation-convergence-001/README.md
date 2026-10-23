@@ -1,9 +1,9 @@
 # RC-001 — EFMW × Ramtastic Rotation Convergence Test
 
-**Status (21 October 2026):** research protocol and executable baseline prepared; finite-difference Python baseline executed locally. Lean source below is **uncompiled** (Lean/lake unavailable in execution environment). No independent GitHub Actions verification, full C1 EFMW simulation, Einstein-constraint solution or CMB inference has been completed.
+**Status (23 October 2026):** the finite-difference Python baseline and narrow Lean bridge now pass GitHub Actions. [Lean run 39944001622](https://github.com/enuminous/papers/actions/runs/39944001622) compiled the bridge with Lean 4.28.0 and its committed Mathlib lock, checked dependency preservation, and passed the source guard against incomplete proofs and additional axiom declarations. This is hosted software/formal verification, not independent scientific review. Full C1 EFMW reproduction, an Einstein-constraint solution and CMB inference remain open. The October 21 execution report retains its historical uncompiled status.
 
 This project executes four bounded workstreams:
-1. **Formal bridge:** `RotationBridge.lean` is a Lean candidate with the standard plane hinge, rigid velocity, and coordinate curl identity; the existing [Two Paths to Rotation](../../Two-Paths-to-Rotation.md) gives fuller written derivations. This package still needs a real Lean+Mathlib build and tests of metric compatibility and arbitrary-axis extension.
+1. **Formal bridge:** `RotationBridge.lean` now compiles the standard plane hinge, rigid velocity, and coordinate curl identity; the existing [Two Paths to Rotation](../../Two-Paths-to-Rotation.md) gives fuller written derivations. Metric compatibility and arbitrary-axis extensions remain separate obligations.
 2. **Dynamics:** `experiment.py` reproduces a *standard wave-equation* flux-curl control, including time-zero and spatial symmetry controls. It is not a reproduction of the C1 two-scalar Landau-frame calculation. That reproduction remains open and requires importing frozen C1 code/parameters rather than inventing them.
 3. **Zoo audit:** `ZOO-AUDIT.md` classifies assumptions, mathematical conclusions and physical gaps.
 4. **Cosmology:** `COSMOLOGY-PROTOCOL.md` specifies an observationally falsifiable sequence and stop conditions. No global cosmic rotation is asserted.

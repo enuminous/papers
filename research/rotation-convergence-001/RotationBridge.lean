@@ -1,7 +1,7 @@
 import Mathlib
 
 /-!
-RC-001 narrow finite algebraic bridge (CANDIDATE, UNCOMPILED).
+RC-001 narrow finite algebraic bridge (candidate model).
 No theorem here proves a field equation, physical rotation, or cosmology.
 The coordinate curl is defined directly for the frozen rigid family.
 -/
