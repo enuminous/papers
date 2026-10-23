@@ -4,7 +4,7 @@
 
 **Matthew Chenoweth Wright** · Monolithic LLC / eNuminous
 
-22 October 2026 · Technical preprint · Version 1.0
+22 October 2026 · Technical preprint · Version 1.1 (relationship disclosure corrected 23 October 2026)
 
 **Artifact reviewed:** [`ryansctt1994-sudo/Weaver_Os`, pull request 57](https://github.com/ryansctt1994-sudo/Weaver_Os/pull/57), at commit [`740bfbe7925f278a60d0c3f6ef9ed3bc470f3c52`](https://github.com/ryansctt1994-sudo/Weaver_Os/commit/740bfbe7925f278a60d0c3f6ef9ed3bc470f3c52).
 
@@ -20,7 +20,9 @@ An external repository has produced a small, inspectable formalization explicitl
 
 External engagement with a research program can take several forms: a citation, an implementation, a formal proof, an empirical comparison, or deployment. These forms support different conclusions. This case concerns an attributed formal artifact and its recorded build, rather than a completed adoption or validation of EFMW as a physical theory.
 
-The public repository `ryansctt1994-sudo/Weaver_Os` describes an execution substrate for bounded AI. Pull request 57, titled “Formalize EFMW residual core and monitor authority boundary,” was created on 1 October 2026 and last updated on 6 October. At the evidence cutoff it remained open, targeted `codex/integrated-formal-closure`, and was explicitly described as stacked on pull request 56. The account and repository are outside the `enuminous` namespace; GitHub reports the repository as non-fork. These facts establish a distinct repository provenance. They do not establish the full interpersonal, institutional, or methodological independence of its contributors. [1, 2]
+The public repository `ryansctt1994-sudo/Weaver_Os` describes an execution substrate for bounded AI. Pull request 57, titled “Formalize EFMW residual core and monitor authority boundary,” was created on 1 October 2026 and last updated on 6 October. At the evidence cutoff it remained open, targeted `codex/integrated-formal-closure`, and was explicitly described as stacked on pull request 56. The account and repository are outside the `enuminous` namespace; GitHub reports the repository as non-fork. These facts establish a distinct repository provenance. [1, 2]
+
+I do not personally know Ryan (`ryansctt1994-sudo`). This assessment is based on public repository materials. Personal acquaintance is separate from methodological independence, which requires examination of the methods and evidence.
 
 The formalization's README credits Matthew Chenoweth Wright for EFMW and its physical interpretations, while treating the implemented recurrence as conventional EWMA mathematics. Its source expressly excludes those physical interpretations from the proof assumptions. Attribution is therefore directly documented. Neither appropriation nor endorsement of the broader theory should be inferred from the artifact. [3, 4]
 
@@ -196,7 +198,7 @@ The log also records an uploaded evidence archive and its SHA-256 digest, `883b1
 |---|---|---|
 | The external package explicitly attributes EFMW to Wright. | Demonstrated | Pinned README and source comments. |
 | The package formalizes twelve recurrence results and five modeled boundary results. | Demonstrated within the formal model | Source inspection plus the recorded successful build and audit. |
-| The project engaged substantively with an EFMW-inspired idea. | Supported | Definitions, proofs, configuration, and CI exceed a passing mention; social independence remains unestablished. |
+| The project engaged substantively with an EFMW-inspired idea. | Supported | Definitions, proofs, configuration, and CI exceed a passing mention. |
 | The recurrence is new mathematics. | Rejected for this recurrence | Equivalent to conventional EWMA under $\alpha=1-\lambda$. |
 | The PR has been merged or the feature deployed. | Not established | PR remained open and unmerged; no deployment evidence reviewed. |
 | The artifact validates broader EFMW physics or ontology. | Not established | No such premises, predictions, or experimental comparison occur in the package. |
