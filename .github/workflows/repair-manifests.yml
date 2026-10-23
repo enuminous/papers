@@ -1,0 +1,40 @@
+name: Generate pinned repair manifests
+on:
+  push:
+    branches: [repair/dependency-manifests-20261023]
+permissions:
+  contents: read
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: enuminous/EFMW-Grid
+          ref: 76e39b16f112d1a767b800ecbe84436949eea4f7
+          path: grid-source
+      - name: Install official Lean 4.28.0
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 0 https://github.com/leanprover/lean4/releases/download/v4.28.0/lean-4.28.0-linux.tar.zst --output "$RUNNER_TEMP/lean.tar.zst"
+          cd "$RUNNER_TEMP"
+          echo 'ceb3a3f844f7aebf63245e2b51c28d5b0ed38942c19f93cf3febd520302160bd  lean.tar.zst' | sha256sum --check
+          tar --no-same-owner --zstd -xf lean.tar.zst
+          echo "$RUNNER_TEMP/lean-4.28.0-linux/bin" >> "$GITHUB_PATH"
+      - name: Generate RC-001 manifest with its pinned toolchain
+        working-directory: research/rotation-convergence-001
+        run: lake update
+      - name: Generate dependency-free grid manifest
+        working-directory: grid-source
+        run: lake update
+      - name: Export exact generated manifest bytes
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          for key, path in [('PAPERS', 'research/rotation-convergence-001/lake-manifest.json'), ('GRID', 'grid-source/lake-manifest.json')]:
+              print('MANIFEST_' + key + '=' + json.dumps(Path(path).read_text()))
+          PY
