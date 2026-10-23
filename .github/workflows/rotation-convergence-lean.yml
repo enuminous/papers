@@ -22,6 +22,9 @@ jobs:
         uses: leanprover/lean-action@v1
         with:
           auto-config: false
+          build: false
+          test: false
+          lint: false
           use-github-cache: true
           lake-package-directory: research/rotation-convergence-001
       - name: Verify toolchain
@@ -30,6 +33,8 @@ jobs:
         run: lake exe cache get
       - name: Compile narrow hinge/curl bridge
         run: lake env lean RotationBridge.lean
+      - name: Reject dependency or toolchain drift
+        run: git diff --exit-code -- lakefile.toml lake-manifest.json lean-toolchain
       - name: Ban incomplete proofs and unchecked additional axioms
         run: |
           if grep -nE '(^|[^[:alnum:]_])(sorry|admit|axiom)([^[:alnum:]_]|$)' RotationBridge.lean; then
