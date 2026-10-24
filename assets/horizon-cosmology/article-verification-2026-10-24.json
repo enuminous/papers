@@ -1,0 +1,178 @@
+{
+  "model_id": "EFMW-COSMO-C1Q",
+  "version": "1.0.0",
+  "executed_utc": "2026-10-24T20:25:17.063139+00:00",
+  "original_file_count": 92,
+  "original_file_identity_matches": true,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "evidence_scope": "Numerical reproduction and saved-table analysis; no observational fit",
+  "full_CLASS_rebuilt": false,
+  "new_CMB_prediction_seed_consumed": false,
+  "steps": [
+    {
+      "script": "src/check_freeze.py",
+      "returncode": 0,
+      "stdout": "{\n  \"model\": \"EFMW-COSMO-C1Q\",\n  \"version\": \"1.0.0\",\n  \"files_checked\": 91,\n  \"identity_matches\": true,\n  \"mismatches\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "src/cosmology.py",
+      "returncode": 0,
+      "stdout": "{\n  \"model_id\": \"EFMW-COSMO-C1Q\",\n  \"version\": \"1.0.0\",\n  \"status\": \"synthetic fiducial prediction; no observational likelihood evaluated\",\n  \"x_initial\": 2.24004071597258,\n  \"x_today\": 1.9529746739763294,\n  \"y_today\": -0.541448006675701,\n  \"mu\": 1.0,\n  \"m_eV\": 1.437722662192951e-33,\n  \"Omega_gamma0\": 5.44377280168841e-05,\n  \"Omega_nu0\": 0.0013995587509758433,\n  \"Omega_cb0\": 0.314,\n  \"Omega_phi0\": 0.6845460035210071,\n  \"E_today\": 0.9999999999999997,\n  \"w_phi_today\": -0.8572455601108023,\n  \"wa_local\": -0.2344254649128569,\n  \"wa_note\": \"local slope -dw/dln(a) at a=1, not a fitted CPL model\",\n  \"q_today\": -0.3802019546007469,\n  \"age_since_ai_Gyr\": 13.59515803222393,\n  \"age_with_radiation_tail_Gyr\": 13.595158032224004,\n  \"acceleration_transition_redshifts\": [\n    0.6640065351720168\n  ],\n  \"root_scan\": {\n    \"range\": [\n      0,\n      1000\n    ],\n    \"grid_points\": 38,\n    \"sign_change_brackets\": [\n      [\n        1.8957356524063753,\n        2.9663488391777313\n      ]\n    ],\n    \"roots_found\": [\n      2.24004071597258\n    ],\n    \"uniqueness_proved\": false\n  },\n  \"distances\": [\n    {\n      \"z\": 0.1,\n      \"H_km_s_Mpc\": 71.67050039787698,\n      \"DM_Mpc\": 431.3754127956705,\n      \"DL_Mpc\": 474.5129540752376,\n      \"w_phi\": -0.8786198156157371,\n      \"delta_H_percent\": 1.184165221681499,\n      \"delta_DM_percent\": -0.6266092933368328\n    },\n    {\n      \"z\": 0.5,\n      \"H_km_s_Mpc\": 91.39991525744195,\n      \"DM_Mpc\": 1916.5644948503684,\n      \"DL_Mpc\": 2874.8467422755525,\n      \"w_phi\": -0.9343460472767192,\n      \"delta_H_percent\": 2.5301095774052484,\n      \"delta_DM_percent\": -1.7679799249535222\n    },\n    {\n      \"z\": 1.0,\n      \"H_km_s_Mpc\": 123.01260152932426,\n      \"DM_Mpc\": 3333.502639297028,\n      \"DL_Mpc\": 6667.005278594056,\n      \"w_phi\": -0.9669720429337739,\n      \"delta_H_percent\": 1.8880536072210186,\n      \"delta_DM_percent\": -1.9633546549072234\n    },\n    {\n      \"z\": 2.0,\n      \"H_km_s_Mpc\": 206.0713380183899,\n      \"DM_Mpc\": 5218.540897777363,\n      \"DL_Mpc\": 15655.62269333209,\n      \"w_phi\": -0.9890334297445044,\n      \"delta_H_percent\": 0.7703874971349833,\n      \"delta_DM_percent\": -1.7169336485727826\n    },\n    {\n      \"z\": 3.0,\n      \"H_km_s_Mpc\": 309.1209195709738,\n      \"DM_Mpc\": 6404.99451241282,\n      \"DL_Mpc\": 25619.97804965128,\n      \"w_phi\": -0.9952278135814032,\n      \"delta_H_percent\": 0.3530048726624102,\n      \"delta_DM_percent\": -1.5008524750830143\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "tests/verify.py",
+      "returncode": 0,
+      "stdout": "{\n  \"all_passed\": true,\n  \"checks\": [\n    {\n      \"name\": \"flatness_boundary\",\n      \"value\": 6.661338147750939e-16,\n      \"limit\": 1e-09,\n      \"pass_\": true,\n      \"meaning\": \"Shooting boundary condition; not empirical evidence.\"\n    },\n    {\n      \"name\": \"Raychaudhuri_from_finite_difference\",\n      \"value\": 3.448463736788199e-11,\n      \"limit\": 2e-07,\n      \"pass_\": true,\n      \"meaning\": \"Check independent acceleration equation from H(a).\"\n    },\n    {\n      \"name\": \"scalar_energy_continuity\",\n      \"value\": 4.700104860856992e-12,\n      \"limit\": 1e-08,\n      \"pass_\": true,\n      \"meaning\": \"rho_phi_N + 3(rho_phi+p_phi)=0.\"\n    },\n    {\n      \"name\": \"thermal_neutrino_continuity\",\n      \"value\": 1.0787410964496758e-09,\n      \"limit\": 2e-06,\n      \"pass_\": true,\n      \"meaning\": \"Direct thermal integral is consistent with covariant continuity.\"\n    },\n    {\n      \"name\": \"initial_radiation_dominance\",\n      \"value\": 3.410283066662689e-05,\n      \"limit\": 0.0010000000000000009,\n      \"pass_\": true,\n      \"meaning\": \"Chosen initial surface lies in radiation domination.\"\n    },\n    {\n      \"name\": \"canonical_scalar_w_bounds\",\n      \"value\": 0.0,\n      \"limit\": 1e-10,\n      \"pass_\": true,\n      \"meaning\": \"Positive canonical kinetic and quadratic potential imply -1<=w<=1.\"\n    },\n    {\n      \"name\": \"independent_variable_and_integrator\",\n      \"value\": 7.120970479945754e-12,\n      \"limit\": 2e-08,\n      \"pass_\": true,\n      \"meaning\": \"Radau on (phi,dphi/dln a) vs DOP853 on (phi,phi_dot).\"\n    },\n    {\n      \"name\": \"massless_neutrino_limit\",\n      \"value\": 8.326672684688674e-15,\n      \"limit\": 1e-10,\n      \"pass_\": true,\n      \"meaning\": \"FD density reproduces (7/8)(4/11)^(4/3) Neff rho_gamma.\"\n    },\n    {\n      \"name\": \"resolution_and_quadrature_convergence\",\n      \"value\": 8.881784197001252e-16,\n      \"limit\": 2e-06,\n      \"pass_\": true,\n      \"meaning\": \"Re-shoot with tighter integration, interpolation, and thermal quadrature.\"\n    }\n  ],\n  \"evidence_scope\": \"Internal numerical checks; not independent experimental validation or a Lean proof.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "src/analyze_class.py",
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"synthetic model predictions and numerical diagnostics; no data likelihood\",\n  \"background_crosscheck\": {\n    \"max_H_relative_z_0_to_100\": 1.4230145728433286e-08,\n    \"max_w_absolute_z_0_to_10\": 1.7070500568650004e-10,\n    \"limit_each\": 0.0002,\n    \"passed\": true\n  },\n  \"finite_compared_tables\": true,\n  \"unused_input_parameters\": {\n    \"c1q\": [],\n    \"lcdm\": [],\n    \"c1q_precision\": []\n  },\n  \"precision_diagnostics\": {\n    \"c1q_precision\": {\n      \"lensed_TT_max_relative\": 0.0013756615741610245,\n      \"lensed_EE_max_relative\": 0.0023541483892390858,\n      \"lensed_TE_max_abs_over_sqrt_TT_EE\": 0.0013546061820202122,\n      \"lensed_BB_max_relative\": 0.005604111471546824,\n      \"lensing_phiphi_max_relative\": 0.00018286128566047388,\n      \"matter_Pk_max_relative_0p01_to_0p2_h_Mpc\": 1.847668710253103e-07\n    }\n  },\n  \"diagnostic_scope\": \"Synchronous gauge. CMB l=2..1200; linear matter k=0.01..0.2 h/Mpc, z=0. One tighter run does not certify all possible likelihoods.\",\n  \"gauge_audit\": \"Earlier Newtonian scalar-field run rejected because the pinned scalar KG implementation omits required Newtonian lapse sources. Details and measured discrepancy preserved in results/rejected_newtonian and docs/AUDIT.md. No successful independent-gauge validation is claimed.\",\n  \"thermal_outputs\": {\n    \"c1q\": {\n      \"age_Gyr\": 13.595158,\n      \"r_drag_Mpc\": 147.13106,\n      \"100_theta_s_at_visibility_max\": 1.050331,\n      \"tau_reionization\": 0.053992\n    },\n    \"lcdm\": {\n      \"age_Gyr\": 13.787051,\n      \"r_drag_Mpc\": 147.131069,\n      \"100_theta_s_at_visibility_max\": 1.042628,\n      \"tau_reionization\": 0.054203\n    }\n  },\n  \"C1Q_vs_matched_LCDM\": {\n    \"matter_power_ratio_at_k_0p1_h_Mpc_z0\": 0.9613619603712832,\n    \"100_theta_s_relative_shift\": 0.007388061705613014\n  },\n  \"constant_conventions\": \"Python uses the explicit SI constants in numerics.json. CLASS uses its pinned constants, thermal quadrature and streaming approximations. Neither was retuned to force agreement.\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "background_checks": {
+    "all_passed": true,
+    "checks": [
+      {
+        "name": "flatness_boundary",
+        "value": 6.661338147750939e-16,
+        "limit": 1e-09,
+        "pass_": true,
+        "meaning": "Shooting boundary condition; not empirical evidence."
+      },
+      {
+        "name": "Raychaudhuri_from_finite_difference",
+        "value": 3.448463736788199e-11,
+        "limit": 2e-07,
+        "pass_": true,
+        "meaning": "Check independent acceleration equation from H(a)."
+      },
+      {
+        "name": "scalar_energy_continuity",
+        "value": 4.700104860856992e-12,
+        "limit": 1e-08,
+        "pass_": true,
+        "meaning": "rho_phi_N + 3(rho_phi+p_phi)=0."
+      },
+      {
+        "name": "thermal_neutrino_continuity",
+        "value": 1.0787410964496758e-09,
+        "limit": 2e-06,
+        "pass_": true,
+        "meaning": "Direct thermal integral is consistent with covariant continuity."
+      },
+      {
+        "name": "initial_radiation_dominance",
+        "value": 3.410283066662689e-05,
+        "limit": 0.0010000000000000009,
+        "pass_": true,
+        "meaning": "Chosen initial surface lies in radiation domination."
+      },
+      {
+        "name": "canonical_scalar_w_bounds",
+        "value": 0.0,
+        "limit": 1e-10,
+        "pass_": true,
+        "meaning": "Positive canonical kinetic and quadratic potential imply -1<=w<=1."
+      },
+      {
+        "name": "independent_variable_and_integrator",
+        "value": 7.120970479945754e-12,
+        "limit": 2e-08,
+        "pass_": true,
+        "meaning": "Radau on (phi,dphi/dln a) vs DOP853 on (phi,phi_dot)."
+      },
+      {
+        "name": "massless_neutrino_limit",
+        "value": 8.326672684688674e-15,
+        "limit": 1e-10,
+        "pass_": true,
+        "meaning": "FD density reproduces (7/8)(4/11)^(4/3) Neff rho_gamma."
+      },
+      {
+        "name": "resolution_and_quadrature_convergence",
+        "value": 8.881784197001252e-16,
+        "limit": 2e-06,
+        "pass_": true,
+        "meaning": "Re-shoot with tighter integration, interpolation, and thermal quadrature."
+      }
+    ],
+    "evidence_scope": "Internal numerical checks; not independent experimental validation or a Lean proof."
+  },
+  "saved_CLASS_analysis": {
+    "status": "synthetic model predictions and numerical diagnostics; no data likelihood",
+    "background_crosscheck": {
+      "max_H_relative_z_0_to_100": 1.4230145728433286e-08,
+      "max_w_absolute_z_0_to_10": 1.7070500568650004e-10,
+      "limit_each": 0.0002,
+      "passed": true
+    },
+    "finite_compared_tables": true,
+    "unused_input_parameters": {
+      "c1q": [],
+      "lcdm": [],
+      "c1q_precision": []
+    },
+    "precision_diagnostics": {
+      "c1q_precision": {
+        "lensed_TT_max_relative": 0.0013756615741610245,
+        "lensed_EE_max_relative": 0.0023541483892390858,
+        "lensed_TE_max_abs_over_sqrt_TT_EE": 0.0013546061820202122,
+        "lensed_BB_max_relative": 0.005604111471546824,
+        "lensing_phiphi_max_relative": 0.00018286128566047388,
+        "matter_Pk_max_relative_0p01_to_0p2_h_Mpc": 1.847668710253103e-07
+      }
+    },
+    "diagnostic_scope": "Synchronous gauge. CMB l=2..1200; linear matter k=0.01..0.2 h/Mpc, z=0. One tighter run does not certify all possible likelihoods.",
+    "gauge_audit": "Earlier Newtonian scalar-field run rejected because the pinned scalar KG implementation omits required Newtonian lapse sources. Details and measured discrepancy preserved in results/rejected_newtonian and docs/AUDIT.md. No successful independent-gauge validation is claimed.",
+    "thermal_outputs": {
+      "c1q": {
+        "age_Gyr": 13.595158,
+        "r_drag_Mpc": 147.13106,
+        "100_theta_s_at_visibility_max": 1.050331,
+        "tau_reionization": 0.053992
+      },
+      "lcdm": {
+        "age_Gyr": 13.787051,
+        "r_drag_Mpc": 147.131069,
+        "100_theta_s_at_visibility_max": 1.042628,
+        "tau_reionization": 0.054203
+      }
+    },
+    "C1Q_vs_matched_LCDM": {
+      "matter_power_ratio_at_k_0p1_h_Mpc_z0": 0.9613619603712832,
+      "100_theta_s_relative_shift": 0.007388061705613014
+    },
+    "constant_conventions": "Python uses the explicit SI constants in numerics.json. CLASS uses its pinned constants, thermal quadrature and streaming approximations. Neither was retuned to force agreement."
+  },
+  "reference_summary_relative_changes": {
+    "x_initial": 0.0,
+    "x_today": 0.0,
+    "y_today": 0.0,
+    "Omega_phi0": 0.0,
+    "w_phi_today": 0.0,
+    "age_since_ai_Gyr": 0.0
+  },
+  "reference_summary_relative_tolerance": 2e-06,
+  "original_files_unchanged_after_execution": true,
+  "all_passed": true,
+  "article_context": {
+    "date": "2026-10-24",
+    "cosmology_revision": "f457a1fc414257d5e4d2ddbeb8985db2cb714363",
+    "live_html_sha256": "e88dac83da31e6c4477d78ee6e80f0e0f8dfff94ddd0ff9c2fa9de1c7be62c43",
+    "live_html_matches_repository": true,
+    "application_checks_passed": 12,
+    "background_checks_passed": 9,
+    "full_CLASS_rebuilt": false,
+    "observational_fit_performed": false
+  }
+}

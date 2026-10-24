@@ -32,6 +32,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [HORIZON Brings Cosmic Horizons Into the Browser](HORIZON-Brings-Cosmic-Horizons-Into-the-Browser.md) · [Word](HORIZON-Cosmology-Journalistic-Article.docx) · [Live HORIZON](https://enuminous.github.io/Cosmology/) — 24 October 2026. Journalistic feature on the interactive cosmic-horizon explorer, its frozen C1Q model, numerical checks and prospective observational tests; calculated results and illustrative recursion are distinguished.
+
 - [A Thank-You to Alex Garland for *Devs*](A-Thank-You-to-Alex-Garland-for-Devs.md) — 23 October 2026. Matthew's public memo of appreciation for the series that helped inspire Devs 2.0.
 
 - [DEV2-001: Provenance and Adversarial Criticism Benchmark](research/dev2-001/README.md) — 22 October 2026. Executable **unfrozen draft** associated with *Devs 2.0*: pinned corpus, question schema, three original arms and two conventional baselines, independent human scoring and paired analysis. Matthew approved the 120 / 240 / 120 question mix and 20-point minimum improvement; remaining design and freeze requirements are pending. No model experiment or physics validation is reported.
