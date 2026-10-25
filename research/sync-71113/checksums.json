@@ -1,0 +1,11 @@
+{
+  "algorithm": "SHA-256",
+  "scope": "Verifier and deterministic numerical outputs",
+  "files": {
+    "results.json": "15ccfd893e26c01cb98482ddc68b7b8f0347679b0d5bfd45d0768b29b1f1d6b1",
+    "sequences.csv": "0eb9833b9ee99c2cda15d0692e7c9b61a11420de884bc08bb91444189d3c928c",
+    "correlations.csv": "c173a04774451800a33c33af04cbc05915eba3d4cc18e9f9ecbe0a5cdda275bd",
+    "triples_budget31.csv": "195e733c35ea4716ab33c96249930368b65a33b76043c5ab137585328510f4f7",
+    "verify.py": "095677052b71750c822dbddec751c8fd2af436c78988fd1a21ec69878ea5eecb"
+  }
+}

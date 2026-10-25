@@ -1,0 +1,25 @@
+name: SYNC-71113 exact arithmetic checks
+on:
+  push:
+    paths:
+      - 'From-Synchronicity-to-Synchronization-7-11-13.md'
+      - 'research/sync-71113/**'
+      - '.github/workflows/sync-71113.yml'
+  pull_request:
+    paths:
+      - 'From-Synchronicity-to-Synchronization-7-11-13.md'
+      - 'research/sync-71113/**'
+      - '.github/workflows/sync-71113.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Recompute all finite arithmetic and compare published outputs
+        run: |
+          python3 --version
+          python3 research/sync-71113/verify.py --check

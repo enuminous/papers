@@ -32,6 +32,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [From Synchronicity to Synchronization: The 7–11–13 Structure in Modular Recurrence and Barker Coding](From-Synchronicity-to-Synchronization-7-11-13.md) · [Proofs, code, and complete results](research/sync-71113/README.md) — 25 October 2026. Exact 1,001-step recurrence, nested and CRT-ordered Barker signals, a 143-versus-122 aperiodic sidelobe comparison, and the conditional 31-position optimum. Mathematical results are distinguished from untested synchronization performance and physical claims.
+
 - [EFMW-BIO-001: A Negative Benchmark Result for Cellular Memory](EFMW-BIO-001-Cellular-Memory-Negative-Result.md) · [Protocol, code, and results](research/efmw-bio-001/README.md) — 25 October 2026. Public single-cell ERK reanalysis: 70,987 retained cells, three held-out experimental replicates, a 3.62% primary error reduction versus the ablation, but 1.19% higher error than the training-selected conventional comparator. The tested recurrence is equivalent to ordinary EWMA; upstream normalization limits independence.
 
 - [HORIZON Brings Cosmic Horizons Into the Browser](HORIZON-Brings-Cosmic-Horizons-Into-the-Browser.md) · [Word](HORIZON-Cosmology-Journalistic-Article.docx) · [Live HORIZON](https://enuminous.github.io/Cosmology/) — 24 October 2026. Journalistic feature on the interactive cosmic-horizon explorer, its frozen C1Q model, numerical checks and prospective observational tests; calculated results and illustrative recursion are distinguished.
@@ -91,4 +93,5 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 - [great-recursion-primordial-rotation.md](great-recursion-primordial-rotation.md)
 - [monolithic-open-mathematical-intelligence-revolution.md](monolithic-open-mathematical-intelligence-revolution.md)
 - [spacex_xai_efmw_2045_x_article.md](spacex_xai_efmw_2045_x_article.md)
+
 
