@@ -1,0 +1,628 @@
+{
+  "generated_utc": "2026-10-25T23:33:05.817659+00:00",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39"
+  },
+  "scope": "Static byte and metadata inspection only; no upstream code imported, model inference, probe evaluation, or checkpoint deserialization.",
+  "old": {
+    "commit": "0f7d63c4551a15a9bb5b2f35c8d4fe6b111dc2bf",
+    "tree_url": "https://huggingface.co/mirrorethic/cl33-oplm/tree/0f7d63c4551a15a9bb5b2f35c8d4fe6b111dc2bf",
+    "inventory": [
+      {
+        "type": "file",
+        "oid": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+        "size": 1519,
+        "path": ".gitattributes"
+      },
+      {
+        "type": "file",
+        "oid": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "size": 11358,
+        "path": "LICENSE"
+      },
+      {
+        "type": "file",
+        "oid": "7789a78aa7c94373a33dfc0289c1e6f8feba9dc6",
+        "size": 5913,
+        "path": "README.md"
+      },
+      {
+        "type": "file",
+        "oid": "5b29862e7a4dabaa611790631d40852f641fd53c",
+        "size": 3726,
+        "path": "REPRODUCE.md"
+      },
+      {
+        "type": "file",
+        "oid": "a855da88d05aae08001be5a976c8c561020e9e5a",
+        "size": 1107,
+        "path": "SHA256SUMS"
+      },
+      {
+        "type": "file",
+        "oid": "f597668d253db1b1a82f661b4c3676d06557660f",
+        "size": 946034587,
+        "lfs": {
+          "oid": "ddd042a6b8bb1a1e07cdebb75fad135e12955528e872f22b40e7d3fe15559535",
+          "size": 946034587,
+          "pointerSize": 134
+        },
+        "xetHash": "ce9ed9c97a33bf4279dd55f0d75613acaffda05b39cf8d2a5fd5b6c7ea5f7b54",
+        "path": "cl33_oplm_chat_236m.pt"
+      },
+      {
+        "type": "file",
+        "oid": "bedbbcfea9eae1ed58717ca2ae86d71dd97b7266",
+        "size": 945975203,
+        "lfs": {
+          "oid": "fe407328903731ecf94e5c7173a754311212a1c24ed2cbb92a1978faea6a1fbf",
+          "size": 945975203,
+          "pointerSize": 134
+        },
+        "xetHash": "05e5fadc8df0c97fba57f31b7eaa331c31c65dff5aa8ad78f5f4555a67f5765b",
+        "path": "cl33_oplm_prose_236m.pt"
+      },
+      {
+        "type": "file",
+        "oid": "9e4b2c92a46fc7cb0d1e163cb23b7711395191a0",
+        "size": 98528,
+        "lfs": {
+          "oid": "a967e8ab25efdd8dc365c580e0eee12c37574f29734140f23676aa8e288b17ea",
+          "size": 98528,
+          "pointerSize": 130
+        },
+        "xetHash": "dfbc57c7dbbf9809174fef877fe963fcef14fb2068454799b7a63e1d387b4836",
+        "path": "eval_slice_prose_val.npy"
+      },
+      {
+        "type": "file",
+        "oid": "14afe84c4df6d714b444b0a04155c224f4ac3aca",
+        "size": 211878933,
+        "lfs": {
+          "oid": "9120134a29141485043107b810ec08a01fb374bfe962421e45d9db88c0ca79ef",
+          "size": 211878933,
+          "pointerSize": 134
+        },
+        "xetHash": "9df32d51348985a50299974685f156dd2ca4ed14c02f38c10963e52eb8c27627",
+        "path": "invert_probe_chat.pt"
+      },
+      {
+        "type": "file",
+        "oid": "9eb94b85104397713ece14f0c3ed8062c1136c3a",
+        "size": 7389,
+        "path": "model.py"
+      },
+      {
+        "type": "file",
+        "oid": "78c1f1107c1f80764525ba8e57ccfb6321fe8639",
+        "size": 20857,
+        "path": "model_v2.py"
+      },
+      {
+        "type": "file",
+        "oid": "6c8eb1c4e14edc4a6f9b5bfc28cb0e9f2345557c",
+        "size": 3574,
+        "path": "repro_bottleneck.py"
+      },
+      {
+        "type": "file",
+        "oid": "60497a6c5591d6170c2a2d88e14be2108e55eaf9",
+        "size": 2257,
+        "path": "repro_reverse_readout.py"
+      },
+      {
+        "type": "file",
+        "oid": "c477243186e4cb95dffa9b60feac7ba3986ef819",
+        "size": 2694,
+        "path": "so33.py"
+      },
+      {
+        "type": "file",
+        "oid": "bac44ee85e3656df48d22de77fbfe211c8844ca5",
+        "size": 9955,
+        "path": "t3v3_wedge_memory.py"
+      },
+      {
+        "type": "file",
+        "oid": "b1d42ab974d5a581e450335db6f23687c87d0a19",
+        "size": 10916,
+        "path": "tape_memory.py"
+      },
+      {
+        "type": "file",
+        "oid": "e12923b60ffad57bee89d8200895a48c2e0c1182",
+        "size": 2946,
+        "path": "wedge.py"
+      }
+    ],
+    "downloaded_sha256": {
+      ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "README.md": "12a54318ac650a811004749cbc3192a9fda8a7f3be2654f34cee73f225e17ec7",
+      "REPRODUCE.md": "6f07f99d1fb5e57d2e6fb794b83a93fd278cdf06f43d99f8180761d4bc719352",
+      "SHA256SUMS": "7832164e9b0aad6531fbba3b0c6d31ba0fa19bbd7f075f23ee3e920e94f37609",
+      "eval_slice_prose_val.npy": "a967e8ab25efdd8dc365c580e0eee12c37574f29734140f23676aa8e288b17ea",
+      "model.py": "df6030348482e9bf0e5ba37e2e62dfada8cf6550a0107a6ce86d68c81019bd8c",
+      "model_v2.py": "79d148fca8c29085a963a8aa66f2ae49e7b0eff03536dfc43132dcdf916a4521",
+      "repro_bottleneck.py": "cdc42b4f08b4a139f0cd1c262112db4f256157494a01350ab79a4f6d09c298b5",
+      "repro_reverse_readout.py": "e93fcaaa8eae49a5bf401c8b722f3290d99f7142b3cab528cd06b02c39e9757f",
+      "so33.py": "ff24dcfa83fb633e71fdeb0093c63b05d6118d574a1efd25fa5744978be0cc2f",
+      "t3v3_wedge_memory.py": "fb8d17474cf20ec177a9d6c5810f8d66a79a4a0b7070fa4f111174d91d3b2d29",
+      "tape_memory.py": "fa70959ec1657c7747b02ec78652c3ef445f7c72f661b36ea68278c4ab466147",
+      "wedge.py": "692cd36f59622e37ea83cb7c2957928aa2d49dbf27bb4c362815e47cac96dc33"
+    },
+    "manifest_checks": [
+      {
+        "path": "release/cl33_oplm_chat_236m.pt",
+        "expected_sha256": "ddd042a6b8bb1a1e07cdebb75fad135e12955528e872f22b40e7d3fe15559535",
+        "actual_sha256": null,
+        "status": "missing_path"
+      },
+      {
+        "path": "release/cl33_oplm_prose_236m.pt",
+        "expected_sha256": "fe407328903731ecf94e5c7173a754311212a1c24ed2cbb92a1978faea6a1fbf",
+        "actual_sha256": null,
+        "status": "missing_path"
+      },
+      {
+        "path": "release/invert_probe_chat.pt",
+        "expected_sha256": "9120134a29141485043107b810ec08a01fb374bfe962421e45d9db88c0ca79ef",
+        "actual_sha256": null,
+        "status": "missing_path"
+      },
+      {
+        "path": "model.py",
+        "expected_sha256": "df6030348482e9bf0e5ba37e2e62dfada8cf6550a0107a6ce86d68c81019bd8c",
+        "actual_sha256": "df6030348482e9bf0e5ba37e2e62dfada8cf6550a0107a6ce86d68c81019bd8c",
+        "status": "pass"
+      },
+      {
+        "path": "model_v2.py",
+        "expected_sha256": "69992c25815d9c77e11b5e8e7fee644c170387c630c3efe379e700c4d2a7000a",
+        "actual_sha256": "79d148fca8c29085a963a8aa66f2ae49e7b0eff03536dfc43132dcdf916a4521",
+        "status": "hash_mismatch"
+      },
+      {
+        "path": "repro_reverse_readout.py",
+        "expected_sha256": "e93fcaaa8eae49a5bf401c8b722f3290d99f7142b3cab528cd06b02c39e9757f",
+        "actual_sha256": "e93fcaaa8eae49a5bf401c8b722f3290d99f7142b3cab528cd06b02c39e9757f",
+        "status": "pass"
+      },
+      {
+        "path": "so33.py",
+        "expected_sha256": "ff24dcfa83fb633e71fdeb0093c63b05d6118d574a1efd25fa5744978be0cc2f",
+        "actual_sha256": "ff24dcfa83fb633e71fdeb0093c63b05d6118d574a1efd25fa5744978be0cc2f",
+        "status": "pass"
+      },
+      {
+        "path": "t3v3_wedge_memory.py",
+        "expected_sha256": "fb8d17474cf20ec177a9d6c5810f8d66a79a4a0b7070fa4f111174d91d3b2d29",
+        "actual_sha256": "fb8d17474cf20ec177a9d6c5810f8d66a79a4a0b7070fa4f111174d91d3b2d29",
+        "status": "pass"
+      },
+      {
+        "path": "tape_memory.py",
+        "expected_sha256": "fa70959ec1657c7747b02ec78652c3ef445f7c72f661b36ea68278c4ab466147",
+        "actual_sha256": "fa70959ec1657c7747b02ec78652c3ef445f7c72f661b36ea68278c4ab466147",
+        "status": "pass"
+      },
+      {
+        "path": "wedge.py",
+        "expected_sha256": "692cd36f59622e37ea83cb7c2957928aa2d49dbf27bb4c362815e47cac96dc33",
+        "actual_sha256": "692cd36f59622e37ea83cb7c2957928aa2d49dbf27bb4c362815e47cac96dc33",
+        "status": "pass"
+      },
+      {
+        "path": "eval_slice_prose_val.npy",
+        "expected_sha256": "a967e8ab25efdd8dc365c580e0eee12c37574f29734140f23676aa8e288b17ea",
+        "actual_sha256": "a967e8ab25efdd8dc365c580e0eee12c37574f29734140f23676aa8e288b17ea",
+        "status": "pass",
+        "published_lfs_sha256": "a967e8ab25efdd8dc365c580e0eee12c37574f29734140f23676aa8e288b17ea",
+        "manifest_matches_published_lfs_metadata": true
+      },
+      {
+        "path": "repro_bottleneck.py",
+        "expected_sha256": "cdc42b4f08b4a139f0cd1c262112db4f256157494a01350ab79a4f6d09c298b5",
+        "actual_sha256": "cdc42b4f08b4a139f0cd1c262112db4f256157494a01350ab79a4f6d09c298b5",
+        "status": "pass"
+      },
+      {
+        "path": "REPRODUCE.md",
+        "expected_sha256": "c438fddaed6b3f04c88d7844408a14853f9bfca36c285f5a9efdb098fd46885f",
+        "actual_sha256": "6f07f99d1fb5e57d2e6fb794b83a93fd278cdf06f43d99f8180761d4bc719352",
+        "status": "hash_mismatch"
+      }
+    ],
+    "manifest_summary": {
+      "missing_path": 3,
+      "pass": 8,
+      "hash_mismatch": 2
+    },
+    "files_not_listed_in_manifest": [
+      ".gitattributes",
+      "LICENSE",
+      "README.md",
+      "SHA256SUMS",
+      "cl33_oplm_chat_236m.pt",
+      "cl33_oplm_prose_236m.pt",
+      "invert_probe_chat.pt"
+    ],
+    "torch_load_calls": [
+      {
+        "path": "repro_bottleneck.py",
+        "line": 26,
+        "weights_only": false
+      },
+      {
+        "path": "repro_reverse_readout.py",
+        "line": 21,
+        "weights_only": false
+      },
+      {
+        "path": "repro_reverse_readout.py",
+        "line": 26,
+        "weights_only": false
+      }
+    ]
+  },
+  "new": {
+    "commit": "b081c1c8888a857d5dfdd1ec4f1d94b497834473",
+    "tree_url": "https://huggingface.co/mirrorethic/cl33-oplm/tree/b081c1c8888a857d5dfdd1ec4f1d94b497834473",
+    "inventory": [
+      {
+        "type": "file",
+        "oid": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+        "size": 1519,
+        "path": ".gitattributes"
+      },
+      {
+        "type": "file",
+        "oid": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "size": 11358,
+        "path": "LICENSE"
+      },
+      {
+        "type": "file",
+        "oid": "46489c1c7c65293c9695cbdec298425b370fcc4e",
+        "size": 14507,
+        "path": "README.md"
+      },
+      {
+        "type": "file",
+        "oid": "a3eab14e4365dcff4a5922a86a95e7c2233da765",
+        "size": 12294,
+        "path": "REPRODUCE.md"
+      },
+      {
+        "type": "file",
+        "oid": "b4d6faf41b8f2407266b3c7e4056fe61d1a7a0e5",
+        "size": 1329,
+        "path": "SHA256SUMS"
+      },
+      {
+        "type": "file",
+        "oid": "f597668d253db1b1a82f661b4c3676d06557660f",
+        "size": 946034587,
+        "lfs": {
+          "oid": "ddd042a6b8bb1a1e07cdebb75fad135e12955528e872f22b40e7d3fe15559535",
+          "size": 946034587,
+          "pointerSize": 134
+        },
+        "xetHash": "ce9ed9c97a33bf4279dd55f0d75613acaffda05b39cf8d2a5fd5b6c7ea5f7b54",
+        "path": "cl33_oplm_chat_236m.pt"
+      },
+      {
+        "type": "file",
+        "oid": "bedbbcfea9eae1ed58717ca2ae86d71dd97b7266",
+        "size": 945975203,
+        "lfs": {
+          "oid": "fe407328903731ecf94e5c7173a754311212a1c24ed2cbb92a1978faea6a1fbf",
+          "size": 945975203,
+          "pointerSize": 134
+        },
+        "xetHash": "05e5fadc8df0c97fba57f31b7eaa331c31c65dff5aa8ad78f5f4555a67f5765b",
+        "path": "cl33_oplm_prose_236m.pt"
+      },
+      {
+        "type": "file",
+        "oid": "89245b4981cddbc7066f663be68ee8857ba1bc41",
+        "size": 222414,
+        "lfs": {
+          "oid": "64f5959c8a883991ffd0594f15daf311e0803281a7b5ca45b8f9af8ed246e541",
+          "size": 222414,
+          "pointerSize": 131
+        },
+        "xetHash": "8ae5abe1ca48d7812a89e1adc0f1356b37848086570d0b420219750832f1b50c",
+        "path": "eval_slice_invert_heldout.npz"
+      },
+      {
+        "type": "file",
+        "oid": "9e4b2c92a46fc7cb0d1e163cb23b7711395191a0",
+        "size": 98528,
+        "lfs": {
+          "oid": "a967e8ab25efdd8dc365c580e0eee12c37574f29734140f23676aa8e288b17ea",
+          "size": 98528,
+          "pointerSize": 130
+        },
+        "xetHash": "dfbc57c7dbbf9809174fef877fe963fcef14fb2068454799b7a63e1d387b4836",
+        "path": "eval_slice_prose_val.npy"
+      },
+      {
+        "type": "file",
+        "oid": "14afe84c4df6d714b444b0a04155c224f4ac3aca",
+        "size": 211878933,
+        "lfs": {
+          "oid": "9120134a29141485043107b810ec08a01fb374bfe962421e45d9db88c0ca79ef",
+          "size": 211878933,
+          "pointerSize": 134
+        },
+        "xetHash": "9df32d51348985a50299974685f156dd2ca4ed14c02f38c10963e52eb8c27627",
+        "path": "invert_probe_chat.pt"
+      },
+      {
+        "type": "file",
+        "oid": "9eb94b85104397713ece14f0c3ed8062c1136c3a",
+        "size": 7389,
+        "path": "model.py"
+      },
+      {
+        "type": "file",
+        "oid": "78c1f1107c1f80764525ba8e57ccfb6321fe8639",
+        "size": 20857,
+        "path": "model_v2.py"
+      },
+      {
+        "type": "file",
+        "oid": "39442691bd80e244b01f5dff1ad1a823464da9b6",
+        "size": 3688,
+        "path": "repro_bottleneck.py"
+      },
+      {
+        "type": "file",
+        "oid": "aa7fa23160f9d3002c559f4dbf31f9e2272a0954",
+        "size": 6768,
+        "path": "repro_reverse_readout.py"
+      },
+      {
+        "type": "file",
+        "oid": "c477243186e4cb95dffa9b60feac7ba3986ef819",
+        "size": 2694,
+        "path": "so33.py"
+      },
+      {
+        "type": "file",
+        "oid": "bac44ee85e3656df48d22de77fbfe211c8844ca5",
+        "size": 9955,
+        "path": "t3v3_wedge_memory.py"
+      },
+      {
+        "type": "file",
+        "oid": "b1d42ab974d5a581e450335db6f23687c87d0a19",
+        "size": 10916,
+        "path": "tape_memory.py"
+      },
+      {
+        "type": "file",
+        "oid": "e12923b60ffad57bee89d8200895a48c2e0c1182",
+        "size": 2946,
+        "path": "wedge.py"
+      }
+    ],
+    "downloaded_sha256": {
+      ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "README.md": "a1728591c1e4af6a65795a3a246ca0d4b1a84ad615b2e1c0ff421d49290a79b7",
+      "REPRODUCE.md": "e0f3296788b90c5b2b0a75116b93e55a9496b7ed5a5d24d9ebef02aebe54488b",
+      "SHA256SUMS": "4c5dcc8c54b162c04d09676c1f71e9210c70949a5e91c608d1a3cec506ffb2fd",
+      "eval_slice_invert_heldout.npz": "64f5959c8a883991ffd0594f15daf311e0803281a7b5ca45b8f9af8ed246e541",
+      "eval_slice_prose_val.npy": "a967e8ab25efdd8dc365c580e0eee12c37574f29734140f23676aa8e288b17ea",
+      "model.py": "df6030348482e9bf0e5ba37e2e62dfada8cf6550a0107a6ce86d68c81019bd8c",
+      "model_v2.py": "79d148fca8c29085a963a8aa66f2ae49e7b0eff03536dfc43132dcdf916a4521",
+      "repro_bottleneck.py": "f7a3386ebe29b72680dc385c0c3a6dcf35603181b4682d4c69541f4d7fdd6e92",
+      "repro_reverse_readout.py": "57f51ec41771ea9dc185d623fdd6ba2c10db5d08e2d3c549ed401f765450f493",
+      "so33.py": "ff24dcfa83fb633e71fdeb0093c63b05d6118d574a1efd25fa5744978be0cc2f",
+      "t3v3_wedge_memory.py": "fb8d17474cf20ec177a9d6c5810f8d66a79a4a0b7070fa4f111174d91d3b2d29",
+      "tape_memory.py": "fa70959ec1657c7747b02ec78652c3ef445f7c72f661b36ea68278c4ab466147",
+      "wedge.py": "692cd36f59622e37ea83cb7c2957928aa2d49dbf27bb4c362815e47cac96dc33"
+    },
+    "manifest_checks": [
+      {
+        "path": "cl33_oplm_chat_236m.pt",
+        "expected_sha256": "ddd042a6b8bb1a1e07cdebb75fad135e12955528e872f22b40e7d3fe15559535",
+        "actual_sha256": null,
+        "status": "not_downloaded",
+        "published_lfs_sha256": "ddd042a6b8bb1a1e07cdebb75fad135e12955528e872f22b40e7d3fe15559535",
+        "manifest_matches_published_lfs_metadata": true
+      },
+      {
+        "path": "cl33_oplm_prose_236m.pt",
+        "expected_sha256": "fe407328903731ecf94e5c7173a754311212a1c24ed2cbb92a1978faea6a1fbf",
+        "actual_sha256": null,
+        "status": "not_downloaded",
+        "published_lfs_sha256": "fe407328903731ecf94e5c7173a754311212a1c24ed2cbb92a1978faea6a1fbf",
+        "manifest_matches_published_lfs_metadata": true
+      },
+      {
+        "path": "invert_probe_chat.pt",
+        "expected_sha256": "9120134a29141485043107b810ec08a01fb374bfe962421e45d9db88c0ca79ef",
+        "actual_sha256": null,
+        "status": "not_downloaded",
+        "published_lfs_sha256": "9120134a29141485043107b810ec08a01fb374bfe962421e45d9db88c0ca79ef",
+        "manifest_matches_published_lfs_metadata": true
+      },
+      {
+        "path": "eval_slice_prose_val.npy",
+        "expected_sha256": "a967e8ab25efdd8dc365c580e0eee12c37574f29734140f23676aa8e288b17ea",
+        "actual_sha256": "a967e8ab25efdd8dc365c580e0eee12c37574f29734140f23676aa8e288b17ea",
+        "status": "pass",
+        "published_lfs_sha256": "a967e8ab25efdd8dc365c580e0eee12c37574f29734140f23676aa8e288b17ea",
+        "manifest_matches_published_lfs_metadata": true
+      },
+      {
+        "path": "eval_slice_invert_heldout.npz",
+        "expected_sha256": "64f5959c8a883991ffd0594f15daf311e0803281a7b5ca45b8f9af8ed246e541",
+        "actual_sha256": "64f5959c8a883991ffd0594f15daf311e0803281a7b5ca45b8f9af8ed246e541",
+        "status": "pass",
+        "published_lfs_sha256": "64f5959c8a883991ffd0594f15daf311e0803281a7b5ca45b8f9af8ed246e541",
+        "manifest_matches_published_lfs_metadata": true
+      },
+      {
+        "path": "model.py",
+        "expected_sha256": "df6030348482e9bf0e5ba37e2e62dfada8cf6550a0107a6ce86d68c81019bd8c",
+        "actual_sha256": "df6030348482e9bf0e5ba37e2e62dfada8cf6550a0107a6ce86d68c81019bd8c",
+        "status": "pass"
+      },
+      {
+        "path": "model_v2.py",
+        "expected_sha256": "79d148fca8c29085a963a8aa66f2ae49e7b0eff03536dfc43132dcdf916a4521",
+        "actual_sha256": "79d148fca8c29085a963a8aa66f2ae49e7b0eff03536dfc43132dcdf916a4521",
+        "status": "pass"
+      },
+      {
+        "path": "so33.py",
+        "expected_sha256": "ff24dcfa83fb633e71fdeb0093c63b05d6118d574a1efd25fa5744978be0cc2f",
+        "actual_sha256": "ff24dcfa83fb633e71fdeb0093c63b05d6118d574a1efd25fa5744978be0cc2f",
+        "status": "pass"
+      },
+      {
+        "path": "wedge.py",
+        "expected_sha256": "692cd36f59622e37ea83cb7c2957928aa2d49dbf27bb4c362815e47cac96dc33",
+        "actual_sha256": "692cd36f59622e37ea83cb7c2957928aa2d49dbf27bb4c362815e47cac96dc33",
+        "status": "pass"
+      },
+      {
+        "path": "t3v3_wedge_memory.py",
+        "expected_sha256": "fb8d17474cf20ec177a9d6c5810f8d66a79a4a0b7070fa4f111174d91d3b2d29",
+        "actual_sha256": "fb8d17474cf20ec177a9d6c5810f8d66a79a4a0b7070fa4f111174d91d3b2d29",
+        "status": "pass"
+      },
+      {
+        "path": "tape_memory.py",
+        "expected_sha256": "fa70959ec1657c7747b02ec78652c3ef445f7c72f661b36ea68278c4ab466147",
+        "actual_sha256": "fa70959ec1657c7747b02ec78652c3ef445f7c72f661b36ea68278c4ab466147",
+        "status": "pass"
+      },
+      {
+        "path": "repro_bottleneck.py",
+        "expected_sha256": "f7a3386ebe29b72680dc385c0c3a6dcf35603181b4682d4c69541f4d7fdd6e92",
+        "actual_sha256": "f7a3386ebe29b72680dc385c0c3a6dcf35603181b4682d4c69541f4d7fdd6e92",
+        "status": "pass"
+      },
+      {
+        "path": "repro_reverse_readout.py",
+        "expected_sha256": "57f51ec41771ea9dc185d623fdd6ba2c10db5d08e2d3c549ed401f765450f493",
+        "actual_sha256": "57f51ec41771ea9dc185d623fdd6ba2c10db5d08e2d3c549ed401f765450f493",
+        "status": "pass"
+      },
+      {
+        "path": "README.md",
+        "expected_sha256": "a1728591c1e4af6a65795a3a246ca0d4b1a84ad615b2e1c0ff421d49290a79b7",
+        "actual_sha256": "a1728591c1e4af6a65795a3a246ca0d4b1a84ad615b2e1c0ff421d49290a79b7",
+        "status": "pass"
+      },
+      {
+        "path": "REPRODUCE.md",
+        "expected_sha256": "e0f3296788b90c5b2b0a75116b93e55a9496b7ed5a5d24d9ebef02aebe54488b",
+        "actual_sha256": "e0f3296788b90c5b2b0a75116b93e55a9496b7ed5a5d24d9ebef02aebe54488b",
+        "status": "pass"
+      },
+      {
+        "path": "LICENSE",
+        "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "actual_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "status": "pass"
+      }
+    ],
+    "manifest_summary": {
+      "not_downloaded": 3,
+      "pass": 13
+    },
+    "files_not_listed_in_manifest": [
+      ".gitattributes",
+      "SHA256SUMS"
+    ],
+    "torch_load_calls": [
+      {
+        "path": "repro_bottleneck.py",
+        "line": 27,
+        "weights_only": true
+      },
+      {
+        "path": "repro_reverse_readout.py",
+        "line": 38,
+        "weights_only": true
+      },
+      {
+        "path": "repro_reverse_readout.py",
+        "line": 42,
+        "weights_only": true
+      }
+    ],
+    "heldout_fixture": {
+      "ids": {
+        "shape": [
+          108,
+          1024
+        ],
+        "dtype": "uint16"
+      },
+      "src_id": {
+        "shape": [
+          108
+        ],
+        "dtype": "int16",
+        "counts": {
+          "0": 18,
+          "1": 18,
+          "2": 18,
+          "3": 18,
+          "4": 18,
+          "5": 18
+        }
+      },
+      "sources": {
+        "shape": [
+          6
+        ],
+        "dtype": "<U11",
+        "counts": {
+          "cosmopedia": 1,
+          "dclm": 1,
+          "finemath": 1,
+          "fineweb_edu": 1,
+          "stack_edu": 1,
+          "wikipedia": 1
+        }
+      }
+    }
+  },
+  "comparison": {
+    "changed_existing_paths": [
+      "README.md",
+      "REPRODUCE.md",
+      "SHA256SUMS",
+      "repro_bottleneck.py",
+      "repro_reverse_readout.py"
+    ],
+    "added_paths": [
+      "eval_slice_invert_heldout.npz"
+    ],
+    "removed_paths": [],
+    "model_source_bytes_unchanged": {
+      "model.py": true,
+      "model_v2.py": true,
+      "so33.py": true,
+      "wedge.py": true,
+      "t3v3_wedge_memory.py": true,
+      "tape_memory.py": true
+    },
+    "checkpoint_lfs_ids_unchanged": {
+      "cl33_oplm_chat_236m.pt": true,
+      "invert_probe_chat.pt": true,
+      "cl33_oplm_prose_236m.pt": true
+    },
+    "checkpoint_bytes_downloaded": false
+  }
+}

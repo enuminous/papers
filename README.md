@@ -32,6 +32,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [CL33 Under Review: Operator-Only Language Modeling and a Documented Reproducibility Repair](CL33-Review-and-Reproducibility-Repair.md) · [Verification code and evidence](research/cl33-review-2026-10-25/README.md) — 25 October 2026. Documents Wright’s first-pass review, Sutherland’s credited corrective release, and independent static verification of repaired checksums, loading flags, and the new held-out fixture. Reported model performance and an exploratory EFMW integration remain distinct from verified release repairs.
+
 - [From Synchronicity to Synchronization: The 7–11–13 Structure in Modular Recurrence and Barker Coding](From-Synchronicity-to-Synchronization-7-11-13.md) · [Proofs, code, and complete results](research/sync-71113/README.md) — 25 October 2026. Exact 1,001-step recurrence, nested and CRT-ordered Barker signals, a 143-versus-122 aperiodic sidelobe comparison, and the conditional 31-position optimum. Mathematical results are distinguished from untested synchronization performance and physical claims.
 
 - [EFMW-BIO-001: A Negative Benchmark Result for Cellular Memory](EFMW-BIO-001-Cellular-Memory-Negative-Result.md) · [Protocol, code, and results](research/efmw-bio-001/README.md) — 25 October 2026. Public single-cell ERK reanalysis: 70,987 retained cells, three held-out experimental replicates, a 3.62% primary error reduction versus the ablation, but 1.19% higher error than the training-selected conventional comparator. The tested recurrence is equivalent to ordinary EWMA; upstream normalization limits independence.
@@ -93,5 +95,6 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 - [great-recursion-primordial-rotation.md](great-recursion-primordial-rotation.md)
 - [monolithic-open-mathematical-intelligence-revolution.md](monolithic-open-mathematical-intelligence-revolution.md)
 - [spacex_xai_efmw_2045_x_article.md](spacex_xai_efmw_2045_x_article.md)
+
 
 

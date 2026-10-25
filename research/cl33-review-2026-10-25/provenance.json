@@ -1,0 +1,28 @@
+{
+  "public_commit_history_url": "https://huggingface.co/api/models/mirrorethic/cl33-oplm/commits/main",
+  "captured_for_article_date": "2026-10-25",
+  "public_commits": [
+    {
+      "id": "b081c1c8888a857d5dfdd1ec4f1d94b497834473",
+      "date": "2026-10-25T22:33:09.000Z",
+      "title": "Maintenance pass after external review: manifest regenerated (published paths, all files); weights_only=True loading; held-out decoding fixture (public-corpus part of the probe split) + --heldout mode (per-source card rates reproduce exactly); claim-coverage statement vs preprint v1.3. No checkpoint, probe, model code or number changed.",
+      "message": "\n\nFixes from M. Wright's 2026-10 first-pass review of 0f7d63c. SHA256SUMS had predated the 09-10 edits to model_v2.py/REPRODUCE.md and carried a release/ prefix on the weights; both scripts now load with weights_only=True; eval_slice_invert_heldout.npz is the probe's own document-disjoint evaluation split restricted to its six public-corpus sources (108x1024 token ids, 110,592 positions; the 45 chat rows are not distributed) and repro_reverse_readout.py --heldout recomputes the card per source (all six identical to the card; six-source aggregate 0.8436 vs card-implied 0.8437); README/REPRODUCE state claim-by-claim what this bundle reproduces against preprint v1.3 and what is documented elsewhere. Verified on CPU 2026-10-25 (torch 2.10.0): repro_bottleneck.py --slice = 270x exactly."
+    },
+    {
+      "id": "0f7d63c4551a15a9bb5b2f35c8d4fe6b111dc2bf",
+      "date": "2026-09-10T18:41:26.000Z",
+      "title": "License: Apache-2.0 (weights, code, and bundle)",
+      "message": ""
+    }
+  ],
+  "review_sent": {
+    "time": "2026-10-25T13:51:22-07:00",
+    "basis": "Matthew Wright’s sent-message record; private correspondence not redistributed"
+  },
+  "corrective_commit_published": "2026-10-25T15:33:09-07:00",
+  "elapsed_seconds_review_to_commit": 6107,
+  "model_inference_performed": false,
+  "checkpoint_bytes_downloaded": false,
+  "efmw_integration_performance_claimed": false,
+  "simulation_status": "Exploratory discussion reported by Wright; implementation and run record not recovered for this publication."
+}
