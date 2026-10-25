@@ -1,0 +1,11 @@
+{
+  "protocol_and_analysis_code_unchanged": true,
+  "fold_metric_rows_checked": 240,
+  "independent_pandas_mse_max_abs_difference": 1.1102230246251565e-16,
+  "independent_sklearn_primary_fold_max_abs_difference": 6.661338147750939e-15,
+  "source_numeric_values_spot_checked": 570,
+  "source_spotcheck_available": true,
+  "same_replicate_never_in_training_and_outer_test": true,
+  "replicate_count": 3,
+  "all_checks_passed": true
+}

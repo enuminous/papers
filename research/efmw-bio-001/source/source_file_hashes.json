@@ -1,0 +1,17 @@
+[
+  {
+    "filename": "df_erk_MCF10A.xlsx",
+    "size_bytes": 169125053,
+    "sha256": "86459c2beaf6515ed32e760bdd7d1c16b4593eebea1c509b1cc0e1b603bf44e0"
+  },
+  {
+    "filename": "df_ETGs_MCF10A.xlsx",
+    "size_bytes": 8006305,
+    "sha256": "d8f15f66f9080e09f5d9a42a83aa7a79451a61f47da828b0ac749767425ddab4"
+  },
+  {
+    "filename": "df_tx_MCF10A.xlsx",
+    "size_bytes": 814611,
+    "sha256": "b7930748c5544bfe3bd8508fb15676d77f761175b4737f7056c1b4ba28cd7eee"
+  }
+]

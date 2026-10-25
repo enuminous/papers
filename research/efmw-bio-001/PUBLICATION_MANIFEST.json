@@ -1,0 +1,37 @@
+{
+  "study": "EFMW-BIO-001",
+  "publication_date": "2026-10-25",
+  "original_analysis_changed": false,
+  "large_arrays_committed": false,
+  "large_arrays_reproducible_from": "https://doi.org/10.6084/m9.figshare.27047617.v1",
+  "files": {
+    ".gitignore": "0054aaa5526f16e07518dae19f0d11b04161e0e77c7b68796d8034b5006fec46",
+    "PROTOCOL.md": "38e028fbbe057c9f0cb718a231365e3fc45153ecd4002bd76b678ea8f3ba403b",
+    "README.md": "7a28b107807c07f83631ef5a7d8aeb587f23f8e9287c654b6d4368b559a2dd69",
+    "code_freeze.json": "8bad5766a287bdebc543f4e87999b6a967061b665780e39a0f15a3b39b1efd81",
+    "fetch_public_data.py": "a2205b096b079ace48291d05f46380f11f87db7c44d35e1d7f8efb7ff4b9777c",
+    "prepare_data.py": "b1d0b1e4275ce29dc39b61ffd242a86445ad9399cb6812b5c0cb7df2f31e00d6",
+    "primary_comparison.svg": "540d0a955580c61871b549d69634c69e212a7e49c4c8c603e889cf281f1dca23",
+    "protocol_freeze.json": "1eede60fe6b58db5a1bdbb7e2503473f1f5409605ede2937cac96ee42acb795d",
+    "repair_prediction_archive.py": "34f6072c0e5960781db91698c4232864666fd9228ecdad6f0fd33934fec348bc",
+    "reproduce.py": "81ad46133cd7b84c00a622d55ccc240e2d2badd958dd31e80e00dd4fb9b20849",
+    "requirements.txt": "e4d7695ffd2d119c4394bc150c3c9b56fbeba6ec2ef85ce93709942126b7887b",
+    "results/archive_recovery.json": "a01dc0839f44786ee32a7037622d5e464044feefb01368faaf11047df23f17a7",
+    "results/benchmark.json": "b2dc2dabc4077c3fbf4dfd86df81e3dbd965535cad1e24e80c84c1bbcb183710",
+    "results/data_audit.json": "f9c5197be2e17fc9b9964711fa0cfcedd19eab973f142936ea63b1bc580e363a",
+    "results/fold_metrics.csv": "1e2caed15ed9e518965033b6d619a533ebafdf8891afac62d014589f01018b70",
+    "results/inner_tuning.json": "6d178e2d7e1e3066231fe480f1fb7e70856f9adfa4fcc23f73478f5c40785a58",
+    "results/verification.json": "19449495c2f935830816a17a23929215a5081bc402f6742c9de3521841be2180",
+    "run_benchmark.py": "7e2efcc6f0c5ee640b810bd46b92a4ea8f68e6f1c6462e0a859802d05ec23582",
+    "source/README_author.txt": "edb56ab682b4199cdb283f41d634a8d0a3a20971ca9303ff91f234aff5848122",
+    "source/SourceData.zip.entries.json": "40a7d83e573453c8cfbc54297c7aff16be51fb87555ae20349c60f747fd617c6",
+    "source/figshare_metadata.json": "f91b7e406dc7c3273d89edfda456fc6c4b07dc2f432c026f3b46c4e0619586c6",
+    "source/monitors_original.py": "8d43a4ce0aaa4b4fd8e72ac34ab188135f3ed945c5c84cc6c397ea92698221f0",
+    "source/source_file_hashes.json": "d3d49c784ca7fa1699c4cd8cf792082397580da2d5d39dfa5936c5cf260cf817",
+    "verify_results.py": "dd077584f0cfce86a65e12c02d725ec57d31eb4cd987bfe22600607cf99fddae"
+  },
+  "paper": {
+    "path": "EFMW-BIO-001-Cellular-Memory-Negative-Result.md",
+    "sha256": "55b65bd16c73f08b014c5daa5caee848bff407cfd9b8e84764643bf539813a7d"
+  }
+}

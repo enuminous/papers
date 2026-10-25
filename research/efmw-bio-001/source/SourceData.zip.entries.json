@@ -1,0 +1,138 @@
+[
+  {
+    "name": "SourceData/",
+    "size": 0,
+    "compressed": 0,
+    "offset": 0,
+    "crc": 0,
+    "method": 0
+  },
+  {
+    "name": "SourceData/README.txt",
+    "size": 1076,
+    "compressed": 376,
+    "offset": 41,
+    "crc": 3871497826,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData1/",
+    "size": 0,
+    "compressed": 0,
+    "offset": 468,
+    "crc": 0,
+    "method": 0
+  },
+  {
+    "name": "SourceData/SupplementaryData1/df_erk_MCF10A.xlsx",
+    "size": 169125053,
+    "compressed": 169125053,
+    "offset": 528,
+    "crc": 4134421349,
+    "method": 0
+  },
+  {
+    "name": "SourceData/SupplementaryData1/df_erk_paramterized_MCF10A.xlsx",
+    "size": 8271854,
+    "compressed": 8270051,
+    "offset": 169125659,
+    "crc": 4143011806,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData1/df_erk_plus50_MCF10A.xlsx",
+    "size": 139550236,
+    "compressed": 139550236,
+    "offset": 177395801,
+    "crc": 674304129,
+    "method": 0
+  },
+  {
+    "name": "SourceData/SupplementaryData1/df_ETGs_MCF10A.xlsx",
+    "size": 8006305,
+    "compressed": 8003689,
+    "offset": 316946122,
+    "crc": 2038731842,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData1/df_narea_MCF10A.xlsx",
+    "size": 534423,
+    "compressed": 407625,
+    "offset": 324949890,
+    "crc": 2507329482,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData1/df_tx_MCF10A.xlsx",
+    "size": 814611,
+    "compressed": 134448,
+    "offset": 325357595,
+    "crc": 3600289984,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData2/",
+    "size": 0,
+    "compressed": 0,
+    "offset": 325492120,
+    "crc": 0,
+    "method": 0
+  },
+  {
+    "name": "SourceData/SupplementaryData2/df_cellIDs.xlsx",
+    "size": 904059,
+    "compressed": 574096,
+    "offset": 325492180,
+    "crc": 1470031424,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData2/df_cell_types.xlsx",
+    "size": 442867,
+    "compressed": 30965,
+    "offset": 326066351,
+    "crc": 111712413,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData2/df_erk.xlsx",
+    "size": 192827890,
+    "compressed": 192131156,
+    "offset": 326097394,
+    "crc": 3046725245,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData2/df_erk_paramterized.xlsx",
+    "size": 12467903,
+    "compressed": 12462084,
+    "offset": 518228621,
+    "crc": 189766567,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData2/df_ETGs.xlsx",
+    "size": 50662853,
+    "compressed": 50641294,
+    "offset": 530690789,
+    "crc": 2253179244,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData2/df_narea.xlsx",
+    "size": 610358,
+    "compressed": 538738,
+    "offset": 581332155,
+    "crc": 3725580040,
+    "method": 8
+  },
+  {
+    "name": "SourceData/SupplementaryData2/df_tx.xlsx",
+    "size": 950986,
+    "compressed": 108056,
+    "offset": 581870966,
+    "crc": 546494084,
+    "method": 8
+  }
+]

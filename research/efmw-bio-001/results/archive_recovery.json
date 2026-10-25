@@ -1,0 +1,8 @@
+{
+  "reason": "Initial output NPZ lacked central directory and final 16 entries; 96 complete entries passed CRC checks.",
+  "recovery": "Refit archived alpha choices with unchanged frozen model and data. No new selection or tuning.",
+  "refit_metric_max_abs_difference": 9.71445146547012e-17,
+  "complete_arrays": 112,
+  "archive_crc_verified": true,
+  "protocol_or_models_changed": false
+}

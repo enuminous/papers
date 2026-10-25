@@ -1,0 +1,3026 @@
+[
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 1,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.15355834446522187,
+    "all_alpha_scores": [
+      0.15355834446522187,
+      0.15355834446522187,
+      0.15355834446522187,
+      0.15355834446522187,
+      0.15355834446522187
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 1,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.11489411979087306,
+    "all_alpha_scores": [
+      0.11489411979087306,
+      0.11489417952145914,
+      0.11489478441288963,
+      0.11490158370858973,
+      0.11503707931191953
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 1,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.14049272663619367,
+    "all_alpha_scores": [
+      0.1406187918372058,
+      0.14061864175576905,
+      0.14061714491184513,
+      0.14060256981774705,
+      0.14049272663619367
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 1,
+    "model": "summary_ablation",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.09207482243829923,
+    "all_alpha_scores": [
+      0.09207482243829923,
+      0.09207482890579921,
+      0.09207504977448593,
+      0.0920918472393559,
+      0.09307009211792416
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 1,
+    "model": "efmw_memory",
+    "alpha": 10,
+    "inner_macro_mse": 0.09179647841346836,
+    "all_alpha_scores": [
+      0.09179742600775821,
+      0.09179730719254807,
+      0.09179647841346836,
+      0.09181663320012333,
+      0.0929475684938925
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 1,
+    "model": "matched_ewma",
+    "alpha": 10,
+    "inner_macro_mse": 0.09179647841346836,
+    "all_alpha_scores": [
+      0.09179742600775823,
+      0.09179730719254806,
+      0.09179647841346836,
+      0.09181663320012333,
+      0.09294756849389252
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 1,
+    "model": "multiscale_ema",
+    "alpha": 1,
+    "inner_macro_mse": 0.0900658872718263,
+    "all_alpha_scores": [
+      0.09008609589226231,
+      0.0900658872718263,
+      0.09007815882488243,
+      0.09029526028276852,
+      0.09155606001497946
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 1,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.10966723295082213,
+    "all_alpha_scores": [
+      0.10966723295082213,
+      0.10966735556062229,
+      0.10966861425521747,
+      0.10968429270374419,
+      0.11004038765017124
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 1,
+    "model": "production_decay",
+    "alpha": 10,
+    "inner_macro_mse": 0.09054197032813478,
+    "all_alpha_scores": [
+      0.09059419384028315,
+      0.0905729057666927,
+      0.09054197032813478,
+      0.0905474364725338,
+      0.09107537362402253
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 2,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.18878035172134405,
+    "all_alpha_scores": [
+      0.18878035172134405,
+      0.18878035172134405,
+      0.18878035172134405,
+      0.18878035172134405,
+      0.18878035172134405
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 2,
+    "model": "snapshot",
+    "alpha": 1000,
+    "inner_macro_mse": 0.14883113130768655,
+    "all_alpha_scores": [
+      0.14885091792991673,
+      0.1488508289537172,
+      0.1488499469279287,
+      0.14884189290408914,
+      0.14883113130768655
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 2,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.1700100424195391,
+    "all_alpha_scores": [
+      0.1700314212857914,
+      0.1700313702766222,
+      0.1700308636243335,
+      0.1700261378998092,
+      0.1700100424195391
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 2,
+    "model": "summary_ablation",
+    "alpha": 100,
+    "inner_macro_mse": 0.1249687137382608,
+    "all_alpha_scores": [
+      0.1250613023280063,
+      0.12506029884813202,
+      0.1250504422841826,
+      0.1249687137382608,
+      0.12518516106732558
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 2,
+    "model": "efmw_memory",
+    "alpha": 1000,
+    "inner_macro_mse": 0.1249403679618226,
+    "all_alpha_scores": [
+      0.1257835315262319,
+      0.12577800614153414,
+      0.1257242298910615,
+      0.1253074688031181,
+      0.1249403679618226
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 2,
+    "model": "matched_ewma",
+    "alpha": 1000,
+    "inner_macro_mse": 0.1249403679618226,
+    "all_alpha_scores": [
+      0.12578353152623184,
+      0.12577800614153414,
+      0.12572422989106147,
+      0.12530746880311805,
+      0.1249403679618226
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 2,
+    "model": "multiscale_ema",
+    "alpha": 100,
+    "inner_macro_mse": 0.12347359924177848,
+    "all_alpha_scores": [
+      0.12362376306311901,
+      0.12356693401385051,
+      0.12347734610313246,
+      0.12347359924177848,
+      0.12374578821138388
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 2,
+    "model": "temporal_bins",
+    "alpha": 1000,
+    "inner_macro_mse": 0.14485657422324738,
+    "all_alpha_scores": [
+      0.14490895116292463,
+      0.14490866016832585,
+      0.14490578596999082,
+      0.14488044758280974,
+      0.14485657422324738
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 2,
+    "model": "production_decay",
+    "alpha": 1000,
+    "inner_macro_mse": 0.12413306567592342,
+    "all_alpha_scores": [
+      0.12499693166831344,
+      0.1249492351420462,
+      0.12484091289348422,
+      0.12462831449012372,
+      0.12413306567592342
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 3,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.16831026051751785,
+    "all_alpha_scores": [
+      0.16831026051751785,
+      0.16831026051751785,
+      0.16831026051751785,
+      0.16831026051751785,
+      0.16831026051751785
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 3,
+    "model": "snapshot",
+    "alpha": 100,
+    "inner_macro_mse": 0.11694321843352692,
+    "all_alpha_scores": [
+      0.11694830176853661,
+      0.11694824954865446,
+      0.11694773381554066,
+      0.11694321843352692,
+      0.11695787811681382
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 3,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.14494568142318726,
+    "all_alpha_scores": [
+      0.1449638622198074,
+      0.14496381667872196,
+      0.14496336436600896,
+      0.14495914886468486,
+      0.14494568142318726
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 3,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.09850286233763424,
+    "all_alpha_scores": [
+      0.0995238298491246,
+      0.09952177161089587,
+      0.09950134802586136,
+      0.0993123924064581,
+      0.09850286233763424
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 3,
+    "model": "efmw_memory",
+    "alpha": 1000,
+    "inner_macro_mse": 0.09836617378379664,
+    "all_alpha_scores": [
+      0.10061093177553868,
+      0.10060378687170306,
+      0.10053383326191516,
+      0.09995848796645918,
+      0.09836617378379664
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 3,
+    "model": "matched_ewma",
+    "alpha": 1000,
+    "inner_macro_mse": 0.09836617378379664,
+    "all_alpha_scores": [
+      0.10061093177553862,
+      0.10060378687170306,
+      0.10053383326191513,
+      0.09995848796645913,
+      0.09836617378379664
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 3,
+    "model": "multiscale_ema",
+    "alpha": 1000,
+    "inner_macro_mse": 0.09780940645883784,
+    "all_alpha_scores": [
+      0.09954982847546077,
+      0.09945616525650106,
+      0.09926246056513426,
+      0.09905579655790225,
+      0.09780940645883784
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 3,
+    "model": "temporal_bins",
+    "alpha": 100,
+    "inner_macro_mse": 0.11469246460029367,
+    "all_alpha_scores": [
+      0.11470973888096689,
+      0.11470956328622575,
+      0.114707827831455,
+      0.11469246460029367,
+      0.11469393384081061
+    ]
+  },
+  {
+    "target": "EGR1_nuc",
+    "held_out_replicate": 3,
+    "model": "production_decay",
+    "alpha": 1000,
+    "inner_macro_mse": 0.09835527920035492,
+    "all_alpha_scores": [
+      0.10028317576571166,
+      0.1002167202812345,
+      0.10013477458585221,
+      0.09981909828821764,
+      0.09835527920035492
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 1,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.3950419396002546,
+    "all_alpha_scores": [
+      0.3950419396002546,
+      0.3950419396002546,
+      0.3950419396002546,
+      0.3950419396002546,
+      0.3950419396002546
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 1,
+    "model": "snapshot",
+    "alpha": 100,
+    "inner_macro_mse": 0.28979123229784576,
+    "all_alpha_scores": [
+      0.28981256158563695,
+      0.2898123433243856,
+      0.28981018706953116,
+      0.28979123229784576,
+      0.2898366707410711
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 1,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.3503259460737533,
+    "all_alpha_scores": [
+      0.3510864587615129,
+      0.35108561527438853,
+      0.35107719761488365,
+      0.35099472642533086,
+      0.3503259460737533
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 1,
+    "model": "summary_ablation",
+    "alpha": 100,
+    "inner_macro_mse": 0.27080892555889263,
+    "all_alpha_scores": [
+      0.2708385357533863,
+      0.2708381889852489,
+      0.270834804978224,
+      0.27080892555889263,
+      0.27107897967744404
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 1,
+    "model": "efmw_memory",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.26573191819245356,
+    "all_alpha_scores": [
+      0.26573191819245356,
+      0.26573346716707913,
+      0.26574918731447955,
+      0.2659199307463077,
+      0.26744972327465744
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 1,
+    "model": "matched_ewma",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.26573191819245356,
+    "all_alpha_scores": [
+      0.26573191819245356,
+      0.26573346716707913,
+      0.2657491873144795,
+      0.2659199307463076,
+      0.26744972327465744
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 1,
+    "model": "multiscale_ema",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.2552549576085853,
+    "all_alpha_scores": [
+      0.2552549576085853,
+      0.2553504763036631,
+      0.2562907515115101,
+      0.258549525860552,
+      0.2609558618453458
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 1,
+    "model": "temporal_bins",
+    "alpha": 100,
+    "inner_macro_mse": 0.2593071081673255,
+    "all_alpha_scores": [
+      0.2593761873973873,
+      0.2593754411625391,
+      0.2593681088113938,
+      0.2593071081673255,
+      0.2594901400967016
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 1,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.25959393628503014,
+    "all_alpha_scores": [
+      0.25959393628503014,
+      0.26147078192122875,
+      0.26375675076722427,
+      0.26566592395145844,
+      0.26679173406692114
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 2,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.3015584924936124,
+    "all_alpha_scores": [
+      0.3015584924936124,
+      0.3015584924936124,
+      0.3015584924936124,
+      0.3015584924936124,
+      0.3015584924936124
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 2,
+    "model": "snapshot",
+    "alpha": 1000,
+    "inner_macro_mse": 0.1961894320819809,
+    "all_alpha_scores": [
+      0.1964974720924882,
+      0.19649696224768576,
+      0.19649188913704435,
+      0.1964436669980123,
+      0.1961894320819809
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 2,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.2478614088989178,
+    "all_alpha_scores": [
+      0.24801228978225928,
+      0.24801203291393614,
+      0.24800947743417068,
+      0.24798522991976663,
+      0.2478614088989178
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 2,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.18526977265541186,
+    "all_alpha_scores": [
+      0.18537835896698107,
+      0.18537782961319957,
+      0.18537259815566914,
+      0.18532621092598792,
+      0.18526977265541186
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 2,
+    "model": "efmw_memory",
+    "alpha": 100,
+    "inner_macro_mse": 0.1837265053661634,
+    "all_alpha_scores": [
+      0.18381288325815323,
+      0.18381165732642346,
+      0.18379998207019005,
+      0.1837265053661634,
+      0.18393040661346716
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 2,
+    "model": "matched_ewma",
+    "alpha": 100,
+    "inner_macro_mse": 0.18372650536616345,
+    "all_alpha_scores": [
+      0.18381288325815326,
+      0.1838116573264234,
+      0.18379998207019002,
+      0.18372650536616345,
+      0.1839304066134671
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 2,
+    "model": "multiscale_ema",
+    "alpha": 10,
+    "inner_macro_mse": 0.17538045511745926,
+    "all_alpha_scores": [
+      0.17570110433734237,
+      0.1755353662216616,
+      0.17538045511745926,
+      0.17645999491606917,
+      0.17770582145070637
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 2,
+    "model": "temporal_bins",
+    "alpha": 1000,
+    "inner_macro_mse": 0.17918591139322335,
+    "all_alpha_scores": [
+      0.17949359403751303,
+      0.17949271265805855,
+      0.17948399020555206,
+      0.17940542804758008,
+      0.17918591139322335
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 2,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.18004126371250173,
+    "all_alpha_scores": [
+      0.18004126371250173,
+      0.18145187101204097,
+      0.18312045478720196,
+      0.1841240269049237,
+      0.1844734692551101
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 3,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.2990691064233385,
+    "all_alpha_scores": [
+      0.2990691064233385,
+      0.2990691064233385,
+      0.2990691064233385,
+      0.2990691064233385,
+      0.2990691064233385
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 3,
+    "model": "snapshot",
+    "alpha": 100,
+    "inner_macro_mse": 0.1821237718063147,
+    "all_alpha_scores": [
+      0.18213142777177432,
+      0.1821313444254682,
+      0.1821305254296189,
+      0.1821237718063147,
+      0.18219002375508297
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 3,
+    "model": "time_average",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.23444478665398752,
+    "all_alpha_scores": [
+      0.23444478665398752,
+      0.23444482368122016,
+      0.23444520140195546,
+      0.23444971797895892,
+      0.23456363711357442
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 3,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.1825342104546545,
+    "all_alpha_scores": [
+      0.18299440538742892,
+      0.18299370718887498,
+      0.18298676187949034,
+      0.18292086565979326,
+      0.1825342104546545
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 3,
+    "model": "efmw_memory",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.17947102606549614,
+    "all_alpha_scores": [
+      0.17947102606549614,
+      0.17947111273709931,
+      0.179472070357304,
+      0.17948809843697472,
+      0.17969178638921057
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 3,
+    "model": "matched_ewma",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.1794710260654961,
+    "all_alpha_scores": [
+      0.1794710260654961,
+      0.1794711127370993,
+      0.179472070357304,
+      0.17948809843697475,
+      0.1796917863892106
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 3,
+    "model": "multiscale_ema",
+    "alpha": 1,
+    "inner_macro_mse": 0.1666776927357626,
+    "all_alpha_scores": [
+      0.16668916638077091,
+      0.1666776927357626,
+      0.16702224706568983,
+      0.16973068834234786,
+      0.17188484409662638
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 3,
+    "model": "temporal_bins",
+    "alpha": 1000,
+    "inner_macro_mse": 0.1739351405743825,
+    "all_alpha_scores": [
+      0.175066119685307,
+      0.17506455417951616,
+      0.17504897192644836,
+      0.17490017384571205,
+      0.1739351405743825
+    ]
+  },
+  {
+    "target": "PERK_nuc",
+    "held_out_replicate": 3,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.17246026610184945,
+    "all_alpha_scores": [
+      0.17246026610184945,
+      0.17452557483789322,
+      0.17738743349084757,
+      0.17949034515988593,
+      0.17989591836695265
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 1,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07938273494133195,
+    "all_alpha_scores": [
+      0.07938273494133195,
+      0.07938273494133195,
+      0.07938273494133195,
+      0.07938273494133195,
+      0.07938273494133195
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 1,
+    "model": "snapshot",
+    "alpha": 1000,
+    "inner_macro_mse": 0.07869575187908291,
+    "all_alpha_scores": [
+      0.07871634406191595,
+      0.07871632330724646,
+      0.07871611599473294,
+      0.07871406613707627,
+      0.07869575187908291
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 1,
+    "model": "time_average",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.0784020293718071,
+    "all_alpha_scores": [
+      0.0784020293718071,
+      0.07840205469760059,
+      0.07840230789163144,
+      0.07840483345006187,
+      0.07842945998462633
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 1,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.07914913514378219,
+    "all_alpha_scores": [
+      0.07932504196538069,
+      0.07932485231136953,
+      0.07932295952601659,
+      0.07930439929525401,
+      0.07914913514378219
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 1,
+    "model": "efmw_memory",
+    "alpha": 1000,
+    "inner_macro_mse": 0.07904756004276632,
+    "all_alpha_scores": [
+      0.07912105734554034,
+      0.07912064388427548,
+      0.07911671232085243,
+      0.0790917920192298,
+      0.07904756004276632
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 1,
+    "model": "matched_ewma",
+    "alpha": 1000,
+    "inner_macro_mse": 0.07904756004276632,
+    "all_alpha_scores": [
+      0.07912105734554034,
+      0.07912064388427549,
+      0.07911671232085243,
+      0.07909179201922983,
+      0.07904756004276632
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 1,
+    "model": "multiscale_ema",
+    "alpha": 1000,
+    "inner_macro_mse": 0.0792560532835972,
+    "all_alpha_scores": [
+      0.07946791206064127,
+      0.07954674860343863,
+      0.07943763928359054,
+      0.07925831732524365,
+      0.0792560532835972
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 1,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07688937050283227,
+    "all_alpha_scores": [
+      0.07688937050283227,
+      0.07688937364843182,
+      0.07688940966037097,
+      0.07689020269396804,
+      0.07692647206909106
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 1,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07853557324159632,
+    "all_alpha_scores": [
+      0.07853557324159632,
+      0.07869599462255489,
+      0.07920178619327825,
+      0.0791995275269469,
+      0.07910064157203804
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 2,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07486095974393128,
+    "all_alpha_scores": [
+      0.07486095974393128,
+      0.07486095974393128,
+      0.07486095974393128,
+      0.07486095974393128,
+      0.07486095974393128
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 2,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.0736633499889886,
+    "all_alpha_scores": [
+      0.0736633499889886,
+      0.07366335228491047,
+      0.07366337536061576,
+      0.07366361767834394,
+      0.07366711391342753
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 2,
+    "model": "time_average",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07393366017104966,
+    "all_alpha_scores": [
+      0.07393366017104966,
+      0.07393367796654701,
+      0.07393385589980173,
+      0.07393563305143983,
+      0.07395317859748289
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 2,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.073972357873528,
+    "all_alpha_scores": [
+      0.07402649419999865,
+      0.07402643964152925,
+      0.07402589467170807,
+      0.07402050609965179,
+      0.073972357873528
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 2,
+    "model": "efmw_memory",
+    "alpha": 1000,
+    "inner_macro_mse": 0.07423160960897712,
+    "all_alpha_scores": [
+      0.07462920788346304,
+      0.07462787197387719,
+      0.07461488598461133,
+      0.0745139252655349,
+      0.07423160960897712
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 2,
+    "model": "matched_ewma",
+    "alpha": 1000,
+    "inner_macro_mse": 0.07423160960897712,
+    "all_alpha_scores": [
+      0.07462920788346303,
+      0.07462787197387719,
+      0.07461488598461131,
+      0.07451392526553488,
+      0.07423160960897712
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 2,
+    "model": "multiscale_ema",
+    "alpha": 1000,
+    "inner_macro_mse": 0.07431603080262372,
+    "all_alpha_scores": [
+      0.0749013490915001,
+      0.07495058639751434,
+      0.07482276847254203,
+      0.07461354032540185,
+      0.07431603080262372
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 2,
+    "model": "temporal_bins",
+    "alpha": 100,
+    "inner_macro_mse": 0.07179100053649913,
+    "all_alpha_scores": [
+      0.07179372903981839,
+      0.07179369758894635,
+      0.07179339028648966,
+      0.07179100053649913,
+      0.07181172664935037
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 2,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07355686906594638,
+    "all_alpha_scores": [
+      0.07355686906594638,
+      0.0739878235234013,
+      0.07464461774172142,
+      0.07457467767179303,
+      0.07434222165730137
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 3,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.05697758417661896,
+    "all_alpha_scores": [
+      0.05697758417661896,
+      0.05697758417661896,
+      0.05697758417661896,
+      0.05697758417661896,
+      0.05697758417661896
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 3,
+    "model": "snapshot",
+    "alpha": 1000,
+    "inner_macro_mse": 0.05474641260260267,
+    "all_alpha_scores": [
+      0.05476029094485782,
+      0.05476027485268434,
+      0.054760114311956404,
+      0.0547585467493237,
+      0.05474641260260267
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 3,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.05628899550920319,
+    "all_alpha_scores": [
+      0.05629011469047594,
+      0.05629011278450081,
+      0.056290093820104734,
+      0.05628991364495778,
+      0.05628899550920319
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 3,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.055023142314070114,
+    "all_alpha_scores": [
+      0.0551312020177169,
+      0.05513107490032551,
+      0.0551298073898742,
+      0.05511748996843975,
+      0.055023142314070114
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 3,
+    "model": "efmw_memory",
+    "alpha": 1000,
+    "inner_macro_mse": 0.05511345273099823,
+    "all_alpha_scores": [
+      0.055282601049147784,
+      0.055282306580186485,
+      0.055279397838325486,
+      0.05525338115666764,
+      0.05511345273099823
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 3,
+    "model": "matched_ewma",
+    "alpha": 1000,
+    "inner_macro_mse": 0.05511345273099823,
+    "all_alpha_scores": [
+      0.055282601049147784,
+      0.055282306580186485,
+      0.055279397838325486,
+      0.05525338115666764,
+      0.05511345273099823
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 3,
+    "model": "multiscale_ema",
+    "alpha": 1000,
+    "inner_macro_mse": 0.055137055760635094,
+    "all_alpha_scores": [
+      0.05515516726410767,
+      0.05516789189273727,
+      0.055161242095370974,
+      0.05519826782135138,
+      0.055137055760635094
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 3,
+    "model": "temporal_bins",
+    "alpha": 1000,
+    "inner_macro_mse": 0.05397714496658257,
+    "all_alpha_scores": [
+      0.05403167854824242,
+      0.054031605901554425,
+      0.05403088243914268,
+      0.054023939556953844,
+      0.05397714496658257
+    ]
+  },
+  {
+    "target": "cJun_nuc",
+    "held_out_replicate": 3,
+    "model": "production_decay",
+    "alpha": 1,
+    "inner_macro_mse": 0.055037405677472055,
+    "all_alpha_scores": [
+      0.05507098655458241,
+      0.055037405677472055,
+      0.05513033222259342,
+      0.05515460816087041,
+      0.055121401386495225
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 1,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.11730751928114297,
+    "all_alpha_scores": [
+      0.11730751928114297,
+      0.11730751928114297,
+      0.11730751928114297,
+      0.11730751928114297,
+      0.11730751928114297
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 1,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07870083276554846,
+    "all_alpha_scores": [
+      0.07870083276554846,
+      0.07870094128109369,
+      0.07870203321988126,
+      0.07871362359692773,
+      0.07888985511246388
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 1,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.10691867076954362,
+    "all_alpha_scores": [
+      0.1069239330380941,
+      0.10692390901720839,
+      0.10692367090686522,
+      0.10692149762873648,
+      0.10691867076954362
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 1,
+    "model": "summary_ablation",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07517397393510536,
+    "all_alpha_scores": [
+      0.07517397393510536,
+      0.0751741385074661,
+      0.07517580429840892,
+      0.07519438606850395,
+      0.07551676930664916
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 1,
+    "model": "efmw_memory",
+    "alpha": 10,
+    "inner_macro_mse": 0.07346385354774759,
+    "all_alpha_scores": [
+      0.07346431558806837,
+      0.07346424028612163,
+      0.07346385354774759,
+      0.07348664676170616,
+      0.07413471777710212
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 1,
+    "model": "matched_ewma",
+    "alpha": 10,
+    "inner_macro_mse": 0.07346385354774759,
+    "all_alpha_scores": [
+      0.07346431558806836,
+      0.07346424028612161,
+      0.07346385354774759,
+      0.07348664676170616,
+      0.07413471777710214
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 1,
+    "model": "multiscale_ema",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07255860876637216,
+    "all_alpha_scores": [
+      0.07255860876637216,
+      0.07267034393388405,
+      0.07289382689825993,
+      0.07304057953671819,
+      0.07364786314260394
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 1,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07017701863790125,
+    "all_alpha_scores": [
+      0.07017701863790125,
+      0.07017713477027887,
+      0.07017831633428352,
+      0.07019206793527047,
+      0.07046320007124014
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 1,
+    "model": "production_decay",
+    "alpha": 1,
+    "inner_macro_mse": 0.07230521562678828,
+    "all_alpha_scores": [
+      0.07231380951263051,
+      0.07230521562678828,
+      0.07236123826743204,
+      0.07263999219336213,
+      0.07298277337154277
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 2,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.12592125186154107,
+    "all_alpha_scores": [
+      0.12592125186154107,
+      0.12592125186154107,
+      0.12592125186154107,
+      0.12592125186154107,
+      0.12592125186154107
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 2,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.08243089336952791,
+    "all_alpha_scores": [
+      0.08243089336952791,
+      0.08243094448766497,
+      0.08243146232174423,
+      0.08243729948212852,
+      0.08255557247714093
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 2,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.11057532533938393,
+    "all_alpha_scores": [
+      0.11064011355259952,
+      0.11064003072816982,
+      0.11063920510372918,
+      0.11063120880135674,
+      0.11057532533938393
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 2,
+    "model": "summary_ablation",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.08179131539084222,
+    "all_alpha_scores": [
+      0.08179131539084222,
+      0.08179137300721499,
+      0.08179196909682626,
+      0.0817998378030847,
+      0.08201208664448131
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 2,
+    "model": "efmw_memory",
+    "alpha": 1,
+    "inner_macro_mse": 0.07977726715924602,
+    "all_alpha_scores": [
+      0.07977730131518693,
+      0.07977726715924602,
+      0.07977727435454349,
+      0.07980228195687583,
+      0.08036837367035038
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 2,
+    "model": "matched_ewma",
+    "alpha": 1,
+    "inner_macro_mse": 0.07977726715924605,
+    "all_alpha_scores": [
+      0.07977730131518693,
+      0.07977726715924605,
+      0.07977727435454351,
+      0.07980228195687586,
+      0.08036837367035038
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 2,
+    "model": "multiscale_ema",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07865313849565755,
+    "all_alpha_scores": [
+      0.07865313849565755,
+      0.07878066998333824,
+      0.07908169966897596,
+      0.07930508509593115,
+      0.07991951138402156
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 2,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07568404683322319,
+    "all_alpha_scores": [
+      0.07568404683322319,
+      0.07568415390086969,
+      0.07568524491137184,
+      0.07569809227452987,
+      0.0759580146709665
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 2,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07793464457023078,
+    "all_alpha_scores": [
+      0.07793464457023078,
+      0.07809787704301491,
+      0.07833374948340413,
+      0.07882117392309783,
+      0.07925292799848228
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 3,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.1343109866789033,
+    "all_alpha_scores": [
+      0.1343109866789033,
+      0.1343109866789033,
+      0.1343109866789033,
+      0.1343109866789033,
+      0.1343109866789033
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 3,
+    "model": "snapshot",
+    "alpha": 100,
+    "inner_macro_mse": 0.07847520158490481,
+    "all_alpha_scores": [
+      0.07848117514342873,
+      0.07848111431719439,
+      0.0784805131106282,
+      0.07847520158490481,
+      0.07848736429377859
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 3,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.11422092175955455,
+    "all_alpha_scores": [
+      0.1143261373888609,
+      0.11432601181590918,
+      0.11432475935381567,
+      0.11431255927248635,
+      0.11422092175955455
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 3,
+    "model": "summary_ablation",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.0780772593349929,
+    "all_alpha_scores": [
+      0.0780772593349929,
+      0.07807728245354956,
+      0.07807753094215991,
+      0.07808169690028888,
+      0.07825328355942499
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 3,
+    "model": "efmw_memory",
+    "alpha": 10,
+    "inner_macro_mse": 0.07567908405891244,
+    "all_alpha_scores": [
+      0.0756811615604796,
+      0.07568094292906505,
+      0.07567908405891244,
+      0.07568588791567661,
+      0.07624665744901321
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 3,
+    "model": "matched_ewma",
+    "alpha": 10,
+    "inner_macro_mse": 0.07567908405891244,
+    "all_alpha_scores": [
+      0.07568116156047962,
+      0.07568094292906505,
+      0.07567908405891244,
+      0.07568588791567663,
+      0.07624665744901321
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 3,
+    "model": "multiscale_ema",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07487000568055317,
+    "all_alpha_scores": [
+      0.07487000568055317,
+      0.0749032667265922,
+      0.07502309004009355,
+      0.07517586358048965,
+      0.07572316202364102
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 3,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.0731026843714988,
+    "all_alpha_scores": [
+      0.0731026843714988,
+      0.0731027273270046,
+      0.07310317115649706,
+      0.07310899434885393,
+      0.07327488079869227
+    ]
+  },
+  {
+    "target": "cMyc_nuc",
+    "held_out_replicate": 3,
+    "model": "production_decay",
+    "alpha": 1,
+    "inner_macro_mse": 0.07477447872099252,
+    "all_alpha_scores": [
+      0.07478134105003732,
+      0.07477447872099252,
+      0.07479747955557864,
+      0.0749312046069279,
+      0.07519213340925013
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 1,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.11004899180639315,
+    "all_alpha_scores": [
+      0.11004899180639315,
+      0.11004899180639315,
+      0.11004899180639315,
+      0.11004899180639315,
+      0.11004899180639315
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 1,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.07112684984160211,
+    "all_alpha_scores": [
+      0.07112684984160211,
+      0.07112695406671726,
+      0.07112800339440557,
+      0.07113919661451018,
+      0.07131401736176457
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 1,
+    "model": "time_average",
+    "alpha": 100,
+    "inner_macro_mse": 0.09202464253973211,
+    "all_alpha_scores": [
+      0.09202676304649718,
+      0.09202674023105503,
+      0.0920265158224996,
+      0.09202464253973211,
+      0.09203949301530648
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 1,
+    "model": "summary_ablation",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.06489838062125305,
+    "all_alpha_scores": [
+      0.06489838062125305,
+      0.06489851407299321,
+      0.06489986104403336,
+      0.06491453965414634,
+      0.06515543054146222
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 1,
+    "model": "efmw_memory",
+    "alpha": 100,
+    "inner_macro_mse": 0.06053384784384892,
+    "all_alpha_scores": [
+      0.06058652238278893,
+      0.06058462695214499,
+      0.06056760825429276,
+      0.06053384784384892,
+      0.06188246738098193
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 1,
+    "model": "matched_ewma",
+    "alpha": 100,
+    "inner_macro_mse": 0.06053384784384893,
+    "all_alpha_scores": [
+      0.06058652238278896,
+      0.060584626952145025,
+      0.06056760825429279,
+      0.06053384784384893,
+      0.06188246738098194
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 1,
+    "model": "multiscale_ema",
+    "alpha": 1,
+    "inner_macro_mse": 0.05765552560265441,
+    "all_alpha_scores": [
+      0.05768260614564167,
+      0.05765552560265441,
+      0.05779668963211683,
+      0.058461978425202926,
+      0.06038765954170987
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 1,
+    "model": "temporal_bins",
+    "alpha": 100,
+    "inner_macro_mse": 0.059168970759837056,
+    "all_alpha_scores": [
+      0.05917352801369826,
+      0.059173474667520085,
+      0.05917295396309354,
+      0.059168970759837056,
+      0.05921824583588012
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 1,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.05747230874724048,
+    "all_alpha_scores": [
+      0.05747230874724048,
+      0.057548092463707776,
+      0.057643047371969736,
+      0.057969734513180764,
+      0.05940544337293962
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 2,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.11752575225991221,
+    "all_alpha_scores": [
+      0.11752575225991221,
+      0.11752575225991221,
+      0.11752575225991221,
+      0.11752575225991221,
+      0.11752575225991221
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 2,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.0743798601254926,
+    "all_alpha_scores": [
+      0.0743798601254926,
+      0.07437992469157398,
+      0.07438057710585341,
+      0.07438776989225243,
+      0.07452035564583032
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 2,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.09274968677128892,
+    "all_alpha_scores": [
+      0.09280996206619313,
+      0.0928098677463653,
+      0.09280892885910746,
+      0.09279996743075879,
+      0.09274968677128892
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 2,
+    "model": "summary_ablation",
+    "alpha": 100,
+    "inner_macro_mse": 0.06919362755088182,
+    "all_alpha_scores": [
+      0.06919793978101985,
+      0.06919788423568074,
+      0.06919734603889786,
+      0.06919362755088182,
+      0.069279170269296
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 2,
+    "model": "efmw_memory",
+    "alpha": 10,
+    "inner_macro_mse": 0.06299951110287527,
+    "all_alpha_scores": [
+      0.06300293395451853,
+      0.06300248696019745,
+      0.06299951110287527,
+      0.06307274345908204,
+      0.06465675756014454
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 2,
+    "model": "matched_ewma",
+    "alpha": 10,
+    "inner_macro_mse": 0.06299951110287529,
+    "all_alpha_scores": [
+      0.06300293395451856,
+      0.06300248696019746,
+      0.06299951110287529,
+      0.06307274345908204,
+      0.06465675756014454
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 2,
+    "model": "multiscale_ema",
+    "alpha": 1,
+    "inner_macro_mse": 0.062281034856725224,
+    "all_alpha_scores": [
+      0.06230772775294416,
+      0.062281034856725224,
+      0.06239075078618106,
+      0.06279453905104604,
+      0.06415983323392675
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 2,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.06071321019228664,
+    "all_alpha_scores": [
+      0.06071321019228664,
+      0.06071324673255381,
+      0.06071362387887981,
+      0.0607185181824669,
+      0.060847467632946184
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 2,
+    "model": "production_decay",
+    "alpha": 1,
+    "inner_macro_mse": 0.061875764754841404,
+    "all_alpha_scores": [
+      0.061979866137842496,
+      0.061875764754841404,
+      0.061883162599171676,
+      0.06200798030250727,
+      0.06297565039907371
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 3,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.11759142860031047,
+    "all_alpha_scores": [
+      0.11759142860031047,
+      0.11759142860031047,
+      0.11759142860031047,
+      0.11759142860031047,
+      0.11759142860031047
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 3,
+    "model": "snapshot",
+    "alpha": 1000,
+    "inner_macro_mse": 0.06588837139004927,
+    "all_alpha_scores": [
+      0.06590594679840375,
+      0.06590586793800017,
+      0.0659050860304076,
+      0.06589793184463319,
+      0.06588837139004927
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 3,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.08864431042532299,
+    "all_alpha_scores": [
+      0.08879149963629618,
+      0.08879132295369131,
+      0.08878956080640404,
+      0.08877240405102976,
+      0.08864431042532299
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 3,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.06292367941439916,
+    "all_alpha_scores": [
+      0.06319816758241142,
+      0.0631977759428579,
+      0.0631938772611366,
+      0.06315662014855868,
+      0.06292367941439916
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 3,
+    "model": "efmw_memory",
+    "alpha": 100,
+    "inner_macro_mse": 0.05915070834328238,
+    "all_alpha_scores": [
+      0.05916547924298384,
+      0.05916486897881372,
+      0.0591593737935169,
+      0.05915070834328238,
+      0.0597917252168924
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 3,
+    "model": "matched_ewma",
+    "alpha": 100,
+    "inner_macro_mse": 0.05915070834328241,
+    "all_alpha_scores": [
+      0.059165479242983876,
+      0.059164868978813775,
+      0.05915937379351695,
+      0.05915070834328241,
+      0.05979172521689242
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 3,
+    "model": "multiscale_ema",
+    "alpha": 1,
+    "inner_macro_mse": 0.05799570581055923,
+    "all_alpha_scores": [
+      0.05799828071954833,
+      0.05799570581055923,
+      0.058063488767176194,
+      0.0584168711071032,
+      0.059216641093038015
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 3,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.05534006888615958,
+    "all_alpha_scores": [
+      0.05534006888615958,
+      0.05534011316995294,
+      0.05534056544894238,
+      0.055346000807017876,
+      0.05546956025650377
+    ]
+  },
+  {
+    "target": "pcFos_nuc",
+    "held_out_replicate": 3,
+    "model": "production_decay",
+    "alpha": 10,
+    "inner_macro_mse": 0.057919728561107595,
+    "all_alpha_scores": [
+      0.05805250848589451,
+      0.057939174491321466,
+      0.057919728561107595,
+      0.057966852170190555,
+      0.058558865933977175
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 1,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.03486196376179102,
+    "all_alpha_scores": [
+      0.03486196376179102,
+      0.03486196376179102,
+      0.03486196376179102,
+      0.03486196376179102,
+      0.03486196376179102
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 1,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.028663133820582658,
+    "all_alpha_scores": [
+      0.028663133820582658,
+      0.028663146580777368,
+      0.028663275164767278,
+      0.028664658211800146,
+      0.028687287015655094
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 1,
+    "model": "time_average",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.031110474953119638,
+    "all_alpha_scores": [
+      0.031110474953119638,
+      0.03111048779431443,
+      0.03111061674621648,
+      0.031111959704138388,
+      0.031130218369558392
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 1,
+    "model": "summary_ablation",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.026506946937795588,
+    "all_alpha_scores": [
+      0.026506946937795588,
+      0.02650698936491712,
+      0.026507415255500266,
+      0.026511829825225805,
+      0.02656729924005874
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 1,
+    "model": "efmw_memory",
+    "alpha": 100,
+    "inner_macro_mse": 0.026396941949108594,
+    "all_alpha_scores": [
+      0.026399530239893932,
+      0.02639945718158544,
+      0.026398792113255957,
+      0.026396941949108594,
+      0.026464950239526414
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 1,
+    "model": "matched_ewma",
+    "alpha": 100,
+    "inner_macro_mse": 0.026396941949108594,
+    "all_alpha_scores": [
+      0.026399530239893932,
+      0.02639945718158544,
+      0.026398792113255957,
+      0.026396941949108594,
+      0.026464950239526414
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 1,
+    "model": "multiscale_ema",
+    "alpha": 1,
+    "inner_macro_mse": 0.025999535843115835,
+    "all_alpha_scores": [
+      0.026004723848967546,
+      0.025999535843115835,
+      0.026026553462060266,
+      0.026106343716235356,
+      0.026323887262260606
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 1,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.026382726035951893,
+    "all_alpha_scores": [
+      0.026382726035951893,
+      0.02638273471125426,
+      0.02638282419358,
+      0.026383974966795926,
+      0.02641138856310888
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 1,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.025821707103460982,
+    "all_alpha_scores": [
+      0.025821707103460982,
+      0.025900981564283554,
+      0.026007742426028126,
+      0.026054751909815627,
+      0.026249134329615252
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 2,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.03137484136906894,
+    "all_alpha_scores": [
+      0.03137484136906894,
+      0.03137484136906894,
+      0.03137484136906894,
+      0.03137484136906894,
+      0.03137484136906894
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 2,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.024290999806508236,
+    "all_alpha_scores": [
+      0.024290999806508236,
+      0.024291003897349263,
+      0.024291045797741335,
+      0.024291563105261933,
+      0.024305733837978946
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 2,
+    "model": "time_average",
+    "alpha": 100,
+    "inner_macro_mse": 0.02656219407063977,
+    "all_alpha_scores": [
+      0.026562415579031058,
+      0.026562412928215685,
+      0.02656238708030754,
+      0.02656219407063977,
+      0.0265662922172027
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 2,
+    "model": "summary_ablation",
+    "alpha": 100,
+    "inner_macro_mse": 0.022787323136148042,
+    "all_alpha_scores": [
+      0.022787954409596984,
+      0.022787946077569926,
+      0.02278786550830264,
+      0.022787323136148042,
+      0.02280034723392728
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 2,
+    "model": "efmw_memory",
+    "alpha": 100,
+    "inner_macro_mse": 0.022499681498046105,
+    "all_alpha_scores": [
+      0.022510418735244675,
+      0.022510252401436986,
+      0.022508677948137108,
+      0.022499681498046105,
+      0.022543975309377372
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 2,
+    "model": "matched_ewma",
+    "alpha": 100,
+    "inner_macro_mse": 0.02249968149804611,
+    "all_alpha_scores": [
+      0.022510418735244682,
+      0.022510252401436993,
+      0.022508677948137115,
+      0.02249968149804611,
+      0.022543975309377372
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 2,
+    "model": "multiscale_ema",
+    "alpha": 1,
+    "inner_macro_mse": 0.02230719543475728,
+    "all_alpha_scores": [
+      0.022313188123196676,
+      0.02230719543475728,
+      0.022344732019971454,
+      0.022413695344316243,
+      0.022499297330356615
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 2,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.021243418125587644,
+    "all_alpha_scores": [
+      0.021243418125587644,
+      0.021243463020339443,
+      0.02124391525998038,
+      0.02124874263099475,
+      0.021314156910576965
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 2,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.022038606589597057,
+    "all_alpha_scores": [
+      0.022038606589597057,
+      0.022118775658309067,
+      0.022225930605884153,
+      0.022273570812726066,
+      0.022392908656916587
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 3,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.035955743984620786,
+    "all_alpha_scores": [
+      0.035955743984620786,
+      0.035955743984620786,
+      0.035955743984620786,
+      0.035955743984620786,
+      0.035955743984620786
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 3,
+    "model": "snapshot",
+    "alpha": 100,
+    "inner_macro_mse": 0.024806020170799626,
+    "all_alpha_scores": [
+      0.02480684454718112,
+      0.024806835742748327,
+      0.024806749085000628,
+      0.024806020170799626,
+      0.024811554393546854
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 3,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.029702739828132887,
+    "all_alpha_scores": [
+      0.029718527181044195,
+      0.02971850445805279,
+      0.029718278130813174,
+      0.0297161045011074,
+      0.029702739828132887
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 3,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.02398138281826174,
+    "all_alpha_scores": [
+      0.024000526967905972,
+      0.024000484388380164,
+      0.02400006175623215,
+      0.023996143619868036,
+      0.02398138281826174
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 3,
+    "model": "efmw_memory",
+    "alpha": 100,
+    "inner_macro_mse": 0.023721875370006338,
+    "all_alpha_scores": [
+      0.023735391735205523,
+      0.02373520958090184,
+      0.023733462650467333,
+      0.023721875370006338,
+      0.02374255772447852
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 3,
+    "model": "matched_ewma",
+    "alpha": 100,
+    "inner_macro_mse": 0.02372187537000634,
+    "all_alpha_scores": [
+      0.02373539173520553,
+      0.023735209580901848,
+      0.02373346265046734,
+      0.02372187537000634,
+      0.02374255772447852
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 3,
+    "model": "multiscale_ema",
+    "alpha": 1,
+    "inner_macro_mse": 0.02325163644233036,
+    "all_alpha_scores": [
+      0.023253703757460952,
+      0.02325163644233036,
+      0.023289847630997423,
+      0.023421144188860536,
+      0.023583116068993312
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 3,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.022475997812570234,
+    "all_alpha_scores": [
+      0.022475997812570234,
+      0.022476015331831106,
+      0.02247619313791425,
+      0.022478223780467828,
+      0.022517573465070523
+    ]
+  },
+  {
+    "target": "cFos_nuc",
+    "held_out_replicate": 3,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.023162282035173794,
+    "all_alpha_scores": [
+      0.023162282035173794,
+      0.02317684660025639,
+      0.02322376733281096,
+      0.023281214441131997,
+      0.023475617167494446
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 1,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.7092284735624947,
+    "all_alpha_scores": [
+      0.7092284735624947,
+      0.7092284735624947,
+      0.7092284735624947,
+      0.7092284735624947,
+      0.7092284735624947
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 1,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.595291492293302,
+    "all_alpha_scores": [
+      0.595291492293302,
+      0.5952917602229562,
+      0.5952944618488248,
+      0.595323686404184,
+      0.5958140763193731
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 1,
+    "model": "time_average",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.5674719373590487,
+    "all_alpha_scores": [
+      0.5674719373590487,
+      0.5674721953612807,
+      0.567474802085109,
+      0.567503510886482,
+      0.568028390949634
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 1,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.5029366032753796,
+    "all_alpha_scores": [
+      0.5030238159884519,
+      0.5030232986847616,
+      0.503018181668142,
+      0.5029724390133554,
+      0.5029366032753796
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 1,
+    "model": "efmw_memory",
+    "alpha": 10,
+    "inner_macro_mse": 0.4722298366339883,
+    "all_alpha_scores": [
+      0.47223420788963366,
+      0.4722333458025728,
+      0.4722298366339883,
+      0.4725564016372025,
+      0.4793543016041152
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 1,
+    "model": "matched_ewma",
+    "alpha": 10,
+    "inner_macro_mse": 0.47222983663398804,
+    "all_alpha_scores": [
+      0.4722342078896334,
+      0.4722333458025725,
+      0.47222983663398804,
+      0.4725564016372023,
+      0.47935430160411524
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 1,
+    "model": "multiscale_ema",
+    "alpha": 10,
+    "inner_macro_mse": 0.46182632156189507,
+    "all_alpha_scores": [
+      0.46277110446803804,
+      0.46238951011924956,
+      0.46182632156189507,
+      0.46598848299214524,
+      0.4778498756162362
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 1,
+    "model": "temporal_bins",
+    "alpha": 1000,
+    "inner_macro_mse": 0.46436488538882037,
+    "all_alpha_scores": [
+      0.464650400285587,
+      0.4646496546884937,
+      0.46464227838266237,
+      0.4645759892788114,
+      0.46436488538882037
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 1,
+    "model": "production_decay",
+    "alpha": 100,
+    "inner_macro_mse": 0.46266191159165526,
+    "all_alpha_scores": [
+      0.4638169872474426,
+      0.4637402590541465,
+      0.4631369468159565,
+      0.46266191159165526,
+      0.46911474950921284
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 2,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.7634412817345095,
+    "all_alpha_scores": [
+      0.7634412817345095,
+      0.7634412817345095,
+      0.7634412817345095,
+      0.7634412817345095,
+      0.7634412817345095
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 2,
+    "model": "snapshot",
+    "alpha": 1000,
+    "inner_macro_mse": 0.639126573710677,
+    "all_alpha_scores": [
+      0.6399473501435657,
+      0.6399463505639736,
+      0.6399363828693483,
+      0.6398394917726121,
+      0.639126573710677
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 2,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.6139753902591336,
+    "all_alpha_scores": [
+      0.6151102176517691,
+      0.6151088707761607,
+      0.6150954370684992,
+      0.6149645747084902,
+      0.6139753902591336
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 2,
+    "model": "summary_ablation",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.53701360063695,
+    "all_alpha_scores": [
+      0.53701360063695,
+      0.5370139178795676,
+      0.5370171332787745,
+      0.5370534169502161,
+      0.5377156371206141
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 2,
+    "model": "efmw_memory",
+    "alpha": 10,
+    "inner_macro_mse": 0.5094961300337855,
+    "all_alpha_scores": [
+      0.5095049573981084,
+      0.5095036493788736,
+      0.5094961300337855,
+      0.5098142530568851,
+      0.5167734508274042
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 2,
+    "model": "matched_ewma",
+    "alpha": 10,
+    "inner_macro_mse": 0.5094961300337856,
+    "all_alpha_scores": [
+      0.5095049573981083,
+      0.5095036493788736,
+      0.5094961300337856,
+      0.5098142530568851,
+      0.5167734508274042
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 2,
+    "model": "multiscale_ema",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.5005337887295425,
+    "all_alpha_scores": [
+      0.5005337887295425,
+      0.5006108646831957,
+      0.5011387100441964,
+      0.5045533858364384,
+      0.5155475387115083
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 2,
+    "model": "temporal_bins",
+    "alpha": 1000,
+    "inner_macro_mse": 0.5101877446289365,
+    "all_alpha_scores": [
+      0.5111072107226211,
+      0.5111057353520105,
+      0.5110910804809587,
+      0.5109538839016794,
+      0.5101877446289365
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 2,
+    "model": "production_decay",
+    "alpha": 10,
+    "inner_macro_mse": 0.5006198902813803,
+    "all_alpha_scores": [
+      0.5006750484787867,
+      0.5006534630694818,
+      0.5006198902813803,
+      0.5013617005113273,
+      0.507635501494073
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 3,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.738706129339497,
+    "all_alpha_scores": [
+      0.738706129339497,
+      0.738706129339497,
+      0.738706129339497,
+      0.738706129339497,
+      0.738706129339497
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 3,
+    "model": "snapshot",
+    "alpha": 1000,
+    "inner_macro_mse": 0.6155133293788329,
+    "all_alpha_scores": [
+      0.6175643170204002,
+      0.6175621899000308,
+      0.6175409483149695,
+      0.6173314756625641,
+      0.6155133293788329
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 3,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.5580040826708798,
+    "all_alpha_scores": [
+      0.5588257080570564,
+      0.5588246987868155,
+      0.5588146346471239,
+      0.5587168301417194,
+      0.5580040826708798
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 3,
+    "model": "summary_ablation",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.5103986760488609,
+    "all_alpha_scores": [
+      0.5103986760488609,
+      0.510399356296076,
+      0.510406161385175,
+      0.5104744559156834,
+      0.5111705776927307
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 3,
+    "model": "efmw_memory",
+    "alpha": 100,
+    "inner_macro_mse": 0.4790197854314715,
+    "all_alpha_scores": [
+      0.47959853616576387,
+      0.47958809924386825,
+      0.4794902407302559,
+      0.4790197854314715,
+      0.4842292501032618
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 3,
+    "model": "matched_ewma",
+    "alpha": 100,
+    "inner_macro_mse": 0.47901978543147133,
+    "all_alpha_scores": [
+      0.47959853616576364,
+      0.479588099243868,
+      0.47949024073025565,
+      0.47901978543147133,
+      0.4842292501032618
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 3,
+    "model": "multiscale_ema",
+    "alpha": 10,
+    "inner_macro_mse": 0.4721907585367452,
+    "all_alpha_scores": [
+      0.4724289200355517,
+      0.4723419760759677,
+      0.4721907585367452,
+      0.47383942349826547,
+      0.48259648198955263
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 3,
+    "model": "temporal_bins",
+    "alpha": 1000,
+    "inner_macro_mse": 0.47635816846868007,
+    "all_alpha_scores": [
+      0.4774376318761841,
+      0.4774362306849408,
+      0.47742227913888524,
+      0.47728854353025163,
+      0.47635816846868007
+    ]
+  },
+  {
+    "target": "pRB_nuc",
+    "held_out_replicate": 3,
+    "model": "production_decay",
+    "alpha": 10,
+    "inner_macro_mse": 0.47312500063761187,
+    "all_alpha_scores": [
+      0.4732645123572763,
+      0.47324935607311297,
+      0.47312500063761187,
+      0.4732186515241037,
+      0.47633222297545985
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 1,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.04165675143764496,
+    "all_alpha_scores": [
+      0.04165675143764496,
+      0.04165675143764496,
+      0.04165675143764496,
+      0.04165675143764496,
+      0.04165675143764496
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 1,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.03411332130932899,
+    "all_alpha_scores": [
+      0.03411332130932899,
+      0.03411335074444431,
+      0.03411364638358557,
+      0.034116730140290284,
+      0.034158983949512264
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 1,
+    "model": "time_average",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.03241919410608875,
+    "all_alpha_scores": [
+      0.03241919410608875,
+      0.03241923008666533,
+      0.03241959152224247,
+      0.03242336703206219,
+      0.032475555345728165
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 1,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.027896255243961075,
+    "all_alpha_scores": [
+      0.027953446673959888,
+      0.02795334433656859,
+      0.02795232769798108,
+      0.027942811714732663,
+      0.027896255243961075
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 1,
+    "model": "efmw_memory",
+    "alpha": 100,
+    "inner_macro_mse": 0.027018128328028076,
+    "all_alpha_scores": [
+      0.02704476064356682,
+      0.027044262063639163,
+      0.027039624017659036,
+      0.027018128328028076,
+      0.027161840885663188
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 1,
+    "model": "matched_ewma",
+    "alpha": 100,
+    "inner_macro_mse": 0.027018128328028076,
+    "all_alpha_scores": [
+      0.02704476064356682,
+      0.027044262063639163,
+      0.027039624017659032,
+      0.027018128328028076,
+      0.027161840885663195
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 1,
+    "model": "multiscale_ema",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.026946103545281413,
+    "all_alpha_scores": [
+      0.026946103545281413,
+      0.02694723320388714,
+      0.0269821746145125,
+      0.027025729322773015,
+      0.02718583251399253
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 1,
+    "model": "temporal_bins",
+    "alpha": 1000,
+    "inner_macro_mse": 0.02709593507129367,
+    "all_alpha_scores": [
+      0.0271148231940688,
+      0.02711476969262838,
+      0.02711424026183447,
+      0.027109474664976985,
+      0.02709593507129367
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 1,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.026856412932499067,
+    "all_alpha_scores": [
+      0.026856412932499067,
+      0.026882562410638466,
+      0.026937961144899467,
+      0.02697134072979522,
+      0.027031757745767868
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 2,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.050607577834463874,
+    "all_alpha_scores": [
+      0.050607577834463874,
+      0.050607577834463874,
+      0.050607577834463874,
+      0.050607577834463874,
+      0.050607577834463874
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 2,
+    "model": "snapshot",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.04063530020652939,
+    "all_alpha_scores": [
+      0.04063530020652939,
+      0.04063531600804124,
+      0.04063547538272073,
+      0.040637203816235604,
+      0.040666777096062715
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 2,
+    "model": "time_average",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.0376928455560357,
+    "all_alpha_scores": [
+      0.0376928455560357,
+      0.03769284831323046,
+      0.0376928778032916,
+      0.03769336275570395,
+      0.03771558176838502
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 2,
+    "model": "summary_ablation",
+    "alpha": 10,
+    "inner_macro_mse": 0.03336588830257437,
+    "all_alpha_scores": [
+      0.03336591243337199,
+      0.033365909870305945,
+      0.03336588830257437,
+      0.03336606568504589,
+      0.033397400977793104
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 2,
+    "model": "efmw_memory",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.03188234918784105,
+    "all_alpha_scores": [
+      0.03188234918784105,
+      0.03188248319985332,
+      0.03188404296025772,
+      0.031914303032881286,
+      0.03226567908140507
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 2,
+    "model": "matched_ewma",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.03188234918784106,
+    "all_alpha_scores": [
+      0.03188234918784106,
+      0.03188248319985332,
+      0.03188404296025773,
+      0.03191430303288129,
+      0.03226567908140507
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 2,
+    "model": "multiscale_ema",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.03169240936986661,
+    "all_alpha_scores": [
+      0.03169240936986661,
+      0.031712185178365354,
+      0.031794947546729325,
+      0.03192109279587413,
+      0.03221362776821813
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 2,
+    "model": "temporal_bins",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.030768995967003256,
+    "all_alpha_scores": [
+      0.030768995967003256,
+      0.03076903850237047,
+      0.0307694675197865,
+      0.03077410476819735,
+      0.030842439879596447
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 2,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.03144904660030803,
+    "all_alpha_scores": [
+      0.03144904660030803,
+      0.03156301245345376,
+      0.031724552866079885,
+      0.03180871250534491,
+      0.031998415475292225
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 3,
+    "model": "intercept",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.046881124051460665,
+    "all_alpha_scores": [
+      0.046881124051460665,
+      0.046881124051460665,
+      0.046881124051460665,
+      0.046881124051460665,
+      0.046881124051460665
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 3,
+    "model": "snapshot",
+    "alpha": 1000,
+    "inner_macro_mse": 0.036338133746546195,
+    "all_alpha_scores": [
+      0.03641102231717554,
+      0.03641093936857318,
+      0.03641011171650771,
+      0.03640201737212224,
+      0.036338133746546195
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 3,
+    "model": "time_average",
+    "alpha": 1000,
+    "inner_macro_mse": 0.03605317467350158,
+    "all_alpha_scores": [
+      0.03616624505654599,
+      0.036166122987029675,
+      0.036164904434865836,
+      0.036152931821511566,
+      0.03605317467350158
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 3,
+    "model": "summary_ablation",
+    "alpha": 1000,
+    "inner_macro_mse": 0.03196471215786135,
+    "all_alpha_scores": [
+      0.03219829050863225,
+      0.032198013167474164,
+      0.03219524821530413,
+      0.03216842181340847,
+      0.03196471215786135
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 3,
+    "model": "efmw_memory",
+    "alpha": 100,
+    "inner_macro_mse": 0.031083813611440435,
+    "all_alpha_scores": [
+      0.03109945140493424,
+      0.031099214652653206,
+      0.03109696896687812,
+      0.031083813611440435,
+      0.031104948970168675
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 3,
+    "model": "matched_ewma",
+    "alpha": 100,
+    "inner_macro_mse": 0.031083813611440445,
+    "all_alpha_scores": [
+      0.031099451404934246,
+      0.031099214652653223,
+      0.031096968966878132,
+      0.031083813611440445,
+      0.031104948970168682
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 3,
+    "model": "multiscale_ema",
+    "alpha": 1,
+    "inner_macro_mse": 0.030962394314848596,
+    "all_alpha_scores": [
+      0.03096523159512961,
+      0.030962394314848596,
+      0.030981547788428987,
+      0.031056937758336726,
+      0.03114093081228282
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 3,
+    "model": "temporal_bins",
+    "alpha": 100,
+    "inner_macro_mse": 0.029325625044308398,
+    "all_alpha_scores": [
+      0.029327171427945276,
+      0.029327153904926642,
+      0.02932698242237128,
+      0.029325625044308398,
+      0.02933643282968322
+    ]
+  },
+  {
+    "target": "FRA1_nuc",
+    "held_out_replicate": 3,
+    "model": "production_decay",
+    "alpha": 0.1,
+    "inner_macro_mse": 0.03086674778537447,
+    "all_alpha_scores": [
+      0.03086674778537447,
+      0.030878217131890026,
+      0.030959655585443755,
+      0.031012691433317356,
+      0.031061590779319758
+    ]
+  }
+]

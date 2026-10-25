@@ -32,6 +32,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [EFMW-BIO-001: A Negative Benchmark Result for Cellular Memory](EFMW-BIO-001-Cellular-Memory-Negative-Result.md) · [Protocol, code, and results](research/efmw-bio-001/README.md) — 25 October 2026. Public single-cell ERK reanalysis: 70,987 retained cells, three held-out experimental replicates, a 3.62% primary error reduction versus the ablation, but 1.19% higher error than the training-selected conventional comparator. The tested recurrence is equivalent to ordinary EWMA; upstream normalization limits independence.
+
 - [HORIZON Brings Cosmic Horizons Into the Browser](HORIZON-Brings-Cosmic-Horizons-Into-the-Browser.md) · [Word](HORIZON-Cosmology-Journalistic-Article.docx) · [Live HORIZON](https://enuminous.github.io/Cosmology/) — 24 October 2026. Journalistic feature on the interactive cosmic-horizon explorer, its frozen C1Q model, numerical checks and prospective observational tests; calculated results and illustrative recursion are distinguished.
 
 - [A Thank-You to Alex Garland for *Devs*](A-Thank-You-to-Alex-Garland-for-Devs.md) — 23 October 2026. Matthew's public memo of appreciation for the series that helped inspire Devs 2.0.
@@ -89,3 +91,4 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 - [great-recursion-primordial-rotation.md](great-recursion-primordial-rotation.md)
 - [monolithic-open-mathematical-intelligence-revolution.md](monolithic-open-mathematical-intelligence-revolution.md)
 - [spacex_xai_efmw_2045_x_article.md](spacex_xai_efmw_2045_x_article.md)
+

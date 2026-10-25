@@ -1,0 +1,47 @@
+{
+  "original_cells": 71459,
+  "time_samples": 190,
+  "trace_qc_pass": 70987,
+  "trace_qc_excluded": 472,
+  "timepoints_missing_before_interpolation": 304549,
+  "replicate_counts_before_qc": {
+    "1": 27833,
+    "2": 27129,
+    "3": 16497
+  },
+  "parsed_at_utc": "2026-10-25T17:18:14.171060+00:00",
+  "target_columns": [
+    "EGR1_nuc",
+    "PERK_nuc",
+    "cJun_nuc",
+    "cMyc_nuc",
+    "pcFos_nuc",
+    "cFos_nuc",
+    "pRB_nuc",
+    "FRA1_nuc"
+  ],
+  "source_row_count_differs_from_paper_figure_count": true,
+  "source_row_count_note": "The downloadable tables have 71,459 rows. Paper Figure 2 reports 97,960 cells; reconciliation of that difference is not established.",
+  "memory_equivalence_max_abs_error": 9.992007221626409e-16,
+  "target_usable_counts": {
+    "EGR1_nuc": 70987,
+    "PERK_nuc": 70987,
+    "cJun_nuc": 70987,
+    "cMyc_nuc": 70987,
+    "pcFos_nuc": 70987,
+    "cFos_nuc": 70987,
+    "pRB_nuc": 70987,
+    "FRA1_nuc": 70987
+  },
+  "predictor_counts": {
+    "intercept": 0,
+    "snapshot": 1,
+    "time_average": 1,
+    "summary_ablation": 4,
+    "efmw_memory": 5,
+    "matched_ewma": 5,
+    "multiscale_ema": 10,
+    "temporal_bins": 19,
+    "production_decay": 13
+  }
+}

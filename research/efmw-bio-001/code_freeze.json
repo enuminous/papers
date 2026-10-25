@@ -1,0 +1,9 @@
+{
+  "frozen_at_utc": "2026-10-25T17:18:35.584449+00:00",
+  "benchmark_executed": false,
+  "files": {
+    "PROTOCOL.md": "38e028fbbe057c9f0cb718a231365e3fc45153ecd4002bd76b678ea8f3ba403b",
+    "prepare_data.py": "b1d0b1e4275ce29dc39b61ffd242a86445ad9399cb6812b5c0cb7df2f31e00d6",
+    "run_benchmark.py": "7e2efcc6f0c5ee640b810bd46b92a4ea8f68e6f1c6462e0a859802d05ec23582"
+  }
+}

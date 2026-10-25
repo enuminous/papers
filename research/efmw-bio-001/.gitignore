@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+data/*.xlsx
+data/*.npz
+data/README.txt
+results/*.npz
+results/*.pending
+source/*.sparse
+source/*.tail
+source/Code_files.zip.entries.json
+source/code/
