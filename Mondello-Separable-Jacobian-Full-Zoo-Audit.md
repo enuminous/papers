@@ -1,10 +1,53 @@
 # Monolithic Zoo dissection: Romy Mondello · arXiv:2608.02634v1
 
-The mathematical counterexample survives this audit. Exact polynomial checks pass; the written proof has a coherent, noncircular dependency chain. Fresh local Lean certification remains unresolved.
+**Binary certification edition.** The exact algebra checks pass, and the written mathematical argument survives review. The supplied evidence does not earn a positive certification from any of the 46 main Zoo operations or five extensions: all 51 binary certification gates return **FAIL**, for the specific reasons below. These are failures to substantiate Zoo certification, not 51 mathematical objections to the theorem. Fresh local Lean certification also fails its evidence requirement because no replay was performed.
 
 **Prepared for Matthew Chenoweth Wright, Monolithic LLC, with AI-assisted analysis.**
 
-Audit date: October 26, 2026. This is a complete roster applicability review plus substantive mathematical, source, and provenance analysis. It is not a claim that 46 empirical pipelines executed on a PDF. No percentage “truth score” is assigned.
+Audit and revision date: October 26, 2026. The revised object is the **paper-plus-proof-audit evidence package**. The mathematical statement, polynomial formulas, and animal implementations are unchanged. This edition adds a strict binary decision layer; it does not claim that the animal implementations all have native pass/fail outputs or that all pipelines executed.
+
+Revision provenance: the [first edition](https://github.com/enuminous/papers/blob/e08b8a6cd182b8dc820ea0db1907d8f90e9aa70a/Mondello-Separable-Jacobian-Full-Zoo-Audit.md) classified most operations as inapplicable. This edition preserves that fact in explicit failure reasons. The policy was requested after the original analysis and is **not a preregistered experiment**. No Zoo-wide truth percentage is reported.
+
+## 0. What PASS and FAIL mean
+
+Two questions require separate verdicts:
+
+1. **Mathematical obligation:** does the stated calculation or reviewed argument satisfy its specified obligation? A PASS is limited to the method listed: exact computation, written reasoning, or source inspection. It is not automatically a kernel-checked theorem.
+2. **Animal certification:** does the available package justify a positive result under that animal's existing operation, with a faithful domain mapping, sufficient inputs, a declared acceptance criterion, an actual pinned execution, and closed material risks?
+
+For question 2, PASS requires all six conditions below. Otherwise the binary result is FAIL. A native ranking, category, or non-certification output cannot silently become PASS. **The binary decision belongs to this review's certification wrapper; it is not a changed native animal result.**
+
+| Required condition | Evidence requirement |
+| --- | --- |
+| Faithful domain bridge | A documented mapping from the proof-audit workflow to the existing operation's input and output semantics. Similar terminology is insufficient. |
+| Complete typed inputs | Actual source-compatible records, provenance, and all required measurements. Missing values are not replaced with invented numbers. |
+| Acceptance contract | Existing decision rules, or an independently justified rule for a nonbinary output, declared before a new evaluation. |
+| Recorded execution | Pinned operation, exact inputs, output, and execution receipt. |
+| Criterion satisfied | The observed output satisfies the acceptance contract. |
+| Material risks closed | No unresolved risk material to the particular certification claim; this does not require resolving unrelated questions. |
+
+Reason codes: **DOMAIN** = faithful mapping absent; **INPUT** = required evidence absent; **CRITERION** = a positive-output interpretation is not established; **NOT_RUN** = no applicable pipeline execution; **OPEN_RISK** = a declared certification risk remains unresolved. These reasons are preserved even though the public decision column has only PASS or FAIL. An unexecuted gate has unknown native performance, not demonstrated poor performance.
+
+### Direct mathematical and reproducibility obligations
+
+These obligations supplement the Zoo table; they are not renamed animals.
+
+| Obligation and PASS criterion | Method and evidence | Binary result | Evidence status / limit |
+| --- | --- | --- | --- |
+| Determinant is identically one over F₂ | Exact sparse-polynomial expansion | **PASS** | Demonstrated. |
+| Three named distinct inputs share one output | Exact evaluation; distinct coordinates | **PASS** | Demonstrated noninjectivity. |
+| All compact, recovery, cubic, derivative, and descent identities agree | Fifteen exact identities in total, including the determinant | **PASS** | Demonstrated finite identities; field/geometry implications need reasoning below. |
+| Function-field reconstruction uses nonzero elements | Nonzero polynomial checks plus the displayed rational reconstruction | **PASS** | Written argument reviewed; not a claim about denominators at every affine point. |
+| Algebraic independence precedes irreducibility | Algebraicity, transcendence-degree, then irreducibility dependency chain | **PASS** | Supported by reviewed argument and source inspection. |
+| Cubic irreducibility holds over the actual target field | Gauss-lemma/coefficient argument and source-level transport inspected | **PASS** | Supported by written argument; no fresh kernel replay. |
+| Degree, separability, étaleness, and generic-fiber bridge follow | Field reconstruction, nonzero derivative, Jacobian criterion, embedding bridge | **PASS** | Supported by written argument; no fresh kernel replay. |
+| Characteristic and generic-versus-every-fiber limits are respected | Characteristic-zero check and origin-fiber deduction | **PASS** | Demonstrated boundary calculations; not a characteristic-zero result. |
+| Checker detects the two declared coefficient mutations | Both mutations break determinant one | **PASS** | Demonstrated sensitivity to these two controls only. |
+| Archived source files match supplied manifest | 18/18 SHA-256 entries agree | **PASS** | Demonstrated internal bundle consistency, not external authenticity. |
+| Every named auxiliary document is present in the archived bundle | Three referenced documents absent | **FAIL** | Demonstrated packaging gap; no missing Lean import established. |
+| This review freshly rebuilds the exact Lean theorem and audits axioms | No local Lean/lake run | **FAIL** | Unresolved certification; not a mathematical refutation. |
+| External execution receipts are directly authenticated | Supplied receipt text inspected, remote execution not authenticated | **FAIL** | Unresolved provenance. |
+| Exhaustive priority is established | Only the identified predecessor comparison was reviewed | **FAIL** | No exhaustive novelty certification; no plagiarism conclusion. |
 
 ## 1. Frozen object and criteria
 
@@ -106,72 +149,162 @@ Huq-Kuruvilla’s earlier arXiv:2607.20968 supplies the three-variable source ma
 
 Lean and Aristotle are distinct execution environments according to the receipts, but both check the same source through the Lean kernel and pinned dependencies. That helps detect environment/replay errors, not independently validate the translation of a literature conjecture or eliminate shared-library assumptions. The exact algebra checker supplies a separate implementation of the finite identities; human-level mathematical review remains a different evidence stream.
 
-## 7. Full Zoo roster: scope before scoring
+## 7. Every animal: binary certification verdict
 
-Frozen reference: Monolithic-Zoo-Lean4 commit 509480eb63d9fa2ca89f17506793a1f9412d2439. Its registry contains 46 main animals and documents five extension decision procedures separately. This is the recoverable operational roster, not an assumed 52-name list. The current coverage warns that these are selected kernels, including 17 rank-aggregation modules with feature extraction outside the formalization.
+Frozen reference: [Monolithic-Zoo-Lean4, commit 509480eb63d9fa2ca89f17506793a1f9412d2439](https://github.com/enuminous/Monolithic-Zoo-Lean4/tree/509480eb63d9fa2ca89f17506793a1f9412d2439). The recoverable roster is 46 main operations plus five extensions. The repository formalizes selected kernels; 17 rank-aggregation animals still require external feature extraction. Its own coverage documentation warns that caller-supplied evidence flags do not establish the truth of those flags.
 
-For each row below, the scope is the actual published operation. Its input contract and success criterion govern applicability; no metaphorical reassignment is made. This paper asserts an exact algebraic theorem, not the predictive, temporal, queueing, repair, or cooperation property measured by these kernels. Therefore main-roster outputs are N/A for this target. They are not passes, and no denominator is silently reduced into a flattering score. Missing evidence for the *formal-replay claim* is separately UNRESOLVED, never disguised as N/A.
+The purpose, transformation, and output domain in each row remain those of the published kernel. Section 0 defines the common binary certification rule. For every main-roster row, the current result is **FAIL [DOMAIN, INPUT, CRITERION, NOT_RUN]**: no faithful measured proof-workflow adapter, complete inputs, accepted positive-result contract, or run has been supplied. The final column specifies the missing evidence needed even to begin that evaluation; supplying it would not guarantee a PASS.
 
-| Animal | Published kernel / required domain | Output / criterion for this paper |
-| --- | --- | --- |
-| 1. TORTOISE | ordered split; temporal separation contract; Brier gain | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 2. OWL | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 3. OCTOPUS | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 4. GECKO | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 5. HIVE | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 6. EAGLE | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 7. CRAB | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 8. SHEPHERD | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 9. PULSE | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 10. CAT | ablation penalty and sign classifier; exact-integer sign reference | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 11. FOX | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 12. SPIDER | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 13. RAVEN | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 14. DOLPHIN | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 15. ANT | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 16. MOTH | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 17. SHARK | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 18. PENGUIN | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 19. BAT | verdict kernel with source placebo precedence; fitting excluded | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 20. HEDGEHOG | generalization verdict and environment separation obligation; training excluded | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 21. CROCODILE | difference-in-differences kernel and conditional identification contract | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 22. DRAGON | rank aggregation of precomputed component columns; feature extraction and model training not ported | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 23. TURTLE | summary verdict and veto precedence; group normalization supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 24. MAGPIE | groundedness and history-dependent alarm; entropy/storage excluded | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 25. WOLF | local channel contribution, weight, EMA and alarm contract; graph aggregation supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 26. ELEPHANT | active-event filter and fuel-bounded lineage abstraction; full memory API excluded | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 27. CHAMELEON | unexplained/noise-adjusted excess; supplied centroid distances | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 28. JELLYFISH | dynamic edge weight, flow, next health and harm; graph aggregation supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 29. BEAVER | acceptance contract including bounds and rollback flags; external repair not certified | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 30. MANTIS | calibrated z-score aggregation and state decision; baseline fitting supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 31. BISON | single-component queue transition; exact natural-number capacity bound | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 32. WEASEL | bounded finding filter; target search/enumeration remains external | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 33. SALMON | unresolved-mass kernel and fuel-bounded trace abstraction; weighted tracing excluded | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 34. ORCA | handoff checks and aggregate coordination formula; pairwise metrics supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 35. MOLE | observability gap and coverage-gated hidden-failure flag; indicators supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 36. LYNX | novelty, yield and emergence contract; reference distances supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 37. HORSE | trust/workload/joint-effectiveness kernels and handoff contract | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 38. TERMITE | agent update and synchronous mapping; graph weighted inputs supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 39. PHOENIX | recovery completeness and hold-window predicate; fidelity inputs supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 40. COBRA | persistent/proxy divergence and risk kernels; deltas supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 41. WHALE | cumulative deviation, history gap and stability formula; slope supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 42. FALCON | latency/missed/reaction-margin kernel; streaming threshold monitor excluded | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 43. RHINO | retention, amplification and graceful-failure kernels; invariants supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 44. BONOBO | gain, exploitation and cooperation score; dispersion supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 45. AXOLOTL | recovery, efficiency and resilience; transformation/invariants supplied | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
-| 46. BUTTERFLY | layer update, amplification and bounded trajectory; graph comparison excluded | N/A — no claim or typed dataset in this operation’s domain; not executed. No scientific pass inferred. |
+| Animal | Existing transformation / output domain | Binary certification | Required evidence absent from this package |
+| --- | --- | --- | --- |
+| 1. TORTOISE | ordered split; temporal separation contract; Brier gain | **FAIL** | Timestamped prediction/label records, ordered split, leakage checks, and measured Brier gain. |
+| 2. OWL | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 3. OCTOPUS | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 4. GECKO | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 5. HIVE | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 6. EAGLE | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 7. CRAB | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 8. SHEPHERD | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 9. PULSE | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 10. CAT | ablation penalty and sign classifier; exact-integer sign reference | **FAIL** | Measured full-versus-ablated scores and the source penalty/sign inputs; deleting a theorem hypothesis is not a measured ablation. |
+| 11. FOX | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 12. SPIDER | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 13. RAVEN | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 14. DOLPHIN | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 15. ANT | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 16. MOTH | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 17. SHARK | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 18. PENGUIN | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 19. BAT | verdict kernel with source placebo precedence; fitting excluded | **FAIL** | Source-compatible fitted and placebo results with their provenance; a polynomial coefficient mutation is not a placebo experiment. |
+| 20. HEDGEHOG | generalization verdict and environment separation obligation; training excluded | **FAIL** | Separate training and evaluation environments, generalization measurements, and the environment-separation contract. |
+| 21. CROCODILE | difference-in-differences kernel and conditional identification contract | **FAIL** | Treatment/control and pre/post outcomes plus an independently justified identification contract. |
+| 22. DRAGON | rank aggregation of precomputed component columns; feature extraction and model training not ported | **FAIL** | Animal-specific precomputed component columns with documented extraction, a frozen reporting contract, and an independently justified acceptance rule. A rank alone is not a proof verdict. |
+| 23. TURTLE | summary verdict and veto precedence; group normalization supplied | **FAIL** | Source summary metrics, supplied group normalization, and all veto inputs. |
+| 24. MAGPIE | groundedness and history-dependent alarm; entropy/storage excluded | **FAIL** | Groundedness evidence and ordered alarm history in the source schema. |
+| 25. WOLF | local channel contribution, weight, EMA and alarm contract; graph aggregation supplied | **FAIL** | Channel contributions, weights, EMA history, and graph aggregation inputs. |
+| 26. ELEPHANT | active-event filter and fuel-bounded lineage abstraction; full memory API excluded | **FAIL** | Typed active events, parent links, and declared traversal fuel; citations alone do not instantiate the event model. |
+| 27. CHAMELEON | unexplained/noise-adjusted excess; supplied centroid distances | **FAIL** | Measured excess/noise inputs and justified reference-centroid distances. |
+| 28. JELLYFISH | dynamic edge weight, flow, next health and harm; graph aggregation supplied | **FAIL** | Typed graph edges, flows, weights, and health/harm observations. |
+| 29. BEAVER | acceptance contract including bounds and rollback flags; external repair not certified | **FAIL** | A concrete repair candidate, acceptance bounds, and observed rollback/invariant checks. |
+| 30. MANTIS | calibrated z-score aggregation and state decision; baseline fitting supplied | **FAIL** | Fitted baseline, calibrated component z-scores, and source decision inputs. |
+| 31. BISON | single-component queue transition; exact natural-number capacity bound | **FAIL** | A specified queue, arrival/service trace, capacity, and transition records. |
+| 32. WEASEL | bounded finding filter; target search/enumeration remains external | **FAIL** | A declared search space, enumerated candidate findings, filter inputs, and fuel/bounds; narrative review is not a bounded search certificate. |
+| 33. SALMON | unresolved-mass kernel and fuel-bounded trace abstraction; weighted tracing excluded | **FAIL** | A typed provenance trace with unresolved masses and fuel; counts of missing documents are not the weighted trace. |
+| 34. ORCA | handoff checks and aggregate coordination formula; pairwise metrics supplied | **FAIL** | Recorded handoffs and independently measured pairwise coordination inputs. |
+| 35. MOLE | observability gap and coverage-gated hidden-failure flag; indicators supplied | **FAIL** | Declared observable coverage and hidden-failure indicators; a missing Lean run is not a calibrated hidden-failure signal. |
+| 36. LYNX | novelty, yield and emergence contract; reference distances supplied | **FAIL** | A frozen reference corpus, reference distances, and measured discovery yield; priority discussion is not the kernel input. |
+| 37. HORSE | trust/workload/joint-effectiveness kernels and handoff contract | **FAIL** | Measured trust, workload, joint-effectiveness, and handoff inputs. |
+| 38. TERMITE | agent update and synchronous mapping; graph weighted inputs supplied | **FAIL** | Agent states, synchronous updates, and graph-weighted inputs. |
+| 39. PHOENIX | recovery completeness and hold-window predicate; fidelity inputs supplied | **FAIL** | Observed failure/recovery trajectory, fidelity measures, and a declared hold window. |
+| 40. COBRA | persistent/proxy divergence and risk kernels; deltas supplied | **FAIL** | Measured persistent/proxy deltas and risk inputs; prose overclaim checking is not the native divergence calculation. |
+| 41. WHALE | cumulative deviation, history gap and stability formula; slope supplied | **FAIL** | A time history of deviations, history gaps, and independently supplied slope. |
+| 42. FALCON | latency/missed/reaction-margin kernel; streaming threshold monitor excluded | **FAIL** | Observed event/detection times, missed-event labels, and reaction margin. |
+| 43. RHINO | retention, amplification and graceful-failure kernels; invariants supplied | **FAIL** | A frozen stress protocol, measured invariant retention/amplification, and graceful-failure records. |
+| 44. BONOBO | gain, exploitation and cooperation score; dispersion supplied | **FAIL** | Measured cooperation gains, exploitation, and dispersion inputs. |
+| 45. AXOLOTL | recovery, efficiency and resilience; transformation/invariants supplied | **FAIL** | A specified transformation and observed recovery/efficiency/invariant measurements. |
+| 46. BUTTERFLY | layer update, amplification and bounded trajectory; graph comparison excluded | **FAIL** | Layer states, update parameters, amplification measurements, and trajectory bounds. |
 
-### Extensions
+### Five extensions
 
-| Operation | Inputs, transformation, criterion | Result |
-| --- | --- | --- |
-| CIRCUS | Declared provenance/dependencies/risks/checks → ordered report gate. Material unresolved risks veto certification; a complete frozen independent check set is required for PASS. | Executed pinned decide() twice. Fresh-verification certification: FAIL because local replay is explicitly unresolved. Restricted no-cycle report: N/A because source independence is not established. Neither output rejects the mathematical theorem. |
-| MONSTER | Preregistered matched baseline, metric tolerance, registered perturbations and failure boundaries → performance-envelope gate. | N/A; this is no empirical performance claim. Algebraic coefficient controls above are not relabeled a preregistered MONSTER experiment. |
-| WOODPECKER | Validated candidate/comparator metrics and exact thresholds → ordered threshold decision. | N/A; no comparator-performance claim. |
-| NIGHTINGALE | Numerical data, prediction functions, quantiles and recursive stopping conditions → partition/growth decisions. | N/A; no fitted-response tree claim. |
-| CHIMERA | Classical/quantum/key/recovery/feedback record declarations → ordered record tags. | N/A; no physical observation or recovery mechanism is asserted. |
+| Extension | Existing transformation / output domain | Binary certification | Evidence and failure reason |
+| --- | --- | --- | --- |
+| CIRCUS | Declared pipeline, dependencies, risks, and independent checks → ordered report gate | **FAIL** | **OPEN_RISK.** Pinned `decide()` re-executed on the explicit report below; native output is FAIL because fresh local formal replay is an unresolved material certification risk. The supplied independent-check flag is also false; this does not claim the algebra checks failed. |
+| MONSTER / Zoo-Monster | Preregistered matched-comparator performance envelope, perturbations, and boundaries → eligibility/violation gate | **FAIL** | **DOMAIN, INPUT, CRITERION, NOT_RUN.** No measured performance envelope for a defined proof-audit service, matched comparator, tolerances, and registered boundary trials. Two polynomial mutations do not supply those data. |
+| WOODPECKER | Validated candidate/comparator metrics and thresholds → ordered decision | **FAIL** | **DOMAIN, INPUT, CRITERION, NOT_RUN.** No independently validated comparator metrics and source-compatible frozen thresholds. A true algebraic identity is not a performance improvement measurement. |
+| NIGHTINGALE / Nightengale | Numerical responses, predictions, quantiles, and stopping conditions → partition/growth decisions | **FAIL** | **DOMAIN, INPUT, CRITERION, NOT_RUN.** No fitted-response dataset, valid prediction functions, or accepted interpretation of tree output as certification. The formalized branch projection is not the full numerical pipeline. |
+| CHIMERA | Classical/quantum/key/recovery/feedback declarations → ordered record tags | **FAIL** | **DOMAIN, INPUT, CRITERION, NOT_RUN.** No independently supported source-domain record declarations or justified acceptance interpretation for the returned tags. Algebraic field reconstruction does not establish a physical recovery record. |
 
-CIRCUS source pin: enuminous/Circus 647c91dc06b4ea48871c06608298b46f00f68f99, src/circus.py, retrieved via the Zoo’s extension-sources.json. Inputs were conservative reviewer declarations, not measurements. The gate checks those declarations’ logic; it cannot establish their truth. No Zoo-wide percentage or alternative limiter classification is manufactured.
+The earlier restricted CIRCUS no-cycle case returned native N/A because independence was not established. Under this edition's binary wrapper that case also fails certification. That historical native output remains part of the audit trail; it has not been changed to a native FAIL. CIRCUS checks the consistency of reviewer declarations, not their truth.
+
+**Execution accounting:** one extension's native gate executed for this revision; 50 other native operations not run on a valid case. All 51 wrapper decisions were computed from the declared evidence records. There are no native performance results for those 50 operations. The aggregate means “no positive Zoo certification is supported by this package,” not “the paper is false.”
+
+### Reframing the paper into an evaluable workflow
+
+A substantive full-Zoo experiment would study **how a proof-audit system detects, explains, repairs, and reproduces valid and invalid proof packages**. That is a new empirical claim about a review workflow, separate from Mondello's theorem. This paper can provide one case; it cannot alone establish generalization or benchmark superiority.
+
+A prospective design would:
+
+1. Preserve this versioned paper as a seed case. Build an independently labeled corpus of valid packages and documented defects, with the reference judgments and source lineage recorded. Assign related mutations to the same split to avoid leakage.
+2. Freeze each animal's actual input adapter and acceptance contract before running new evaluations. Rank-producing animals need their own documented component extraction; numerical and temporal animals need real measurements, not prose converted to arbitrary scores.
+3. Instrument audit events, tool calls, failures, repairs, provenance edges, handoffs, latency, and resource use only where they instantiate the relevant native schema. State the assumptions that make each mapping legitimate.
+4. Use matched review budgets and conventional comparators. Measure error detection and false accusations against independent labels; include missing-evidence cases without treating them as mathematical counterexamples.
+5. Record the exact native outputs, then apply this binary wrapper. If an animal's domain still has no faithful mapping, it continues to FAIL certification. No experiment should be invented merely to make the coverage count look complete.
+
+This is a proposed design, not a completed experiment or a claimed executable adapter. It would evaluate the audit system, not supply a replacement proof of the theorem. For the mathematical claim, the highest-value next step remains the pinned Lean replay in §8.
+
+### Executed binary policy and CIRCUS input
+
+CIRCUS source: [enuminous/Circus, pinned src/circus.py](https://github.com/enuminous/Circus/blob/647c91dc06b4ea48871c06608298b46f00f68f99/src/circus.py), Git blob `65421922766c9178c1b188703ac21c03f95be6dd`, verified against the local file before this execution.
+
+The following policy was executed over all 51 evidence records. It deliberately does not substitute for a native animal implementation. `False` means the required affirmative evidence has not been established; it does not encode a measured negative performance score.
+
+```python
+FIELDS = ("bridge", "inputs", "acceptance", "executed", "satisfied",
+          "no_open_material_risk")
+
+def certify(record):
+    return "PASS" if all(record[k] is True for k in FIELDS) else "FAIL"
+
+# Main 46 + CHIMERA, MONSTER, WOODPECKER, NIGHTINGALE:
+# no validated evidence adapter or applicable recorded evaluation.
+missing_evidence_record = {k: False for k in FIELDS}
+
+# CIRCUS alone has a typed gate invocation on reviewer declarations.
+circus_record = dict(bridge=True, inputs=True, acceptance=True,
+                     executed=True, satisfied=False,
+                     no_open_material_risk=False)
+assert certify(missing_evidence_record) == "FAIL"
+assert certify(circus_record) == "FAIL"
+# Audit assertion across the 51 named records: PASS=0, FAIL=51.
+```
+
+Exact CIRCUS input for the re-executed fresh-certification gate:
+
+```json
+{
+  "animal": "CIRCUS",
+  "pipeline": [
+    {
+      "stage": "definition",
+      "provenance_status": "documented"
+    },
+    {
+      "stage": "data_selection",
+      "provenance_status": "documented"
+    },
+    {
+      "stage": "labels",
+      "provenance_status": "documented"
+    },
+    {
+      "stage": "scoring",
+      "provenance_status": "documented"
+    },
+    {
+      "stage": "validation",
+      "provenance_status": "documented"
+    }
+  ],
+  "dependencies": [],
+  "risks": [
+    {
+      "description": "Fresh local Lean/kernel replay remains unperformed.",
+      "materiality": "material",
+      "status": "unresolved"
+    }
+  ],
+  "independent_checks": [
+    {
+      "name": "Exact F2 polynomial identities",
+      "status": "passed",
+      "frozen": true,
+      "independently_sourced": false
+    }
+  ]
+}
+```
+
+Observed native output: `FAIL`. Observed certification wrapper output: `FAIL`. All provenance flags in that input are reviewer declarations about this report; the implementation does not authenticate provenance. The polynomial identities were the frozen target of the original checker; `frozen: true` does not claim statistical preregistration or independent source discovery.
 
 ## 8. Surviving claims and next gate
 
