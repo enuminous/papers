@@ -117,7 +117,7 @@ The Lean generic-cubic proof takes a different valid route: a rational root of t
 
 Since H is the monic irreducible polynomial of w and L=E(w), [L:E]=3. Also H′(w)=ru≠0. Thus the extension is separable. The square graph presentation k[A,B,X,Y]/(P(X,Y)−A,Q(X,Y)−B) has relative Jacobian determinant a unit; the standard Jacobian criterion gives étaleness.
 
-Section 7 separately identifies geometric generic-fiber points with E-embeddings L→Ω. A compatible polynomial-ring map sends w to a root of H, defining an embedding; the recovery identities then force the original x and y images. This closes the bridge from field degree to exactly three generic geometric points. Section 8 also proves coordinate-ring nonsurjectivity directly using the collision, instead of relying on a vague invertibility slogan.
+In [§7 of Mondello's source paper (arXiv:2608.02634v1)](https://arxiv.org/pdf/2608.02634v1), geometric generic-fiber points are identified with E-embeddings L→Ω. A compatible polynomial-ring map sends w to a root of H, defining an embedding; the recovery identities then force the original x and y images. This closes the bridge from field degree to exactly three generic geometric points. In §8 of that same source paper, coordinate-ring nonsurjectivity is proved directly using the collision, rather than relying on a vague invertibility slogan.
 
 ### Structural descent — demonstrated identities
 
