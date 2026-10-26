@@ -32,6 +32,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [Monolithic Zoo Dissection of Romy Mondello’s Separable Jacobian Counterexample](Mondello-Separable-Jacobian-Full-Zoo-Audit.md) — 26 October 2026. Exact polynomial checks, proof-dependency analysis, 18 matching source-manifest hashes, and the full 46-animal applicability review plus five extensions. The written proof survives; fresh local Lean verification remains unresolved.
+
 - [CL33 Under Review: Operator-Only Language Modeling and a Documented Reproducibility Repair](CL33-Review-and-Reproducibility-Repair.md) · [Verification code and evidence](research/cl33-review-2026-10-25/README.md) — 25 October 2026. Documents Wright’s first-pass review, Sutherland’s credited corrective release, and independent static verification of repaired checksums, loading flags, and the new held-out fixture. Reported model performance and an exploratory EFMW integration remain distinct from verified release repairs.
 
 - [From Synchronicity to Synchronization: The 7–11–13 Structure in Modular Recurrence and Barker Coding](From-Synchronicity-to-Synchronization-7-11-13.md) · [Proofs, code, and complete results](research/sync-71113/README.md) — 25 October 2026. Exact 1,001-step recurrence, nested and CRT-ordered Barker signals, a 143-versus-122 aperiodic sidelobe comparison, and the conditional 31-position optimum. Mathematical results are distinguished from untested synchronization performance and physical claims.
