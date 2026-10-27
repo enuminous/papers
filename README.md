@@ -32,6 +32,9 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [RHC-001: An EFMW-Based Candidate Formalization of Rahasya's Pulsating-Substrate Pressure Cycle](RHC-001-EFMW-Rahasya-Pressure-Cycle-Formalization.md) — 27 October 2026. Credits Swami Rahasya's pressure/cavitation conjecture and develops an explicit EFMW-form scalar restoring closure, exact low-pressure duty cycle, finite-rate occupancy dynamics, and optional memory coupling. Mathematical consequences are distinguished from unverified quantum, gravity, Stoney-time, TUFT, and consciousness claims.
+
+
 - [Monolithic Zoo Dissection of Romy Mondello’s Separable Jacobian Counterexample](Mondello-Separable-Jacobian-Full-Zoo-Audit.md) — 26 October 2026, binary certification edition. Explicit pass/fail evidence gates for all 46 animals and five extensions, with per-operation missing inputs and a separate mathematical-obligation table. All 51 Zoo certifications fail for insufficient evidence or unresolved risks; the exact algebra checks pass and the written proof survives. Fresh local Lean verification remains unperformed.
 
 - [CL33 Under Review: Operator-Only Language Modeling and a Documented Reproducibility Repair](CL33-Review-and-Reproducibility-Repair.md) · [Verification code and evidence](research/cl33-review-2026-10-25/README.md) — 25 October 2026. Documents Wright’s first-pass review, Sutherland’s credited corrective release, and independent static verification of repaired checksums, loading flags, and the new held-out fixture. Reported model performance and an exploratory EFMW integration remain distinct from verified release repairs.
