@@ -411,3 +411,12 @@ A pressure oscillation, its cavitation-permission windows, and a finite-rate cav
 ---
 
 **Publication and evidence note:** RHC-001 is a candidate theoretical note, not a peer-reviewed result, formal Lean proof, experimentally supported TOE, or confirmation of Rahasya's physical ontology. Authorship credit for the conceptual hypothesis is preserved; no endorsement by Rahasya is implied.
+
+
+## Related research navigation (non-substantive links)
+
+- [EFMW canonical review entry](https://github.com/enuminous/EFMW) · [Monolithic 102 source equations](https://github.com/enuminous/Monolithic_102_EFMW) · [Frozen Lean audit](https://github.com/enuminous/Monolithic-102-Zoo-Lean4).
+- [Standard Model reduction](https://github.com/enuminous/Standard-Model-Reduction) · [Higgs gauge laboratory](https://github.com/enuminous/Higgs-Gauge-Lab) · [Standard Model + EFMW physics lab](https://github.com/enuminous/EFMW-Physics-Lab).
+- [Base888 quantum geometry](https://github.com/enuminous/Base888-Quantum-Geometry) · [QST-001: classical baseline and 888-state toy](https://github.com/enuminous/Quantum-Gravity/blob/main/QST-001.md) · [QST-002: quantum-geometry bridge](https://github.com/enuminous/QST/blob/main/QST-002.md).
+
+These links provide navigation and potential comparisons; they are not proofs of equivalence or endorsements by Rahasya or other named researchers.
