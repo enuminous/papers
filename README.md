@@ -10,6 +10,7 @@
 <details open>
 <summary><strong>On this page</strong></summary>
 
+- [Interactive laboratory directory](#interactive-laboratory-directory)
 - [Documents](#documents)
 - [Connected physics research units](#connected-physics-research-units)
 
@@ -20,6 +21,51 @@
 
 > **Evidence boundary:** A link between projects is navigation, not an assertion of proven equivalence, experimental validation, or shared authorship. See each repository’s own status and review notes.
 <!-- ENUMINOUS-UNIFIED-NAV:END -->
+
+<!-- ENUMINOUS-LAB-DIRECTORY:START -->
+## Interactive laboratory directory
+
+Start with the published application pages below. The repositories in the final table contain standalone browser labs or interactive dashboards, but **a public GitHub Pages deployment has not been independently confirmed for each one**. The simulations are research demonstrations; visual effects or passing numerical checks are not evidence of new physics.
+
+### Published laboratory pages
+
+| Laboratory | What to explore |
+|---|---|
+| [Archimedes Field-Native Lab](https://enuminous.github.io/Archimedes-Field-Lab/) | Interactive mechanics, optics, electricity, quantum-inspired and EFMW modes |
+| [Archimedes World 3D](https://enuminous.github.io/Archimedes-3D/world3d/) | Interactive three-dimensional world environment |
+| [Archimedes Engine](https://enuminous.github.io/Archimedes-Engine/) | Recursive world experiments, agents, interventions and alternate scenarios |
+| [Multiverse Simulator](https://enuminous.github.io/Multiverse-Simulator/) | Quantum-inspired probability, coherence, records and feedback experiments |
+| [Oroboros](https://enuminous.github.io/Oroboros/) | Cycles, recurrence and mathematical growth visualizations |
+| [Borges Library CollapseOmega](https://enuminous.github.io/Borges-Library-CollapseOmega/) | Navigable recursive library and interpretive simulation |
+
+### Interactive research dashboards
+
+| Page | Focus |
+|---|---|
+| [FieldSpace — EFMW 165](https://enuminous.github.io/FieldSpace/) | Three-sector equation combinations and their catalogue |
+| [Monolithic Zoo / Tortoise](https://enuminous.github.io/Tortoise/) | Zoo-agent exploration, claim scrutiny and related operations |
+| [Codex-888](https://enuminous.github.io/Codex-888/) | Base888 concepts and mathematical navigation |
+| [Cadence × Zoo Evidence](https://enuminous.github.io/Cadence-Zoo-Evidence/) | Evidence, ablations and research outcomes |
+| [Aristotle eNuminous](https://enuminous.github.io/Aristotle-eNuminous/) | Mathematical claims and Lean formalization navigation |
+| [Coherence Prediction Engine](https://enuminous.github.io/Coherence-Prediction-Engine/) | Experimental forecasting and coherence diagnostics |
+
+### New physics applications — source and launch instructions
+
+These links open the GitHub source file, **not a running simulator**. See each repository README for local launch instructions and GitHub Pages deployment requirements.
+
+| Laboratory | Application source | Project home |
+|---|---|---|
+| Standard Model Reduction | [index.html](https://github.com/enuminous/Standard-Model-Reduction/blob/main/index.html) | [Repository](https://github.com/enuminous/Standard-Model-Reduction) |
+| Higgs–Gauge Lattice Lab | [index.html](https://github.com/enuminous/Higgs-Gauge-Lab/blob/main/index.html) | [Repository](https://github.com/enuminous/Higgs-Gauge-Lab) |
+| Standard Model + EFMW Physics Laboratory | [index.html](https://github.com/enuminous/EFMW-Physics-Lab/blob/main/index.html) | [Repository](https://github.com/enuminous/EFMW-Physics-Lab) |
+| Base888 Quantum Geometry | [index.html](https://github.com/enuminous/Base888-Quantum-Geometry/blob/main/index.html) | [Repository](https://github.com/enuminous/Base888-Quantum-Geometry) |
+| QST-001: Scalar Gravity and Pressure-Cycle Lab | [index.html](https://github.com/enuminous/Quantum-Gravity/blob/main/index.html) | [Repository](https://github.com/enuminous/Quantum-Gravity) |
+| QST-002: Base888 Quantum-Spacetime Lab | [index.html](https://github.com/enuminous/QST/blob/main/index.html) | [Repository](https://github.com/enuminous/QST) |
+| HORIZON Cosmology | [Project / launch instructions](https://github.com/enuminous/Cosmology) | [Repository](https://github.com/enuminous/Cosmology) |
+
+**Find more:** [Complete eNuminous repository catalogue](https://github.com/enuminous/EFMW/blob/main/REPOSITORY_NAVIGATION.md) · [EFMW review and evidence boundary](https://github.com/enuminous/EFMW) · [RHC-001 Rahasya pressure-cycle paper](RHC-001-EFMW-Rahasya-Pressure-Cycle-Formalization.md).
+
+<!-- ENUMINOUS-LAB-DIRECTORY:END -->
 
 
 Research papers, proposals, theorem discussions and experimental plans. Browse the source documents below. The [interactive lab](index.html) can be downloaded and opened locally; this repository does not currently have GitHub Pages enabled.
