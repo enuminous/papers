@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[The Monolithic Twenty-Three: A Falsification-First Experimental Program for EFMW](MONOLITHIC-23-EFMW-Physical-Falsification-Program.md)** — 28 October 2026. A proposed, not-yet-executed paper specifying 23 tests: three foundational identity/consistency gates, eighteen public-observation comparisons, and two accessible laboratory analogues. Includes hypotheses, conventional controls, failure conditions, reproducibility, readiness states and source portals; no EFMW-specific physical detection is claimed.
+
 - **[When the Universe Balanced the Books: Monolithic's ME-007 Experiment](When-The-Universe-Balanced-The-Books-ME007-TOE001.md)** — 28 October 2026. Long-form science journalism on TOE-001's conserved ME-007-style informational-stress candidate, the nonuniqueness of ordinary/informational tensor partitions, 31 Python tests, eight symbolic identities, and a flat-cosmology no-bounce restriction. Clearly separates conditional classical consistency from quantum-gravity unification or empirical discovery.
 
 - [TOE-001: Covariant EFMW-Inspired Unified Action and Correspondence Test](TOE-001-Unified-Action-and-Correspondence-Test.md) — 28 October 2026. A concrete GR + assumed Standard Model + mixed two-scalar action, conditional on-shell stress-energy conservation, stable linear mass spectrum, causal memory reduction, two-mode response and 15/15 local Python tests. **Not a Theory of Everything:** historical EFMW tensor correspondence, quantum gravity, emergent SM content and independent experimental signals remain unresolved.
