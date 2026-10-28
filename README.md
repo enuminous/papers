@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[When the Universe Balanced the Books: Monolithic's ME-007 Experiment](When-The-Universe-Balanced-The-Books-ME007-TOE001.md)** — 28 October 2026. Long-form science journalism on TOE-001's conserved ME-007-style informational-stress candidate, the nonuniqueness of ordinary/informational tensor partitions, 31 Python tests, eight symbolic identities, and a flat-cosmology no-bounce restriction. Clearly separates conditional classical consistency from quantum-gravity unification or empirical discovery.
+
 - [TOE-001: Covariant EFMW-Inspired Unified Action and Correspondence Test](TOE-001-Unified-Action-and-Correspondence-Test.md) — 28 October 2026. A concrete GR + assumed Standard Model + mixed two-scalar action, conditional on-shell stress-energy conservation, stable linear mass spectrum, causal memory reduction, two-mode response and 15/15 local Python tests. **Not a Theory of Everything:** historical EFMW tensor correspondence, quantum gravity, emergent SM content and independent experimental signals remain unresolved.
 
 - [QNET-001: Dynamical Connections and Obstructions to 3+1-Dimensional Emergence](QNET-001-Dynamical-Connections-and-Dimensionality-Obstructions.md) · [Protocol, code, and results](QNET-001-artifacts/README.md) — 28 October 2026. Finite quantum-graph connection dynamics, exact static ground-state counterexamples, and a proof that the full ground energy is independent of local matter dimension for J ≥ 0. A bounded negative result, not a derivation of spacetime or quantum gravity.
