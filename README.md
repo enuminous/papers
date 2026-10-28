@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Two Oscillators, One Missing Force — The EFMW F03 Experiment](Two-Oscillators-One-Missing-Force-EFMW-F03.md)** — 28 October 2026. Long-form science journalism on simulated Langevin oscillator measurements (30,000 paired samples), a conventional Gaussian mutual-information prediction, uncertainty and time-shifted nulls, the proposed real-world MEMS data follow-up, and why statistical information does not itself establish informational gravity.
+
 - **[The Monolithic Twenty-Three: A Falsification-First Experimental Program for EFMW](MONOLITHIC-23-EFMW-Physical-Falsification-Program.md)** — 28 October 2026. A proposed, not-yet-executed paper specifying 23 tests: three foundational identity/consistency gates, eighteen public-observation comparisons, and two accessible laboratory analogues. Includes hypotheses, conventional controls, failure conditions, reproducibility, readiness states and source portals; no EFMW-specific physical detection is claimed.
 
 - **[When the Universe Balanced the Books: Monolithic's ME-007 Experiment](When-The-Universe-Balanced-The-Books-ME007-TOE001.md)** — 28 October 2026. Long-form science journalism on TOE-001's conserved ME-007-style informational-stress candidate, the nonuniqueness of ordinary/informational tensor partitions, 31 Python tests, eight symbolic identities, and a flat-cosmology no-bounce restriction. Clearly separates conditional classical consistency from quantum-gravity unification or empirical discovery.
