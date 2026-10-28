@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- [QNET-001: Dynamical Connections and Obstructions to 3+1-Dimensional Emergence](QNET-001-Dynamical-Connections-and-Dimensionality-Obstructions.md) · [Protocol, code, and results](QNET-001-artifacts/README.md) — 28 October 2026. Finite quantum-graph connection dynamics, exact static ground-state counterexamples, and a proof that the full ground energy is independent of local matter dimension for J ≥ 0. A bounded negative result, not a derivation of spacetime or quantum gravity.
+
 - [RHC-001: An EFMW-Based Candidate Formalization of Rahasya's Pulsating-Substrate Pressure Cycle](RHC-001-EFMW-Rahasya-Pressure-Cycle-Formalization.md) — 27 October 2026. Credits Swami Rahasya's pressure/cavitation conjecture and develops an explicit EFMW-form scalar restoring closure, exact low-pressure duty cycle, finite-rate occupancy dynamics, and optional memory coupling. Mathematical consequences are distinguished from unverified quantum, gravity, Stoney-time, TUFT, and consciousness claims.
 
 

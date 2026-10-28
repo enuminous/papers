@@ -1,0 +1,15 @@
+{
+  "completed_at_UTC": "2026-10-28T03:46:03.543174+00:00",
+  "files": {
+    "geometry.json": "26d509fbbff711345bf0e825004eaa5e89c996527a18532693a6a04896731428",
+    "q_null.json": "6d2db2aff508cd7a6100d5781fbe665aaf47cd271b617db8606a49801836cb35",
+    "quantum.json": "a27539f809ae5f82d57c63b7a59ffbf491d7ff0e25c53da040812bb9c5dfda55",
+    "static.json": "20e6210abed30abe216c79c06e4c49cc0acbd8cc0fe0b10b9830888f42e17955",
+    "tests.json": "33d1c56e1240fe531db762d4e145b061296ce41c300d7b62e22e7e36e24272d9"
+  },
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "protocol_sha256": "fc264efee375c6509fab46a00c8907e0b48856e51843f4330558508939116ec3",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "source_sha256": "74ba87a5bf7ec103efca0855cddd54cac8e97083162a23c0c853656ddd418d37"
+}

@@ -1,0 +1,2549 @@
+{
+  "results": [
+    {
+      "J": 1,
+      "N": 4,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        12,
+        18,
+        33
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            2,
+            2
+          ],
+          "count": 3
+        }
+      ],
+      "connected_fraction": 0.0,
+      "connected_fraction_exact": "0/3",
+      "connected_ground_graph_count": 0,
+      "degree_sequence_histogram": [
+        {
+          "count": 3,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 3,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            2,
+            2
+          ],
+          "count": 3,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 64,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -2,
+      "mu": 0,
+      "triangle_count_histogram": [
+        {
+          "count": 3,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 4,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        12,
+        13,
+        14,
+        18,
+        19,
+        22,
+        26,
+        28,
+        30,
+        33,
+        35,
+        37,
+        41,
+        44,
+        45,
+        49,
+        50,
+        51
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            2,
+            2
+          ],
+          "count": 3
+        },
+        {
+          "component_sizes_descending": [
+            4
+          ],
+          "count": 15
+        }
+      ],
+      "connected_fraction": 0.8333333333333334,
+      "connected_fraction_exact": "15/18",
+      "connected_ground_graph_count": 15,
+      "degree_sequence_histogram": [
+        {
+          "count": 3,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "count": 12,
+          "sorted_degrees": [
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "count": 3,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 18,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            2,
+            2
+          ],
+          "count": 3,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "triangles": 0
+        },
+        {
+          "component_sizes_descending": [
+            4
+          ],
+          "count": 12,
+          "sorted_degrees": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "triangles": 0
+        },
+        {
+          "component_sizes_descending": [
+            4
+          ],
+          "count": 3,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 64,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -4,
+      "mu": 1,
+      "triangle_count_histogram": [
+        {
+          "count": 18,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 4,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        30,
+        45,
+        51
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            4
+          ],
+          "count": 3
+        }
+      ],
+      "connected_fraction": 1.0,
+      "connected_fraction_exact": "3/3",
+      "connected_ground_graph_count": 3,
+      "degree_sequence_histogram": [
+        {
+          "count": 3,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 3,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            4
+          ],
+          "count": 3,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 64,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -8,
+      "mu": 2,
+      "triangle_count_histogram": [
+        {
+          "count": 3,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 4,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        30,
+        45,
+        51
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            4
+          ],
+          "count": 3
+        }
+      ],
+      "connected_fraction": 1.0,
+      "connected_fraction_exact": "3/3",
+      "connected_ground_graph_count": 3,
+      "degree_sequence_histogram": [
+        {
+          "count": 3,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 3,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            4
+          ],
+          "count": 3,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 64,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -16,
+      "mu": 4,
+      "triangle_count_histogram": [
+        {
+          "count": 3,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 5,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        20,
+        24,
+        28,
+        34,
+        40,
+        42,
+        56,
+        66,
+        68,
+        70,
+        84,
+        98,
+        129,
+        136,
+        137,
+        152,
+        168,
+        192,
+        193,
+        194,
+        196,
+        200,
+        257,
+        260,
+        261,
+        276,
+        288,
+        289,
+        290,
+        292,
+        296,
+        324,
+        385,
+        513,
+        514,
+        515,
+        528,
+        529,
+        530,
+        532,
+        536,
+        546,
+        578,
+        641,
+        769
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            2,
+            2,
+            1
+          ],
+          "count": 15
+        },
+        {
+          "component_sizes_descending": [
+            3,
+            2
+          ],
+          "count": 30
+        }
+      ],
+      "connected_fraction": 0.0,
+      "connected_fraction_exact": "0/45",
+      "connected_ground_graph_count": 0,
+      "degree_sequence_histogram": [
+        {
+          "count": 15,
+          "sorted_degrees": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "count": 30,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 45,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            2,
+            2,
+            1
+          ],
+          "count": 15,
+          "sorted_degrees": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "triangles": 0
+        },
+        {
+          "component_sizes_descending": [
+            3,
+            2
+          ],
+          "count": 30,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 1024,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -2,
+      "mu": 0,
+      "triangle_count_histogram": [
+        {
+          "count": 45,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 5,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        28,
+        42,
+        56,
+        58,
+        60,
+        70,
+        84,
+        86,
+        92,
+        98,
+        102,
+        106,
+        137,
+        152,
+        153,
+        156,
+        168,
+        169,
+        170,
+        193,
+        194,
+        195,
+        196,
+        197,
+        200,
+        202,
+        204,
+        212,
+        216,
+        220,
+        226,
+        232,
+        234,
+        261,
+        276,
+        277,
+        284,
+        289,
+        290,
+        291,
+        292,
+        294,
+        296,
+        297,
+        300,
+        308,
+        312,
+        316,
+        324,
+        325,
+        326,
+        354,
+        356,
+        358,
+        385,
+        389,
+        393,
+        417,
+        424,
+        425,
+        449,
+        452,
+        453,
+        515,
+        529,
+        530,
+        532,
+        533,
+        534,
+        536,
+        537,
+        538,
+        546,
+        547,
+        554,
+        562,
+        568,
+        570,
+        578,
+        579,
+        582,
+        594,
+        596,
+        598,
+        641,
+        643,
+        649,
+        657,
+        664,
+        665,
+        705,
+        706,
+        707,
+        769,
+        771,
+        773,
+        785,
+        788,
+        789,
+        801,
+        802,
+        803
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            3,
+            2
+          ],
+          "count": 30
+        },
+        {
+          "component_sizes_descending": [
+            5
+          ],
+          "count": 72
+        }
+      ],
+      "connected_fraction": 0.7058823529411765,
+      "connected_fraction_exact": "72/102",
+      "connected_ground_graph_count": 72,
+      "degree_sequence_histogram": [
+        {
+          "count": 30,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "count": 60,
+          "sorted_degrees": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "count": 12,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 102,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            3,
+            2
+          ],
+          "count": 30,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "triangles": 0
+        },
+        {
+          "component_sizes_descending": [
+            5
+          ],
+          "count": 60,
+          "sorted_degrees": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ],
+          "triangles": 0
+        },
+        {
+          "component_sizes_descending": [
+            5
+          ],
+          "count": 12,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 1024,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -5,
+      "mu": 1,
+      "triangle_count_histogram": [
+        {
+          "count": 102,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 5,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        220,
+        234,
+        316,
+        358,
+        425,
+        453,
+        570,
+        598,
+        665,
+        707,
+        789,
+        803
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            5
+          ],
+          "count": 12
+        }
+      ],
+      "connected_fraction": 1.0,
+      "connected_fraction_exact": "12/12",
+      "connected_ground_graph_count": 12,
+      "degree_sequence_histogram": [
+        {
+          "count": 12,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 12,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            5
+          ],
+          "count": 12,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 1024,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -10,
+      "mu": 2,
+      "triangle_count_histogram": [
+        {
+          "count": 12,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 5,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        126,
+        413,
+        483,
+        492,
+        683,
+        725,
+        730,
+        822,
+        825,
+        839
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            5
+          ],
+          "count": 10
+        }
+      ],
+      "connected_fraction": 1.0,
+      "connected_fraction_exact": "10/10",
+      "connected_ground_graph_count": 10,
+      "degree_sequence_histogram": [
+        {
+          "count": 10,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            3,
+            3
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 10,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            5
+          ],
+          "count": 10,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            3,
+            3
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 1024,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -21,
+      "mu": 4,
+      "triangle_count_histogram": [
+        {
+          "count": 10,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 6,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        656,
+        776,
+        1104,
+        1284,
+        2120,
+        2180,
+        4144,
+        4354,
+        6145,
+        8232,
+        8322,
+        9217,
+        16420,
+        16450,
+        16897
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            2,
+            2,
+            2
+          ],
+          "count": 15
+        }
+      ],
+      "connected_fraction": 0.0,
+      "connected_fraction_exact": "0/15",
+      "connected_ground_graph_count": 0,
+      "degree_sequence_histogram": [
+        {
+          "count": 15,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 15,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            2,
+            2,
+            2
+          ],
+          "count": 15,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 32768,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -3,
+      "mu": 0,
+      "triangle_count_histogram": [
+        {
+          "count": 15,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 6,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        120,
+        180,
+        210,
+        300,
+        330,
+        390,
+        568,
+        600,
+        656,
+        657,
+        658,
+        660,
+        664,
+        688,
+        692,
+        696,
+        720,
+        722,
+        728,
+        776,
+        777,
+        778,
+        780,
+        792,
+        808,
+        812,
+        824,
+        840,
+        842,
+        856,
+        898,
+        900,
+        904,
+        906,
+        908,
+        912,
+        914,
+        916,
+        920,
+        1076,
+        1104,
+        1105,
+        1106,
+        1108,
+        1112,
+        1136,
+        1140,
+        1144,
+        1172,
+        1232,
+        1234,
+        1236,
+        1284,
+        1285,
+        1286,
+        1292,
+        1300,
+        1316,
+        1324,
+        1332,
+        1346,
+        1348,
+        1350,
+        1352,
+        1356,
+        1360,
+        1362,
+        1364,
+        1368,
+        1412,
+        1414,
+        1428,
+        1553,
+        1616,
+        1617,
+        1624,
+        1680,
+        1681,
+        1684,
+        1744,
+        1793,
+        1796,
+        1797,
+        1800,
+        1801,
+        1804,
+        1808,
+        1812,
+        1816,
+        1864,
+        1872,
+        1880,
+        1924,
+        1936,
+        1940,
+        2092,
+        2120,
+        2121,
+        2122,
+        2124,
+        2136,
+        2152,
+        2156,
+        2168,
+        2180,
+        2181,
+        2182,
+        2188,
+        2196,
+        2212,
+        2220,
+        2228,
+        2242,
+        2244,
+        2246,
+        2248,
+        2250,
+        2252,
+        2256,
+        2260,
+        2264,
+        2316,
+        2376,
+        2378,
+        2380,
+        2436,
+        2438,
+        2444,
+        2569,
+        2632,
+        2633,
+        2648,
+        2689,
+        2692,
+        2693,
+        2696,
+        2700,
+        2704,
+        2705,
+        2708,
+        2712,
+        2760,
+        2768,
+        2776,
+        2824,
+        2825,
+        2828,
+        2888,
+        2948,
+        2952,
+        2956,
+        3077,
+        3137,
+        3140,
+        3144,
+        3145,
+        3148,
+        3152,
+        3153,
+        3156,
+        3160,
+        3204,
+        3205,
+        3220,
+        3268,
+        3280,
+        3284,
+        3332,
+        3333,
+        3340,
+        3396,
+        3400,
+        3404,
+        3460,
+        4144,
+        4145,
+        4146,
+        4148,
+        4152,
+        4178,
+        4208,
+        4210,
+        4216,
+        4242,
+        4272,
+        4274,
+        4276,
+        4354,
+        4355,
+        4358,
+        4362,
+        4370,
+        4386,
+        4388,
+        4390,
+        4392,
+        4394,
+        4400,
+        4402,
+        4404,
+        4408,
+        4418,
+        4426,
+        4434,
+        4482,
+        4486,
+        4498,
+        4625,
+        4656,
+        4657,
+        4664,
+        4752,
+        4753,
+        4754,
+        4784,
+        4865,
+        4866,
+        4867,
+        4872,
+        4873,
+        4874,
+        4880,
+        4882,
+        4888,
+        4904,
+        4912,
+        4920,
+        4994,
+        5008,
+        5010,
+        5137,
+        5168,
+        5169,
+        5172,
+        5200,
+        5201,
+        5202,
+        5232,
+        5377,
+        5378,
+        5379,
+        5380,
+        5381,
+        5382,
+        5392,
+        5394,
+        5396,
+        5412,
+        5424,
+        5428,
+        5442,
+        5456,
+        5458,
+        6145,
+        6147,
+        6149,
+        6153,
+        6161,
+        6177,
+        6180,
+        6181,
+        6184,
+        6185,
+        6192,
+        6193,
+        6196,
+        6200,
+        6209,
+        6210,
+        6211,
+        6216,
+        6217,
+        6218,
+        6224,
+        6225,
+        6232,
+        6248,
+        6256,
+        6264,
+        6273,
+        6274,
+        6275,
+        6276,
+        6277,
+        6278,
+        6288,
+        6289,
+        6292,
+        6308,
+        6320,
+        6324,
+        6401,
+        6402,
+        6403,
+        6404,
+        6405,
+        6406,
+        6408,
+        6409,
+        6410,
+        6466,
+        6472,
+        6474,
+        6530,
+        6532,
+        6534,
+        6657,
+        6665,
+        6673,
+        6785,
+        6800,
+        6801,
+        6913,
+        6920,
+        6921,
+        7169,
+        7173,
+        7185,
+        7233,
+        7248,
+        7249,
+        7425,
+        7428,
+        7429,
+        8232,
+        8233,
+        8234,
+        8236,
+        8248,
+        8266,
+        8296,
+        8298,
+        8312,
+        8322,
+        8323,
+        8326,
+        8330,
+        8338,
+        8354,
+        8356,
+        8358,
+        8360,
+        8362,
+        8364,
+        8368,
+        8370,
+        8376,
+        8386,
+        8394,
+        8402,
+        8458,
+        8488,
+        8490,
+        8492,
+        8578,
+        8582,
+        8586,
+        8713,
+        8744,
+        8745,
+        8760,
+        8833,
+        8834,
+        8835,
+        8840,
+        8842,
+        8848,
+        8849,
+        8850,
+        8856,
+        8872,
+        8880,
+        8888,
+        8968,
+        8969,
+        8970,
+        9000,
+        9090,
+        9096,
+        9098,
+        9217,
+        9219,
+        9221,
+        9225,
+        9233,
+        9249,
+        9252,
+        9253,
+        9256,
+        9257,
+        9260,
+        9264,
+        9265,
+        9272,
+        9281,
+        9282,
+        9283,
+        9288,
+        9289,
+        9296,
+        9297,
+        9298,
+        9304,
+        9320,
+        9328,
+        9336,
+        9345,
+        9346,
+        9347,
+        9348,
+        9349,
+        9350,
+        9360,
+        9361,
+        9362,
+        9410,
+        9424,
+        9426,
+        9473,
+        9474,
+        9475,
+        9476,
+        9477,
+        9478,
+        9480,
+        9481,
+        9484,
+        9508,
+        9512,
+        9516,
+        9602,
+        9604,
+        9606,
+        9729,
+        9737,
+        9745,
+        9857,
+        9872,
+        9873,
+        9985,
+        9992,
+        9993,
+        10249,
+        10280,
+        10281,
+        10284,
+        10312,
+        10313,
+        10314,
+        10344,
+        10369,
+        10370,
+        10371,
+        10372,
+        10373,
+        10374,
+        10376,
+        10378,
+        10380,
+        10404,
+        10408,
+        10412,
+        10434,
+        10440,
+        10442,
+        11265,
+        11269,
+        11273,
+        11329,
+        11336,
+        11337,
+        11393,
+        11396,
+        11397,
+        12291,
+        12321,
+        12322,
+        12328,
+        12329,
+        12330,
+        12336,
+        12337,
+        12338,
+        12344,
+        12418,
+        12419,
+        12434,
+        12450,
+        12464,
+        12466,
+        12546,
+        12547,
+        12554,
+        12578,
+        12584,
+        12586,
+        12674,
+        13313,
+        13315,
+        13329,
+        13345,
+        13360,
+        13361,
+        13569,
+        13570,
+        13571,
+        14337,
+        14339,
+        14345,
+        14369,
+        14376,
+        14377,
+        14465,
+        14466,
+        14467,
+        15361,
+        16420,
+        16421,
+        16422,
+        16428,
+        16436,
+        16450,
+        16451,
+        16454,
+        16458,
+        16466,
+        16482,
+        16484,
+        16486,
+        16488,
+        16490,
+        16492,
+        16496,
+        16498,
+        16500,
+        16518,
+        16548,
+        16550,
+        16564,
+        16578,
+        16582,
+        16594,
+        16646,
+        16676,
+        16678,
+        16684,
+        16706,
+        16710,
+        16714,
+        16897,
+        16899,
+        16901,
+        16905,
+        16913,
+        16929,
+        16932,
+        16933,
+        16936,
+        16937,
+        16940,
+        16944,
+        16945,
+        16948,
+        16961,
+        16962,
+        16963,
+        16968,
+        16969,
+        16970,
+        16976,
+        16977,
+        16978,
+        17025,
+        17026,
+        17027,
+        17028,
+        17029,
+        17040,
+        17041,
+        17042,
+        17044,
+        17060,
+        17072,
+        17076,
+        17090,
+        17104,
+        17106,
+        17153,
+        17154,
+        17155,
+        17156,
+        17157,
+        17160,
+        17161,
+        17162,
+        17164,
+        17188,
+        17192,
+        17196,
+        17218,
+        17224,
+        17226,
+        17413,
+        17444,
+        17445,
+        17460,
+        17473,
+        17474,
+        17475,
+        17476,
+        17478,
+        17488,
+        17489,
+        17490,
+        17492,
+        17508,
+        17520,
+        17524,
+        17668,
+        17669,
+        17670,
+        17700,
+        17730,
+        17732,
+        17734,
+        17921,
+        17925,
+        17937,
+        17985,
+        18000,
+        18001,
+        18177,
+        18180,
+        18181,
+        18437,
+        18468,
+        18469,
+        18476,
+        18497,
+        18498,
+        18499,
+        18500,
+        18502,
+        18504,
+        18505,
+        18506,
+        18508,
+        18532,
+        18536,
+        18540,
+        18564,
+        18565,
+        18566,
+        18596,
+        18626,
+        18628,
+        18630,
+        18945,
+        18949,
+        18953,
+        19009,
+        19016,
+        19017,
+        19073,
+        19076,
+        19077,
+        20483,
+        20513,
+        20514,
+        20516,
+        20517,
+        20518,
+        20528,
+        20529,
+        20530,
+        20532,
+        20546,
+        20547,
+        20562,
+        20578,
+        20592,
+        20594,
+        20738,
+        20739,
+        20742,
+        20770,
+        20772,
+        20774,
+        20802,
+        20993,
+        20995,
+        21009,
+        21025,
+        21040,
+        21041,
+        21249,
+        21250,
+        21251,
+        22529,
+        22531,
+        22533,
+        22561,
+        22564,
+        22565,
+        22593,
+        22594,
+        22595,
+        23041,
+        24579,
+        24609,
+        24610,
+        24612,
+        24613,
+        24614,
+        24616,
+        24617,
+        24618,
+        24620,
+        24642,
+        24643,
+        24650,
+        24674,
+        24680,
+        24682,
+        24706,
+        24707,
+        24710,
+        24738,
+        24740,
+        24742,
+        24770,
+        25089,
+        25091,
+        25097,
+        25121,
+        25128,
+        25129,
+        25217,
+        25218,
+        25219,
+        25601,
+        25603,
+        25605,
+        25633,
+        25636,
+        25637,
+        25665,
+        25666,
+        25667,
+        26113
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            2,
+            2,
+            2
+          ],
+          "count": 15
+        },
+        {
+          "component_sizes_descending": [
+            3,
+            3
+          ],
+          "count": 90
+        },
+        {
+          "component_sizes_descending": [
+            4,
+            2
+          ],
+          "count": 225
+        },
+        {
+          "component_sizes_descending": [
+            6
+          ],
+          "count": 420
+        }
+      ],
+      "connected_fraction": 0.56,
+      "connected_fraction_exact": "420/750",
+      "connected_ground_graph_count": 420,
+      "degree_sequence_histogram": [
+        {
+          "count": 15,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "count": 270,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "count": 405,
+          "sorted_degrees": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "count": 60,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 750,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            2,
+            2,
+            2
+          ],
+          "count": 15,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "triangles": 0
+        },
+        {
+          "component_sizes_descending": [
+            3,
+            3
+          ],
+          "count": 90,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "triangles": 0
+        },
+        {
+          "component_sizes_descending": [
+            4,
+            2
+          ],
+          "count": 180,
+          "sorted_degrees": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "triangles": 0
+        },
+        {
+          "component_sizes_descending": [
+            4,
+            2
+          ],
+          "count": 45,
+          "sorted_degrees": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "triangles": 0
+        },
+        {
+          "component_sizes_descending": [
+            6
+          ],
+          "count": 360,
+          "sorted_degrees": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "triangles": 0
+        },
+        {
+          "component_sizes_descending": [
+            6
+          ],
+          "count": 60,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 32768,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -6,
+      "mu": 1,
+      "triangle_count_histogram": [
+        {
+          "count": 750,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 6,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        1880,
+        1940,
+        2776,
+        2956,
+        3284,
+        3404,
+        4920,
+        5010,
+        5428,
+        5458,
+        6264,
+        6324,
+        6474,
+        6534,
+        6801,
+        6921,
+        7249,
+        7429,
+        8888,
+        9098,
+        9336,
+        9426,
+        9516,
+        9606,
+        9873,
+        9993,
+        10412,
+        10442,
+        11337,
+        11397,
+        12466,
+        12586,
+        13361,
+        13571,
+        14377,
+        14467,
+        17076,
+        17106,
+        17196,
+        17226,
+        17524,
+        17734,
+        18001,
+        18181,
+        18540,
+        18630,
+        19017,
+        19077,
+        20594,
+        20774,
+        21041,
+        21251,
+        22565,
+        22595,
+        24682,
+        24742,
+        25129,
+        25219,
+        25637,
+        25667
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            6
+          ],
+          "count": 60
+        }
+      ],
+      "connected_fraction": 1.0,
+      "connected_fraction_exact": "60/60",
+      "connected_ground_graph_count": 60,
+      "degree_sequence_histogram": [
+        {
+          "count": 60,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 60,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            6
+          ],
+          "count": 60,
+          "sorted_degrees": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 32768,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -12,
+      "mu": 2,
+      "triangle_count_histogram": [
+        {
+          "count": 60,
+          "triangles": 0
+        }
+      ]
+    },
+    {
+      "J": 1,
+      "N": 6,
+      "U": 1,
+      "V": 1,
+      "all_ground_graph_masks": [
+        4060,
+        13242,
+        15481,
+        15751,
+        21878,
+        23221,
+        23371,
+        26323,
+        26413,
+        26862
+      ],
+      "component_size_histogram": [
+        {
+          "component_sizes_descending": [
+            6
+          ],
+          "count": 10
+        }
+      ],
+      "connected_fraction": 1.0,
+      "connected_fraction_exact": "10/10",
+      "connected_ground_graph_count": 10,
+      "degree_sequence_histogram": [
+        {
+          "count": 10,
+          "sorted_degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ],
+      "edge_list": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "g": 0,
+      "ground_graph_count": 10,
+      "joint_structure_histogram": [
+        {
+          "component_sizes_descending": [
+            6
+          ],
+          "count": 10,
+          "sorted_degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "triangles": 0
+        }
+      ],
+      "labelled_graphs_enumerated": 32768,
+      "mask_encoding": "bit e corresponds to edge list entry e, least-significant bit first",
+      "minimum_energy": -27,
+      "mu": 4,
+      "triangle_count_histogram": [
+        {
+          "count": 10,
+          "triangles": 0
+        }
+      ]
+    }
+  ],
+  "scope": "aligned matter, g=0, exact labelled-graph enumeration"
+}

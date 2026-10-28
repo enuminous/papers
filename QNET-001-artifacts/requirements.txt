@@ -1,0 +1,2 @@
+# Exact preinstalled version used; no installation was performed.
+numpy==2.3.5

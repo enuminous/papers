@@ -1,0 +1,11 @@
+{
+  "identity": "S_ij |phi>^tensorN = |phi>^tensorN for every q>=1",
+  "method": "exact analytic sector restriction, not numerical full-q simulation",
+  "q_values": [
+    887,
+    888,
+    889
+  ],
+  "reduced_edge_H_independent_of_q": true,
+  "scope": "aligned-matter sector; full-ground-energy theorem is separately proved in README"
+}
