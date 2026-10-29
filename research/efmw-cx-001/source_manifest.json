@@ -1,0 +1,130 @@
+{
+  "study_id": "EFMW-CX-001",
+  "access_date": "2026-10-29",
+  "source_policy": "Primary research papers, authors' technical accounts and authored lecture notes. Foundational/historical variants are identified explicitly. No exhaustive search or current-status audit of every programme is claimed.",
+  "references": [
+    {
+      "id": "NEWTON",
+      "title": "David Tong, Dynamics and Relativity (2013), Newtonian Mechanics",
+      "url": "https://davidtong.org/pdfs/teaching/dynamics-and-relativity/dynrel1.pdf",
+      "locator": "Chapter 1, particle definition and Newton's laws; authored lecture notes"
+    },
+    {
+      "id": "MAXWELL",
+      "title": "David Tong, Electromagnetism, authored lecture course",
+      "url": "https://davidtong.org/teaching/electromagnetism/",
+      "locator": "Maxwell equations, relativistic formulation and material constitutive laws"
+    },
+    {
+      "id": "GR",
+      "title": "David Tong, General Relativity, authored lecture course",
+      "url": "https://www.davidtong.org/teaching/general-relativity/",
+      "locator": "Differential geometry, Einstein equations and gravitational applications"
+    },
+    {
+      "id": "SM",
+      "title": "David Tong, The Standard Model, authored lecture course",
+      "url": "https://www.davidtong.org/teaching/standard-model/",
+      "locator": "Chapters 5–7; chapter 6 explicitly removes redundant Yukawa parameters",
+      "supplement": "https://www.davidtong.org/pdfs/teaching/standard-model/standardmodel6.pdf"
+    },
+    {
+      "id": "QM",
+      "title": "David Tong, Quantum Mechanics, Chapter 3",
+      "url": "https://www.davidtong.org/pdfs/teaching/quantum-mechanics/qm3.pdf",
+      "locator": "Hilbert spaces, operators and measurement; authored lecture notes"
+    },
+    {
+      "id": "BOHM",
+      "title": "David Bohm (1952), A Suggested Interpretation of the Quantum Theory in Terms of Hidden Variables. I",
+      "url": "https://doi.org/10.1103/PhysRev.85.166",
+      "locator": "Original research paper; publisher abstract, supplemented by the standard nonrelativistic formulation"
+    },
+    {
+      "id": "EVERETT",
+      "title": "Hugh Everett III (1957), Relative State Formulation of Quantum Mechanics; companion long exposition The Theory of the Universal Wave Function",
+      "url": "https://doi.org/10.1103/RevModPhys.29.454",
+      "supplement": "https://www.pbs.org/wgbh/nova/manyworlds/pdf/dissertation.pdf",
+      "locator": "Original author's account: unitary dynamics and relative records"
+    },
+    {
+      "id": "GRW",
+      "title": "Ghirardi, Rimini and Weber (1986), Unified dynamics for microscopic and macroscopic systems",
+      "url": "https://doi.org/10.1103/PhysRevD.34.470",
+      "locator": "Original paper's publisher abstract; explicit microscopic/macroscopic modified dynamics"
+    },
+    {
+      "id": "GRW-FORM",
+      "title": "Roderich Tumulka (2005), On Spontaneous Wave Function Collapse and Quantum Field Theory, v2",
+      "url": "https://arxiv.org/abs/quant-ph/0508230v2",
+      "locator": "Section 2: Hilbert space, Hamiltonian, localization operator, Gaussian width and rate; original extension paper"
+    },
+    {
+      "id": "STRING",
+      "title": "John H. Schwarz (2000), Introduction to Superstring Theory, v1",
+      "url": "https://arxiv.org/abs/hep-ex/0008017v1",
+      "locator": "Sections 1.4–1.5 and lectures 2–3; original author's technical lectures; historical source"
+    },
+    {
+      "id": "LQG",
+      "title": "Carlo Rovelli (1998), Loop Quantum Gravity",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5567241/",
+      "locator": "Author's research review, abstract and formulation; historical snapshot, not a present-day maturity audit"
+    },
+    {
+      "id": "CAUSET",
+      "title": "Rafael D. Sorkin (2003), Causal Sets: Discrete Gravity, v1",
+      "url": "https://arxiv.org/abs/gr-qc/0309009v1",
+      "locator": "Authored lecture notes: order structure, growth and missing quantum-dynamical completion at that date"
+    },
+    {
+      "id": "CDT",
+      "title": "Ambjorn, Goerlich, Jurkiewicz and Loll (2013), Quantum Gravity via Causal Dynamical Triangulations",
+      "url": "https://arxiv.org/abs/1302.2173",
+      "locator": "Authors' technical account: lattice sum over spacetime histories, phases and continuum limit"
+    },
+    {
+      "id": "ASYM",
+      "title": "Martin Reuter (1996; published 1998), Nonperturbative Evolution Equation for Quantum Gravity, v1",
+      "url": "https://arxiv.org/abs/hep-th/9605030v1",
+      "locator": "Sections 1–4; exact effective-action flow and finite-dimensional Einstein-Hilbert truncation"
+    },
+    {
+      "id": "NCG",
+      "title": "Chamseddine, Connes and Marcolli (2006; published 2007), Gravity and the standard model with neutrino mixing, v1",
+      "url": "https://arxiv.org/abs/hep-th/0610241v1",
+      "locator": "Original model and abstract; spin manifold times finite noncommutative geometry, spectral action; no endorsement of historical numerical predictions"
+    },
+    {
+      "id": "WOLFRAM",
+      "title": "Stephen Wolfram (2020), A Class of Models with the Potential to Represent Fundamental Physics",
+      "url": "https://www.wolframphysics.org/technical-introduction/",
+      "supplement": "https://www.wolframphysics.org/technical-introduction/basic-form-of-models/basic-structure/",
+      "locator": "Author's technical introduction: basic structure, updates, causal/multiway constructions; mutable website accessed 2026-10-29"
+    },
+    {
+      "id": "EFMW-CATALOG",
+      "title": "Monolithic 102 canonical catalogue",
+      "url": "https://github.com/enuminous/Monolithic_102_EFMW/blob/4129cc6e86396b6752433c80a78439662b441836/equations.json",
+      "locator": "All 102 formula, title, descriptor and classification fields; exact Git blob verified",
+      "local": "sources/canonical_equations.json",
+      "git_blob": "5e68eec5ebfed0764d0c55404249de082ce02f03"
+    },
+    {
+      "id": "EFMW-COVERAGE",
+      "title": "EFMW frozen review coverage overlay",
+      "url": "https://github.com/enuminous/EFMW/blob/3b30a9a426faf365c87cebe7a45fee88e5bf683b/coverage.json",
+      "locator": "References Monolithic-102-Zoo-Lean4 at 01f51acb0b0e564105dcf7f14cc55998d41b91ce; not later branches",
+      "local": "sources/frozen_coverage.json",
+      "git_blob": "57e37e19a8de1af531d8e22506ffe5837213e00f"
+    },
+    {
+      "id": "EFMW-OBLIGATIONS",
+      "title": "EFMW open obligations at the frozen review target",
+      "url": "https://github.com/enuminous/EFMW/blob/3b30a9a426faf365c87cebe7a45fee88e5bf683b/review/OPEN_OBLIGATIONS.md",
+      "locator": "Physical identification, Bianchi conservation, analytic semantics and non-circular interpretation",
+      "local": "sources/open_obligations.md",
+      "git_blob": "d4453759f296b51424c7b127c7719cbbd93bd2bb"
+    }
+  ]
+}

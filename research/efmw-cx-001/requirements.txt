@@ -1,0 +1,3 @@
+# Only needed for render_report.py; analyze.py uses the Python standard library.
+numpy==2.3.5
+matplotlib==3.10.8

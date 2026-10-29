@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[EFMW-CX-001: How Complex Is EFMW Compared with Other Physical Frameworks?](EFMW-CX-001-Complexity-of-EFMW-and-Physical-Frameworks.md)** · [Protocol, code, and results](research/efmw-cx-001/README.md) — 29 October 2026. Executed audit of 102 canonical EFMW entries and a source-supported comparison of sixteen selected frameworks across six complexity dimensions. Documents representation sensitivity and the frozen review categories; no universal ranking, independent-law count, or empirical validation is inferred.
+
 - **[EFMW-RP-001: Detecting Relaxation Without Identifying Its Origin](EFMW-RP-001-Bubble-Memory-Detection-and-Identifiability.md)** — 29 October 2026. Synthetic bubble-response benchmark: 223/250 injected-memory detections and 0/250 null detections; the frozen 90% sensitivity target fails. Derives the exact Maxwell equivalence, documents numerical verification, and separates laboratory-frequency relaxation from untested pressure-cycle and Stoney-scale claims. [Code, data, and interactive laboratory](https://github.com/enuminous/Bubble-Dynamics-Test/tree/1f47d523a3f1e6fa2e732eb493f54d8c4658cac4).
 - **[Two Oscillators, One Missing Force — The EFMW F03 Experiment](Two-Oscillators-One-Missing-Force-EFMW-F03.md)** — 28 October 2026. Long-form science journalism on simulated Langevin oscillator measurements (30,000 paired samples), a conventional Gaussian mutual-information prediction, uncertainty and time-shifted nulls, the proposed real-world MEMS data follow-up, and why statistical information does not itself establish informational gravity.
 

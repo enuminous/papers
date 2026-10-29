@@ -1,0 +1,18 @@
+{
+  "study_id": "EFMW-CX-001",
+  "version": "1.0",
+  "date": "2026-10-29",
+  "design": "Exploratory, source-pinned corpus audit plus purposive literature comparison; not an exhaustive systematic review or empirical test of physics",
+  "freeze_boundary": "Written after initial source discovery and before corpus measurement and comparative coding. Not blinded or externally preregistered.",
+  "target": "Determine what can be supported about the sheer complexity of EFMW relative to selected physical frameworks, without treating document volume, ambition or incompleteness as theoretical merit.",
+  "efmw_corpus_commit": "4129cc6e86396b6752433c80a78439662b441836",
+  "efmw_review_entry_commit": "3b30a9a426faf365c87cebe7a45fee88e5bf683b",
+  "comparison_set": ["Newtonian point-particle mechanics", "Classical Maxwell electrodynamics", "General relativity", "Minimal Standard Model", "Nonrelativistic operational quantum mechanics", "Bohmian mechanics", "Everett relative-state quantum mechanics", "GRW spontaneous localization", "Perturbative superstring framework", "Canonical loop quantum gravity", "Causal set program", "Causal dynamical triangulations", "Asymptotic safety gravity", "Noncommutative spectral-action Standard Model plus gravity", "Wolfram hypergraph program", "EFMW canonical corpus and frozen review snapshot"],
+  "selection_rule": "Purposive coverage of established classical/quantum baselines, alternative quantum ontologies, continuum/discrete quantum-gravity programs and broad unification proposals. Select one stated variant for each family; compare scope explicitly. No inference to all published ontologies.",
+  "dimensions": ["Primitive entities and mathematical carriers", "Dynamical and constraint machinery", "Independent constants, free functions and solution choices", "Closure for a specified prediction task", "Target scope versus demonstrated recovery", "Computational and formal-verification burden"],
+  "corpus_metrics": ["Number and uniqueness of canonical entry IDs", "Exact and whitespace-normalized formula duplicates", "Formula UTF-8 byte and lexical-token distributions", "Declared source status counts", "Conservative occurrence counts for specified mathematical marker families", "Frozen review coverage categories, reported as encodings rather than physical validation"],
+  "negative_control": "Two algebraically equivalent exponential-memory/Maxwell kernels represented by distinct strings; compare raw representation metrics and numerically verify response equivalence. Show that string complexity is representation-dependent.",
+  "forbidden_inferences": ["No equation-count ranking across differently scoped theories", "No ontology-count estimate from variable names", "No parameter count from all symbols", "No arbitrary weighted complexity leaderboard", "No treating unreported counts as zero", "No physical validation from Lean coverage, code size or simulations", "No complexity class or Kolmogorov complexity inferred from text compression", "No literature-exhaustiveness claim"],
+  "outcomes": {"global_rank": "UNRESOLVED unless a complete inventory, common representation, common scope and invariant metric are supplied", "corpus_results": "DEMONSTRATED only for the exact pinned files and specified extraction rules", "literature_profiles": "SOURCE-SUPPORTED DESCRIPTIVE COMPARISON; single analyst, no inter-rater reliability", "distinctive_physics": "Not tested by this study"},
+  "stopping_rule": "Complete one supported profile for each of the 16 named entries, execute the corpus metrics and equivalence control, disclose missing information and exclusions, preserve all results. Do not add comparators to obtain a favorable rank."
+}

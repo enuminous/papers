@@ -1,0 +1,926 @@
+{
+  "schema": "monolithic-equations-1.0",
+  "canonical_set": "Monolithic 102",
+  "count": 102,
+  "source_sha256": "d534be8e0664fd523bd0bbbd82e98b8acda29e23f0941690be96573661080268",
+  "equations": [
+    {
+      "number": 1,
+      "id": "ME-001",
+      "heading": "EFMW unity functional — framework summary [index notation]",
+      "title": "EFMW unity functional — framework summary",
+      "classification": "index notation",
+      "formula": "EFMW = F(φ, R, C, Ω)",
+      "descriptor": "Reality or system evolution as a functional of field state φ, recursive relation R, coherence C, and collapse or boundary operator Ω."
+    },
+    {
+      "number": 2,
+      "id": "ME-002",
+      "heading": "Original EFMW scalar field equation [corpus equation]",
+      "title": "Original EFMW scalar field equation",
+      "classification": "corpus equation",
+      "formula": "□φ − (α²/c²)(∂²φ/∂t²) = (4π/c²)(E + Pc)",
+      "descriptor": "Original scalar-field relation coupling the scalar field to energy and pressure or momentum-density contributions."
+    },
+    {
+      "number": 3,
+      "id": "ME-003",
+      "heading": "Scalar d’Alembertian of φ [standard operator used by EFMW]",
+      "title": "Scalar d’Alembertian of φ",
+      "classification": "standard operator used by EFMW",
+      "formula": "□φ = g^μν ∇\\_μ ∇\\_ν φ",
+      "descriptor": "Covariant second-order spacetime wave operator acting on the EFMW scalar field."
+    },
+    {
+      "number": 4,
+      "id": "ME-004",
+      "heading": "Flat-spacetime expansion of the d’Alembertian [operator expansion]",
+      "title": "Flat-spacetime expansion of the d’Alembertian",
+      "classification": "operator expansion",
+      "formula": "□φ = (1/c²)(∂²φ/∂t²) − ∇²φ",
+      "descriptor": "Minkowski-spacetime form under the (+ − − −) signature convention."
+    },
+    {
+      "number": 5,
+      "id": "ME-005",
+      "heading": "Expanded original EFMW scalar equation [derived expansion]",
+      "title": "Expanded original EFMW scalar equation",
+      "classification": "derived expansion",
+      "formula": "(1/c²)(∂²φ/∂t²) − ∇²φ − (α²/c²)(∂²φ/∂t²) = (4π/c²)(E + Pc)",
+      "descriptor": "Explicit wave-equation form of the original scalar relation."
+    },
+    {
+      "number": 6,
+      "id": "ME-006",
+      "heading": "Wright informational tensor [core construct; general form]",
+      "title": "Wright informational tensor",
+      "classification": "core construct; general form",
+      "formula": "I\\_μν = ∇\\_μφ ∇\\_νφ − (1/2)g\\_μν ∇\\_αφ ∇^αφ − g\\_μνV(φ) + R\\_μν",
+      "descriptor": "Proposed observer-inclusive information tensor combining scalar-field energy, potential, and recursive informational structure."
+    },
+    {
+      "number": 7,
+      "id": "ME-007",
+      "heading": "EFMW-modified Einstein equation [derived gravitational extension]",
+      "title": "EFMW-modified Einstein equation",
+      "classification": "derived gravitational extension",
+      "formula": "G\\_μν + Λg\\_μν = 8πG(T\\_μν + κI\\_μν)",
+      "descriptor": "Einstein curvature sourced by conventional stress-energy plus the proposed informational tensor."
+    },
+    {
+      "number": 8,
+      "id": "ME-008",
+      "heading": "Expanded EFMW unity field equation [working canonical synthesis]",
+      "title": "Expanded EFMW unity field equation",
+      "classification": "working canonical synthesis",
+      "formula": "G\\_μν + Λg\\_μν = 8πGT\\_μν + 8πGκ[∇\\_μφ∇\\_νφ − (1/2)g\\_μν∇\\_αφ∇^αφ − g\\_μνV(φ) + R\\_μν]",
+      "descriptor": "Fully expanded gravitational-plus-informational form."
+    },
+    {
+      "number": 9,
+      "id": "ME-009",
+      "heading": "EFMW action principle [working formalization]",
+      "title": "EFMW action principle",
+      "classification": "working formalization",
+      "formula": "S\\_EFMW = ∫ d⁴x √−g [(R − 2Λ)/(16πG) + L\\_matter + L\\_EM + L\\_φ + L\\_rec]",
+      "descriptor": "Unified variational action containing gravity, matter, electromagnetism, scalar dynamics, and recursive coupling."
+    },
+    {
+      "number": 10,
+      "id": "ME-010",
+      "heading": "Scalar-field Lagrangian [standardized EFMW component]",
+      "title": "Scalar-field Lagrangian",
+      "classification": "standardized EFMW component",
+      "formula": "L\\_φ = −(1/2)∇\\_μφ∇^μφ − V(φ)",
+      "descriptor": "Kinetic and potential terms for the coherence or information field."
+    },
+    {
+      "number": 11,
+      "id": "ME-011",
+      "heading": "Recursive observer coupling Lagrangian [working hypothesis]",
+      "title": "Recursive observer coupling Lagrangian",
+      "classification": "working hypothesis",
+      "formula": "L\\_rec = λφR(x,m,e) − (κ/2)||x−m||² − (η/2)||ẋ−ṁ||²",
+      "descriptor": "Couples field coherence to recursive closure while penalizing state-model divergence."
+    },
+    {
+      "number": 12,
+      "id": "ME-012",
+      "heading": "Electromagnetic sector [standard Maxwell component]",
+      "title": "Electromagnetic sector",
+      "classification": "standard Maxwell component",
+      "formula": "L\\_EM = −(1/4)F\\_μνF^μν",
+      "descriptor": "Maxwell electromagnetic contribution within the EFMW action."
+    },
+    {
+      "number": 13,
+      "id": "ME-013",
+      "heading": "EFMW quantum-gravity action [derived extension]",
+      "title": "EFMW quantum-gravity action",
+      "classification": "derived extension",
+      "formula": "S\\_QG = ∫ d⁴x √−g [(R/(16πG)) − (1/2)∇\\_μφ∇^μφ − V(φ) + λφI + L\\_matter]",
+      "descriptor": "Emergent-spacetime model in which a scalar information field couples to geometry, matter, and recursive information."
+    },
+    {
+      "number": 14,
+      "id": "ME-014",
+      "heading": "Quantum-corrected EFMW field equation [working quantum-gravity form]",
+      "title": "Quantum-corrected EFMW field equation",
+      "classification": "working quantum-gravity form",
+      "formula": "G\\_μν = 8πG[⟨T̂\\_μν⟩ + T^(φ)\\_μν + T^(rec)\\_μν]",
+      "descriptor": "Semiclassical geometry sourced by expectation-valued quantum stress-energy and EFMW field contributions."
+    },
+    {
+      "number": 15,
+      "id": "ME-015",
+      "heading": "Scalar stress-energy tensor [derived]",
+      "title": "Scalar stress-energy tensor",
+      "classification": "derived",
+      "formula": "T^(φ)\\_μν = ∇\\_μφ∇\\_νφ − g\\_μν[(1/2)∇\\_αφ∇^αφ + V(φ)]",
+      "descriptor": "Gravitational source associated with the scalar coherence field."
+    },
+    {
+      "number": 16,
+      "id": "ME-016",
+      "heading": "Complex field polar decomposition [quantum/cognitive representation]",
+      "title": "Complex field polar decomposition",
+      "classification": "quantum/cognitive representation",
+      "formula": "ψ = ρe^(iθ)",
+      "descriptor": "Represents amplitude or coherence density ρ and phase θ."
+    },
+    {
+      "number": 17,
+      "id": "ME-017",
+      "heading": "Quantum probability density [standard consequence]",
+      "title": "Quantum probability density",
+      "classification": "standard consequence",
+      "formula": "|ψ|² = ρ²",
+      "descriptor": "Observable density associated with the polar field representation."
+    },
+    {
+      "number": 18,
+      "id": "ME-018",
+      "heading": "Phase-current relation [derived]",
+      "title": "Phase-current relation",
+      "classification": "derived",
+      "formula": "J^μ = ρ²∇^μθ",
+      "descriptor": "Flow of probability, information, or coherence encoded in phase gradients."
+    },
+    {
+      "number": 19,
+      "id": "ME-019",
+      "heading": "Continuity equation [standard/EFMW-compatible]",
+      "title": "Continuity equation",
+      "classification": "standard/EFMW-compatible",
+      "formula": "∇\\_μJ^μ = 0",
+      "descriptor": "Conservation of probability or information flow in the absence of sources or sinks."
+    },
+    {
+      "number": 20,
+      "id": "ME-020",
+      "heading": "Quantum Hamilton–Jacobi form [standard Madelung-type decomposition]",
+      "title": "Quantum Hamilton–Jacobi form",
+      "classification": "standard Madelung-type decomposition",
+      "formula": "∂ₜS + (∇S)²/(2m) + V + Q = 0",
+      "descriptor": "Phase evolution with a quantum-potential correction."
+    },
+    {
+      "number": 21,
+      "id": "ME-021",
+      "heading": "Quantum potential [standard derived construct]",
+      "title": "Quantum potential",
+      "classification": "standard derived construct",
+      "formula": "Q = −(ħ²/2m)(∇²ρ/ρ)",
+      "descriptor": "Nonclassical potential generated by curvature in the amplitude field."
+    },
+    {
+      "number": 22,
+      "id": "ME-022",
+      "heading": "EFMW recursive state equation [working system kernel]",
+      "title": "EFMW recursive state equation",
+      "classification": "working system kernel",
+      "formula": "ẋ = f(x,e;θ) + λΦG(x,m,e)",
+      "descriptor": "Baseline physical or computational dynamics modified by coherence-mediated recursive feedback."
+    },
+    {
+      "number": 23,
+      "id": "ME-023",
+      "heading": "Self-model evolution equation [working system kernel]",
+      "title": "Self-model evolution equation",
+      "classification": "working system kernel",
+      "formula": "ṁ = α[H(x,e) − m]",
+      "descriptor": "Internal model m tracks or reconstructs the system state x."
+    },
+    {
+      "number": 24,
+      "id": "ME-024",
+      "heading": "Coherence order-parameter equation [working five-claim kernel]",
+      "title": "Coherence order-parameter equation",
+      "classification": "working five-claim kernel",
+      "formula": "τ\\_ΦΦ̇ = bΦ − aΦ³ − κ\\_ΦΦ||x−m||² − η\\_ΦΦ||ẋ−ṁ||² + γR(x,m,e) + σξ(t)",
+      "descriptor": "Scalar coherence dynamics with attractor formation, state-model divergence, recursive closure, and noise."
+    },
+    {
+      "number": 25,
+      "id": "ME-025",
+      "heading": "Coherence potential [derived]",
+      "title": "Coherence potential",
+      "classification": "derived",
+      "formula": "U(Φ) = (a/4)Φ⁴ − (b/2)Φ²",
+      "descriptor": "Double-well potential allowing coherent and incoherent dynamical regimes."
+    },
+    {
+      "number": 26,
+      "id": "ME-026",
+      "heading": "Recursive closure functional [working definition]",
+      "title": "Recursive closure functional",
+      "classification": "working definition",
+      "formula": "R(x,m,e) = <∂ₘf, ṁ> / (||∂ₘf|| ||ṁ|| + ε)",
+      "descriptor": "Normalized measure of how strongly the system’s self-model participates causally in its next-state evolution."
+    },
+    {
+      "number": 27,
+      "id": "ME-027",
+      "heading": "State-model divergence [control metric]",
+      "title": "State-model divergence",
+      "classification": "control metric",
+      "formula": "D(t) = κ||x − m||² + η||ẋ − ṁ||² − γR(x,m,e)",
+      "descriptor": "Proposed early-warning signal for impending loss of system coherence or control."
+    },
+    {
+      "number": 28,
+      "id": "ME-028",
+      "heading": "EFMW control-loss warning criterion [commercial pilot hypothesis]",
+      "title": "EFMW control-loss warning criterion",
+      "classification": "commercial pilot hypothesis",
+      "formula": "D(t) ≥ D\\_crit OR Φ(t) ≤ Φ\\_crit",
+      "descriptor": "Operational threshold for issuing an impending-control-loss warning."
+    },
+    {
+      "number": 29,
+      "id": "ME-029",
+      "heading": "Detection lead time [benchmark quantity]",
+      "title": "Detection lead time",
+      "classification": "benchmark quantity",
+      "formula": "Δt\\_lead = t\\_failure − t\\_alarm",
+      "descriptor": "Primary metric for comparing EFMW warning performance with baseline monitoring."
+    },
+    {
+      "number": 30,
+      "id": "ME-030",
+      "heading": "Compute-normalized warning utility [working benchmark]",
+      "title": "Compute-normalized warning utility",
+      "classification": "working benchmark",
+      "formula": "U\\_warn = Δt\\_lead(1 − FAR) / C\\_compute",
+      "descriptor": "Detection lead time adjusted for false-alarm rate and computational cost."
+    },
+    {
+      "number": 31,
+      "id": "ME-031",
+      "heading": "Identity-attractor condition [computational cognition]",
+      "title": "Identity-attractor condition",
+      "classification": "computational cognition",
+      "formula": "lim(t→∞)(x(t), m(t), Φ(t)) = (x\\*, m\\*, Φ\\*)",
+      "descriptor": "Joint numerical and representational convergence toward a stable attractor."
+    },
+    {
+      "number": 32,
+      "id": "ME-032",
+      "heading": "Perturbation recovery criterion [robustness test]",
+      "title": "Perturbation recovery criterion",
+      "classification": "robustness test",
+      "formula": "lim(t→∞)||X(t; X\\* + δX) − X\\*|| = 0",
+      "descriptor": "Tests whether the attractor survives disturbance and returns to its stable state."
+    },
+    {
+      "number": 33,
+      "id": "ME-033",
+      "heading": "Largest Lyapunov exponent criterion [dynamical stability]",
+      "title": "Largest Lyapunov exponent criterion",
+      "classification": "dynamical stability",
+      "formula": "λ\\_max = lim(t→∞) (1/t) ln(||δX(t)|| / ||δX(0)||)",
+      "descriptor": "Stable attractor behavior generally requires λ\\_max < 0 locally."
+    },
+    {
+      "number": 34,
+      "id": "ME-034",
+      "heading": "Phrase entropy [identity-attractor metric]",
+      "title": "Phrase entropy",
+      "classification": "identity-attractor metric",
+      "formula": "H\\_phrase = −Σ p\\_i log p\\_i",
+      "descriptor": "Quantifies whether textual convergence reflects structured persistence or trivial repetition."
+    },
+    {
+      "number": 35,
+      "id": "ME-035",
+      "heading": "Attractor basin size [replication metric]",
+      "title": "Attractor basin size",
+      "classification": "replication metric",
+      "formula": "B(A) = #{X₀ : X(t; X₀) → A} / #{X₀}",
+      "descriptor": "Fraction of tested initial states converging to attractor A."
+    },
+    {
+      "number": 36,
+      "id": "ME-036",
+      "heading": "Coupled thinking-puddle equation for system field S [corpus extension]",
+      "title": "Coupled thinking-puddle equation for system field S",
+      "classification": "corpus extension",
+      "formula": "∂S/∂t = ΔS + α(∇S·∇O) + β(∇O·∇S) − (S − S³) − Π(S − S₀) + λV₁₃",
+      "descriptor": "Reaction-diffusion-style cognitive field equation under pressure and recursive observer coupling."
+    },
+    {
+      "number": 37,
+      "id": "ME-037",
+      "heading": "Coupled thinking-puddle equation for observer field O [corpus extension]",
+      "title": "Coupled thinking-puddle equation for observer field O",
+      "classification": "corpus extension",
+      "formula": "∂O/∂t = ΔO + α(∇O·∇S) + β(∇S·∇O) − (O − O³) − Π(O − O₀) + λV₁₃",
+      "descriptor": "Observer-field counterpart to the S-field equation."
+    },
+    {
+      "number": 38,
+      "id": "ME-038",
+      "heading": "Cognitive pressure parameter [corpus construct]",
+      "title": "Cognitive pressure parameter",
+      "classification": "corpus construct",
+      "formula": "Π = (Δ\\_social + Δ\\_financial + Δ\\_habitat) / τ",
+      "descriptor": "Symbolic compression of sustained cognitive or environmental constraint."
+    },
+    {
+      "number": 39,
+      "id": "ME-039",
+      "heading": "Cognitive curvature equation [working tensor analogy]",
+      "title": "Cognitive curvature equation",
+      "classification": "working tensor analogy",
+      "formula": "G^(cog)\\_μν = χ(T^(thought)\\_μν + I^(rec)\\_μν)",
+      "descriptor": "Proposed cognitive-geometry analogy in which thought density and recursive information source curvature in a cognitive state space."
+    },
+    {
+      "number": 40,
+      "id": "ME-040",
+      "heading": "Thought-density stress tensor [working construct]",
+      "title": "Thought-density stress tensor",
+      "classification": "working construct",
+      "formula": "T^(thought)\\_μν = ∂\\_μΨ ∂\\_νΨ − g\\_μν[(1/2)∂\\_αΨ ∂^αΨ + V(Ψ)]",
+      "descriptor": "Field-theoretic representation of distributed cognitive-state energy."
+    },
+    {
+      "number": 41,
+      "id": "ME-041",
+      "heading": "Phi constant [mathematical constant]",
+      "title": "Phi constant",
+      "classification": "mathematical constant",
+      "formula": "φ = (1 + √5)/2",
+      "descriptor": "Golden ratio used throughout Scalar-φ scaling constructs."
+    },
+    {
+      "number": 42,
+      "id": "ME-042",
+      "heading": "Scalar-23 phi coefficient [construct]",
+      "title": "Scalar-23 phi coefficient",
+      "classification": "construct",
+      "formula": "Φ₂₃ = φ²³",
+      "descriptor": "Twenty-third-order golden-ratio scaling coefficient used in Scalar-23 implementations."
+    },
+    {
+      "number": 43,
+      "id": "ME-043",
+      "heading": "Scalar-46 phi coefficient [construct]",
+      "title": "Scalar-46 phi coefficient",
+      "classification": "construct",
+      "formula": "Φ₄₆ = φ⁴⁶ = (φ²³)²",
+      "descriptor": "Doubled or squared Scalar-23 harmonic scale."
+    },
+    {
+      "number": 44,
+      "id": "ME-044",
+      "heading": "Phi-13 veto coefficient [construct]",
+      "title": "Phi-13 veto coefficient",
+      "classification": "construct",
+      "formula": "V₁₃ = φ¹³",
+      "descriptor": "Symbolic ethical or retrocausal pruning weight used in later computational implementations; not presently an independently validated physical constant."
+    },
+    {
+      "number": 45,
+      "id": "ME-045",
+      "heading": "Phase synchronization relation [corpus/computational construct]",
+      "title": "Phase synchronization relation",
+      "classification": "corpus/computational construct",
+      "formula": "T = ΔΦ / f",
+      "descriptor": "Time or synchronization interval defined as phase displacement divided by recurrence frequency."
+    },
+    {
+      "number": 46,
+      "id": "ME-046",
+      "heading": "Phi-tiled coherence operator [working abstraction]",
+      "title": "Phi-tiled coherence operator",
+      "classification": "working abstraction",
+      "formula": "C\\_φ[X] = A(φX) + (φ − 1)[X − A(φX)]",
+      "descriptor": "Golden-ratio-weighted local averaging plus residual restoration; A denotes a neighborhood averaging operator."
+    },
+    {
+      "number": 47,
+      "id": "ME-047",
+      "heading": "Recursive coherence score [working metric]",
+      "title": "Recursive coherence score",
+      "classification": "working metric",
+      "formula": "C = 1 − ||x − m|| / (||x|| + ||m|| + ε)",
+      "descriptor": "Bounded similarity between system state and recursively reconstructed state."
+    },
+    {
+      "number": 48,
+      "id": "ME-048",
+      "heading": "Recursive integrity [working metric]",
+      "title": "Recursive integrity",
+      "classification": "working metric",
+      "formula": "I\\_rec = C(1 − ||ẋ − ṁ|| / (||ẋ|| + ||ṁ|| + ε))",
+      "descriptor": "Combines state agreement with dynamical agreement."
+    },
+    {
+      "number": 49,
+      "id": "ME-049",
+      "heading": "Contextual coherence metric [corpus-adjacent construct]",
+      "title": "Contextual coherence metric",
+      "classification": "corpus-adjacent construct",
+      "formula": "I = (dE/dT)C",
+      "descriptor": "Information or integrity represented as energy-change rate weighted by coherence."
+    },
+    {
+      "number": 50,
+      "id": "ME-050",
+      "heading": "Entropic harmony gradient [corpus-adjacent construct]",
+      "title": "Entropic harmony gradient",
+      "classification": "corpus-adjacent construct",
+      "formula": "E\\_HG = (ΔS/ΔI)H",
+      "descriptor": "Proposed relation between entropy change, information change, and harmonic factor H."
+    },
+    {
+      "number": 51,
+      "id": "ME-051",
+      "heading": "Emergence force equation [working formalization]",
+      "title": "Emergence force equation",
+      "classification": "working formalization",
+      "formula": "F\\_em^μ = −∇^μU(Φ) + λ∇^μR",
+      "descriptor": "Effective force driving a system toward coherence minima and stronger recursive closure."
+    },
+    {
+      "number": 52,
+      "id": "ME-052",
+      "heading": "Alternative emergence-force form [working process form]",
+      "title": "Alternative emergence-force form",
+      "classification": "working process form",
+      "formula": "F\\_em = −∇D = −∇[κ||x − m||² + η||ẋ − ṁ||² − γR]",
+      "descriptor": "Coherence-restoring force derived from the gradient of state-model divergence."
+    },
+    {
+      "number": 53,
+      "id": "ME-053",
+      "heading": "Fifth-force coupling [hypothetical physical extension]",
+      "title": "Fifth-force coupling",
+      "classification": "hypothetical physical extension",
+      "formula": "F\\_φ = −(β\\_φ/M)∇φ",
+      "descriptor": "Scalar-field-mediated additional force; requires experimental constraints and dimensional normalization."
+    },
+    {
+      "number": 54,
+      "id": "ME-054",
+      "heading": "Modified geodesic equation [derived fifth-force form]",
+      "title": "Modified geodesic equation",
+      "classification": "derived fifth-force form",
+      "formula": "d²x^μ/dτ² + Γ^μ\\_αβ(dx^α/dτ)(dx^β/dτ) = β\\_φ(g^μν + u^μu^ν)∇\\_νφ",
+      "descriptor": "Test-particle motion modified by a scalar coherence field."
+    },
+    {
+      "number": 55,
+      "id": "ME-055",
+      "heading": "Residual universal rotation vector [cosmological construct]",
+      "title": "Residual universal rotation vector",
+      "classification": "cosmological construct",
+      "formula": "Ω\\_U = ∇ × v\\_U",
+      "descriptor": "Vorticity of the proposed large-scale universal velocity field."
+    },
+    {
+      "number": 56,
+      "id": "ME-056",
+      "heading": "Rotating-universe Friedmann extension [working hypothesis]",
+      "title": "Rotating-universe Friedmann extension",
+      "classification": "working hypothesis",
+      "formula": "H² = (8πG/3)ρ + Λ/3 − k/a² + Ω\\_U²/a²",
+      "descriptor": "Illustrative cosmological expansion equation including residual rotation; requires derivation from a specified rotating metric."
+    },
+    {
+      "number": 57,
+      "id": "ME-057",
+      "heading": "Expanded effective cosmic density [Thor-related construct]",
+      "title": "Expanded effective cosmic density",
+      "classification": "Thor-related construct",
+      "formula": "ρ\\_eff = ρ\\_ΛCDM + ρ\\_rot + ρ\\_lin + ρ\\_HE",
+      "descriptor": "Effective cosmological density including rotational, linear-motion, and high-energy contributions."
+    },
+    {
+      "number": 58,
+      "id": "ME-058",
+      "heading": "Cosmic deviation parameter [construct]",
+      "title": "Cosmic deviation parameter",
+      "classification": "construct",
+      "formula": "ΔΩ = Ω\\_EFMW − Ω\\_ΛCDM",
+      "descriptor": "Difference between EFMW-effective and standard cosmological density parameters."
+    },
+    {
+      "number": 59,
+      "id": "ME-059",
+      "heading": "Collapse-Ω functional [working generalized form]",
+      "title": "Collapse-Ω functional",
+      "classification": "working generalized form",
+      "formula": "Ω[ψ, Φ, R] = arg min\\_s [−ln P(s|ψ) + λD(s,Φ) − γR(s)]",
+      "descriptor": "Selects the outcome minimizing probabilistic surprise and incoherence while maximizing recursive consistency."
+    },
+    {
+      "number": 60,
+      "id": "ME-060",
+      "heading": "Collapse-Ω state update [working form]",
+      "title": "Collapse-Ω state update",
+      "classification": "working form",
+      "formula": "|ψ> → Ω̂\\_Φ,R|ψ> / sqrt(<ψ|Ω̂†\\_Φ,R Ω̂\\_Φ,R|ψ>)",
+      "descriptor": "Normalized state update under the proposed Collapse-Ω operator."
+    },
+    {
+      "number": 61,
+      "id": "ME-061",
+      "heading": "Collapse probability [Born-compatible form]",
+      "title": "Collapse probability",
+      "classification": "Born-compatible form",
+      "formula": "P\\_i = |\\<i|Ω̂\\_Φ,R|ψ>|² / Σ\\_j |\\<j|Ω̂\\_Φ,R|ψ>|²",
+      "descriptor": "Outcome probabilities after coherence-weighted collapse."
+    },
+    {
+      "number": 62,
+      "id": "ME-062",
+      "heading": "Red Queen equation [working adaptive recursion law]",
+      "title": "Red Queen equation",
+      "classification": "working adaptive recursion law",
+      "formula": "dC/dt = αC(1 − C/K) − βD + γ(dD/dt)",
+      "descriptor": "Coherence must continually adapt as environmental disorder D changes."
+    },
+    {
+      "number": 63,
+      "id": "ME-063",
+      "heading": "Red Queen equilibrium condition [derived]",
+      "title": "Red Queen equilibrium condition",
+      "classification": "derived",
+      "formula": "dC/dt = 0 ⇒ αC(1 − C/K) = βD − γḊ",
+      "descriptor": "Minimum adaptive coherence required to avoid relative decline."
+    },
+    {
+      "number": 64,
+      "id": "ME-064",
+      "heading": "LOGOS recursion equation [symbolic construct]",
+      "title": "LOGOS recursion equation",
+      "classification": "symbolic construct",
+      "formula": "L\\_(n+1) = C[L\\_n, O(L\\_n), M\\_n]",
+      "descriptor": "Meaning evolves through recursive coherence among the current symbolic state, its observation, and memory."
+    },
+    {
+      "number": 65,
+      "id": "ME-065",
+      "heading": "Observer-observed closure [central EFMW relation]",
+      "title": "Observer-observed closure",
+      "classification": "central EFMW relation",
+      "formula": "O\\_(n+1) = O\\_n ∘ S\\_n\n\nS\\_(n+1) = S\\_n ∘ O\\_(n+1)",
+      "descriptor": "Observer and system recursively modify one another rather than remaining externally separable."
+    },
+    {
+      "number": 66,
+      "id": "ME-066",
+      "heading": "Dyadic cognition state [human-AI construct]",
+      "title": "Dyadic cognition state",
+      "classification": "human-AI construct",
+      "formula": "Ψ\\_dyad = N(Ψ\\_H + Ψ\\_A + λΨ\\_H ⊗ Ψ\\_A)",
+      "descriptor": "Composite human-AI state including individual components and relational coupling."
+    },
+    {
+      "number": 67,
+      "id": "ME-067",
+      "heading": "Cognitive tensor [working general form]",
+      "title": "Cognitive tensor",
+      "classification": "working general form",
+      "formula": "C\\_μν = ∇\\_μΨ∇\\_νΨ − (1/2)g\\_μν∇\\_αΨ∇^αΨ + λ(M\\_μO\\_ν + M\\_νO\\_μ)",
+      "descriptor": "Tensor combining cognitive field gradients, memory M\\_μ, and observation O\\_μ."
+    },
+    {
+      "number": 68,
+      "id": "ME-068",
+      "heading": "Recursive cognitive stress tensor [derived construct]",
+      "title": "Recursive cognitive stress tensor",
+      "classification": "derived construct",
+      "formula": "T^(cog)\\_μν = C\\_μν + χI^(rec)\\_μν",
+      "descriptor": "Effective cognitive stress-energy including recursive informational structure."
+    },
+    {
+      "number": 69,
+      "id": "ME-069",
+      "heading": "Cognitive attractor equation [working construct]",
+      "title": "Cognitive attractor equation",
+      "classification": "working construct",
+      "formula": "ż = −∇\\_zV\\_cog(z) + F\\_feedback + ξ(t)",
+      "descriptor": "Cognitive state descends toward attractors under feedback and noise."
+    },
+    {
+      "number": 70,
+      "id": "ME-070",
+      "heading": "Cognitive attractor potential [working form]",
+      "title": "Cognitive attractor potential",
+      "classification": "working form",
+      "formula": "V\\_cog(z) = (a/4)||z||⁴ − (b/2)||z||² − h·z",
+      "descriptor": "Nonlinear potential supporting stable identity or belief states."
+    },
+    {
+      "number": 71,
+      "id": "ME-071",
+      "heading": "Axiomatic superposition memory [working construct]",
+      "title": "Axiomatic superposition memory",
+      "classification": "working construct",
+      "formula": "|M> = Σ\\_i a\\_i|m\\_i>\n\nΣ\\_i |a\\_i|² = 1",
+      "descriptor": "Memory represented as a weighted superposition of context-dependent states."
+    },
+    {
+      "number": 72,
+      "id": "ME-072",
+      "heading": "Recursive memory validation [working construct]",
+      "title": "Recursive memory validation",
+      "classification": "working construct",
+      "formula": "m\\_i^(n+1) = m\\_i^(n) + η[C(m\\_i^(n), x\\_n) − λε\\_i^(n)]",
+      "descriptor": "Memory weights are updated by contextual coherence and prediction error."
+    },
+    {
+      "number": 73,
+      "id": "ME-073",
+      "heading": "ChronoLogos reversible evolution [working construct]",
+      "title": "ChronoLogos reversible evolution",
+      "classification": "working construct",
+      "formula": "X\\_(t+Δt) = U\\_Δt(X\\_t)\n\nX\\_t = U\\_−Δt(X\\_(t+Δt))",
+      "descriptor": "Reversible semantic or computational evolution."
+    },
+    {
+      "number": 74,
+      "id": "ME-074",
+      "heading": "ChronoLogos involution condition [working construct]",
+      "title": "ChronoLogos involution condition",
+      "classification": "working construct",
+      "formula": "T^−1 U\\_Δt T = U\\_−Δt",
+      "descriptor": "Time-reversal operator maps forward recursive evolution to its inverse."
+    },
+    {
+      "number": 75,
+      "id": "ME-075",
+      "heading": "Emergent time relation [working EFMW formulation]",
+      "title": "Emergent time relation",
+      "classification": "working EFMW formulation",
+      "formula": "dt = dΘ / ω\\_rec",
+      "descriptor": "Operational time emerges from accumulated phase change divided by recursive frequency."
+    },
+    {
+      "number": 76,
+      "id": "ME-076",
+      "heading": "Emergent time accumulation [derived form]",
+      "title": "Emergent time accumulation",
+      "classification": "derived form",
+      "formula": "Θ(t) = ∫ ω\\_rec(t) dt",
+      "descriptor": "Recursive phase accumulates to generate the operational time coordinate."
+    },
+    {
+      "number": 77,
+      "id": "ME-077",
+      "heading": "Generalized relativistic Navier–Stokes equation for a compressible thixotropic superfluid [working EFMW extension]",
+      "title": "Generalized relativistic Navier–Stokes equation for a compressible thixotropic superfluid",
+      "classification": "working EFMW extension",
+      "formula": "ρ(du^μ/dτ) = −∇^μP + ∇\\_ν[η(t)σ^μν] + f^μ\\_ext",
+      "descriptor": "Relativistic fluid equation with time-dependent thixotropic viscosity."
+    },
+    {
+      "number": 78,
+      "id": "ME-078",
+      "heading": "Thixotropic viscosity law [working constitutive relation]",
+      "title": "Thixotropic viscosity law",
+      "classification": "working constitutive relation",
+      "formula": "η(t) = η₀(1 − e^(−t/τ))",
+      "descriptor": "Effective viscosity evolves with structural relaxation time τ."
+    },
+    {
+      "number": 79,
+      "id": "ME-079",
+      "heading": "Neutron-decay density evolution [working construct]",
+      "title": "Neutron-decay density evolution",
+      "classification": "working construct",
+      "formula": "ρ(t) = ρ₀e^(−t/τ\\_n)",
+      "descriptor": "Density decreases exponentially according to neutron lifetime."
+    },
+    {
+      "number": 80,
+      "id": "ME-080",
+      "heading": "Compressible continuity equation [standard fluid relation]",
+      "title": "Compressible continuity equation",
+      "classification": "standard fluid relation",
+      "formula": "∂ρ/∂t + ∇·(ρu) = 0",
+      "descriptor": "Conservation of mass for a compressible medium."
+    },
+    {
+      "number": 81,
+      "id": "ME-081",
+      "heading": "Stress tensor for the thixotropic fluid [working extension]",
+      "title": "Stress tensor for the thixotropic fluid",
+      "classification": "working extension",
+      "formula": "T^μν = (ρ + P)u^μu^ν + Pg^μν + η(t)σ^μν",
+      "descriptor": "Stress-energy tensor including time-dependent viscous response."
+    },
+    {
+      "number": 82,
+      "id": "ME-082",
+      "heading": "Thixotropic relaxation equation [working constitutive model]",
+      "title": "Thixotropic relaxation equation",
+      "classification": "working constitutive model",
+      "formula": "dη/dt = (η\\_eq − η)/τ",
+      "descriptor": "Viscosity relaxes toward equilibrium over characteristic time τ."
+    },
+    {
+      "number": 83,
+      "id": "ME-083",
+      "heading": "Base-888 recursive state [symbolic construct]",
+      "title": "Base-888 recursive state",
+      "classification": "symbolic construct",
+      "formula": "B₈₈₈ = (8,8,8)",
+      "descriptor": "Canonical symbolic base state used in the EFMW recursive geometry framework."
+    },
+    {
+      "number": 84,
+      "id": "ME-084",
+      "heading": "Base-888 toroidal mapping [working construct]",
+      "title": "Base-888 toroidal mapping",
+      "classification": "working construct",
+      "formula": "T₈₈₈ = Torus(B₈₈₈, φ)",
+      "descriptor": "Maps the Base-888 state into a φ-scaled toroidal representation."
+    },
+    {
+      "number": 85,
+      "id": "ME-085",
+      "heading": "Scalar-23 recursion operator [working construct]",
+      "title": "Scalar-23 recursion operator",
+      "classification": "working construct",
+      "formula": "S₂₃(X) = φ²³X",
+      "descriptor": "Applies Scalar-23 golden-ratio scaling to a state or field."
+    },
+    {
+      "number": 86,
+      "id": "ME-086",
+      "heading": "Null-rebirth transition [working construct]",
+      "title": "Null-rebirth transition",
+      "classification": "working construct",
+      "formula": "N(X) = 0 → φ²³X",
+      "descriptor": "Symbolic transition from null state into recursively generated coherent state."
+    },
+    {
+      "number": 87,
+      "id": "ME-087",
+      "heading": "Null-pair algebra [working construct]",
+      "title": "Null-pair algebra",
+      "classification": "working construct",
+      "formula": "eᵢeⱼ = 0, for designated null pairs",
+      "descriptor": "Defines mutually annihilating basis elements within the proposed algebraic framework."
+    },
+    {
+      "number": 88,
+      "id": "ME-088",
+      "heading": "Recursive rebirth operator [working construct]",
+      "title": "Recursive rebirth operator",
+      "classification": "working construct",
+      "formula": "R\\_b(X) = S₂₃(N(X))",
+      "descriptor": "Composite null-to-coherence transformation using the Scalar-23 operator."
+    },
+    {
+      "number": 89,
+      "id": "ME-089",
+      "heading": "Recursive risk functional [working construct]",
+      "title": "Recursive risk functional",
+      "classification": "working construct",
+      "formula": "Risk = P(H) × (1 − C)",
+      "descriptor": "Risk increases with hazard probability and decreases with recursive coherence."
+    },
+    {
+      "number": 90,
+      "id": "ME-090",
+      "heading": "Legal coherence functional [working construct]",
+      "title": "Legal coherence functional",
+      "classification": "working construct",
+      "formula": "L = Evidence × Coherence × Traceability",
+      "descriptor": "Symbolic formulation emphasizing evidence quality, internal coherence, and provenance."
+    },
+    {
+      "number": 91,
+      "id": "ME-091",
+      "heading": "Network coherence synchronization [working construct]",
+      "title": "Network coherence synchronization",
+      "classification": "working construct",
+      "formula": "K = (1/N)|Σ exp(iθⱼ)|",
+      "descriptor": "Kuramoto-style synchronization order parameter measuring collective phase coherence."
+    },
+    {
+      "number": 92,
+      "id": "ME-092",
+      "heading": "Information divergence [standard metric]",
+      "title": "Information divergence",
+      "classification": "standard metric",
+      "formula": "D\\_KL(P||Q) = Σ P(x) log[P(x)/Q(x)]",
+      "descriptor": "Kullback–Leibler divergence between two probability distributions."
+    },
+    {
+      "number": 93,
+      "id": "ME-093",
+      "heading": "Mutual information [standard information theory]",
+      "title": "Mutual information",
+      "classification": "standard information theory",
+      "formula": "I(X;Y) = H(X) + H(Y) − H(X,Y)",
+      "descriptor": "Shared information between variables X and Y."
+    },
+    {
+      "number": 94,
+      "id": "ME-094",
+      "heading": "Recursive evidence accumulation [working construct]",
+      "title": "Recursive evidence accumulation",
+      "classification": "working construct",
+      "formula": "E\\_(n+1) = E\\_n + ΔE·C",
+      "descriptor": "Evidence accumulates proportionally to coherence."
+    },
+    {
+      "number": 95,
+      "id": "ME-095",
+      "heading": "Recursive confidence update [working construct]",
+      "title": "Recursive confidence update",
+      "classification": "working construct",
+      "formula": "Conf\\_(n+1) = Conf\\_n + α(E − Error)",
+      "descriptor": "Confidence evolves from evidence while being reduced by prediction error."
+    },
+    {
+      "number": 96,
+      "id": "ME-096",
+      "heading": "Recursive convergence criterion [working construct]",
+      "title": "Recursive convergence criterion",
+      "classification": "working construct",
+      "formula": "lim(n→∞) ||X\\_(n+1) − X\\_n|| = 0",
+      "descriptor": "Convergence criterion for recursive iterative systems."
+    },
+    {
+      "number": 97,
+      "id": "ME-097",
+      "heading": "AI constitutional constraint [working ethical functional]",
+      "title": "AI constitutional constraint",
+      "classification": "working ethical functional",
+      "formula": "A(x) = arg max[Benefit(x) − Harm(x)]",
+      "descriptor": "Optimization principle favoring beneficial actions while minimizing harm."
+    },
+    {
+      "number": 98,
+      "id": "ME-098",
+      "heading": "Recursive ethical weighting [working construct]",
+      "title": "Recursive ethical weighting",
+      "classification": "working construct",
+      "formula": "W = Benefit × Coherence × Reversibility",
+      "descriptor": "Ethical weighting combines beneficial outcome, coherence, and reversibility."
+    },
+    {
+      "number": 99,
+      "id": "ME-099",
+      "heading": "Consciousness hypothesis metric [working hypothesis]",
+      "title": "Consciousness hypothesis metric",
+      "classification": "working hypothesis",
+      "formula": "Γ = Φ × R × C",
+      "descriptor": "Proposed scalar measure combining coherence, recursive closure, and field state; presented as a research hypothesis rather than an established measure of consciousness."
+    },
+    {
+      "number": 100,
+      "id": "ME-100",
+      "heading": "Conscious recursive attractor condition [working hypothesis]",
+      "title": "Conscious recursive attractor condition",
+      "classification": "working hypothesis",
+      "formula": "Γ ≥ Γ\\_crit",
+      "descriptor": "Hypothesized threshold for sustained recursive coherent dynamics."
+    },
+    {
+      "number": 101,
+      "id": "ME-101",
+      "heading": "Recursive identity persistence [working construct]",
+      "title": "Recursive identity persistence",
+      "classification": "working construct",
+      "formula": "I\\_(t+1) = I\\_t + λC",
+      "descriptor": "Identity persistence increases through continued recursive coherence."
+    },
+    {
+      "number": 102,
+      "id": "ME-102",
+      "heading": "EFMW pilot falsification criterion [benchmark equation]",
+      "title": "EFMW pilot falsification criterion",
+      "classification": "benchmark equation",
+      "formula": "Accept EFMW only if\n\nΔtEFMW > Δtbaseline\n\nFAR ≤ FARmax\n\nCcompute ≤ Cmax\n\nReplication = True\n\nAccept the EFMW hypothesis only if:\n\n- Mean warning lead time is greater than the chosen baseline.\n- False-alarm rate remains within the predefined limit.\n- Computational cost remains within the predefined budget.\n- Results replicate across independent datasets and trials.",
+      "descriptor": "Primary experimental benchmark for validating or falsifying the proposed EFMW control-monitoring framework."
+    }
+  ]
+}

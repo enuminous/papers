@@ -1,0 +1,76 @@
+{
+  "study_id": "EFMW-CX-001",
+  "protocol_sha256": "5ccfbf169830cec63cb4bbe447f34d1256c1af0a7456bffbe348e66af760440e",
+  "python": "3.12.14",
+  "entries": 102,
+  "unique_ids": 102,
+  "total_formula_codepoints": 3791,
+  "total_formula_utf8_bytes": 4750,
+  "total_lexical_tokens": 2196,
+  "median_lexical_tokens": 18.5,
+  "token_min": 3,
+  "token_max": 64,
+  "exact_duplicate_groups": [],
+  "normalized_duplicate_groups": [],
+  "source_classification_count": 67,
+  "source_labels_starting_standard": 10,
+  "source_labels_starting_working": 49,
+  "frozen_review_counts": {
+    "structural_encoding": 53,
+    "analytic_model": 15,
+    "partial_specialization": 1,
+    "open": 33
+  },
+  "marker_counts": {
+    "spatial/covariant/wave derivative symbols": 26,
+    "integral symbol": 3,
+    "summation symbol": 5,
+    "norm notation": 12,
+    "optimization words": 2,
+    "limit notation": 4,
+    "explicit xi(t) noise": 2,
+    "tensor-product symbol": 1
+  },
+  "tokenizer": "\\w+|[^\\w\\s]",
+  "supplementary_post_inspection_diagnostics": {
+    "reason": "ME-102 contains prose; declared dependency cycles were seen during source inspection. These diagnostics were added after the protocol freeze and are not confirmatory.",
+    "ME102_tokens": 64,
+    "tokens_excluding_ME102": 2132,
+    "dependency_nodes": 102,
+    "dependency_edges": 104,
+    "entries_with_declared_dependencies": 73,
+    "nontrivial_sccs": [
+      [
+        "ME-078",
+        "ME-082"
+      ],
+      [
+        "ME-097",
+        "ME-098"
+      ]
+    ],
+    "warning": "Documentation links are not a complete proof graph. A cycle is not proof of logical circularity; an empty list is not proof of independence."
+  },
+  "representation_control": {
+    "forms": {
+      "rational_memory": {
+        "expression": "-1/(k-m*w*w+1j*b*w+4*G*(1j*w*tau)/(1+1j*w*tau))",
+        "codepoints": 47,
+        "tokens": 40,
+        "ast_nodes": 63
+      },
+      "expanded_Maxwell": {
+        "expression": "-1/(k-m*w*w+4*G*(w*tau)**2/(1+(w*tau)**2)+1j*(b*w+4*G*w*tau/(1+(w*tau)**2)))",
+        "codepoints": 76,
+        "tokens": 67,
+        "ast_nodes": 92
+      }
+    },
+    "test_points": 3003,
+    "maximum_relative_difference": 3.77002291192247e-16,
+    "criterion": 1e-12,
+    "status": "PASS"
+  },
+  "global_complexity_rank": "UNRESOLVED_NOT_DEFINED",
+  "physical_truth": "NOT_TESTED"
+}

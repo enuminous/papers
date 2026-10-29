@@ -1,0 +1,174 @@
+{
+  "study_id": "EFMW-CX-001",
+  "protocol_sha256": "5ccfbf169830cec63cb4bbe447f34d1256c1af0a7456bffbe348e66af760440e",
+  "python": "3.12.14",
+  "entries": 102,
+  "unique_ids": 102,
+  "total_formula_codepoints": 3791,
+  "total_formula_utf8_bytes": 4750,
+  "total_lexical_tokens": 2196,
+  "median_lexical_tokens": 18.5,
+  "token_min": 3,
+  "token_max": 64,
+  "exact_duplicate_groups": [],
+  "normalized_duplicate_groups": [],
+  "source_classification_counts": {
+    "index notation": 1,
+    "corpus equation": 1,
+    "standard operator used by EFMW": 1,
+    "operator expansion": 1,
+    "derived expansion": 1,
+    "core construct; general form": 1,
+    "derived gravitational extension": 1,
+    "working canonical synthesis": 1,
+    "working formalization": 2,
+    "standardized EFMW component": 1,
+    "working hypothesis": 4,
+    "standard Maxwell component": 1,
+    "derived extension": 1,
+    "working quantum-gravity form": 1,
+    "derived": 4,
+    "quantum/cognitive representation": 1,
+    "standard consequence": 1,
+    "standard/EFMW-compatible": 1,
+    "standard Madelung-type decomposition": 1,
+    "standard derived construct": 1,
+    "working system kernel": 2,
+    "working five-claim kernel": 1,
+    "working definition": 1,
+    "control metric": 1,
+    "commercial pilot hypothesis": 1,
+    "benchmark quantity": 1,
+    "working benchmark": 1,
+    "computational cognition": 1,
+    "robustness test": 1,
+    "dynamical stability": 1,
+    "identity-attractor metric": 1,
+    "replication metric": 1,
+    "corpus extension": 2,
+    "corpus construct": 1,
+    "working tensor analogy": 1,
+    "working construct": 20,
+    "mathematical constant": 1,
+    "construct": 4,
+    "corpus/computational construct": 1,
+    "working abstraction": 1,
+    "working metric": 2,
+    "corpus-adjacent construct": 2,
+    "working process form": 1,
+    "hypothetical physical extension": 1,
+    "derived fifth-force form": 1,
+    "cosmological construct": 1,
+    "Thor-related construct": 1,
+    "working generalized form": 1,
+    "working form": 2,
+    "Born-compatible form": 1,
+    "working adaptive recursion law": 1,
+    "symbolic construct": 2,
+    "central EFMW relation": 1,
+    "human-AI construct": 1,
+    "working general form": 1,
+    "derived construct": 1,
+    "working EFMW formulation": 1,
+    "derived form": 1,
+    "working EFMW extension": 1,
+    "working constitutive relation": 1,
+    "standard fluid relation": 1,
+    "working extension": 1,
+    "working constitutive model": 1,
+    "standard metric": 1,
+    "standard information theory": 1,
+    "working ethical functional": 1,
+    "benchmark equation": 1
+  },
+  "source_classification_count": 67,
+  "source_labels_starting_standard": 10,
+  "source_labels_starting_working": 49,
+  "frozen_review_counts": {
+    "structural_encoding": 53,
+    "analytic_model": 15,
+    "partial_specialization": 1,
+    "open": 33
+  },
+  "marker_counts": {
+    "spatial/covariant/wave derivative symbols": 26,
+    "integral symbol": 3,
+    "summation symbol": 5,
+    "norm notation": 12,
+    "optimization words": 2,
+    "limit notation": 4,
+    "explicit xi(t) noise": 2,
+    "tensor-product symbol": 1
+  },
+  "tokenizer": "\\w+|[^\\w\\s]",
+  "marker_definitions": {
+    "spatial/covariant/wave derivative symbols": [
+      "∂",
+      "∇",
+      "□"
+    ],
+    "integral symbol": [
+      "∫"
+    ],
+    "summation symbol": [
+      "Σ"
+    ],
+    "norm notation": [
+      "||"
+    ],
+    "optimization words": [
+      "arg min",
+      "arg max"
+    ],
+    "limit notation": [
+      "lim("
+    ],
+    "explicit xi(t) noise": [
+      "ξ(t)"
+    ],
+    "tensor-product symbol": [
+      "⊗"
+    ]
+  },
+  "supplementary_post_inspection_diagnostics": {
+    "reason": "ME-102 contains prose; declared dependency cycles were seen during source inspection. These diagnostics were added after the protocol freeze and are not confirmatory.",
+    "ME102_tokens": 64,
+    "tokens_excluding_ME102": 2132,
+    "dependency_nodes": 102,
+    "dependency_edges": 104,
+    "entries_with_declared_dependencies": 73,
+    "nontrivial_sccs": [
+      [
+        "ME-078",
+        "ME-082"
+      ],
+      [
+        "ME-097",
+        "ME-098"
+      ]
+    ],
+    "warning": "Documentation links are not a complete proof graph. A cycle is not proof of logical circularity; an empty list is not proof of independence."
+  },
+  "representation_control": {
+    "forms": {
+      "rational_memory": {
+        "expression": "-1/(k-m*w*w+1j*b*w+4*G*(1j*w*tau)/(1+1j*w*tau))",
+        "codepoints": 47,
+        "tokens": 40,
+        "ast_nodes": 63
+      },
+      "expanded_Maxwell": {
+        "expression": "-1/(k-m*w*w+4*G*(w*tau)**2/(1+(w*tau)**2)+1j*(b*w+4*G*w*tau/(1+(w*tau)**2)))",
+        "codepoints": 76,
+        "tokens": 67,
+        "ast_nodes": 92
+      }
+    },
+    "test_points": 3003,
+    "maximum_relative_difference": 3.77002291192247e-16,
+    "criterion": 1e-12,
+    "status": "PASS"
+  },
+  "global_complexity_rank": "UNRESOLVED_NOT_DEFINED",
+  "physical_truth": "NOT_TESTED"
+}
