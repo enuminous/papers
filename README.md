@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Higgs–Gauge Lab and the numerical simulation of a classical Abelian–Higgs field](Higgs-Gauge-Lab-Classical-Abelian-Higgs-Simulation.md)** · [Verification code and results](research/higgs-gauge-lab/README.md) — 29 October 2026. Methods paper for the classical 2+1-dimensional U(1) browser simulator. Ten numerical sanity checks pass, including second-order temporal refinement, gauge covariance, Gauss-law preservation, and a radial-frequency benchmark. Identifies the limits of the reduction and the remaining spatial-convergence and physical-calibration requirements.
+
 - **[Monolithic puts its research to the test](Monolithic-Puts-Its-Research-to-the-Test-2026-10-29.md)** — 29 October 2026. A sourced feature on Monolithic’s October 23–29 work: physics laboratories, quantum geometry, biological and bubble benchmarks, Greek mathematics, Rule 30, external proof and software reviews, research infrastructure, and commercial outreach. Connects completed results, corrections, and open questions across the week.
 
 - **[EFMW-CX-001: How Complex Is EFMW Compared with Other Physical Frameworks?](EFMW-CX-001-Complexity-of-EFMW-and-Physical-Frameworks.md)** · [Protocol, code, and results](research/efmw-cx-001/README.md) — 29 October 2026. Executed audit of 102 canonical EFMW entries and a source-supported comparison of sixteen selected frameworks across six complexity dimensions. Documents representation sensitivity and the frozen review categories; no universal ranking, independent-law count, or empirical validation is inferred.

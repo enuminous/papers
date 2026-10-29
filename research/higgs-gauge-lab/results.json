@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "repository": "enuminous/Higgs-Gauge-Lab",
+    "commit": "06056de25e0ad0f5306e6a5d272f983436e54126",
+    "path": "index.html",
+    "gitBlob": "cf4482f77fe02086e884e6da905e472b77f3769c",
+    "sha256": "007d024176506541e62b9d3652014dc0c9512add78eb1664216f2b14b9b4a539",
+    "bytes": 25948
+  },
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "seed": 20261029,
+  "parameters": {
+    "lambda": 0.5,
+    "v": 1.25,
+    "g": 0.75,
+    "y": 0.65,
+    "N": 64,
+    "dx": 1
+  },
+  "methodology": "Unedited numerical functions executed in Node VM; DOM/canvas no-ops; seeded Math.random; added inspection exports; DT replaced only for refinement runs. Damping zero unless specified.",
+  "vacuum": {
+    "steps": 1000,
+    "stateRmsChange": 1.8422763314873507e-16,
+    "time": 45.00000000000107,
+    "energy": 2.7768154234671726e-31,
+    "amplitude": 1.0000000000000524,
+    "gauss": 0
+  },
+  "pulse": [
+    {
+      "name": "pulse",
+      "dt": 0.045,
+      "damping": 0,
+      "T": 45,
+      "steps": 1000,
+      "samplingEverySteps": 10,
+      "initial": {
+        "time": 0,
+        "steps": 0,
+        "energy": 0.01132840139523779,
+        "amplitude": 1.0268446601433947,
+        "gauss": 0
+      },
+      "final": {
+        "time": 45.00000000000107,
+        "steps": 1000,
+        "energy": 0.01132089752278176,
+        "amplitude": 0.987475065604786,
+        "gauss": 0
+      },
+      "sampledMaxRelativeEnergyDeviation": 0.0011464377195526286,
+      "sampledMaxGaussRms": 0
+    },
+    {
+      "name": "pulse",
+      "dt": 0.0225,
+      "damping": 0,
+      "T": 45,
+      "steps": 2000,
+      "samplingEverySteps": 10,
+      "initial": {
+        "time": 0,
+        "steps": 0,
+        "energy": 0.01132840139523779,
+        "amplitude": 1.0268446601433947,
+        "gauss": 0
+      },
+      "final": {
+        "time": 45.000000000001386,
+        "steps": 2000,
+        "energy": 0.01132653038012563,
+        "amplitude": 0.9873808660897626,
+        "gauss": 0
+      },
+      "sampledMaxRelativeEnergyDeviation": 0.00033861720801972405,
+      "sampledMaxGaussRms": 0
+    },
+    {
+      "name": "pulse",
+      "dt": 0.01125,
+      "damping": 0,
+      "T": 45,
+      "steps": 4000,
+      "samplingEverySteps": 10,
+      "initial": {
+        "time": 0,
+        "steps": 0,
+        "energy": 0.01132840139523779,
+        "amplitude": 1.0268446601433947,
+        "gauss": 0
+      },
+      "final": {
+        "time": 44.99999999999744,
+        "steps": 4000,
+        "energy": 0.011327933941524239,
+        "amplitude": 0.9873579001350409,
+        "gauss": 0
+      },
+      "sampledMaxRelativeEnergyDeviation": 0.00008572512020907027,
+      "sampledMaxGaussRms": 0
+    }
+  ],
+  "temporalRefinement": {
+    "T": 45,
+    "norm": "RMS over all eight arrays at common final time",
+    "coarseMediumDifference": 0.0006408492045740494,
+    "mediumFineDifference": 0.00015954708164905227,
+    "ratio": 4.016677697582042,
+    "observedOrder": 2.006002702669175
+  },
+  "vortex": {
+    "name": "vortices",
+    "dt": 0.045,
+    "damping": 0,
+    "T": 45,
+    "steps": 1000,
+    "samplingEverySteps": 10,
+    "initial": {
+      "time": 0,
+      "steps": 0,
+      "energy": 0.022968011354958694,
+      "amplitude": 0.9845485876429654,
+      "gauss": 0
+    },
+    "final": {
+      "time": 45.00000000000107,
+      "steps": 1000,
+      "energy": 0.022955779756339487,
+      "amplitude": 0.9919460571007547,
+      "gauss": 5.611965108025958e-16
+    },
+    "sampledMaxRelativeEnergyDeviation": 0.0007236712026244865,
+    "sampledMaxGaussRms": 5.611965108025958e-16
+  },
+  "quench": {
+    "name": "quench",
+    "dt": 0.045,
+    "damping": 0,
+    "T": 45,
+    "steps": 1000,
+    "samplingEverySteps": 10,
+    "initial": {
+      "time": 0,
+      "steps": 0,
+      "energy": 0.3119508959922041,
+      "amplitude": 0.043847312014228916,
+      "gauss": 0
+    },
+    "final": {
+      "time": 45.00000000000107,
+      "steps": 1000,
+      "energy": 0.31188781053675624,
+      "amplitude": 0.8961690467824097,
+      "gauss": 1.3943531070024927e-15
+    },
+    "sampledMaxRelativeEnergyDeviation": 0.00023705400989572988,
+    "sampledMaxGaussRms": 1.3943531070024927e-15
+  },
+  "dampedQuench": {
+    "name": "quench",
+    "dt": 0.045,
+    "damping": 0.028,
+    "T": 45,
+    "steps": 1000,
+    "samplingEverySteps": 10,
+    "initial": {
+      "time": 0,
+      "steps": 0,
+      "energy": 0.3119508959922041,
+      "amplitude": 0.043847312014228916,
+      "gauss": 0
+    },
+    "final": {
+      "time": 45.00000000000107,
+      "steps": 1000,
+      "energy": 0.12234246144976103,
+      "amplitude": 0.9746506167700905,
+      "gauss": 7.584488968525897e-16
+    },
+    "sampledMaxRelativeEnergyDeviation": 0.6078150022277273,
+    "sampledMaxGaussRms": 7.742294129315724e-16
+  },
+  "gaugeCovariance": {
+    "scalarForceMaxAbsError": 3.9891096958468734e-16,
+    "gaugeForceMaxAbsError": 1.1518563880486e-15,
+    "magneticFluxMaxAbsError": 8.222589276130066e-16,
+    "chargeMaxAbsError": 2.992397996059992e-17,
+    "relativeEnergyError": 1.7795170710536908e-16
+  },
+  "hamiltonianDerivative": [
+    {
+      "eps": 0.0001,
+      "analytic": 0.0009905110013249208,
+      "measured": 0.0009905109879526641,
+      "absoluteError": 1.3372256644009206e-11,
+      "relativeError": 1.3500361556936064e-8
+    },
+    {
+      "eps": 0.00001,
+      "analytic": 0.0009905110013249208,
+      "measured": 0.000990511012100015,
+      "absoluteError": 1.0775094141587949e-11,
+      "relativeError": 1.0878318491339358e-8
+    },
+    {
+      "eps": 0.000001,
+      "analytic": 0.0009905110013249208,
+      "measured": 0.0009905107289931436,
+      "absoluteError": 2.7233177713782697e-10,
+      "relativeError": 2.7494068897120004e-7
+    }
+  ],
+  "radialFrequency": {
+    "relativeAmplitude": 0.0001,
+    "dt": 0.045,
+    "T": 90,
+    "crossingCount": 18,
+    "measuredOmega": 1.2501647998937748,
+    "continuumOmega": 1.25,
+    "verletOmega": 1.2501648536094205,
+    "relativeContinuumError": 0.00013183991501986014,
+    "relativeVerletPredictionError": 4.296684997513138e-8
+  },
+  "checks": {
+    "equilibrium": true,
+    "pulseEnergy": true,
+    "vortexEnergy": true,
+    "quenchEnergy": true,
+    "gauss": true,
+    "gaugeCovariance": true,
+    "forceHamiltonian": true,
+    "temporalOrder": true,
+    "radialFrequency": true,
+    "dampingLowersEndpointEnergy": true
+  },
+  "checkThresholdNote": "Implementation sanity tolerances selected for this report, not an independently preregistered validation protocol or empirical acceptance criterion."
+}
