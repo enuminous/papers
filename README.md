@@ -72,6 +72,7 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[EFMW-RP-001: Detecting Relaxation Without Identifying Its Origin](EFMW-RP-001-Bubble-Memory-Detection-and-Identifiability.md)** — 29 October 2026. Synthetic bubble-response benchmark: 223/250 injected-memory detections and 0/250 null detections; the frozen 90% sensitivity target fails. Derives the exact Maxwell equivalence, documents numerical verification, and separates laboratory-frequency relaxation from untested pressure-cycle and Stoney-scale claims. [Code, data, and interactive laboratory](https://github.com/enuminous/Bubble-Dynamics-Test/tree/1f47d523a3f1e6fa2e732eb493f54d8c4658cac4).
 - **[Two Oscillators, One Missing Force — The EFMW F03 Experiment](Two-Oscillators-One-Missing-Force-EFMW-F03.md)** — 28 October 2026. Long-form science journalism on simulated Langevin oscillator measurements (30,000 paired samples), a conventional Gaussian mutual-information prediction, uncertainty and time-shifted nulls, the proposed real-world MEMS data follow-up, and why statistical information does not itself establish informational gravity.
 
 - **[The Monolithic Twenty-Three: A Falsification-First Experimental Program for EFMW](MONOLITHIC-23-EFMW-Physical-Falsification-Program.md)** — 28 October 2026. A proposed, not-yet-executed paper specifying 23 tests: three foundational identity/consistency gates, eighteen public-observation comparisons, and two accessible laboratory analogues. Includes hypotheses, conventional controls, failure conditions, reproducibility, readiness states and source portals; no EFMW-specific physical detection is claimed.
@@ -162,3 +163,4 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 > **Interpretation:** Cross-links represent research dependencies and comparisons. The Standard Model and continuum gravity are inputs in current QST calculations; their emergence from Base888 and the physical status of the pressure cycle remain **UNRESOLVED**.
 <!-- ENUMINOUS-RESEARCH-CHAIN:END -->
+
