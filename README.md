@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Monolithic puts its research to the test](Monolithic-Puts-Its-Research-to-the-Test-2026-10-29.md)** — 29 October 2026. A sourced feature on Monolithic’s October 23–29 work: physics laboratories, quantum geometry, biological and bubble benchmarks, Greek mathematics, Rule 30, external proof and software reviews, research infrastructure, and commercial outreach. Connects completed results, corrections, and open questions across the week.
+
 - **[EFMW-CX-001: How Complex Is EFMW Compared with Other Physical Frameworks?](EFMW-CX-001-Complexity-of-EFMW-and-Physical-Frameworks.md)** · [Protocol, code, and results](research/efmw-cx-001/README.md) — 29 October 2026. Executed audit of 102 canonical EFMW entries and a source-supported comparison of sixteen selected frameworks across six complexity dimensions. Documents representation sensitivity and the frozen review categories; no universal ranking, independent-law count, or empirical validation is inferred.
 
 - **[EFMW-RP-001: Detecting Relaxation Without Identifying Its Origin](EFMW-RP-001-Bubble-Memory-Detection-and-Identifiability.md)** — 29 October 2026. Synthetic bubble-response benchmark: 223/250 injected-memory detections and 0/250 null detections; the frozen 90% sensitivity target fails. Derives the exact Maxwell equivalence, documents numerical verification, and separates laboratory-frequency relaxation from untested pressure-cycle and Stoney-scale claims. [Code, data, and interactive laboratory](https://github.com/enuminous/Bubble-Dynamics-Test/tree/1f47d523a3f1e6fa2e732eb493f54d8c4658cac4).
