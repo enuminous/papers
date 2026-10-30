@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Preliminary Audit of the CFSG Lean Formalization: Source Preflight and Outstanding Rebuild Obligations](CFSG-Preliminary-Audit-Source-Preflight-and-Rebuild-Status-2026-10-30.md)** — 30 October 2026. Pinned audit-stage report: 14/14 hosted source checks, 5/5 synthetic axiom-parser tests, and shell-syntax validation. Full Lean rebuild, actual theorem axiom reports, transitive certificate/dependency review, and statement alignment remain unresolved; all 46 Zoo operations remain unexecuted.
+
 - **[Higgs–Gauge Lab and the numerical simulation of a classical Abelian–Higgs field](Higgs-Gauge-Lab-Classical-Abelian-Higgs-Simulation.md)** · [Verification code and results](research/higgs-gauge-lab/README.md) — 29 October 2026. Methods paper for the classical 2+1-dimensional U(1) browser simulator. Ten numerical sanity checks pass, including second-order temporal refinement, gauge covariance, Gauss-law preservation, and a radial-frequency benchmark. Identifies the limits of the reduction and the remaining spatial-convergence and physical-calibration requirements.
 
 - **[Monolithic puts its research to the test](Monolithic-Puts-Its-Research-to-the-Test-2026-10-29.md)** — 29 October 2026. A sourced feature on Monolithic’s October 23–29 work: physics laboratories, quantum geometry, biological and bubble benchmarks, Greek mathematics, Rule 30, external proof and software reviews, research infrastructure, and commercial outreach. Connects completed results, corrections, and open questions across the week.
