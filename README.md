@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[EFMW Binance Traceback: A Bounded Public-Evidence Audit](EFMW-Binance-Traceback-Bounded-Public-Evidence-Audit-2026-10-30.md)** · [Report and reproducible evidence](research/efmw-binance-trace-001/README.md) — 30 October 2026. Reconciles five source-labelled XRP inflows totaling 233,461,943.1 XRP and corroborates 63 token-transfer events in one Ethereum receipt. Twelve captured-evidence checks pass; the complete-trace acceptance gate fails. Full incident coverage, personal control, knowing receipt, and independently verified attribution remain unresolved.
+
 - **[Preliminary Audit of the CFSG Lean Formalization: Source Preflight and Outstanding Rebuild Obligations](CFSG-Preliminary-Audit-Source-Preflight-and-Rebuild-Status-2026-10-30.md)** — 30 October 2026. Pinned audit-stage report: 14/14 hosted source checks, 5/5 synthetic axiom-parser tests, and shell-syntax validation. Full Lean rebuild, actual theorem axiom reports, transitive certificate/dependency review, and statement alignment remain unresolved; all 46 Zoo operations remain unexecuted.
 
 - **[Higgs–Gauge Lab and the numerical simulation of a classical Abelian–Higgs field](Higgs-Gauge-Lab-Classical-Abelian-Higgs-Simulation.md)** · [Verification code and results](research/higgs-gauge-lab/README.md) — 29 October 2026. Methods paper for the classical 2+1-dimensional U(1) browser simulator. Ten numerical sanity checks pass, including second-order temporal refinement, gauge covariance, Gauss-law preservation, and a radial-frequency benchmark. Identifies the limits of the reduction and the remaining spatial-convergence and physical-calibration requirements.
@@ -171,4 +173,5 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 > **Interpretation:** Cross-links represent research dependencies and comparisons. The Standard Model and continuum gravity are inputs in current QST calculations; their emergence from Base888 and the physical status of the pressure cycle remain **UNRESOLVED**.
 <!-- ENUMINOUS-RESEARCH-CHAIN:END -->
+
 
