@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Two Spinning Black Holes, One Bigger Boundary](Two-Spinning-Black-Holes-One-Bigger-Boundary.md)** — 31 October 2026. A short, accessible account of spin, inspiral, merger, recoil, ringdown and horizon-area growth. Explains the GW250114 reproduction and synthetic measurement audit, with clear limits on EFMW's physical interpretation. [Lab, code and full findings](https://github.com/enuminous/Black-Hole-Horizon).
+
 - **[The Corridors of Thought Where EFMW Works Best](EFMW-Corridors-of-Thought-2026-10-31.md)** — 31 October 2026. An essay on memory, consistency across representations, limiting cases, identifiability, and cross-disciplinary correspondence. Uses documented Monolithic studies to distinguish methodological usefulness from comparative superiority or physical validation.
 
 - **[Extra Gravitational-Wave Polarizations: Aggregate Evidence Reproduction, Synthetic Response Tests, and a Conditional EFMW Coupling Map](EFMW-GW-POL-002-Extra-Gravitational-Wave-Polarizations.md)** · [Reproducibility archive and figure](research/efmw-gw-pol-002/README.md) — 31 October 2026. Reports the October 30 EFMW-GW-POL-002 run: 32/32 numerical checks, reproduced TS/T Bayes factor 1.0185, idealized scalar injections, and a conditional C1 curvature-coupling map. No fresh strain search, extra-mode detection, or EFMW-specific observational bound.
