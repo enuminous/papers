@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[The Corridors of Thought Where EFMW Works Best](EFMW-Corridors-of-Thought-2026-10-31.md)** — 31 October 2026. An essay on memory, consistency across representations, limiting cases, identifiability, and cross-disciplinary correspondence. Uses documented Monolithic studies to distinguish methodological usefulness from comparative superiority or physical validation.
+
 - **[Extra Gravitational-Wave Polarizations: Aggregate Evidence Reproduction, Synthetic Response Tests, and a Conditional EFMW Coupling Map](EFMW-GW-POL-002-Extra-Gravitational-Wave-Polarizations.md)** · [Reproducibility archive and figure](research/efmw-gw-pol-002/README.md) — 31 October 2026. Reports the October 30 EFMW-GW-POL-002 run: 32/32 numerical checks, reproduced TS/T Bayes factor 1.0185, idealized scalar injections, and a conditional C1 curvature-coupling map. No fresh strain search, extra-mode detection, or EFMW-specific observational bound.
 
 - [Quantum Math the Greek Way: Music of the Spheres](Quantum-Math-the-Greek-Way-Music-of-the-Spheres.md) — 30 October 2026. Greek-inspired geometric reconstruction of balanced two-path interference without a native numerical-zero object; explicit physical postulates, closure semantics, and limits of the existing Lean model.
