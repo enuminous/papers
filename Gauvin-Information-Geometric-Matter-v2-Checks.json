@@ -1,0 +1,33 @@
+{
+  "exact_rational_checks": [
+    {
+      "r": "7/10",
+      "contact_link_exact": true,
+      "dispersion_identity_exact": true
+    },
+    {
+      "r": "4/5",
+      "contact_link_exact": true,
+      "dispersion_identity_exact": true
+    },
+    {
+      "r": "9/10",
+      "contact_link_exact": true,
+      "dispersion_identity_exact": true
+    },
+    {
+      "r": "99/100",
+      "contact_link_exact": true,
+      "dispersion_identity_exact": true
+    }
+  ],
+  "quartic_completion_spotchecks": 12,
+  "Gaussian_Legendre_spotchecks": 3,
+  "floor_slope_spotchecks": 5,
+  "p_G": 5.894351423152244e-123,
+  "Z_G": 23.582023055956107,
+  "p_variance": 0.0017472140208473386,
+  "alternative_standardized_RMS": 2.4777470675070896,
+  "a_H_m_s2": 1.0421978811446008e-10,
+  "floor_RMS_improvement_percent": 0.07360285999684527
+}
