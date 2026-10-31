@@ -1,0 +1,31 @@
+{
+  "inverse_alpha_from_volume_formula": 137.03608244816434,
+  "difference_over_paper_quoted_uncertainty": 416.74082169151916,
+  "difference_over_CODATA2022_standard_uncertainty": 3965.293539446672,
+  "kappa_eq67": 0.02545916736665016,
+  "a_eq69": 8.528451441011004,
+  "Lambda_Hopf_MeV": 0.00016806544809213622,
+  "lepton_masses_MeV_e_mu_tau": [
+    0.511016383224242,
+    105.66198007460687,
+    1776.9206163656675
+  ],
+  "printed_lepton_table_MeV": [
+    0.510999,
+    105.658,
+    1776.86
+  ],
+  "boson_masses_MeV_W_Z_H": [
+    80413.76895174493,
+    91238.06893907236,
+    125294.12948712443
+  ],
+  "printed_boson_table_MeV": [
+    80369.5,
+    91187.8,
+    125225
+  ],
+  "minus_zeta_B_prime_0_from_printed_series": -0.8884900761462794,
+  "minus_zeta_B_prime_0_claimed_in_section_4_14": 0.03044845705839327,
+  "missing_constant_half_log_2pi": 0.9189385332046727
+}

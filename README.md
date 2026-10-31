@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Referee report on the complex Hopf fibration unification manuscript](Hopf-Fibration-Unification-Referee-Report-v5.md)** · [Numerical reproduction](Hopf-v5-Numerical-Review.py) · [Results](Hopf-v5-Numerical-Review-results.json) — 31 October 2026. Public technical commentary on Nielsen's version 5: foundational counterexamples, action/Hessian and operator objections, determinant inconsistency, and reproducible mass-table discrepancies. Not a journal-issued review or an EFMW validation.
+
 - **[Two Spinning Black Holes, One Bigger Boundary](Two-Spinning-Black-Holes-One-Bigger-Boundary.md)** — 31 October 2026. A short, accessible account of spin, inspiral, merger, recoil, ringdown and horizon-area growth. Explains the GW250114 reproduction and synthetic measurement audit, with clear limits on EFMW's physical interpretation. [Lab, code and full findings](https://github.com/enuminous/Black-Hole-Horizon).
 
 - **[The Corridors of Thought Where EFMW Works Best](EFMW-Corridors-of-Thought-2026-10-31.md)** — 31 October 2026. An essay on memory, consistency across representations, limiting cases, identifiability, and cross-disciplinary correspondence. Uses documented Monolithic studies to distinguish methodological usefulness from comparative superiority or physical validation.
