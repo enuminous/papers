@@ -1,0 +1,151 @@
+{
+  "review": "Bloke parallel qudit sheets, supplied artifacts, 2026-11-01",
+  "arithmetic": "Python standard-library Fraction; exact rational",
+  "interpretation": "PASS means the referee-report check reproduced, not time travel.",
+  "algebra_checks_passed": 7,
+  "algebra_checks_total": 7,
+  "checks": [
+    {
+      "name": "lower_triangular_inverse_counterexample",
+      "status": "PASS",
+      "details": {
+        "matrix": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "3",
+            "1"
+          ]
+        ],
+        "inverse": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "-3",
+            "1"
+          ]
+        ],
+        "scope": "Exact 2x2 counterexample; report supplies the general proof."
+      }
+    },
+    {
+      "name": "time_sign_invariance_of_squared_interval",
+      "status": "PASS",
+      "details": {
+        "forward": "-17621/1764",
+        "reversed": "-17621/1764",
+        "scope": "Exact example of the algebraic identity (-dt)^2 = dt^2."
+      }
+    },
+    {
+      "name": "block_diagonal_unitary_has_zero_cross_sector_block",
+      "status": "PASS",
+      "details": {
+        "cross_sector_block": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "scope": "Example; P_beta (U_alpha direct-sum U_beta) P_alpha = 0 generally."
+      }
+    },
+    {
+      "name": "coupled_unitary_can_transfer_sector_population",
+      "status": "PASS",
+      "details": {
+        "initial_density": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "final_density": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        "scope": "State transfer under a non-block-diagonal unitary; no temporal interpretation."
+      }
+    },
+    {
+      "name": "flipping_only_negative_diagonal_entry_removes_lorentzian_signature",
+      "status": "PASS",
+      "details": {
+        "before_diagonal": [
+          "-1",
+          "1"
+        ],
+        "after_diagonal": [
+          "1",
+          "1"
+        ],
+        "scope": "Identity form is positive definite; report explains the general diagonal case."
+      }
+    },
+    {
+      "name": "overall_metric_sign_preserves_nullness",
+      "status": "PASS",
+      "details": {
+        "null_vector": [
+          "1",
+          "1"
+        ],
+        "scope": "Exact examples; g(v,v)=0 iff -g(v,v)=0 algebraically."
+      }
+    },
+    {
+      "name": "global_unitarity_does_not_preserve_subsystem_purity",
+      "status": "PASS",
+      "details": {
+        "joint_purity": "1",
+        "reduced_purity": "1/2",
+        "reduced_density": [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "1/2"
+          ]
+        ],
+        "scope": "Entanglement with an environment; not a claim of fundamental collapse."
+      }
+    }
+  ],
+  "exhibit_checks": [
+    {
+      "file": "poster-a.jpeg",
+      "sha256": "26814565f155ab9fe8a592cc0202e150329430095f7ec86e8e055945dd57bfa6",
+      "status": "PASS"
+    },
+    {
+      "file": "poster-b.jpeg",
+      "sha256": "47d3e4e77108376720577063a0d937bc5ce361903b72168e39a06d2d4808e526",
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "No physical experiment or operational test of temporal access.",
+    "No Lean proof, full quantum-field model, or exhaustive novelty search.",
+    "No inference about author identity, intentions, or unpublished work."
+  ]
+}

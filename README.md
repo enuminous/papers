@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Referee report on retrocausal access via parallel qudit sheets](Bloke-Parallel-Qudit-Sheets-Referee-Report-2026-11-01.md)** — 1 November 2026. Artifact-specific review of the two posters attributed to John Bloke (@BlokeMan00): triangular inversion, causal orientation, sector transfer, uAMWI attribution, and noise claims. Includes preserved exhibits and seven reproducible exact algebra checks; does not establish physical time travel.
+
 - **[Monolithic Investor & Partner Pitch Deck (PDF)](Monolithic-Investor-Partner-Pitch-Deck-2026-11-01.pdf)** — 1 November 2026. Thirteen-slide presentation of Monolithic’s independent technical-review offer, public work samples, pricing, and proposed commercial milestones.
 
 - **[Referee report on information-geometric matter dynamics and gravitational response](Gauvin-Information-Geometric-Matter-v2-Referee-Report.md)** · [Independent checks](Gauvin-Information-Geometric-Matter-v2-Checks.py) · [Results](Gauvin-Information-Geometric-Matter-v2-Checks.json) — 31 October 2026. Bounded public review of Gauvin's October 8 v2: successful algebraic spot checks and aggregate null-bound reproduction, microscopic identifiability limits, and a major-revision recommendation. Explicitly excludes the October 30 v3; not a journal-issued review.
