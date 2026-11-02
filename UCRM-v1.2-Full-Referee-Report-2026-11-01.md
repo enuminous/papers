@@ -161,3 +161,134 @@ Each finding is a conclusion about **this manuscript's support for its claim**, 
 
 **Why the table matters:** Each entry is independently checkable. A critic need not first decide whether gravity control, consciousness, or a vacuum medium is philosophically attractive. The printed formula either permits the advertised result or it does not. The materials specification either describes an obtainable feedstock or it does not.
 
+
+| F15 | **FAIL / critical** | **Lithium chemistry:** thermal ionization, aerosol concentration units, and transfer of LiNbO₃ piezoelectricity to battery materials are inadequately or incorrectly handled. | 142–144 |
+| F16 | **FAIL / critical** | **Misattributed quantization:** “Sui et al. (2024)” is conflated with the actual 2026 White–Vera–Sylvester–Dudzinski paper; a hydrogenic spectral mapping is treated as a vacuum-engine demonstration. | 103–106, 231–241 |
+| F17 | **UNRESOLVED / major** | **Figure 3.8:** orange markers labelled “Rydberg Data” have no identified instrument run, raw dataset, uncertainty model, or provenance in the supplied PDF. | 105 |
+| F18 | **FAIL / major** | **Sensor overreach:** genuine Rydberg electrometry is treated as direct measurement of gravitomagnetism, isotope stabilization, operator intent, and net vacuum power without separate calibration chains. | 99–102, 154–157 |
+| F19 | **UNRESOLVED / critical** | **“Sixth oscillator” cognition:** adding \(K_{\rm bio}\) and \(K_{\rm target}\) assumes a physical coupling; it does not establish remote viewing or thought-controlled thrust. | 62–68, 89–98, 158–163 |
+| F20 | **FAIL / critical** | **MH370 inference:** disputed footage is assumed to be authentic and then converted into a detailed propulsion experiment; independent corroboration of the claimed mechanism is absent. | 168–174 |
+| F21 | **FAIL / major** | **Giza energy claims:** geometry, granite, speculative subsurface images, and historical narratives do not establish a 38,000-year-old power plant. | 54–58, 279–280 |
+| F22 | **FAIL / critical** | **Authority laundering:** patents, media reports, social posts, and speculative claims about named individuals are treated as if they validate an operating engine. | 23–51, 185–192, 203–207 |
+| F23 | **FAIL / major** | **Moving thresholds:** the five-condition RAST scheme acquires retrospective exemptions (Hangzhou, lithium “override”) without prospective, frozen decision rules or false-positive accounting. | 20–22, 59–62, 142–148 |
+
+### 6.1 The unusually extravagant claims, considered individually
+
+**The Great Pyramid as a reactor (F21).** Pages 54–58 treat contested claims about the Giza pyramids as “macro-scale” manifestations of the proposed apparatus, even entertaining an alleged **38,000-year-old** underground complex. This is not a finding of archaeology. Resonant stone geometry does not demonstrate ancient hydrogen-plasma handling, electrical output, or vacuum-energy rectification. No dated hardware, independently measured output, or verified operational trace is supplied. The manuscript's assertion is substantially stronger than the evidence.
+
+**Kozyrev mirrors and reception from the future (F19).** Pages 63–64 describe alleged remote-information reception before transmission, then translate those reports into a control mechanism for plasma and propulsion. A rigorous test would need randomized target generation, preregistration, blinded senders and receivers, independent scoring, full raw trials, and an information-leakage audit. None of those is supplied as a direct validation of this engine. The term “sixth oscillator” is a model component, not evidence that the physical coupling exists.
+
+**The MH370 “field experiment” (F20).** Page 143 says, verbatim, **“Empirical closure is supplied by the MH370 footage.”** Page 144 calls the case **“the first macroscopic LENR-boosted CIRE demonstration.”** The paper's speculative interpretation of disputed imagery is not a demonstrated account of the missing aircraft. The Australian Transport Safety Bureau's actual investigation relies on radar, satellite communications, aircraft-performance analysis, debris identification, and ocean drift studies—not a verified vortex engine: https://www.atsb.gov.au/investigations/ae-2014-054 . The aircraft's passengers and crew deserve a higher evidentiary standard than a retrofitted propulsion narrative.
+
+**Medical repair and “psi jamming” (F18–F19).** Pages 188–190 propose a machine that would neutralize directed-energy threats, counter purported “weaponized remote viewing,” and rapidly repair neurological injury. The text predicts **70–90% reduction in white-matter lesion volume** and symptom relief within minutes. There is no clinical trial of this apparatus in the manuscript. A hypothetical phase-cancellation circuit does not automatically cancel a complex field at every point in a human brain, and an electrical-field sensor is not a clinical outcome measure. These assertions must be labelled *unsupported proposed outcomes*, not medical evidence.
+
+**A planetary defensive grid (F22).** Pages 190–191 propose globally networked units that would shield against directed-energy attacks while also supporting remediation and weather modification. There is no demonstrated unit-level mechanism, let alone a measured planetary-scale effect. Scaling up a missing experiment does not produce a global technology.
+
+**Muon-catalyzed fusion (additional unresolved claim).** Page 180 associates moscovium orbital effects with muon-catalyzed fusion without a specified muon source, reaction rate, cross-section, or energy accounting. Electron orbitals and muons are not interchangeable particles.
+
+**Institutional readiness.** Pages 216–217 and 267–279 describe proposed work at Concordia University Montréal and suppliers in Canada and abroad. The reviewed PDF does not establish signed collaboration agreements, confirmed procurement, independent laboratory results, or institutional endorsement. A named university is a proposed venue, not a validating witness.
+
+### 6.2 A figure is not a dataset
+
+Figure 3.8 on **PDF page 105** plots theoretical curves with orange points labelled **“Rydberg Data.”** The manuscript does not give the points' acquisition dates, device identifiers, calibration, uncertainties, raw values, or traceable measurement repository. The plot may be an illustrative synthetic construction; it must not be treated as physical data until provenance is established. If synthetic, label it **synthetic**. If experimental, publish the underlying records.
+
+### 6.3 The literature cannot be used as a chain of borrowed miracles
+
+The manuscript invokes Aharonov–Bohm phase, Kuramoto synchronization, Rydberg-atom electrometry, diamagnetic bismuth, the Pais patents, alleged secret programs, ancient monuments, and public-media investigations as though their juxtaposition demonstrates a single mechanism.
+
+Several components are legitimate in narrower domains:
+
+- The **Kuramoto order parameter** is a conventional phase-coherence statistic.
+- The **Aharonov–Bohm effect** is established quantum physics.
+- **Rydberg electrometry** measures electric-field-related atomic responses.
+- **Bismuth** is diamagnetic.
+- **Plasmas** can display self-organization.
+- **Classical boundary-value problems** can have discrete spectra.
+
+**PASS (bounded)** for those ordinary facts. **No transfer of validation** to antigravity, macroscopic nuclear stabilization, usable zero-point-energy extraction, future-information reception, or directed-energy healing.
+
+One especially revealing citation concerns *Emergent quantization from a dynamic vacuum*. The actual paper is by **Harold White, Jerry Vera, Andre Sylvester, and Leonard Dudzinski**, *Physical Review Research* **8**, 013264 (published March 9, 2026), DOI **10.1103/l8y7-r3rm**: https://journals.aps.org/prresearch/abstract/10.1103/l8y7-r3rm . It constructs a mathematical mapping to a **hydrogenic Coulomb spectrum**. The UCRM manuscript mixes this source with a “Sui et al. (2024)” attribution and extrapolates a different spectral analogy into practical energy extraction. The APS article does not establish a working UCRM engine.
+
+A patent records an invention disclosure; it is not proof that a claimed effect has been experimentally demonstrated. A documentary interview is not a calibration certificate. A social-media interaction is not a blinded replication. An unusual event is not automatically a laboratory result.
+
+## 7. The epistemic mechanism: how crank science manufactures closure
+
+The term **crank science** here describes a *methodological failure pattern*, not a medical or personal characterization of the author.
+
+The pattern in this manuscript is unusually clear:
+
+1. Begin with real mathematical machinery (phase synchronization, field gradients, resonant modes).
+2. Attach speculative physical couplings without independent derivation.
+3. Select historical anomalies that can be narrated in the language of the couplings.
+4. Add more couplings whenever an anomaly violates the original thresholds.
+5. Convert the resulting model variables into names of physical outputs.
+6. Generate those outputs numerically and call the result “validation.”
+7. Convert that alleged validation into prototype costs, institutional roadmaps, medical claims, and planetary applications.
+
+The process is **recursive**, but not in the sense of scientific self-correction. It is a self-reinforcing inference loop. The model is said to explain the anomaly; the anomaly is then said to validate the model; the simulated model is then said to validate the device; the device's imagined success is used to explain more anomalies.
+
+**The theory does not merely explain everything. It becomes unable to encounter anything that would count against it.**
+
+That is the point at which an impressive technical vocabulary becomes an obstacle to inquiry. Mathematics is no longer constraining the story; the story is recruiting mathematics as decoration.
+
+The striking irony is that a manuscript about coherence exhibits an **evidence-coherence failure**. Its equations, code, procurement tables, historical allegations, and declarations of certainty do not agree about what has actually been established.
+
+No need to mock the author's intelligence or speculate about motives. The equations are sufficient witnesses.
+
+## 8. What would make a revised paper scientifically reviewable?
+
+A credible revision would **narrow** the program dramatically.
+
+1. **Publish executable source:** exact Python environment, dependency pins, clean source, numerical solver settings, convergence diagnostics, seeds, raw outputs, and an independently reproducible null.
+2. **Derive the observable:** show the physical equations, boundary conditions, coupling constants, and units that map a phase-coherence statistic to a calibrated force, mass response, energy balance, or decay rate. Do not define the observable by fiat.
+3. **Separate modules:** test a bismuth-only plasma device first. Do not bundle it with moscovium, psionics, ancient monuments, or missing-aircraft allegations.
+4. **Measure thrust independently:** calibrated thrust balance; shield and reverse electrical connections; control for ion wind, vibration, thermal drift, magnetic coupling, and cable forces; blind the analysis.
+5. **Close the energy ledger:** measure *all* electrical, mechanical, thermal, and electromagnetic inputs and outputs over repeated runs. Report uncertainty and instrument calibration.
+6. **Pre-register prospective predictions:** for atmospheric anomalies, freeze thresholds and success criteria *before* observations; report misses, false alarms, denominators, and alternative explanations.
+7. **Test human coupling blind:** randomized sham/active conditions, leakage controls, preregistered endpoints, independent scoring, and correction for multiple comparisons.
+8. **Demonstrate isotope physics separately:** identify a real isotope, acquisition path, decay instrumentation, baseline statistics, and controlled treatment. No invented bulk supply chain.
+9. **Remove unsupported historical “validations”:** do not use MH370, Giza, anonymous-account speculation, or entertainment media as laboratory evidence without independently verified primary data.
+10. **Make negative results publishable:** a properly calibrated null is an acceptable scientific outcome. A result that must be positive by construction is not.
+
+For claims of therapeutic benefit, add appropriately approved and independently reviewed biomedical research; the manuscript's projected outcomes must not be presented as established treatments.
+
+## 9. Editorial conclusion: the equation is not the universe
+
+One can admire the ambition of unification while refusing to mistake ambition for discovery. A 288-page manuscript can contain a great deal of work, imagination, and sincere inquiry—and still fail at the exact point where it claims experimental closure.
+
+The fatal sentence is on page 267: **“This ensemble directly validates every performance claim.”** The printed code does not do that. It cannot do that. It generates values from the very performance relationships that require validation.
+
+The proposed engine may be a speculative design. It is **not**, on the supplied evidence, a demonstrated gravity-control device, a vacuum-energy source, a remote-viewing interface, a moscovium reactor, or a therapeutic shield.
+
+**Referee disposition:** **REJECT IN PRESENT FORM.** The physical hypotheses remain unestablished, and several mathematical, dimensional, numerical, and evidentiary claims are demonstrably defective. A narrower, falsifiable research note may be possible after a clean derivation and independent measurements.
+
+This review makes **no finding of fraud or intent**, does not infer mental state, and does not claim to have disproved every possible future physical mechanism. It assesses the claims, evidence, and methods of the submitted document. The author should have an opportunity to correct factual errors and supply missing primary evidence.
+
+> **A theory becomes scientific not when it explains everything, but when it exposes exactly how it might be wrong.**
+
+---
+
+## Appendix A. Claim-boundary checklist
+
+| Question | Manuscript status |
+|---|---|
+| Is a standard synchronization statistic defined? | **PASS (bounded)** |
+| Is its mapping to gravity or inertia derived and measured? | **FAIL / UNRESOLVED** |
+| Is the displayed 5,000-run code an independent physical validation? | **FAIL** |
+| Does the printed equation permit the advertised inertial range? | **FAIL** |
+| Is a net vacuum-energy balance demonstrated? | **UNRESOLVED** |
+| Is the proposed moscovium doping feasible? | **FAIL** |
+| Is consciousness-mediated control demonstrated? | **UNRESOLVED** |
+| Is MH370 evidence of the proposed engine? | **FAIL as an evidentiary inference** |
+| Are biomedical efficacy claims supported by device trials? | **UNRESOLVED** |
+| Are the authors' motivations or intentions determined? | **N/A** |
+
+## Appendix B. Primary sources and verification links
+
+1. Venne, T., *Unified Classical Resonance Model (UCRM)*, version 1.2, March 21, 2026, supplied 288-page manuscript and Zenodo record: https://zenodo.org/records/19144052 . All page quotations above are from the supplied PDF.
+2. White, H., Vera, J., Sylvester, A., and Dudzinski, L., “Emergent quantization from a dynamic vacuum,” *Physical Review Research* **8**, 013264 (2026): https://doi.org/10.1103/l8y7-r3rm .
+3. Royal Society of Chemistry, “Moscovium”: https://periodic-table.rsc.org/element/115 .
+4. Australian Transport Safety Bureau, MH370 investigation, flight-path analysis and debris evidence: https://www.atsb.gov.au/investigations/ae-2014-054 .
+5. Independent numerical check: companion file **UCRM-v1.2-Independent-Null-Checks-2026-11-01.py** in this repository.
+
+**Audit-integrity disclosure:** The review distinguishes source quotation, independent calculation, conventional external reference, and unverified speculation. It does not imply a full formal proof check or physical replication. No evidence of the author's intent is asserted. The quoted passages are selected for technical scrutiny, not offered as a substitute for the full primary document.
