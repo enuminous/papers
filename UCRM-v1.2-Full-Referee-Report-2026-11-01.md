@@ -96,3 +96,68 @@ The code samples \(\omega\) around \(1.094\times10^6\). If that is an angular fr
 
 The rendered PDF pages 265–266 contain indentation inconsistencies and a wrapped non-comment line reading “Russian waveform.” Direct extraction is not executable without repairs. PDF wrapping may have damaged the code, so the bounded finding is **failure of the published reproducibility artifact**, not proof that the authors possess no functioning version. No clean source package, pinned environment, raw run outputs, or solver diagnostics accompany the printed code in the reviewed PDF.
 
+
+## 4. Independent null control: what happens without synchronization?
+
+The companion reproducibility script samples **5,000 independent 128-oscillator random-phase ensembles**, with a fixed random seed, and applies the manuscript's **algebraic output definitions**. It is not a reproduction of the coupled differential-equation solver and not a physical experiment.
+
+| Output | Independent uncoupled-null mean | What it actually measures |
+|---|---:|---|
+| Order parameter \(r\) | 0.078819 | Random finite-sample phase alignment |
+| Formula-labelled “inertial reduction” | 0.356451% | Arithmetic function of \(r\) |
+| Formula-labelled “thrust” | 0.575117 N/kg | Arithmetic function of \(K,r\) |
+| Formula-labelled “ZPE gain” | 0.017340 (fraction) | Arithmetic function of \(r\) |
+| Bernoulli “defensive success” | 7.2% | Random outcome from assumed probability |
+| Formula-labelled Mc multiplier | 1.037164× | Arithmetic function of \(r\) |
+
+The random-phase mean agrees with the expected order of magnitude \(\sqrt{\pi}/(2\sqrt{128})\approx0.0783\). The null is a sanity check on the output construction, not a falsification of every possible physical synchronization model. It does demonstrate that the output labels acquire their physical meaning **only by assertion**.
+
+## 5. The material that cannot be bought, and the engine that cannot yet hover
+
+### 5.1 Moscovium is not a bulk dopant
+
+Pages 129–135 and 268 propose bismuth rotors with **0.1–5 atomic percent moscovium**. At just 0.1 at.% in **1 kg of bismuth**, the stoichiometric requirement is about **1.389 grams** of Mc, approximately **2.89×10²¹ atoms**. At 5 at.% it rises to **73.0 grams** and **1.52×10²³ atoms**. Superheavy moscovium is produced and studied atom by atom, not in kilogram-scale industrial doping streams. A bill-of-materials line item does not solve a nuclear-production problem. The [Royal Society of Chemistry's moscovium entry](https://periodic-table.rsc.org/element/115) describes its radioactive isotopes and lack of ordinary material availability.
+
+The manuscript's own assumed 0.65-second half-life also conflicts with its statement that more than 99% is lost within one second. With that assumed half-life, **34.4% remains after one second**; 99% loss requires about **4.32 seconds**. This is an *internal arithmetic* contradiction, separate from determining the true half-life of any particular isotope.
+
+The proposed replacement strategy—continuous accelerator implantation into an operating rotor—has no supplied rate, beam energy, dose, thermal, or radiation accounting that closes the astronomical supply gap.
+
+### 5.2 Hovering requires more than a hopeful unit label
+
+Page 137 describes **1–3 N/kg** continuous thrust as sufficient for hovering. In ordinary terrestrial conditions, weight is approximately **9.81 N/kg**. The paper separately claims gravity/inertia modification, but that is precisely the effect requiring demonstration; it cannot be silently assumed to rescue the hover calculation. A pulsed peak of 9 N/kg is also not a sustained 9.81 N/kg counterforce.
+
+The displayed continuous-force formula combines a mass, a dimensionless mass-change ratio, angular momentum, radius, and a magnetic-field gradient without a stated coupling constant that would restore units of force under the ordinary meanings of those variables. At minimum the formula is dimensionally under-specified. A physical force law must say what each symbol means, in SI units, and show the derivation.
+
+### 5.3 The power ledger is missing
+
+The manuscript's pulsed subsystem calls for multi-megavolt operation and specifies pulse energies and repetition rates implying potentially **kilowatts to megawatts** of average input throughput under continuous use. Its proposed energy outputs are not accompanied by a calibrated balance of capacitor charging, heat, electromagnetic radiation, mechanical work, plasma losses, and recovered electricity. The proposed positive vacuum-energy result is therefore not a measured or demonstrated net gain.
+
+### 5.4 Lithium cannot repair the thermodynamics by changing its name
+
+Page 142 argues that lithium's **5.39 eV** first ionization energy permits spontaneous plasma seeding in ambient air and describes **0.01–0.1 ppm** as a concentration advantage over **parts-per-trillion** seeding. But at 300 K, \(k_BT\approx0.02585\) eV: a naive thermal Boltzmann factor for 5.39 eV is of order \(10^{-91}\), not a spontaneous-ionization mechanism. Other plasma processes are possible, but they must be specified and powered.
+
+And **0.01 ppm = 10,000 ppt**, not a concentration lower than ppt. A claimed “10–100× threshold reduction” is not rescued by an incorrect unit comparison. Lithium niobate is piezoelectric as a material; that property cannot simply be transferred to generic lithium ions or the chemistry of aircraft battery cargo.
+
+## 6. Twenty-three bounded referee findings
+
+Each finding is a conclusion about **this manuscript's support for its claim**, not a psychological judgment of its authors.
+
+| ID | Disposition | Finding and decisive reason | Primary pages |
+|---|---|---|---|
+| F01 | **FAIL / critical** | **Circular Monte Carlo:** physical performance is stipulated as \(r\)-dependent output, then described as validated by the resulting numbers. | 260–267 |
+| F02 | **FAIL / critical** | **Coupling scale:** frequency spread 50,000 rad/s vs. \(K=0.8\)–2.2; conventional Gaussian onset estimate ~79,788. Near-unity coherence lacks a justified mechanism. | 265–266 |
+| F03 | **FAIL / major** | **Common-mode GIG term:** identical additive forcing cancels from relative-phase equations and cannot by itself synchronize the ensemble. | 265 |
+| F04 | **FAIL / critical** | **Frequency mismatch:** 1.094 million rad/s corresponds to ~174 kHz, not 1.094 MHz. | 83–85, 265–266 |
+| F05 | **FAIL / major** | **Published code reproducibility:** rendered listing is not directly runnable and lacks a pinned package and raw numerical output. | 265–267 |
+| F06 | **FAIL / critical** | **Inertial ceiling:** \(100(0.45)r^2\le45\%\), contrary to higher advertised ranges. | 139–141, 266 |
+| F07 | **FAIL / critical** | **Defense metric:** \(P=0.92r\) is an assumed coin flip, not measured cancellation; >90% requires \(r>0.97826\). | 266 |
+| F08 | **FAIL / critical** | **Vacuum-energy metric:** \(0.22r\) is an assumed fraction, not measured power; displayed percent is additionally misformatted. | 139, 266 |
+| F09 | **FAIL / critical** | **Moscovium lifetime:** a formula multiplier replaces nuclear decay; the nominal decay constant is unused. | 261, 265–266 |
+| F10 | **FAIL / critical** | **Material feasibility:** bulk atomic-percent moscovium demands ~10²¹–10²³ atoms per kg of Bi, incompatible with known production. | 129–135, 212–215, 268 |
+| F11 | **FAIL / major** | **Half-life arithmetic:** a 0.65 s half-life does not imply >99% loss within one second. | 212–215 |
+| F12 | **FAIL / critical** | **Hover claim:** 1–3 N/kg continuous thrust does not offset 9.81 N/kg ordinary terrestrial weight. | 137, 139, 175–176 |
+| F13 | **FAIL / critical** | **Unclosed power budget:** pulsed inputs and losses are not reconciled with claimed net energy production. | 134–135, 181, 267–278 |
+| F14 | **FAIL / critical** | **Missing gravity bridge:** electromagnetic gradients, orbital effects, and plasma coherence are not derived into a calibrated macroscopic gravitational or inertial law. | 81–83, 129–130, 137–138 |
+
+**Why the table matters:** Each entry is independently checkable. A critic need not first decide whether gravity control, consciousness, or a vacuum medium is philosophically attractive. The printed formula either permits the advertised result or it does not. The materials specification either describes an obtainable feedstock or it does not.
+
