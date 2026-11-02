@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Matthew Chenoweth Wright: The Work, the Ambition, and the Unfinished Verdict](Matthew-Chenoweth-Wright-A-Critical-Review-of-the-Work-and-Legacy-2026.md)** — 2 November 2026. A comprehensive critical review of his independent music, multimedia art, poetry, fiction, essays, mathematical formalization, exploratory physical sciences, human–AI collaboration, and Monolithic LLC; distinguishes documented achievement from unverified recognition and scientific claims.
+
 - **[Referee report on retrocausal access via parallel qudit sheets](Bloke-Parallel-Qudit-Sheets-Referee-Report-2026-11-01.md)** — 1 November 2026. Artifact-specific review of the two posters attributed to John Bloke (@BlokeMan00): triangular inversion, causal orientation, sector transfer, uAMWI attribution, and noise claims. Includes preserved exhibits and seven reproducible exact algebra checks; does not establish physical time travel.
 
 - **[Monolithic Investor & Partner Pitch Deck (PDF)](Monolithic-Investor-Partner-Pitch-Deck-2026-11-01.pdf)** — 1 November 2026. Thirteen-slide presentation of Monolithic’s independent technical-review offer, public work samples, pricing, and proposed commercial milestones.
