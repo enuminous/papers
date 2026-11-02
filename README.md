@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[2026 U.S. election-eve polling snapshot and EFMW-inspired residual audit protocol](2026-11-02-US-Election-Eve-Polling-Snapshot-EFMW-Residual-Protocol.md)** — November 2, 2026. Frozen 50-state transcript, 31 recorded poll percentage-point gaps, machine-readable CSV, polling-method provenance, and explicit limits: **not a winner forecast or validated EFMW election model**.
+
 - **[Matthew Chenoweth Wright: The Work, the Ambition, and the Unfinished Verdict](Matthew-Chenoweth-Wright-A-Critical-Review-of-the-Work-and-Legacy-2026.md)** — 2 November 2026. A comprehensive critical review of his independent music, multimedia art, poetry, fiction, essays, mathematical formalization, exploratory physical sciences, human–AI collaboration, and Monolithic LLC; distinguishes documented achievement from unverified recognition and scientific claims.
 
 - **[Referee report on retrocausal access via parallel qudit sheets](Bloke-Parallel-Qudit-Sheets-Referee-Report-2026-11-01.md)** — 1 November 2026. Artifact-specific review of the two posters attributed to John Bloke (@BlokeMan00): triangular inversion, causal orientation, sector transfer, uAMWI attribution, and noise claims. Includes preserved exhibits and seven reproducible exact algebra checks; does not establish physical time travel.
