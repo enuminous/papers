@@ -352,7 +352,7 @@ A minimally necessary 2×2 factorial comparison is:
 | C | \(|r_t|\) | 0.97 | conventional absolute EWMA |
 | D | \(r_t\) | 0.97 | published EFMW-labelled signed-memory score |
 
-All arms require identical trace splits, three-sample sustained-alert policy, independent threshold calibration to a shared whole-run alarm budget, and a predeclared primary comparison. The historical EXT-003 output compares A and D. It does not, alone, establish the causal contribution of either factor.
+All arms require identical trace splits, three-sample sustained-alert policy, independent threshold calibration to a shared whole-run alarm budget, and a predeclared primary comparison. The historical EXP-003 output compares A and D. It does not, alone, establish the causal contribution of either factor.
 
 ## 6.2 External technical challenge: disclosure boundary
 
