@@ -72,6 +72,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Recursive Coherence as a Falsifiable Principle — EFMW Dissertation-Style Research Monograph](EFMW-Dissertation-Recursive-Coherence-Evidence-Bounded-Verification-2026-11-02.md)** — 2 November 2026. Complete evidence-bounded research synthesis (11 main sections, ten appendices) examining frozen synthetic early-warning results, the failed null-alarm screen, exact equivalence to conventional signed EWMA, Lean coverage, measured-data negative controls, physical identifiability, and prospective falsification requirements. **Independent research draft; not a submitted or peer-reviewed dissertation.**
+
 - **[2026 U.S. election-eve polling snapshot and EFMW-inspired residual audit protocol](2026-11-02-US-Election-Eve-Polling-Snapshot-EFMW-Residual-Protocol.md)** — November 2, 2026. Frozen 50-state transcript, 31 recorded poll percentage-point gaps, machine-readable CSV, polling-method provenance, and explicit limits: **not a winner forecast or validated EFMW election model**.
 
 - **[Matthew Chenoweth Wright: The Work, the Ambition, and the Unfinished Verdict](Matthew-Chenoweth-Wright-A-Critical-Review-of-the-Work-and-Legacy-2026.md)** — 2 November 2026. A comprehensive critical review of his independent music, multimedia art, poetry, fiction, essays, mathematical formalization, exploratory physical sciences, human–AI collaboration, and Monolithic LLC; distinguishes documented achievement from unverified recognition and scientific claims.
