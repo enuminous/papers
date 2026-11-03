@@ -1,0 +1,81 @@
+{
+  "schema": "monolithic.geometry.identifiability.results.v1",
+  "study": "Geometry G3-001: synthetic measured-matter coupling identification",
+  "date": "2026-11-03",
+  "scientific_status": "EXPLORATORY_SYNTHETIC_ONLY",
+  "author": "Matthew Chenoweth Wright / Monolithic LLC; AI-assisted analysis",
+  "reported_by_user": "Geometry Lab v0.2.0 output",
+  "replay": {
+    "interpreter": "Node.js v22.16.0",
+    "type": "extracted numerical JS functions from mounted local Geometry Lab HTML",
+    "local_full_HTML_git_blob_sha1": "e3ef0571615ed6a591ccfa0275f6cdceb82065b2",
+    "pinned_public_HTML_git_blob_sha1": "b9aee1175be9a59ed4fd58c09be93a1c98529a9a",
+    "pinned_public_commit": "1aad91c00c40e61a1ebf979c68a353194d190348",
+    "numerical_function_block_utf16_length": 3940,
+    "numerical_function_block_fnv32": "7e47a10c",
+    "same_numerical_fingerprint_as_public_source": true,
+    "full_document_blob_matches_public_source": false,
+    "note": "The mounted local HTML differs at the whole-file level from the public GitHub release, but its isolated numerical function block has the same 3940-character fingerprint. Exact public-blob verification is available via replay.cjs using a checkout of the pinned commit. FNV32 is a noncryptographic code fingerprint."
+  },
+  "parameters": {
+    "mode": "measured",
+    "n_samples_per_trial": 400,
+    "seed": 1597,
+    "injected_kappa": -0.2,
+    "source_noise_sigma": 0.84,
+    "matter_noise_sigma": 0.15,
+    "null_calibration_trials": 190,
+    "heldout_null_trials": 190,
+    "heldout_alternative_trials": 190,
+    "cutoff_percentile": 0.95,
+    "cutoff_rule": "sorted_calibration_deltaSSE[floor((190-1)*0.95)]",
+    "event_rule": "deltaSSE > cutoff + 1e-15"
+  },
+  "single_example": {
+    "kappa_estimate": -0.2820323502393653,
+    "estimation_error": -0.08203235023936528,
+    "SSE_null": 337.02365801867927,
+    "SSE_alternative": 317.547083663885,
+    "deltaSSE": 19.476574354794256
+  },
+  "threshold_deltaSSE": 2.3792000900125756,
+  "holdouts": {
+    "null": {
+      "events": 14,
+      "trials": 190,
+      "fraction": 0.07368421052631578,
+      "percent": 7.368421052631579,
+      "wilson_95_interval": [
+        0.04439654617634579,
+        0.11986892631036158
+      ]
+    },
+    "injected": {
+      "events": 176,
+      "trials": 190,
+      "fraction": 0.9263157894736842,
+      "percent": 92.63157894736842,
+      "wilson_95_interval": [
+        0.8801310736896384,
+        0.9556034538236542
+      ]
+    }
+  },
+  "model_diagnostics": {
+    "injected_template_squared_norm": 244.85823812919972,
+    "effective_residual_noise_variance_assuming_independence": 0.7280999999999999,
+    "approximate_single_example_kappa_standard_error": 0.05453033370575473,
+    "interpretation": "Conditional model-based diagnostics using the known synthetic signal/noise assumptions, not error estimates for a physical field."
+  },
+  "epistemic_limits": [
+    "No physical observations",
+    "Same exact I signal family used for generating and fitting trials",
+    "Pseudorandom synthetic data, not independent datasets",
+    "User-adjusted parameters; no external preregistration of this selected run",
+    "A positive regression improvement is structurally expected with an added fitted parameter",
+    "Unrestricted T makes κ algebraically non-identifiable from total source alone",
+    "Different real-world matter dynamics and conventional nulls are not evaluated",
+    "No Lean kernel or general-relativity field-equation computation here"
+  ],
+  "decisive_physical_claim": "UNRESOLVED"
+}
