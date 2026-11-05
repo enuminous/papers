@@ -1,0 +1,546 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>EFMW Neural CA</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: square world canvas on the left, instrument column on the right (readouts, three trend panels, controls); stacks on phones. */
+:root{
+  --bg:#edf0ee;
+  --surface:#f8faf9;
+  --fg:#14201c;
+  --muted:#5b6b65;
+  --line:#cfd8d4;
+  --accent:#c2255c;
+  --accent-ink:#ffffff;
+  --c-pop:#2c5aa0;
+  --c-en:#2f8a3c;
+  --c-coh:#c2255c;
+  --world:#0a0f10;
+  --font-body:"Familjen Grotesk",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-data:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1211;
+    --surface:#131c1a;
+    --fg:#e2ebe7;
+    --muted:#8da097;
+    --line:#26332f;
+    --accent:#ff6b9d;
+    --accent-ink:#1a0710;
+    --c-pop:#7aa7ff;
+    --c-en:#8fe06b;
+    --c-coh:#ff6b9d;
+    --world:#070b0c;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1211;
+  --surface:#131c1a;
+  --fg:#e2ebe7;
+  --muted:#8da097;
+  --line:#26332f;
+  --accent:#ff6b9d;
+  --accent-ink:#1a0710;
+  --c-pop:#7aa7ff;
+  --c-en:#8fe06b;
+  --c-coh:#ff6b9d;
+  --world:#070b0c;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--fg);
+  font-family:var(--font-body);font-size:15px;line-height:1.5;
+  padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.wrap{max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.head{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:flex-end;justify-content:space-between}
+h1{margin:0;font-size:clamp(28px,4vw,40px);line-height:1.05;font-weight:700;letter-spacing:-0.02em;text-wrap:balance}
+.lede{margin:6px 0 0;max-width:62ch;color:var(--muted);text-wrap:pretty}
+.src{font-family:var(--font-data);font-size:12px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+.src:hover,.src:focus-visible{color:var(--accent);border-color:var(--accent);outline:none}
+
+.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);gap:28px;align-items:start}
+.world{min-width:0;display:flex;flex-direction:column;gap:12px}
+.canvas-wrap{width:min(100%,86vh)}
+#world{display:block;width:100%;aspect-ratio:1;border-radius:6px;background:var(--world);cursor:default;touch-action:pan-y;border:1px solid var(--line)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{
+  font:inherit;font-weight:600;font-size:13px;
+  padding:8px 14px;border-radius:5px;border:1px solid var(--line);
+  background:var(--surface);color:var(--fg);cursor:pointer;
+}
+.btn:hover{border-color:var(--accent)}
+.btn:focus-visible,select:focus-visible,input[type=range]:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);min-width:92px}
+.pick{display:flex;align-items:center;gap:8px;margin-left:auto;font-size:13px;color:var(--muted)}
+select{
+  font:inherit;font-size:13px;padding:7px 10px;border-radius:5px;
+  border:1px solid var(--line);background:var(--surface);color:var(--fg);
+}
+.legend{display:flex;align-items:center;gap:10px;font-family:var(--font-data);font-size:11px;color:var(--muted);max-width:min(100%,86vh)}
+.ramp{flex:1;height:8px;border-radius:2px;display:block;min-width:60px}
+.hint{font-size:12px;color:var(--muted);margin:0}
+#status{font-family:var(--font-data);font-size:12px;color:var(--muted);margin:0}
+
+.side{min-width:0;display:flex;flex-direction:column;gap:20px}
+.stats{margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.stats div{min-width:0}
+.stats dt{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
+.stats dd{margin:2px 0 0;font-family:var(--font-data);font-size:17px;font-variant-numeric:tabular-nums}
+.charts{display:flex;flex-direction:column;gap:14px}
+.chart{margin:0;min-width:0}
+.chart figcaption{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;margin-bottom:4px}
+.chart figcaption span{display:flex;align-items:center;gap:7px;font-weight:600}
+.chart figcaption i{width:10px;height:10px;border-radius:2px;display:block}
+.chart figcaption b{font-family:var(--font-data);font-weight:500;font-variant-numeric:tabular-nums}
+.chart canvas{display:block;width:100%;height:76px}
+form{display:flex;flex-direction:column;gap:18px;margin:0}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{padding:0;margin-bottom:8px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
+.ctl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px 18px}
+.ctl{min-width:0}
+.ctl label{display:flex;justify-content:space-between;gap:8px;font-size:13px}
+.ctl output{font-family:var(--font-data);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;margin:6px 0 0;accent-color:var(--accent)}
+
+.notes{border-top:1px solid var(--line);padding-top:20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:12px 32px}
+.notes h2{margin:0;font-size:16px;font-weight:700}
+.notes ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;max-width:72ch;color:var(--muted)}
+.notes li{text-wrap:pretty}
+.notes code{font-family:var(--font-data);font-size:12.5px;color:var(--fg)}
+
+@media (max-width:880px){
+  .stage{grid-template-columns:minmax(0,1fr)}
+  .notes{grid-template-columns:minmax(0,1fr)}
+  .canvas-wrap{width:100%}
+}
+@media (max-width:420px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pick{margin-left:0}
+}
+</style>
+
+<div class="wrap">
+  <header class="head">
+    <div>
+      <h1>EFMW Neural CA</h1>
+      <p class="lede">A population of small neural agents evolves to harvest energy. A recursive memory term sets each agent's coherence, and coherence lowers its metabolic cost.</p>
+    </div>
+    <a class="src" href="https://github.com/enuminous/papers/blob/main/efmw_neural_ca.py" target="_blank" rel="noopener">efmw_neural_ca.py on GitHub ↗</a>
+  </header>
+
+  <main class="stage">
+    <section class="world" aria-label="Simulation">
+      <div class="canvas-wrap">
+        <canvas id="world" role="img" aria-label="Agents moving across a wrapped 100 by 100 world with energy sources"></canvas>
+      </div>
+      <div class="bar">
+        <button class="btn primary" id="play" type="button">Pause</button>
+        <button class="btn" id="stepOnce" type="button">Step</button>
+        <button class="btn" id="reset" type="button">Reset agents</button>
+        <button class="btn" id="newWorld" type="button">New world</button>
+        <label class="pick" for="colorBy">Color by
+          <select id="colorBy">
+            <option value="coh">Coherence</option>
+            <option value="en">Energy</option>
+            <option value="gen">Generation</option>
+          </select>
+        </label>
+      </div>
+      <div class="legend" aria-hidden="true"><span id="legLo"></span><i class="ramp" id="ramp"></i><span id="legHi"></span></div>
+      <p class="hint">Drag an energy source to move it. Agent size follows energy.</p>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <aside class="side">
+      <dl class="stats">
+        <div><dt>Step</dt><dd id="sStep">0</dd></div>
+        <div><dt>Births</dt><dd id="sBirths">0</dd></div>
+        <div><dt>Deaths</dt><dd id="sDeaths">0</dd></div>
+        <div><dt>Max gen</dt><dd id="sGen">0</dd></div>
+      </dl>
+
+      <div class="charts">
+        <figure class="chart">
+          <figcaption><span><i style="background:var(--c-pop)"></i>Alive</span><b id="vAlive"></b></figcaption>
+          <canvas id="chPop" aria-label="Alive agents over time"></canvas>
+        </figure>
+        <figure class="chart">
+          <figcaption><span><i style="background:var(--c-en)"></i>Mean energy</span><b id="vEn"></b></figcaption>
+          <canvas id="chEn" aria-label="Mean energy over time"></canvas>
+        </figure>
+        <figure class="chart">
+          <figcaption><span><i style="background:var(--c-coh)"></i>Mean coherence</span><b id="vCoh"></b></figcaption>
+          <canvas id="chCoh" aria-label="Mean coherence over time"></canvas>
+        </figure>
+      </div>
+
+      <form id="controls" onsubmit="return false"></form>
+    </aside>
+  </main>
+
+  <section class="notes">
+    <h2>How this differs from the script</h2>
+    <ul>
+      <li>Every agent runs its own 484-weight network. The script allocates a genome per agent but evaluates one shared network, so all agents behave alike.</li>
+      <li>Distances wrap around the world edges, matching how agents move. Dead agents stay dead; in the script a dead slot can revive if it harvests energy.</li>
+      <li>Mutation rate is the chance that each weight is perturbed at birth, and mutation scale is the size of the perturbation. The script defines the rate but perturbs every weight.</li>
+      <li>Coherence is the absolute value of the memory term. With the update rule in the script, memory settles at half of the first network output, so coherence stays at or below 0.5.</li>
+      <li>Everything else follows the script: 8 inputs, two hidden layers of 16 tanh units, 4 outputs, one birth per step, and a population cap of 95% of the slots.</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- Model constants ---------- */
+var OBS=8, H=16, ACT=4;
+var ob1=OBS*H, oW2=ob1+H, ob2=oW2+H*H, oW3=ob2+H, ob3=oW3+H*ACT, P=ob3+ACT; /* 484 weights */
+var G=8; /* spatial grid cells per side; cell width 12.5 >= sensory radius 12 */
+var MAXPTS=320;
+
+var cfg={W:100,N:400,sources:8,dt:0.1,radius:12,mutRate:0.05,mutScale:0.1,
+  baseCost:0.02,cohCost:0.015,repro:1.8,maxE:3,lambda:0.97,speed:3};
+
+var S=null, src=[], hist=[], playing=false, dirty=true, colorBy='coh', extinct=false;
+
+function randn(){var u=1-Math.random(),v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
+function clamp(x,a,b){return x<a?a:(x>b?b:x);}
+function td(d){var W=cfg.W,h=W/2;if(d>h)return d-W;if(d<-h)return d+W;return d;}
+
+/* ---------- State ---------- */
+function newSources(n){var a=[];for(var i=0;i<n;i++)a.push({x:Math.random()*cfg.W,y:Math.random()*cfg.W});return a;}
+
+function newPop(){
+  var N=cfg.N, W=cfg.W;
+  S={N:N,t:0,births:0,deaths:0,nAlive:N,
+    px:new Float32Array(N),py:new Float32Array(N),vx:new Float32Array(N),vy:new Float32Array(N),
+    en:new Float32Array(N),alive:new Uint8Array(N),mem:new Float32Array(N),coh:new Float32Array(N),
+    gen:new Int32Array(N),g:new Float32Array(N*P),
+    act:new Float32Array(N*ACT),o:new Float32Array(OBS),h1:new Float32Array(H),h2:new Float32Array(H),
+    cellOf:new Int32Array(N),items:new Int32Array(N),start:new Int32Array(G*G+1),fp:new Int32Array(G*G)};
+  for(var i=0;i<N;i++){
+    S.px[i]=Math.random()*W;S.py[i]=Math.random()*W;
+    S.vx[i]=randn()*0.5;S.vy[i]=randn()*0.5;
+    S.en[i]=1;S.alive[i]=1;S.coh[i]=0.5;
+  }
+  for(var k=0;k<N*P;k++)S.g[k]=randn()*0.1;
+  hist=[];extinct=false;
+  record();
+}
+
+/* ---------- Policy network (per-agent weights) ---------- */
+function forward(i,o,off){
+  var g=S.g,b=i*P,h1=S.h1,h2=S.h2,h,x,s,r;
+  for(h=0;h<H;h++){s=g[b+ob1+h];r=b+h*OBS;for(x=0;x<OBS;x++)s+=g[r+x]*o[x];h1[h]=Math.tanh(s);}
+  for(h=0;h<H;h++){s=g[b+ob2+h];r=b+oW2+h*H;for(x=0;x<H;x++)s+=g[r+x]*h1[x];h2[h]=Math.tanh(s);}
+  for(h=0;h<ACT;h++){s=g[b+ob3+h];r=b+oW3+h*H;for(x=0;x<H;x++)s+=g[r+x]*h2[x];S.act[off+h]=Math.tanh(s);}
+}
+
+/* ---------- One simulation step ---------- */
+function step(){
+  var N=S.N,W=cfg.W,dt=cfg.dt,i,j,k,a,c;
+  var px=S.px,py=S.py,vx=S.vx,vy=S.vy,en=S.en,alive=S.alive,mem=S.mem,coh=S.coh;
+  var start=S.start,items=S.items,cellOf=S.cellOf,fp=S.fp,o=S.o,act=S.act;
+  var cw=W/G,R=cfg.radius,ns=src.length;
+
+  /* spatial hash of living agents */
+  start.fill(0);
+  for(i=0;i<N;i++){
+    if(!alive[i])continue;
+    var cx=Math.min(G-1,Math.floor(px[i]/cw)),cy=Math.min(G-1,Math.floor(py[i]/cw));
+    c=cy*G+cx;cellOf[i]=c;start[c+1]++;
+  }
+  for(c=0;c<G*G;c++)start[c+1]+=start[c];
+  for(c=0;c<G*G;c++)fp[c]=start[c];
+  for(i=0;i<N;i++){if(alive[i])items[fp[cellOf[i]]++]=i;}
+
+  /* pass 1: observe and act, using coherence from the previous step */
+  for(i=0;i<N;i++){
+    if(!alive[i])continue;
+    var local=0;
+    for(a=0;a<ns;a++){var dx=td(px[i]-src[a].x),dy=td(py[i]-src[a].y);local+=Math.exp(-Math.sqrt(dx*dx+dy*dy)/15);}
+    var sw=0,swc=0;c=cellOf[i];var ccx=c%G,ccy=(c/G)|0;
+    for(var oy=-1;oy<=1;oy++)for(var ox=-1;ox<=1;ox++){
+      var cc=((ccy+oy+G)%G)*G+((ccx+ox+G)%G);
+      for(k=start[cc];k<start[cc+1];k++){
+        j=items[k];if(j===i)continue;
+        var ddx=td(px[i]-px[j]),ddy=td(py[i]-py[j]),d=Math.sqrt(ddx*ddx+ddy*ddy);
+        if(d<R){var w=Math.exp(-d/5);sw+=w;swc+=w*coh[j];}
+      }
+    }
+    o[0]=px[i]/W;o[1]=py[i]/W;o[2]=vx[i]/5;o[3]=vy[i]/5;
+    o[4]=local;o[5]=en[i];o[6]=coh[i];o[7]=swc/(sw+1e-6);
+    forward(i,o,i*ACT);
+  }
+
+  /* pass 2: memory, motion, energy, death */
+  var lam=cfg.lambda,nAlive=0;
+  for(i=0;i<N;i++){
+    if(!alive[i])continue;
+    var a0=act[i*ACT];
+    var res=a0-mem[i];
+    mem[i]=lam*mem[i]+(1-lam)*res;
+    coh[i]=Math.min(1,Math.abs(mem[i]));
+    vx[i]=clamp(vx[i]*0.9+act[i*ACT+1]*2*dt,-3,3);
+    vy[i]=clamp(vy[i]*0.9+act[i*ACT+2]*2*dt,-3,3);
+    px[i]=((px[i]+vx[i]*dt)%W+W)%W;
+    py[i]=((py[i]+vy[i]*dt)%W+W)%W;
+    var e=en[i]-(cfg.baseCost+cfg.cohCost*(1-coh[i]))*dt;
+    var harvest=0;
+    for(a=0;a<ns;a++){var hx=td(px[i]-src[a].x),hy=td(py[i]-src[a].y);harvest+=Math.exp(-Math.sqrt(hx*hx+hy*hy)/8)*0.08;}
+    e+=harvest*dt;
+    e=clamp(e,0,cfg.maxE);
+    en[i]=e;
+    if(e<=0.05){alive[i]=0;S.deaths++;}else nAlive++;
+  }
+
+  /* reproduction: at most one birth per step */
+  if(nAlive>0&&nAlive<N*0.95){
+    var cands=[];
+    for(i=0;i<N;i++){if(alive[i]&&en[i]>cfg.repro)cands.push(i);}
+    if(cands.length){
+      var child=-1;
+      for(i=0;i<N;i++){if(!alive[i]){child=i;break;}}
+      if(child>=0){
+        var par=cands[(Math.random()*cands.length)|0];
+        var gb=par*P,cb=child*P,mr=cfg.mutRate,ms=cfg.mutScale;
+        for(k=0;k<P;k++)S.g[cb+k]=S.g[gb+k]+(Math.random()<mr?randn()*ms:0);
+        px[child]=((px[par]+randn()*2)%W+W)%W;
+        py[child]=((py[par]+randn()*2)%W+W)%W;
+        vx[child]=vx[par];vy[child]=vy[par];
+        en[child]=en[par]*0.5;en[par]*=0.5;
+        mem[child]=mem[par]*0.8;coh[child]=coh[par]*0.9;
+        S.gen[child]=S.gen[par]+1;
+        alive[child]=1;nAlive++;S.births++;
+      }
+    }
+  }
+  S.nAlive=nAlive;
+  S.t++;
+  if(S.t%10===0)record();
+}
+
+function stats(){
+  var n=0,se=0,sc=0,mg=0;
+  for(var i=0;i<S.N;i++){if(S.alive[i]){n++;se+=S.en[i];sc+=S.coh[i];if(S.gen[i]>mg)mg=S.gen[i];}}
+  return {n:n,e:n?se/n:0,c:n?sc/n:0,g:mg};
+}
+function record(){
+  var s=stats();
+  hist.push({t:S.t,n:s.n,e:s.e,c:s.c});
+  if(hist.length>MAXPTS)hist.shift();
+}
+
+/* ---------- Color ramp (plasma, trimmed so the low end stays visible on the dark world) ---------- */
+var STOPS=[[13,8,135],[106,0,168],[177,42,144],[225,100,98],[252,166,54],[240,249,33]];
+function plasma(t){
+  t=clamp(t,0,1);var f=t*(STOPS.length-1),i=Math.min(STOPS.length-2,Math.floor(f)),u=f-i,a=STOPS[i],b=STOPS[i+1];
+  return [Math.round(a[0]+(b[0]-a[0])*u),Math.round(a[1]+(b[1]-a[1])*u),Math.round(a[2]+(b[2]-a[2])*u)];
+}
+var LUT=[];
+for(var li=0;li<256;li++){var rgb=plasma(0.22+0.78*li/255);LUT.push('rgb('+rgb[0]+','+rgb[1]+','+rgb[2]+')');}
+function setRamp(){
+  var st=[];for(var q=0;q<=4;q++){st.push(LUT[Math.round(q/4*255)]+' '+(q*25)+'%');}
+  document.getElementById('ramp').style.background='linear-gradient(90deg,'+st.join(',')+')';
+  var lo=document.getElementById('legLo'),hi=document.getElementById('legHi');
+  if(colorBy==='coh'){lo.textContent='coherence 0';hi.textContent='0.5';}
+  else if(colorBy==='en'){lo.textContent='energy 0';hi.textContent=cfg.maxE;}
+  else{lo.textContent='generation 0';hi.textContent='40+';}
+}
+
+/* ---------- Rendering ---------- */
+var world=document.getElementById('world'),wctx=world.getContext('2d');
+function fitCanvas(cv){
+  var dpr=window.devicePixelRatio||1,w=cv.clientWidth,h=cv.clientHeight;
+  var pw=Math.round(w*dpr),ph=Math.round(h*dpr);
+  if(cv.width!==pw||cv.height!==ph){cv.width=pw;cv.height=ph;}
+  return {w:w,h:h,dpr:dpr};
+}
+function token(name){return getComputedStyle(document.documentElement).getPropertyValue(name).trim();}
+
+function drawStar(ctx,x,y,r){
+  ctx.beginPath();
+  for(var i=0;i<10;i++){var rr=i%2?r*0.42:r,an=-Math.PI/2+i*Math.PI/5;ctx.lineTo(x+Math.cos(an)*rr,y+Math.sin(an)*rr);}
+  ctx.closePath();
+}
+
+function drawWorld(){
+  var m=fitCanvas(world),ctx=wctx,s=m.w/cfg.W;
+  ctx.setTransform(m.dpr,0,0,m.dpr,0,0);
+  ctx.fillStyle=token('--world')||'#0a0f10';
+  ctx.fillRect(0,0,m.w,m.h);
+  ctx.strokeStyle='rgba(255,255,255,0.045)';ctx.lineWidth=1;
+  ctx.beginPath();
+  for(var g=10;g<cfg.W;g+=10){ctx.moveTo(g*s,0);ctx.lineTo(g*s,m.h);ctx.moveTo(0,g*s);ctx.lineTo(m.w,g*s);}
+  ctx.stroke();
+  var a,i;
+  for(a=0;a<src.length;a++){
+    var sx=src[a].x*s,sy=src[a].y*s,gr=ctx.createRadialGradient(sx,sy,0,sx,sy,18*s);
+    gr.addColorStop(0,'rgba(182,242,58,0.34)');gr.addColorStop(1,'rgba(182,242,58,0)');
+    ctx.fillStyle=gr;ctx.beginPath();ctx.arc(sx,sy,18*s,0,Math.PI*2);ctx.fill();
+  }
+  for(i=0;i<S.N;i++){
+    if(!S.alive[i])continue;
+    var t=colorBy==='coh'?S.coh[i]/0.5:(colorBy==='en'?S.en[i]/cfg.maxE:S.gen[i]/40);
+    ctx.fillStyle=LUT[Math.round(clamp(t,0,1)*255)];
+    var r=Math.max(1.5,(0.26+0.24*S.en[i]/cfg.maxE)*s);
+    ctx.beginPath();ctx.arc(S.px[i]*s,S.py[i]*s,r,0,Math.PI*2);ctx.fill();
+  }
+  for(a=0;a<src.length;a++){
+    drawStar(ctx,src[a].x*s,src[a].y*s,Math.max(5,1.1*s));
+    ctx.fillStyle='#d4ff6a';ctx.fill();
+    ctx.lineWidth=1;ctx.strokeStyle='rgba(0,0,0,0.55)';ctx.stroke();
+  }
+}
+
+function spark(cv,key,color,ymax,fmt){
+  var m=fitCanvas(cv),ctx=cv.getContext('2d'),w=m.w,h=m.h,padT=6,padB=4,ph=h-padT-padB;
+  ctx.setTransform(m.dpr,0,0,m.dpr,0,0);ctx.clearRect(0,0,w,h);
+  var line=token('--line'),muted=token('--muted');
+  ctx.lineWidth=1;ctx.strokeStyle=line;ctx.beginPath();
+  for(var q=0;q<=2;q++){var y=Math.round(padT+ph*q/2)+0.5;ctx.moveTo(0,y);ctx.lineTo(w,y);}
+  ctx.stroke();
+  ctx.font='10px '+(token('--font-data')||'monospace');ctx.fillStyle=muted;ctx.textBaseline='top';ctx.textAlign='left';
+  ctx.fillText(fmt(ymax),2,padT+2);
+  ctx.textBaseline='bottom';ctx.fillText('0',2,h-padB-2);
+  var n=hist.length;if(n<2)return;
+  var dx=(w-6)/(MAXPTS-1),pts=[];
+  for(var i=0;i<n;i++)pts.push([i*dx,padT+ph*(1-clamp(hist[i][key]/ymax,0,1))]);
+  ctx.beginPath();ctx.moveTo(pts[0][0],padT+ph);
+  for(i=0;i<n;i++)ctx.lineTo(pts[i][0],pts[i][1]);
+  ctx.lineTo(pts[n-1][0],padT+ph);ctx.closePath();
+  ctx.globalAlpha=0.16;ctx.fillStyle=color;ctx.fill();ctx.globalAlpha=1;
+  ctx.beginPath();for(i=0;i<n;i++){if(i)ctx.lineTo(pts[i][0],pts[i][1]);else ctx.moveTo(pts[i][0],pts[i][1]);}
+  ctx.lineWidth=1.75;ctx.lineJoin='round';ctx.strokeStyle=color;ctx.stroke();
+  var e=pts[n-1];ctx.beginPath();ctx.arc(e[0],e[1],3,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();
+}
+
+var $=function(id){return document.getElementById(id);};
+function render(){
+  drawWorld();
+  var s=stats();
+  $('sStep').textContent=S.t;$('sBirths').textContent=S.births;$('sDeaths').textContent=S.deaths;$('sGen').textContent=s.g;
+  $('vAlive').textContent=s.n+' / '+S.N;$('vEn').textContent=s.e.toFixed(3);$('vCoh').textContent=s.c.toFixed(3);
+  var maxC=0;for(var i=0;i<hist.length;i++)if(hist[i].c>maxC)maxC=hist[i].c;
+  spark($('chPop'),'n',token('--c-pop'),S.N,function(v){return String(Math.round(v));});
+  spark($('chEn'),'e',token('--c-en'),cfg.maxE,function(v){return v.toFixed(1);});
+  spark($('chCoh'),'c',token('--c-coh'),Math.max(0.5,Math.ceil(maxC*20)/20),function(v){return v.toFixed(2);});
+  var st=$('status');
+  st.textContent=extinct?'Population extinct at step '+S.t+'. Reset to start again.':(playing?'Running':'Paused');
+}
+
+/* ---------- Loop ---------- */
+function frame(){
+  if(playing){
+    var t0=performance.now();
+    for(var k=0;k<cfg.speed;k++){step();if(S.nAlive===0||performance.now()-t0>12)break;}
+    if(S.nAlive===0){playing=false;extinct=true;record();syncPlay();}
+    dirty=true;
+  }
+  if(dirty){render();dirty=false;}
+  requestAnimationFrame(frame);
+}
+function syncPlay(){$('play').textContent=playing?'Pause':'Play';}
+
+/* ---------- Controls ---------- */
+var DEFS=[
+  {group:'Environment',items:[
+    {key:'sources',label:'Energy sources',min:1,max:16,step:1,fmt:function(v){return v;}},
+    {key:'baseCost',label:'Base energy cost',min:0,max:0.08,step:0.005,fmt:function(v){return v.toFixed(3);}},
+    {key:'cohCost',label:'Coherence cost',min:0,max:0.08,step:0.005,fmt:function(v){return v.toFixed(3);}}
+  ]},
+  {group:'Evolution',items:[
+    {key:'repro',label:'Reproduce above',min:1.2,max:2.9,step:0.1,fmt:function(v){return v.toFixed(1);}},
+    {key:'mutRate',label:'Mutation rate',min:0,max:1,step:0.01,fmt:function(v){return v.toFixed(2);}},
+    {key:'mutScale',label:'Mutation scale',min:0,max:0.5,step:0.01,fmt:function(v){return v.toFixed(2);}}
+  ]},
+  {group:'Memory and run',items:[
+    {key:'lambda',label:'Memory decay λ',min:0.8,max:0.995,step:0.005,fmt:function(v){return v.toFixed(3);}},
+    {key:'N',label:'Agent slots',min:50,max:800,step:10,fmt:function(v){return v;},resets:true},
+    {key:'speed',label:'Steps per frame',min:1,max:20,step:1,fmt:function(v){return v;}}
+  ]}
+];
+(function buildControls(){
+  var form=$('controls');
+  DEFS.forEach(function(grp){
+    var fs=document.createElement('fieldset'),lg=document.createElement('legend'),grid=document.createElement('div');
+    lg.textContent=grp.group;grid.className='ctl-grid';fs.appendChild(lg);fs.appendChild(grid);
+    grp.items.forEach(function(d){
+      var wrap=document.createElement('div'),lab=document.createElement('label'),out=document.createElement('output'),inp=document.createElement('input');
+      wrap.className='ctl';
+      inp.type='range';inp.id='c_'+d.key;inp.min=d.min;inp.max=d.max;inp.step=d.step;inp.value=cfg[d.key];
+      lab.setAttribute('for',inp.id);lab.textContent=d.label+(d.resets?' (resets)':'');
+      out.setAttribute('for',inp.id);out.textContent=d.fmt(cfg[d.key]);lab.appendChild(out);
+      inp.addEventListener('input',function(){
+        var v=parseFloat(inp.value);out.textContent=d.fmt(v);
+        if(d.resets)return;
+        cfg[d.key]=v;
+        if(d.key==='sources'){
+          while(src.length>v)src.pop();
+          while(src.length<v)src.push({x:Math.random()*cfg.W,y:Math.random()*cfg.W});
+        }
+        dirty=true;
+      });
+      if(d.resets){inp.addEventListener('change',function(){cfg[d.key]=parseFloat(inp.value);resetPop();});}
+      wrap.appendChild(lab);wrap.appendChild(inp);grid.appendChild(wrap);
+    });
+    form.appendChild(fs);
+  });
+})();
+
+function resetPop(){newPop();dirty=true;if(!playing&&!matchMedia('(prefers-reduced-motion: reduce)').matches){playing=true;}syncPlay();}
+$('play').addEventListener('click',function(){
+  if(extinct){newPop();}
+  playing=!playing;syncPlay();dirty=true;
+});
+$('stepOnce').addEventListener('click',function(){playing=false;syncPlay();if(S.nAlive>0){step();}else{extinct=true;}dirty=true;});
+$('reset').addEventListener('click',resetPop);
+$('newWorld').addEventListener('click',function(){src=newSources(cfg.sources);resetPop();});
+$('colorBy').addEventListener('change',function(e){colorBy=e.target.value;setRamp();dirty=true;});
+
+/* drag energy sources */
+var drag=-1;
+function toWorld(ev){var r=world.getBoundingClientRect();return {x:(ev.clientX-r.left)/r.width*cfg.W,y:(ev.clientY-r.top)/r.height*cfg.W};}
+function nearest(p){var best=-1,bd=5;for(var i=0;i<src.length;i++){var d=Math.hypot(src[i].x-p.x,src[i].y-p.y);if(d<bd){bd=d;best=i;}}return best;}
+world.addEventListener('pointerdown',function(ev){
+  var i=nearest(toWorld(ev));
+  if(i>=0){drag=i;world.setPointerCapture(ev.pointerId);world.style.cursor='grabbing';ev.preventDefault();}
+});
+world.addEventListener('pointermove',function(ev){
+  var p=toWorld(ev);
+  if(drag>=0){src[drag].x=clamp(p.x,0,cfg.W);src[drag].y=clamp(p.y,0,cfg.W);dirty=true;}
+  else{world.style.cursor=nearest(p)>=0?'grab':'default';}
+});
+function endDrag(){if(drag>=0){drag=-1;world.style.cursor='default';}}
+world.addEventListener('pointerup',endDrag);
+world.addEventListener('pointercancel',endDrag);
+
+/* redraw on resize and theme change */
+if(window.ResizeObserver){new ResizeObserver(function(){dirty=true;}).observe(document.querySelector('.stage'));}
+window.addEventListener('resize',function(){dirty=true;});
+try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){dirty=true;});}catch(e){}
+new MutationObserver(function(){dirty=true;}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+/* ---------- Start ---------- */
+src=newSources(cfg.sources);
+newPop();
+setRamp();
+var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduced){for(var w=0;w<200;w++)step();record();playing=false;}
+else{playing=true;}
+syncPlay();
+requestAnimationFrame(frame);
+})();
+</script>
+
+</body></html>
