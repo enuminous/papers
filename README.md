@@ -12,6 +12,8 @@
 
 - [Interactive laboratory directory](#interactive-laboratory-directory)
 - [Documents](#documents)
+- [Research companions and supporting documents](#research-companions-and-supporting-documents)
+- [Demonstrations, media and credits](#demonstrations-media-and-credits)
 - [Connected physics research units](#connected-physics-research-units)
 
 
@@ -72,15 +74,38 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[A Frozen Election-Eve Polling Snapshot Against November 2026 Returns: A Preliminary Retrospective Audit](2026-11-04-Frozen-Polling-vs-Election-Returns-Preliminary-Retrospective-Audit.md)** — 4 November 2026. Retrospective comparison of the archived polling snapshot with previously transcribed election-night margins. Preliminary secondary-source transcription; neither a validated EFMW forecast nor certified election results.
+
 - **[A Field That Remembers: Inside the Wrightian Tensor Laboratory](A-Field-That-Remembers-Inside-the-Wrightian-Tensor-Laboratory-2026-11-04.md)** — 4 November 2026. A journalistic feature on the Information-Tensor laboratory: evolving fields and tracking memory, tensor diagnostics, literal Scalar-23 growth, bounded-map saturation, inspectable semantics, 35 passing software tests and the physical questions still open. [Laboratory source and launch instructions](https://github.com/enuminous/Information-Tensor).
 
 - **[Geometry-Foundation-002 — Interactive Counterexample Laboratory for EFMW Source Identifiability and Conditional Conservation](Geometry-Foundation-002-Interactive-Counterexample-Laboratory-ME006-ME007-2026-11-03.md)** · [Live Geometry Lab](https://enuminous.github.io/Geometry/) — 3 November 2026. Research methods and results paper documenting eight lab modes, 18 curated experiments, 14 bounded JavaScript checks, a conditional nonconservation counterexample, exact source-split degeneracy, 2D coordinate controls, and the unresolved G3 physical discriminator. Explicitly not a full coupled relativity proof or an observation of new gravity.
+
+- **[G3-001: Conditional Identifiability of an Injected Informational Source in the Geometry Field Lab](Geometry-G3-001-Synthetic-Identifiability-Initial-Results-2026-11-03.md)** · [Replay script](research/geometry-g3-001/replay.cjs) · [Receipt](research/geometry-g3-001/receipt.json) — 3 November 2026. Exploratory synthetic results with a separately measured ordinary-matter channel; not physical evidence of a new gravitational interaction.
+
+- **[EFMW Physical Validation: A Falsifiable Research Roadmap](EFMW-Physical-Validation-Research-Roadmap-2026-11-03.md)** — 3 November 2026. Proposed protocol for dimensional specification, noncircular predictions, established-theory comparators and independent evidence. Physical validation remains unresolved. The accompanying research sequence is indexed below.
+
+| Physical-validation study — 3 November 2026 | Scope and reported status |
+|---|---|
+| [Attempt 001: Phase/Vorticity Observable Bridge](EFMW-Physical-Validation-Attempt-001-Phase-Vorticity-2026-11-03.md) | Conditional kinematic and dimensional checks; EFMW-specific observable unresolved. |
+| [Attempt 003: Canonical Action and Condensate Bridge](EFMW-Physical-Validation-Attempt-003-Canonical-Action-2026-11-03.md) | Source audit and conditional derivation; no empirical claim. |
+| [Attempt 004: Phenomenological Density-Gradient Coupling](EFMW-Physical-Validation-Attempt-004-Density-Gradient-Coupling-2026-11-03.md) | Proposed effective interaction; canonical EFMW origin and empirical validation unresolved. |
+| [Attempt 005: Numerical Vortex Profiles](EFMW-Physical-Validation-Attempt-005-Numerical-Vortex-Profiles-2026-11-03.md) | Numerical solutions of the proposed model; not measured vortex data. |
+| [Attempt 006: Convergence Study](EFMW-Physical-Validation-Attempt-006-Numerical-Convergence-2026-11-03.md) | Numerical refinement checks; no EFMW-specific physical validation. |
+| [Attempt 007: Comparator and Identifiability Audit](EFMW-Physical-Validation-Attempt-007-Comparator-Identifiability-2026-11-03.md) | Analytical comparator audit; external evidence not tested. |
+| [Attempt 008: Finite-Range Degeneracy Audit](EFMW-Physical-Validation-Attempt-008-Finite-Range-Degeneracy-2026-11-03.md) | Low-momentum dispersion degeneracy with a conventional finite-range interaction. |
+| [Recursive Closure Review: Attempts 001–008](EFMW-Physical-Validation-Recursive-Closure-2026-11-03.md) | Closes this EFMW-specific novelty candidate at second-order density-gradient level; empirical validation remains unresolved. |
+
+The closure review discusses Attempt 002, but no standalone Attempt 002 document is present in this repository.
 
 - **[Recursive Coherence as a Falsifiable Principle — EFMW Dissertation-Style Research Monograph](EFMW-Dissertation-Recursive-Coherence-Evidence-Bounded-Verification-2026-11-02.md) · [**Read complete HTML edition**](EFMW-Dissertation-Recursive-Coherence-Evidence-Bounded-Verification-2026-11-02.html)** — 2 November 2026. Complete evidence-bounded research synthesis (11 main sections, ten appendices) examining frozen synthetic early-warning results, the failed null-alarm screen, exact equivalence to conventional signed EWMA, Lean coverage, measured-data negative controls, physical identifiability, and prospective falsification requirements. **Independent research draft; not a submitted or peer-reviewed dissertation.**
 
 - **[2026 U.S. election-eve polling snapshot and EFMW-inspired residual audit protocol](2026-11-02-US-Election-Eve-Polling-Snapshot-EFMW-Residual-Protocol.md)** — November 2, 2026. Frozen 50-state transcript, 31 recorded poll percentage-point gaps, machine-readable CSV, polling-method provenance, and explicit limits: **not a winner forecast or validated EFMW election model**.
 
 - **[Matthew Chenoweth Wright: The Work, the Ambition, and the Unfinished Verdict](Matthew-Chenoweth-Wright-A-Critical-Review-of-the-Work-and-Legacy-2026.md)** — 2 November 2026. A comprehensive critical review of his independent music, multimedia art, poetry, fiction, essays, mathematical formalization, exploratory physical sciences, human–AI collaboration, and Monolithic LLC; distinguishes documented achievement from unverified recognition and scientific claims.
+
+- **[Mondello Lean proof: reproducibility assessment](Mondello-Reproducibility-Assessment-2026-11-02.md)** — 2 November 2026. Follow-up to the October 26 audit identifying missing provenance and fresh kernel-replay evidence. Status remains unresolved; an environment limitation is not a proof failure.
+
+- **[UCRM v1.2: Full Independent Referee Report — A Case Study in Crank-Science Methodology](UCRM-v1.2-Full-Referee-Report-2026-11-01.md)** · [Independent null-check script](UCRM-v1.2-Independent-Null-Checks-2026-11-01.py) — 1 November 2026. Unsolicited, AI-assisted technical assessment of the specified manuscript, examining circular validation, numerical checks and physical claims. The report recommends rejection in its present form; it is not a journal-appointed review.
 
 - **[Referee report on retrocausal access via parallel qudit sheets](Bloke-Parallel-Qudit-Sheets-Referee-Report-2026-11-01.md)** — 1 November 2026. Artifact-specific review of the two posters attributed to John Bloke (@BlokeMan00): triangular inversion, causal orientation, sector transfer, uAMWI attribution, and noise claims. Includes preserved exhibits and seven reproducible exact algebra checks; does not establish physical time travel.
 
@@ -134,9 +159,17 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 - [A Thank-You to Alex Garland for *Devs*](A-Thank-You-to-Alex-Garland-for-Devs.md) — 23 October 2026. Matthew's public memo of appreciation for the series that helped inspire Devs 2.0.
 
+- **[DEV2-001: Provenance and Adversarial Criticism Benchmark — original protocol](DEVS2-Protocol.md)** — Preserved draft proposal for matched-budget evaluation of provenance labels and adversarial criticism. Not frozen; no official experimental result. The executable companion follows.
+
 - [DEV2-001: Provenance and Adversarial Criticism Benchmark](research/dev2-001/README.md) — 22 October 2026. Executable **unfrozen draft** associated with *Devs 2.0*: pinned corpus, question schema, three original arms and two conventional baselines, independent human scoring and paired analysis. Matthew approved the 120 / 240 / 120 question mix and 20-point minimum improvement; remaining design and freeze requirements are pending. No model experiment or physics validation is reported.
 
 - [External Formalization of an EFMW Inspired Residual Core in Weaver OS](Weaver-OS-EFMW-Residual-Core-Formalization.md) — 22 October 2026. Pinned-source review of an attributed external Lean package: twelve conventional EWMA theorems, five modeled authority-boundary theorems, and a successful CI record, with explicit limits on novelty, independence, empirical validation, and runtime safety.
+
+- **[EFMW-F001: Recursive Coherence Dynamics — A Falsifiable Estimator Specification](EFMW-F001-Recursive-Coherence-Dynamics.md)** — 21 October 2026. Candidate estimator combining innovation memory, coherence statistics, change detection and robust correction. Stability, comparative performance and experimental validation remain open.
+
+- **[The Monolithic Zoo Certified Auditor Network](Monolithic-Zoo-Certified-Auditor-Licensing-Business-Model.md)** — 21 October 2026. Proposed distributed business model for reproducible scientific and AI-assurance audits. Exploratory strategy, not an approved certification scheme or evidence of customer demand.
+
+- **[Novel Physical-Law Candidate Register](NOVEL-PHYSICAL-LAW-CANDIDATE-REGISTER.md)** — 21 October 2026. Provisional cross-repository claim and evidence ledger. Its candidate families are research hypotheses; the register does not identify an independently confirmed new fundamental law.
 
 - [The Record: Donald J. Trump in Documents, Outcomes, and Contested Claims](The-Record-Donald-J-Trump-Research-Draft.md) · [PDF](The_Record_Donald_J_Trump_Research_Draft.pdf) · [Word](The_Record_Donald_J_Trump_Research_Draft.docx) — 20 October 2026. Ten-chapter documentary biography research draft, approximately 18,900 narrative words and 149 source notes; the PDF is 52 pages. Evidence cutoff: 20 October 2026. This is a shorter draft, not the requested 400–450-page finished book.
 - [The Monolithic Zoo: An Adversarial, Provenance-Aware Architecture for Formal and Empirical Scientific Claim Evaluation](The-Monolithic-Zoo-Dissertation.md) — 20 October 2026. Dissertation-style monograph surveying the 46-animal Lean package, the 102-equation audit and Post-156 evidence ledger; proposes formal claim semantics, falsification and reproducibility criteria, matched-comparator experiments, and governance safeguards.
@@ -187,6 +220,33 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 - [great-recursion-primordial-rotation.md](great-recursion-primordial-rotation.md)
 - [monolithic-open-mathematical-intelligence-revolution.md](monolithic-open-mathematical-intelligence-revolution.md)
 - [spacex_xai_efmw_2045_x_article.md](spacex_xai_efmw_2045_x_article.md)
+
+
+- [To the writer on Qualia](To%20the%20writer%20on%20Qualia) — Correspondence on constructed experience, delayed observation, predictive processing and the need for discriminating evidence.
+
+### Research companions and supporting documents
+
+These links provide direct access to nested reports, protocols, source snapshots and verification notes. They are supporting records, not additional independent confirmations; dated reports retain the status of the work at that time.
+
+| Project | Companion documents |
+|---|---|
+| QNET-001 | [Frozen bounded-study protocol](QNET-001-artifacts/PROTOCOL.md) |
+| BSD parity | [Publication provenance](formal/bsd-parity/PUBLICATION.md) |
+| Observer–discrepancy local repair | [Formalization scope and assumptions](formal/efmw-local-repair/README.md) · [Reproducible Lean verification](formal/efmw-local-repair/VERIFICATION.md) |
+| CMB alignment: provenance and toy simulation | [Provenance and recovery ledger](research/cmb-alignment/PROVENANCE.md) · [Universe 003 statistical audit](research/cmb-alignment/recovered/Universe_003_Audit.md) |
+| CMB alignment: conditional derivation and model records | [Two-scalar local-vorticity derivation](research/cmb-alignment/nonzero-vorticity/v1/DERIVATION.md) · [Frozen C1 candidate](research/cmb-alignment/nonzero-vorticity/v1/source/C1-CANDIDATE.md) · [Prediction lock](research/cmb-alignment/prediction-lock/v1/LOCK.md) · [C1Q cosmological model](research/cmb-alignment/prediction-lock/v1/source/C1Q-MODEL.md) · [Linear perturbation closure](research/cmb-alignment/prediction-lock/v1/source/C1Q-PERTURBATIONS.md) |
+| DEV2-001: draft design and evaluation | [Executable protocol](research/dev2-001/PROTOCOL.md) · [Design comparison](research/dev2-001/DESIGN.md) · [Decision record](research/dev2-001/APPROVALS.md) · [Independent scoring](research/dev2-001/SCORING.md) |
+| DEV2-001: reproduction and provenance | [Reproducibility instructions](research/dev2-001/REPRODUCIBILITY.md) · [Run report template — no run or result](research/dev2-001/RUN.md) · [Source and reuse audit](research/dev2-001/SOURCE_AUDIT.md) |
+| EFMW Binance traceback | [HTML report](research/efmw-binance-trace-001/EFMW-Binance-Traceback-2026-10-30.html) |
+| EFMW-BIO-001 | [Frozen exploratory protocol](research/efmw-bio-001/PROTOCOL.md) |
+| EFMW-CX-001 | [HTML report](research/efmw-cx-001/report.html) · [Narrative fragment](research/efmw-cx-001/narrative.html) · Archived source records: [review entry](research/efmw-cx-001/sources/review_entry.md), [source status labels](research/efmw-cx-001/sources/source_status.md), [open obligations](research/efmw-cx-001/sources/open_obligations.md) |
+| RC-001 rotation convergence | [Package and updated status](research/rotation-convergence-001/README.md) · [21 October execution report](research/rotation-convergence-001/EXECUTION-REPORT-2026-10-21.md) · [Frozen Zoo audit](research/rotation-convergence-001/ZOO-AUDIT.md) · [Bounded execution audit](research/rotation-convergence-001/ZOO-RUN-2026-10-21.md) · [Unexecuted physical-cosmology protocol](research/rotation-convergence-001/COSMOLOGY-PROTOCOL.md) |
+
+### Demonstrations, media and credits
+
+- [EFMW Neural CA — browser source](EFMW%20Neural%20CA.html) · [Python simulation source](efmw_neural_ca.py) — Cellular-automaton demonstration; download the HTML file to open it locally.
+- [Coding the Cosmos](Coding_the_Cosmos.mp4) — MP4 video.
+- [Credits](Credits.md) — Attribution notes distinguishing direct research contributions, established physics and proposed comparisons.
 
 <!-- ENUMINOUS-RESEARCH-CHAIN:START -->
 ## Connected physics research units
