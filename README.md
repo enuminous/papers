@@ -74,6 +74,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Where Does the Memory's Energy Go? — WITD–002](WITD-002-Where-Does-the-Memorys-Energy-Go-2026-11-05.md)** — 5 November 2026. Energy accounting for the Information-Tensor lab: an explicit storage/work/loss identity, a constant-weight tensor representation obstruction, and conventional exponential-memory equivalence. Eleven numerical gate groups pass and two time-ratio gates fail; both failures are retained. [Derivation, code and results](https://github.com/enuminous/Information-Tensor/tree/main/research/witd-002). No physical validation or covariant completion is claimed.
+
 - **[A Frozen Election-Eve Polling Snapshot Against November 2026 Returns: A Preliminary Retrospective Audit](2026-11-04-Frozen-Polling-vs-Election-Returns-Preliminary-Retrospective-Audit.md)** — 4 November 2026. Retrospective comparison of the archived polling snapshot with previously transcribed election-night margins. Preliminary secondary-source transcription; neither a validated EFMW forecast nor certified election results.
 
 - **[A Field That Remembers: Inside the Wrightian Tensor Laboratory](A-Field-That-Remembers-Inside-the-Wrightian-Tensor-Laboratory-2026-11-04.md)** — 4 November 2026. A journalistic feature on the Information-Tensor laboratory: evolving fields and tracking memory, tensor diagnostics, literal Scalar-23 growth, bounded-map saturation, inspectable semantics, 35 passing software tests and the physical questions still open. [Laboratory source and launch instructions](https://github.com/enuminous/Information-Tensor).
