@@ -74,6 +74,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Do Opposing Errors Predict Human Confidence?](Do-Opposing-Errors-Predict-Human-Confidence-2026-11-06.md)** — 6 November 2026. Reanalysis of 98,870 human trials finds little additional predictive value for weighted absolute error. Includes the [replay and 362 exact matched stimulus pairs](research/metacognition-matched-histories/README.md).
+
 - **[When Errors Agree](When-Errors-Agree-Directional-Coherence-in-EFMW-Residual-Memory-2026-11-06.md)** — 6 November 2026. Directional coherence as the fraction of weighted error that survives cancellation. Gives an exact counterexample for mismatched memory lengths and interprets Sutherland’s exploratory EXP-003 reversal.
 
 - **[The Signed-Memory Identity and Human Self-Correction](The-Signed-Memory-Identity-and-Human-Self-Correction-2026-11-06.md)** — 6 November 2026. A proof of the signed-memory identity and its exact cancellation gap, a replay on 40 frozen synthetic traces, and two proposed tests of human judgment revision.
