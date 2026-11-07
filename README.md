@@ -74,6 +74,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Matched error histories and human confidence](Matched-Error-Histories-and-Human-Confidence-Study-Protocol-2026-11-07.md)** · [Editable protocol](Matched-Error-Histories-and-Human-Confidence-Study-Protocol-2026-11-07.docx) — 7 November 2026. Prospective controlled-study protocol with matched histories, fixed-probe confidence, correction equivalence, competing models, and prospective power rules. **Draft, not preregistered; no prospective participants or results.** Final sample size, model parameters, and ethics details remain open.
+
 - **[Do Opposing Errors Predict Human Confidence?](Do-Opposing-Errors-Predict-Human-Confidence-2026-11-06.md)** — 6 November 2026. Reanalysis of 98,870 human trials finds little additional predictive value for weighted absolute error. Includes the [replay and 362 exact matched stimulus pairs](research/metacognition-matched-histories/README.md).
 
 - **[When Errors Agree](When-Errors-Agree-Directional-Coherence-in-EFMW-Residual-Memory-2026-11-06.md)** — 6 November 2026. Directional coherence as the fraction of weighted error that survives cancellation. Gives an exact counterexample for mismatched memory lengths and interprets Sutherland’s exploratory EXP-003 reversal.
