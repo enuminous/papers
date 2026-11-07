@@ -1,0 +1,31 @@
+Completed original fold 0
+Completed original fold 1
+Completed original fold 2
+Completed original fold 3
+Completed original fold 4
+Completed rating_cues fold 0
+Completed rating_cues fold 1
+Completed rating_cues fold 2
+Completed rating_cues fold 3
+Completed rating_cues fold 4
+Completed circular-shift diagnostic seed 20261107
+Completed circular-shift diagnostic seed 20261108
+Completed circular-shift diagnostic seed 20261109
+Completed circular-shift diagnostic seed 20261110
+Completed circular-shift diagnostic seed 20261111
+Completed circular-shift diagnostic seed 20261112
+Completed circular-shift diagnostic seed 20261113
+Completed circular-shift diagnostic seed 20261114
+Completed circular-shift diagnostic seed 20261115
+Completed circular-shift diagnostic seed 20261116
+Completed circular-shift diagnostic seed 20261117
+Completed circular-shift diagnostic seed 20261118
+Completed circular-shift diagnostic seed 20261119
+Completed circular-shift diagnostic seed 20261120
+Completed circular-shift diagnostic seed 20261121
+Completed circular-shift diagnostic seed 20261122
+Completed circular-shift diagnostic seed 20261123
+Completed circular-shift diagnostic seed 20261124
+Completed circular-shift diagnostic seed 20261125
+Completed circular-shift diagnostic seed 20261126
+Behavior and diagnostic outputs written: /workspace/scratch/f74477cd559d/papers-review/research/metacognition-matched-histories/exploratory-multiscale/results

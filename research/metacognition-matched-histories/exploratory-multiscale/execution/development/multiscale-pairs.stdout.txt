@@ -1,0 +1,91 @@
+{
+  "rows_including_mirrors": 362,
+  "pairs_modulo_global_sign": 181,
+  "all_original_match_checks": "PASS",
+  "different_by_feature": {
+    "local": 0,
+    "local_sq": 0,
+    "fast": 362,
+    "fast_sq": 362,
+    "slow": 362,
+    "slow_sq": 362,
+    "haar4": 320,
+    "haar4_sq": 276,
+    "mag_fast": 362,
+    "mag_slow": 362
+  },
+  "different_by_bank": {
+    "C": 362,
+    "A": 362,
+    "C_A": 362
+  },
+  "minimum_nonzero_absolute_difference": {
+    "fast": "45/4096",
+    "fast_sq": "45/4194304",
+    "slow": "153/4096",
+    "slow_sq": "2079/33554432",
+    "haar4": "1",
+    "haar4_sq": "1",
+    "mag_fast": "135/8192",
+    "mag_slow": "9/2048"
+  },
+  "maximum_absolute_difference": {
+    "fast": "189/4096",
+    "fast_sq": "1312605/33554432",
+    "slow": "333/4096",
+    "slow_sq": "2564433/33554432",
+    "haar4": "1",
+    "haar4_sq": "7",
+    "mag_fast": "567/8192",
+    "mag_slow": "333/8192"
+  },
+  "fixed_original_example_with_appended_zero": {
+    "history_A": [
+      3,
+      0,
+      -1,
+      2,
+      1,
+      0
+    ],
+    "history_B": [
+      -1,
+      2,
+      3,
+      0,
+      1,
+      0
+    ],
+    "features_A": {
+      "m": "31/64",
+      "Q": "61/64",
+      "B": "39/64",
+      "local": "-1",
+      "local_sq": "1",
+      "fast": "-871/4096",
+      "fast_sq": "758641/16777216",
+      "slow": "-233/4096",
+      "slow_sq": "54289/16777216",
+      "haar4": "0",
+      "haar4_sq": "0",
+      "mag_fast": "1209/4096",
+      "mag_slow": "3081/4096"
+    },
+    "features_B": {
+      "m": "31/64",
+      "Q": "61/64",
+      "B": "33/64",
+      "local": "-1",
+      "local_sq": "1",
+      "fast": "-1051/4096",
+      "fast_sq": "1104601/16777216",
+      "slow": "-485/4096",
+      "slow_sq": "235225/16777216",
+      "haar4": "-1",
+      "haar4_sq": "1",
+      "mag_fast": "939/4096",
+      "mag_slow": "2955/4096"
+    }
+  },
+  "interpretation": "Selected constructed bank, not human observations; counts are descriptive."
+}

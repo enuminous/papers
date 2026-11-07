@@ -1,0 +1,12 @@
+test_block_reset (test_multiscale.SignalChecks.test_block_reset) ... ok
+test_constant_signal (test_multiscale.SignalChecks.test_constant_signal) ... ok
+test_direct_rational_reference (test_multiscale.SignalChecks.test_direct_rational_reference) ... ok
+test_haar_normalization (test_multiscale.SignalChecks.test_haar_normalization) ... ok
+test_no_current_or_future_error_leakage (test_multiscale.SignalChecks.test_no_current_or_future_error_leakage) ... ok
+test_self_mirror_and_local_match (test_multiscale.SignalChecks.test_self_mirror_and_local_match) ... ok
+test_standardization_is_training_only (test_multiscale.SignalChecks.test_standardization_is_training_only) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.040s
+
+OK

@@ -1,0 +1,22 @@
+test_block_reset (test_multiscale.SignalChecks.test_block_reset) ... ok
+test_constant_signal (test_multiscale.SignalChecks.test_constant_signal) ... ok
+test_direct_rational_reference (test_multiscale.SignalChecks.test_direct_rational_reference) ... /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/fractions.py:754: RuntimeWarning: overflow encountered in scalar multiply
+  return Fraction._from_coprime_ints(na * nb, db * da)
+FAIL
+test_haar_normalization (test_multiscale.SignalChecks.test_haar_normalization) ... ok
+test_no_current_or_future_error_leakage (test_multiscale.SignalChecks.test_no_current_or_future_error_leakage) ... ok
+test_self_mirror_and_local_match (test_multiscale.SignalChecks.test_self_mirror_and_local_match) ... ok
+test_standardization_is_training_only (test_multiscale.SignalChecks.test_standardization_is_training_only) ... ok
+
+======================================================================
+FAIL: test_direct_rational_reference (test_multiscale.SignalChecks.test_direct_rational_reference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f74477cd559d/papers-review/research/metacognition-matched-histories/exploratory-multiscale/test_multiscale.py", line 17, in test_direct_rational_reference
+    self.assertAlmostEqual(result[k], float(v), places=13)
+AssertionError: np.float64(0.7701591834426618) != 1.7581880161734077e-05 within 13 places (np.float64(0.7701416015625) difference)
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.018s
+
+FAILED (failures=1)

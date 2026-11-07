@@ -1,0 +1,67 @@
+{
+  "github": {
+    "repository": "enuminous/papers",
+    "base_commit": "65f50f6710efa6801169429e5a5ad567f4d567d8",
+    "source_files": [
+      {
+        "path": "research/metacognition-matched-histories/README.md",
+        "git_blob_sha": "eae074547cf08c0730406f8ed08341372c409538",
+        "size": 2274
+      },
+      {
+        "path": "research/metacognition-matched-histories/analyze.py",
+        "git_blob_sha": "2097229d2be257d837ad306c64bd92e2ce11dd33",
+        "size": 5500
+      },
+      {
+        "path": "research/metacognition-matched-histories/design.md",
+        "git_blob_sha": "1f99b9412e7ce720583f692db526afaf41d45484",
+        "size": 2013
+      },
+      {
+        "path": "research/metacognition-matched-histories/matched.py",
+        "git_blob_sha": "1bd63150af5592e2474e48324750e9f58ca193cd",
+        "size": 1925
+      },
+      {
+        "path": "research/metacognition-matched-histories/pairs.csv",
+        "git_blob_sha": "8a080549d6ef6cdce5813dc49ddda134bd6ffa49",
+        "size": 26947
+      },
+      {
+        "path": "research/metacognition-matched-histories/requirements.txt",
+        "git_blob_sha": "9a00433467419dba082470cd7b0f3270cf2641d9",
+        "size": 61
+      },
+      {
+        "path": "research/metacognition-matched-histories/results.json",
+        "git_blob_sha": "9029c1de4074052959cd1a4ffc4c16577d89f83b",
+        "size": 2816
+      },
+      {
+        "path": "research/metacognition-matched-histories/sensitivity.json",
+        "git_blob_sha": "c0dc249d7cab75f182138810c3178521a4c15b0d",
+        "size": 1971
+      },
+      {
+        "path": "research/metacognition-matched-histories/sensitivity.py",
+        "git_blob_sha": "9f4961d9563d069208f6489d1423dc51fa0c4d5f",
+        "size": 2283
+      }
+    ],
+    "retrieval": "GitHub connector fetch_file at immutable commit; no repository mutations"
+  },
+  "download_commands_executed": [
+    "curl --fail --location --retry 1 --connect-timeout 15 --max-time 55 https://osf.io/download/v89g7/ -o raw-data/t1.csv >execution/download-t1.log 2>&1",
+    "curl --fail --location --retry 1 --connect-timeout 15 --max-time 55 https://osf.io/download/59py4/ -o raw-data/t2.csv >execution/download-t2.log 2>&1"
+  ],
+  "download_exit_codes_observed": [
+    0,
+    0
+  ],
+  "timestamp_note": "Download start times were not separately instrumented; raw curl output is retained. Later analysis execution timestamps are recorded directly.",
+  "plan_local_commit_before_analysis": "c4a8cefb80270a397b8cefc10671b67b7a4f402e",
+  "plan_sha256": "14a028a667882e583591c274343925318c3739f1c4a7db1e47738406213efca5",
+  "raw_data_redistributed": false,
+  "source_retrieval_note": "Each original was retrieved by GitHub fetch_file(repository_full_name=enuminous/papers, ref=the fixed commit, path=manifest path). Returned UTF-8 bytes were checked against the returned Git blob SHA."
+}

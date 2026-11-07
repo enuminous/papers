@@ -1,0 +1,82 @@
+{
+  "original_files_unchanged": true,
+  "original_source_files": [
+    {
+      "name": "README.md",
+      "bytes": 2274,
+      "git_blob_sha": "eae074547cf08c0730406f8ed08341372c409538",
+      "sha256": "bd54c5ca2e63dab22d6a6e0dd261c608ea1260e32ad1945743cab07c9703f9ce"
+    },
+    {
+      "name": "analyze.py",
+      "bytes": 5500,
+      "git_blob_sha": "2097229d2be257d837ad306c64bd92e2ce11dd33",
+      "sha256": "3cd8aeb81bc599fef18a2ec6b4f0af6368f9c794b1147a178dfb435dc16c902e"
+    },
+    {
+      "name": "design.md",
+      "bytes": 2013,
+      "git_blob_sha": "1f99b9412e7ce720583f692db526afaf41d45484",
+      "sha256": "32c415b90f21533b060ab5dcb75ed94b9617f2e556fc9f6dee12e6a9baaaac32"
+    },
+    {
+      "name": "matched.py",
+      "bytes": 1925,
+      "git_blob_sha": "1bd63150af5592e2474e48324750e9f58ca193cd",
+      "sha256": "0e8852c5c83119aeacee3d5f790994d241101597be09f61099bd4c50b0de819c"
+    },
+    {
+      "name": "pairs.csv",
+      "bytes": 26947,
+      "git_blob_sha": "8a080549d6ef6cdce5813dc49ddda134bd6ffa49",
+      "sha256": "35b20afd0ef7f7c585b9745f942ee835df88fa9b0022614828ed6e4bf2a2e4bd"
+    },
+    {
+      "name": "requirements.txt",
+      "bytes": 61,
+      "git_blob_sha": "9a00433467419dba082470cd7b0f3270cf2641d9",
+      "sha256": "37d25cd77b87c89e00af5b03238de7c03f15159335b36c24ee4c9d256a264f44"
+    },
+    {
+      "name": "results.json",
+      "bytes": 2816,
+      "git_blob_sha": "9029c1de4074052959cd1a4ffc4c16577d89f83b",
+      "sha256": "9e84c4abcbfa1eefb222c4028bc9355e97c02c2fa41a305a3110e208045bb6f1"
+    },
+    {
+      "name": "sensitivity.json",
+      "bytes": 1971,
+      "git_blob_sha": "c0dc249d7cab75f182138810c3178521a4c15b0d",
+      "sha256": "18f549714156bbd94155faa997a9644ae084a892c5f132159d6fe3238f5dd119"
+    },
+    {
+      "name": "sensitivity.py",
+      "bytes": 2283,
+      "git_blob_sha": "9f4961d9563d069208f6489d1423dc51fa0c4d5f",
+      "sha256": "3520a3bf524cf164c8ba69a4d133927e4a85ee38de98380bd3ec7dc7c7055b0d"
+    }
+  ],
+  "replay": {
+    "pairs_byte_identical": true,
+    "results": {
+      "numeric_leaves": 64,
+      "max_absolute_difference": 0,
+      "tolerance_rtol": 1e-09,
+      "tolerance_atol": 1e-09
+    },
+    "sensitivity": {
+      "numeric_leaves": 44,
+      "max_absolute_difference": 0,
+      "tolerance_rtol": 1e-09,
+      "tolerance_atol": 1e-09
+    }
+  },
+  "new_pipeline_matches_original_baselines_max_abs_difference": {
+    "t1_confidence": 0.0,
+    "t1_adjustment": 0.0,
+    "t2_confidence": 0.0,
+    "t2_adjustment": 0.0,
+    "t1_rating_cues": 0.0,
+    "t2_rating_cues": 0.0
+  }
+}

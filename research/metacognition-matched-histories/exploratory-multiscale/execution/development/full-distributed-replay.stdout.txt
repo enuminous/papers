@@ -1,0 +1,213 @@
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python -m unittest -v test_multiscale.py
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python analyze.py /workspace/scratch/f74477cd559d/raw-data /workspace/scratch/f74477cd559d/final-replay/execution/replayed-results.json
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python sensitivity.py /workspace/scratch/f74477cd559d/raw-data /workspace/scratch/f74477cd559d/final-replay/execution/replayed-sensitivity.json
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python matched.py /workspace/scratch/f74477cd559d/final-replay/execution/replayed-pairs.csv
+362 verified pairs (including mirrors)
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python multiscale.py pairs --out /workspace/scratch/f74477cd559d/final-replay/results
+{
+  "rows_including_mirrors": 362,
+  "pairs_modulo_global_sign": 181,
+  "all_original_match_checks": "PASS",
+  "different_by_feature": {
+    "local": 0,
+    "local_sq": 0,
+    "fast": 362,
+    "fast_sq": 362,
+    "slow": 362,
+    "slow_sq": 362,
+    "haar4": 320,
+    "haar4_sq": 276,
+    "mag_fast": 362,
+    "mag_slow": 362
+  },
+  "different_by_bank": {
+    "C": 362,
+    "A": 362,
+    "C_A": 362
+  },
+  "minimum_nonzero_absolute_difference": {
+    "fast": "45/4096",
+    "fast_sq": "45/4194304",
+    "slow": "153/4096",
+    "slow_sq": "2079/33554432",
+    "haar4": "1",
+    "haar4_sq": "1",
+    "mag_fast": "135/8192",
+    "mag_slow": "9/2048"
+  },
+  "maximum_absolute_difference": {
+    "fast": "189/4096",
+    "fast_sq": "1312605/33554432",
+    "slow": "333/4096",
+    "slow_sq": "2564433/33554432",
+    "haar4": "1",
+    "haar4_sq": "7",
+    "mag_fast": "567/8192",
+    "mag_slow": "333/8192"
+  },
+  "fixed_original_example_with_appended_zero": {
+    "history_A": [
+      3,
+      0,
+      -1,
+      2,
+      1,
+      0
+    ],
+    "history_B": [
+      -1,
+      2,
+      3,
+      0,
+      1,
+      0
+    ],
+    "features_A": {
+      "m": "31/64",
+      "Q": "61/64",
+      "B": "39/64",
+      "local": "-1",
+      "local_sq": "1",
+      "fast": "-871/4096",
+      "fast_sq": "758641/16777216",
+      "slow": "-233/4096",
+      "slow_sq": "54289/16777216",
+      "haar4": "0",
+      "haar4_sq": "0",
+      "mag_fast": "1209/4096",
+      "mag_slow": "3081/4096"
+    },
+    "features_B": {
+      "m": "31/64",
+      "Q": "61/64",
+      "B": "33/64",
+      "local": "-1",
+      "local_sq": "1",
+      "fast": "-1051/4096",
+      "fast_sq": "1104601/16777216",
+      "slow": "-485/4096",
+      "slow_sq": "235225/16777216",
+      "haar4": "-1",
+      "haar4_sq": "1",
+      "mag_fast": "939/4096",
+      "mag_slow": "2955/4096"
+    }
+  },
+  "interpretation": "Selected constructed bank, not human observations; counts are descriptive."
+}
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python multiscale.py behavior --data /workspace/scratch/f74477cd559d/raw-data --out /workspace/scratch/f74477cd559d/final-replay/results --controls 20
+Completed original fold 0
+Completed original fold 1
+Completed original fold 2
+Completed original fold 3
+Completed original fold 4
+Completed rating_cues fold 0
+Completed rating_cues fold 1
+Completed rating_cues fold 2
+Completed rating_cues fold 3
+Completed rating_cues fold 4
+Completed circular-shift diagnostic seed 20261107
+Completed circular-shift diagnostic seed 20261108
+Completed circular-shift diagnostic seed 20261109
+Completed circular-shift diagnostic seed 20261110
+Completed circular-shift diagnostic seed 20261111
+Completed circular-shift diagnostic seed 20261112
+Completed circular-shift diagnostic seed 20261113
+Completed circular-shift diagnostic seed 20261114
+Completed circular-shift diagnostic seed 20261115
+Completed circular-shift diagnostic seed 20261116
+Completed circular-shift diagnostic seed 20261117
+Completed circular-shift diagnostic seed 20261118
+Completed circular-shift diagnostic seed 20261119
+Completed circular-shift diagnostic seed 20261120
+Completed circular-shift diagnostic seed 20261121
+Completed circular-shift diagnostic seed 20261122
+Completed circular-shift diagnostic seed 20261123
+Completed circular-shift diagnostic seed 20261124
+Completed circular-shift diagnostic seed 20261125
+Completed circular-shift diagnostic seed 20261126
+Behavior and diagnostic outputs written: /workspace/scratch/f74477cd559d/final-replay/results
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python verify.py --execution /workspace/scratch/f74477cd559d/final-replay/execution --new-results /workspace/scratch/f74477cd559d/final-replay/results --out /workspace/scratch/f74477cd559d/final-replay/verification.json
+{
+  "original_files_unchanged": true,
+  "original_source_files": [
+    {
+      "name": "README.md",
+      "bytes": 2274,
+      "git_blob_sha": "eae074547cf08c0730406f8ed08341372c409538",
+      "sha256": "bd54c5ca2e63dab22d6a6e0dd261c608ea1260e32ad1945743cab07c9703f9ce"
+    },
+    {
+      "name": "analyze.py",
+      "bytes": 5500,
+      "git_blob_sha": "2097229d2be257d837ad306c64bd92e2ce11dd33",
+      "sha256": "3cd8aeb81bc599fef18a2ec6b4f0af6368f9c794b1147a178dfb435dc16c902e"
+    },
+    {
+      "name": "design.md",
+      "bytes": 2013,
+      "git_blob_sha": "1f99b9412e7ce720583f692db526afaf41d45484",
+      "sha256": "32c415b90f21533b060ab5dcb75ed94b9617f2e556fc9f6dee12e6a9baaaac32"
+    },
+    {
+      "name": "matched.py",
+      "bytes": 1925,
+      "git_blob_sha": "1bd63150af5592e2474e48324750e9f58ca193cd",
+      "sha256": "0e8852c5c83119aeacee3d5f790994d241101597be09f61099bd4c50b0de819c"
+    },
+    {
+      "name": "pairs.csv",
+      "bytes": 26947,
+      "git_blob_sha": "8a080549d6ef6cdce5813dc49ddda134bd6ffa49",
+      "sha256": "35b20afd0ef7f7c585b9745f942ee835df88fa9b0022614828ed6e4bf2a2e4bd"
+    },
+    {
+      "name": "requirements.txt",
+      "bytes": 61,
+      "git_blob_sha": "9a00433467419dba082470cd7b0f3270cf2641d9",
+      "sha256": "37d25cd77b87c89e00af5b03238de7c03f15159335b36c24ee4c9d256a264f44"
+    },
+    {
+      "name": "results.json",
+      "bytes": 2816,
+      "git_blob_sha": "9029c1de4074052959cd1a4ffc4c16577d89f83b",
+      "sha256": "9e84c4abcbfa1eefb222c4028bc9355e97c02c2fa41a305a3110e208045bb6f1"
+    },
+    {
+      "name": "sensitivity.json",
+      "bytes": 1971,
+      "git_blob_sha": "c0dc249d7cab75f182138810c3178521a4c15b0d",
+      "sha256": "18f549714156bbd94155faa997a9644ae084a892c5f132159d6fe3238f5dd119"
+    },
+    {
+      "name": "sensitivity.py",
+      "bytes": 2283,
+      "git_blob_sha": "9f4961d9563d069208f6489d1423dc51fa0c4d5f",
+      "sha256": "3520a3bf524cf164c8ba69a4d133927e4a85ee38de98380bd3ec7dc7c7055b0d"
+    }
+  ],
+  "replay": {
+    "pairs_byte_identical": true,
+    "results": {
+      "numeric_leaves": 64,
+      "max_absolute_difference": 0,
+      "tolerance_rtol": 1e-09,
+      "tolerance_atol": 1e-09
+    },
+    "sensitivity": {
+      "numeric_leaves": 44,
+      "max_absolute_difference": 0,
+      "tolerance_rtol": 1e-09,
+      "tolerance_atol": 1e-09
+    }
+  },
+  "new_pipeline_matches_original_baselines_max_abs_difference": {
+    "t1_confidence": 0.0,
+    "t1_adjustment": 0.0,
+    "t2_confidence": 0.0,
+    "t2_adjustment": 0.0,
+    "t1_rating_cues": 0.0,
+    "t2_rating_cues": 0.0
+  }
+}
+PASS: full replay completed without changing original files.

@@ -1,0 +1,27 @@
+{
+  "base_commit": "65f50f6710efa6801169429e5a5ad567f4d567d8",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0"
+  },
+  "source_sha256": {
+    "multiscale.py": "6652b24e9d3449aa13f9d56d8763a60e8449d19474bbd40cfe0069c11fbc3d79",
+    "reproduce.py": "fcb0fa0b97ff581dbb1a94aee0154e53c6299c2bda2411ef5e5a75eb8d8ddfd3",
+    "test_multiscale.py": "0d2621a17f5e11f74ec9394b508f256d2ad933f2a79d8f92a5dd6d7b6902fef2",
+    "verify.py": "62274b9bf9433c9df6176a707eaa1890bba55ddc81696e2eae1e9ab2efcef257"
+  },
+  "plan_sha256": "14a028a667882e583591c274343925318c3739f1c4a7db1e47738406213efca5",
+  "data": {
+    "t1": {
+      "bytes": 43805326,
+      "sha256": "caacb0c111100ee8b24dbefe265f6bb7992e5599ab0b7ffce6abb227726dc2a9"
+    },
+    "t2": {
+      "bytes": 29104752,
+      "sha256": "fc5ce566ba808850b7706095075139a360a2ca1ae79a83308a9fda0064535a06"
+    }
+  }
+}

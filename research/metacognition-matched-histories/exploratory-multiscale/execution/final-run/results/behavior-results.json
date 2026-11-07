@@ -1,0 +1,787 @@
+{
+  "metadata": {
+    "base_commit": "65f50f6710efa6801169429e5a5ad567f4d567d8",
+    "plan_sha256": "14a028a667882e583591c274343925318c3739f1c4a7db1e47738406213efca5",
+    "data_sha256": {
+      "t1": "caacb0c111100ee8b24dbefe265f6bb7992e5599ab0b7ffce6abb227726dc2a9",
+      "t2": "fc5ce566ba808850b7706095075139a360a2ca1ae79a83308a9fda0064535a06"
+    },
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0"
+    },
+    "models": {
+      "base": [],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "local",
+        "local_sq",
+        "fast",
+        "fast_sq",
+        "slow",
+        "slow_sq",
+        "haar4",
+        "haar4_sq"
+      ],
+      "C_B": [
+        "local",
+        "local_sq",
+        "fast",
+        "fast_sq",
+        "slow",
+        "slow_sq",
+        "haar4",
+        "haar4_sq",
+        "B"
+      ],
+      "A": [
+        "mag_fast",
+        "mag_slow"
+      ],
+      "A_B": [
+        "mag_fast",
+        "mag_slow",
+        "B"
+      ],
+      "C_A": [
+        "local",
+        "local_sq",
+        "fast",
+        "fast_sq",
+        "slow",
+        "slow_sq",
+        "haar4",
+        "haar4_sq",
+        "mag_fast",
+        "mag_slow"
+      ],
+      "C_A_B": [
+        "local",
+        "local_sq",
+        "fast",
+        "fast_sq",
+        "slow",
+        "slow_sq",
+        "haar4",
+        "haar4_sq",
+        "mag_fast",
+        "mag_slow",
+        "B"
+      ]
+    },
+    "ridge_alpha": 1.0,
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 20261106,
+    "sessions": {
+      "t1": {
+        "participants": 330,
+        "trials": 59450
+      },
+      "t2": {
+        "participants": 219,
+        "trials": 39420
+      }
+    }
+  },
+  "results": {
+    "original": {
+      "t1_confidence": {
+        "participants": 330,
+        "trials": 59450,
+        "mse": {
+          "base": 344.24247573216167,
+          "B": 344.23134579286705,
+          "C": 344.2630886455336,
+          "C_B": 344.2397145635625,
+          "A": 344.21921601131595,
+          "A_B": 344.1773411553955,
+          "C_A": 344.23508500820765,
+          "C_A_B": 344.1846389811512
+        },
+        "comparisons": {
+          "base__to__B": {
+            "mse_gain": 0.011129939294641431,
+            "percent_mse_gain": 0.003233168501641005,
+            "conditional_participant_bootstrap_95ci": [
+              -0.047774780513497955,
+              0.06772067574030748
+            ],
+            "participants_with_positive_gain": 172
+          },
+          "base__to__C": {
+            "mse_gain": -0.02061291337199876,
+            "percent_mse_gain": -0.005987905277568556,
+            "conditional_participant_bootstrap_95ci": [
+              -0.14523102250484127,
+              0.10818867214599653
+            ],
+            "participants_with_positive_gain": 167
+          },
+          "base__to__A": {
+            "mse_gain": 0.023259720845735535,
+            "percent_mse_gain": 0.00675678409419551,
+            "conditional_participant_bootstrap_95ci": [
+              -0.044142122423189,
+              0.08859268606437652
+            ],
+            "participants_with_positive_gain": 175
+          },
+          "base__to__C_A": {
+            "mse_gain": 0.007390723953947093,
+            "percent_mse_gain": 0.002146952940141372,
+            "conditional_participant_bootstrap_95ci": [
+              -0.1267339231849025,
+              0.14521643466245615
+            ],
+            "participants_with_positive_gain": 159
+          },
+          "C__to__C_B": {
+            "mse_gain": 0.02337408197118633,
+            "percent_mse_gain": 0.006789598636074858,
+            "conditional_participant_bootstrap_95ci": [
+              -0.05001480259229359,
+              0.09905761090913423
+            ],
+            "participants_with_positive_gain": 181
+          },
+          "A__to__A_B": {
+            "mse_gain": 0.04187485592049225,
+            "percent_mse_gain": 0.012165170906413208,
+            "conditional_participant_bootstrap_95ci": [
+              -0.025285865479777236,
+              0.10517561299163829
+            ],
+            "participants_with_positive_gain": 188
+          },
+          "C_A__to__C_A_B": {
+            "mse_gain": 0.05044602705653469,
+            "percent_mse_gain": 0.014654528040142074,
+            "conditional_participant_bootstrap_95ci": [
+              -0.023793396533445574,
+              0.12087934436236658
+            ],
+            "participants_with_positive_gain": 180
+          },
+          "B__to__C": {
+            "mse_gain": -0.031742852666640196,
+            "percent_mse_gain": -0.009221371921701952,
+            "conditional_participant_bootstrap_95ci": [
+              -0.17816033295610814,
+              0.11823404791708417
+            ],
+            "participants_with_positive_gain": 159
+          },
+          "B__to__A": {
+            "mse_gain": 0.012129781551094104,
+            "percent_mse_gain": 0.003523729520667449,
+            "conditional_participant_bootstrap_95ci": [
+              -0.057334149367771856,
+              0.08196375110128816
+            ],
+            "participants_with_positive_gain": 160
+          },
+          "B__to__C_A": {
+            "mse_gain": -0.003739215340694339,
+            "percent_mse_gain": -0.0010862506818145267,
+            "conditional_participant_bootstrap_95ci": [
+              -0.14580787055557515,
+              0.1383759350838693
+            ],
+            "participants_with_positive_gain": 163
+          },
+          "B__to__C_B": {
+            "mse_gain": -0.008368770695453864,
+            "percent_mse_gain": -0.0024311471914848716,
+            "conditional_participant_bootstrap_95ci": [
+              -0.1441507089068412,
+              0.1274257754333847
+            ],
+            "participants_with_positive_gain": 167
+          }
+        }
+      },
+      "t1_adjustment": {
+        "participants": 330,
+        "trials": 59450,
+        "mse": {
+          "base": 628.6651291437563,
+          "B": 628.6871785437611,
+          "C": 628.4403383796225,
+          "C_B": 628.4858731842046,
+          "A": 628.685033242498,
+          "A_B": 628.7072341500404,
+          "C_A": 628.4846195985315,
+          "C_A_B": 628.5093584625199
+        },
+        "comparisons": {
+          "base__to__B": {
+            "mse_gain": -0.02204940000477851,
+            "percent_mse_gain": -0.0035073362562370617,
+            "conditional_participant_bootstrap_95ci": [
+              -0.3315867418015111,
+              0.2600115520458486
+            ],
+            "participants_with_positive_gain": 170
+          },
+          "base__to__C": {
+            "mse_gain": 0.22479076413385635,
+            "percent_mse_gain": 0.03575683678209129,
+            "conditional_participant_bootstrap_95ci": [
+              -1.9227686189948137,
+              2.2277496599448168
+            ],
+            "participants_with_positive_gain": 172
+          },
+          "base__to__A": {
+            "mse_gain": -0.01990409874180426,
+            "percent_mse_gain": -0.003166089197425933,
+            "conditional_participant_bootstrap_95ci": [
+              -0.37453062545273635,
+              0.30427817078857416
+            ],
+            "participants_with_positive_gain": 171
+          },
+          "base__to__C_A": {
+            "mse_gain": 0.18050954522488497,
+            "percent_mse_gain": 0.028713147406591404,
+            "conditional_participant_bootstrap_95ci": [
+              -1.8572518668687932,
+              2.0922345640893045
+            ],
+            "participants_with_positive_gain": 170
+          },
+          "C__to__C_B": {
+            "mse_gain": -0.045534804582174335,
+            "percent_mse_gain": -0.007245684562448963,
+            "conditional_participant_bootstrap_95ci": [
+              -0.2939803275116885,
+              0.18764873485966316
+            ],
+            "participants_with_positive_gain": 161
+          },
+          "A__to__A_B": {
+            "mse_gain": -0.022200907542312128,
+            "percent_mse_gain": -0.0035313243306921128,
+            "conditional_participant_bootstrap_95ci": [
+              -0.0656782235644399,
+              0.021380325500708713
+            ],
+            "participants_with_positive_gain": 174
+          },
+          "C_A__to__C_A_B": {
+            "mse_gain": -0.024738863988536832,
+            "percent_mse_gain": -0.003936271981379549,
+            "conditional_participant_bootstrap_95ci": [
+              -0.0789408529908153,
+              0.029501755054122426
+            ],
+            "participants_with_positive_gain": 174
+          },
+          "B__to__C": {
+            "mse_gain": 0.24684016413863513,
+            "percent_mse_gain": 0.03926279596005047,
+            "conditional_participant_bootstrap_95ci": [
+              -1.9828366718059915,
+              2.358853835366934
+            ],
+            "participants_with_positive_gain": 167
+          },
+          "B__to__A": {
+            "mse_gain": 0.002145301262974251,
+            "percent_mse_gain": 0.00034123509054907866,
+            "conditional_participant_bootstrap_95ci": [
+              -0.07401282497649955,
+              0.07834483292783465
+            ],
+            "participants_with_positive_gain": 170
+          },
+          "B__to__C_A": {
+            "mse_gain": 0.20255894522966372,
+            "percent_mse_gain": 0.0322193536217574,
+            "conditional_participant_bootstrap_95ci": [
+              -1.9080933461686032,
+              2.1905146495998844
+            ],
+            "participants_with_positive_gain": 171
+          },
+          "B__to__C_B": {
+            "mse_gain": 0.20130535955646064,
+            "percent_mse_gain": 0.03201995625594715,
+            "conditional_participant_bootstrap_95ci": [
+              -1.9052001414377857,
+              2.179387882324816
+            ],
+            "participants_with_positive_gain": 169
+          }
+        }
+      },
+      "t2_confidence": {
+        "participants": 219,
+        "trials": 39420,
+        "mse": {
+          "base": 289.4944003141021,
+          "B": 289.43674487056177,
+          "C": 289.52792135187633,
+          "C_B": 289.4477979014234,
+          "A": 289.42136787907805,
+          "A_B": 289.2786823593827,
+          "C_A": 289.446790064701,
+          "C_A_B": 289.2952521545318
+        },
+        "comparisons": {
+          "base__to__B": {
+            "mse_gain": 0.05765544354030438,
+            "percent_mse_gain": 0.019915909764661455,
+            "conditional_participant_bootstrap_95ci": [
+              0.004689659199766152,
+              0.10971386827135444
+            ],
+            "participants_with_positive_gain": 128
+          },
+          "base__to__C": {
+            "mse_gain": -0.03352103777430969,
+            "percent_mse_gain": -0.011579166207684599,
+            "conditional_participant_bootstrap_95ci": [
+              -0.15662591895341027,
+              0.09092449891818517
+            ],
+            "participants_with_positive_gain": 111
+          },
+          "base__to__A": {
+            "mse_gain": 0.07303243502407238,
+            "percent_mse_gain": 0.025227581239855423,
+            "conditional_participant_bootstrap_95ci": [
+              0.008317795467244066,
+              0.14025137336218466
+            ],
+            "participants_with_positive_gain": 127
+          },
+          "base__to__C_A": {
+            "mse_gain": 0.04761024940105946,
+            "percent_mse_gain": 0.016446000112403634,
+            "conditional_participant_bootstrap_95ci": [
+              -0.09499850065973418,
+              0.1890146244946067
+            ],
+            "participants_with_positive_gain": 118
+          },
+          "C__to__C_B": {
+            "mse_gain": 0.0801234504529654,
+            "percent_mse_gain": 0.027673825059375795,
+            "conditional_participant_bootstrap_95ci": [
+              0.01273975902170953,
+              0.1468462238948893
+            ],
+            "participants_with_positive_gain": 131
+          },
+          "A__to__A_B": {
+            "mse_gain": 0.14268551969538862,
+            "percent_mse_gain": 0.04930027134520471,
+            "conditional_participant_bootstrap_95ci": [
+              0.07246436735764393,
+              0.21587007930445284
+            ],
+            "participants_with_positive_gain": 134
+          },
+          "C_A__to__C_A_B": {
+            "mse_gain": 0.1515379101692264,
+            "percent_mse_gain": 0.052354323962394825,
+            "conditional_participant_bootstrap_95ci": [
+              0.07426042639612705,
+              0.22967340137446662
+            ],
+            "participants_with_positive_gain": 136
+          },
+          "B__to__C": {
+            "mse_gain": -0.09117648131461407,
+            "percent_mse_gain": -0.03150134975273747,
+            "conditional_participant_bootstrap_95ci": [
+              -0.23277874562001935,
+              0.04884092497030343
+            ],
+            "participants_with_positive_gain": 97
+          },
+          "B__to__A": {
+            "mse_gain": 0.015376991483767997,
+            "percent_mse_gain": 0.005312729553617907,
+            "conditional_participant_bootstrap_95ci": [
+              -0.0601913028643805,
+              0.09217891866302147
+            ],
+            "participants_with_positive_gain": 118
+          },
+          "B__to__C_A": {
+            "mse_gain": -0.01004519413924492,
+            "percent_mse_gain": -0.0034706008539921924,
+            "conditional_participant_bootstrap_95ci": [
+              -0.16035047555992257,
+              0.1372430428834469
+            ],
+            "participants_with_positive_gain": 112
+          },
+          "B__to__C_B": {
+            "mse_gain": -0.011053030861648671,
+            "percent_mse_gain": -0.0038188070649397567,
+            "conditional_participant_bootstrap_95ci": [
+              -0.13957228679425543,
+              0.12221025885724715
+            ],
+            "participants_with_positive_gain": 107
+          }
+        }
+      },
+      "t2_adjustment": {
+        "participants": 219,
+        "trials": 39420,
+        "mse": {
+          "base": 418.34187990696154,
+          "B": 418.3283654824827,
+          "C": 418.75400834410533,
+          "C_B": 418.7780240780643,
+          "A": 418.30444421954616,
+          "A_B": 418.31762309476085,
+          "C_A": 418.75296724433787,
+          "C_A_B": 418.76059591146173
+        },
+        "comparisons": {
+          "base__to__B": {
+            "mse_gain": 0.013514424478853848,
+            "percent_mse_gain": 0.0032304737173001735,
+            "conditional_participant_bootstrap_95ci": [
+              -0.2004232551107783,
+              0.2298935961536592
+            ],
+            "participants_with_positive_gain": 113
+          },
+          "base__to__C": {
+            "mse_gain": -0.412128437143721,
+            "percent_mse_gain": -0.09851474522115204,
+            "conditional_participant_bootstrap_95ci": [
+              -1.7053220038058532,
+              0.8560813487897837
+            ],
+            "participants_with_positive_gain": 106
+          },
+          "base__to__A": {
+            "mse_gain": 0.03743568741536091,
+            "percent_mse_gain": 0.008948587079946798,
+            "conditional_participant_bootstrap_95ci": [
+              -0.20668834918819676,
+              0.276553037477152
+            ],
+            "participants_with_positive_gain": 106
+          },
+          "base__to__C_A": {
+            "mse_gain": -0.41108733737623465,
+            "percent_mse_gain": -0.09826588183512962,
+            "conditional_participant_bootstrap_95ci": [
+              -1.7779193205782107,
+              0.9275979047212791
+            ],
+            "participants_with_positive_gain": 108
+          },
+          "C__to__C_B": {
+            "mse_gain": -0.024015733958926335,
+            "percent_mse_gain": -0.00573504575010342,
+            "conditional_participant_bootstrap_95ci": [
+              -0.17093125863387384,
+              0.12252586255748918
+            ],
+            "participants_with_positive_gain": 108
+          },
+          "A__to__A_B": {
+            "mse_gain": -0.013178875214635809,
+            "percent_mse_gain": -0.0031505463058668593,
+            "conditional_participant_bootstrap_95ci": [
+              -0.05098027528358629,
+              0.02387411978142996
+            ],
+            "participants_with_positive_gain": 111
+          },
+          "C_A__to__C_A_B": {
+            "mse_gain": -0.007628667123914198,
+            "percent_mse_gain": -0.0018217583445714314,
+            "conditional_participant_bootstrap_95ci": [
+              -0.06000686079984576,
+              0.04531081809230866
+            ],
+            "participants_with_positive_gain": 109
+          },
+          "B__to__C": {
+            "mse_gain": -0.42564286162257486,
+            "percent_mse_gain": -0.10174850589719298,
+            "conditional_participant_bootstrap_95ci": [
+              -1.717807591828619,
+              0.8306675479746467
+            ],
+            "participants_with_positive_gain": 115
+          },
+          "B__to__A": {
+            "mse_gain": 0.02392126293650706,
+            "percent_mse_gain": 0.0057182980907635236,
+            "conditional_participant_bootstrap_95ci": [
+              -0.032197891665670254,
+              0.08337181410235753
+            ],
+            "participants_with_positive_gain": 105
+          },
+          "B__to__C_A": {
+            "mse_gain": -0.4246017618550885,
+            "percent_mse_gain": -0.10149963447144454,
+            "conditional_participant_bootstrap_95ci": [
+              -1.7295927695198619,
+              0.8638892875348397
+            ],
+            "participants_with_positive_gain": 105
+          },
+          "B__to__C_B": {
+            "mse_gain": -0.4496585955815012,
+            "percent_mse_gain": -0.10748938697065963,
+            "conditional_participant_bootstrap_95ci": [
+              -1.7308429547067161,
+              0.8003312854528066
+            ],
+            "participants_with_positive_gain": 111
+          }
+        }
+      }
+    },
+    "rating_cues": {
+      "t1_confidence": {
+        "participants": 330,
+        "trials": 59450,
+        "mse": {
+          "base": 334.51759996844373,
+          "B": 334.4963524836846,
+          "C": 334.54015547849497,
+          "C_B": 334.50118472619135,
+          "A": 334.49335590310454,
+          "A_B": 334.4308645785321,
+          "C_A": 334.50759958935254,
+          "C_A_B": 334.43831454829467
+        },
+        "comparisons": {
+          "base__to__B": {
+            "mse_gain": 0.02124748475918406,
+            "percent_mse_gain": 0.006351679182556736,
+            "conditional_participant_bootstrap_95ci": [
+              -0.050763888862124275,
+              0.09109334463855981
+            ],
+            "participants_with_positive_gain": 169
+          },
+          "base__to__C": {
+            "mse_gain": -0.02255551005120843,
+            "percent_mse_gain": -0.0067426975601092955,
+            "conditional_participant_bootstrap_95ci": [
+              -0.1453531864720272,
+              0.09901799925300582
+            ],
+            "participants_with_positive_gain": 169
+          },
+          "base__to__A": {
+            "mse_gain": 0.024244065339203133,
+            "percent_mse_gain": 0.007247470788230623,
+            "conditional_participant_bootstrap_95ci": [
+              -0.045558916496619944,
+              0.09364807376961257
+            ],
+            "participants_with_positive_gain": 180
+          },
+          "base__to__C_A": {
+            "mse_gain": 0.010000379091196243,
+            "percent_mse_gain": 0.0029894926581260943,
+            "conditional_participant_bootstrap_95ci": [
+              -0.12182271286794079,
+              0.14359084606358893
+            ],
+            "participants_with_positive_gain": 159
+          },
+          "C__to__C_B": {
+            "mse_gain": 0.03897075230358987,
+            "percent_mse_gain": 0.01164905069403395,
+            "conditional_participant_bootstrap_95ci": [
+              -0.04855696128009816,
+              0.12658145090865672
+            ],
+            "participants_with_positive_gain": 173
+          },
+          "A__to__A_B": {
+            "mse_gain": 0.06249132457236051,
+            "percent_mse_gain": 0.018682381419397428,
+            "conditional_participant_bootstrap_95ci": [
+              -0.015013191315937365,
+              0.13700986247761018
+            ],
+            "participants_with_positive_gain": 189
+          },
+          "C_A__to__C_A_B": {
+            "mse_gain": 0.06928504105787851,
+            "percent_mse_gain": 0.02071254618517907,
+            "conditional_participant_bootstrap_95ci": [
+              -0.014310571533348247,
+              0.14872341086269328
+            ],
+            "participants_with_positive_gain": 188
+          },
+          "B__to__C": {
+            "mse_gain": -0.043802994810392494,
+            "percent_mse_gain": -0.013095208508298766,
+            "conditional_participant_bootstrap_95ci": [
+              -0.19640692570382873,
+              0.11093876258126166
+            ],
+            "participants_with_positive_gain": 165
+          },
+          "B__to__A": {
+            "mse_gain": 0.0029965805800190736,
+            "percent_mse_gain": 0.0008958485070970198,
+            "conditional_participant_bootstrap_95ci": [
+              -0.06729334973605061,
+              0.07267620442902005
+            ],
+            "participants_with_positive_gain": 158
+          },
+          "B__to__C_A": {
+            "mse_gain": -0.011247105667987816,
+            "percent_mse_gain": -0.0033624000932974017,
+            "conditional_participant_bootstrap_95ci": [
+              -0.1493877860716075,
+              0.1284579103751673
+            ],
+            "participants_with_positive_gain": 163
+          },
+          "B__to__C_B": {
+            "mse_gain": -0.004832242506802619,
+            "percent_mse_gain": -0.0014446323467871946,
+            "conditional_participant_bootstrap_95ci": [
+              -0.1374618106388714,
+              0.1280422848285932
+            ],
+            "participants_with_positive_gain": 171
+          }
+        }
+      },
+      "t2_confidence": {
+        "participants": 219,
+        "trials": 39420,
+        "mse": {
+          "base": 282.14964254765005,
+          "B": 282.0845165223601,
+          "C": 282.1883829631525,
+          "C_B": 282.10610682283476,
+          "A": 282.0838221625321,
+          "A_B": 281.91267533633453,
+          "C_A": 282.1171967109719,
+          "C_A_B": 281.9419772332711
+        },
+        "comparisons": {
+          "base__to__B": {
+            "mse_gain": 0.06512602528990515,
+            "percent_mse_gain": 0.023082086761427145,
+            "conditional_participant_bootstrap_95ci": [
+              -0.00048129064139382514,
+              0.1312728599321881
+            ],
+            "participants_with_positive_gain": 123
+          },
+          "base__to__C": {
+            "mse_gain": -0.03874041550251872,
+            "percent_mse_gain": -0.013730449967157466,
+            "conditional_participant_bootstrap_95ci": [
+              -0.15820554727251232,
+              0.08290026714469856
+            ],
+            "participants_with_positive_gain": 104
+          },
+          "base__to__A": {
+            "mse_gain": 0.06582038511791438,
+            "percent_mse_gain": 0.02332818306044761,
+            "conditional_participant_bootstrap_95ci": [
+              -0.0006333904801560505,
+              0.13489526471381055
+            ],
+            "participants_with_positive_gain": 127
+          },
+          "base__to__C_A": {
+            "mse_gain": 0.03244583667813494,
+            "percent_mse_gain": 0.011499513657067782,
+            "conditional_participant_bootstrap_95ci": [
+              -0.10327742452442142,
+              0.1671765127846174
+            ],
+            "participants_with_positive_gain": 114
+          },
+          "C__to__C_B": {
+            "mse_gain": 0.08227614031778593,
+            "percent_mse_gain": 0.029156459048326366,
+            "conditional_participant_bootstrap_95ci": [
+              0.001942247231151564,
+              0.16154675912108774
+            ],
+            "participants_with_positive_gain": 129
+          },
+          "A__to__A_B": {
+            "mse_gain": 0.1711468261975843,
+            "percent_mse_gain": 0.060672329552799484,
+            "conditional_participant_bootstrap_95ci": [
+              0.08904745742602878,
+              0.2540647044480874
+            ],
+            "participants_with_positive_gain": 130
+          },
+          "C_A__to__C_A_B": {
+            "mse_gain": 0.1752194777008672,
+            "percent_mse_gain": 0.06210875471032664,
+            "conditional_participant_bootstrap_95ci": [
+              0.0867305729116299,
+              0.2626456383109858
+            ],
+            "participants_with_positive_gain": 134
+          },
+          "B__to__C": {
+            "mse_gain": -0.10386644079242387,
+            "percent_mse_gain": -0.03682103579201259,
+            "conditional_participant_bootstrap_95ci": [
+              -0.24743434065381653,
+              0.04137274610517022
+            ],
+            "participants_with_positive_gain": 94
+          },
+          "B__to__A": {
+            "mse_gain": 0.0006943598280092434,
+            "percent_mse_gain": 0.0002461531162963364,
+            "conditional_participant_bootstrap_95ci": [
+              -0.07530358126409317,
+              0.07839282191428149
+            ],
+            "participants_with_positive_gain": 114
+          },
+          "B__to__C_A": {
+            "mse_gain": -0.0326801886117702,
+            "percent_mse_gain": -0.011585247221174485,
+            "conditional_participant_bootstrap_95ci": [
+              -0.17757313435054464,
+              0.11043253199964971
+            ],
+            "participants_with_positive_gain": 108
+          },
+          "B__to__C_B": {
+            "mse_gain": -0.02159030047463793,
+            "percent_mse_gain": -0.007653841033464353,
+            "conditional_participant_bootstrap_95ci": [
+              -0.14683808920621744,
+              0.10820144954804786
+            ],
+            "participants_with_positive_gain": 112
+          }
+        }
+      }
+    }
+  }
+}

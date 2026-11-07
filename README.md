@@ -74,6 +74,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Conventional multiscale explanations for matched error histories](research/metacognition-matched-histories/exploratory-multiscale/TECHNICAL_SUPPLEMENT.md)** · [Source, results and execution logs](research/metacognition-matched-histories/exploratory-multiscale/README.md) — 7 November 2026. Exploratory extension: ordinary filters distinguish all 362 constructed pairs, while the fixed signed contrast bank does not improve held-out confidence prediction. Alternative magnitude-memory time scales give small gains; conditional B gains remain. Original results reproduced exactly and preserved. No EFMW-specific human memory mechanism is established.
+
 - **[The Rug That Started Dude Physics](The-Rug-That-Started-Dude-Physics-2026-11-07.md)** · [Live Dude Physics](https://enuminous.github.io/Dude-Physics/) — 7 November 2026. A culture feature on the personalized room, its 72-entry inventory, the Lebowski association and Matthew's “emergent dudeism.” Documents the recursive conversation and the resulting creative archive, with satire and scientific claims clearly distinguished.
 
 - **[Matched error histories and human confidence](Matched-Error-Histories-and-Human-Confidence-Study-Protocol-2026-11-07.md)** · [Editable protocol](Matched-Error-Histories-and-Human-Confidence-Study-Protocol-2026-11-07.docx) — 7 November 2026. Prospective controlled-study protocol with matched histories, fixed-probe confidence, correction equivalence, competing models, and prospective power rules. **Draft, not preregistered; no prospective participants or results.** Final sample size, model parameters, and ethics details remain open.

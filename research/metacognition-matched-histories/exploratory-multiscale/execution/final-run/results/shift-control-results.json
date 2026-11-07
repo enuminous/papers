@@ -1,0 +1,48 @@
+{
+  "replicates": 20,
+  "kind": "Alignment diagnostic, not a conditional randomization p-value",
+  "results": {
+    "t1_B": {
+      "observed_mse_gain": 0.011129939294641431,
+      "shifted_mean_mse_gain": 0.023668437882166816,
+      "shifted_min_mse_gain": -0.028349543514774492,
+      "shifted_max_mse_gain": 0.0891776548637291,
+      "shifts_at_least_observed": 13
+    },
+    "t1_C": {
+      "observed_mse_gain": -0.02061291337199876,
+      "shifted_mean_mse_gain": -0.03471703570694494,
+      "shifted_min_mse_gain": -0.10128530813742734,
+      "shifted_max_mse_gain": 0.02101146699388672,
+      "shifts_at_least_observed": 9
+    },
+    "t1_A": {
+      "observed_mse_gain": 0.023259720845735535,
+      "shifted_mean_mse_gain": 0.10981948475894725,
+      "shifted_min_mse_gain": 0.012548086761272711,
+      "shifted_max_mse_gain": 0.20094029014665202,
+      "shifts_at_least_observed": 19
+    },
+    "t2_B": {
+      "observed_mse_gain": 0.05765544354030438,
+      "shifted_mean_mse_gain": 0.012926942568695879,
+      "shifted_min_mse_gain": -0.05301841026361573,
+      "shifted_max_mse_gain": 0.05976301879845551,
+      "shifts_at_least_observed": 1
+    },
+    "t2_C": {
+      "observed_mse_gain": -0.03352103777430969,
+      "shifted_mean_mse_gain": -0.04077733284420684,
+      "shifted_min_mse_gain": -0.145730609163309,
+      "shifted_max_mse_gain": 0.026286291357508974,
+      "shifts_at_least_observed": 7
+    },
+    "t2_A": {
+      "observed_mse_gain": 0.07303243502407238,
+      "shifted_mean_mse_gain": 0.07929013661928416,
+      "shifted_min_mse_gain": -0.04789624649023858,
+      "shifted_max_mse_gain": 0.18042433301245125,
+      "shifts_at_least_observed": 12
+    }
+  }
+}
