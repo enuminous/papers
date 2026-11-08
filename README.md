@@ -74,6 +74,9 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[MOC-001 — Compiling Ontologies Toward a Testable Unity of Physics](MOC-001-Compiling-Ontologies-Toward-Testable-Unity-of-Physics-2026-11-08.md)** · [Unity Appendix](research/moc-001/UNITY_APPENDIX.md) — 8 November 2026. Research-methods paper and explicit unification criteria for a typed ontology compiler. The separate local scaffold passed 16/16 Python tests and emitted 5 structural PASS, 0 FAIL, 35 UNRESOLVED; no physical unification, original EFMW derivation, Lean replay or experimental validation is claimed.
+
+
 - **[Conventional multiscale explanations for matched error histories](research/metacognition-matched-histories/exploratory-multiscale/TECHNICAL_SUPPLEMENT.md)** · [Source, results and execution logs](research/metacognition-matched-histories/exploratory-multiscale/README.md) — 7 November 2026. Exploratory extension: ordinary filters distinguish all 362 constructed pairs, while the fixed signed contrast bank does not improve held-out confidence prediction. Alternative magnitude-memory time scales give small gains; conditional B gains remain. Original results reproduced exactly and preserved. No EFMW-specific human memory mechanism is established.
 
 - **[The Rug That Started Dude Physics](The-Rug-That-Started-Dude-Physics-2026-11-07.md)** · [Live Dude Physics](https://enuminous.github.io/Dude-Physics/) — 7 November 2026. A culture feature on the personalized room, its 72-entry inventory, the Lebowski association and Matthew's “emergent dudeism.” Documents the recursive conversation and the resulting creative archive, with satire and scientific claims clearly distinguished.
