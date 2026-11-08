@@ -2,6 +2,7 @@
 
 **Paper:** [MOC-001 — Compiling Ontologies Toward a Testable Unity of Physics](../../MOC-001-Compiling-Ontologies-Toward-Testable-Unity-of-Physics-2026-11-08.md)  
 **Unity appendix:** [`research/moc-001/UNITY_APPENDIX.md`](UNITY_APPENDIX.md)  
+**UNITY-001 action plan:** [Pathway to Physical Unification](../../UNITY-001-Pathway-to-Physical-Unification-Action-Plan-2026-11-08.md)  
 **Date:** 8 November 2026
 
 This folder publishes the research-methods paper's formal unity criteria and provenance notes. **It does not contain the executable compiler ZIP**, and this publication does not imply that the compiler source, upstream source corpora, Lean kernel certificates, or any physical measurements are hosted in `enuminous/papers`.
