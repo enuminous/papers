@@ -1,0 +1,98 @@
+{
+  "schema": "ist-fam-001-review-ledger-v1",
+  "date": "2026-11-09",
+  "title": "IST-001 referee correction and bounded spectral audit ledger",
+  "research_program": "Matthew Chenoweth Wright / Monolithic LLC",
+  "review_provenance": "Boardy arguments relayed in user conversation; ChatGPT synthesis; not independently authenticated external peer review",
+  "status": "PUBLISHED_REVIEW_NO_NEW_TESTS_OR_CORPUS_SCAN",
+  "pre_search_protocol_commit": "3661841f69bb9dbd01338ee21f494d8d0b8ca7ce",
+  "sources": {
+    "main": "IST-001-Deriving-Informational-Stress-from-Covariant-Memory-and-Reservoir-Models-2026-11-09.md",
+    "executed": "research/ist-001/IST001_REPORT.md",
+    "protocol": "research/ist-fam-001/PROTOCOL.json",
+    "referee_report": "IST-FAM-001-Referee-Review-and-Spectral-Novelty-Audit-2026-11-09.md",
+    "ist_ci": "https://github.com/enuminous/papers/actions/runs/42669567461",
+    "unity_phase5": "research/unity-001/phase-5/PHASE5_REPORT.md"
+  },
+  "original_IST_001_counts": {
+    "software_tests_passed": 24,
+    "software_tests_failed": 0,
+    "bounded_gate_PASS": 6,
+    "bounded_gate_UNRESOLVED": 2,
+    "EFMW_specific_physical_PASS": 0
+  },
+  "review_findings": [
+    {
+      "id": "R1",
+      "topic": "Prescribed q drive versus fully dynamical q",
+      "disposition": "VALID_SCOPE_CORRECTION",
+      "proof_obligation": "Report external work K(q-m) qdot, avoid promoting manufactured-drive residual to total on-shell conservation",
+      "new_execution": false
+    },
+    {
+      "id": "R2",
+      "topic": "Bath-induced static frequency renormalization",
+      "disposition": "ORIGINAL_OBJECTION_WITHDRAWN_FOR_IST6",
+      "proof_obligation": "Completed-square potential includes counterterm; static K preserved by exact finite-bath elimination; continuum response remains open",
+      "new_execution": false
+    },
+    {
+      "id": "R3",
+      "topic": "Standalone mu_m^2 memory mass absent in reservoir parent",
+      "disposition": "MODEL_DIFFERENCE_DOCUMENTED",
+      "proof_obligation": "Unit gain requires mu_m^2=0 or independent justification/cancellation in simple overdamped model",
+      "new_execution": false
+    },
+    {
+      "id": "R4",
+      "topic": "Finite closed reservoir versus irreversible Markov relaxation",
+      "disposition": "UNRESOLVED_CONTINUUM_LIMIT",
+      "proof_obligation": "Derive controlled bath limit, error bounds, causal/noise/thermodynamic conditions",
+      "new_execution": false
+    },
+    {
+      "id": "R5",
+      "topic": "Scalar anisotropic stress",
+      "disposition": "ABSOLUTE_ZERO_CLAIM_CORRECTED",
+      "proof_obligation": "Nonuniform/multifield stress can have anisotropy in selected frame; conventional analogues still possible",
+      "new_execution": false
+    },
+    {
+      "id": "R6",
+      "topic": "Family-level conventional spectral containment",
+      "disposition": "CONSTRUCTIVE_CONVENTIONAL_REPRESENTATION",
+      "proof_obligation": "Distinguish positive finite discrete spectral representation from an EFMW-specific source-derived restriction",
+      "new_execution": false
+    },
+    {
+      "id": "R7",
+      "topic": "Independent calibration versus discriminatory novelty",
+      "disposition": "DISTINCT_INFERENTIAL_REQUIREMENTS",
+      "proof_obligation": "Independently fix candidate parameters AND demonstrate prospective separation from comparably constrained conventional alternatives",
+      "new_execution": false
+    }
+  ],
+  "candidate_hypotheses": [
+    {
+      "id": "IST-FAM-H1",
+      "relation": "omega_{j+1}/omega_j=phi, two adjacent intervals in same locked triple",
+      "status": "NOT_EXECUTED",
+      "source_derived": false
+    },
+    {
+      "id": "IST-FAM-H2",
+      "relation": "b_{j+1}/b_j=phi^(-2), same locked triple",
+      "status": "NOT_EXECUTED",
+      "source_derived": false
+    }
+  ],
+  "stop_rule": "If neither receives a source-faithful derivation after the complete frozen-corpus audit, classify this bounded spectral route NOT_ESTABLISHED_IN_FROZEN_CORPUS; do not claim a general impossibility theorem.",
+  "claims_not_made": [
+    "EFMW-specific physical discovery",
+    "independent peer review",
+    "completed source constraint search",
+    "new metric or numerical experiment",
+    "confirmed novelty of a positive bath spectrum",
+    "overturn of Phase 5 identifiability obstruction"
+  ]
+}
