@@ -14,6 +14,8 @@ This folder publishes the research-methods paper's formal unity criteria and pro
 
 **Phase 3 reference correspondence (2026-11-09):** [Executed Phase 3 report](../unity-001/phase-3/PHASE3_REPORT.md), [interface contracts](../unity-001/phase-3/interfaces.json), and [verified CI](https://github.com/enuminous/papers/actions/runs/42622880582). Three bounded PASS, two deliberately tested stronger claims FAIL, three UNRESOLVED; no EFMW-specific physical observation established.
 
+**Phase 5 conditional-prediction screen (2026-11-09):** [Executed Phase 5 report](../unity-001/phase-5/PHASE5_REPORT.md), [candidate PREDICTION-001](../unity-001/phase-5/PREDICTION_001.md), and [reproducible CI](https://github.com/enuminous/papers/actions/runs/42633977283). Purely synthetic identifiability test: 4 PASS/1 FAIL/6 UNRESOLVED. No confirmatory-ready EFMW-specific physical prediction.
+
 ## Prototype execution, separately performed
 
 - Input: local `Master-Ontology-Compiler-MOC-001-2026-11-08.zip`, SHA-256 `77509faffce09dcbe23d31c4cb956d5e335fbd6c113edfed9cae7e22cbadeb7e`.

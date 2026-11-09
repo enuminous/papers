@@ -1,0 +1,33 @@
+{
+  "schema": "unity-001-phase5-ci-receipt-v1",
+  "date": "2026-11-09",
+  "run_id": 42633977283,
+  "run_url": "https://github.com/enuminous/papers/actions/runs/42633977283",
+  "tested_commit": "2b4dd2730661d1c3be049aea6306bf810dd33808",
+  "frozen_protocol_commit": "3bea0d0fb4c76c95a216541152a55a9877905774",
+  "artifact_id": 13682645693,
+  "artifact_url": "https://github.com/enuminous/papers/actions/runs/42633977283/artifacts/13682645693",
+  "tests": {
+    "passed": 25,
+    "total": 25,
+    "fail": 0
+  },
+  "findings": {
+    "PASS": 4,
+    "FAIL": 1,
+    "UNRESOLVED": 6
+  },
+  "source_inventory_from_phase1": 717,
+  "toy_results": {
+    "narrow_sigma_kappa_approx": 0.09358573778686018,
+    "near_sigma_kappa_approx": 53.08237576360931,
+    "sensitivity_degradation": 567.2058266453321,
+    "strong_conventional_profile_fisher": "0",
+    "exact_injection_kappa": "1/2",
+    "null_fit_approx": 0.011743787301485176,
+    "injection_fit_approx": 0.5117437873014852
+  },
+  "physical_readiness": "NOT_READY_FOR_CONFIRMATORY_PHYSICAL_PREDICTION",
+  "EFMW_specific_physical_PASS": 0,
+  "interpretation": "Observed CI pass and summary; exact machine-generated manifest remains in the linked artifact. All numerical cases are hypothetical and dimensionless; none is real physical evidence."
+}
