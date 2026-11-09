@@ -3,7 +3,7 @@
   "created_utc_date": "2026-11-09",
   "scope": "Four first-priority repositories; all Git-tracked blobs, plus emphasized original mathematical sources",
   "algorithm": "Git SHA-1 blob object IDs and immutable 40-character commits. This is not a fresh SHA-256 hash of downloaded file bytes.",
-  "status": "FOUR_REPO_HEADS_PINNED; FULL_ORIGINAL_CANONICAL_UPSTREAM_AND_REPLAY_UNRESOLVED",
+  "status": "FOUR_PRIORITY_REPOS_AND_THREE_UPSTREAM_SOURCE_HEADS_PINN; SOURCE_BYTES_IDENTITY_PASS; INDEPENDENT_REPLAY_AND_UNITY_PHYSICS_UNRESOLVED",
   "files_count": 209,
   "repository_count": 4,
   "repositories": [
@@ -1431,8 +1431,56 @@
     }
   ],
   "external_original_source_provenance": {
-    "canonical_102_original": "enuminous/Monolithic-102-Zoo-Lean4 canonical/equations.json was previously cited by Information-Tensor by blob SHA 5e68eec5ebfed0764d0c55404249de082ce02f03. Its original repository COMMIT has not been pinned by this four-repo phase; source snapshot is archived in the pinned Information-Tensor repo.",
-    "fieldspace_originals": "EFMW-Lagrangian includes archived FieldSpace and canonical 102 text files, with manifest digests; original upstream repository commits outside the four-head scope remain UNRESOLVED."
+    "status": "UPSTREAM_HEADS_PINN_AND_ARCHIVED_BLOBS_MATCH",
+    "additional_original_repositories": [
+      {
+        "repo": "enuminous/Monolithic-102-Zoo-Lean4",
+        "commit": "6e85c9e558652f5033c55d70f33077eff7a9fd89",
+        "files": [
+          {
+            "path": "canonical/equations.json",
+            "git_blob_sha": "5e68eec5ebfed0764d0c55404249de082ce02f03",
+            "matches_archived": "enuminous/Information-Tensor:sources/canonical-equations.json"
+          }
+        ]
+      },
+      {
+        "repo": "enuminous/Monolithic_102_EFMW",
+        "commit": "4129cc6e86396b6752433c80a78439662b441836",
+        "files": [
+          {
+            "path": "CANONICAL_102.md",
+            "git_blob_sha": "a328e4ce7c0b80565148ad28fa63eb3337e69335",
+            "matches_archived": "enuminous/EFMW-Lagrangian:sources/Monolithic_CANONICAL_102.md"
+          }
+        ]
+      },
+      {
+        "repo": "enuminous/FieldSpace",
+        "commit": "4f994c45c319b44eaa43133280a7671e768da87c",
+        "files": [
+          {
+            "path": "fieldspace_master_action.md",
+            "git_blob_sha": "337339a42259bee4d9956a76acc23880fb97d07b",
+            "matches_archived": "enuminous/EFMW-Lagrangian:sources/FieldSpace_master_action_original.md"
+          },
+          {
+            "path": "EFMW_165_field_equations.txt",
+            "git_blob_sha": "ac6313fe4a2b02a28ac8fb34519c5f96f6ea2bd8",
+            "matches_archived": "enuminous/EFMW-Lagrangian:sources/EFMW_165_field_equations.txt"
+          }
+        ]
+      }
+    ],
+    "checks": {
+      "upstream_blob_matches": 4,
+      "upstream_blob_mismatches": 0,
+      "canonical_102_full_block_exact": 102,
+      "canonical_102_total": 102,
+      "fieldspace_lines_exact": 585,
+      "fieldspace_lines_total": 585
+    },
+    "limitations": "The upstream HEADs and source Git blobs are pinned at 2026-11-09. Exact content identity does not prove equations or imported interpretations physically valid."
   },
   "limits": [
     "Git object metadata is an immutable locator, not independent mathematical certification",

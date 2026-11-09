@@ -32,7 +32,15 @@
       "ME-073",
       "ME-102"
     ],
-    "full_multiline_comparison": "UNRESOLVED"
+    "full_multiline_comparison": "PASS: 102/102 exact full-formula blocks between canonical JSON and canonical Markdown at pinned archived/upstream commits",
+    "full_block_exact_match": 102,
+    "full_block_discrepancies": 0,
+    "multiline_or_prose_entries_resolved": [
+      "ME-065",
+      "ME-071",
+      "ME-073",
+      "ME-102"
+    ]
   },
   "sources": [
     {

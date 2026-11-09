@@ -7,7 +7,7 @@ Source repository commits and all Git blob IDs are preserved in [sources.lock.js
 | Candidate corpus | Frozen archival representation | Original upstream source boundary |
 |---|---|---|
 | Geometry ME-006/007 | `enuminous/Geometry@285b95551ca11c487eb6c0c13f8dde86b702df71:Geometry.lean` | Component-level formal analogue, not original fully covariant tensor derivation |
-| Information-Tensor WITD-001/002 | `enuminous/Information-Tensor@b02b04897743d34cdb846e9fac2518cd8faa4399:docs/THEORY.md` and `research/witd-002/DERIVATION.md` | Model closures authored in lab; canonical 102 copy from `Monolithic-102-Zoo-Lean4` with **blob** pinned but original repo commit still unresolved |
+| Information-Tensor WITD-001/002 | `enuminous/Information-Tensor@b02b04897743d34cdb846e9fac2518cd8faa4399:docs/THEORY.md` and `research/witd-002/DERIVATION.md` | Model closures authored in lab; canonical 102 copy from `Monolithic-102-Zoo-Lean4` with **blob** pinned but original repo commit now pinned to `6e85c9e558652f5033c55d70f33077eff7a9fd89` |
 | EFMW-Lagrangian C1 and triplets | `enuminous/EFMW-Lagrangian@83f9d2ec03e055c6cd09aa6359189161ad1571f6:candidate/CANDIDATE.md`, `sources/EFMW_165_field_equations.txt`, `audit/equations.csv` | Original FieldSpace upstream revisions cited by embedded `audit/source_manifest.json`; independent upstream commit pin is outside this freeze |
 | Standard-Model-Reduction | `enuminous/Standard-Model-Reduction@aa569b13a594735774c7b643d44aebff4d5ad17c:three_line_standard_model_geometric_reduction.md` | Conventional SM mathematical reference; 39-strata extension is conjectural |
 
@@ -33,3 +33,14 @@ The Information-Tensor `LICENSE.md` states no public software license is selecte
 - Preserve scientific uncertainty: zero new EFMW-specific experimentally validated physical results.
 
 Owner's work program: [UNITY-001 action plan](../../../UNITY-001-Pathway-to-Physical-Unification-Action-Plan-2026-11-08.md).
+
+## Upstream origin verification addendum (2026-11-09)
+
+Directly fetched the original upstream at immutable commits and checked Git blob IDs against the locked archival copies:
+
+- `Monolithic-102-Zoo-Lean4@6e85c9e558652f5033c55d70f33077eff7a9fd89:canonical/equations.json` = `5e68eec5ebfed0764d0c55404249de082ce02f03`.
+- `Monolithic_102_EFMW@4129cc6e86396b6752433c80a78439662b441836:CANONICAL_102.md` = `a328e4ce7c0b80565148ad28fa63eb3337e69335`.
+- `FieldSpace@4f994c45c319b44eaa43133280a7671e768da87c:fieldspace_master_action.md` = `337339a42259bee4d9956a76acc23880fb97d07b`.
+- Same FieldSpace commit, `EFMW_165_field_equations.txt` = `ac6313fe4a2b02a28ac8fb34519c5f96f6ea2bd8`.
+
+**Identity checks 4/4 PASS.** Full 102-entry formula-block text compares 102/102 exact. These findings resolve the identified archived-copy provenance questions; independent model validity, source licenses, and broader ontology links still have open obligations.
