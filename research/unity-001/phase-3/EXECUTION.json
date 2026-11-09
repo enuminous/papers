@@ -1,0 +1,33 @@
+{
+  "schema": "unity-001-phase3-ci-receipt-v1",
+  "date": "2026-11-09",
+  "execution": {
+    "repo": "enuminous/papers",
+    "run_id": 42622880582,
+    "run_url": "https://github.com/enuminous/papers/actions/runs/42622880582",
+    "tested_commit": "d033ac883f848fe0f4079f3af8e0f3b498b3da9f",
+    "artifact_id": 13677480505,
+    "artifact_url": "https://github.com/enuminous/papers/actions/runs/42622880582/artifacts/13677480505",
+    "runtime": "GitHub-hosted Python 3.12",
+    "conclusion": "success"
+  },
+  "observations": {
+    "tests_total": 27,
+    "tests_passed": 27,
+    "tests_failed": 0,
+    "findings": {
+      "PASS": 3,
+      "FAIL": 2,
+      "UNRESOLVED": 3
+    },
+    "maxwell_metric_direction_checks": 240,
+    "maxwell_field_variation_checks": 24,
+    "maxwell_signature_flip_checks": 24,
+    "source_split_trials": 24,
+    "source_absorption_trials": 24,
+    "independently_fixed_matter_controls": 24,
+    "EFMW_specific_physical_PASS": 0
+  },
+  "status": "BOUNDED_REFERENCE_CORRESPONDENCE_PASS_EFMW_PHYSICS_UNRESOLVED",
+  "caution": "The exact JSON manifest is uploaded as CI artifact and not presented as a fresh universal proof; the two FAIL findings refute stronger claims deliberately tested."
+}

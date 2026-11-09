@@ -74,6 +74,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[UNITY-001 Phase 3 — Classical Correspondence and Source-Identifiability Obstruction](research/unity-001/phase-3/PHASE3_REPORT.md)** · [Executable exact-rational bridge test](research/unity-001/phase-3/bridge.py) · [Verified CI](https://github.com/enuminous/papers/actions/runs/42622880582) — 9 November 2026. Conditional C1→Einstein–Maxwell bulk-action projection, restricted Abelian SM kinetic match, retained curvature–Maxwell and Higgs-energy counterexamples, and Geometry's source-only absorption ambiguity. Eight scoped findings: 3 PASS, 2 FAIL, 3 UNRESOLVED; 27/27 software tests, 0 EFMW-specific physical PASS.
+
 - **[The Common Measure — Humanism, Extremism, and the Possibility of American Reconciliation](The-Common-Measure-Humanism-Extremism-and-American-Reconciliation-2026-11-09.md)** — 9 November 2026. Civic-philosophy essay examining why reciprocal accusations of extremism do not establish moral equivalence; proposes a democratic-humanist common measure and a path to liberal–conservative rapprochement without surrendering evidence or accountability.
 
 - **[UNITY-001 Phase 2 — Source-Linked Mathematical Type Compilation](research/unity-001/phase-2/PHASE2_REPORT.md)** · [Typed registry](research/unity-001/phase-2/typed-registry.json) · [CI verification](https://github.com/enuminous/papers/actions/runs/42619525163) — 9 November 2026. Bounded compiler checks 9/9 manually declared ASTs against 717 frozen source records; 708 uncompiled, eight scientific conflicts unresolved, 20 passing adversarial tests, zero physical-equivalence or EFMW-specific results claimed.

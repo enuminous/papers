@@ -1,0 +1,48 @@
+{
+  "schema": "unity-001-phase3-counterexample-register-v1",
+  "date": "2026-11-09",
+  "cases": [
+    {
+      "id": "P3-CEX-001",
+      "status": "FAIL",
+      "false_claim": "Setting extra C1 fields to zero automatically yields pure Einstein-Maxwell even with interactions retained",
+      "source": "C1 potential contains g_EM R X",
+      "witness": {
+        "g_EM": "1/7",
+        "R": "3",
+        "X": "4",
+        "delta_L": "-12/7"
+      },
+      "meaning": "Restricted action retains nonminimal curvature-electromagnetism coupling, so unconditional equality is false.",
+      "scope": "Off-shell polynomial witness, not a physical Einstein spacetime solution"
+    },
+    {
+      "id": "P3-CEX-002",
+      "status": "FAIL",
+      "false_claim": "SM gauge-only branch with H=0 has exactly Maxwell L=-X/4",
+      "source": "SM Higgs potential -lambda(H†H-v²/2)²",
+      "witness": {
+        "lambda": "2",
+        "v": "2",
+        "delta_L": "-8"
+      },
+      "meaning": "At H=0, V0=lambda*v^4/4 survives and contributes to gravity if coupled.",
+      "scope": "Classical fixed-background density; H=0 generally unstable; no quantum SM correspondence"
+    },
+    {
+      "id": "P3-NEG-001-BOUNDARY",
+      "status": "PASS_NEGATIVE_CONTROL",
+      "false_claim": "Every nonzero kappa I is unobservable under all measurements",
+      "source": "Geometry source_absorption is conditional on free matter reallocation and source-only observer",
+      "witness": {
+        "T": "1 on each component",
+        "I": "2 on each component",
+        "kappa": "1",
+        "S_at_kappa_1": "3",
+        "S_at_kappa_0_with_T_fixed": "1"
+      },
+      "meaning": "Independent matter knowledge can distinguish nonzero kappa term; no general physical no-go proved.",
+      "scope": "Finite component example, not a physical observation"
+    }
+  ]
+}

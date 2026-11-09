@@ -1,0 +1,131 @@
+{
+  "schema": "unity-001-phase3-interface-contracts-v1",
+  "date": "2026-11-09",
+  "evidence_scopes": "All statuses are local mathematical claim gates; no physical interpretation is automatically promoted.",
+  "interfaces": [
+    {
+      "id": "P3-REF-001",
+      "title": "C1 source-free Einstein-Maxwell bulk-action projection",
+      "status": "PASS",
+      "map_type": "restriction_of_field_and_coupling_family",
+      "source": {
+        "repo": "enuminous/EFMW-Lagrangian",
+        "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+        "path": "candidate/CANDIDATE.md",
+        "blob": "916e04935f50cbbf07ddcd81e7c71a02954b1c96",
+        "lines": [
+          16,
+          22,
+          36
+        ]
+      },
+      "domain": "Classical Lorentzian metric (-+++), Mpl²>0, smooth Abelian gauge field; compact-support variations and appropriate boundary terms if deriving field equations.",
+      "restriction": [
+        "All eight neutral scalar fields identically zero",
+        "B and its field strength H identically zero",
+        "All pair and triple interaction coefficients g_ij and h_ijk set zero, including g_EM",
+        "Retain metric g, A field, Mpl² and Lambda"
+      ],
+      "forward_map": "(g,A,B,phi,couplings)->(g,A) with explicitly restricted B=phi=couplings=0",
+      "target": "Einstein–Hilbert bulk density with cosmological constant + Maxwell -F²/4",
+      "checked_identity": "L_C1|restricted = MP2/2*(R-2 Lambda)-X/4",
+      "proof_method": "Exact polynomial rewriting; known variational equations separately stated analytically",
+      "limitations": [
+        "Does not derive Einstein-Maxwell equations afresh in a proof assistant",
+        "Does not reproduce full Standard Model or quantized gravity",
+        "No unique EFMW source term remains in this subfamily"
+      ]
+    },
+    {
+      "id": "P3-REF-002",
+      "title": "C1 Maxwell gauge kinetic expression to SM hypercharge gauge kinetic expression",
+      "status": "PASS",
+      "map_type": "field_strength_identification_and_global_metric_sign_convention",
+      "source": {
+        "repo": "enuminous/Standard-Model-Reduction",
+        "commit": "aa569b13a594735774c7b643d44aebff4d5ad17c",
+        "path": "three_line_standard_model_geometric_reduction.md",
+        "blob": "c88257811c598708ac68cc77cd6b402d036a0671",
+        "lines": [
+          15,
+          17
+        ]
+      },
+      "domain": "Classical U(1)_Y kinetic density, no Higgs/fermion/SU2/SU3 fields, fixed-background SM (+---) compared to C1 (-+++)",
+      "restriction": [
+        "SM H=0 (generally unstable stationary branch)",
+        "SM SU3 and SU2 gauge strengths zero",
+        "All fermion fields zero",
+        "Identify hypercharge strength B_{mu nu} with C1 F_{mu nu}",
+        "Map SM (+---) metric to g_SM=-g_C1; compare only F²"
+      ],
+      "target": "-X/4 in the kinetic expression; full restricted SM density differs by -lambda*v^4/4",
+      "checked_identity": "X_SM(g_SM=-g_C1)=X_C1(g_C1), L_SM|branch + lambda*v^4/4 = -X/4",
+      "limitations": [
+        "Higgs vacuum-energy term not dropped",
+        "No same-convention gravity action or stress-tensor equivalence established",
+        "No full chiral/Yukawa or quantum Standard Model mapping",
+        "Physical electroweak vacuum not H=0"
+      ]
+    },
+    {
+      "id": "P3-NEG-001",
+      "title": "EFMW-inspired source split: conditional source-only nonidentifiability",
+      "status": "PASS",
+      "map_type": "algebraic_equivalence_class_under_unrestricted_source_reallocation",
+      "source": {
+        "repo": "enuminous/Geometry",
+        "commit": "285b95551ca11c487eb6c0c13f8dde86b702df71",
+        "path": "Geometry.lean",
+        "blob": "232d48f36da46dc8c0e51096a1b56c56a5c4706f",
+        "lines": [
+          33,
+          57,
+          67,
+          79
+        ]
+      },
+      "domain": "Real Fin4×Fin4 component arrays, scalar kappa, ordinary T free to reallocate, observations depending only on S=T+kappa I",
+      "map": "(T,I,kappa)->(T+kappa J,I-J,kappa); also absorbed (S,0,0)",
+      "checked_identity": "S(T+kappa J,I-J,kappa)=S(T,I,kappa)",
+      "limitation": "Does not establish a covariant spacetime tensor map or observational no-go with independently fixed matter; original Geometry theorem already existed",
+      "negative_control": "When T is separately known and I nonzero, S(T,I,kappa)!=S(T,I,0) for kappa nonzero in constructed cases"
+    },
+    {
+      "id": "P3-GR-EFMW",
+      "title": "Full EFMW informational stress to physical gravitational source",
+      "status": "UNRESOLVED",
+      "map_type": "not_supplied",
+      "required": [
+        "Define a covariant informational stress tensor with physical units and actual field dynamics",
+        "Verify divergence/energy exchange with standard matter and gravity",
+        "Define operational kappa, a strong kappa=0 comparator and independently calibrated observation",
+        "Avoid circular choice of T or measurement-derived I"
+      ]
+    },
+    {
+      "id": "P3-FULL-SM",
+      "title": "Full classical/quantum Standard Model integration",
+      "status": "UNRESOLVED",
+      "map_type": "not_supplied",
+      "required": [
+        "Correct full signature and curvature conventions",
+        "All gauge, Higgs, chiral, Yukawa and CP terms",
+        "Correctly handle vacuum energy and quantization",
+        "Preserve observed SM parameters; no free-parameter elimination claimed"
+      ]
+    },
+    {
+      "id": "P3-FULL-DYNAMICS",
+      "title": "Coupled Einstein-Maxwell/EFMW dynamical correspondence",
+      "status": "UNRESOLVED",
+      "map_type": "not_supplied",
+      "required": [
+        "Independent continuum variational derivation with boundary conditions",
+        "A nontrivial on-shell coupled solution or theorem",
+        "Formal or independently reproducible PDE checks",
+        "Physical observable and external evidence"
+      ]
+    }
+  ]
+}
