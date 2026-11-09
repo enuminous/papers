@@ -7,6 +7,9 @@
 
 This folder publishes the research-methods paper's formal unity criteria and provenance notes. **It does not contain the executable compiler ZIP**, and this publication does not imply that the compiler source, upstream source corpora, Lean kernel certificates, or any physical measurements are hosted in `enuminous/papers`.
 
+
+**Phase 1 executed source-freeze audit (2026-11-09):** [UNITY-001 Phase 1 report](../unity-001/phase-1/PHASE1_REPORT.md) and [lockfile](../unity-001/phase-1/sources.lock.json). Bounded pinned-Git provenance; not a new physical proof.  
+
 ## Prototype execution, separately performed
 
 - Input: local `Master-Ontology-Compiler-MOC-001-2026-11-08.zip`, SHA-256 `77509faffce09dcbe23d31c4cb956d5e335fbd6c113edfed9cae7e22cbadeb7e`.

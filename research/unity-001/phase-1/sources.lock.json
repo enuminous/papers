@@ -1,0 +1,1443 @@
+{
+  "schema": "unity-001-phase1-source-lock-v1",
+  "created_utc_date": "2026-11-09",
+  "scope": "Four first-priority repositories; all Git-tracked blobs, plus emphasized original mathematical sources",
+  "algorithm": "Git SHA-1 blob object IDs and immutable 40-character commits. This is not a fresh SHA-256 hash of downloaded file bytes.",
+  "status": "FOUR_REPO_HEADS_PINNED; FULL_ORIGINAL_CANONICAL_UPSTREAM_AND_REPLAY_UNRESOLVED",
+  "files_count": 209,
+  "repository_count": 4,
+  "repositories": [
+    {
+      "repo": "Geometry",
+      "commit": "285b95551ca11c487eb6c0c13f8dde86b702df71",
+      "role": "conditional Lean component algebra and G3 interface",
+      "owner": "enuminous",
+      "ref": "main",
+      "tree_sha": "9170c23a8261c36af3d2363a3ef29f841ca50806",
+      "source_url": "https://api.github.com/repos/enuminous/Geometry",
+      "commit_url": "https://github.com/enuminous/Geometry/commit/285b95551ca11c487eb6c0c13f8dde86b702df71",
+      "files": [
+        {
+          "path": ".github/workflows/lean.yml",
+          "git_blob_sha": "507242cd3588f5b6f964c20aa2a8504398eb7579",
+          "bytes": 1148,
+          "mode": "100644"
+        },
+        {
+          "path": ".github/workflows/pages.yml",
+          "git_blob_sha": "8231a9459599cb0f4f4d81d4ce8e4478c4c4ddcd",
+          "bytes": 672,
+          "mode": "100644"
+        },
+        {
+          "path": ".gitignore",
+          "git_blob_sha": "12871b584bb8d40ac3b016f8324d574fe9dee959",
+          "bytes": 33,
+          "mode": "100644"
+        },
+        {
+          "path": "Axioms.lean",
+          "git_blob_sha": "a33dde128d794490c51e598be7f41268ae723998",
+          "bytes": 558,
+          "mode": "100644"
+        },
+        {
+          "path": "check.sh",
+          "git_blob_sha": "185fab3dcd4de8af715aa6b2a3b232ba5c4ab4e7",
+          "bytes": 162,
+          "mode": "100644"
+        },
+        {
+          "path": "COUNTEREXAMPLE_ATLAS.md",
+          "git_blob_sha": "35aa1e6b64102e628bf36ff53c5055aa4b5464cb",
+          "bytes": 1828,
+          "mode": "100644"
+        },
+        {
+          "path": "Geometry.lean",
+          "git_blob_sha": "232d48f36da46dc8c0e51096a1b56c56a5c4706f",
+          "bytes": 6621,
+          "mode": "100644"
+        },
+        {
+          "path": "index.html",
+          "git_blob_sha": "b9aee1175be9a59ed4fd58c09be93a1c98529a9a",
+          "bytes": 81558,
+          "mode": "100644"
+        },
+        {
+          "path": "LAB_GUIDE.md",
+          "git_blob_sha": "496043ab7cbe11296e0fbc6c4ad68c13c50eae47",
+          "bytes": 5105,
+          "mode": "100644"
+        },
+        {
+          "path": "lakefile.toml",
+          "git_blob_sha": "1a1d3aa4758d9633d7efefe071014766ab645f64",
+          "bytes": 300,
+          "mode": "100644"
+        },
+        {
+          "path": "lean-toolchain",
+          "git_blob_sha": "4c685fa085fa1c66103533e992fc82c014a12142",
+          "bytes": 25,
+          "mode": "100644"
+        },
+        {
+          "path": "Main.lean",
+          "git_blob_sha": "0db04d03f58e36928052721aea9fa004a62b3d30",
+          "bytes": 520,
+          "mode": "100644"
+        },
+        {
+          "path": "PROOF_RECEIPT.md",
+          "git_blob_sha": "056a40b621ea0ba30b9f4887d228cfc214d5d03f",
+          "bytes": 1669,
+          "mode": "100644"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "48c0e0f6d0dcf1bf9e26c1ecfec1bc3506ef080c",
+          "bytes": 2218,
+          "mode": "100644"
+        },
+        {
+          "path": "sanity.py",
+          "git_blob_sha": "14bdcc5d9d2c96179bf4c25acd2fe41d38723146",
+          "bytes": 857,
+          "mode": "100644"
+        }
+      ],
+      "scope": "GitHub REST metadata snapshot; file-content SHA-256 has not been independently recomputed in this environment"
+    },
+    {
+      "repo": "Information-Tensor",
+      "commit": "b02b04897743d34cdb846e9fac2518cd8faa4399",
+      "role": "implemented scalar-memory laboratory and canonical 102 copy",
+      "owner": "enuminous",
+      "ref": "main",
+      "tree_sha": "c3fc32c5acee3f5e1ce9d133e3dfdae0066a5b8d",
+      "source_url": "https://api.github.com/repos/enuminous/Information-Tensor",
+      "commit_url": "https://github.com/enuminous/Information-Tensor/commit/b02b04897743d34cdb846e9fac2518cd8faa4399",
+      "files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "git_blob_sha": "994805ce7073becf41d021c05f5e39ac79ba3c6d",
+          "bytes": 849,
+          "mode": "100644"
+        },
+        {
+          "path": ".gitignore",
+          "git_blob_sha": "eecc6847b7f0699bd3b3b82a07d61d8de24229dc",
+          "bytes": 67,
+          "mode": "100644"
+        },
+        {
+          "path": ".nojekyll",
+          "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "bytes": 0,
+          "mode": "100644"
+        },
+        {
+          "path": "app.js",
+          "git_blob_sha": "62a524eb7f33401860db9aec41f1a8da1a76598e",
+          "bytes": 17628,
+          "mode": "100644"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "git_blob_sha": "dcb7cc537e79c16b0dd02d6f17e6f8dc828a69ff",
+          "bytes": 285,
+          "mode": "100644"
+        },
+        {
+          "path": "cli.cjs",
+          "git_blob_sha": "ff02be3755e9f766eebbb07980dcb169405b6749",
+          "bytes": 3587,
+          "mode": "100644"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "git_blob_sha": "040f0e14b57bc399952fd148c664b4ada9bbfea7",
+          "bytes": 789,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/API.md",
+          "git_blob_sha": "15d154b57f21d3c534cffae381f92efcf4a69837",
+          "bytes": 5078,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/EXPERIMENTS.md",
+          "git_blob_sha": "ad3b6b74891139f019700c20d85304c462a328a8",
+          "bytes": 4176,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/OPEN_OBLIGATIONS.md",
+          "git_blob_sha": "1c0218e395bb66e5eefb4e1c1eae52c8e45e88f0",
+          "bytes": 2333,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/PROVENANCE.md",
+          "git_blob_sha": "08e6d71a71b0420e4b2a2cc9e513cec7f5b903cc",
+          "bytes": 4276,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/SEMANTICS.md",
+          "git_blob_sha": "e0549ff140a375356541222538b805743f34dc49",
+          "bytes": 5794,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/THEORY.md",
+          "git_blob_sha": "ea589c618d9c6d698bd241110a3e3b756560bd64",
+          "bytes": 9192,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/VALIDATION.md",
+          "git_blob_sha": "418666da34d135f548d86f1a093283754d2bdbdb",
+          "bytes": 3774,
+          "mode": "100644"
+        },
+        {
+          "path": "engine/core.js",
+          "git_blob_sha": "9d014bb047efd67f5273d88296619c230ced1ed5",
+          "bytes": 14463,
+          "mode": "100644"
+        },
+        {
+          "path": "engine/energy-ledger.js",
+          "git_blob_sha": "a6f266bb34cebdd8df0cf338fb81b2a1615bafbd",
+          "bytes": 2757,
+          "mode": "100644"
+        },
+        {
+          "path": "engine/semantic.js",
+          "git_blob_sha": "745b314bd9423b1521e55e5f29021f4d2b12b868",
+          "bytes": 16399,
+          "mode": "100644"
+        },
+        {
+          "path": "examples/claims.json",
+          "git_blob_sha": "6b9d89500bf7ffc80bf80ba7e3b3bf66022763b5",
+          "bytes": 592,
+          "mode": "100644"
+        },
+        {
+          "path": "examples/comparison.json",
+          "git_blob_sha": "5375de57d297d6a0451c79b4cb00f3d8ae7d7348",
+          "bytes": 55,
+          "mode": "100644"
+        },
+        {
+          "path": "examples/conservative.json",
+          "git_blob_sha": "ea6089f29fc099d9bc8c184587981f38960e02d7",
+          "bytes": 130,
+          "mode": "100644"
+        },
+        {
+          "path": "examples/research-text.txt",
+          "git_blob_sha": "813fb1f69d1fca49778264af937ea1253f8a9eb5",
+          "bytes": 251,
+          "mode": "100644"
+        },
+        {
+          "path": "icon.svg",
+          "git_blob_sha": "0a1c154361a553098121c6113a91e61557843a64",
+          "bytes": 265,
+          "mode": "100644"
+        },
+        {
+          "path": "index.html",
+          "git_blob_sha": "713f40bfdb8950825d553b9039ea758c9fd60a5c",
+          "bytes": 14148,
+          "mode": "100644"
+        },
+        {
+          "path": "LICENSE.md",
+          "git_blob_sha": "bb4ccb2f516aa865d999a8d58c823ecee58f95de",
+          "bytes": 472,
+          "mode": "100644"
+        },
+        {
+          "path": "package.json",
+          "git_blob_sha": "b1bceb04df9b11c5cde7f750afa70a1937fab895",
+          "bytes": 578,
+          "mode": "100644"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "b61cdab0a5da6d287a5a8e5daf0bca94066b075a",
+          "bytes": 8705,
+          "mode": "100644"
+        },
+        {
+          "path": "requirements-plots.txt",
+          "git_blob_sha": "89442067355c080d01a77f1299953aa2780f901b",
+          "bytes": 64,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/all-tests.txt",
+          "git_blob_sha": "40bcb4cba43059f43ab7507aa4add1164d0bfebe",
+          "bytes": 3126,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/DERIVATION.md",
+          "git_blob_sha": "d427b2f50bd8e577f6c206e076aa4121a612c6d9",
+          "bytes": 9487,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/diagnostics.cjs",
+          "git_blob_sha": "aaab5bee46e3024527b7cbd784d8af716fa0c2a8",
+          "bytes": 1685,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/diagnostics.json",
+          "git_blob_sha": "72713293534288f5506fb5601f14309614334d4f",
+          "bytes": 2337,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/figure.svg",
+          "git_blob_sha": "55a744ae610df8ac21d81b84c3708049ddb45488",
+          "bytes": 41960,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/legacy-verification.txt",
+          "git_blob_sha": "558c15df37167178c4c349d09bad18beea0ab921",
+          "bytes": 2961,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/plot.py",
+          "git_blob_sha": "bbc737041259c84b5666454bdfc648efede407f7",
+          "bytes": 2018,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/PROTOCOL.md",
+          "git_blob_sha": "32a40022605c923db99406da63bbfe1bf8f56f4e",
+          "bytes": 4296,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/reference.py",
+          "git_blob_sha": "c66129baecd4ae6f29f1de2861b2812cc90b9023",
+          "bytes": 1470,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/replay.cjs",
+          "git_blob_sha": "80a4d743c4d4941c682aae7cafab4cf41df64d22",
+          "bytes": 1747,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/results.json",
+          "git_blob_sha": "95bad9381ce3c26da2297bd89af9fad26e79cbb4",
+          "bytes": 23264,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/RESULTS.md",
+          "git_blob_sha": "e1566b52579612d26edfb2f28042c7afd9b5862e",
+          "bytes": 6704,
+          "mode": "100644"
+        },
+        {
+          "path": "research/witd-002/run.cjs",
+          "git_blob_sha": "18cf82e9e218c03bdc516cae5592554c6cd655dd",
+          "bytes": 7149,
+          "mode": "100644"
+        },
+        {
+          "path": "results/comparison.json",
+          "git_blob_sha": "f2c809876159c37ae8dc08da16ed2c4c7281b445",
+          "bytes": 24516,
+          "mode": "100644"
+        },
+        {
+          "path": "results/conservative.csv",
+          "git_blob_sha": "18bfcb3a2388a1711ccaa5b63570118a61f9b2cd",
+          "bytes": 7738,
+          "mode": "100644"
+        },
+        {
+          "path": "results/conservative.json",
+          "git_blob_sha": "67f8511bf18f5459a3766753ce618f41d9447295",
+          "bytes": 142524,
+          "mode": "100644"
+        },
+        {
+          "path": "results/overview.png",
+          "git_blob_sha": "949c05fc41fcabd0b5e91f9ac776d80204ff1d8f",
+          "bytes": 220313,
+          "mode": "100644"
+        },
+        {
+          "path": "results/scalar-bounded.csv",
+          "git_blob_sha": "5745ab21b4b8dcbea56cae8e48fa915256848a3d",
+          "bytes": 580,
+          "mode": "100644"
+        },
+        {
+          "path": "results/scalar-bounded.json",
+          "git_blob_sha": "9a9f39929b16bdd02765f3306b6e042848cd0326",
+          "bytes": 51792,
+          "mode": "100644"
+        },
+        {
+          "path": "results/scalar-literal.csv",
+          "git_blob_sha": "7adb2f5c2316ceda0150e7a9a15527e441184a14",
+          "bytes": 593,
+          "mode": "100644"
+        },
+        {
+          "path": "results/scalar-literal.json",
+          "git_blob_sha": "e66db990dbddb18e72bf2e4b6a273af26d358ef2",
+          "bytes": 54167,
+          "mode": "100644"
+        },
+        {
+          "path": "results/semantic-driven.csv",
+          "git_blob_sha": "fbfb7e6df3c24fd86c92176cb8a9f8df5c39a136",
+          "bytes": 7459,
+          "mode": "100644"
+        },
+        {
+          "path": "results/semantic-driven.json",
+          "git_blob_sha": "d41dece43c1bb9c6c5b02547ecf8b397940d3e9e",
+          "bytes": 97420,
+          "mode": "100644"
+        },
+        {
+          "path": "results/semantic.json",
+          "git_blob_sha": "4e29f920379493cf27316ca8157528c3f937ce6c",
+          "bytes": 8157,
+          "mode": "100644"
+        },
+        {
+          "path": "results/test-output.txt",
+          "git_blob_sha": "4710f9e2183fa53f702f6e64436aeb6152c159d4",
+          "bytes": 2697,
+          "mode": "100644"
+        },
+        {
+          "path": "results/verification.json",
+          "git_blob_sha": "d9e799db46a1ce8bb97e47dbf759247c8e488947",
+          "bytes": 339,
+          "mode": "100644"
+        },
+        {
+          "path": "results/verify-console.txt",
+          "git_blob_sha": "faf7844e8af72ae7d67a64b16cfba969a785c4a3",
+          "bytes": 2957,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/check_manifest.py",
+          "git_blob_sha": "88eb37fd9a84ea45f3f3d973146e77a24e180822",
+          "bytes": 394,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/package.py",
+          "git_blob_sha": "540f2e1823e8c513fef3e0bd62eb5bfc22bd2f01",
+          "bytes": 1732,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/plot_results.py",
+          "git_blob_sha": "ee9fb98b1638b27c9c92855d710a4dcc21b4acb6",
+          "bytes": 2160,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/reference.py",
+          "git_blob_sha": "3cf5458e70c641f066ef8c8a66a909c43418941c",
+          "bytes": 579,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/verify.cjs",
+          "git_blob_sha": "a607e51889e6d425515d3a2694b87905bfbfb7a2",
+          "bytes": 2262,
+          "mode": "100644"
+        },
+        {
+          "path": "SHA256SUMS",
+          "git_blob_sha": "dde3300024f0ee7d0a80c24fb2cf5195bf3e322c",
+          "bytes": 5757,
+          "mode": "100644"
+        },
+        {
+          "path": "sources/canonical-equations.json",
+          "git_blob_sha": "5e68eec5ebfed0764d0c55404249de082ce02f03",
+          "bytes": 40348,
+          "mode": "100644"
+        },
+        {
+          "path": "sources/catalog.js",
+          "git_blob_sha": "2395f0327d83a6c18fd22727ce38522e029e55d4",
+          "bytes": 33618,
+          "mode": "100644"
+        },
+        {
+          "path": "sources/provenance.json",
+          "git_blob_sha": "db161044918e7d3a2a5d92e52a2d906ebd16c3f3",
+          "bytes": 873,
+          "mode": "100644"
+        },
+        {
+          "path": "style.css",
+          "git_blob_sha": "221a4e6b3aa2d3f7b5b8ec28285bc7c7b4178740",
+          "bytes": 10276,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/energy-ledger.test.cjs",
+          "git_blob_sha": "bd438b8c97102a7147f54d584e79e57fd03689ce",
+          "bytes": 1752,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/engine.test.cjs",
+          "git_blob_sha": "e308792fb13f6d7fdf67495f6507785dd476cb68",
+          "bytes": 8448,
+          "mode": "100644"
+        }
+      ],
+      "scope": "GitHub REST metadata snapshot; file-content SHA-256 has not been independently recomputed in this environment"
+    },
+    {
+      "repo": "EFMW-Lagrangian",
+      "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+      "role": "candidate C1 action, raw 165-triplet audit and source copies",
+      "owner": "enuminous",
+      "ref": "main",
+      "tree_sha": "ce1aae2ceec687434c352d3194404ebc29639949",
+      "source_url": "https://api.github.com/repos/enuminous/EFMW-Lagrangian",
+      "commit_url": "https://github.com/enuminous/EFMW-Lagrangian/commit/83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+      "files": [
+        {
+          "path": ".github/workflows/continuum.yml",
+          "git_blob_sha": "4fad833d77e0e95a14e0fa4fc85dd14bbf1ede62",
+          "bytes": 4846,
+          "mode": "100644"
+        },
+        {
+          "path": ".github/workflows/verify.yml",
+          "git_blob_sha": "66c0a9d0b8ca7e68e36b57707550354d0b1fba06",
+          "bytes": 5996,
+          "mode": "100644"
+        },
+        {
+          "path": ".gitignore",
+          "git_blob_sha": "d2cd16947702c4aafaeef3ab21429bb7f8e67eed",
+          "bytes": 64,
+          "mode": "100644"
+        },
+        {
+          "path": "assets/dashboard.template.html",
+          "git_blob_sha": "b1eca3e971923dfe60beba10c83f89e5a5f0b06c",
+          "bytes": 12305,
+          "mode": "100644"
+        },
+        {
+          "path": "assets/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "Audit.lean",
+          "git_blob_sha": "c5977911462af7a05e6bc860fd1999c24cdebb99",
+          "bytes": 798,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/coupling_dimensions.csv",
+          "git_blob_sha": "d96e1d8a860a81bd574d503dee5784b6dc50937e",
+          "bytes": 2003,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/coupling_identifications.json",
+          "git_blob_sha": "c0389992754168e6cd1c574dc6f9a8259bee6644",
+          "bytes": 10083,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/equations.csv",
+          "git_blob_sha": "97897261aa38eebfc6eb591ef2fc5e10c8523b91",
+          "bytes": 243256,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/equations.json",
+          "git_blob_sha": "e8a5c030d2344059d5652d82dcb7d61862ce2f48",
+          "bytes": 391603,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/FULL_AUDIT.md",
+          "git_blob_sha": "816b00b2288b3a7b6986cad6e221dd3ed4830db1",
+          "bytes": 7631,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/lean_atom_map.json",
+          "git_blob_sha": "1f56738ac34498d96d511b2b8de10bc6d996b1cb",
+          "bytes": 4303,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/lean_certificate_index.json",
+          "git_blob_sha": "6aaa0be8bcd5a436d0e699cbdf232ec5a94ec602",
+          "bytes": 91067,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/monolithic_scope.csv",
+          "git_blob_sha": "58367e41ff621f1819f439225bc7b78537c7e864",
+          "bytes": 19291,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/monolithic_scope.json",
+          "git_blob_sha": "320fc6c7c8a0a2a51456baaec68371740fc056b6",
+          "bytes": 26434,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/scalar_derivations.json",
+          "git_blob_sha": "793d2c0e6d47f7f2dfca6c721c90b44d85edd640",
+          "bytes": 946427,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/source_manifest.json",
+          "git_blob_sha": "d2cf9d43f70cc959f66d28aa7c17a921b267e307",
+          "bytes": 1070,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/summary.json",
+          "git_blob_sha": "b08d3eefffbae2c78c5ecca3c944f08832ebb300",
+          "bytes": 1051,
+          "mode": "100644"
+        },
+        {
+          "path": "audit/triplets.json",
+          "git_blob_sha": "d75f57facea69edfdc96fa8d285cdfcaf5ec2bea",
+          "bytes": 226999,
+          "mode": "100644"
+        },
+        {
+          "path": "candidate/CANDIDATE.md",
+          "git_blob_sha": "916e04935f50cbbf07ddcd81e7c71a02954b1c96",
+          "bytes": 4724,
+          "mode": "100644"
+        },
+        {
+          "path": "candidate/conventions.json",
+          "git_blob_sha": "a4d84fa9c70ea53f298675de74c88a505ea0af87",
+          "bytes": 3113,
+          "mode": "100644"
+        },
+        {
+          "path": "candidate/FREEZE.json",
+          "git_blob_sha": "f6df5a11c434f4aac6e1d2d117a45eb48e30d288",
+          "bytes": 695,
+          "mode": "100644"
+        },
+        {
+          "path": "candidate/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/Audit.lean",
+          "git_blob_sha": "ab82dad267e083da5a2560426b04c130e3761331",
+          "bytes": 1268,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/certificate_index.json",
+          "git_blob_sha": "9931af5c4d4160379a5aa716803cb367e7e2cc75",
+          "bytes": 164867,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum.lean",
+          "git_blob_sha": "1cbe308fa24aab379707c3b82f4566a5df24742b",
+          "bytes": 583,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk00.lean",
+          "git_blob_sha": "0c73a8f91ea85f1246f5d522686278580a8d3364",
+          "bytes": 18946,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk01.lean",
+          "git_blob_sha": "462f3b353fb8e3f7c438773395edddd74627c1f7",
+          "bytes": 16983,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk02.lean",
+          "git_blob_sha": "a7dbe4aa0e81cc444b762475a5ee7b77cc084ae5",
+          "bytes": 20945,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk03.lean",
+          "git_blob_sha": "95cdee9d37ae3de66f6250fc492d6f7d697be3f7",
+          "bytes": 20945,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk04.lean",
+          "git_blob_sha": "f3c90310a56e7d9e0e123922c3e4bfbb2b08fd7c",
+          "bytes": 28865,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk05.lean",
+          "git_blob_sha": "6320b5004e876c0d6cda7052c19d5e47d44a0a6f",
+          "bytes": 32825,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk06.lean",
+          "git_blob_sha": "cb6f6233b078788067994b54a7444f09cdea8157",
+          "bytes": 29855,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk07.lean",
+          "git_blob_sha": "f91a5c6d2f023d6525eaba7d7d578fd5a59484a3",
+          "bytes": 20945,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk08.lean",
+          "git_blob_sha": "7bd4d14ff56b559adf5114d4cf50199bffd5b0d1",
+          "bytes": 19955,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk09.lean",
+          "git_blob_sha": "95a06aa7d4a9794241bfbfebb27c6ecfaa30b00f",
+          "bytes": 32825,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk10.lean",
+          "git_blob_sha": "6f14f856758cf6bd21f5a1db121490d9386a3d15",
+          "bytes": 30845,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk11.lean",
+          "git_blob_sha": "c9b8872a23ce06363f0975818261143a1c022d4c",
+          "bytes": 31835,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk12.lean",
+          "git_blob_sha": "6a11806200bc6b67391bb0d61438fef22b32499e",
+          "bytes": 30845,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Generated/Chunk13.lean",
+          "git_blob_sha": "30fc66793e45c25b25a6d7d629a008fffd03fad4",
+          "bytes": 21940,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/Realization.lean",
+          "git_blob_sha": "5c27bfc4cb60d3b5070ecb0a9af9e6964647ad79",
+          "bytes": 6662,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/EFMWContinuum/ScalarVariation.lean",
+          "git_blob_sha": "2dc4f142176417d1e0d3092527b6c24eeec03c08",
+          "bytes": 10464,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/generate.py",
+          "git_blob_sha": "a657430aa3f4e06d7982162e7a144266d7f3d05c",
+          "bytes": 2992,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/lake-manifest.json",
+          "git_blob_sha": "0cde27aed1b539ce024829b13050cf4a6c583ef0",
+          "bytes": 3343,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/lakefile.toml",
+          "git_blob_sha": "031f579b8a0803ef7e8fccaf52cce5f45619effe",
+          "bytes": 317,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/lean-toolchain",
+          "git_blob_sha": "4c685fa085fa1c66103533e992fc82c014a12142",
+          "bytes": 25,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/negative_checks.py",
+          "git_blob_sha": "e5e5c97eb1e02db9e58acd0b6f197de852aad5fe",
+          "bytes": 2233,
+          "mode": "100644"
+        },
+        {
+          "path": "continuum/recheck.py",
+          "git_blob_sha": "eaaacd5625536988ea4ad9e0f91af477a6e80247",
+          "bytes": 1307,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/CONTINUUM_BRIDGE.md",
+          "git_blob_sha": "5b631c7fcbe09a7394138e931c0d0f907ed05f26",
+          "bytes": 7623,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/DERIVATION.md",
+          "git_blob_sha": "dcd375e8c80a661f2e019bbcbb494e16150b3c65",
+          "bytes": 5616,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/FORMAL_SCOPE.md",
+          "git_blob_sha": "d612282ddcc238b8c7f490b51154b6b49097c1d5",
+          "bytes": 4903,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/GITHUB.md",
+          "git_blob_sha": "599caf481a98ab2603861928973a4c108884531a",
+          "bytes": 1618,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/PHYSICAL_OBLIGATIONS.md",
+          "git_blob_sha": "dad9082a22bc7d77293aa88760e45828a5981f22",
+          "bytes": 5017,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/REPRODUCIBILITY.md",
+          "git_blob_sha": "6a520c0c370f0c66e85707f6b9564df7f1adb172",
+          "bytes": 5308,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian.lean",
+          "git_blob_sha": "255f7a4b71a1453a07c4d59d9a255366061bffd9",
+          "bytes": 587,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Core.lean",
+          "git_blob_sha": "e48424273a6bc9a09a1ced7d87f3458c016e783c",
+          "bytes": 4068,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk00.lean",
+          "git_blob_sha": "cea73d19a7650b20ed3f1906cae4f212c314175f",
+          "bytes": 11852,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk01.lean",
+          "git_blob_sha": "c2e00b5714af6a337393fe8968dd7f853fb9fd60",
+          "bytes": 10845,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk02.lean",
+          "git_blob_sha": "b443971d02a3fe22232103fdacaca5bb4ba7212e",
+          "bytes": 12942,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk03.lean",
+          "git_blob_sha": "dff96ea114c83c9e823677156343e8a8c283037a",
+          "bytes": 12938,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk04.lean",
+          "git_blob_sha": "59c335d03b00c857f6d1857465b86d922f24aa90",
+          "bytes": 17270,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk05.lean",
+          "git_blob_sha": "7971f5c364fc4c4b79d8bbb38609d1dc5b70a99a",
+          "bytes": 19404,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk06.lean",
+          "git_blob_sha": "ec0718f9e083c1bd6b3b3664f5d74ba5909096d6",
+          "bytes": 17793,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk07.lean",
+          "git_blob_sha": "927f05e1cea59afa16ff2691fd25f316619adc81",
+          "bytes": 12968,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk08.lean",
+          "git_blob_sha": "04588cba2050c502f876a4cb3a6925f226fc7832",
+          "bytes": 12429,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk09.lean",
+          "git_blob_sha": "65f38b1a392cc1035c3bd37782f6224cd817eb2b",
+          "bytes": 19426,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk10.lean",
+          "git_blob_sha": "9a0db31a5a34301f32bf47d8c378b8454ab4dbf8",
+          "bytes": 18346,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk11.lean",
+          "git_blob_sha": "ea9bd4b64635e0232c355c4f5790bd4816ce8136",
+          "bytes": 18865,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk12.lean",
+          "git_blob_sha": "9b018f304b938e47f40989d1e8a8db2fdc7f4bf8",
+          "bytes": 18326,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/Chunk13.lean",
+          "git_blob_sha": "e2d0afbf8aa1fba6d3d1e9eb47ede4de4ed5b0bf",
+          "bytes": 13108,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/Generated/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "EFMWLagrangian/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "index.html",
+          "git_blob_sha": "c6cb316f4fe44034b5542f3295aad47b9ad3a211",
+          "bytes": 437041,
+          "mode": "100644"
+        },
+        {
+          "path": "lake-manifest.json",
+          "git_blob_sha": "351158355cbf45a877b22b519be961458ca65ad0",
+          "bytes": 131,
+          "mode": "100644"
+        },
+        {
+          "path": "lakefile.toml",
+          "git_blob_sha": "01144479d89d86bace8b8a83372aeeef42767ab2",
+          "bytes": 123,
+          "mode": "100644"
+        },
+        {
+          "path": "lean-toolchain",
+          "git_blob_sha": "4c685fa085fa1c66103533e992fc82c014a12142",
+          "bytes": 25,
+          "mode": "100644"
+        },
+        {
+          "path": "LICENSE_NOTICE.md",
+          "git_blob_sha": "5ebf73b5df5cc9d0c17c5938ce0d7aec334c6889",
+          "bytes": 769,
+          "mode": "100644"
+        },
+        {
+          "path": "MANIFEST.sha256",
+          "git_blob_sha": "c76c5a0fdd83bc5649866aab3b93de932fcb1fce",
+          "bytes": 7016,
+          "mode": "100644"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "243ab3403603a175f526748b10004b900bd4cb9a",
+          "bytes": 10163,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/audit.py",
+          "git_blob_sha": "a16e959b4deb78715e670e8521ca3c950e67f620",
+          "bytes": 12706,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/check_axiom_guard.py",
+          "git_blob_sha": "d098facf16d0f64816431c1b370078b6468db31f",
+          "bytes": 2261,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/fetch_continuum_cache.sh",
+          "git_blob_sha": "ebac084eeb931b37256359e5d514311e0299c8a8",
+          "bytes": 712,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/freeze.py",
+          "git_blob_sha": "938030dbd93dc3b2d30eebdda3c42dc7b6144e03",
+          "bytes": 1147,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/package.py",
+          "git_blob_sha": "53af0bd599c39544a1e6460dcb9154ac66086c62",
+          "bytes": 2131,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/render_dashboard.py",
+          "git_blob_sha": "a326f8baa1bab383f0bb2a9a0d3c54d5e7d12f9e",
+          "bytes": 784,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/verify.py",
+          "git_blob_sha": "d73363a1d2e71e95e9db0b9d34c16e23f48812bc",
+          "bytes": 3119,
+          "mode": "100644"
+        },
+        {
+          "path": "sources/EFMW_165_field_equations.txt",
+          "git_blob_sha": "ac6313fe4a2b02a28ac8fb34519c5f96f6ea2bd8",
+          "bytes": 64859,
+          "mode": "100644"
+        },
+        {
+          "path": "sources/FieldSpace_master_action_original.md",
+          "git_blob_sha": "337339a42259bee4d9956a76acc23880fb97d07b",
+          "bytes": 7532,
+          "mode": "100644"
+        },
+        {
+          "path": "sources/Monolithic_CANONICAL_102.md",
+          "git_blob_sha": "a328e4ce7c0b80565148ad28fa63eb3337e69335",
+          "bytes": 21048,
+          "mode": "100644"
+        },
+        {
+          "path": "sources/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "sources/source_refs.json",
+          "git_blob_sha": "8f73b33472371216e341a0566ce8037910333eb7",
+          "bytes": 765,
+          "mode": "100644"
+        },
+        {
+          "path": "src/__init__.py",
+          "git_blob_sha": "c3b8394e9dd982cd8f353d4037ed5ef0ef7d753c",
+          "bytes": 80,
+          "mode": "100644"
+        },
+        {
+          "path": "src/catalogue.py",
+          "git_blob_sha": "48a1d9ef4bd2f8d48afdfa4133aa554d0fdc89ef",
+          "bytes": 5130,
+          "mode": "100644"
+        },
+        {
+          "path": "src/efmw_audit/__init__.py",
+          "git_blob_sha": "c3b8394e9dd982cd8f353d4037ed5ef0ef7d753c",
+          "bytes": 80,
+          "mode": "100644"
+        },
+        {
+          "path": "src/efmw_audit/catalogue.py",
+          "git_blob_sha": "48a1d9ef4bd2f8d48afdfa4133aa554d0fdc89ef",
+          "bytes": 5130,
+          "mode": "100644"
+        },
+        {
+          "path": "src/efmw_audit/model.py",
+          "git_blob_sha": "1365589afc3573879d69b5285a4ca423c625d875",
+          "bytes": 1606,
+          "mode": "100644"
+        },
+        {
+          "path": "src/efmw_audit/polynomial.py",
+          "git_blob_sha": "567b07d5e75f99ff4561825e4e8423fb1b052469",
+          "bytes": 1682,
+          "mode": "100644"
+        },
+        {
+          "path": "src/efmw_audit/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "src/model.py",
+          "git_blob_sha": "1365589afc3573879d69b5285a4ca423c625d875",
+          "bytes": 1606,
+          "mode": "100644"
+        },
+        {
+          "path": "src/polynomial.py",
+          "git_blob_sha": "567b07d5e75f99ff4561825e4e8423fb1b052469",
+          "bytes": 1682,
+          "mode": "100644"
+        },
+        {
+          "path": "src/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_audit.py",
+          "git_blob_sha": "efa0c539bb7f1386469e4efc0d7a5acb2d5a45f6",
+          "bytes": 5592,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_cache_download.py",
+          "git_blob_sha": "3df9b3142ad31f5ad87a7c7f2d1578e2c96d674d",
+          "bytes": 3137,
+          "mode": "100644"
+        },
+        {
+          "path": "tools/EXPLICIT_PATH_LAUNCHER.md",
+          "git_blob_sha": "8ed5b9b6d80920c018f7af00ee3d9e012975cefd",
+          "bytes": 2102,
+          "mode": "100644"
+        },
+        {
+          "path": "tools/lean_explicit_path.c",
+          "git_blob_sha": "5b58e62fe10094ce70817ca2219e4e246b590e51",
+          "bytes": 2341,
+          "mode": "100644"
+        },
+        {
+          "path": "tools/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/audit.log",
+          "git_blob_sha": "b08d3eefffbae2c78c5ecca3c944f08832ebb300",
+          "bytes": 1051,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/axiom_audit.log",
+          "git_blob_sha": "b05b31edb05d90bc89734b33470cef9e13b1cd71",
+          "bytes": 71,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/build_status.json",
+          "git_blob_sha": "2719edc8b5860ce54aa2eb26d7a0319e79100c20",
+          "bytes": 3420,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/candidate_lock.log",
+          "git_blob_sha": "1bdd59fca855e7809d553a64cfae82b6a9fe40db",
+          "bytes": 20,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/fresh_extraction_build_status.json",
+          "git_blob_sha": "31c25929d5608da90d7f16b127c643a42bc394e9",
+          "bytes": 3342,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/lean_build.log",
+          "git_blob_sha": "bf368331c6aec832981718b467a165b4ecd0215e",
+          "bytes": 930,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/lean_version.log",
+          "git_blob_sha": "606f0f08386c2353a010b7881848d971b423d244",
+          "bytes": 106,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/leanchecker.log",
+          "git_blob_sha": "ca486373f35038c106ae4a8c404e6e6054f4b3ca",
+          "bytes": 657,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/negative_checks.log",
+          "git_blob_sha": "ed1fa7888056feb8b575460ef051deaeea9210f8",
+          "bytes": 336,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/python_tests.log",
+          "git_blob_sha": "a0fa4c1654437bff891ce06276bfb21d1fa8cb9f",
+          "bytes": 1763,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/readme.md",
+          "git_blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+          "bytes": 1,
+          "mode": "100644"
+        },
+        {
+          "path": "verification/RELEASE_CHECKS.md",
+          "git_blob_sha": "f8d382757ba6e51c16402975a9ff0e06cd055dca",
+          "bytes": 1699,
+          "mode": "100644"
+        }
+      ],
+      "scope": "GitHub REST metadata snapshot; file-content SHA-256 has not been independently recomputed in this environment"
+    },
+    {
+      "repo": "Standard-Model-Reduction",
+      "commit": "aa569b13a594735774c7b643d44aebff4d5ad17c",
+      "role": "classical Standard Model reference geometry",
+      "owner": "enuminous",
+      "ref": "main",
+      "tree_sha": "744e3cfcd132ea8b13b2f59a2c63a900df42ab36",
+      "source_url": "https://api.github.com/repos/enuminous/Standard-Model-Reduction",
+      "commit_url": "https://github.com/enuminous/Standard-Model-Reduction/commit/aa569b13a594735774c7b643d44aebff4d5ad17c",
+      "files": [
+        {
+          "path": ".github/workflows/pages.yml",
+          "git_blob_sha": "d1391a821e78890c4438c9f89bb44b8f639c5983",
+          "bytes": 1020,
+          "mode": "100644"
+        },
+        {
+          "path": "index.html",
+          "git_blob_sha": "3e487f4dafa5ca32c3cc3c9219d4f83a8ab2d208",
+          "bytes": 27828,
+          "mode": "100644"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "ffe38fd09404c75fe05b5d926e572af71187a242",
+          "bytes": 12742,
+          "mode": "100644"
+        },
+        {
+          "path": "standard_model_check_results.txt",
+          "git_blob_sha": "71a90274055a64d256b681c9ecfdeef12d9adc49",
+          "bytes": 1562,
+          "mode": "100644"
+        },
+        {
+          "path": "three_line_standard_model_geometric_reduction.md",
+          "git_blob_sha": "c88257811c598708ac68cc77cd6b402d036a0671",
+          "bytes": 15045,
+          "mode": "100644"
+        },
+        {
+          "path": "verify_standard_model_reduction.py",
+          "git_blob_sha": "d592fdf100ed92dc25ac1edfba7497e32fe67f13",
+          "bytes": 3988,
+          "mode": "100644"
+        }
+      ],
+      "scope": "GitHub REST metadata snapshot; file-content SHA-256 has not been independently recomputed in this environment"
+    }
+  ],
+  "primary_files": [
+    {
+      "repo": "Geometry",
+      "path": "Geometry.lean",
+      "git_blob_sha": "232d48f36da46dc8c0e51096a1b56c56a5c4706f",
+      "permalink": "https://github.com/enuminous/Geometry/blob/285b95551ca11c487eb6c0c13f8dde86b702df71/Geometry.lean"
+    },
+    {
+      "repo": "Geometry",
+      "path": "lean-toolchain",
+      "git_blob_sha": "4c685fa085fa1c66103533e992fc82c014a12142",
+      "permalink": "https://github.com/enuminous/Geometry/blob/285b95551ca11c487eb6c0c13f8dde86b702df71/lean-toolchain"
+    },
+    {
+      "repo": "Geometry",
+      "path": "lakefile.toml",
+      "git_blob_sha": "1a1d3aa4758d9633d7efefe071014766ab645f64",
+      "permalink": "https://github.com/enuminous/Geometry/blob/285b95551ca11c487eb6c0c13f8dde86b702df71/lakefile.toml"
+    },
+    {
+      "repo": "Geometry",
+      "path": "check.sh",
+      "git_blob_sha": "185fab3dcd4de8af715aa6b2a3b232ba5c4ab4e7",
+      "permalink": "https://github.com/enuminous/Geometry/blob/285b95551ca11c487eb6c0c13f8dde86b702df71/check.sh"
+    },
+    {
+      "repo": "Information-Tensor",
+      "path": "docs/THEORY.md",
+      "git_blob_sha": "ea589c618d9c6d698bd241110a3e3b756560bd64",
+      "permalink": "https://github.com/enuminous/Information-Tensor/blob/b02b04897743d34cdb846e9fac2518cd8faa4399/docs/THEORY.md"
+    },
+    {
+      "repo": "Information-Tensor",
+      "path": "sources/canonical-equations.json",
+      "git_blob_sha": "5e68eec5ebfed0764d0c55404249de082ce02f03",
+      "permalink": "https://github.com/enuminous/Information-Tensor/blob/b02b04897743d34cdb846e9fac2518cd8faa4399/sources/canonical-equations.json"
+    },
+    {
+      "repo": "Information-Tensor",
+      "path": "research/witd-002/DERIVATION.md",
+      "git_blob_sha": "d427b2f50bd8e577f6c206e076aa4121a612c6d9",
+      "permalink": "https://github.com/enuminous/Information-Tensor/blob/b02b04897743d34cdb846e9fac2518cd8faa4399/research/witd-002/DERIVATION.md"
+    },
+    {
+      "repo": "Information-Tensor",
+      "path": "package.json",
+      "git_blob_sha": "b1bceb04df9b11c5cde7f750afa70a1937fab895",
+      "permalink": "https://github.com/enuminous/Information-Tensor/blob/b02b04897743d34cdb846e9fac2518cd8faa4399/package.json"
+    },
+    {
+      "repo": "EFMW-Lagrangian",
+      "path": "sources/EFMW_165_field_equations.txt",
+      "git_blob_sha": "ac6313fe4a2b02a28ac8fb34519c5f96f6ea2bd8",
+      "permalink": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/sources/EFMW_165_field_equations.txt"
+    },
+    {
+      "repo": "EFMW-Lagrangian",
+      "path": "audit/equations.csv",
+      "git_blob_sha": "97897261aa38eebfc6eb591ef2fc5e10c8523b91",
+      "permalink": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/audit/equations.csv"
+    },
+    {
+      "repo": "EFMW-Lagrangian",
+      "path": "sources/Monolithic_CANONICAL_102.md",
+      "git_blob_sha": "a328e4ce7c0b80565148ad28fa63eb3337e69335",
+      "permalink": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/sources/Monolithic_CANONICAL_102.md"
+    },
+    {
+      "repo": "EFMW-Lagrangian",
+      "path": "candidate/CANDIDATE.md",
+      "git_blob_sha": "916e04935f50cbbf07ddcd81e7c71a02954b1c96",
+      "permalink": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/candidate/CANDIDATE.md"
+    },
+    {
+      "repo": "EFMW-Lagrangian",
+      "path": "candidate/FREEZE.json",
+      "git_blob_sha": "f6df5a11c434f4aac6e1d2d117a45eb48e30d288",
+      "permalink": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/candidate/FREEZE.json"
+    },
+    {
+      "repo": "EFMW-Lagrangian",
+      "path": "candidate/conventions.json",
+      "git_blob_sha": "a4d84fa9c70ea53f298675de74c88a505ea0af87",
+      "permalink": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/candidate/conventions.json"
+    },
+    {
+      "repo": "EFMW-Lagrangian",
+      "path": "lean-toolchain",
+      "git_blob_sha": "4c685fa085fa1c66103533e992fc82c014a12142",
+      "permalink": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/lean-toolchain"
+    },
+    {
+      "repo": "EFMW-Lagrangian",
+      "path": "continuum/lakefile.toml",
+      "git_blob_sha": "031f579b8a0803ef7e8fccaf52cce5f45619effe",
+      "permalink": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/continuum/lakefile.toml"
+    },
+    {
+      "repo": "Standard-Model-Reduction",
+      "path": "three_line_standard_model_geometric_reduction.md",
+      "git_blob_sha": "c88257811c598708ac68cc77cd6b402d036a0671",
+      "permalink": "https://github.com/enuminous/Standard-Model-Reduction/blob/aa569b13a594735774c7b643d44aebff4d5ad17c/three_line_standard_model_geometric_reduction.md"
+    },
+    {
+      "repo": "Standard-Model-Reduction",
+      "path": "verify_standard_model_reduction.py",
+      "git_blob_sha": "d592fdf100ed92dc25ac1edfba7497e32fe67f13",
+      "permalink": "https://github.com/enuminous/Standard-Model-Reduction/blob/aa569b13a594735774c7b643d44aebff4d5ad17c/verify_standard_model_reduction.py"
+    },
+    {
+      "repo": "Standard-Model-Reduction",
+      "path": "standard_model_check_results.txt",
+      "git_blob_sha": "71a90274055a64d256b681c9ecfdeef12d9adc49",
+      "permalink": "https://github.com/enuminous/Standard-Model-Reduction/blob/aa569b13a594735774c7b643d44aebff4d5ad17c/standard_model_check_results.txt"
+    }
+  ],
+  "external_original_source_provenance": {
+    "canonical_102_original": "enuminous/Monolithic-102-Zoo-Lean4 canonical/equations.json was previously cited by Information-Tensor by blob SHA 5e68eec5ebfed0764d0c55404249de082ce02f03. Its original repository COMMIT has not been pinned by this four-repo phase; source snapshot is archived in the pinned Information-Tensor repo.",
+    "fieldspace_originals": "EFMW-Lagrangian includes archived FieldSpace and canonical 102 text files, with manifest digests; original upstream repository commits outside the four-head scope remain UNRESOLVED."
+  },
+  "limits": [
+    "Git object metadata is an immutable locator, not independent mathematical certification",
+    "All-tree manifest is an inventory, not an assertion that all 209 source files have been read or executed",
+    "No new local Lean or complete scientific build was run",
+    "No license granted by this audit"
+  ]
+}

@@ -74,6 +74,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[UNITY-001 Phase 1: frozen physics source audit](research/unity-001/phase-1/PHASE1_REPORT.md)** · [All four repository Git file locks](research/unity-001/phase-1/sources.lock.json) · [Equation extraction ledger](research/unity-001/phase-1/source-equations.csv) — 9 November 2026. Four authoritative snapshots and their Git object IDs captured, 585/585 archived audit source lines cross-matched; original upstream provenance, multiline canonical comparison, and independent replay still explicitly unresolved.
+
 - **[UNITY-001 — Pathway to Physical Unification: An Evidence-Gated Action Plan](UNITY-001-Pathway-to-Physical-Unification-Action-Plan-2026-11-08.md)** · [MOC-001 paper](MOC-001-Compiling-Ontologies-Toward-Testable-Unity-of-Physics-2026-11-08.md) · [Unity Appendix](research/moc-001/UNITY_APPENDIX.md) — 8 November 2026. Seven-phase execution plan with `ob_pin_sources` first, typed imports, explicit correspondence maps, dynamics verification, discriminating predictions, external measurement and independent replication. Prospective, not a completed unified theory.
 
 - **[MOC-001 — Compiling Ontologies Toward a Testable Unity of Physics](MOC-001-Compiling-Ontologies-Toward-Testable-Unity-of-Physics-2026-11-08.md)** · [Unity Appendix](research/moc-001/UNITY_APPENDIX.md) — 8 November 2026. Research-methods paper and explicit unification criteria for a typed ontology compiler. The separate local scaffold passed 16/16 Python tests and emitted 5 structural PASS, 0 FAIL, 35 UNRESOLVED; no physical unification, original EFMW derivation, Lean replay or experimental validation is claimed.
