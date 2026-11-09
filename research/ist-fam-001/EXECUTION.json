@@ -1,0 +1,91 @@
+{
+  "schema": "ist-fam-001-verified-execution-and-closure-v1",
+  "date": "2026-11-09",
+  "research_program": "Matthew Chenoweth Wright / Monolithic LLC",
+  "activity": "Completed bounded two-hypothesis source audit against 717 frozen original-statement records",
+  "original_protocol": {
+    "path": "research/ist-fam-001/PROTOCOL.json",
+    "commit": "3661841f69bb9dbd01338ee21f494d8d0b8ca7ce",
+    "git_blob_sha": "f98961739080aa0828baf65c8ce5811044cc3904",
+    "modified_during_execution": false
+  },
+  "pre_execution_amendment": {
+    "path": "research/ist-fam-001/PRE_EXECUTION_REVIEW_RULES.md",
+    "commit": "063565de702d0cd1ac7c7eb090cb55ffe65f98d5",
+    "effect": "No post-hoc mode selection; physically justified ordered full-run map required; H2 exponent disclosed as guessed; physical nonpromotion rule"
+  },
+  "source_ledger": {
+    "path": "research/unity-001/phase-1/source-equations.csv",
+    "git_blob_sha": "aff2302bcbad8759f6302f8b218cf029dfc3de2a",
+    "records": 717,
+    "historical_fieldspace": 585,
+    "canonical": 102,
+    "other_original_source_pointers": 30,
+    "unique_record_ids": 717,
+    "original_source_files": 7,
+    "immutable_git_blobs_matched": 7,
+    "original_text_record_matches": 717,
+    "mismatches": 0
+  },
+  "reproducibility": {
+    "audit_script": "research/ist-fam-001/audit.py",
+    "tests": "research/ist-fam-001/test_audit.py",
+    "workflow": ".github/workflows/ist-fam-001.yml",
+    "final_tested_commit": "49e5b61bce594c889f1b4ba5cffdaa116414631c",
+    "final_ci_run_id": 42676059594,
+    "final_ci_run_url": "https://github.com/enuminous/papers/actions/runs/42676059594",
+    "ci_status": "success",
+    "adversarial_tests": 19,
+    "ci_artifact_id": 13700690578,
+    "ci_artifact_url": "https://github.com/enuminous/papers/actions/runs/42676059594/artifacts/13700690578",
+    "ci_artifact_digest_sha256": "17c42752d4403de1ddb2123b2c9ed1876dfe26c882e01b8dae73a470dbae380d",
+    "artifact_members": [
+      "RESULTS.json",
+      "ROW_SCREEN.csv",
+      "SOURCE_FIDELITY.json"
+    ]
+  },
+  "screening": {
+    "records_screened": 717,
+    "explicit_oscillator_or_spectral_vocabulary_source_statements": 0,
+    "lowercase_frequency_symbol_rows": 2,
+    "source_defined_bath_weight_symbol_rows": 0,
+    "fully_defined_physical_mode_maps": 0,
+    "manually_reviewed_near_misses": 27,
+    "source_derived_frequency_ladders": 0,
+    "source_derived_weight_ladders": 0
+  },
+  "hypothesis_results": [
+    {
+      "id": "IST-FAM-H1",
+      "test": "omega_(j+1)/omega_j=phi over the source-ordered full physical bath-mode sequence",
+      "disposition": "NO_SOURCE_SUPPORT",
+      "reason": "No physically specified mapping from locked EFMW variables to an ordered bath frequency sequence. Golden-ratio powers and omega_rec are not such a map.",
+      "full_sequence_ratio_evaluated": false,
+      "physical_discriminator_established": false
+    },
+    {
+      "id": "IST-FAM-H2",
+      "test": "b_(j+1)/b_j=phi^(-2) over same ordered source-defined sequence",
+      "disposition": "NO_SOURCE_SUPPORT",
+      "reason": "No physically defined spectral weights b_j or source-derived exponent -2; exponent was an authored speculative choice.",
+      "full_sequence_ratio_evaluated": false,
+      "physical_discriminator_established": false
+    }
+  ],
+  "program_disposition": "STOP_RULE_INVOKED_FOR_THIS_SPECTRAL_NOVELTY_ROUTE",
+  "interpretation": "BOTH source-support claims unsuccessful in complete bounded source audit; no counterexample to all possible EFMW theories, no mathematical proof that no alternative source map could ever be constructed.",
+  "physical_status": "EFMW_SPECIFIC_GRAVITATIONAL_NOVELTY_NOT_ESTABLISHED",
+  "independent_physical_measurement": false,
+  "independent_external_peer_review": false,
+  "implementation_correction": {
+    "original_run_id": 42675751144,
+    "issue": "Initial Python regex with IGNORECASE misclassified uppercase cosmological Omega as lowercase frequency omega, inflating lexical count from 2 to 9",
+    "fix_commit": "1b7fd3e1cf8a0e2165b954095c6bd78db3cf4f46",
+    "regression_test_commit": "fbc92025a6d0c656cde75ca39858eea01caab4c5",
+    "corrected_final_run": 42676059594,
+    "effect_on_H1_H2_disposition": "NONE"
+  },
+  "source_scope_warning": "Audit screened all 717 frozen source-equation ledger statements, not every file in all related repositories; archived candidate-expression translations were not used as original proof.",
+  "no_false_promotion": "A hypothetical H1/H2 source PASS would still define a conventional oscillator bath; it would not independently establish EFMW informational gravity."
+}
