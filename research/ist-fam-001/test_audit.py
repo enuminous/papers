@@ -38,6 +38,11 @@ class AuditTests(unittest.TestCase):
         y=audit.classify_row(x)
         self.assertIn("FREQUENCY_SYMBOL",y["flags"])
         self.assertNotIn("DIRECT_OSCILLATOR_OR_SPECTRAL_VOCABULARY",y["flags"])
+    def test_09b_capital_omega_does_not_count_as_frequency(self):
+        cosmic=next(r for r in self.rows if r["record_id"]=="ME-055")
+        self.assertNotIn("FREQUENCY_SYMBOL",audit.classify_row(cosmic)["flags"])
+        recursive=next(r for r in self.rows if r["record_id"]=="ME-076")
+        self.assertIn("FREQUENCY_SYMBOL",audit.classify_row(recursive)["flags"])
     def test_10_golden_scale_is_not_source_defined_bath(self):
         for name in ["ME-041","ME-042","ME-043","ME-044","ME-085"]:
             r=next(x for x in self.rows if x["record_id"]==name)
