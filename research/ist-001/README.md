@@ -20,3 +20,7 @@ The finite oscillator bath is reversible. The first-order relaxation equation wa
 The [IST-FAM-001 referee synthesis](../../IST-FAM-001-Referee-Review-and-Spectral-Novelty-Audit-2026-11-09.md), [frozen two-hypothesis contract](../ist-fam-001/PROTOCOL.json), and [review ledger](../ist-fam-001/REVIEW_LEDGER.json) record corrections about prescribed external work, the finite-bath counterterm, missing memory mass, anisotropic stress, model-family equivalence, and calibration versus discrimination.
 
 **H1 and H2 are NOT EXECUTED.** This review is separate from the original 24-test CI result; it does not modify the earlier source equations, numerical records, or any EFMW physical status.
+
+## Subsequent complete 717-record source audit — 9 November 2026
+
+The prior section accurately describes the *pre-execution review stage*. The [subsequently executed IST-FAM-001 audit](../ist-fam-001/AUDIT_REPORT.md) has now checked all **717** frozen source records against **seven** original source files, with **19/19 audit software tests passing** in [GitHub CI](https://github.com/enuminous/papers/actions/runs/42676059594). **H1 and H2 both returned NO SOURCE SUPPORT**, because no independently source-defined ordered oscillator-bath frequency/weight map was established. The previously committed bounded stop rule is **invoked for this spectral-novelty route**; the existing IST-001 physical conclusions and its original 24-test execution are unchanged. This is not a new gravitational physical FAIL or an impossibility theorem for all EFMW models.
