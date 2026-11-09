@@ -132,7 +132,7 @@ Original commits:
 1. [`268baa7d93e7b40483a3a01aa64076b71c51b581`](https://github.com/enuminous/papers/commit/268baa7d93e7b40483a3a01aa64076b71c51b581) — initial exact bounded dynamics implementation.
 2. [`93b839ca602dc8ab2582afe45fe22cef0fe3c7f8`](https://github.com/enuminous/papers/commit/93b839ca602dc8ab2582afe45fe22cef0fe3c7f8) — 29 adversarial `unittest` methods and GitHub Actions workflow.
 
-[CI run 42626896120](https://github.com/enuminous/papers/actions/runs/42626896120) completed **successfully** on 9 November 2026 for commit `93b839ca6`. Its workflow runs the 29 test methods and recomputes/upload a machine-readable bounded findings manifest.
+[CI run 42626896120](https://github.com/enuminous/papers/actions/runs/42626896120) completed **successfully** on 9 November 2026 for commit `93b839ca6`. Its workflow runs the 29 test methods and recomputes and uploads a machine-readable bounded findings manifest.
 
 For a reader to perform a **new independent replay**, not an action performed for this report, use:
 
@@ -159,7 +159,7 @@ The [Phase 5 synthetic identifiability screen](../phase-5/PHASE5_REPORT.md) alre
 - If Lean certification is claimed, pin the exact toolchain and theorem statements and publish kernel replay, axioms and any nonmechanized bridges. **No such Phase 4 Lean kernel replay was executed.**
 - Require separately measured conventional-matter constraints and prospective, independently reviewed physical experimental protocols before treating a residual as EFMW-specific.
 
-**Final disposition:** **BOUND-ED MATHEMATICAL CONSISTENCY IN SELECTED SUBMODELS; THREE EXPLICIT COUNTEREXAMPLES; PHYSICAL UNITY AND NEW EFMW COUPLING UNRESOLVED.**
+**Final disposition:** **BOUNDED MATHEMATICAL CONSISTENCY IN SELECTED SUBMODELS; THREE EXPLICIT COUNTEREXAMPLES; PHYSICAL UNITY AND NEW EFMW COUPLING UNRESOLVED.**
 
 ---
 
