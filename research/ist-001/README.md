@@ -14,3 +14,9 @@ python3 research/ist-001/ist.py --out research/ist-001/build/results.json
 The finite oscillator bath is reversible. The first-order relaxation equation was checked only after independently *assuming* a Markov/overdamped reduction; the run has not derived that limit from a continuum spectral density. The partial memory stress depends on the assignment of interaction energy. The frozen EFMW equations and Phase 5 physical-identifiability obstruction remain open.
 
 **Physical decision:** the illustrative stress and reservoir model are not evidence of a novel gravitational effect or a complete EFMW informational stress tensor.
+
+## Post-publication adversarial review (separate, unexecuted audit)
+
+The [IST-FAM-001 referee synthesis](../../IST-FAM-001-Referee-Review-and-Spectral-Novelty-Audit-2026-11-09.md), [frozen two-hypothesis contract](../ist-fam-001/PROTOCOL.json), and [review ledger](../ist-fam-001/REVIEW_LEDGER.json) record corrections about prescribed external work, the finite-bath counterterm, missing memory mass, anisotropic stress, model-family equivalence, and calibration versus discrimination.
+
+**H1 and H2 are NOT EXECUTED.** This review is separate from the original 24-test CI result; it does not modify the earlier source equations, numerical records, or any EFMW physical status.
