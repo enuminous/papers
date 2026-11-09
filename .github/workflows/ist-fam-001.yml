@@ -1,0 +1,34 @@
+name: IST-FAM-001 frozen source audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/ist-fam-001/**'
+      - 'research/unity-001/phase-1/source-equations.csv'
+      - '.github/workflows/ist-fam-001.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run 18 bounded audit tests
+        run: python3 -m unittest discover -s research/ist-fam-001 -p 'test_*.py' -v
+      - name: Screen all 717 source records and check 7 immutable original files
+        run: python3 research/ist-fam-001/audit.py --verify-upstream --out research/ist-fam-001/build
+      - name: Upload complete row-level evidence and upstream source receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ist-fam-001-full-bounded-audit
+          path: |
+            research/ist-fam-001/build/ROW_SCREEN.csv
+            research/ist-fam-001/build/RESULTS.json
+            research/ist-fam-001/build/SOURCE_FIDELITY.json
