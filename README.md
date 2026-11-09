@@ -74,6 +74,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[UNITY-001 Phase 2 — Source-Linked Mathematical Type Compilation](research/unity-001/phase-2/PHASE2_REPORT.md)** · [Typed registry](research/unity-001/phase-2/typed-registry.json) · [CI verification](https://github.com/enuminous/papers/actions/runs/42619525163) — 9 November 2026. Bounded compiler checks 9/9 manually declared ASTs against 717 frozen source records; 708 uncompiled, eight scientific conflicts unresolved, 20 passing adversarial tests, zero physical-equivalence or EFMW-specific results claimed.
+
 - **[UNITY-001 Phase 1: frozen physics source audit](research/unity-001/phase-1/PHASE1_REPORT.md)** · [All four repository Git file locks](research/unity-001/phase-1/sources.lock.json) · [Equation extraction ledger](research/unity-001/phase-1/source-equations.csv) — 9 November 2026. Four authoritative snapshots and their Git object IDs captured, 585/585 archived audit source lines cross-matched; original upstream provenance, multiline canonical comparison, and independent replay still explicitly unresolved.
 
 - **[UNITY-001 — Pathway to Physical Unification: An Evidence-Gated Action Plan](UNITY-001-Pathway-to-Physical-Unification-Action-Plan-2026-11-08.md)** · [MOC-001 paper](MOC-001-Compiling-Ontologies-Toward-Testable-Unity-of-Physics-2026-11-08.md) · [Unity Appendix](research/moc-001/UNITY_APPENDIX.md) — 8 November 2026. Seven-phase execution plan with `ob_pin_sources` first, typed imports, explicit correspondence maps, dynamics verification, discriminating predictions, external measurement and independent replication. Prospective, not a completed unified theory.

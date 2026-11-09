@@ -10,6 +10,8 @@ This folder publishes the research-methods paper's formal unity criteria and pro
 
 **Phase 1 executed source-freeze audit (2026-11-09):** [UNITY-001 Phase 1 report](../unity-001/phase-1/PHASE1_REPORT.md) and [lockfile](../unity-001/phase-1/sources.lock.json). Bounded pinned-Git provenance; not a new physical proof.  
 
+**Phase 2 typed compilation (2026-11-09):** [Executed Phase 2 report](../unity-001/phase-2/PHASE2_REPORT.md), [typed AST registry](../unity-001/phase-2/typed-registry.json), [verified GitHub CI](https://github.com/enuminous/papers/actions/runs/42619525163). Nine bounded manual type checks out of 717 source records; 708 unresolved, with no physical equivalence asserted.
+
 ## Prototype execution, separately performed
 
 - Input: local `Master-Ontology-Compiler-MOC-001-2026-11-08.zip`, SHA-256 `77509faffce09dcbe23d31c4cb956d5e335fbd6c113edfed9cae7e22cbadeb7e`.

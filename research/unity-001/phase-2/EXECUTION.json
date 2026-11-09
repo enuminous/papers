@@ -1,0 +1,23 @@
+{
+  "schema": "unity-001-phase2-verified-ci-receipt-v1",
+  "date": "2026-11-09",
+  "run_id": 42619525163,
+  "run_url": "https://github.com/enuminous/papers/actions/runs/42619525163",
+  "tested_commit": "4b392a0cf27ef41579467b5331a600a3dfb89580",
+  "artifact_id": 13673897149,
+  "artifact_url": "https://github.com/enuminous/papers/actions/runs/42619525163/artifacts/13673897149",
+  "results": {
+    "tests_pass": 20,
+    "tests_failed": 0,
+    "source_inventory": 717,
+    "typed_candidate_count": 9,
+    "typed_pass_count": 9,
+    "typed_fail_count": 0,
+    "not_compiled_count": 708,
+    "open_conflicts": 8,
+    "physical_pass": 0,
+    "mathematical_equivalence_proved": 0
+  },
+  "status": "BOUNDED_TYPE_CHECK_PASS_PHYSICS_UNRESOLVED",
+  "evidence": "GitHub Actions job log and artifact. The generated manifest remains the primary exact compiler output; this receipt is a human-authored summary of the observed CI result."
+}
