@@ -120,7 +120,7 @@ class Phase3Tests(unittest.TestCase):
 
     def test_22_c1_not_full_standard_model(self):
         a=b.action_correspondence()
-        self.assertIn("no full Standard Model", " ".join(a["limitations"]))
+        self.assertIn("not a full Standard Model", " ".join(a["limitations"]))
 
     def test_23_outcome_contracts(self):
         x=b.run()
