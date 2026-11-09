@@ -1,0 +1,33 @@
+name: UNITY-001 Phase 4 dynamical consistency
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/unity-001/phase-4/**'
+      - 'research/unity-001/phase-1/sources.lock.json'
+      - 'research/unity-001/phase-2/conflicts.json'
+      - 'research/unity-001/phase-3/interfaces.json'
+      - '.github/workflows/unity-001-phase4.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run exact rational algebra and adversarial tests
+        run: python3 -m unittest discover -s research/unity-001/phase-4 -p 'test_*.py' -v
+      - name: Recompute Phase 4 findings and manifest
+        run: python3 research/unity-001/phase-4/dynamics.py --out research/unity-001/phase-4/build/manifest.json
+      - name: Upload bounded raw outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: unity-001-phase4-dynamics-manifest
+          path: research/unity-001/phase-4/build/manifest.json
