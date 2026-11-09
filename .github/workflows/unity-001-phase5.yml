@@ -1,0 +1,33 @@
+name: UNITY-001 Phase 5 identifiability gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/unity-001/phase-5/**'
+      - 'research/unity-001/phase-1/sources.lock.json'
+      - 'research/unity-001/phase-2/conflicts.json'
+      - 'research/unity-001/phase-3/interfaces.json'
+      - '.github/workflows/unity-001-phase5.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Execute Phase 5 prospective toy and adversarial checks
+        run: python3 -m unittest discover -s research/unity-001/phase-5 -p 'test_*.py' -v
+      - name: Produce exact profile Fisher and readiness manifest
+        run: python3 research/unity-001/phase-5/predict.py --out research/unity-001/phase-5/build/results.json
+      - name: Preserve full Phase 5 execution record
+        uses: actions/upload-artifact@v4
+        with:
+          name: unity-001-phase5-identifiability-manifest
+          path: research/unity-001/phase-5/build/results.json
