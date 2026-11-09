@@ -64,7 +64,7 @@ EXPLICIT_MODE = re.compile(
     r"\bfrequency[\s-]+modes?\b|\bbath[\s-]+modes?\b)",
     re.IGNORECASE,
 )
-FREQUENCY_SYMBOL = re.compile(r"(?:\bomega\b|ω|\\omega|\bfrequenc(?:y|ies)\b|\bfreq\b)", re.IGNORECASE)
+FREQUENCY_SYMBOL = re.compile(r"(?:\bomega\b|\\omega|\bfrequenc(?:y|ies)\b|\bfreq\b)", re.IGNORECASE)
 WEIGHT_SYMBOL = re.compile(r"(?:\bb_j\b|\\b_\{?j\}?|\bspectral[\s-]+weight\b)", re.IGNORECASE)
 
 def gitblob(content):
@@ -103,7 +103,9 @@ def classify_row(r):
     flags = []
     if EXPLICIT_MODE.search(original):
         flags.append("DIRECT_OSCILLATOR_OR_SPECTRAL_VOCABULARY")
-    if FREQUENCY_SYMBOL.search(original):
+    # Literal Greek lowercase ω is a frequency candidate; capital Ω denotes
+    # unrelated constructs (e.g., cosmic rotation) and is NOT matched here.
+    if FREQUENCY_SYMBOL.search(original) or "ω" in original:
         flags.append("FREQUENCY_SYMBOL")
     if WEIGHT_SYMBOL.search(original):
         flags.append("POTENTIAL_WEIGHT_SYMBOL")
