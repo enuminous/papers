@@ -1,0 +1,33 @@
+name: UNITY-001 Phase 3 bounded correspondence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/unity-001/phase-3/**'
+      - 'research/unity-001/phase-1/sources.lock.json'
+      - 'research/unity-001/phase-1/source-equations.csv'
+      - 'research/unity-001/phase-2/conflicts.json'
+      - '.github/workflows/unity-001-phase3.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Phase 3 exact algebra and counterexample tests
+        run: python3 -m unittest discover -s research/unity-001/phase-3 -p 'test_*.py' -v
+      - name: Generate bounded correspondence manifest
+        run: python3 research/unity-001/phase-3/bridge.py --out research/unity-001/phase-3/build/phase3.json
+      - name: Store exact evidence manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: unity-001-phase3-correspondence-manifest
+          path: research/unity-001/phase-3/build/phase3.json
