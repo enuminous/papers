@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run 18 bounded audit tests
+      - name: Run 19 bounded audit tests
         run: python3 -m unittest discover -s research/ist-fam-001 -p 'test_*.py' -v
       - name: Screen all 717 source records and check 7 immutable original files
         run: python3 research/ist-fam-001/audit.py --verify-upstream --out research/ist-fam-001/build
