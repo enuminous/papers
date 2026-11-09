@@ -1,0 +1,32 @@
+name: UNITY-001 Phase 2 typed compilation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/unity-001/phase-1/source-equations.csv'
+      - 'research/unity-001/phase-1/sources.lock.json'
+      - 'research/unity-001/phase-2/**'
+      - '.github/workflows/unity-001-phase2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test source integrity and typed AST adversarial gates
+        run: python3 -m unittest discover -s research/unity-001/phase-2 -p 'test_*.py' -v
+      - name: Compile bounded typed registry
+        run: python3 research/unity-001/phase-2/compile.py compile --out research/unity-001/phase-2/build/manifest.json
+      - name: Store reproducibility output
+        uses: actions/upload-artifact@v4
+        with:
+          name: unity-001-phase2-typed-manifest
+          path: research/unity-001/phase-2/build/manifest.json
