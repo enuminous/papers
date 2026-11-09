@@ -1,0 +1,28 @@
+name: IST-001 memory-stress and reservoir controls
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/ist-001/**'
+      - 'research/unity-001/phase-1/sources.lock.json'
+      - '.github/workflows/ist-001.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run conservative stress, source and reservoir tests
+        run: python3 -m unittest discover -s research/ist-001 -p 'test_*.py' -v
+      - name: Recompute bounded IST-001 manifest
+        run: python3 research/ist-001/ist.py --out research/ist-001/build/results.json
+      - name: Archive exact checks and limitations
+        uses: actions/upload-artifact@v4
+        with:
+          name: IST-001-bounded-mathematical-audit
+          path: research/ist-001/build/results.json
