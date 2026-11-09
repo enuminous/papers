@@ -1,0 +1,632 @@
+{
+  "schema": "unity-001-phase2-typed-registry-v1",
+  "date": "2026-11-09",
+  "source_csv": "../phase-1/source-equations.csv",
+  "source_lock": "../phase-1/sources.lock.json",
+  "tensor_type_policy": "Named, namespace-scoped declared component types only; no tensor variance/covariance proofs",
+  "dimension_vector": "Three exponents: [M,L,Q]. For normalized Q,L models, natural-mass dimensions use M only; vectors from different unit_systems must not be added or compared.",
+  "result_policy": "Typed PASS = syntax/source-anchor/dimension/declared-shape consistency only. NOT proven equation equivalence or physical validity.",
+  "entries": [
+    {
+      "id": "P2-001",
+      "source_id": "E002-Geometry",
+      "namespace": "geometry_components",
+      "name": "Total source definition",
+      "anchor": "def totalSource",
+      "scope": "Fin 4 x Fin 4 real component arrays, not covariant tensors",
+      "claim_class": "conditional_component_definition",
+      "shape": "components4",
+      "units": "dimensionless",
+      "symbols": {
+        "S": {
+          "unit": [
+            0,
+            0,
+            0
+          ],
+          "shape": "components4"
+        },
+        "T": {
+          "unit": [
+            0,
+            0,
+            0
+          ],
+          "shape": "components4"
+        },
+        "I": {
+          "unit": [
+            0,
+            0,
+            0
+          ],
+          "shape": "components4"
+        },
+        "kappa": {
+          "unit": [
+            0,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        }
+      },
+      "lhs": [
+        "symbol",
+        "S"
+      ],
+      "rhs": [
+        "add",
+        [
+          "symbol",
+          "T"
+        ],
+        [
+          "mul",
+          [
+            "symbol",
+            "kappa"
+          ],
+          [
+            "symbol",
+            "I"
+          ]
+        ]
+      ],
+      "assumptions": [
+        "S denotes totalSource ordinary info kappa",
+        "The original term is a component array; no tensor transformation law is asserted"
+      ],
+      "limits": [
+        "No GR metric or measurable informational coupling follows"
+      ],
+      "translation_kind": "human-authored AST linked to exact frozen source pointer; not machine parsing of original LaTeX/Lean",
+      "status": "PROPOSED_TYPED_INTERPRETATION"
+    },
+    {
+      "id": "P2-002",
+      "source_id": "E011-Information_Tensor",
+      "namespace": "witd_lab",
+      "name": "Scalar first-order state",
+      "anchor": "q_dot = p",
+      "scope": "Dimensionally normalized 2D simulator, c=1; choose [q]=Q, [t]=L",
+      "claim_class": "authored_laboratory_equation",
+      "shape": "scalar",
+      "units": "normalized_Q_L",
+      "symbols": {
+        "q_dot": {
+          "unit": [
+            0,
+            -1,
+            1
+          ],
+          "shape": "scalar"
+        },
+        "p": {
+          "unit": [
+            0,
+            -1,
+            1
+          ],
+          "shape": "scalar"
+        }
+      },
+      "lhs": [
+        "symbol",
+        "q_dot"
+      ],
+      "rhs": [
+        "symbol",
+        "p"
+      ],
+      "assumptions": [
+        "q_dot=∂t q is assumed in the normalization",
+        "p is a state coordinate"
+      ],
+      "limits": [
+        "No lab calibration; no original EFMW law proven"
+      ],
+      "translation_kind": "human-authored AST linked to exact frozen source pointer; not machine parsing of original LaTeX/Lean",
+      "status": "PROPOSED_TYPED_INTERPRETATION"
+    },
+    {
+      "id": "P2-003",
+      "source_id": "E013-Information_Tensor",
+      "namespace": "witd_lab",
+      "name": "Relaxation memory law",
+      "anchor": "m_dot = α (q − m)",
+      "scope": "Fixed-background normalized memory ODE, [alpha]=L^-1",
+      "claim_class": "authored_laboratory_equation",
+      "shape": "scalar",
+      "units": "normalized_Q_L",
+      "symbols": {
+        "m_dot": {
+          "unit": [
+            0,
+            -1,
+            1
+          ],
+          "shape": "scalar"
+        },
+        "alpha": {
+          "unit": [
+            0,
+            -1,
+            0
+          ],
+          "shape": "scalar"
+        },
+        "q": {
+          "unit": [
+            0,
+            0,
+            1
+          ],
+          "shape": "scalar"
+        },
+        "m": {
+          "unit": [
+            0,
+            0,
+            1
+          ],
+          "shape": "scalar"
+        }
+      },
+      "lhs": [
+        "symbol",
+        "m_dot"
+      ],
+      "rhs": [
+        "mul",
+        [
+          "symbol",
+          "alpha"
+        ],
+        [
+          "sub",
+          [
+            "symbol",
+            "q"
+          ],
+          [
+            "symbol",
+            "m"
+          ]
+        ]
+      ],
+      "assumptions": [
+        "Scalar q and m share a field unit",
+        "alpha is a positive inverse time under c=1"
+      ],
+      "limits": [
+        "Conventional exponential memory kernel; not an EFMW-specific physical discovery"
+      ],
+      "translation_kind": "human-authored AST linked to exact frozen source pointer; not machine parsing of original LaTeX/Lean",
+      "status": "PROPOSED_TYPED_INTERPRETATION"
+    },
+    {
+      "id": "P2-004",
+      "source_id": "E016-Information_Tensor",
+      "namespace": "witd_lab",
+      "name": "Memory stress residual definition",
+      "anchor": "R_ab = beta T_ab[m]",
+      "scope": "Rank-two covariant component fields on fixed (-+++) background",
+      "claim_class": "authored_laboratory_tensor_definition",
+      "shape": "tensor2_cov",
+      "units": "normalized_Q_L",
+      "symbols": {
+        "R_ab": {
+          "unit": [
+            0,
+            -2,
+            2
+          ],
+          "shape": "tensor2_cov"
+        },
+        "beta": {
+          "unit": [
+            0,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        },
+        "T_m": {
+          "unit": [
+            0,
+            -2,
+            2
+          ],
+          "shape": "tensor2_cov"
+        }
+      },
+      "lhs": [
+        "symbol",
+        "R_ab"
+      ],
+      "rhs": [
+        "mul",
+        [
+          "symbol",
+          "beta"
+        ],
+        [
+          "symbol",
+          "T_m"
+        ]
+      ],
+      "assumptions": [
+        "beta is dimensionless by this model normalization",
+        "T_m denotes the modeled scalar stress of the relaxation memory"
+      ],
+      "limits": [
+        "R_ab is NOT a Ricci tensor; no full conserved stress derived"
+      ],
+      "translation_kind": "human-authored AST linked to exact frozen source pointer; not machine parsing of original LaTeX/Lean",
+      "status": "PROPOSED_TYPED_INTERPRETATION"
+    },
+    {
+      "id": "P2-005",
+      "source_id": "E017-Information_Tensor",
+      "namespace": "witd_lab",
+      "name": "Informational display tensor",
+      "anchor": "I_ab = T_ab[q] + R_ab",
+      "scope": "Rank-two fixed-background model; not metric-coupled Einstein stress",
+      "claim_class": "authored_laboratory_tensor_definition",
+      "shape": "tensor2_cov",
+      "units": "normalized_Q_L",
+      "symbols": {
+        "I_ab": {
+          "unit": [
+            0,
+            -2,
+            2
+          ],
+          "shape": "tensor2_cov"
+        },
+        "T_q": {
+          "unit": [
+            0,
+            -2,
+            2
+          ],
+          "shape": "tensor2_cov"
+        },
+        "R_ab": {
+          "unit": [
+            0,
+            -2,
+            2
+          ],
+          "shape": "tensor2_cov"
+        }
+      },
+      "lhs": [
+        "symbol",
+        "I_ab"
+      ],
+      "rhs": [
+        "add",
+        [
+          "symbol",
+          "T_q"
+        ],
+        [
+          "symbol",
+          "R_ab"
+        ]
+      ],
+      "assumptions": [
+        "Both terms use the same normalized tensor type and coordinates"
+      ],
+      "limits": [
+        "WITD-002 energy accounting obstructs interpreting displayed I00 as total storage in general"
+      ],
+      "translation_kind": "human-authored AST linked to exact frozen source pointer; not machine parsing of original LaTeX/Lean",
+      "status": "PROPOSED_TYPED_INTERPRETATION"
+    },
+    {
+      "id": "P2-006",
+      "source_id": "E023-EFMW_Lagrangian",
+      "namespace": "c1_action",
+      "name": "C1 scalar Euler-Lagrange shape",
+      "anchor": "\\Box_g\\varphi_a-\\mathcal U_{,a}=0.",
+      "scope": "Classical effective C1; (-+++), c=hbar=1, real neutral scalar mass dimension 1",
+      "claim_class": "conditional_candidate_differential_form",
+      "shape": "scalar",
+      "units": "natural_mass_dimensions",
+      "symbols": {
+        "Box_phi": {
+          "unit": [
+            3,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        },
+        "dU_dphi": {
+          "unit": [
+            3,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        }
+      },
+      "lhs": [
+        "symbol",
+        "Box_phi"
+      ],
+      "rhs": [
+        "symbol",
+        "dU_dphi"
+      ],
+      "assumptions": [
+        "U has mass dimension 4, phi mass dimension 1",
+        "Derivative symbol types are DECLARED; operator action was not parsed or proved"
+      ],
+      "limits": [
+        "Source original sign discrepancies remain; no derivation from historical 165 equations"
+      ],
+      "translation_kind": "human-authored AST linked to exact frozen source pointer; not machine parsing of original LaTeX/Lean",
+      "status": "PROPOSED_TYPED_INTERPRETATION"
+    },
+    {
+      "id": "P2-007",
+      "source_id": "E025-EFMW_Lagrangian",
+      "namespace": "c1_action",
+      "name": "C1 gravitational stress dimension",
+      "anchor": "M_{\\rm Pl}^2(G_{\\mu\\nu}+\\Lambda g_{\\mu\\nu})=",
+      "scope": "Metric field equation in candidate effective action, (-+++), natural units",
+      "claim_class": "conditional_candidate_metric_form",
+      "shape": "tensor2_cov",
+      "units": "natural_mass_dimensions",
+      "symbols": {
+        "Mpl2": {
+          "unit": [
+            2,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        },
+        "G_munu": {
+          "unit": [
+            2,
+            0,
+            0
+          ],
+          "shape": "tensor2_cov"
+        },
+        "Lambda": {
+          "unit": [
+            2,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        },
+        "g_munu": {
+          "unit": [
+            0,
+            0,
+            0
+          ],
+          "shape": "tensor2_cov"
+        },
+        "T0": {
+          "unit": [
+            4,
+            0,
+            0
+          ],
+          "shape": "tensor2_cov"
+        },
+        "TU": {
+          "unit": [
+            4,
+            0,
+            0
+          ],
+          "shape": "tensor2_cov"
+        }
+      },
+      "lhs": [
+        "mul",
+        [
+          "symbol",
+          "Mpl2"
+        ],
+        [
+          "add",
+          [
+            "symbol",
+            "G_munu"
+          ],
+          [
+            "mul",
+            [
+              "symbol",
+              "Lambda"
+            ],
+            [
+              "symbol",
+              "g_munu"
+            ]
+          ]
+        ]
+      ],
+      "rhs": [
+        "add",
+        [
+          "symbol",
+          "T0"
+        ],
+        [
+          "symbol",
+          "TU"
+        ]
+      ],
+      "assumptions": [
+        "Mpl²=(8πG)^-1 in natural units",
+        "TU is separately defined by exact candidate metric variation"
+      ],
+      "limits": [
+        "No derivation of historical EFMW information stress; stress identification remains unresolved"
+      ],
+      "translation_kind": "human-authored AST linked to exact frozen source pointer; not machine parsing of original LaTeX/Lean",
+      "status": "PROPOSED_TYPED_INTERPRETATION"
+    },
+    {
+      "id": "P2-008",
+      "source_id": "E029-Standard_Model_Reduction",
+      "namespace": "standard_model_classical",
+      "name": "Classical Higgs mass relation",
+      "anchor": "m_h^2=2\\lambda v^2",
+      "scope": "Tree-level minimal classical SM in natural units; signature (+---)",
+      "claim_class": "established_reference_algebra",
+      "shape": "scalar",
+      "units": "natural_mass_dimensions",
+      "symbols": {
+        "m_h": {
+          "unit": [
+            1,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        },
+        "lambda": {
+          "unit": [
+            0,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        },
+        "v": {
+          "unit": [
+            1,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        }
+      },
+      "lhs": [
+        "pow",
+        [
+          "symbol",
+          "m_h"
+        ],
+        2
+      ],
+      "rhs": [
+        "mul",
+        [
+          "number",
+          2
+        ],
+        [
+          "mul",
+          [
+            "symbol",
+            "lambda"
+          ],
+          [
+            "pow",
+            [
+              "symbol",
+              "v"
+            ],
+            2
+          ]
+        ]
+      ],
+      "assumptions": [
+        "Tree-level electroweak Higgs potential and usual vacuum parameterization"
+      ],
+      "limits": [
+        "Mass relation is not a prediction of measured Higgs mass without inputs"
+      ],
+      "translation_kind": "human-authored AST linked to exact frozen source pointer; not machine parsing of original LaTeX/Lean",
+      "status": "PROPOSED_TYPED_INTERPRETATION"
+    },
+    {
+      "id": "P2-009",
+      "source_id": "E030-Standard_Model_Reduction",
+      "namespace": "standard_model_classical",
+      "name": "SU(3)^2 U(1) anomaly hypercharge sum",
+      "anchor": "2Y_Q-Y_u-Y_d=0",
+      "scope": "One generation of minimal chiral SM, Q=T3+Y",
+      "claim_class": "established_reference_algebra",
+      "shape": "scalar",
+      "units": "dimensionless",
+      "symbols": {
+        "Y_Q": {
+          "unit": [
+            0,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        },
+        "Y_u": {
+          "unit": [
+            0,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        },
+        "Y_d": {
+          "unit": [
+            0,
+            0,
+            0
+          ],
+          "shape": "scalar"
+        }
+      },
+      "lhs": [
+        "sub",
+        [
+          "sub",
+          [
+            "mul",
+            [
+              "number",
+              2
+            ],
+            [
+              "symbol",
+              "Y_Q"
+            ]
+          ],
+          [
+            "symbol",
+            "Y_u"
+          ]
+        ],
+        [
+          "symbol",
+          "Y_d"
+        ]
+      ],
+      "rhs": [
+        "number",
+        0
+      ],
+      "assumptions": [
+        "Hypercharges declared separately: 1/6, 2/3, -1/3",
+        "Checks dimension and shape, NOT group representation or cancellation by itself"
+      ],
+      "limits": [
+        "No derivation of a 39-strata parameter-free theory"
+      ],
+      "translation_kind": "human-authored AST linked to exact frozen source pointer; not machine parsing of original LaTeX/Lean",
+      "status": "PROPOSED_TYPED_INTERPRETATION"
+    }
+  ]
+}
