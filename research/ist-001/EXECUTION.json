@@ -1,0 +1,30 @@
+{
+  "schema": "ist-001-verified-ci-receipt-v1",
+  "date": "2026-11-09",
+  "prior_protocol_commit": "b2372f8e0928def0b8b25e523420ad39afcd99de",
+  "run_id": 42669567461,
+  "run_url": "https://github.com/enuminous/papers/actions/runs/42669567461",
+  "tested_commit": "52c0b8d67a3dfc8685686e3080b6d897153b7247",
+  "artifact_id": 13697398989,
+  "artifact_url": "https://github.com/enuminous/papers/actions/runs/42669567461/artifacts/13697398989",
+  "software": {
+    "tests_passed": 24,
+    "tests_failed": 0,
+    "metric_variation_examples": 32,
+    "homogeneous_energy_polynomials": 48,
+    "finite_bath_exact_energy": 35,
+    "numerical_refinement_ratios": [
+      3.9882312197573135,
+      3.99706143434151,
+      3.9992655882475114
+    ],
+    "GLE_max_residual": 1.1102230246251565e-16
+  },
+  "gates": {
+    "PASS": 6,
+    "FAIL": 0,
+    "UNRESOLVED": 2
+  },
+  "EFMW_physical_PASS": 0,
+  "note": "GitHub CI verified the smaller repository code and generated exact machine manifest. The full complementary 30-test local source was used for development but is not represented as a separate remote CI run. No physical measurement or unique EFMW stress was established."
+}

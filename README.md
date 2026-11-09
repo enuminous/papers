@@ -74,6 +74,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[IST-001 — Executed Hilbert Memory-Stress and Harmonic-Reservoir Audit](research/ist-001/IST001_REPORT.md)** · [Theory and derivation](IST-001-Deriving-Informational-Stress-from-Covariant-Memory-and-Reservoir-Models-2026-11-09.md) · [Code and tests](research/ist-001/README.md) · [CI](https://github.com/enuminous/papers/actions/runs/42669567461) — 9 November 2026. Bounded Hilbert stress, energy-exchange and finite-bath memory controls: 24/24 tests passed, 6/8 narrow gates PASS and 2 UNRESOLVED. No EFMW-specific physical stress or gravity effect established.
+
 - **[IST-001 — Deriving Informational Stress from Covariant Memory and Reservoir Models](IST-001-Deriving-Informational-Stress-from-Covariant-Memory-and-Reservoir-Models-2026-11-09.md)** — 9 November 2026. New proposal deriving a split Hilbert memory stress tensor and its exchange current, plus a covariant oscillator-bath parent whose homogeneous, coarse-grained limit may yield conventional relaxation. **Mathematical construction, not a validated EFMW-specific physical mechanism.**
 
 - **[UNITY-001 Phase 5 — Conditional prediction and identifiability screen](research/unity-001/phase-5/PHASE5_REPORT.md)** · [PREDICTION-001 candidate](research/unity-001/phase-5/PREDICTION_001.md) · [Frozen simulation protocol](research/unity-001/phase-5/PROTOCOL.json) · [Successful CI](https://github.com/enuminous/papers/actions/runs/42633977283) — 9 November 2026. Exact-rational hypothetical gravitational source tests: 4 bounded PASS, 1 counterexample FAIL, 6 UNRESOLVED; 25/25 tests. A co-located conventional mass profile absorbs the candidate signal, so a physical EFMW-specific prediction is **NOT READY**.
