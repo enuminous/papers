@@ -1,0 +1,94 @@
+{
+  "schema": "unity-001-phase1-extraction-validation-v1",
+  "date": "2026-11-09",
+  "total_records": 717,
+  "source_groups": {
+    "FieldSpace_165_source_rows": 585,
+    "canonical_102": 102,
+    "selected_other_source_line_pointers": 30
+  },
+  "audit_kind_counts": {
+    "gravity": 45,
+    "gauge": 90,
+    "bianchi": 90,
+    "scalar": 360
+  },
+  "literal_source_status_counts": {
+    "UNDERDEFINED_STRESS": 45,
+    "FAIL_NEUTRAL_SCALAR_CURRENT": 88,
+    "INDEX_REPAIR_REQUIRED": 90,
+    "FAIL_SIGN": 360,
+    "UNDERDEFINED_CURRENT": 2
+  },
+  "cross_archives": {
+    "FS_original_lines_matched": 585,
+    "FS_discrepancies": 0,
+    "canonical_102_json_count": 102,
+    "canonical_md_sections": 102,
+    "first_formula_line_exact_match": 98,
+    "multiline_or_prose_entries": [
+      "ME-065",
+      "ME-071",
+      "ME-073",
+      "ME-102"
+    ],
+    "full_multiline_comparison": "UNRESOLVED"
+  },
+  "sources": [
+    {
+      "repo": "EFMW-Lagrangian",
+      "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+      "path": "audit/equations.csv",
+      "blob": "97897261aa38eebfc6eb591ef2fc5e10c8523b91"
+    },
+    {
+      "repo": "FieldSpace",
+      "commit": "4f994c45c319b44eaa43133280a7671e768da87c",
+      "path": "EFMW_165_field_equations.txt",
+      "blob": "ac6313fe4a2b02a28ac8fb34519c5f96f6ea2bd8"
+    },
+    {
+      "repo": "Monolithic-102-Zoo-Lean4",
+      "commit": "6e85c9e558652f5033c55d70f33077eff7a9fd89",
+      "path": "canonical/equations.json",
+      "blob": "5e68eec5ebfed0764d0c55404249de082ce02f03"
+    },
+    {
+      "repo": "Monolithic_102_EFMW",
+      "commit": "4129cc6e86396b6752433c80a78439662b441836",
+      "path": "CANONICAL_102.md",
+      "blob": "a328e4ce7c0b80565148ad28fa63eb3337e69335"
+    },
+    {
+      "repo": "Geometry",
+      "commit": "285b95551ca11c487eb6c0c13f8dde86b702df71",
+      "path": "Geometry.lean",
+      "blob": "232d48f36da46dc8c0e51096a1b56c56a5c4706f"
+    },
+    {
+      "repo": "Information-Tensor",
+      "commit": "b02b04897743d34cdb846e9fac2518cd8faa4399",
+      "path": "docs/THEORY.md",
+      "blob": "ea589c618d9c6d698bd241110a3e3b756560bd64"
+    },
+    {
+      "repo": "Information-Tensor",
+      "commit": "b02b04897743d34cdb846e9fac2518cd8faa4399",
+      "path": "research/witd-002/DERIVATION.md",
+      "blob": "d427b2f50bd8e577f6c206e076aa4121a612c6d9"
+    },
+    {
+      "repo": "EFMW-Lagrangian",
+      "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+      "path": "candidate/CANDIDATE.md",
+      "blob": "916e04935f50cbbf07ddcd81e7c71a02954b1c96"
+    },
+    {
+      "repo": "Standard-Model-Reduction",
+      "commit": "aa569b13a594735774c7b643d44aebff4d5ad17c",
+      "path": "three_line_standard_model_geometric_reduction.md",
+      "blob": "c88257811c598708ac68cc77cd6b402d036a0671"
+    }
+  ],
+  "scope": "CSV preserves each source statement and archives status and candidate representations separately. Source transcription comparisons are exact; mathematical/physical veracity and normalized interpretation are not independently verified."
+}
