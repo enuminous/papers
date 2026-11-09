@@ -1,0 +1,84 @@
+{
+  "schema": "ist-fam-001-preregistered-bounded-source-audit-v1",
+  "title": "IST-FAM-001: predeclared candidate spectral constraints and conventional containment audit",
+  "record_date": "2026-11-09",
+  "research_program": "Monolithic LLC / EFMW / IST-001",
+  "status": "FROZEN_HYPOTHESES_NOT_EXECUTED",
+  "registration_type": "author-defined prospective hypothesis lock; NOT independent preregistration or blind discovery",
+  "research_scope": "Bounded source-faithful audit of exactly two prior candidate constraints on oscillator-bath frequencies and weights; no post hoc additions to the confirmatory family",
+  "motivating_references": {
+    "IST_001": "IST-001-Deriving-Informational-Stress-from-Covariant-Memory-and-Reservoir-Models-2026-11-09.md",
+    "IST_001_executed_controls": "research/ist-001/IST001_REPORT.md",
+    "Phase_1_source_lock": "research/unity-001/phase-1/sources.lock.json",
+    "canonical_source_ledger": "research/unity-001/phase-1/source-equations.csv",
+    "Phase_5_obstruction": "research/unity-001/phase-5/PHASE5_REPORT.md",
+    "WITD_002": "https://github.com/enuminous/Information-Tensor/blob/b02b04897743d34cdb846e9fac2518cd8faa4399/research/witd-002/DERIVATION.md"
+  },
+  "locked_corpus": {
+    "canonical_formula_blocks": 102,
+    "FieldSpace_source_lines": 585,
+    "total_source_ledger_records": 717,
+    "source_revision_policy": "Use the exact Git SHA/blob identities pinned in Phase 1; do not silently follow mutable main branches",
+    "prior_exposure": "Several original equations were inspected during earlier Monolithic research; audit is not blind. This is a newly locked targeted check, not a claim of prior-independent prediction."
+  },
+  "ordinary_model": {
+    "finite_bath_kernel": "gamma(t) = sum_{j=1}^{N} b_j cos(omega_j t)",
+    "positive_parameters": "N finite and at least 3 for hypothesis testing; b_j > 0 and omega_j > 0 for the selected three consecutive physical modes; other bath modes may have b_j >= 0",
+    "weight_definition": "b_j = z_j * omega_j^2 * a_j^2",
+    "spectral_measure": "rho = sum_j b_j delta_{omega_j}",
+    "comparator_C0": "Positive finite discrete oscillator bath with otherwise unrestricted positive weights and frequencies",
+    "comparator_C1": "Conventional positive spectral measure with integral regularity sufficient to define the tested kernel and response; no claim that all arbitrary measures furnish a well-defined bath without conditions",
+    "falsification_baseline": "Neither H1 nor H2 follows solely from nonnegative spectral weights; either relation can be imposed within an ordinary bath and thus does not alone certify EFMW-specific physics"
+  },
+  "candidate_constraints": [
+    {
+      "id": "IST-FAM-H1",
+      "label": "Golden-ratio frequency ladder",
+      "relation": "omega_{j+1}/omega_j = phi for j in a prespecified consecutive triple, phi=(1+sqrt(5))/2",
+      "minimum_modes": 3,
+      "indexing_rule": "A unique physical index/order and map from frozen EFMW quantities to bath-mode frequencies must be justified from frozen sources before evaluating equality; no subset cherry-picking, sorting after outcomes, or fitted conversion constants",
+      "anticipated_sources": "Prior EFMW golden-ratio/Scalar-23 constructs; candidate motivation only, not established physical correspondence",
+      "pass_condition": "Exhibit exact frozen-source derivation of mapped frequency values and the stated ratio, including premises, units, exclusions, and independent replayable algebra; a mere occurrence of phi does not count",
+      "failure_or_unresolved": "A source-derived contradictory relation is COUNTEREXAMPLE/FAIL; completed finite audit with no qualifying derivation is NO_SOURCE_SUPPORT, not proof the broad hypothesis is false; inadequate mapping is UNRESOLVED"
+    },
+    {
+      "id": "IST-FAM-H2",
+      "label": "Golden-ratio spectral weight ladder",
+      "relation": "b_{j+1}/b_j = phi^(-2) for the same prespecified consecutive triple used in H1",
+      "minimum_modes": 3,
+      "indexing_rule": "Reuse the same source-justified physical indexing; strictly positive candidate b_j; no fitting exponent or adjusting bath amplitudes after source inspection",
+      "anticipated_sources": "Prior EFMW golden-ratio/Scalar-23 constructs; exponent -2 is an exploratory choice frozen for this one test, not an established prediction",
+      "pass_condition": "Exhibit exact source-derived amplitude/weight relation, nondefinitional proof and independent replay from pinned originals; positivity by itself is insufficient",
+      "failure_or_unresolved": "A contradictory source-derived relation is COUNTEREXAMPLE/FAIL; no qualifying proof after the finite audit is NO_SOURCE_SUPPORT; unsupported index/map is UNRESOLVED"
+    }
+  ],
+  "prohibited_evidence": [
+    "A notational definition or freely selected bath parameter",
+    "Pattern fitting or post hoc choice of mode subset, ratio, exponent, units, mapping, or nuisance model",
+    "Golden-ratio or Scalar-23 text appearing without a derived map to bath frequencies and weights",
+    "A conventional positive spectral measure described as uniquely EFMW",
+    "A single stress configuration or unconstrained-fluid comparison used as an EFMW-specific discriminator",
+    "CI success or structural type checking used as physical validation"
+  ],
+  "classification": {
+    "SOURCE_PASS": "Pinned source entails one complete predeclared relation with justified physical mapping, assumptions, derivation, and replay; does not mean physical novelty",
+    "COUNTEREXAMPLE_FAIL": "Explicit source-derived contradiction to the predeclared relation within the claimed domain",
+    "NO_SOURCE_SUPPORT": "Specified entire frozen-corpus audit completed with no qualifying source-faithful derivation; bounded failure to substantiate, not disproof of all possible EFMW models",
+    "UNRESOLVED": "Undefined map, premises, or incomplete audit prevent classification",
+    "EXPLORATORY_ONLY": "Other discovered constraints or alternative choices, never added to the confirmatory set",
+    "PHYSICAL_DISCRIMINATION_PASS": "Not available from this source audit; requires separate independent calibration and prospective model-discriminating observations"
+  },
+  "audit_controls": {
+    "exactly_two_confirmatory_hypotheses": true,
+    "hold_prior_publications_unchanged": true,
+    "no_code_executed_in_this_publication": true,
+    "no_equation_search_performed_in_this_publication": true,
+    "no_retuning_after_inspection": true,
+    "non_physical_results_not_promoted": true,
+    "record_negative_and_ambiguous_results": true,
+    "publish_all_exclusions_and_source_coordinates": true,
+    "independent_review_not_yet_performed": true
+  },
+  "program_stop_rule": "If neither H1 nor H2 receives source-faithful support, close the bounded IST-001 spectral-novelty route as NOT_ESTABLISHED_IN_FROZEN_CORPUS and do not advance it toward costly gravitational experiments on that basis; retain separate conventional memory physics as legitimate research.",
+  "review_note": "Attributed Boardy comments were relayed in conversation by the program author, and must not be described as independently certified peer review."
+}
