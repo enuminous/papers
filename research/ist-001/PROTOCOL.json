@@ -1,0 +1,168 @@
+{
+  "schema": "ist-001-frozen-protocol-v1",
+  "date": "2026-11-09",
+  "status": "PROSPECTIVE_MATHEMATICAL_SOFTWARE_PROTOCOL_NOT_PHYSICAL_PREREGISTRATION",
+  "source": {
+    "action_proposal": "https://github.com/enuminous/papers/blob/main/IST-001-Deriving-Informational-Stress-from-Covariant-Memory-and-Reservoir-Models-2026-11-09.md",
+    "frozen_witd_commit": "b02b04897743d34cdb846e9fac2518cd8faa4399",
+    "frozen_c1_commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+    "earlier_unity_phase5": "research/unity-001/phase-5/PHASE5_REPORT.md",
+    "source_lock": "research/unity-001/phase-1/sources.lock.json"
+  },
+  "model": {
+    "signature": "(-,+,+,+)",
+    "units": "natural; toy homogeneous simulations separately dimensionless and not physically calibrated",
+    "conservative": "L_q=-1/2*(grad q)^2 - V(q); L_I=-Z/2*(grad m)^2 - mu2*m^2/2 -K*(q-m)^2/2",
+    "E_q": "Box q - Vprime(q) - K*(q-m) = 0",
+    "E_m": "Z*Box m - mu2*m +K*(q-m)=0",
+    "tensor": "I_mu_nu=Z*grad_mu(m)*grad_nu(m)+g_mu_nu*L_I",
+    "exchange": "nabla^mu I_mu_nu= -K*(q-m)*grad_nu(q) on memory EOM",
+    "total_conservation": "nabla^mu (Tq_mu_nu + I_mu_nu)=0 on both EOM",
+    "parent": "L_parent=L_q-Z/2*(grad m)^2-K/2*(q-m)^2 -sum z_j/2*[(grad x_j)^2+omega_j^2*(x_j-a_j*m)^2]",
+    "parent_homogeneous": "Z*m_ddot +K*(m-q)-sum z_j*omega_j^2*a_j*(x_j-a_j*m)=0; x_j_ddot+omega_j^2*(x_j-a_j*m)=0",
+    "GLE_kernel": "gamma(t)=sum z_j*omega_j^2*a_j^2*cos(omega_j*t)",
+    "GLE_noise": "xi(t)=sum z_j*omega_j^2*a_j*[(xj0-aj*m0)*cos(omega_j*t)+xjdot0/omega_j*sin(omega_j*t)]",
+    "Markov": "Only under separately justified continuum-bath, approximately local drag Gamma>0, reduced noise and overdamped Z*mddot<<K*(m-q): mdot≈(K/Gamma)*(q-m)"
+  },
+  "gates": [
+    {
+      "id": "IST-01",
+      "scope": "Hilbert split tensor and exchange from covariant local scalar action",
+      "test": "2x2 symmetric inverse-metric variation and on-shell homogeneous energy exchange",
+      "condition": "Exact symbolic/rational agreement",
+      "status": "UNEXECUTED"
+    },
+    {
+      "id": "IST-02",
+      "scope": "Conservative total-energy identity for q,m",
+      "test": "Exact polynomials and off-shell residual products",
+      "condition": "Identity on prescribed model",
+      "status": "UNEXECUTED"
+    },
+    {
+      "id": "IST-03",
+      "scope": "Covariant finite oscillator-reservoir parent with conserved total stress on shell",
+      "test": "Homogeneous energy derivative and reversible finite bath",
+      "condition": "Exact algebra, finite numerical convergence",
+      "status": "UNEXECUTED"
+    },
+    {
+      "id": "IST-04",
+      "scope": "Elimination of finite harmonic bath produces generalized Langevin kernel",
+      "test": "Analytically manufactured driven linear m path",
+      "condition": "GLE and bath ODE residual below 1e-11 across frozen times",
+      "status": "UNEXECUTED"
+    },
+    {
+      "id": "IST-05",
+      "scope": "Additional approximations required for WITD exponential relaxation",
+      "test": "Closed-form overdamped Markov relaxation and strict distinction from finite bath",
+      "condition": "Markov equation passes; direct equality of finite-bath and irreversible limit not claimed",
+      "status": "UNEXECUTED"
+    },
+    {
+      "id": "IST-06",
+      "scope": "Alternate interaction bookkeeping changes IST but not total tensor",
+      "test": "Exact split difference and total invariant",
+      "condition": "Counterexample to unique split",
+      "status": "UNEXECUTED"
+    },
+    {
+      "id": "IST-07",
+      "scope": "Full WITD couplings, Scalar-23, noise, reservoir and stress match",
+      "test": "Compare source-derived terms and open obligations",
+      "condition": "Remain UNRESOLVED without full derivation",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "IST-08",
+      "scope": "EFMW-specific observable and independent physical measurement",
+      "test": "Confront Phase5 co-located conventional mass degeneracy",
+      "condition": "Remain UNRESOLVED without independent novelty evidence",
+      "status": "UNRESOLVED"
+    }
+  ],
+  "numeric_fixtures": {
+    "random_seed": 20261109,
+    "finite_bath": {
+      "Z": "3/2",
+      "K": "5/4",
+      "q_mass2": "7/8",
+      "bath": [
+        {
+          "z": "2/3",
+          "omega": "3/2",
+          "a": "1/3"
+        },
+        {
+          "z": "5/4",
+          "omega": "7/5",
+          "a": "2/5"
+        }
+      ],
+      "initial_state": {
+        "q": "1/3",
+        "m": "-1/5",
+        "x": [
+          "2/7",
+          "-1/3"
+        ],
+        "pq": "1/4",
+        "pm": "-1/7",
+        "px": [
+          "3/8",
+          "-1/4"
+        ]
+      },
+      "total_time": 2,
+      "steps": [
+        50,
+        100,
+        200,
+        400
+      ],
+      "acceptance": "Energy relative defect decreases approximately quadratically for velocity-Verlet; all values are toy model units."
+    },
+    "GLE_manufactured": {
+      "m0": "1/5",
+      "mdot": "3/7",
+      "bath_initial_x": [
+        "2/7",
+        "-1/3"
+      ],
+      "bath_initial_xdot": [
+        "3/8",
+        "-1/4"
+      ],
+      "time_grid": [
+        0,
+        0.1,
+        0.3,
+        0.7,
+        1.4,
+        2.3
+      ],
+      "tolerance": 1e-11
+    },
+    "markov": {
+      "K": 1.25,
+      "Gamma": 2.5,
+      "alpha": 0.5,
+      "m0": 0,
+      "q": "t",
+      "test_times": [
+        0,
+        0.2,
+        1,
+        3,
+        8
+      ],
+      "tolerance": 1e-10
+    }
+  },
+  "retain_failures": true,
+  "no_hidden_sign_repairs": true,
+  "no_commercial_license_assumption": true,
+  "no_live_hardware_or_empirical_data": true,
+  "success_semantics": "Software PASS or bounded mathematical identity; no unique EFMW gravity PASS."
+}
