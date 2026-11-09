@@ -1,0 +1,117 @@
+{
+  "schema": "unity-001-phase5-frozen-design-v1",
+  "date": "2026-11-09",
+  "title": "PREDICTION-001 — Conditional gravitational source split: identifiability before physical prediction",
+  "status": "FROZEN_EXPLORATORY_SIMULATION_SPEC_NOT_A_PHYSICAL_PREREGISTRATION",
+  "predeclare_before_code_execution": true,
+  "scope": "Weak-field, stationary, nonrelativistic, approximately spherical reference model with a hypothetical independently specified informational density. Not derived or calibrated from EFMW.",
+  "provenance": {
+    "geometry": {
+      "repo": "enuminous/Geometry",
+      "commit": "285b95551ca11c487eb6c0c13f8dde86b702df71",
+      "path": "Geometry.lean",
+      "blob": "232d48f36da46dc8c0e51096a1b56c56a5c4706f",
+      "claim": "T+kappa I component algebra and source-only absorption"
+    },
+    "c1": {
+      "repo": "enuminous/EFMW-Lagrangian",
+      "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+      "path": "candidate/CANDIDATE.md",
+      "blob": "916e04935f50cbbf07ddcd81e7c71a02954b1c96",
+      "claim": "Classical candidate GR stress form, not unique rho_I"
+    },
+    "witd": {
+      "repo": "enuminous/Information-Tensor",
+      "commit": "b02b04897743d34cdb846e9fac2518cd8faa4399",
+      "path": "research/witd-002/DERIVATION.md",
+      "blob": "d427b2f50bd8e577f6c206e076aa4121a612c6d9",
+      "claim": "Conditional memory energy ledger; I00 not generally identical to storage"
+    }
+  },
+  "conditional_physics": {
+    "postulate": "Assume I^00/c² provides a stationary, nonnegative mass density rho_I with correct units, separately conserved or consistently exchanging energy and momentum; no source in frozen work yet meets all these conditions.",
+    "poisson": "nabla² Phi = 4*pi*G*(rho_b + kappa*rho_I), after neglecting pressure, time derivatives and dark/extra stress terms and fixing the cosmological background.",
+    "spherical": "a_r(r) = -G*[M_b(<r)+kappa*M_I(<r)]/r²",
+    "operational": "Need independent density, baryonic mass calibration and actual acceleration or potential instrument; absent.",
+    "novelty_gate": "Nonzero identifiable delta a(r) relative to kappa=0 and all admissible conventional matter profiles with declared precision."
+  },
+  "toy_design": {
+    "labels": "All quantities dimensionless and hypothetical; no real observations, physical effect size or EFMW-supplied rho_I.",
+    "radii": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source_sphere_radius": "4",
+    "source_total_mass": "1",
+    "signal_rescaling": "16",
+    "enclosed_mass_rule": "M_I(<r) = (r/4)^3 for r<=4; 1 for r>4; toy normalized s_i=16*M_I(<r)/r²",
+    "noise_sigma": "1/20",
+    "fiducial_kappa": "1/2",
+    "nuisance_baseline": [
+      "1",
+      "1/r",
+      "1/r²"
+    ],
+    "nuisance_strong": [
+      "1",
+      "1/r",
+      "1/r²",
+      "s"
+    ],
+    "nuisance_near": [
+      "1",
+      "1/r",
+      "1/r²",
+      "s + (1/100)*(r/8)"
+    ],
+    "nuisance_epsilon": "1/100",
+    "nuisance_truth": [
+      "2/5",
+      "1/3",
+      "-1/4"
+    ],
+    "deterministic_pseudo_noise_multipliers": [
+      "1/2",
+      "-1/3",
+      "1/4",
+      "-1/5",
+      "1/6",
+      "-1/7",
+      "1/8",
+      "-1/9"
+    ],
+    "inference": "Exact Fraction least-squares residualization against nuisance space; Schur-complement profile Fisher I_kappa=||s-P_Ns||²/sigma²; rank-deficient/multi-model degeneracy returns UNIDENTIFIABLE; nominal sigma_kappa=1/sqrt(I_kappa).",
+    "nominal_detection_threshold": "5",
+    "controls": [
+      "Kappa=0 synthetic residual fitted under baseline",
+      "Kappa=1/2 synthetic injection under baseline",
+      "Strong co-located conventional mass alternative must produce I_kappa=0",
+      "Near-collinear alternative must inflate sigma_kappa",
+      "Held-out data absent; pseudo-noise deterministic and not a randomized sampling distribution"
+    ],
+    "predicted_criterion": "Absolute injected kappa exceeding nominal five sigma_kappa under an eligible and independently justified conventional model (toy only). Never report as physical 5-sigma discovery.",
+    "degrees_of_freedom": "Eight toy radii, 3-4 nuisance templates, no observational sample size or power claim."
+  },
+  "readiness_gates": {
+    "physical_rho_I": "UNRESOLVED",
+    "stress_conservation_and_covariance": "UNRESOLVED",
+    "independently_measured_baryonic_M": "UNRESOLVED",
+    "observable_and_instrument_response": "UNRESOLVED",
+    "nuisance_family_independently_constrained": "UNRESOLVED",
+    "consent_access_data_custody": "UNRESOLVED",
+    "reviewers_and_confirmatory_authorization": "UNRESOLVED"
+  },
+  "controls": {
+    "all_changes_new_version": true,
+    "no_posthoc_retune": true,
+    "preserve_failed_gates": true,
+    "no_physical_preregistration_or_confirmatory_data": true,
+    "no_contact_or_public_claim_of_discovery": true
+  }
+}
