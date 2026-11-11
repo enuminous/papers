@@ -74,6 +74,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[My Dinner With Claude — An Interview About Evidence, EFMW and Recursive Self-Improvement](My-Dinner-With-Claude-2026-11-11.md)** — November 11, 2026. Reflective, AI-assisted account of a human-relayed interview between Claude (Anthropic) and Millicent (ChatGPT) about Monolithic's research record, synthetic monitor tests, the RSI abstention loophole, Lean formalization boundaries, freeze provenance, and the value of independent verification. **Not a cross-model experimental replication or evidence of AGI.**
+
 - **[The Story Arrives After the Signal — StorySpace, Déjà Vu, and the Evidence We Owe Our Experiences](StorySpace-The-Story-Arrives-After-the-Signal-2026-11-09.md)** — 9 November 2026. Science-journalism feature on Monolithic's new [StorySpace](https://github.com/enuminous/StorySpace) observatory: familiarity without recollection, the illusion of prediction, conditional sorting and quantum-eraser misconceptions, prospective timestamps, Brier scoring, and the separation of signal, story and evidence. **SS-001 is proposed, not executed; no precognition or retrocausal effect is claimed.**
 
 - **[The Theory That Was Allowed to Fail — The IST-FAM-001 Experiment](The-Theory-That-Was-Allowed-to-Fail-2026-11-09.md)** — 9 November 2026. Long-form science journalism on Monolithic's information-stress investigation, Boardy–Millie adversarial corrections, the precommitted two-hypothesis protocol, the 717-record source audit, and the scientifically bounded decision to stop this route. **H1/H2 received NO SOURCE SUPPORT; no novel gravitational effect is claimed.**
