@@ -1,0 +1,15 @@
+flowchart TD
+  HUMAN[Human / qualified reviewer] -->|signed approval| GATE[Independent evidence & mode gate]
+  CONTRACT[Requirements + hazards + signed build config] --> GATE
+  SENSORS[Encoders / IMU / F-T / camera] --> EST[State estimation]
+  EST --> CLASSICAL[Conventional planning + WBC + MPC]
+  EST --> EFMW[EFMW optional memory / coherence monitor]
+  EFMW -->|telemetry and conservative advice only| GATE
+  CLASSICAL -->|candidate commands| GATE
+  GATE -->|authorized joint goals only| DRIVER[Deterministic servo / ros2_control]
+  DRIVER --> MOTORS[32 joints / actuators]
+  SAFETY[Physically independent E-stop / safety system] -->|hardware inhibit| MOTORS
+  ASSEMBLY[Recursive assembly proposer] -->|proposals only| HUMAN
+  LOG[Source / measurement / replay ledger] --> ASSEMBLY
+  LOG --> EFMW
+  GATE --> LOG
