@@ -1,0 +1,166 @@
+{
+  "schema": "EHP-ASSEMBLY-DAG-0.1",
+  "build_status": "none complete",
+  "stage_policy": "no automatic physical operation; human-reviewed evidence progression",
+  "out_of_scope": [
+    "A9 unrestrained locomotion",
+    "autonomous robot assembly",
+    "public deployment"
+  ],
+  "stages": [
+    {
+      "id": "A0",
+      "name": "Freeze mission and hazard review",
+      "depends_on": [],
+      "physical": false,
+      "required_evidence": [
+        "approved_scope_doc",
+        "hazard_register",
+        "human_review"
+      ],
+      "goal": "source and safety obligations recorded",
+      "status": "UNRESOLVED",
+      "approved": false,
+      "version_lock": null
+    },
+    {
+      "id": "A1",
+      "name": "Create 32-DoF twin",
+      "depends_on": [
+        "A0"
+      ],
+      "physical": false,
+      "required_evidence": [
+        "urdf_or_mjcf_load",
+        "mass_inertia_review",
+        "collision_geometry"
+      ],
+      "goal": "digital twin inspected",
+      "status": "UNRESOLVED",
+      "approved": false,
+      "version_lock": null
+    },
+    {
+      "id": "A2",
+      "name": "Run simulation baselines and fault injection",
+      "depends_on": [
+        "A1"
+      ],
+      "physical": false,
+      "required_evidence": [
+        "frozen_protocol",
+        "sim_replay",
+        "fault_report"
+      ],
+      "goal": "controller baseline data",
+      "status": "UNRESOLVED",
+      "approved": false,
+      "version_lock": null
+    },
+    {
+      "id": "A3",
+      "name": "Low energy single-joint bench",
+      "depends_on": [
+        "A0",
+        "A1",
+        "A2"
+      ],
+      "physical": true,
+      "required_evidence": [
+        "power_review",
+        "fixture_certificate",
+        "measured_e_stop",
+        "hardware_calibration"
+      ],
+      "goal": "independently witnessed bench release",
+      "status": "UNRESOLVED",
+      "approved": false,
+      "version_lock": null
+    },
+    {
+      "id": "A4",
+      "name": "Power-isolated torso build",
+      "depends_on": [
+        "A3"
+      ],
+      "physical": true,
+      "required_evidence": [
+        "mechanical_drawings",
+        "fastener_record",
+        "electrical_inspection"
+      ],
+      "goal": "physical torso signoff",
+      "status": "UNRESOLVED",
+      "approved": false,
+      "version_lock": null
+    },
+    {
+      "id": "A5",
+      "name": "Guarded fixed-base arm motion",
+      "depends_on": [
+        "A4"
+      ],
+      "physical": true,
+      "required_evidence": [
+        "safety_envelope",
+        "self_collision_tests",
+        "actuator_heat_test"
+      ],
+      "goal": "restricted arm task acceptance",
+      "status": "UNRESOLVED",
+      "approved": false,
+      "version_lock": null
+    },
+    {
+      "id": "A6",
+      "name": "Leg support and harness verification",
+      "depends_on": [
+        "A5"
+      ],
+      "physical": true,
+      "required_evidence": [
+        "harness_design_review",
+        "support_calculation",
+        "load_test"
+      ],
+      "goal": "leg support acceptance",
+      "status": "UNRESOLVED",
+      "approved": false,
+      "version_lock": null
+    },
+    {
+      "id": "A7",
+      "name": "Tethered static stance",
+      "depends_on": [
+        "A6"
+      ],
+      "physical": true,
+      "required_evidence": [
+        "contact_calibration",
+        "stance_dynamics_report",
+        "independent_stop_test"
+      ],
+      "goal": "restricted stance acceptance",
+      "status": "UNRESOLVED",
+      "approved": false,
+      "version_lock": null
+    },
+    {
+      "id": "A8",
+      "name": "Harness-restricted stepping",
+      "depends_on": [
+        "A7"
+      ],
+      "physical": true,
+      "required_evidence": [
+        "prospective_protocol",
+        "gait_fault_injection",
+        "human_safety_signoff"
+      ],
+      "goal": "controlled gait experiment",
+      "status": "UNRESOLVED",
+      "approved": false,
+      "version_lock": null
+    }
+  ]
+}
