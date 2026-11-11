@@ -167,14 +167,15 @@ The next benchmark must reward the harder achievement: offering answers when the
 Run from a local checkout containing this analysis file and a separately cloned version-pinned RSI repository:
 
 ```bash
+git clone https://github.com/enuminous/papers.git
 git clone https://github.com/enuminous/RSI.git
 cd RSI
 git checkout 478908589847ab10038a80fd50df35478c0ec95f
-cd ..
+cd ../papers
 python research/rsi-abstention-trap/analysis.py --self-test
-python research/rsi-abstention-trap/analysis.py --snapshot-dir RSI/examples/frozen_demo
+python research/rsi-abstention-trap/analysis.py --snapshot-dir ../RSI/examples/frozen_demo
 ```
 
-The commands assume the `papers` and `RSI` checkouts share a parent directory; run the final two commands from the `papers` root and provide the correct sibling path (typically `../RSI/examples/frozen_demo`) if they do not. No files from the original RSI repository are modified by this script. A source-level reanalysis of the values was performed while preparing this paper; the posted Python script is supplied for independent replay, not represented as externally reviewed execution.
+The commands assume the `papers` and `RSI` checkouts share a parent directory. No files from the original RSI repository are modified by this script. A source-level reanalysis of the values was performed while preparing this paper; the posted Python script is supplied for independent replay, not represented as externally reviewed execution.
 
 **Attribution and scope:** Matthew Chenoweth Wright / Monolithic LLC, with AI assistance; the human-relayed critique by Claude motivated the abstention-control question. This is a retrospective methodological analysis and protocol proposal, not confirmation of an EFMW physical law, cognitive mechanism or AGI.
