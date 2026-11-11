@@ -1,0 +1,41 @@
+name: EFMW Humanoid Platform v0.1 — frozen offline replay
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "research/efmw-humanoid-platform-v0.1/**"
+      - ".github/workflows/efmw-humanoid-v01.yml"
+  pull_request:
+    paths:
+      - "research/efmw-humanoid-platform-v0.1/**"
+      - ".github/workflows/efmw-humanoid-v01.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integrity-and-offline-replay:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: research/efmw-humanoid-platform-v0.1
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate preserved source checksums
+        run: sha256sum -c MANIFEST.sha256
+      - name: Run bounded offline unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Replay demonstration traces
+        run: |
+          python examples/simulate_offline.py
+          python examples/two_link_offline.py
+      - name: Declare scientific limits
+        run: |
+          echo "Software replay only — no robot, physical safety certification, or EFMW-specific physical effect demonstrated."
