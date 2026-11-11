@@ -1,0 +1,150 @@
+{
+  "schema": "EHP-HAZARD-0.1",
+  "status": "preliminary; never use this register as safety signoff",
+  "hazards": [
+    {
+      "id": "H-001",
+      "name": "Unintended motion",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "all energized phases",
+      "consequence": "Impact/pinch",
+      "required_controls": "independent inhibit; guards; deadman; selected mode",
+      "closure_evidence": "witnessed protective-stop and fault tests",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-002",
+      "name": "Gravity collapse/fall",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "torso/legs",
+      "consequence": "Crush injury / expensive damage",
+      "required_controls": "retained supports/brakes; qualified hoist/harness; drop-load analysis",
+      "closure_evidence": "structural certificate and supported fault response",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-003",
+      "name": "Stored electrical / battery energy",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "power and charging",
+      "consequence": "Shock, burn, thermal runaway",
+      "required_controls": "approved current protection; isolation; thermal; no charging without design",
+      "closure_evidence": "electrical inspection and measured fault response",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-004",
+      "name": "Grip or joint crushing",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "arm/hand phases",
+      "consequence": "Pinch and contact injury",
+      "required_controls": "guards; low-energy envelope; physical exclusion",
+      "closure_evidence": "force and distance protective tests",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-005",
+      "name": "Invalid friction or inertial model",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "standing/walking",
+      "consequence": "Slip, unexpected dynamic fall",
+      "required_controls": "measured inertia and contact limits; harness",
+      "closure_evidence": "stance/slip fault injection and instrumented support",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-006",
+      "name": "Stale or inaccurate sensors",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "all energized phases",
+      "consequence": "Uncontrolled planning and tracking",
+      "required_controls": "freshness/covariance checks; redundant diagnostics",
+      "closure_evidence": "clock drift, sensor dropout and freeze reports",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-007",
+      "name": "Unsafe high-level instruction",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "task/AI commands",
+      "consequence": "Unwanted movement",
+      "required_controls": "typed goals, permissions, independent safety gate",
+      "closure_evidence": "adversarial prompt and command replay suite",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-008",
+      "name": "Stop or restart defect",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "all energized phases",
+      "consequence": "Failure to stop; unsafe startup",
+      "required_controls": "independent latched stop, physical reset, self-test",
+      "closure_evidence": "stop category validation and observed restart",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-009",
+      "name": "Unreviewed self modification",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "all physical phases",
+      "consequence": "Safety regression",
+      "required_controls": "operator approval, source pinning, safety firmware isolation",
+      "closure_evidence": "independent review and change-control audit",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-010",
+      "name": "Human enters robot envelope",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "all public/reachable phases",
+      "consequence": "Direct collision",
+      "required_controls": "segregated test cell and protective sensors",
+      "closure_evidence": "human-intrusion stop tests",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-011",
+      "name": "Software/network compromise",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "networked modes",
+      "consequence": "Spurious commands, exfiltration",
+      "required_controls": "authenticated build, segment network, signed updates",
+      "closure_evidence": "security audit and replay test",
+      "assessor": "NOT_ASSIGNED"
+    },
+    {
+      "id": "H-012",
+      "name": "Video/audio privacy",
+      "severity": "POTENTIALLY_SERIOUS",
+      "status": "UNRESOLVED",
+      "physical_blocker": true,
+      "phases": "perception modes",
+      "consequence": "Unconsented capture",
+      "required_controls": "opt-in record, indicator, deletion rules",
+      "closure_evidence": "privacy design review",
+      "assessor": "NOT_ASSIGNED"
+    }
+  ]
+}
