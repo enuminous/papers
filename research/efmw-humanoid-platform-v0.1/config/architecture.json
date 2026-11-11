@@ -1,0 +1,112 @@
+{
+  "schema": "EHP-ARCH-0.1",
+  "system": "proposed full-body modular humanoid with supervised research layer",
+  "height_m_target": [
+    1.4,
+    1.55
+  ],
+  "mass_kg_target": [
+    35,
+    55
+  ],
+  "actuation_dof": 32,
+  "floating_base_dof": 6,
+  "joint_names_by_module": {
+    "neck": [
+      "neck_yaw",
+      "neck_pitch"
+    ],
+    "left_arm": [
+      "left_shoulder_pitch",
+      "left_shoulder_roll",
+      "left_shoulder_yaw",
+      "left_elbow_pitch",
+      "left_forearm_roll",
+      "left_wrist_pitch",
+      "left_wrist_yaw"
+    ],
+    "right_arm": [
+      "right_shoulder_pitch",
+      "right_shoulder_roll",
+      "right_shoulder_yaw",
+      "right_elbow_pitch",
+      "right_forearm_roll",
+      "right_wrist_pitch",
+      "right_wrist_yaw"
+    ],
+    "waist": [
+      "waist_yaw",
+      "waist_pitch"
+    ],
+    "left_leg": [
+      "left_hip_yaw",
+      "left_hip_roll",
+      "left_hip_pitch",
+      "left_knee_pitch",
+      "left_ankle_pitch",
+      "left_ankle_roll"
+    ],
+    "right_leg": [
+      "right_hip_yaw",
+      "right_hip_roll",
+      "right_hip_pitch",
+      "right_knee_pitch",
+      "right_ankle_pitch",
+      "right_ankle_roll"
+    ],
+    "grippers": [
+      "left_gripper_aperture",
+      "right_gripper_aperture"
+    ]
+  },
+  "modes": [
+    "POWER_ISOLATED",
+    "MAINTENANCE_LOCKOUT",
+    "SIMULATION",
+    "DIAGNOSTIC",
+    "BENCH_LOW_ENERGY",
+    "FIXED_BASE_RESTRICTED",
+    "HARNESS_RESTRICTED",
+    "SAFE_STOP",
+    "E_STOP_LATCHED"
+  ],
+  "hardware_motion_authorized": false,
+  "hardware_motion_authorization_status": "NOT_GRANTED",
+  "controller_rates_hz_proposed": {
+    "servo": [
+      500,
+      2000
+    ],
+    "wbc": [
+      100,
+      500
+    ],
+    "estimator": [
+      100,
+      500
+    ],
+    "efmw_monitor": [
+      5,
+      50
+    ],
+    "task_executive": "event-driven"
+  },
+  "nominal_bus_voltage_v_alternatives": [
+    24,
+    48
+  ],
+  "ros2_base": "Jazzy Jalisco (LTS)",
+  "migration_candidate": "Lyrical Luth (LTS)",
+  "software": [
+    "ros2_control",
+    "MoveIt 2",
+    "MuJoCo",
+    "optional Isaac Sim"
+  ],
+  "trust_boundaries": [
+    "safety independent of ROS",
+    "EFMW monitor advisory only",
+    "no direct motor output from language/assembly planner"
+  ],
+  "status": "not implemented or hardware verified"
+}
