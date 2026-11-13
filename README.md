@@ -25,6 +25,18 @@
 <!-- ENUMINOUS-UNIFIED-NAV:END -->
 
 <!-- ENUMINOUS-LAB-DIRECTORY:START -->
+## EFMW research progression and introspection series
+
+For the network-wide subject menu and evidence boundaries, start with the [EFMW repository navigation](https://github.com/enuminous/EFMW/blob/main/REPOSITORY_NAVIGATION.md#2026-11-13-reconciliation-layer-evidence-introspection-and-new-papers).
+
+1. [HYP-001: conditional physical predictions](EFMW-HYP-001-Testable-Physical-Predictions-2026-11-12.md) — proposed, unverified couplings.
+2. [HYP-001A: known-zero recovery](EFMW-HYP-001A-Known-Zero-Recovery-2026-11-13.md) — synthetic null: naive estimator FAIL; adjusted estimator UNRESOLVED.
+3. [HYP-001A reproduction files](EFMW-HYP-001A/) — script and summary; no independent replication claimed.
+4. [On Introspective Machines](On-Introspective-Machines-2026-11-13.md) — conceptual essay on auditability and mechanistic self-correction.
+5. [INT-001 benchmark protocol](EFMW-INT-001-Preregistered-Audit-Benchmark-Protocol-2026-11-13.md) — draft preregistration; corpus, custody and numerical gates not yet frozen.
+
+**Progression:** proposed mechanism → falsifiable test → negative result → introspection concept → prospective independent benchmark. This is an intellectual dependency map, **not** a proof of an EFMW-specific physical mechanism or an independently demonstrated auditing advantage.
+
 ## Interactive laboratory directory
 
 Start with the published application pages below. The repositories in the final table contain standalone browser labs or interactive dashboards, but **a public GitHub Pages deployment has not been independently confirmed for each one**. The simulations are research demonstrations; visual effects or passing numerical checks are not evidence of new physics.
