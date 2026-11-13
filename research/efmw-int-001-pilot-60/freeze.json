@@ -1,0 +1,24 @@
+{
+  "benchmark": "EFMW-INT-001",
+  "release": "pilot-60-v1",
+  "status": "FROZEN_SYNTHETIC_PILOT_CORPUS; NOT A SYSTEM PERFORMANCE RESULT",
+  "seed": 20261113,
+  "items": 60,
+  "defect_positive": 30,
+  "clean": 30,
+  "matched_pairs": 30,
+  "defect_family_counts": {
+    "omitted_confounder": 5,
+    "miscovering_nominal_interval": 5,
+    "changed_cited_source": 4,
+    "weak_formal_statement": 4,
+    "withdrawn_authorization": 4,
+    "post_result_benchmark_retuning": 4,
+    "shared_source_repetition": 4
+  },
+  "all_items_synthetic": true,
+  "items_and_labels_public_after_release": true,
+  "confirmatory": false,
+  "arm_scoring": "NOT RUN; no independent custodian or frozen executable arm implementations were available",
+  "construction_checks": "PASS; run python3 validate.py to reproduce"
+}
