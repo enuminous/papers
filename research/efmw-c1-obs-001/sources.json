@@ -1,0 +1,47 @@
+[
+  {
+    "id": "C1",
+    "type": "pinned_user_source",
+    "repo": "enuminous/EFMW-Lagrangian",
+    "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+    "path": "candidate/CANDIDATE.md",
+    "blob": "916e04935f50cbbf07ddcd81e7c71a02954b1c96",
+    "url": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/candidate/CANDIDATE.md"
+  },
+  {
+    "id": "C1-conventions",
+    "type": "pinned_user_source",
+    "repo": "enuminous/EFMW-Lagrangian",
+    "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+    "path": "candidate/conventions.json",
+    "blob": "a4d84fa9c70ea53f298675de74c88a505ea0af87",
+    "url": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/candidate/conventions.json"
+  },
+  {
+    "id": "C1-derivation",
+    "type": "pinned_user_source",
+    "repo": "enuminous/EFMW-Lagrangian",
+    "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+    "path": "docs/DERIVATION.md",
+    "blob": "dcd375e8c80a661f2e019bbcbb494e16150b3c65",
+    "url": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/docs/DERIVATION.md"
+  },
+  {
+    "id": "OSQAR-2015",
+    "type": "primary_experimental_paper",
+    "authors": "Ballou et al., OSQAR Collaboration",
+    "journal": "Physical Review D 92, 092002 (2015)",
+    "doi": "10.1103/PhysRevD.92.092002",
+    "url": "https://arxiv.org/abs/1506.08082v2",
+    "read_sections": "Eq. 2–4 and exclusion-limit section",
+    "used_for": "Interaction normalization, optical geometry and published scalar limit, not a reanalysis or claim about current best bounds"
+  },
+  {
+    "id": "Biggio-Masso-Redondo",
+    "type": "primary_theory_paper",
+    "authors": "Carla Biggio, Eduard Masso and Javier Redondo",
+    "title": "Mixing of photons with massive spin-two particles in a magnetic field",
+    "url": "https://arxiv.org/pdf/hep-ph/0604062",
+    "used_for": "Section 2 scalar-photon comparison and warning about the relativistic approximation"
+  }
+]

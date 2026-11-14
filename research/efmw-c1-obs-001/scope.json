@@ -1,0 +1,76 @@
+{
+  "id": "EFMW-C1-OBS-001",
+  "version": "0.1.0",
+  "date": "2026-11-14",
+  "scope_lock": "Selected after initial source and literature screening; locked before symbolic and numerical verification. No claim of external preregistration.",
+  "source": {
+    "repo": "enuminous/EFMW-Lagrangian",
+    "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+    "candidate": "EFMW-LAGRANGIAN-C1 v1.0.0"
+  },
+  "targets": [
+    "Determine whether the existing C M residual-force law follows from the pinned C1 action.",
+    "Derive a measurable optical prediction from an existing nonzero C1 scalar-photon coupling.",
+    "Classify overlap with known scalar-photon models and translate an existing experiment's bound.",
+    "Retain all failed implications; do not choose coupling or mass from the desired outcome."
+  ],
+  "projection": {
+    "background": "Minkowski metric, nondynamical gravity",
+    "fields": "One real scalar sigma=varphi_W and the M-sector Maxwell field",
+    "couplings": "Only c_MW=g_MW nonzero; physical photon coupling g=4 c_MW",
+    "scalar_mass": "m>0, freely specified; no value predicted by C1",
+    "all_other_pairs_and_triples": 0
+  },
+  "assumptions": [
+    "Identify the C1 M-sector gauge field with calibrated laboratory electromagnetism.",
+    "Applied magnetic field and detector are characterized external apparatus; not derived from C1's source-free action.",
+    "Weak field around a self-consistent scalar background; positive gauge kinetic factor; m^2>=0.",
+    "Relativistic forward propagation: m/omega << 1 and |g B|/omega << 1; optical vacuum.",
+    "Photon-opaque wall sufficiently transparent to the hypothetical scalar; separate apparatus assumption.",
+    "Single scalar, no extra couplings, single pass, negligible depletion, no resonant enhancement.",
+    "No physical data, independent replication, or new-physics discovery is claimed."
+  ],
+  "checks": [
+    "Symbolic Euler-Lagrange signs and the mapping g=4 c_MW.",
+    "Quadratic coupled-wave determinant and Hermiticity after field rephasing.",
+    "Matrix exponential versus closed conversion formula over a predeclared dimensionless grid.",
+    "Weak-mixing and zero-coupling limits; polarization selection; scaling checks.",
+    "Cross-check magnetic unit conversion and probability against independent amplitude integration.",
+    "Document background and systematic requirements and existing scalar-model degeneracy."
+  ],
+  "numerical_grid": {
+    "mixing_angle_parameter": [
+      0,
+      0.000001,
+      0.01,
+      0.1,
+      0.5
+    ],
+    "phase_mismatch": [
+      0,
+      0.01,
+      0.1,
+      1,
+      3.141592653589793,
+      9.42477796076938,
+      10
+    ]
+  },
+  "example": {
+    "type": "Illustrative calculation using published magnet/laser geometry, not a recreation of OSQAR's likelihood",
+    "B_T": 9,
+    "L_m": 14.3,
+    "wavelength_nm": 532,
+    "power_W": 18.5,
+    "g_GeV_inverse": 1e-8,
+    "mass_eV": 0.0001,
+    "efficiency": 1,
+    "run_hours": 1
+  },
+  "scan": {
+    "mass_min_eV": 1e-7,
+    "mass_max_eV": 0.01,
+    "points": 401,
+    "g_GeV_inverse": 1e-8
+  }
+}

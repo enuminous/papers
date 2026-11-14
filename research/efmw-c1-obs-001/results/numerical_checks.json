@@ -1,0 +1,17 @@
+{
+  "grid_cases": 35,
+  "max_expm_absolute_error": 8.326672684688674e-17,
+  "max_unitarity_error": 6.4392935428444225e-15,
+  "max_amplitude_integral_error": 5.551115123125783e-17,
+  "weak_limit_max_absolute_error_for_a_at_most_1e_minus_6": 3.3341679475709197e-25,
+  "SI_energy_conversion_verified": true,
+  "direct_SI_amplitude_verified": true,
+  "scaling_ratios": {
+    "coupling_doubled": 16.0,
+    "both_fields_halved": 0.0625,
+    "production_field_halved": 0.25,
+    "polarization_45_degrees": 0.4999999999999999,
+    "coupling_sign_reversed": 1.0
+  },
+  "null_limits_verified": true
+}

@@ -1,0 +1,21 @@
+{
+  "source_copies_verified": true,
+  "C1_to_known_scalar_interaction_identity": true,
+  "g_equals_4_c_MW": true,
+  "scalar_source": "X*g/4 + m**2*s0",
+  "gauge_kinetic_factor": "g*s0 + 1",
+  "EL_A_nonuniform_B": "g*B(z)*Derivative(s(t, z), z) + g*s(t, z)*Derivative(B(z), z) + Derivative(A(t, z), (t, 2)) - Derivative(A(t, z), (z, 2))",
+  "EL_scalar": "-g*B(z)*Derivative(A(t, z), z) + m**2*s(t, z) + Derivative(s(t, z), (t, 2)) - Derivative(s(t, z), (z, 2))",
+  "wave_matrix": "Matrix([[-k**2 + w**2, -I*B0*g*k], [I*B0*g*k, -k**2 - m**2 + w**2]])",
+  "wave_determinant": "-B0**2*g**2*k**2 + k**4 + k**2*m**2 - 2*k**2*w**2 - m**2*w**2 + w**4",
+  "forward_H_after_rephasing": "Matrix([[0, a], [a, q]])",
+  "magnetic_scalar_background": "-B0**2*g/(2*m**2)",
+  "mass_dimensions": {
+    "F_squared": 4,
+    "scalar_kinetic": 4,
+    "mass_term": 4,
+    "scalar_photon": 4
+  },
+  "negative_kinetic_counterexample": "sigma=-2/g gives 1+g sigma=-1; no global stability claim",
+  "proof_kind": "symbolic identities plus written derivation; not Lean-checked"
+}

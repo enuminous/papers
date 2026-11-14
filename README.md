@@ -35,6 +35,8 @@ For the network-wide subject menu and evidence boundaries, start with the [EFMW 
 4. [On Introspective Machines](On-Introspective-Machines-2026-11-13.md) — conceptual essay on auditability and mechanistic self-correction.
 5. [INT-001 benchmark protocol](EFMW-INT-001-Preregistered-Audit-Benchmark-Protocol-2026-11-13.md) — draft preregistration; corpus, custody and numerical gates not yet frozen.
 
+**Action-to-observable follow-up (14 November):** [C1-OBS-001](EFMW-C1-OBS-001-From-Action-to-Observable-2026-11-14.md) derives an optical response from an existing C1 coupling and records its equivalence to the generic scalar–photon model. [Code, results and assumptions](research/efmw-c1-obs-001/README.md).
+
 **Progression:** proposed mechanism → falsifiable test → negative result → introspection concept → prospective independent benchmark. This is an intellectual dependency map, **not** a proof of an EFMW-specific physical mechanism or an independently demonstrated auditing advantage.
 
 ## Interactive laboratory directory
@@ -85,6 +87,9 @@ These links open the GitHub source file, **not a running simulator**. See each r
 Research papers, proposals, theorem discussions and experimental plans. Browse the source documents below. The [interactive lab](index.html) can be downloaded and opened locally; this repository does not currently have GitHub Pages enabled.
 
 ## Documents
+
+- **[EFMW-C1-OBS-001 — From the C1 Action to an Optical Observable](EFMW-C1-OBS-001-From-Action-to-Observable-2026-11-14.md)** · [Reproducible package](research/efmw-c1-obs-001/README.md) · [Download ZIP](research/efmw-c1-obs-001/EFMW-C1-Observable-2026-11-14.zip) — 14 November 2026. Conditional scalar–photon derivation from the pinned C1 action, symbolic variation checks, 35 numerical comparisons and a published-limit translation. **Equivalent to the known scalar–photon model; no new physical detection or uniquely EFMW prediction. The CM-force derivation remains unresolved.**
+
 
 - **[When Old Hardware Becomes a Security Emergency](When-Old-Hardware-Becomes-a-Security-Emergency-2026-11-13.md)** — 13 November 2026. Commentary on the nationwide FAA ground stop, aging air-traffic communications infrastructure, and the distinction between a systemic security vulnerability and an unconfirmed attack. Treats the ABC broadcast ACARS image as a lead requiring source authentication; does not claim a hijacking threat or malicious cause.
 

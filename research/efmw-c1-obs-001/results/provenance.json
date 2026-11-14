@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-11-14T17:28:34.661783+00:00",
+  "finished_utc": "2026-11-14T17:28:34.906624+00:00",
+  "scope_lock_sha256": "c017579d32d7329d99c157fdebd904caba207623c0dfdbd2a40de5d332d68d47",
+  "calculation_sha256": "9aebafc9d8b0ca99220b0d0fb5b9584c4b3e217d4c92c6c78b451bf65bf36da2",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "sympy": "1.14.0",
+  "physical_measurements": false,
+  "independent_replication": false,
+  "results_sha256": {
+    "example.json": "145ae13a1580e2b2494edd3e130f01aea401853540fc289c80b104c70c9e35b0",
+    "existing_bound_translation.json": "c39685d6c58afecc5dd9af5f86fdc400a308aa39e282ba310cd649410c9d3941",
+    "mass_scan.csv": "697b3544e23d85e326dfd1a13e5252b07ebdaa2daed65143c1509df18d1982c2",
+    "numerical_checks.json": "d7aa2d00f2d017565914d747374005ecbecfa467782b813a1de2678e20d88c18",
+    "symbolic_checks.json": "4118dd2352278bc4b2604aee0d718a105408b394b2e18909f551862fba3f70f4",
+    "verification_grid.csv": "a2318c6ff51d705c0ec0bace92f1bd0f184e7f9086d0061e9d2352889e7ba42d"
+  }
+}

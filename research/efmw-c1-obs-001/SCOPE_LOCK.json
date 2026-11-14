@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-11-14T17:25:07.754882+00:00",
+  "status": "Local scope lock, not an independent registration",
+  "files": {
+    "scope.json": "1314fe0cde5973bdaa118a71d1403965d40c1877a045fdfd8758e1ab1ef15170",
+    "sources/CANDIDATE.md": "e7f58e6ec06ad6bb14c09e0482780d8d8c0bf8c4c0beb117757f65d44790d08f",
+    "sources/DERIVATION.md": "f19a5a125e72afd773e463d347efd05d731fa0fb821da2fb464347ec32ff8e04",
+    "sources/conventions.json": "667f38db79deea961787fa4d19a79f6e4231f79c32a5ca2ea7e4e9faa22e798e"
+  }
+}

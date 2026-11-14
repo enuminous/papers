@@ -1,0 +1,15 @@
+{
+  "source": "Ballou et al., Phys. Rev. D 92, 092002 (2015), Eq. 2 and conclusion",
+  "source_url": "https://doi.org/10.1103/PhysRevD.92.092002",
+  "published_scalar_g_GeV_inverse": 3.2e-08,
+  "mass_domain_eV_upper": 0.0002,
+  "confidence_label": "95% as reported by authors; Bayesian posterior construction",
+  "C1_c_MW_GeV_inverse": 8e-09,
+  "assumptions": "One scalar, matching mass and coupling convention, ordinary EM identification, no screening or additional interactions, weak-background normalization",
+  "not_claimed": [
+    "new data analysis",
+    "current strongest limit",
+    "global exclusion of EFMW",
+    "discovery"
+  ]
+}
