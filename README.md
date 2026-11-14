@@ -86,6 +86,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[When Old Hardware Becomes a Security Emergency](When-Old-Hardware-Becomes-a-Security-Emergency-2026-11-13.md)** — 13 November 2026. Commentary on the nationwide FAA ground stop, aging air-traffic communications infrastructure, and the distinction between a systemic security vulnerability and an unconfirmed attack. Treats the ABC broadcast ACARS image as a lead requiring source authentication; does not claim a hijacking threat or malicious cause.
+
 - **[EFMW Humanoid Platform v0.1 — Full Systems-Engineering Specification](EFMW-Humanoid-Platform-System-Engineering-Specification-v0.1-2026-11-11.md)** · [Complete preserved research package](research/efmw-humanoid-platform-v0.1/README.md) · [Publication status](research/efmw-humanoid-platform-v0.1/PUBLICATION_NOTICE.md) · [Requirements and hazards](research/efmw-humanoid-platform-v0.1/config/requirements.json) · [Offline verification and execution record](research/efmw-humanoid-platform-v0.1/docs/LOCAL_EXECUTION_RECORD.md) · [CI](https://github.com/enuminous/papers/actions/workflows/efmw-humanoid-v01.yml) — 11 November 2026. Proposed 32-joint humanoid robot research architecture combining standard whole-body robotics controls with an optional EFMW-inspired history/coherence monitor and human-approved recursive assembly gates. Includes preservation manifest, traceable requirements, preliminary hazard register, two-joint dynamics reference, bounded offline supervisor, and 35 locally passing Python tests. **Design and toy software only: no built robot, real-world motion, safety certification, or EFMW-specific advantage established.**
 
 
