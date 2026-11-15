@@ -1,0 +1,71 @@
+{
+  "id": "EFMW-C1-REL-001",
+  "version": "1.0.0",
+  "date": "2026-11-14",
+  "question": "Does the reviewed EFMW corpus entail a mass-coupling law or a quantitative observable relationship beyond generic scalar effective field theory?",
+  "status": "exploratory mathematical audit; no new physical data",
+  "freeze_timing": "Source screening and candidate algebra preceded this lock. This freezes source snapshots, assumptions, verification targets and criteria before executing the new checks; it is not an independent preregistration.",
+  "branch": "C1 classical, flat background, source-free vacuum near scalar origin; separate canonical ME-002 propagation branch is not identified with C1.",
+  "criteria": {
+    "source_entailment": "Every restriction must follow from the frozen action and explicitly listed branch assumptions; newly chosen restrictions are not source evidence.",
+    "novelty": "Compare C1 predictions with the same canonically normalized scalar-photon action in established literature, including arbitrary masses and couplings.",
+    "verification": "Exact symbolic identities must simplify to zero; explicit counterexamples must satisfy their stated local branch assumptions; numerical spectral comparisons use rtol 1e-11 and atol 1e-13.",
+    "empirical": "No numerical or symbolic result is classified as a measurement or a confirmation of EFMW."
+  },
+  "operations": [
+    {
+      "id": "O1",
+      "name": "Parameter non-entailment",
+      "input": "C1 scalar-photon branch",
+      "transformation": "Construct nonzero couplings at fixed mass and independent masses at fixed coupling within a common positive local kinetic domain.",
+      "pass": "Two admissible different couplings at one mass disprove any universal single-valued g=f(m) from these assumptions."
+    },
+    {
+      "id": "O2",
+      "name": "Classical low-energy matching",
+      "input": "C1 positive definite scalar mass Hessian A and photon couplings b, X=F^2",
+      "transformation": "Eliminate scalar fields to order X^2; independently diagonalize A and compare spectral sum; derive weak-field refractive response.",
+      "pass": "a_X=1/2 b^T A^-1 b=sum g_i^2/(32 m_i^2), Delta n=16 a_X B^2 to leading order, with nonnegative omitted-mode terms."
+    },
+    {
+      "id": "O3",
+      "name": "Cross-channel rank stress test",
+      "input": "Two gauge invariants and C1 allowed direct XY coupling",
+      "transformation": "Compute response determinant and supply one-scalar contact and two-scalar counterexamples.",
+      "pass": "Identify exactly when rank-one identity holds and exhibit allowed C1 branches violating it."
+    },
+    {
+      "id": "O4",
+      "name": "Kinetic-domain test",
+      "input": "K(sigma)=1+g sigma",
+      "transformation": "Solve positivity for all real sigma versus a bounded interval.",
+      "pass": "All-real positivity forces g=0; bounded positivity only bounds magnitude."
+    },
+    {
+      "id": "O5",
+      "name": "Normalization and propagation separation",
+      "input": "C1 root Z family; canonical ME-002/004/005",
+      "transformation": "Vary root action for arbitrary Z; substitute plane wave into the canonical equation without importing alpha_EM.",
+      "pass": "Verify normalization ambiguity and conditional dispersion; do not conflate branches."
+    }
+  ],
+  "not_run": [
+    "Full Zoo animal roster",
+    "Lean formalization of new results",
+    "New physical experiments",
+    "Reruns of frozen EXP-001/003",
+    "Exhaustive search of every EFMW repository"
+  ],
+  "literature": [
+    {
+      "url": "https://arxiv.org/pdf/hep-ph/0604062",
+      "section": "2, equations 1-3",
+      "role": "Prior scalar-photon action; equivalent after signature and sign conventions."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1506.08082",
+      "section": "II, equations 2-3",
+      "role": "Prior scalar-photon interaction and photon regeneration observable."
+    }
+  ]
+}

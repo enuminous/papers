@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-11-15T01:13:29.799065+00:00",
+  "stage": "after source screening and candidate discovery; before verification script execution",
+  "sha256": {
+    "scope.json": "d9931af99ee8dbb5914f960b0c0c249cfc31a67ddd39183681cc336a2b6439cf",
+    "sources/CONNECTOR_SOURCES.json": "d99e8eec70b4cf675f65e1ed8dc16b3dba57308446318d76adb08e38346217b6",
+    "sources/canonical/CANONICAL_102.md": "d534be8e0664fd523bd0bbbd82e98b8acda29e23f0941690be96573661080268",
+    "sources/canonical/README.md": "1217a45f268749809d62c29911818a36fba19ed6fef8ee3148361a8450f4c59c",
+    "sources/canonical/002.md": "aee716c04860a888dd01cba0d06b2f408d9e837ee2c77898e40d24643540350c",
+    "sources/constants/README.md": "7199cf485f26c82e3b34611b8380a50e105a76e7844e2edeca1f3ec73a6101b3",
+    "sources/constants/DEPENDENCY_MAP.md": "87d16cf98347c4407c47930bfd31d7cef7d2d827a25fd8082e454703f7d26623",
+    "sources/constants/CLAIMS_BOUNDARY.md": "c235ee57d0d4db641a84e48aac1874fb05b3c0028baddb375c1807c429121fca",
+    "sources/constants/Core.lean": "1a1aab6136ffec62606125137b49f5f10f1ec761c79ddca326c511a550ca9928",
+    "sources/base888/README.md": "15eab07c6075f200dc5c551acf0effac8bbaa50c6bb59dc07014b86d5edb8b43",
+    "sources/standard-model/README.md": "0a1eaf8e3debbe972da2271657cd867bc7dec764cb1c9f6bb43aa215fabcfb1f",
+    "sources/cosmology/C1Q-MODEL.md": "0119254f6d8ed6d7a6aaf3b3766c6b2fe1ac6dbbf3c67e9575e421685864054e",
+    "sources/historical/FieldSpace_master_action_original.md": "4989b3b93c7031265546e38d6327972967245f9b048e0c41259a81f1493e901d",
+    "sources/C1/CANDIDATE.md": "e7f58e6ec06ad6bb14c09e0482780d8d8c0bf8c4c0beb117757f65d44790d08f",
+    "sources/C1/conventions.json": "667f38db79deea961787fa4d19a79f6e4231f79c32a5ca2ea7e4e9faa22e798e"
+  },
+  "note": "C1 citation paths corrected to candidate/ before checks; source bytes unchanged."
+}

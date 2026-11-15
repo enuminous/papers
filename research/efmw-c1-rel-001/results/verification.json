@@ -1,0 +1,248 @@
+{
+  "id": "EFMW-C1-REL-001",
+  "status": "mathematical checks, not physical measurements",
+  "checks_passed": 33,
+  "checks_failed": 0,
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sympy": "1.14.0"
+  },
+  "checks": [
+    {
+      "check": "Nonzero couplings independent at fixed mass",
+      "passed": true,
+      "evidence": "[{'m_over_Mstar': '1', 'g_times_Mstar': '1/100', 'minimum_K_on_abs_sigma_le_Mstar': '99/100'}, {'m_over_Mstar': '1', 'g_times_Mstar': '1/50', 'minimum_K_on_abs_sigma_le_Mstar': '49/50'}, {'m_over_Mstar': '2', 'g_times_Mstar': '1/100', 'minimum_K_on_abs_sigma_le_Mstar': '99/100'}]"
+    },
+    {
+      "check": "Masses independent at fixed coupling",
+      "passed": true,
+      "evidence": "[{'m_over_Mstar': '1', 'g_times_Mstar': '1/100', 'minimum_K_on_abs_sigma_le_Mstar': '99/100'}, {'m_over_Mstar': '1', 'g_times_Mstar': '1/50', 'minimum_K_on_abs_sigma_le_Mstar': '49/50'}, {'m_over_Mstar': '2', 'g_times_Mstar': '1/100', 'minimum_K_on_abs_sigma_le_Mstar': '99/100'}]"
+    },
+    {
+      "check": "Stationary single-scalar solution",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Single-scalar F4 coefficient",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Full mixed two-scalar stationary matching",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Allowed X phi_1 phi_2 leaves leading F4 coefficient",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Positive Hessian in mixed example",
+      "passed": true,
+      "evidence": "{'A': 'Matrix([[4, 1], [1, 9]])', 'a_X': '9/1120'}"
+    },
+    {
+      "check": "Cubic scalar term leaves leading F4 coefficient",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Orthogonal basis invariance of matching",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Additional positive-mass scalar breaks single-mode equality upward",
+      "passed": true,
+      "evidence": "{'one_mode': '1/32', 'two_modes': '13/288', 'excess': '1/72'}"
+    },
+    {
+      "check": "Spectral sum n=1",
+      "passed": true,
+      "evidence": "{'direct': 0.03094059405940594, 'spectral': 0.03094059405940594}"
+    },
+    {
+      "check": "Observed-subset bound n=1",
+      "passed": true,
+      "evidence": "{'one_term': 0.03094059405940594, 'sum': 0.03094059405940594}"
+    },
+    {
+      "check": "Spectral sum n=2",
+      "passed": true,
+      "evidence": "{'direct': 0.033159398320895525, 'spectral': 0.03315939832089553}"
+    },
+    {
+      "check": "Observed-subset bound n=2",
+      "passed": true,
+      "evidence": "{'one_term': 0.03122408771503994, 'sum': 0.03315939832089553}"
+    },
+    {
+      "check": "Spectral sum n=3",
+      "passed": true,
+      "evidence": "{'direct': 0.0335632660507499, 'spectral': 0.0335632660507499}"
+    },
+    {
+      "check": "Observed-subset bound n=3",
+      "passed": true,
+      "evidence": "{'one_term': 0.03122980945610243, 'sum': 0.0335632660507499}"
+    },
+    {
+      "check": "Spectral sum n=8",
+      "passed": true,
+      "evidence": "{'direct': 0.03380251110123273, 'spectral': 0.033802511101232724}"
+    },
+    {
+      "check": "Observed-subset bound n=8",
+      "passed": true,
+      "evidence": "{'one_term': 0.031247629225061108, 'sum': 0.033802511101232724}"
+    },
+    {
+      "check": "Perpendicular squared index",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Parallel squared index",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Leading scalar birefringence",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Single-mode birefringence relation",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "One scalar and no contact has rank one",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Direct-contact determinant",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Allowed direct contact destroys rank-one relation",
+      "passed": true,
+      "evidence": "-3/100000000"
+    },
+    {
+      "check": "Two scalars destroy rank one even without direct contact",
+      "passed": true,
+      "evidence": "1/100000000"
+    },
+    {
+      "check": "Global-positivity counterexample",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Bounded-domain positivity for the countermodels",
+      "passed": true,
+      "evidence": "min K = 1 - |g| Phi; strict positivity requires |g| Phi < 1"
+    },
+    {
+      "check": "Root PDE independent of positive Z",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Canonical coupling varies with Z",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Canonical ME-002 plane-wave dispersion",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "check": "Canonical speed differs when alpha nonzero",
+      "passed": true,
+      "evidence": "alpha=1/2 gives v/c=2/sqrt(3)"
+    },
+    {
+      "check": "Canonical alpha above one is non-wave branch",
+      "passed": true,
+      "evidence": "alpha=2 gives omega^2=-c^2 k^2/3"
+    }
+  ],
+  "mass_coupling_countermodels": [
+    {
+      "m_over_Mstar": "1",
+      "g_times_Mstar": "1/100",
+      "minimum_K_on_abs_sigma_le_Mstar": "99/100"
+    },
+    {
+      "m_over_Mstar": "1",
+      "g_times_Mstar": "1/50",
+      "minimum_K_on_abs_sigma_le_Mstar": "49/50"
+    },
+    {
+      "m_over_Mstar": "2",
+      "g_times_Mstar": "1/100",
+      "minimum_K_on_abs_sigma_le_Mstar": "99/100"
+    }
+  ],
+  "spectral_cases": [
+    {
+      "n": 1,
+      "direct": 0.03094059405940594,
+      "spectral": 0.03094059405940594,
+      "absolute_error": 0.0,
+      "terms": [
+        0.03094059405940594
+      ]
+    },
+    {
+      "n": 2,
+      "direct": 0.033159398320895525,
+      "spectral": 0.03315939832089553,
+      "absolute_error": 6.938893903907228e-18,
+      "terms": [
+        0.03122408771503994,
+        0.001935310605855593
+      ]
+    },
+    {
+      "n": 3,
+      "direct": 0.0335632660507499,
+      "spectral": 0.0335632660507499,
+      "absolute_error": 0.0,
+      "terms": [
+        0.03122980945610243,
+        0.0019486600685439791,
+        0.00038479652610348437
+      ]
+    },
+    {
+      "n": 8,
+      "direct": 0.03380251110123273,
+      "spectral": 0.033802511101232724,
+      "absolute_error": 6.938893903907228e-18,
+      "terms": [
+        0.031247629225061108,
+        0.001952345501642455,
+        0.00038578082133074756,
+        0.00012201736575092821,
+        5.00001294432607e-05,
+        2.4099659937321455e-05,
+        1.3018308014134682e-05,
+        7.620090052768918e-06
+      ]
+    }
+  ],
+  "max_spectral_absolute_error": 6.938893903907228e-18,
+  "single_mode_a_X": "g^2/(32*m^2)",
+  "multi_mode_a_X": "sum_i g_i^2/(32*m_i^2)",
+  "leading_delta_n_scalar": "16*a_X*B^2",
+  "contact_counterexample_determinant": "-3/100000000"
+}

@@ -37,6 +37,9 @@ For the network-wide subject menu and evidence boundaries, start with the [EFMW 
 
 **Action-to-observable follow-up (14 November):** [C1-OBS-001](EFMW-C1-OBS-001-From-Action-to-Observable-2026-11-14.md) derives an optical response from an existing C1 coupling and records its equivalence to the generic scalar–photon model. [Code, results and assumptions](research/efmw-c1-obs-001/README.md).
 
+
+**Scientific validation roadmap (15 November):** [Computational experiments, mathematical proof and physical confirmation](EFMW-Scientific-Validation-Roadmap-2026-11-15.md) — an evidence-separated plan, with outstanding experiments, falsification criteria and publication gates.
+
 **Progression:** proposed mechanism → falsifiable test → negative result → introspection concept → prospective independent benchmark. This is an intellectual dependency map, **not** a proof of an EFMW-specific physical mechanism or an independently demonstrated auditing advantage.
 
 ## Interactive laboratory directory
@@ -87,6 +90,8 @@ These links open the GitHub source file, **not a running simulator**. See each r
 Research papers, proposals, theorem discussions and experimental plans. Browse the source documents below. The [interactive lab](index.html) can be downloaded and opened locally; this repository does not currently have GitHub Pages enabled.
 
 ## Documents
+
+- **[EFMW Scientific Validation Roadmap](EFMW-Scientific-Validation-Roadmap-2026-11-15.md)** · [C1 specificity supporting package](research/efmw-c1-rel-001/README.md) — 15 November 2026. Evidence assessment of the 960-record EXP-003 audit and conditional C1 results, with reproducibility requirements, falsification tests, proposed statistical criteria, a research tracker and publication milestones. **Preserves the original synthetic pass and variance-fault reversal; no new simulator execution, kernel proof, or physical confirmation is claimed.**
 
 - **[EFMW-C1-OBS-001 — From the C1 Action to an Optical Observable](EFMW-C1-OBS-001-From-Action-to-Observable-2026-11-14.md)** · [Reproducible package](research/efmw-c1-obs-001/README.md) · [Download ZIP](research/efmw-c1-obs-001/EFMW-C1-Observable-2026-11-14.zip) — 14 November 2026. Conditional scalar–photon derivation from the pinned C1 action, symbolic variation checks, 35 numerical comparisons and a published-limit translation. **Equivalent to the known scalar–photon model; no new physical detection or uniquely EFMW prediction. The CM-force derivation remains unresolved.**
 

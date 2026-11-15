@@ -1,0 +1,106 @@
+[
+  {
+    "local_path": "sources/canonical/CANONICAL_102.md",
+    "git_blob_sha1": "a328e4ce7c0b80565148ad28fa63eb3337e69335",
+    "commit": "4129cc6e86396b6752433c80a78439662b441836",
+    "url": "https://github.com/enuminous/Monolithic_102_EFMW/blob/4129cc6e86396b6752433c80a78439662b441836/CANONICAL_102.md",
+    "review": "full text",
+    "sha256": "d534be8e0664fd523bd0bbbd82e98b8acda29e23f0941690be96573661080268"
+  },
+  {
+    "local_path": "sources/canonical/README.md",
+    "git_blob_sha1": "97a88f4771f78a7118d1c172f3544f741a9e3119",
+    "commit": "4129cc6e86396b6752433c80a78439662b441836",
+    "url": "https://github.com/enuminous/Monolithic_102_EFMW/blob/4129cc6e86396b6752433c80a78439662b441836/README.md",
+    "review": "full text",
+    "sha256": "1217a45f268749809d62c29911818a36fba19ed6fef8ee3148361a8450f4c59c"
+  },
+  {
+    "local_path": "sources/canonical/002.md",
+    "git_blob_sha1": "edd558e8e06ba8093ae5272d020a4af9b7ab205a",
+    "commit": "4129cc6e86396b675243c80a78439662b441836",
+    "url": "https://github.com/enuminous/Monolithic_102_EFMW/blob/4129cc6e86396b675243c80a78439662b441836/002.md",
+    "review": "full text",
+    "sha256": "aee716c04860a888dd01cba0d06b2f408d9e837ee2c77898e40d24643540350c"
+  },
+  {
+    "local_path": "sources/constants/README.md",
+    "git_blob_sha1": "2a0477c397588ec06336c76435c65324b526899a",
+    "commit": "3916f82ce16ddfa4b88da6e2d11a593728db9382",
+    "url": "https://github.com/enuminous/EFMW-Constants-Problem/blob/3916f82ce16ddfa4b88da6e2d11a593728db9382/README.md",
+    "review": "full text",
+    "sha256": "7199cf485f26c82e3b34611b8380a50e105a76e7844e2edeca1f3ec73a6101b3"
+  },
+  {
+    "local_path": "sources/constants/DEPENDENCY_MAP.md",
+    "git_blob_sha1": "5bce58d6883b59f62c2194e259ae22a9c081f59e",
+    "commit": "3916f82ce16ddfa4b88da6e2d11a593728db9382",
+    "url": "https://github.com/enuminous/EFMW-Constants-Problem/blob/3916f82ce16ddfa4b88da6e2d11a593728db9382/DEPENDENCY_MAP.md",
+    "review": "full text",
+    "sha256": "87d16cf98347c4407c47930bfd31d7cef7d2d827a25fd8082e454703f7d26623"
+  },
+  {
+    "local_path": "sources/constants/CLAIMS_BOUNDARY.md",
+    "git_blob_sha1": "060458ce9f3b171515fea7b35792c9a968d14294",
+    "commit": "3916f82ce16ddfa4b88da6e2d11a593728db9382",
+    "url": "https://github.com/enuminous/EFMW-Constants-Problem/blob/3916f82ce16ddfa4b88da6e2d11a593728db9382/CLAIMS_BOUNDARY.md",
+    "review": "full text",
+    "sha256": "c235ee57d0d4db641a84e48aac1874fb05b3c0028baddb375c1807c429121fca"
+  },
+  {
+    "local_path": "sources/constants/Core.lean",
+    "git_blob_sha1": "d19305daf4e570a09355e630f1c2502fedac483a",
+    "commit": "3916f82ce16ddfa4b88da6e2d11a593728db9382",
+    "url": "https://github.com/enuminous/EFMW-Constants-Problem/blob/3916f82ce16ddfa4b88da6e2d11a593728db9382/EFMWConstants/Core.lean",
+    "review": "full text, not compiled",
+    "sha256": "1a1aab6136ffec62606125137b49f5f10f1ec761c79ddca326c511a550ca9928"
+  },
+  {
+    "local_path": "sources/base888/README.md",
+    "git_blob_sha1": "0793549f7ee995726cbab533d59d2807766c7999",
+    "commit": "830c797725cc9b53ee450b59cd2e5c55a34f04cb",
+    "url": "https://github.com/enuminous/Base888-Quantum-Geometry/blob/830c797725cc9b53ee450b59cd2e5c55a34f04cb/README.md",
+    "review": "README screening only",
+    "sha256": "15eab07c6075f200dc5c551acf0effac8bbaa50c6bb59dc07014b86d5edb8b43"
+  },
+  {
+    "local_path": "sources/standard-model/README.md",
+    "git_blob_sha1": "ffe38fd09404c75fe05b5d926e572af71187a242",
+    "commit": "aa569b13a594735774c7b643d44aebff4d5ad17c",
+    "url": "https://github.com/enuminous/Standard-Model-Reduction/blob/aa569b13a594735774c7b643d44aebff4d5ad17c/README.md",
+    "review": "README screening only",
+    "sha256": "0a1eaf8e3debbe972da2271657cd867bc7dec764cb1c9f6bb43aa215fabcfb1f"
+  },
+  {
+    "local_path": "sources/cosmology/C1Q-MODEL.md",
+    "git_blob_sha1": "f6d412b5bd650f306c625c38da50e67071ad5df5",
+    "commit": "c18b8f0aa3feba6477b828690d6be04bfa879e8b",
+    "url": "https://github.com/enuminous/papers/blob/c18b8f0aa3feba6477b828690d6be04bfa879e8b/research/cmb-alignment/prediction-lock/v1/source/C1Q-MODEL.md",
+    "review": "full text",
+    "sha256": "0119254f6d8ed6d7a6aaf3b3766c6b2fe1ac6dbbf3c67e9575e421685864054e"
+  },
+  {
+    "local_path": "sources/historical/FieldSpace_master_action_original.md",
+    "git_blob_sha1": "337339a42259bee4d9956a76acc23880fb97d07b",
+    "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+    "url": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/sources/FieldSpace_master_action_original.md",
+    "review": "full text",
+    "sha256": "4989b3b93c7031265546e38d6327972967245f9b048e0c41259a81f1493e901d"
+  },
+  {
+    "local_path": "sources/C1/CANDIDATE.md",
+    "git_blob_sha1": "916e04935f50cbbf07ddcd81e7c71a02954b1c96",
+    "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+    "url": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/candidate/CANDIDATE.md",
+    "review": "full text; copied unchanged from prior pinned research snapshot",
+    "sha256": "e7f58e6ec06ad6bb14c09e0482780d8d8c0bf8c4c0beb117757f65d44790d08f"
+  },
+  {
+    "local_path": "sources/C1/conventions.json",
+    "git_blob_sha1": "a4d84fa9c70ea53f298675de74c88a505ea0af87",
+    "commit": "83f9d2ec03e055c6cd09aa6359189161ad1571f6",
+    "url": "https://github.com/enuminous/EFMW-Lagrangian/blob/83f9d2ec03e055c6cd09aa6359189161ad1571f6/candidate/conventions.json",
+    "review": "full text; copied unchanged from prior pinned research snapshot",
+    "sha256": "667f38db79deea961787fa4d19a79f6e4231f79c32a5ca2ea7e4e9faa22e798e"
+  }
+]
