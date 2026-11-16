@@ -1,0 +1,80 @@
+{
+  "checks": {
+    "target_module_build": true,
+    "target_default_build": true,
+    "fresh_target_source_no_diagnostics": true,
+    "target_axioms": true,
+    "zero_witness": true,
+    "native_attribution": true,
+    "core_python": true,
+    "core_lean": true,
+    "pegasus_tests": true,
+    "pegasus_freeze": true,
+    "known_zoo_static_failure_preserved": true,
+    "scanner_controls": true
+  },
+  "all_expected_outcomes_observed": true,
+  "note": "This validates reporting against logs; the expected Zoo integrity failure remains a failure.",
+  "controls": [
+    {
+      "case": "valid",
+      "file": "report/controls/valid.lean",
+      "sha256": "f418405bc16dd95e2635eb7c5f2e25447d80fc21eebc5d352edc6cd9f006ebae",
+      "expected": null,
+      "exit_code": 0,
+      "control_passed": true,
+      "log": "logs/target-control-valid.log"
+    },
+    {
+      "case": "public_axiom",
+      "file": "report/controls/public_axiom.lean",
+      "sha256": "d1d4f4b4abe82ff1f56d479b1ffd2d9cd0335efb8264e87f23b9545c8b3e6497",
+      "expected": "AuditProbe.bad",
+      "exit_code": 1,
+      "control_passed": true,
+      "log": "logs/target-control-public_axiom.log"
+    },
+    {
+      "case": "private_axiom",
+      "file": "report/controls/private_axiom.lean",
+      "sha256": "d980864ee71ce8d521e6c07d693c60e0338394bd1fe9b6988f4740c1a7d3c4ba",
+      "expected": "bad",
+      "exit_code": 1,
+      "control_passed": true,
+      "log": "logs/target-control-private_axiom.log"
+    },
+    {
+      "case": "placeholder",
+      "file": "report/controls/placeholder.lean",
+      "sha256": "c51973c22ea3e54a18ae8c73bdbada15a7fee222bbb1839849f34fda050857df",
+      "expected": "sorryAx",
+      "exit_code": 1,
+      "control_passed": true,
+      "log": "logs/target-control-placeholder.log"
+    },
+    {
+      "case": "false_arithmetic",
+      "file": "report/controls/false_arithmetic.lean",
+      "sha256": "f8d1273d49e360226d7ec30c4f5f96bb94fe386b76ead79d9a99a8fb995ac48c",
+      "expected": "ELABORATION_ERROR",
+      "exit_code": 1,
+      "control_passed": true,
+      "log": "logs/target-control-false_arithmetic.log"
+    },
+    {
+      "case": "native",
+      "file": "report/controls/native.lean",
+      "sha256": "3d1156ab49afbe7daa53148ff0974f76ed096d8ae179de8191aeecf6f25b8a1b",
+      "expected": "native_decide",
+      "exit_code": 1,
+      "control_passed": true,
+      "log": "logs/target-control-native-native-v2.log"
+    }
+  ],
+  "roster_counts": {
+    "NOT_APPLICABLE": 44,
+    "UNRESOLVED": 7,
+    "PASS": 1,
+    "FAIL": 1
+  }
+}

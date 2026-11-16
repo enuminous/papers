@@ -1,0 +1,2841 @@
+[
+  {
+    "animal": "TORTOISE",
+    "group": "core-46",
+    "purpose_and_transformation": "Brier gain from supplied candidate and control scores; no fitting or prospective guarantee",
+    "inputs": {
+      "candidate_brier": {
+        "type": "float",
+        "required": true
+      },
+      "control_brier": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"TORTOISE\", \"Brier gain from supplied candidate and control scores; no fitting or prospective guarantee\")\ndef tortoise(candidate_brier: float, control_brier: float):\n    unit(candidate_brier); unit(control_brier)\n    return {\"gain\": control_brier - candidate_brier}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No probabilistic forecasts, ground-truth outcomes or Brier scores are part of this target.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 1,
+      "name": "TORTOISE",
+      "module": "Tortoise",
+      "namespace": "Zoo.Tortoise",
+      "repository": "https://github.com/enuminous/Tortoise",
+      "commit": "6658128fd2df96ff6c32fce219bfc9ee3e8876da",
+      "scope": "ordered split; temporal separation contract; Brier gain",
+      "theorems": [
+        "split_reconstructs",
+        "train_precedes_test"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Tortoise",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "OWL",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Owl",
+      "source": "signals.py",
+      "base": [
+        "out['contradiction'].clip(lower=0)",
+        "out['local_instability'].clip(lower=0)"
+      ],
+      "horizon": [
+        "out[f'contradiction_mean_{h}'].clip(lower=0)",
+        "out[f'instability_mean_{h}'].clip(lower=0)",
+        "out[f'contradiction_slope_{h}'].clip(lower=0)",
+        "out[f'instability_slope_{h}'].clip(lower=0)"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 2,
+      "name": "OWL",
+      "module": "Owl",
+      "namespace": "Zoo.Owl",
+      "repository": "https://github.com/enuminous/Owl",
+      "commit": "afe43985e76e74e65ff76e64b4c753eab11f1abc",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Owl",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "OCTOPUS",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Octopus",
+      "source": "latent_state.py",
+      "base": [
+        "graph_features['distributed_contradiction']",
+        "graph_features['distributed_dispersion']",
+        "graph_features['missing_fraction']"
+      ],
+      "horizon": [
+        "graph_features[f'dc_mean_{h}']",
+        "graph_features[f'dd_mean_{h}']",
+        "graph_features[f'missing_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 3,
+      "name": "OCTOPUS",
+      "module": "Octopus",
+      "namespace": "Zoo.Octopus",
+      "repository": "https://github.com/enuminous/Octopus",
+      "commit": "e590a6d9d757357da72f043facc62e22d40df45e",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Octopus",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "GECKO",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Gecko",
+      "source": "features.py",
+      "base": [
+        "out['coherence_loss']",
+        "out['kinetic_outlier']",
+        "out['gradient_loss']",
+        "out['kinetic_gradient']"
+      ],
+      "horizon": [
+        "out[f'coherence_loss_mean_{h}']",
+        "out[f'kinetic_outlier_mean_{h}']",
+        "out[f'gradient_loss_mean_{h}']",
+        "out[f'kinetic_gradient_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 4,
+      "name": "GECKO",
+      "module": "Gecko",
+      "namespace": "Zoo.Gecko",
+      "repository": "https://github.com/enuminous/Gecko",
+      "commit": "0345f2ed1d98c15306312c828cfe68e6fa8c5c2e",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Gecko",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "HIVE",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Hive",
+      "source": "features.py",
+      "base": [
+        "out['interaction_stress']",
+        "out['interaction_variance']",
+        "out['delivery_pressure']",
+        "out['coordination_load']",
+        "out['throughput_conflict']"
+      ],
+      "horizon": [
+        "out[f'stress_mean_{h}']",
+        "out[f'pressure_mean_{h}']",
+        "out[f'coordination_mean_{h}']",
+        "out[f'conflict_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 5,
+      "name": "HIVE",
+      "module": "Hive",
+      "namespace": "Zoo.Hive",
+      "repository": "https://github.com/enuminous/Hive",
+      "commit": "e66e03d67c19f1f1e663a2a7feaea9f21c48384e",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Hive",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "EAGLE",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Eagle",
+      "source": "features.py",
+      "base": [
+        "out['gradient_loss']",
+        "out['snapshot_anomaly']",
+        "out['gradient_disagreement']",
+        "out['gradient_acceleration']"
+      ],
+      "horizon": [
+        "out[f'loss_mean_{h}']",
+        "out[f'loss_slope_{h}'].clip(lower=0)",
+        "out[f'anomaly_mean_{h}']",
+        "out[f'disagreement_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 6,
+      "name": "EAGLE",
+      "module": "Eagle",
+      "namespace": "Zoo.Eagle",
+      "repository": "https://github.com/enuminous/Eagle",
+      "commit": "d4f6fb0293129de8850fa15667b75aaaa7cc5339",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Eagle",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "CRAB",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Crab",
+      "source": "features.py",
+      "base": [
+        "out['contradiction_mean']",
+        "out['contradiction_max']",
+        "out['contradiction_variance']",
+        "out['contradiction_velocity'].clip(lower=0)",
+        "out['contradiction_acceleration'].clip(lower=0)",
+        "out['consensus_instability']"
+      ],
+      "horizon": [
+        "out[f'contradiction_mean_{h}']",
+        "out[f'contradiction_max_{h}']",
+        "out[f'consensus_instability_{h}']",
+        "out[f'contradiction_velocity_{h}'].clip(lower=0)"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 7,
+      "name": "CRAB",
+      "module": "Crab",
+      "namespace": "Zoo.Crab",
+      "repository": "https://github.com/enuminous/Crab",
+      "commit": "f49f430353c954f54567e754b9bea60b26c40732",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Crab",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "SHEPHERD",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Shepherd",
+      "source": "features.py",
+      "base": [
+        "out['error_pressure']",
+        "out['recovery_deficit']",
+        "out['progress_stall']",
+        "out['trajectory_contradiction']",
+        "out['error_recurrence']",
+        "out['hazard_velocity'].clip(lower=0)",
+        "out['hazard_acceleration'].clip(lower=0)"
+      ],
+      "horizon": [
+        "out[f'error_pressure_mean_{h}']",
+        "out[f'recovery_deficit_mean_{h}']",
+        "out[f'progress_stall_mean_{h}']",
+        "out[f'contradiction_mean_{h}']",
+        "out[f'recurrence_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 8,
+      "name": "SHEPHERD",
+      "module": "Shepherd",
+      "namespace": "Zoo.Shepherd",
+      "repository": "https://github.com/enuminous/Shepherd",
+      "commit": "c875bad6c5185cc3d5813fb097e5ccc2c27b5234",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Shepherd",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "PULSE",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Pulse",
+      "source": "features.py",
+      "base": [
+        "out['uncertainty_state']",
+        "out['reviewer_instability']",
+        "out['safety_pressure']",
+        "out['distribution_pressure']",
+        "out['longitudinal_contradiction']",
+        "out['safety_velocity'].clip(lower=0)",
+        "out['safety_acceleration'].clip(lower=0)"
+      ],
+      "horizon": [
+        "out[f'uncertainty_mean_{h}']",
+        "out[f'reviewer_mean_{h}']",
+        "out[f'safety_mean_{h}']",
+        "out[f'distribution_mean_{h}']",
+        "out[f'contradiction_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 9,
+      "name": "PULSE",
+      "module": "Pulse",
+      "namespace": "Zoo.Pulse",
+      "repository": "https://github.com/enuminous/Pulse",
+      "commit": "78b7bd4a4fa1597373e184fbe895a513574c8939",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Pulse",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "CAT",
+    "group": "core-46",
+    "purpose_and_transformation": "Ablation penalty and its sign from supplied losses",
+    "inputs": {
+      "full": {
+        "type": "float",
+        "required": true
+      },
+      "ablated": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"CAT\", \"Ablation penalty and its sign from supplied losses\")\ndef cat(full: float, ablated: float):\n    penalty = ablated - full\n    return {\"penalty\": penalty, \"label\": \"removalHurt\" if penalty > 0 else \"removalHelped\" if penalty < 0 else \"noChange\"}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No measured performance-loss ablation experiment is part of this theorem audit.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 10,
+      "name": "CAT",
+      "module": "Cat",
+      "namespace": "Zoo.Cat",
+      "repository": "https://github.com/enuminous/Cat",
+      "commit": "9bf56f891b3ac22e38089ade0351852df1670d11",
+      "scope": "ablation penalty and sign classifier; exact-integer sign reference",
+      "theorems": [
+        "positive_removal_hurt",
+        "removal_hurts_iff"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Cat",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "FOX",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Fox",
+      "source": "features.py",
+      "base": [
+        "out['feedback_gain_proxy']",
+        "out['feedback_peak']",
+        "out['feedback_dispersion']",
+        "out['oscillation_amplitude']",
+        "out['damping_loss']",
+        "out['overshoot']"
+      ],
+      "horizon": [
+        "out[f'gain_mean_{h}']",
+        "out[f'osc_mean_{h}']",
+        "out[f'damping_mean_{h}']",
+        "out[f'overshoot_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 11,
+      "name": "FOX",
+      "module": "Fox",
+      "namespace": "Zoo.Fox",
+      "repository": "https://github.com/enuminous/Fox",
+      "commit": "b4c317d45b7f2b69e92a657ba8d9ccdb4977a457",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Fox",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "SPIDER",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Spider",
+      "source": "features.py",
+      "base": [
+        "out['edge_stress_mean']",
+        "out['edge_stress_max']",
+        "out['edge_stress_dispersion']",
+        "out['edge_stress_concentration']",
+        "out['edge_velocity_positive']",
+        "out['local_global_divergence']"
+      ],
+      "horizon": [
+        "out[f'stress_mean_{h}']",
+        "out[f'stress_max_{h}']",
+        "out[f'velocity_mean_{h}']",
+        "out[f'divergence_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 12,
+      "name": "SPIDER",
+      "module": "Spider",
+      "namespace": "Zoo.Spider",
+      "repository": "https://github.com/enuminous/Spider",
+      "commit": "fd8f546d528f0c740248baddd6f0ea05e60abc25",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Spider",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "RAVEN",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Raven",
+      "source": "features.py",
+      "base": [
+        "out['residual_mean_abs']",
+        "out['residual_variance']",
+        "out['residual_coupling']",
+        "out['residual_persistence']"
+      ],
+      "horizon": [
+        "out[f'residual_mean_{h}']",
+        "out[f'residual_var_{h}']",
+        "out[f'residual_velocity_{h}'].abs()"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 13,
+      "name": "RAVEN",
+      "module": "Raven",
+      "namespace": "Zoo.Raven",
+      "repository": "https://github.com/enuminous/Raven",
+      "commit": "d18b4a8e05812ea3d577aa63643071c09fad3ea9",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Raven",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "DOLPHIN",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Dolphin",
+      "source": "features.py",
+      "base": [
+        "out['relational_residual_mean']",
+        "out['relational_residual_max']",
+        "out['relational_dispersion']",
+        "out['reconstruction_error']",
+        "out['missing_fraction']",
+        "out['latent_velocity'].clip(lower=0)",
+        "out['latent_acceleration'].clip(lower=0)"
+      ],
+      "horizon": [
+        "out[f'residual_mean_{h}']",
+        "out[f'reconstruction_mean_{h}']",
+        "out[f'missing_mean_{h}']",
+        "out[f'velocity_mean_{h}'].clip(lower=0)"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 14,
+      "name": "DOLPHIN",
+      "module": "Dolphin",
+      "namespace": "Zoo.Dolphin",
+      "repository": "https://github.com/enuminous/Dolphin",
+      "commit": "718b09ca4966d76e186cda7971d09be2caa39321",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Dolphin",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "ANT",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Ant",
+      "source": "features.py",
+      "base": [
+        "out['propagation_pressure_mean']",
+        "out['propagation_pressure_max']",
+        "out['propagation_dispersion']",
+        "out['bottleneck_concentration']",
+        "out['network_local_risk']",
+        "out['network_risk_divergence']",
+        "out['propagation_velocity'].clip(lower=0)"
+      ],
+      "horizon": [
+        "out[f'pressure_mean_{h}']",
+        "out[f'bottleneck_mean_{h}']",
+        "out[f'local_risk_mean_{h}']",
+        "out[f'velocity_mean_{h}'].clip(lower=0)"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 15,
+      "name": "ANT",
+      "module": "Ant",
+      "namespace": "Zoo.Ant",
+      "repository": "https://github.com/enuminous/Ant",
+      "commit": "e7432f132a47804626322ba7343d187bd2425a75",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Ant",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "MOTH",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Moth",
+      "source": "features.py",
+      "base": [
+        "out['cross_scale_agreement'].abs()",
+        "out['recurrence_mean']",
+        "out['recurrence_peak']",
+        "out['scale_concentration']",
+        "out['oscillation_power_mean']",
+        "out['oscillation_growth']",
+        "out['recurrence_change']"
+      ],
+      "horizon": [],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 16,
+      "name": "MOTH",
+      "module": "Moth",
+      "namespace": "Zoo.Moth",
+      "repository": "https://github.com/enuminous/Moth",
+      "commit": "08e5ce7cf219f6009b446829110c3399b658a5bd",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Moth",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "SHARK",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Shark",
+      "source": "features.py",
+      "base": [
+        "out['kinematic_contradiction']",
+        "out['control_oscillation']",
+        "out['control_reversal_rate']",
+        "out['boundary_pressure']",
+        "out['obstacle_pressure']",
+        "out['recovery_pressure']",
+        "out['hazard_velocity'].clip(lower=0)",
+        "out['hazard_acceleration'].clip(lower=0)",
+        "out['recursive_hazard']"
+      ],
+      "horizon": [
+        "out[f'contradiction_mean_{h}']",
+        "out[f'oscillation_mean_{h}']",
+        "out[f'boundary_mean_{h}']",
+        "out[f'recovery_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 17,
+      "name": "SHARK",
+      "module": "Shark",
+      "namespace": "Zoo.Shark",
+      "repository": "https://github.com/enuminous/Shark",
+      "commit": "13ef3943eb389a157f214fc4db054e926b22aa5a",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Shark",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "PENGUIN",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Penguin",
+      "source": "features.py",
+      "base": [
+        "out['noise_variance']",
+        "out['gradient_instability']",
+        "out['cross_channel_disagreement']",
+        "out['entropy_proxy']",
+        "out['scale_drift']",
+        "1.0 / (out['snr_proxy'] + EPS)"
+      ],
+      "horizon": [
+        "out[f'noise_mean_{h}']",
+        "1.0 / (out[f'snr_mean_{h}'] + EPS)",
+        "out[f'entropy_mean_{h}']",
+        "out[f'gradient_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 18,
+      "name": "PENGUIN",
+      "module": "Penguin",
+      "namespace": "Zoo.Penguin",
+      "repository": "https://github.com/enuminous/Penguin",
+      "commit": "1a99e0c1eb1c6902d2909721aae9ac8e76bfb75e",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Penguin",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "BAT",
+    "group": "core-46",
+    "purpose_and_transformation": "Placebo-first baseline decision from supplied summary scores",
+    "inputs": {
+      "gain": {
+        "type": "float",
+        "required": true
+      },
+      "placebo_gain": {
+        "type": "float",
+        "required": true
+      },
+      "incremental_brier": {
+        "type": "float",
+        "required": true
+      },
+      "placebo_brier": {
+        "type": "float",
+        "required": true
+      },
+      "material_gain": {
+        "type": "float",
+        "required": false,
+        "default": 0.002
+      }
+    },
+    "operation_source": "@kernel(\"BAT\", \"Placebo-first baseline decision from supplied summary scores\")\ndef bat(gain: float, placebo_gain: float, incremental_brier: float, placebo_brier: float, material_gain: float = .002):\n    unit(incremental_brier); unit(placebo_brier); nonnegative(material_gain)\n    if placebo_gain >= gain - .000001 and gain > 0:\n        label = \"placeboFailure\"\n    elif gain >= material_gain and incremental_brier < placebo_brier:\n        label = \"survives\"\n    elif gain > 0 and incremental_brier < placebo_brier:\n        label = \"weak\"\n    else:\n        label = \"baselineExplains\"\n    return {\"label\": label}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No candidate/placebo forecast experiment or Brier comparison is part of this target.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 19,
+      "name": "BAT",
+      "module": "Bat",
+      "namespace": "Zoo.Bat",
+      "repository": "https://github.com/enuminous/Bat",
+      "commit": "67c2c0e3cd6fb035a0e47862ec3f7e64729fa92d",
+      "scope": "verdict kernel with source placebo precedence; fitting excluded",
+      "theorems": [
+        "placebo_has_priority"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Bat",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "HEDGEHOG",
+    "group": "core-46",
+    "purpose_and_transformation": "Summary decision; additionally checks supplied development and heldout IDs are disjoint",
+    "inputs": {
+      "median_gain": {
+        "type": "float",
+        "required": true
+      },
+      "win_rate": {
+        "type": "float",
+        "required": true
+      },
+      "habitat_support": {
+        "type": "bool",
+        "required": true
+      },
+      "development": {
+        "type": "list",
+        "required": true
+      },
+      "heldout": {
+        "type": "list",
+        "required": true
+      },
+      "material_gain": {
+        "type": "float",
+        "required": false,
+        "default": 0.002
+      }
+    },
+    "operation_source": "@kernel(\"HEDGEHOG\", \"Summary decision; additionally checks supplied development and heldout IDs are disjoint\")\ndef hedgehog(median_gain: float, win_rate: float, habitat_support: bool,\n             development: list, heldout: list, material_gain: float = .002):\n    unit(win_rate); nonnegative(material_gain)\n    if any(type(x) is not str or not x for x in development + heldout):\n        raise ValueError(\"Environment IDs must be nonempty strings\")\n    if not development or not heldout or set(development) & set(heldout):\n        raise ValueError(\"Development and heldout environments must be nonempty and disjoint\")\n    label = (\"generalizes\" if median_gain >= material_gain and win_rate >= .60 else\n             \"habitatConditional\" if median_gain > 0 and habitat_support else\n             \"weak\" if median_gain > 0 else \"doesNotGeneralize\")\n    return {\"label\": label, \"supplied_environment_ids_disjoint\": True}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No development/heldout predictive environments or measured gains are part of this target.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 20,
+      "name": "HEDGEHOG",
+      "module": "Hedgehog",
+      "namespace": "Zoo.Hedgehog",
+      "repository": "https://github.com/enuminous/Hedgehog",
+      "commit": "2e9b46039a6422961f9f08fb6457e2634a4c1de4",
+      "scope": "generalization verdict and environment separation obligation; training excluded",
+      "theorems": [
+        "heldout_not_development"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Hedgehog",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "CROCODILE",
+    "group": "core-46",
+    "purpose_and_transformation": "Difference-in-differences arithmetic; causal assumptions remain external",
+    "inputs": {
+      "treated_pre": {
+        "type": "float",
+        "required": true
+      },
+      "treated_post": {
+        "type": "float",
+        "required": true
+      },
+      "control_pre": {
+        "type": "float",
+        "required": true
+      },
+      "control_post": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"CROCODILE\", \"Difference-in-differences arithmetic; causal assumptions remain external\")\ndef crocodile(treated_pre: float, treated_post: float, control_pre: float, control_post: float):\n    return {\"difference_in_differences\": (treated_post - treated_pre) - (control_post - control_pre)}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No treated/control pre/post empirical outcome data or causal intervention is claimed.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 21,
+      "name": "CROCODILE",
+      "module": "Crocodile",
+      "namespace": "Zoo.Crocodile",
+      "repository": "https://github.com/enuminous/Crocodile",
+      "commit": "2407241cc2d77f58bc044f9be6bff8ceb5c0b55a",
+      "scope": "difference-in-differences kernel and conditional identification contract",
+      "theorems": [
+        "common_shift_cancels",
+        "causal_requires_design"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Crocodile",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "DRAGON",
+    "group": "core-46",
+    "purpose_and_transformation": "Retrospective percentile-rank mean of precomputed columns; no feature extraction or model training",
+    "inputs": {
+      "columns": {
+        "type": "list",
+        "required": true
+      },
+      "rows": {
+        "type": "int",
+        "required": true
+      },
+      "horizons": {
+        "type": "int",
+        "required": false,
+        "default": 1
+      },
+      "mode": {
+        "type": "str",
+        "required": false,
+        "default": "retrospective"
+      }
+    },
+    "operation_source": "    def run(columns: list, rows: int, horizons: int = 1, mode: str = \"retrospective\"):\n        if mode != \"retrospective\":\n            raise ValueError(\"Full-column ranks can use future rows; only retrospective ranking is implemented\")\n        count = len(spec[\"base\"]) + len(spec[\"horizon\"]) * horizons\n        if len(columns) != count or count == 0:\n            raise ValueError(f\"Expected {count} precomputed columns in frozen component order\")\n        ranks = []\n        for col in columns:\n            numbers(col)\n            if len(col) != rows:\n                raise ValueError(\"Ragged column or row-count mismatch\")\n            counts, less, lookup = Counter(col), 0, {}\n            for value in sorted(counts):\n                equal = counts[value]\n                lookup[value] = (2 * less + equal + 1) / (2 * rows)\n                less += equal\n            ranks.append([lookup[x] for x in col])\n        return {\"scores\": [mean([c[r] for c in ranks]) for r in range(rows)],\n                \"columns\": count, \"mode\": mode}\n",
+    "rank_components": {
+      "name": "Dragon",
+      "source": "features.py",
+      "base": [
+        "out['escape_pressure']",
+        "out['assigned_distance']",
+        "out['velocity']",
+        "out['acceleration']",
+        "out['direction_change']",
+        "1.0 / (out['regime_run_length'] + 1.0)",
+        "1.0 - out['recursive_attractor_strength'].rank(pct=True)"
+      ],
+      "horizon": [
+        "out[f'distance_mean_{h}']",
+        "out[f'escape_mean_{h}']",
+        "out[f'velocity_mean_{h}']",
+        "1.0 - out[f'persistence_mean_{h}']"
+      ],
+      "scope": "final rank aggregation; features supplied"
+    },
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "Only retrospective rank aggregation of precomputed feature columns is ported; no ranked dataset or feature-extraction contract exists for the four Maxwell proofs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 22,
+      "name": "DRAGON",
+      "module": "Dragon",
+      "namespace": "Zoo.Dragon",
+      "repository": "https://github.com/enuminous/Dragon",
+      "commit": "9ac2ffe7a271e5375b3bb5a2e6936c822fcc711f",
+      "scope": "rank aggregation of precomputed component columns; feature extraction and model training not ported",
+      "theorems": [
+        "output_length",
+        "valid_column_count",
+        "report_requires_freeze"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Dragon",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "TURTLE",
+    "group": "core-46",
+    "purpose_and_transformation": "Evidence decision with group counts derived from distinct supplied group IDs; independence remains external",
+    "inputs": {
+      "evidence_groups": {
+        "type": "list",
+        "required": true
+      },
+      "invariant_score": {
+        "type": "float",
+        "required": true
+      },
+      "minimum_groups": {
+        "type": "int",
+        "required": false,
+        "default": 3
+      },
+      "support_threshold": {
+        "type": "float",
+        "required": false,
+        "default": 0.18
+      },
+      "conditional_threshold": {
+        "type": "float",
+        "required": false,
+        "default": 0.05
+      }
+    },
+    "operation_source": "@kernel(\"TURTLE\", \"Evidence decision with group counts derived from distinct supplied group IDs; independence remains external\")\ndef turtle(evidence_groups: list, invariant_score: float, minimum_groups: int = 3,\n           support_threshold: float = .18, conditional_threshold: float = .05):\n    if minimum_groups < 1 or not 0 <= conditional_threshold <= support_threshold:\n        raise ValueError(\"Invalid group or score thresholds\")\n    unique = {}\n    for g in evidence_groups:\n        if not isinstance(g, dict) or set(g) != {\"id\", \"applicable\", \"veto_on_failure\", \"polarity\"}:\n            raise ValueError(\"Each group needs id, applicable, veto_on_failure, polarity\")\n        if not isinstance(g[\"id\"], str) or not g[\"id\"] or type(g[\"applicable\"]) is not bool or type(g[\"veto_on_failure\"]) is not bool or g[\"polarity\"] not in (\"positive\", \"negative\", \"neutral\"):\n            raise ValueError(\"Invalid evidence group\")\n        if g[\"id\"] in unique and unique[g[\"id\"]] != g:\n            raise ValueError(\"Conflicting repeated evidence group\")\n        unique[g[\"id\"]] = g\n    applicable = [g for g in unique.values() if g[\"applicable\"]]\n    groups = len(applicable)\n    positive = sum(g[\"polarity\"] == \"positive\" for g in applicable)\n    negative = sum(g[\"polarity\"] == \"negative\" for g in applicable)\n    veto = any(g[\"veto_on_failure\"] and g[\"polarity\"] == \"negative\" for g in applicable)\n    if not applicable:\n        label = \"insufficient\"\n    elif veto:\n        label = \"notSupported\"\n    elif groups < minimum_groups:\n        label = \"insufficient\"\n    elif invariant_score >= support_threshold and positive >= minimum_groups:\n        label = \"supported\"\n    elif invariant_score >= conditional_threshold and positive > negative:\n        label = \"conditional\"\n    elif invariant_score <= -conditional_threshold or negative > positive:\n        label = \"notSupported\"\n    else:\n        label = \"mixed\"\n    return {\"label\": label, \"groups\": groups, \"positive_groups\": positive, \"negative_groups\": negative, \"veto\": veto}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Provide a justified mapping and required real measurements before interpreting the native operation; none may be fabricated.",
+    "target_executed": false,
+    "target_verdict": "UNRESOLVED",
+    "reason": "A calibrated invariant score and independent evidence groups are not supplied. Source, CI and local replay share an evidence chain; no invented numeric support score.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 23,
+      "name": "TURTLE",
+      "module": "Turtle",
+      "namespace": "Zoo.Turtle",
+      "repository": "https://github.com/enuminous/Turtle",
+      "commit": "ff98950fcb40f8a8c151a5c9466d11a240146beb",
+      "scope": "summary verdict and veto precedence; group normalization supplied",
+      "theorems": [
+        "applicable_veto_blocks_support",
+        "empty_is_insufficient"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Turtle",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "MAGPIE",
+    "group": "core-46",
+    "purpose_and_transformation": "Groundedness and falling-groundedness alarm from supplied scores",
+    "inputs": {
+      "coherence": {
+        "type": "float",
+        "required": true
+      },
+      "direct_support": {
+        "type": "float",
+        "required": true
+      },
+      "provenance": {
+        "type": "float",
+        "required": true
+      },
+      "corroboration": {
+        "type": "float",
+        "required": true
+      },
+      "unsupported_inference": {
+        "type": "float",
+        "required": true
+      },
+      "unresolved_provenance": {
+        "type": "float",
+        "required": true
+      },
+      "contradiction": {
+        "type": "float",
+        "required": true
+      },
+      "previous_groundedness": {
+        "type": "number or null",
+        "required": false,
+        "default": null
+      },
+      "threshold": {
+        "type": "float",
+        "required": false,
+        "default": 0.25
+      }
+    },
+    "operation_source": "@kernel(\"MAGPIE\", \"Groundedness and falling-groundedness alarm from supplied scores\")\ndef magpie(coherence: float, direct_support: float, provenance: float, corroboration: float,\n           unsupported_inference: float, unresolved_provenance: float, contradiction: float,\n           previous_groundedness=None, threshold: float = .25):\n    if previous_groundedness is not None:\n        number(previous_groundedness)\n    nonnegative(threshold)\n    n = clip(direct_support) + clip(provenance) + clip(corroboration)\n    g = clip(n / (n + clip(unsupported_inference) + clip(unresolved_provenance) + clip(contradiction) + 1e-12))\n    falling = previous_groundedness is not None and g < previous_groundedness\n    return {\"groundedness\": g, \"alarm\": clip(coherence) - g > threshold and falling}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Provide a justified mapping and required real measurements before interpreting the native operation; none may be fabricated.",
+    "target_executed": false,
+    "target_verdict": "UNRESOLVED",
+    "reason": "Groundedness/provenance/contradiction score measurements and a prior observation have no validated mapping for this Lean target.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 24,
+      "name": "MAGPIE",
+      "module": "Magpie",
+      "namespace": "Zoo.Magpie",
+      "repository": "https://github.com/enuminous/Magpie",
+      "commit": "342438c179832be2fe8b6dbdf1b4b5b0097df2ce",
+      "scope": "groundedness and history-dependent alarm; entropy/storage excluded",
+      "theorems": [
+        "no_history_no_alarm"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Magpie",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "WOLF",
+    "group": "core-46",
+    "purpose_and_transformation": "EMA update only; channel extraction, graph aggregation and alarm gates are not ported",
+    "inputs": {
+      "rho": {
+        "type": "float",
+        "required": true
+      },
+      "previous": {
+        "type": "float",
+        "required": true
+      },
+      "instantaneous": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"WOLF\", \"EMA update only; channel extraction, graph aggregation and alarm gates are not ported\")\ndef wolf(rho: float, previous: float, instantaneous: float):\n    unit(rho)\n    return {\"updated\": ema(rho, previous, instantaneous)}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No time series of monitoring channels and no instantaneous/previous EMA states.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 25,
+      "name": "WOLF",
+      "module": "Wolf",
+      "namespace": "Zoo.Wolf",
+      "repository": "https://github.com/enuminous/Wolf",
+      "commit": "7e4fd6d2b7c8829138a5f2d58f1b4cf39ed208c4",
+      "scope": "local channel contribution, weight, EMA and alarm contract; graph aggregation supplied",
+      "theorems": [
+        "alarm_requires_distributed_support"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Wolf",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "ELEPHANT",
+    "group": "core-46",
+    "purpose_and_transformation": "Current-event filter and bounded lineage; explicit missing/exhausted termination",
+    "inputs": {
+      "events": {
+        "type": "list",
+        "required": true
+      },
+      "start": {
+        "type": "int",
+        "required": true
+      },
+      "fuel": {
+        "type": "int",
+        "required": false,
+        "default": 100
+      }
+    },
+    "operation_source": "@kernel(\"ELEPHANT\", \"Current-event filter and bounded lineage; explicit missing/exhausted termination\")\ndef elephant(events: list, start: int, fuel: int = 100):\n    lookup = {}\n    for e in events:\n        if not isinstance(e, dict) or set(e) != {\"id\", \"time\", \"status\", \"supersedes\", \"provenance\"}:\n            raise ValueError(\"Invalid event schema\")\n        natural(e[\"id\"]); natural(e[\"time\"])\n        if e[\"supersedes\"] is not None:\n            natural(e[\"supersedes\"])\n        if e[\"status\"] not in (\"active\", \"superseded\") or not isinstance(e[\"provenance\"], str) or not e[\"provenance\"] or e[\"id\"] in lookup:\n            raise ValueError(\"Invalid or duplicate event\")\n        lookup[e[\"id\"]] = e\n    lineage, key, reason = [], start, \"exhausted\"\n    for _ in range(fuel):\n        e = lookup.get(key)\n        if e is None:\n            reason = \"missing\"\n            break\n        lineage.append(e)\n        if e[\"supersedes\"] is None:\n            reason = \"origin\"\n            break\n        key = e[\"supersedes\"]\n    return {\"current\": [e for e in events if e[\"status\"] == \"active\"], \"lineage\": lineage, \"termination\": reason}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Origin termination; exactly one active pinned record; lineage equals every supplied event in reverse chronological order.",
+    "target_executed": true,
+    "target_verdict": "PASS",
+    "reason": "Executed on actual selected file history plus pinned snapshot anchor; lineage reaches origin and preserves all five selected records. Provenance only.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 26,
+      "name": "ELEPHANT",
+      "module": "Elephant",
+      "namespace": "Zoo.Elephant",
+      "repository": "https://github.com/enuminous/Elephant",
+      "commit": "a30bd9ae77d7df31f35b533e5310eb7e06aa3d40",
+      "scope": "active-event filter and fuel-bounded lineage abstraction; full memory API excluded",
+      "theorems": [
+        "current_members_active",
+        "zero_fuel_stops"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Elephant",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "CHAMELEON",
+    "group": "core-46",
+    "purpose_and_transformation": "Unexplained and noise-adjusted distances from supplied distances",
+    "inputs": {
+      "distance": {
+        "type": "float",
+        "required": true
+      },
+      "expected_adaptation": {
+        "type": "float",
+        "required": true
+      },
+      "between": {
+        "type": "float",
+        "required": true
+      },
+      "within": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"CHAMELEON\", \"Unexplained and noise-adjusted distances from supplied distances\")\ndef chameleon(distance: float, expected_adaptation: float, between: float, within: float):\n    return {\"unexplained\": pos(distance - expected_adaptation), \"noise_adjusted\": pos(between - within)}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No adaptation/noise distance experiment is claimed.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 27,
+      "name": "CHAMELEON",
+      "module": "Chameleon",
+      "namespace": "Zoo.Chameleon",
+      "repository": "https://github.com/enuminous/Chameleon",
+      "commit": "75095bd9834953d52a88fd8c64f75393e15d880f",
+      "scope": "unexplained/noise-adjusted excess; supplied centroid distances",
+      "theorems": [
+        "excess_nonnegative",
+        "expected_explains"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Chameleon",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "JELLYFISH",
+    "group": "core-46",
+    "purpose_and_transformation": "Dynamic edge weight and single-node health update; graph iteration is external",
+    "inputs": {
+      "base_weight": {
+        "type": "float",
+        "required": true
+      },
+      "stress_gain": {
+        "type": "float",
+        "required": true
+      },
+      "confidence": {
+        "type": "float",
+        "required": true
+      },
+      "stress": {
+        "type": "float",
+        "required": true
+      },
+      "health": {
+        "type": "float",
+        "required": true
+      },
+      "alpha": {
+        "type": "float",
+        "required": true
+      },
+      "incoming": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"JELLYFISH\", \"Dynamic edge weight and single-node health update; graph iteration is external\")\ndef jellyfish(base_weight: float, stress_gain: float, confidence: float, stress: float,\n              health: float, alpha: float, incoming: float):\n    unit(confidence); unit(health); nonnegative(alpha); nonnegative(incoming)\n    return {\"dynamic_weight\": pos(base_weight + stress_gain * stress) * confidence,\n            \"next_health\": 1.0 - clip((1.0 - health) + alpha * incoming)}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No dynamical health graph, stress measurements or propagation experiment.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 28,
+      "name": "JELLYFISH",
+      "module": "Jellyfish",
+      "namespace": "Zoo.Jellyfish",
+      "repository": "https://github.com/enuminous/Jellyfish",
+      "commit": "7119a66a75092354deee27dcb89f1d20add4e4e6",
+      "scope": "dynamic edge weight, flow, next health and harm; graph aggregation supplied",
+      "theorems": [
+        "node_count_preserved"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Jellyfish",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "BEAVER",
+    "group": "core-46",
+    "purpose_and_transformation": "Intervention acceptance gates; supplied boundedness and rollback flags are declarations",
+    "inputs": {
+      "effectiveness": {
+        "type": "float",
+        "required": true
+      },
+      "collateral": {
+        "type": "float",
+        "required": true
+      },
+      "verification": {
+        "type": "float",
+        "required": true
+      },
+      "bounded": {
+        "type": "bool",
+        "required": true
+      },
+      "rollback_verified": {
+        "type": "bool",
+        "required": true
+      },
+      "min_effectiveness": {
+        "type": "float",
+        "required": false,
+        "default": 0.05
+      },
+      "max_collateral": {
+        "type": "float",
+        "required": false,
+        "default": 0.2
+      },
+      "min_verification": {
+        "type": "float",
+        "required": false,
+        "default": 1.0
+      }
+    },
+    "operation_source": "@kernel(\"BEAVER\", \"Intervention acceptance gates; supplied boundedness and rollback flags are declarations\")\ndef beaver(effectiveness: float, collateral: float, verification: float, bounded: bool,\n           rollback_verified: bool, min_effectiveness: float = .05,\n           max_collateral: float = .2, min_verification: float = 1.0):\n    return {\"accepted\": effectiveness >= min_effectiveness and collateral <= max_collateral and\n            verification >= min_verification and bounded and rollback_verified}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No deployed intervention, collateral measurement or rollback episode.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 29,
+      "name": "BEAVER",
+      "module": "Beaver",
+      "namespace": "Zoo.Beaver",
+      "repository": "https://github.com/enuminous/Beaver",
+      "commit": "f6255d49e71e31c325d474039d4e01163266608b",
+      "scope": "acceptance contract including bounds and rollback flags; external repair not certified",
+      "theorems": [
+        "accepted_requires_rollback",
+        "accepted_requires_bounds"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Beaver",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "MANTIS",
+    "group": "core-46",
+    "purpose_and_transformation": "Calibration/precursor/intervention decision from supplied z scores",
+    "inputs": {
+      "ready": {
+        "type": "bool",
+        "required": true
+      },
+      "z_variance": {
+        "type": "float",
+        "required": true
+      },
+      "z_autocorrelation": {
+        "type": "float",
+        "required": true
+      },
+      "z_curvature": {
+        "type": "float",
+        "required": true
+      },
+      "threshold": {
+        "type": "float",
+        "required": false,
+        "default": 2.0
+      },
+      "min_coherence": {
+        "type": "float",
+        "required": false,
+        "default": 0.5
+      }
+    },
+    "operation_source": "@kernel(\"MANTIS\", \"Calibration/precursor/intervention decision from supplied z scores\")\ndef mantis(ready: bool, z_variance: float, z_autocorrelation: float, z_curvature: float,\n           threshold: float = 2.0, min_coherence: float = .5):\n    nonnegative(threshold); unit(min_coherence)\n    z = [z_variance, z_autocorrelation, z_curvature]\n    precursor = mean([pos(x) for x in z])\n    coherence = sum(x > 0 for x in z) / 3\n    label = (\"calibrating\" if not ready else\n             \"intervene\" if precursor >= threshold and coherence >= min_coherence else\n             \"precursor\" if precursor >= threshold * .6 else \"stable\")\n    return {\"precursor\": precursor, \"coherence\": coherence, \"label\": label}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No precursor time series, calibration baseline or z scores.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 30,
+      "name": "MANTIS",
+      "module": "Mantis",
+      "namespace": "Zoo.Mantis",
+      "repository": "https://github.com/enuminous/Mantis",
+      "commit": "a9fd85eb62a22d3667201dd6747bf8d296ad9083",
+      "scope": "calibrated z-score aggregation and state decision; baseline fitting supplied",
+      "theorems": [
+        "unready_calibrates"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Mantis",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "BISON",
+    "group": "core-46",
+    "purpose_and_transformation": "Single-step bounded queue, served demand and dropped demand",
+    "inputs": {
+      "demand": {
+        "type": "float",
+        "required": true
+      },
+      "queue": {
+        "type": "float",
+        "required": true
+      },
+      "capacity": {
+        "type": "float",
+        "required": true
+      },
+      "queue_limit": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"BISON\", \"Single-step bounded queue, served demand and dropped demand\")\ndef bison(demand: float, queue: float, capacity: float, queue_limit: float):\n    nonnegative(queue); nonnegative(queue_limit)\n    d = pos(demand)\n    served = min(d + queue, pos(capacity))\n    q = pos(queue + d - served)\n    return {\"served\": served, \"queue\": min(q, queue_limit), \"dropped\": pos(q - queue_limit)}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No demand/capacity queue system is being tested.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 31,
+      "name": "BISON",
+      "module": "Bison",
+      "namespace": "Zoo.Bison",
+      "repository": "https://github.com/enuminous/Bison",
+      "commit": "588acafecff764cb417637861d6d9a1e6bdf502f",
+      "scope": "single-component queue transition; exact natural-number capacity bound",
+      "theorems": [
+        "queue_bounded"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Bison",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "WEASEL",
+    "group": "core-46",
+    "purpose_and_transformation": "Counterexample finding filter by changed-key budget and positive severity; no search",
+    "inputs": {
+      "findings": {
+        "type": "list",
+        "required": true
+      },
+      "budget": {
+        "type": "int",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"WEASEL\", \"Counterexample finding filter by changed-key budget and positive severity; no search\")\ndef weasel(findings: list, budget: int):\n    retained = []\n    for f in findings:\n        if not isinstance(f, dict) or set(f) != {\"changed_keys\", \"severity\", \"cost\", \"reproducibility\"}:\n            raise ValueError(\"Invalid finding schema\")\n        natural(f[\"changed_keys\"])\n        for key in (\"severity\", \"cost\", \"reproducibility\"):\n            number(f[key])\n        if f[\"changed_keys\"] <= budget and f[\"severity\"] > 0:\n            retained.append(f)\n    return {\"retained\": retained}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Provide a justified mapping and required real measurements before interpreting the native operation; none may be fabricated.",
+    "target_executed": false,
+    "target_verdict": "UNRESOLVED",
+    "reason": "The port filters supplied numerical findings; it does not search proofs. No defined changed-key/severity/cost measurement for a Physlib counterexample is supplied. Harness mutations are controls, not Physlib defects.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 32,
+      "name": "WEASEL",
+      "module": "Weasel",
+      "namespace": "Zoo.Weasel",
+      "repository": "https://github.com/enuminous/Weasel",
+      "commit": "fa2d91ae108f6b3bb515fb16ff0c22ae02324b06",
+      "scope": "bounded finding filter; target search/enumeration remains external",
+      "theorems": [
+        "retained_within_budget"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Weasel",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "SALMON",
+    "group": "core-46",
+    "purpose_and_transformation": "Unresolved mass and bounded ancestry; exhaustion is not an origin; no weighted full trace",
+    "inputs": {
+      "weight": {
+        "type": "float",
+        "required": true
+      },
+      "incoming_weights": {
+        "type": "list",
+        "required": true
+      },
+      "parents": {
+        "type": "dict",
+        "required": true
+      },
+      "start": {
+        "type": "int",
+        "required": true
+      },
+      "fuel": {
+        "type": "int",
+        "required": false,
+        "default": 10
+      }
+    },
+    "operation_source": "@kernel(\"SALMON\", \"Unresolved mass and bounded ancestry; exhaustion is not an origin; no weighted full trace\")\ndef salmon(weight: float, incoming_weights: list, parents: dict, start: int, fuel: int = 10):\n    numbers(incoming_weights); nonnegative(weight)\n    if fuel > 100:\n        raise ValueError(\"Trace depth exceeds engine resource limit 100\")\n    for key, values in parents.items():\n        if not key.isdecimal() or not isinstance(values, list):\n            raise ValueError(\"Parent map requires decimal node keys and lists\")\n        for x in values:\n            natural(x)\n    visited = 0\n    def trace(node, remaining):\n        nonlocal visited\n        visited += 1\n        if visited > 10000:\n            raise ValueError(\"Trace exceeds engine node budget 10000\")\n        if remaining == 0:\n            return {\"kind\": \"exhausted\", \"id\": node}\n        ps = parents.get(str(node), [])\n        if not ps:\n            return {\"kind\": \"origin\", \"id\": node}\n        return {\"kind\": \"branch\", \"id\": node, \"parents\": [trace(p, remaining - 1) for p in ps]}\n    return {\"unresolved_mass\": weight * pos(1 - sum(clip(x) for x in incoming_weights)), \"trace\": trace(start, fuel)}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No weighted evidence-flow network or unresolved-mass model is supplied; theorem dependencies are not asserted to be calibrated weights.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 33,
+      "name": "SALMON",
+      "module": "Salmon",
+      "namespace": "Zoo.Salmon",
+      "repository": "https://github.com/enuminous/Salmon",
+      "commit": "b141f6ccd5b0e789ceddaa91ec9e664cd02c4981",
+      "scope": "unresolved-mass kernel and fuel-bounded trace abstraction; weighted tracing excluded",
+      "theorems": [
+        "exhaustion_not_origin"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Salmon",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "ORCA",
+    "group": "core-46",
+    "purpose_and_transformation": "Four-field handoff integrity only; pairwise coordination metrics are external",
+    "inputs": {
+      "ack": {
+        "type": "bool",
+        "required": true
+      },
+      "payload_complete": {
+        "type": "bool",
+        "required": true
+      },
+      "ownership_clear": {
+        "type": "bool",
+        "required": true
+      },
+      "dependency_complete": {
+        "type": "bool",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"ORCA\", \"Four-field handoff integrity only; pairwise coordination metrics are external\")\ndef orca(ack: bool, payload_complete: bool, ownership_clear: bool, dependency_complete: bool):\n    return {\"handoff_integrity\": sum([ack, payload_complete, ownership_clear, dependency_complete]) / 4}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No multi-actor operational handoff experiment or recipient acknowledgment is in scope.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 34,
+      "name": "ORCA",
+      "module": "Orca",
+      "namespace": "Zoo.Orca",
+      "repository": "https://github.com/enuminous/Orca",
+      "commit": "a5caecf5a81b05495904528b0135fd272daaf90e",
+      "scope": "handoff checks and aggregate coordination formula; pairwise metrics supplied",
+      "theorems": [
+        "complete_requires_ack"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Orca",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "MOLE",
+    "group": "core-46",
+    "purpose_and_transformation": "Hidden-failure gap and coverage gates from supplied indicators",
+    "inputs": {
+      "indicators_present": {
+        "type": "bool",
+        "required": true
+      },
+      "surface_health": {
+        "type": "float",
+        "required": true
+      },
+      "latent_degradation": {
+        "type": "float",
+        "required": true
+      },
+      "coverage": {
+        "type": "float",
+        "required": true
+      },
+      "gap_threshold": {
+        "type": "float",
+        "required": false,
+        "default": 0.25
+      },
+      "minimum_coverage": {
+        "type": "float",
+        "required": false,
+        "default": 0.5
+      }
+    },
+    "operation_source": "@kernel(\"MOLE\", \"Hidden-failure gap and coverage gates from supplied indicators\")\ndef mole(indicators_present: bool, surface_health: float, latent_degradation: float,\n         coverage: float, gap_threshold: float = .25, minimum_coverage: float = .5):\n    unit(coverage); unit(minimum_coverage); nonnegative(gap_threshold)\n    gap = pos(latent_degradation - (1 - clip(surface_health)))\n    return {\"gap\": gap, \"hidden_failure\": indicators_present and gap >= gap_threshold and coverage >= minimum_coverage}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Provide a justified mapping and required real measurements before interpreting the native operation; none may be fabricated.",
+    "target_executed": false,
+    "target_verdict": "UNRESOLVED",
+    "reason": "No measured latent-degradation or coverage indicators for this static proof target; a textual source count is not an accepted substitute.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 35,
+      "name": "MOLE",
+      "module": "Mole",
+      "namespace": "Zoo.Mole",
+      "repository": "https://github.com/enuminous/Mole",
+      "commit": "523f8017851070f2c5d0249da4601357b24dda24",
+      "scope": "observability gap and coverage-gated hidden-failure flag; indicators supplied",
+      "theorems": [
+        "no_indicators_no_failure_claim"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Mole",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "LYNX",
+    "group": "core-46",
+    "purpose_and_transformation": "Novelty/yield arithmetic and emergence gates; no literature or independence verification",
+    "inputs": {
+      "distance": {
+        "type": "float",
+        "required": true
+      },
+      "rarity": {
+        "type": "float",
+        "required": true
+      },
+      "rediscovery": {
+        "type": "float",
+        "required": true
+      },
+      "replication": {
+        "type": "float",
+        "required": true
+      },
+      "yield_score": {
+        "type": "float",
+        "required": true
+      },
+      "alpha": {
+        "type": "float",
+        "required": false,
+        "default": 0.5
+      },
+      "beta": {
+        "type": "float",
+        "required": false,
+        "default": 0.5
+      },
+      "gamma": {
+        "type": "float",
+        "required": false,
+        "default": 0.5
+      },
+      "novelty_threshold": {
+        "type": "float",
+        "required": false,
+        "default": 0.4
+      },
+      "replication_threshold": {
+        "type": "float",
+        "required": false,
+        "default": 0.6
+      }
+    },
+    "operation_source": "@kernel(\"LYNX\", \"Novelty/yield arithmetic and emergence gates; no literature or independence verification\")\ndef lynx(distance: float, rarity: float, rediscovery: float, replication: float, yield_score: float,\n         alpha: float = .5, beta: float = .5, gamma: float = .5,\n         novelty_threshold: float = .4, replication_threshold: float = .6):\n    novelty = pos(alpha * distance + beta * rarity - gamma * rediscovery)\n    return {\"novelty\": novelty, \"latent_yield\": novelty * clip(replication) * clip(yield_score),\n            \"emergent\": novelty >= novelty_threshold and replication >= replication_threshold}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Provide a justified mapping and required real measurements before interpreting the native operation; none may be fabricated.",
+    "target_executed": false,
+    "target_verdict": "UNRESOLVED",
+    "reason": "No validated novelty-distance, rarity, rediscovery, replication and yield measurements. A literature/definition comparison is reported separately without fabricating scores.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 36,
+      "name": "LYNX",
+      "module": "Lynx",
+      "namespace": "Zoo.Lynx",
+      "repository": "https://github.com/enuminous/Lynx",
+      "commit": "d2f705136a616190f2c135ec9fa0df57b5c34020",
+      "scope": "novelty, yield and emergence contract; reference distances supplied",
+      "theorems": [
+        "emergent_requires_replication"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Lynx",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "HORSE",
+    "group": "core-46",
+    "purpose_and_transformation": "Workload penalty only; joint-effectiveness and human factors measurement are external",
+    "inputs": {
+      "workload": {
+        "type": "float",
+        "required": true
+      },
+      "attention": {
+        "type": "float",
+        "required": true
+      },
+      "fatigue": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"HORSE\", \"Workload penalty only; joint-effectiveness and human factors measurement are external\")\ndef horse(workload: float, attention: float, fatigue: float):\n    return {\"workload_penalty\": min(1.0, pos(clip(workload) - .7) + .5 * (1 - clip(attention)) + .5 * clip(fatigue))}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No human workload, attention or fatigue measurements.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 37,
+      "name": "HORSE",
+      "module": "Horse",
+      "namespace": "Zoo.Horse",
+      "repository": "https://github.com/enuminous/Horse",
+      "commit": "e55b6881a1d3a0e10fb32e474a3612aa4bf0ab69",
+      "scope": "trust/workload/joint-effectiveness kernels and handoff contract",
+      "theorems": [
+        "handoff_retains_uncertainty"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Horse",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "TERMITE",
+    "group": "core-46",
+    "purpose_and_transformation": "Single-agent update from a supplied neighbor snapshot; no scheduling or graph simulation",
+    "inputs": {
+      "state": {
+        "type": "float",
+        "required": true
+      },
+      "weighted_sum": {
+        "type": "float",
+        "required": true
+      },
+      "total_weight": {
+        "type": "float",
+        "required": true
+      },
+      "susceptibility": {
+        "type": "float",
+        "required": false,
+        "default": 0.5
+      },
+      "bias": {
+        "type": "float",
+        "required": false,
+        "default": 0.0
+      }
+    },
+    "operation_source": "@kernel(\"TERMITE\", \"Single-agent update from a supplied neighbor snapshot; no scheduling or graph simulation\")\ndef termite(state: float, weighted_sum: float, total_weight: float, susceptibility: float = .5, bias: float = 0.0):\n    unit(susceptibility); nonnegative(total_weight)\n    target = weighted_sum / total_weight if total_weight > 0 else state\n    return {\"next_state\": clip((1 - susceptibility) * state + susceptibility * target + bias)}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No interacting-agent simulation or neighbor-state snapshot.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 38,
+      "name": "TERMITE",
+      "module": "Termite",
+      "namespace": "Zoo.Termite",
+      "repository": "https://github.com/enuminous/Termite",
+      "commit": "76f70136ebf3b9e8bf4f38d971cce07cb2e73b0f",
+      "scope": "agent update and synchronous mapping; graph weighted inputs supplied",
+      "theorems": [
+        "population_preserved"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Termite",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "PHOENIX",
+    "group": "core-46",
+    "purpose_and_transformation": "Recovery completeness and finite-window stability; hold=0 is vacuously true as upstream",
+    "inputs": {
+      "fidelity": {
+        "type": "float",
+        "required": true
+      },
+      "integrity": {
+        "type": "float",
+        "required": true
+      },
+      "capability": {
+        "type": "float",
+        "required": true
+      },
+      "scores": {
+        "type": "list",
+        "required": true
+      },
+      "start": {
+        "type": "int",
+        "required": true
+      },
+      "hold": {
+        "type": "int",
+        "required": true
+      },
+      "threshold": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"PHOENIX\", \"Recovery completeness and finite-window stability; hold=0 is vacuously true as upstream\")\ndef phoenix(fidelity: float, integrity: float, capability: float, scores: list,\n            start: int, hold: int, threshold: float):\n    numbers(scores)\n    window = scores[start:start + hold]\n    return {\"completeness\": .4 * fidelity + .3 * integrity + .3 * capability,\n            \"stable\": len(window) == hold and all(x >= threshold for x in window), \"vacuous_window\": hold == 0}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No recovery episode, fidelity measurements or finite stability window.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 39,
+      "name": "PHOENIX",
+      "module": "Phoenix",
+      "namespace": "Zoo.Phoenix",
+      "repository": "https://github.com/enuminous/Phoenix",
+      "commit": "20079489fe4c180105d43b4382733a5506e27beb",
+      "scope": "recovery completeness and hold-window predicate; fidelity inputs supplied",
+      "theorems": [
+        "stable_requires_every_checkpoint"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Phoenix",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "COBRA",
+    "group": "core-46",
+    "purpose_and_transformation": "Persistent divergence and confidence-weighted risk from supplied scores",
+    "inputs": {
+      "previous": {
+        "type": "float",
+        "required": true
+      },
+      "divergence": {
+        "type": "float",
+        "required": true
+      },
+      "violation": {
+        "type": "float",
+        "required": true
+      },
+      "proxy_delta": {
+        "type": "float",
+        "required": true
+      },
+      "goal_delta": {
+        "type": "float",
+        "required": true
+      },
+      "context_gap": {
+        "type": "float",
+        "required": true
+      },
+      "confidence": {
+        "type": "float",
+        "required": true
+      },
+      "persistence": {
+        "type": "float",
+        "required": false,
+        "default": 0.8
+      }
+    },
+    "operation_source": "@kernel(\"COBRA\", \"Persistent divergence and confidence-weighted risk from supplied scores\")\ndef cobra(previous: float, divergence: float, violation: float, proxy_delta: float,\n          goal_delta: float, context_gap: float, confidence: float, persistence: float = .8):\n    unit(persistence)\n    proxy = pos(proxy_delta) * pos(-goal_delta)\n    persistent = ema(persistence, previous, clip(divergence))\n    return {\"risk\": clip((.4 * persistent + .3 * clip(violation) + .2 * clip(proxy) + .1 * clip(context_gap)) * clip(confidence)),\n            \"persistent\": persistent}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No longitudinal goal/proxy divergence and confidence measurements.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 40,
+      "name": "COBRA",
+      "module": "Cobra",
+      "namespace": "Zoo.Cobra",
+      "repository": "https://github.com/enuminous/Cobra",
+      "commit": "1af3a2016813a04a414be3c79a2b40b158154783",
+      "scope": "persistent/proxy divergence and risk kernels; deltas supplied",
+      "theorems": [
+        "nonimproving_proxy_zero"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Cobra",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "WHALE",
+    "group": "core-46",
+    "purpose_and_transformation": "Cumulative deviation and history gap; zero-window upstream behavior preserved",
+    "inputs": {
+      "values": {
+        "type": "list",
+        "required": true
+      },
+      "baseline": {
+        "type": "float",
+        "required": true
+      },
+      "window": {
+        "type": "int",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"WHALE\", \"Cumulative deviation and history gap; zero-window upstream behavior preserved\")\ndef whale(values: list, baseline: float, window: int):\n    numbers(values)\n    return {\"deviation\": mean([abs(x - baseline) for x in values]),\n            \"gap\": abs(mean(values[max(0, len(values) - window):]) - mean(values)) if values else 0.0}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No historical signal series or baseline deviation experiment.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 41,
+      "name": "WHALE",
+      "module": "Whale",
+      "namespace": "Zoo.Whale",
+      "repository": "https://github.com/enuminous/Whale",
+      "commit": "c64bbfb54fce0d4dba2eb3d9a285bba7c7605d39",
+      "scope": "cumulative deviation, history gap and stability formula; slope supplied",
+      "theorems": [
+        "empty_history_zero_gap"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Whale",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "FALCON",
+    "group": "core-46",
+    "purpose_and_transformation": "Detection/intervention latency, reaction margin and missed-hazard gate",
+    "inputs": {
+      "event_time": {
+        "type": "float",
+        "required": true
+      },
+      "hazard_time": {
+        "type": "float",
+        "required": true
+      },
+      "delay": {
+        "type": "float",
+        "required": true
+      },
+      "alarm_time": {
+        "type": "number or null",
+        "required": false,
+        "default": null
+      }
+    },
+    "operation_source": "@kernel(\"FALCON\", \"Detection/intervention latency, reaction margin and missed-hazard gate\")\ndef falcon(event_time: float, hazard_time: float, delay: float, alarm_time=None):\n    nonnegative(delay)\n    if alarm_time is None:\n        return {\"latency\": None}\n    number(alarm_time)\n    margin = hazard_time - (alarm_time + delay)\n    return {\"latency\": {\"detection_latency\": alarm_time - event_time, \"intervention_latency\": delay,\n                        \"reaction_margin\": margin, \"missed\": hazard_time <= alarm_time + delay}}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No hazard event, alarm, intervention or reaction times.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 42,
+      "name": "FALCON",
+      "module": "Falcon",
+      "namespace": "Zoo.Falcon",
+      "repository": "https://github.com/enuminous/Falcon",
+      "commit": "bf74635c358b997983a3ee19a4e7c9bd23bc8436",
+      "scope": "latency/missed/reaction-margin kernel; streaming threshold monitor excluded",
+      "theorems": [
+        "positive_margin_iff_on_time",
+        "absent_alarm_no_timing"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Falcon",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "RHINO",
+    "group": "core-46",
+    "purpose_and_transformation": "Performance retention with explicit zero-baseline branch; no shock generation",
+    "inputs": {
+      "baseline": {
+        "type": "float",
+        "required": true
+      },
+      "after": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"RHINO\", \"Performance retention with explicit zero-baseline branch; no shock generation\")\ndef rhino(baseline: float, after: float):\n    return {\"retention\": (1.0 if after == 0 else 0.0) if baseline == 0 else clip(after / baseline)}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No measured pre/post-shock performance experiment.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 43,
+      "name": "RHINO",
+      "module": "Rhino",
+      "namespace": "Zoo.Rhino",
+      "repository": "https://github.com/enuminous/Rhino",
+      "commit": "8718a3132ffc46ec46564fc0d4fd086637235cca",
+      "scope": "retention, amplification and graceful-failure kernels; invariants supplied",
+      "theorems": [
+        "survives_selected_invariant"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Rhino",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "BONOBO",
+    "group": "core-46",
+    "purpose_and_transformation": "Exploitation sum and cooperative score from supplied utilities and summary measures",
+    "inputs": {
+      "gains": {
+        "type": "list",
+        "required": true
+      },
+      "efficiency": {
+        "type": "float",
+        "required": true
+      },
+      "stability": {
+        "type": "float",
+        "required": true
+      },
+      "fairness_dispersion": {
+        "type": "float",
+        "required": true
+      },
+      "resolution": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"BONOBO\", \"Exploitation sum and cooperative score from supplied utilities and summary measures\")\ndef bonobo(gains: list, efficiency: float, stability: float, fairness_dispersion: float, resolution: float):\n    numbers(gains); nonnegative(fairness_dispersion)\n    exploitation = sum(pos(-x) for x in gains)\n    score = clip(.30 * efficiency + .25 * clip(stability) + .20 / (1 + fairness_dispersion) + .15 * (1 - clip(exploitation)) + .10 * clip(resolution))\n    return {\"exploitation\": exploitation, \"cooperative_score\": score}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No multi-agent utilities, fairness or cooperation outcome experiment.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 44,
+      "name": "BONOBO",
+      "module": "Bonobo",
+      "namespace": "Zoo.Bonobo",
+      "repository": "https://github.com/enuminous/Bonobo",
+      "commit": "40a3c44a997b5e66ebb2c2dbae4d33ce779e630a",
+      "scope": "gain, exploitation and cooperation score; dispersion supplied",
+      "theorems": [
+        "mutual_gain_excludes_loser"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Bonobo",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "AXOLOTL",
+    "group": "core-46",
+    "purpose_and_transformation": "Recovery, efficiency and resilience; invariant retention supplied externally",
+    "inputs": {
+      "reference_function": {
+        "type": "float",
+        "required": true
+      },
+      "damaged_function": {
+        "type": "float",
+        "required": true
+      },
+      "adapted_function": {
+        "type": "float",
+        "required": true
+      },
+      "cost": {
+        "type": "float",
+        "required": true
+      },
+      "transformation": {
+        "type": "float",
+        "required": true
+      },
+      "invariant_retention": {
+        "type": "float",
+        "required": true
+      }
+    },
+    "operation_source": "@kernel(\"AXOLOTL\", \"Recovery, efficiency and resilience; invariant retention supplied externally\")\ndef axolotl(reference_function: float, damaged_function: float, adapted_function: float,\n            cost: float, transformation: float, invariant_retention: float):\n    nonnegative(cost); unit(invariant_retention)\n    d = reference_function - damaged_function\n    recovery = (adapted_function - damaged_function) / (d + 1e-9) if d > 0 else (1.0 if adapted_function >= reference_function else 0.0)\n    efficiency = pos(adapted_function - damaged_function) / max(1e-9, cost)\n    r = clip(recovery)\n    resilience = clip(.45 * r + .30 * invariant_retention + .15 * (efficiency / (1 + efficiency)) + .10 * clip(transformation) * r * invariant_retention)\n    return {\"recovery\": recovery, \"efficiency\": efficiency, \"resilience\": resilience}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No damage/adaptation episode or measured recovery costs.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 45,
+      "name": "AXOLOTL",
+      "module": "Axolotl",
+      "namespace": "Zoo.Axolotl",
+      "repository": "https://github.com/enuminous/Axolotl",
+      "commit": "af8e011f0be6f5852b3d102d4004aaf86e2bcfd4",
+      "scope": "recovery, efficiency and resilience; transformation/invariants supplied",
+      "theorems": [
+        "acceptable_retains_invariants"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Axolotl",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "BUTTERFLY",
+    "group": "core-46",
+    "purpose_and_transformation": "One nonlinear clipped layer step only; no graph cascade or counterfactual comparison",
+    "inputs": {
+      "state": {
+        "type": "float",
+        "required": true
+      },
+      "incoming": {
+        "type": "float",
+        "required": true
+      },
+      "base": {
+        "type": "float",
+        "required": false,
+        "default": 0.0
+      },
+      "gain": {
+        "type": "float",
+        "required": false,
+        "default": 1.0
+      },
+      "threshold": {
+        "type": "float",
+        "required": false,
+        "default": 1.0
+      }
+    },
+    "operation_source": "@kernel(\"BUTTERFLY\", \"One nonlinear clipped layer step only; no graph cascade or counterfactual comparison\")\ndef butterfly(state: float, incoming: float, base: float = 0.0, gain: float = 1.0, threshold: float = 1.0):\n    nonlinear = gain * (state - threshold)**2 if state > threshold else 0.0\n    return {\"next_state\": max(0.0, min(2.0, base + incoming + nonlinear))}\n",
+    "rank_components": null,
+    "native_output": "Exact dictionary returned by the frozen operation_source; no universal pass/fail output is inferred.",
+    "criterion": "Requires an in-domain dataset satisfying the fixed schema. No target PASS criterion exists in the absence of that experiment.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No nonlinear cascade/layer simulation is being claimed.",
+    "fixture_evidence": "Core Python test suite (22 methods, including all 90 reference comparisons); current Zoo Lean build and 90-reference runner. Fixtures are not target results.",
+    "formalization_source": {
+      "id": 46,
+      "name": "BUTTERFLY",
+      "module": "Butterfly",
+      "namespace": "Zoo.Butterfly",
+      "repository": "https://github.com/enuminous/Butterfly",
+      "commit": "5952c7f260f65835e1a67d4502aac1e4015bfe49",
+      "scope": "layer update, amplification and bounded trajectory; graph comparison excluded",
+      "theorems": [
+        "run_records_initial_and_steps"
+      ],
+      "proof_status": "compiler-checked and strict-axiom-audited at 44d9881e8878a702fdfa47da53d80436276d92a6",
+      "numbering": "main-sequence reference",
+      "source_bundle": "UPSTREAM_SOURCES.json",
+      "source_key": "Butterfly",
+      "verified_commit": "44d9881e8878a702fdfa47da53d80436276d92a6",
+      "verified_run": "https://github.com/enuminous/Monolithic-Zoo-Lean4/actions/runs/38484522045"
+    }
+  },
+  {
+    "animal": "CHIMERA",
+    "group": "formalized-extension",
+    "purpose_and_transformation": "Ordered failure-mode tags with fallback U, metadata and K recovery-map requirements.",
+    "inputs": "Event object/interaction; seven mode flags and optional provenance, recovery map, key/note.",
+    "criterion": "Nonempty ordered tags; K requires its declared prerequisites. Supplied flag truth remains external.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No in-domain failure-mode event and recovery-map record is asserted for these theorems.",
+    "fixture_evidence": "643 decision, 1432 complete-record and 2100 threshold certificates across five extensions; exact coverage differs by operation. See logs."
+  },
+  {
+    "animal": "CIRCUS",
+    "group": "formalized-extension",
+    "purpose_and_transformation": "Report gate with FAIL precedence; provenance, dependencies, risks and independent-check lists.",
+    "inputs": "CIRCUS-final-input.json; declared audit pipeline, pending external review, observed release-manifest failure.",
+    "criterion": "Native PASS needs no open material gate and complete frozen independently sourced checks; explicit native N/A is retained.",
+    "target_executed": true,
+    "target_verdict": "FAIL",
+    "reason": "Final native FAIL: the Zoo release fails its own README checksum gate. Earlier native N/A retained. This applies to audit-tool integrity, not Maxwell validity.",
+    "fixture_evidence": "643 decision, 1432 complete-record and 2100 threshold certificates across five extensions; exact coverage differs by operation. See logs."
+  },
+  {
+    "animal": "MONSTER",
+    "group": "formalized-extension",
+    "purpose_and_transformation": "Robustness gate requiring preregistration, matched baseline, complete mandatory conditions and failure-boundary records.",
+    "inputs": "Preregistration/protocol; metric tolerance/direction; baseline; candidate/baseline condition outcomes; failure boundaries.",
+    "criterion": "Eligible, complete and no violating mandatory condition/boundary => native PASS; otherwise FAIL or N/A as source specifies.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No preregistered empirical robustness benchmark or matched performance data exists in this audit.",
+    "fixture_evidence": "643 decision, 1432 complete-record and 2100 threshold certificates across five extensions; exact coverage differs by operation. See logs."
+  },
+  {
+    "animal": "WOODPECKER",
+    "group": "formalized-extension",
+    "purpose_and_transformation": "Validated ablation loss against exact necessity/contribution thresholds.",
+    "inputs": "Baseline/ablated values, direction, epsilon, contribution fraction, preserved conditions, violations, preregistration and leakage flags.",
+    "criterion": "Fixed validity and loss thresholds classify necessary/contributory/redundant/indeterminate; labels do not prove mathematical hypothesis necessity.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No loss-valued empirical ablation; removing a theorem hypothesis is a different formal task and is not silently substituted.",
+    "fixture_evidence": "643 decision, 1432 complete-record and 2100 threshold certificates across five extensions; exact coverage differs by operation. See logs."
+  },
+  {
+    "animal": "NIGHTINGALE",
+    "group": "formalized-extension",
+    "purpose_and_transformation": "ALE/bootstrap explanation-tree support/effect/stability/depth stopping rules; formal coverage is a decision-stage projection.",
+    "inputs": "Fitted model, predictor/response data, local-support bins, effect tolerance, bootstrap information, maximum depth.",
+    "criterion": "Fixed stopping criteria applied to genuine explanatory data; branch certificates do not validate the ALE/statistical pipeline.",
+    "target_executed": false,
+    "target_verdict": "NOT_APPLICABLE",
+    "reason": "No fitted predictor, explanation dataset or bootstrap experiment is part of the Maxwell audit.",
+    "fixture_evidence": "643 decision, 1432 complete-record and 2100 threshold certificates across five extensions; exact coverage differs by operation. See logs."
+  },
+  {
+    "animal": "PEGASUS",
+    "group": "standalone-extension",
+    "purpose_and_transformation": "Typed claim checks and dependency propagation without caller-certified PASS labels.",
+    "inputs": "PEGASUS-input.json: variational, inhomogeneous, homogeneous and root bridge obligations.",
+    "criterion": "Every required root and prerequisite must be established by a supported exact checker; missing checker => UNRESOLVED.",
+    "target_executed": true,
+    "target_verdict": "UNRESOLVED",
+    "reason": "Executed on four claims: fixed v0.1 has no Lean-certificate checker. Separate Lean replay cannot be passed off as a PEGASUS capability.",
+    "fixture_evidence": "PEGASUS 26 tests and 17 frozen file hashes"
+  },
+  {
+    "animal": "HUMMINGBIRD",
+    "group": "unlocated-contract",
+    "purpose_and_transformation": "Unresolved: a versioned fixed contract and executable source were not located.",
+    "inputs": "Required: canonical source URL/commit, schema, transformation and decision contract.",
+    "criterion": "No operation can be invented from an animal name or earlier prose description.",
+    "target_executed": false,
+    "target_verdict": "UNRESOLVED",
+    "reason": "Not in the pinned 46-name registry or five-extension manifest. Exact repository lookup returned 404 and scoped repository searches returned no match. No global absence is asserted.",
+    "fixture_evidence": "No implementation located"
+  }
+]

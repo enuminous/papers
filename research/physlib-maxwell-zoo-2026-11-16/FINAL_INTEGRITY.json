@@ -1,0 +1,126 @@
+{
+  "pins": {
+    "target": "892e8fcba8af5ec691ca7a8ad82ee5dbe3180b17",
+    "zoo": "8b22841ffcf44e41451e7696335bf6a6ae8f222e",
+    "engine": "fd4ac30ffdbb44c78e7ea69e2424beaa9f3fdb93",
+    "pegasus": "41d57615f16c43ea8858e35cd1250d44c3c7df97"
+  },
+  "tracked_status": {
+    "target": "",
+    "zoo": "",
+    "engine": "",
+    "pegasus": ""
+  },
+  "dependencies": [
+    {
+      "name": "mathlib",
+      "expected": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "actual": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "match": true
+    },
+    {
+      "name": "plausible",
+      "expected": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "actual": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "match": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "expected": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "actual": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "match": true
+    },
+    {
+      "name": "importGraph",
+      "expected": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "actual": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "match": true
+    },
+    {
+      "name": "proofwidgets",
+      "expected": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "actual": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "match": true
+    },
+    {
+      "name": "aesop",
+      "expected": "4a174c490d8707121c4a9290800489f105d85e07",
+      "actual": "4a174c490d8707121c4a9290800489f105d85e07",
+      "match": true
+    },
+    {
+      "name": "Qq",
+      "expected": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "actual": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "match": true
+    },
+    {
+      "name": "batteries",
+      "expected": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "actual": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "match": true
+    },
+    {
+      "name": "Cli",
+      "expected": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
+      "actual": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
+      "match": true
+    }
+  ],
+  "freeze_check": [
+    {
+      "file": "report/AUDIT_PLAN.md",
+      "expected": "2abbf2bd70b6a65b0aef4bebbc3a4657365c7bfd85e8267a1d70d01df3e16054",
+      "actual": "2abbf2bd70b6a65b0aef4bebbc3a4657365c7bfd85e8267a1d70d01df3e16054",
+      "match": true
+    },
+    {
+      "file": "report/CORE_SCHEMAS.json",
+      "expected": "040f4455e6540b6b31f648fbd3f15f0a6ffb222d6a0206793416ccff537dc31f",
+      "actual": "040f4455e6540b6b31f648fbd3f15f0a6ffb222d6a0206793416ccff537dc31f",
+      "match": true
+    },
+    {
+      "file": "target/lean-toolchain",
+      "expected": "ead308ab4fc749eb2389819903fd7baa11bf06e490827f6896a8cbfe622fa703",
+      "actual": "ead308ab4fc749eb2389819903fd7baa11bf06e490827f6896a8cbfe622fa703",
+      "match": true
+    },
+    {
+      "file": "target/lake-manifest.json",
+      "expected": "b446f065c29a1f67f1cce6721cd6317bfa23b3c7aad516af5472cc21bb3c45a0",
+      "actual": "b446f065c29a1f67f1cce6721cd6317bfa23b3c7aad516af5472cc21bb3c45a0",
+      "match": true
+    },
+    {
+      "file": "target/Physlib/Electromagnetism/ThreeDimension/MaxwellEquations.lean",
+      "expected": "fe87e1ae5391110c6fae187b045d8b4c1c1970100ca2ee187acc2c578967c875",
+      "actual": "fe87e1ae5391110c6fae187b045d8b4c1c1970100ca2ee187acc2c578967c875",
+      "match": true
+    },
+    {
+      "file": "zoo/Registry.lean",
+      "expected": "d393c4e0825ba159c8733c72f3a8e997c61ae6047d5c4471fe34fe48c4805d88",
+      "actual": "d393c4e0825ba159c8733c72f3a8e997c61ae6047d5c4471fe34fe48c4805d88",
+      "match": true
+    },
+    {
+      "file": "zoo/extension-sources.json",
+      "expected": "5bf4efeeddd1f32f0a9e24184ea71b68e89cf320deec55d942924891aaca6003",
+      "actual": "5bf4efeeddd1f32f0a9e24184ea71b68e89cf320deec55d942924891aaca6003",
+      "match": true
+    },
+    {
+      "file": "engine/research_engine/kernels.py",
+      "expected": "3b144b3a0c50e7e776cd3fc89a2f86a3001968dc51b720e369908199113d5c40",
+      "actual": "3b144b3a0c50e7e776cd3fc89a2f86a3001968dc51b720e369908199113d5c40",
+      "match": true
+    },
+    {
+      "file": "pegasus/pegasus/audit.py",
+      "expected": "219ff263c9fdbb4c3e0081395ff930cfb23ab245ce7d258059ea6226f24e15e1",
+      "actual": "219ff263c9fdbb4c3e0081395ff930cfb23ab245ce7d258059ea6226f24e15e1",
+      "match": true
+    }
+  ]
+}

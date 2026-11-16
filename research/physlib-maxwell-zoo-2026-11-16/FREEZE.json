@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-16T15:20:23.651291+00:00",
+  "kind": "local execution freeze after source inspection",
+  "sha256": {
+    "report/AUDIT_PLAN.md": "2abbf2bd70b6a65b0aef4bebbc3a4657365c7bfd85e8267a1d70d01df3e16054",
+    "report/CORE_SCHEMAS.json": "040f4455e6540b6b31f648fbd3f15f0a6ffb222d6a0206793416ccff537dc31f",
+    "target/lean-toolchain": "ead308ab4fc749eb2389819903fd7baa11bf06e490827f6896a8cbfe622fa703",
+    "target/lake-manifest.json": "b446f065c29a1f67f1cce6721cd6317bfa23b3c7aad516af5472cc21bb3c45a0",
+    "target/Physlib/Electromagnetism/ThreeDimension/MaxwellEquations.lean": "fe87e1ae5391110c6fae187b045d8b4c1c1970100ca2ee187acc2c578967c875",
+    "zoo/Registry.lean": "d393c4e0825ba159c8733c72f3a8e997c61ae6047d5c4471fe34fe48c4805d88",
+    "zoo/extension-sources.json": "5bf4efeeddd1f32f0a9e24184ea71b68e89cf320deec55d942924891aaca6003",
+    "engine/research_engine/kernels.py": "3b144b3a0c50e7e776cd3fc89a2f86a3001968dc51b720e369908199113d5c40",
+    "pegasus/pegasus/audit.py": "219ff263c9fdbb4c3e0081395ff930cfb23ab245ce7d258059ea6226f24e15e1"
+  }
+}

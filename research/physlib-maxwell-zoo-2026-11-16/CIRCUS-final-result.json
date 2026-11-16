@@ -1,0 +1,6 @@
+{
+  "native_decision": "FAIL",
+  "audit_verdict": "FAIL",
+  "scope": "Integrity of the pinned Zoo release used as an audit instrument; not a mathematical refutation of Physlib",
+  "reason": "Known material release-manifest failure retained under the frozen FAIL-precedence rule. Independent external review also remains pending."
+}
