@@ -35,7 +35,7 @@ For the network-wide subject menu and evidence boundaries, start with the [EFMW 
 4. [On Introspective Machines](On-Introspective-Machines-2026-11-13.md) — conceptual essay on auditability and mechanistic self-correction.
 5. [INT-001 benchmark protocol](EFMW-INT-001-Preregistered-Audit-Benchmark-Protocol-2026-11-13.md) — draft 300-item confirmatory protocol. [Pilot 60](research/efmw-int-001-pilot-60/README.md) is a frozen, public-label construction corpus. Construction PASS. Four-arm performance UNRESOLVED / NOT RUN.
 
-**HYP-001 P2 experimental follow-up revised to v0.2 (16 November):** [Memory hysteresis force protocol](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md) · [Word document](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.docx). Apparatus qualification precedes a separately frozen force experiment; scientific effect size and measured sensitivity are distinct. The RC memory mapping is conditional, with independent key custody and signed approval before acquisition. **Experiment NOT RUN; physical coupling UNRESOLVED.**
+**HYP-001 P2 experimental follow-up revised to v0.3 (16 November):** [Memory hysteresis force protocol](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md) · [Word document](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.docx). Stage zero requires a specified source-to-probe interaction; the current model record is incomplete and blocks Stage two. Stage one adds an eight-pair diagnostic before full instrument qualification. Calibration does not establish the proposed physical coupling. **Stage two NOT RELEASED; experiment NOT RUN; physical coupling UNRESOLVED.**
 
 **Action-to-observable follow-up (14 November):** [C1-OBS-001](EFMW-C1-OBS-001-From-Action-to-Observable-2026-11-14.md) derives an optical response from an existing C1 coupling and records its equivalence to the generic scalar–photon model. [Code, results and assumptions](research/efmw-c1-obs-001/README.md).
 
@@ -95,7 +95,7 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
-- **[HYP-001 P2 — Memory Hysteresis Force Experiment v0.2](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md)** · [Word protocol](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.docx) — revised 16 November 2026. Two-stage apparatus qualification and conditional force protocol, with measured sensitivity, fresh validation, independent custody of label-revealing records, and signed freeze before confirmatory data. **NOT RUN: 10 µN remains an illustrative benchmark; the two-second RC time and its physical memory mapping require separate qualification. Physical coupling remains UNRESOLVED.**
+- **[HYP-001 P2 — Memory Hysteresis Force Experiment v0.3](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md)** · [Word protocol](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.docx) — revised 16 November 2026. Explicit coupling specification precedes release of the physical test. An eight-pair preliminary screen precedes full sensitivity qualification; independent custody, fresh validation and a signed freeze remain required. **Stage zero INCOMPLETE; Stage two NOT RELEASED; experiment NOT RUN. The physical coupling remains UNRESOLVED; 10 µN is illustrative, and eight pairs do not certify a 2 µN noise floor.**
 
 - **[UNITY-001 — Source Derivation and Stationary Gravity Gate](research/unity-001/source-screen/README.md)** · [Reproduction script](research/unity-001/source-screen/screen.py) · [Results](research/unity-001/source-screen/results.json) — 16 November 2026. Derives the SI initial energy density of a pinned C1 free scalar branch. The isolated static solution is zero under the stated boundary conditions. Conventional Einstein–Klein–Gordon theory gives the same stress and response in this branch. **Physical prediction remains unresolved.**
 
@@ -344,6 +344,7 @@ These links provide direct access to nested reports, protocols, source snapshots
 
 > **Interpretation:** Cross-links represent research dependencies and comparisons. The Standard Model and continuum gravity are inputs in current QST calculations; their emergence from Base888 and the physical status of the pressure cycle remain **UNRESOLVED**.
 <!-- ENUMINOUS-RESEARCH-CHAIN:END -->
+
 
 
 

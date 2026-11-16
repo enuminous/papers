@@ -1,36 +1,56 @@
 # EFMW memory hysteresis force experiment
 
-**Publication status: proposed bench protocol v0.2; experiment NOT RUN; physical coupling UNRESOLVED.**
+**Publication status: proposed bench protocol v0.3; coupling specification INCOMPLETE; Stage two NOT RELEASED; experiment NOT RUN; physical coupling UNRESOLVED.**
 
 [Download the revised Word protocol](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.docx) · [Papers index](README.md)
 
-**Revision v0.2 — 16 November 2026.** Supersedes [v0.1](https://github.com/enuminous/papers/blob/ba47f423b7991035113cd34c10f43aaea5ab9989/HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md). Apparatus qualification now precedes a separately frozen experiment. Scientific effect size is separated from measured sensitivity; the RC memory mapping remains an explicit assumption. Independent custody covers label-revealing phase and memory records, with signed approval before confirmatory acquisition.
+**Revision v0.3 — 16 November 2026.** Supersedes [v0.2](https://github.com/enuminous/papers/blob/37e5eed03489421df4cd796cb3ab36fff32bdfe9/HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md). Stage zero now requires an explicit, testable source-to-probe interaction before Stage two can begin. The missing physical mapping and coupling law are stated as unresolved work, not supplied by an actuator or a fitted decay. Stage one adds an eight-pair diagnostic screen before full sensitivity qualification, using a calibrated unit-force template at the zero-coherence endpoint. The screen cannot certify a 2 µN noise floor; the universal threshold withdrawn in v0.2 remains withdrawn. Independent custody and signed release remain required.
 
-HYP-001 P2  |  Proposed bench protocol v0.2  |  16 November 2026
+HYP-001 P2  |  Proposed bench protocol v0.3  |  16 November 2026
 
-Prepared for Matthew Chenoweth Wright and a prospective experimental physics laboratory. Begin with apparatus qualification. A separate force experiment requires a signed protocol freeze and fresh data. No apparatus performance, physical signal, laboratory engagement or custodian appointment is reported as established.
+Prepared for Matthew Chenoweth Wright and a prospective experimental physics laboratory. Status: coupling specification incomplete; Stage two is not released. Stage one can characterize instruments and conventional disturbances. A force experiment requires a specified interaction model, measured sensitivity, independent review and a signed freeze. No physical signal or laboratory engagement is established.
 
 ## Choice and bounded claim
 
-Choose P2, memory hysteresis read out as force, as a candidate for a classical bench study. It compares different histories at identical present drive and can reuse a P1 force apparatus. P3 requires a closed energy budget and P4 requires quantum hardware. The cost advantage remains conditional on access to suitable force metrology and data acquisition; it is not a parts quotation or a demonstrated cheapest test.
+P2 compares different histories at identical present drive and may reuse a P1 force apparatus. Its cost advantage remains conditional on a testable coupling model and suitable force metrology. P3 requires a closed energy budget and P4 requires quantum hardware. This document is a qualification plan with a deferred force experiment, not a demonstrated cheapest decisive EFMW test.
 
-The primary observable is the difference between high-history and low-history force residuals after both reach the same coherence C₁ = 0.5. Conditional on the chosen physical mapping of memory and geometry, the HYP-001 phenomenological model gives [1]:
+The proposed observable is the difference between high-history and low-history force residuals after both reach coherence C₁ = 0.5. The HYP-001 ansatz supplies the following temporal template [1]. It becomes an apparatus prediction only if a specified source-to-probe interaction justifies this form:
 
 $$
 \Delta F(t)=A e^{-t/\tau_M}, \qquad A=\kappa C_1\Delta M(0).
 $$
 
-The model does not supply a measured coupling κ, a lower bound on its magnitude, or a derived physical timescale. The former 10 µN target remains an illustrative planning benchmark only. It is neither demonstrated apparatus sensitivity nor an EFMW amplitude prediction. A null can constrain a specified coupling range in this realization; it cannot exclude every nonzero κ.
+The model supplies no measured κ, lower bound on its magnitude or derived physical timescale. The 10 µN value remains illustrative. Until Stage zero is complete, a force interval cannot be interpreted as an EFMW coupling bound. After model release, a null can exclude only the stated parameter range of that interaction in the recorded apparatus.
 
 ## Physical meaning of memory
 
 Define the measured circuit state as capacitor voltage divided by its calibrated reference voltage. A 200 kΩ resistor and 10 µF capacitor give a nominal RC time of 2 s. Measure the actual response, uncertainty, leakage and temperature dependence with the force experiment disconnected. Freeze that measured circuit time before Stage two. Identifying it with τ<sub>M</sub> is an additional hypothesis, not a consequence of calibration.
 
-Before a physical interpretation, record what object carries M, where it is located, how it couples to the probe, and why the effect should survive the selected shielding. Explain why this state should enter κCM rather than merely emulate its equation. An independent technical reviewer must distinguish evidence for that mapping from assumptions. If the mapping remains unsupported, label Stage two a conditional RC force search and retain UNRESOLVED for the EFMW interpretation.
+A circuit voltage is an operational state variable. Its identification with an interaction-producing memory remains a hypothesis. Before Stage two, specify what carries that state, what property of the probe responds, and a force law that predicts their interaction in the actual geometry. Calling a search conditional does not waive this requirement. Independent review checks the model and claim scope; agreement alone is not evidence that the interaction exists.
 
 For four measured oscillator phases, C is the squared magnitude of their mean unit phase phasor [1]. This definition gives C = 1 for equal phases, C = 0 for quadrature phases, and C = 0.5 for (0, 0, π/2, π/2). Archive the phase-estimation code and normalization. Neither a fitted force decay nor a successful RC calibration identifies a new physical interaction.
 
-The RC realization, source–probe geometry and shielding are operational choices. Acceptance of this test scope does not establish that it realizes the physical memory responsible for an EFMW interaction. The capacitor decay is ordinary circuit behavior; the proposed observable is an additional mechanical force.
+An unspecified interaction does not logically guarantee zero measured force. It leaves the physical interpretation and the hypothesis excluded by a null undefined. The RC decay remains ordinary circuit behavior. The proposed additional mechanical interaction has not been specified sufficiently to release Stage two.
+
+## Stage zero specify the physical coupling
+
+Current status: NOT MET. No source-to-probe interaction model is established by this protocol. Do not commission or begin Stage two as an EFMW test until the following record is complete. Stage one alone may be scoped as instrument qualification.
+
+A test may begin from an explicit phenomenological hypothesis; a known new force or complete microscopic derivation is not required. The hypothesis must nevertheless map measurable source and probe properties to a falsifiable force prediction. Published force searches state the interaction and parameter assumptions under which their bounds apply. [8]
+
+| Required model record | Evidence or specification needed before release |
+| --- | --- |
+| Source and probe | Identify the physical source state, its units and spatial distribution, the property of the probe that responds, and the assumption connecting the measured RC voltage to that state. The voltage definition alone is insufficient. |
+| Interaction law | Provide an explicit force law or an interaction energy whose displacement derivative gives force. State direction, normalization, source and probe dependence, distance and orientation scaling, and the predicted effect of shielding. A constant κCM at an unspecified geometry is insufficient. |
+| Time response and parameters | Specify memory dynamics, propagation or response delays, parameter units and allowed ranges. Generate the predicted sensitive-axis signal through the calibrated sensor transfer. If amplitude is free, freeze a range to constrain; do not invent a lower bound. |
+| Discrimination and accounting | Specify at least one additional model-predicted contrast, such as separation, orientation or probe substitution, and conventional alternatives. Record the proposed energy source, reaction momentum and any unresolved dynamical completion; no energy-creation interpretation follows. |
+| Independent release | Archive the model, assumptions, prediction code and prospective parameter bounds with version and hashes. The laboratory lead, analysis lead and independent technical reviewer must approve testability and permitted interpretation before the full signed release. |
+
+The required physical mapping, interaction law and independent contrast are currently missing. This record is a specification task, not a completed model. The original κCM temporal ansatz must not be relabeled as an apparatus derivation merely by filling in κ numerically.
+
+### What calibration can establish
+
+The calibrated actuator supplies a known conventional force. Driving it with a waveform proportional to CM can validate the detector and analysis, but cannot establish the proposed interaction. Keep such injections separate from the scientific source, with independent calibration and blinded codes. Neither actuator recovery nor synthetic-data success satisfies Stage zero.
 
 ## Apparatus
 
@@ -58,16 +78,24 @@ These sample rates are starting choices for a seconds-scale response. Qualificat
 
 ## Stage one apparatus qualification
 
-Record a pilot plan before collection: configurations, calibrated injection levels, block counts, disturbance ranges and analysis-development limits. Pilot data may develop the apparatus and estimator, but never enter the confirmatory sample. Freeze the revised estimator before fresh qualification data; retain failed attempts and identify every revision.
+### Eight pair preliminary sensitivity screen
+
+After force calibration, run eight diagnostic pairs before the larger qualification blocks. Use the high and low conditioning histories, ending both at measured C ≈ 0 with the source driven. Balance four high-first and four low-first orders in a randomized sequence. Use the planned timing and final wiring. Report paired amplitude SD, drift and witness-channel pickup. The zero-history-force expectation is conditional on the proposed CM ansatz.
+
+For this screen and all zero-injection noise blocks, fit an independently fixed unit-force temporal template passed through the calibrated readout. Do not normalize by CΔM at C ≈ 0. Freeze the template and fit window before the screen; known-force injections establish its physical scale.
+
+Stop further bench work if faults or nuisance response exceed the prospectively agreed instrument feasibility limits. Otherwise proceed only to full qualification. Eight pairs do not certify a 2 µN SD: with independent normal pair amplitudes and observed SD 2 µN, the calculated 95% interval for the true SD is about 1.3–4.1 µN. This is an illustration, not measured performance. [7]
+
+Record all pilot configurations, injection levels, counts and disturbance ranges before collection. Pilot data never enter the confirmatory sample. Freeze the developed estimator before fresh qualification data; retain every failed attempt and revision. The eight-pair screen supplements the blocks below.
 
 | Qualification block | Required measurement |
 | --- | --- |
-| Baseline and drift | Initial planning count: 24 zero-injection paired blocks, 12 on each of two days, with phase histories disabled and powered conditions representative of the experiment. Repeat the full reset and acquisition cycle. Estimate paired amplitude spread, day drift, order effects and dependence between blocks. |
-| Physical injections | Preselect three traceably calibrated magnitudes spanning the prospective range, with six paired recoveries per sign and magnitude. Include 10 µN only if it can be generated and calibrated. Mask signs and magnitudes from the analyst. Report recovery bias, uncertainty and saturation; these counts support development, not a certified power claim. |
-| Nuisance transfer | With phase histories disabled, vary heating, electrical pickup, vibration, acoustic input and tilt separately across the operating envelope. Measure creep and settling. Then run controller shams and C = 0 endpoint controls; the latter execute actual phase histories and transitions through the final wiring, shielding and acquisition path. |
-| Fresh qualification | After freezing the candidate pipeline, acquire at least 12 fresh zero-injection control pairs across two days and repeat the selected blinded physical injections. Archive discrepancies. Freeze any required larger validation sample before collecting it; these small hardware samples cannot certify a 1% false-positive rate. |
+| Baseline and drift | After the eight-pair screen, plan 24 zero-injection pairs across two days, with phase histories disabled and representative powered conditions. Repeat the full cycle; estimate paired spread, day drift, order effects and dependence. |
+| Physical injections | Preselect three calibrated magnitudes over the prospective range; plan six paired recoveries per sign and magnitude. Include 10 µN only if it can be calibrated. Mask signs and magnitudes; report recovery bias, uncertainty and saturation. These are development counts, not certified power. |
+| Nuisance transfer | Separately vary heating, electrical pickup, vibration, acoustics and tilt across the envelope, with phase histories disabled. Measure creep and settling. Then run controller shams and driven C = 0 endpoint controls through the final installation. Eight passive pairs alone do not measure these transfer functions. |
+| Fresh qualification | Freeze the candidate pipeline, then collect at least 12 fresh zero-injection control pairs over two days and repeat selected blinded physical injections. Retain discrepancies. Freeze any larger sample in advance; a small physical pilot cannot certify a 1% false-positive rate. |
 
-Zero injection establishes no added calibration force; it does not prove the complete apparatus is free of forces. Document the null assumption for each control. Use dedicated disturbance calibration to estimate corrections. Do not learn nuisance coefficients from active high/low contrasts or subtract a history-correlated pilot residual as if its origin were known.
+Zero injection means no added calibration force, not an absence of all forces. Record each control’s null assumption. Estimate nuisance corrections from dedicated disturbance calibration, never from primary high/low contrasts or an unexplained history-correlated residual.
 
 ### Scientific target and demonstrated capability
 
@@ -102,7 +130,7 @@ The former schedule of 48 primary pairs over two days, plus 24 C = 0 and 24 cont
 
 HYP-001A reported 99.9% false positives for naive regression and 9.9% for nuisance-adjusted HAC regression at nominal 5% significance [2]. Those are synthetic results, not force measurements. Neither pipeline is qualified for this confirmatory experiment. Validate a newly frozen estimator before interpreting experimental residuals.
 
-Fit the signed force difference for each complete pair using the measured predictor X(t) = C<sub>H</sub>(t)M<sub>H</sub>(t) − C<sub>L</sub>(t)M<sub>L</sub>(t), passed through the calibrated sensor transfer. Fit a common coupling κ while retaining pair-specific predictor scales and uncertainties. Report amplitude A at the frozen reference C₁ΔM(0). A normalized amplitude fit is acceptable only if its conversion back to κ preserves those scales. Do not choose the decay time, band, fit window or nuisance terms from active force contrasts.
+After Stage zero, use the released interaction law to generate the signed force predictor for every pair and pass it through the calibrated sensor transfer. The simple X(t) = C<sub>H</sub>(t)M<sub>H</sub>(t) − C<sub>L</sub>(t)M<sub>L</sub>(t) form is valid only if that law justifies it in the frozen geometry. Retain pair-specific scales and uncertainty when fitting κ and reporting amplitude A. Any changed law or predictor requires new qualification and a new freeze before Stage two; do not select it from active force contrasts.
 
 Use randomization inference at the actual randomized unit, or a validated correlation-aware interval method. Preserve within-run and between-pair dependence and day structure; do not treat 200 Hz samples as replicates. Propagate force-scale, memory, transfer-function and nuisance uncertainty into each interval. Specify distributions, covariance assumptions and how bounded biases enter the interval. Shared drift and systematic uncertainty do not shrink merely by dividing by the square root of the number of pairs. [6]
 
@@ -120,14 +148,15 @@ Freeze all primary and control endpoints, multiplicity handling, exclusions, con
 
 | Outcome | Required interpretation |
 | --- | --- |
-| Null within the tested range | Calibration and controls pass. The combined systematic-inclusive 99% amplitude interval contains zero and lies wholly inside ±δ<sub>science</sub>, if a scientific threshold was specified. Otherwise report its numerical endpoints as a bound-setting result. Translate to a κ interval using measured predictor scale and uncertainty. Close only the excluded range in this recorded realization. |
+| Stage two not released | The source-to-probe interaction or required signatures are incomplete. Report specification incomplete and do not begin the force experiment. Instrument results may be reported separately. This is the present status, not a null result or a failure of EFMW. |
+| Null within the tested range | The released model, calibration and controls pass. The systematic-inclusive 99% amplitude interval contains zero and lies inside ±δ<sub>science</sub> if specified; otherwise report its endpoints as a bound-setting result. A κ bound requires the released physical mapping and predictor uncertainty. Exclude only the stated range of that model in this apparatus. |
 | Candidate positive | The frozen template fits a signed history-force difference and its systematic-inclusive 99% interval excludes zero on each separately calibrated day with the same sign. All controls, calibration and frozen decision gates pass. Report the amplitude and interval, including effects below A<sub>test</sub> or δ<sub>science</sub>; do not relabel them as target-sized results. |
 | Confirmed anomaly only | A separate operator and independently calibrated instrument reproduce the frozen effect and control behavior on new data. This supports an apparatus anomaly. An EFMW-specific interpretation still requires a defensible physical mapping, exclusion of conventional mechanisms and comparison with alternative models. |
 | Inconclusive | The interval cannot exclude the scientifically relevant range, required sensitivity or controls fail, the signal is confounded, or the physical interpretation remains unsupported. State which conclusion is UNRESOLVED. Report any valid apparatus-level interval separately; do not convert a failed quality gate into a physics bound. |
 
 ## When the experimentalist stops
 
-Before Stage two: stop if calibration, physical-injection recovery, analysis qualification, custodian independence or required signatures are missing. An unsupported memory mapping permits only an explicitly approved conditional RC search; it cannot be released as a definitive EFMW test. Freeze either a justified δ<sub>science</sub> or an explicit bound-setting objective.
+Before Stage two: stop if Stage zero is incomplete, or calibration, injection recovery, analysis qualification, custodian independence or signatures are missing. A fully specified phenomenological interaction may be tested with its assumptions explicit. An unspecified interaction cannot proceed merely under a conditional label. Freeze a justified δ<sub>science</sub> or a bound-setting objective for the released model.
 
 During qualification: stop advancement to Stage two if the chosen objective cannot be resolved, held-out validation fails, or a conventional effect is indistinguishable from the proposed template. Redesign or register a weaker bound-setting objective before new confirmatory data. A matching exponential is insufficient because force-sensor creep can also have exponential components. [3]
 
@@ -139,17 +168,17 @@ The confirmatory run count is fixed before collection. Do not stop when signific
 
 ## Bench release and independent custody
 
-Freeze this record after Stage one and obtain every signature before Stage two acquisition. All signatories must approve the same protocol version and hashes. Blank entries are not approvals. Deposit only a commitment hash of the secret randomization key until release.
+After Stages zero and one, all signatories must approve the same coupling model, protocol version and hashes before Stage two acquisition. Blank entries are not approvals. Publish only the secret key’s commitment hash before release.
 
 | Item | Record to freeze |
 | --- | --- |
 | Apparatus | Actual frequencies, amplitudes, loads, shielding, geometry and gap; sensor axis, stiffness and bandwidth; photographs and wiring; calibration traceability, uncertainty and safe operating range. |
-| Memory | Circuit-state definition; measured response and uncertainty; component IDs and reference voltage; evidence and assumptions for the M mapping; permitted claim scope and reviewer decision. |
+| Memory and coupling | Measured circuit response and uncertainty; component IDs and reference; complete Stage zero record including model, mapping, geometry, shielding response, independent contrast, predictor code and interpretation. |
 | Sensitivity | Paired spread and dependence; day drift; nuisance transfers and covariance; total uncertainty budget; measured injection recovery; δ<sub>science</sub> or bound-setting objective; D and A<sub>test</sub>; control equivalence and drift limits. |
-| Design | Exact primary and control counts by day; washout; assignment method; exclusions and stops; custodian identity; secret key location and hash; access restrictions; release procedure and timestamps. |
+| Design | Exact primary and control counts by day; washout; assignment; exclusions and stops; custodian identity; secret key location and hash; access restrictions; release procedure and timestamps. |
 | Analysis | Estimator, source and code hashes; fresh null and injection validation; interval and multiplicity rules; template, fit window and endpoint; immutable raw-data paths and checksums. |
 
-The custodian must be independent of Matthew Wright, hypothesis development and outcome analysis, with affiliations and conflicts recorded. Matthew cannot hold the key. Phase traces, capacitor voltage, predictor signs and injection metadata can reveal assignments: keep them with the custodian until release. The analyst receives coded force data and predeclared non-revealing quality summaries. An independent custodian or authorized runner executes the frozen code on complete records, seals all outputs and exclusions, then releases the key after the full run. Record any access breach and its effect on claim status.
+Name a custodian independent of Matthew Wright, hypothesis development and outcome analysis; disclose affiliations and conflicts. Matthew cannot hold the key. The custodian seals label-revealing phase, memory, predictor and injection records. Analysts receive coded forces and predeclared non-revealing quality summaries. An authorized independent runner executes frozen code on complete records and seals outputs and exclusions before key release after the full run. Log access breaches and their effect on claim status.
 
 ### Required approval record
 
@@ -157,9 +186,9 @@ The custodian must be independent of Matthew Wright, hypothesis development and 
 | --- | --- | --- |
 | Laboratory lead | Calibration, controls, operating envelope and feasibility | Unappointed |
 | Analysis lead | Frozen estimator, power, coverage and decision rule | Unappointed |
-| Independent technical reviewer | Memory mapping, uncertainty budget and permitted interpretation | Unappointed |
+| Independent technical reviewer | Complete coupling specification, testable contrasts, uncertainty and permitted interpretation | Unappointed |
 | Independent key custodian | Independence, access controls, commitment and key-release record | Unappointed |
-| Matthew Chenoweth Wright | Hypothesis, conditional scope and closure after a qualified null | Pending signature |
+| Matthew Chenoweth Wright | Hypothesis and model selection, conditional scope and closure after a qualified null | Pending signature |
 
 No appointment or engagement is assumed. Record key release separately after sealing results, exclusions and quality decisions.
 
@@ -176,3 +205,7 @@ No appointment or engagement is assumed. Record key release separately after sea
 [[5] NI  Anti aliasing filters and their usage](https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/analog-fundamentals/anti-aliasing-filters-and-their-usage-explained..html)
 
 [[6] NIST  Basic definitions of measurement uncertainty](https://physics.nist.gov/cuu/Uncertainty/basic.html)
+
+[[7] NIST  Standard deviation confidence limits](https://itl.nist.gov/div898/software/dataplot/refman1/auxillar/sdconfli.htm)
+
+[[8] Eöt-Wash  Results and interaction assumptions for force limits](https://www.npl.washington.edu/eotwash/results)
