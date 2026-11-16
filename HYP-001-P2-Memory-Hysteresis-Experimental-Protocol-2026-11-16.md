@@ -1,18 +1,18 @@
-# EFMW memory hysteresis force experiment
+# EFMW force experiment feasibility and model development
 
-**Publication status: proposed bench protocol v0.4; coupling specification INCOMPLETE; Stage two NOT RELEASED; screen and experiment NOT RUN; physical coupling UNRESOLVED.**
+**Publication status: feasibility protocol v0.5; EFMW force derivation INCOMPLETE; Stage two NOT RELEASED; screen and experiment NOT RUN. Instrument feasibility is a separately scoped service; no laboratory engagement is established.**
 
-[Download the revised Word protocol](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.docx) · [Papers index](README.md)
+[Download the revised Word protocol](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.docx) · [Screen arithmetic calculator](HYP-001-P2/screen_decision.py) · [Papers index](README.md)
 
-**Revision v0.4 — 16 November 2026.** Supersedes [v0.3](https://github.com/enuminous/papers/blob/1659cca7bfbb35b1cb0b841bd2a205af7084cd6a/HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md) and makes the response to Boardy’s recommendations explicit. For the original 10 µN planning option, an eight-pair driven C ≈ 0 screen with observed paired SD above 2 µN stops that plan before the full run; passing advances only to full qualification. The ceiling is an early feasibility rule for that option, not a certified noise floor or a universal scientific threshold. A new pilot record requires actual noise, nuisance transfer, uncertainty and a signed decision before committing to Stage two. The missing coupling specification still blocks Stage two, and P1 does not supply the missing interaction. Independent custody and the full signed release remain required.
+**Revision v0.5 — 16 November 2026.** Corrects and supersedes [v0.4](https://github.com/enuminous/papers/blob/1b9ce6da996e328247b03c3e3093b03403e673c2/HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md). The point-estimate screen rule is withdrawn: the one-sided 95% upper bound on paired SD must be strictly below 2 µN, with justified sampling assumptions and acceptable nuisance checks. Stage zero now requires six defined evidence checks, including derivation, physical accounting, independent replay and discrimination; a reviewer cannot waive them. The missing force law is an unfinished theory output. A bounded instrument feasibility package can be quoted and completed separately, including a negative result, without claiming an EFMW test. The calculator checks conditional arithmetic only; it cannot verify the noise model or release Stage two.
 
-HYP-001 P2  |  Proposed bench protocol v0.4  |  16 November 2026
+HYP-001 P2  |  Feasibility protocol v0.5  |  16 November 2026
 
-Prepared for Matthew Chenoweth Wright and a prospective experimental physics laboratory. Status: coupling specification incomplete; Stage two is not released. Stage one can characterize instruments and conventional disturbances. A force experiment requires a specified interaction model, measured sensitivity, independent review and a signed freeze. No physical signal or laboratory engagement is established.
+Prepared for Matthew Chenoweth Wright and a prospective experimental physics laboratory. The current laboratory request is a bounded instrument feasibility study. An EFMW force test is deferred because its physical coupling prediction has not been derived. This revision defines the theory deliverable, objective review criteria and a conservative sensitivity screen. No screen, physical experiment, laboratory appointment or approval is established.
 
 ## Choice and bounded claim
 
-P2 compares different histories at identical present drive and may reuse a P1 force apparatus. Its cost advantage remains conditional on a testable coupling model and suitable force metrology. P3 requires a closed energy budget and P4 requires quantum hardware. This document is a qualification plan with a deferred force experiment, not a demonstrated cheapest decisive EFMW test.
+P2 compares different histories at identical present drive and could reuse a P1 force apparatus. Neither proposal yet supplies the physical coupling needed for a decisive EFMW test. P3 needs a closed energy budget and P4 needs quantum hardware. The work available to scope now is instrument feasibility and model development; no claim that P2 is the cheapest decisive physical test is supported.
 
 The proposed observable is the difference between high-history and low-history force residuals after both reach coherence C₁ = 0.5. The HYP-001 ansatz supplies the following temporal template [1]. It becomes an apparatus prediction only if a specified source-to-probe interaction justifies this form:
 
@@ -20,7 +20,7 @@ $$
 \Delta F(t)=A e^{-t/\tau_M}, \qquad A=\kappa C_1\Delta M(0).
 $$
 
-The model supplies no measured κ, lower bound on its magnitude or derived physical timescale. The 10 µN value remains illustrative. Until Stage zero is complete, a force interval cannot be interpreted as an EFMW coupling bound. After model release, a null can exclude only the stated parameter range of that interaction in the recorded apparatus.
+The ansatz supplies no measured κ, lower bound on its magnitude or derived physical timescale. The 10 µN value remains a planning option. The required source-to-probe force prediction is a research output still to be produced, not a premise established by this protocol. Until that output is complete, instrument intervals cannot be reported as EFMW coupling limits. Even later, a null excludes only a specified parameter range.
 
 ## Physical meaning of memory
 
@@ -32,25 +32,44 @@ For four measured oscillator phases, C is the squared magnitude of their mean un
 
 An unspecified interaction does not logically guarantee zero measured force. It leaves the physical interpretation and the hypothesis excluded by a null undefined. The RC decay remains ordinary circuit behavior. The proposed additional mechanical interaction has not been specified sufficiently to release Stage two.
 
-## Stage zero specify the physical coupling
+## Work that a laboratory can quote now
 
-Current status: NOT MET. No source-to-probe interaction model is established by this protocol. Do not commission or begin Stage two as an EFMW test until the following record is complete. Stage one alone may be scoped as instrument qualification.
+Request a quote for the first package below, with a separate option for further qualification. Neither package depends on a new interaction existing. The theory work is commissioned separately from bench work; completing its report may leave Stage two blocked. A quotation is not a laboratory engagement or an authorization to spend.
 
-A test may begin from an explicit phenomenological hypothesis; a known new force or complete microscopic derivation is not required. The hypothesis must nevertheless map measurable source and probe properties to a falsifiable force prediction. Published force searches state the interaction and parameter assumptions under which their bounds apply. [8]
-
-| Required model record | Evidence or specification needed before release |
+| Package | Scope and completion evidence |
 | --- | --- |
-| Source and probe | Identify the physical source state, its units and spatial distribution, the property of the probe that responds, and the assumption connecting the measured RC voltage to that state. The voltage definition alone is insufficient. |
-| Interaction law | Provide an explicit force law or an interaction energy whose displacement derivative gives force. State direction, normalization, source and probe dependence, distance and orientation scaling, and the predicted effect of shielding. A constant κCM at an unspecified geometry is insufficient. |
-| Time response and parameters | Specify memory dynamics, propagation or response delays, parameter units and allowed ranges. Generate the predicted sensitive-axis signal through the calibrated sensor transfer. If amplitude is free, freeze a range to constrain; do not invent a lower bound. |
-| Discrimination and accounting | Specify at least one additional model-predicted contrast, such as separation, orientation or probe substitution, and conventional alternatives. Record the proposed energy source, reaction momentum and any unresolved dynamical completion; no energy-creation interpretation follows. |
-| Independent release | Archive the model, assumptions, prediction code and prospective parameter bounds with version and hashes. The laboratory lead, analysis lead and independent technical reviewer must approve testability and permitted interpretation before the full signed release. |
+| A Instrument feasibility | Check the candidate force readout and traceable scale, record the fixed template and statistical assumptions, then acquire eight driven C ≈ 0 pairs if calibration is valid. Deliver all raw traces, calibration uncertainty, paired amplitudes, s₈, U₀.₉₅, witness channels and the screen decision. If work stops early, deliver the failed check and available data. |
+| B Optional qualification | Price separately the existing zero-injection, physical-injection and deliberate disturbance blocks. Deliver measured nuisance transfer, drift, recovery, uncertainty and attainable sensitivity. This option requires a new written scope after Package A; it does not authorize a confirmatory EFMW run. |
+| C Theory development | Produce a source-to-probe model paper and executable predictions satisfying G1–G6 below, or a documented non-closure identifying the missing step. The coupling derivation belongs to the theory work, not to the laboratory’s acceptance of Package A. No model or completion date is promised. |
 
-The physical mapping, interaction law and independent contrast are currently missing. This is a specification task, not a completed model. The same missing coupling specification also limits P1; reusing its apparatus does not resolve it. The κCM temporal ansatz must not be relabeled as an apparatus derivation by filling in κ numerically.
+### Completion and permission to proceed
+
+Package A is complete when the agreed records and a signed decision are delivered, including a negative or incomplete screen. A scientifically useful failure is not a failed service delivery. Acceptance of the report does not mean the instrument met the noise criterion. Package B is complete when its specified calibration and uncertainty results are delivered, even if the proposed force sensitivity proves unattainable.
+
+The quotation must state the apparatus and configuration, operator, included calibration work, cost or cost ceiling, time ceiling, stop conditions, data ownership and delivery format. Those commercial fields remain unfilled. Do not purchase a 96-pair run on the strength of a quotation, a screen pass or a reviewer’s general approval.
+
+The EFMW physical test is currently not ready to commission. An exploratory search using an independently postulated force law would need its own hypothesis label and prospective protocol; it cannot substitute for the missing EFMW prediction. No exploratory force run is authorized by this document.
+
+## Stage zero theory output and release criteria
+
+Current status: UNRESOLVED. Stage two is not released. G1–G6 must each be MET with the evidence below. A missing artifact is UNRESOLVED; a demonstrated inconsistency is FAIL. Six MET entries permit EFMW model handoff. Instrument feasibility remains separately commissionable. Handoff establishes a testable specification, not a real force or a confirmed EFMW claim.
+
+The model paper is a required research output. Pin the EFMW equations used and show the steps connecting them to this apparatus. Label every added constitutive or bridge assumption. Merely postulating κCM, or programming an actuator to follow it, does not supply the derivation. A separate phenomenological hypothesis may motivate other research; it is not a completed EFMW derivation. [1, 8]
+
+| Check | MET only when the following evidence is present |
+| --- | --- |
+| G1 Physical mapping | The paper defines the source state, memory carrier, probe property, units and spatial support. A dimensional calculation maps measured voltages and phases to those quantities; no unidentified state is hidden in κ. |
+| G2 Derived observable | An explicit derivation from the pinned premises produces the sensitive-axis force or interaction energy, including geometry, distance, direction, shielding and time response. Every extra assumption is identified. A new force postulate must be labeled as a separate hypothesis, not marked as a derivation. |
+| G3 Physical accounting | The same model identifies the energy source, reaction degrees of freedom and mechanical power over its parameter range. Its energy and momentum balance is shown, including a declared approximation and error bound. Unclosed accounting cannot support an energy-creation claim or a MET entry. |
+| G4 Independent replay | Archive code, inputs and expected force traces for null, active and changed-geometry cases. Divide every trace by the same declared nonzero reference force. An independent runner reproduces each normalized sample within absolute error 10⁻⁶, with a run log and hashes. A zero active template fails. |
+| G5 Discrimination | Specify an additional contrast and its predicted sign or ratio. Stack planned-condition templates; normalize each nonzero column to unit Euclidean norm. Adding the model column to the declared nuisance matrix must increase rank at SVD tolerance 10⁻⁶ times its largest singular value. Archive matrices and singular values. Physical resolvability remains a Stage-one requirement. |
+| G6 Falsifiable scope | Freeze the parameter domain, observable, null range and interpretation for a positive, null or ambiguous result. State exactly which finite parameter range can be excluded and which claims cannot. An amplitude with no lower bound cannot make every null a falsification of EFMW. |
+
+The independent reviewer records one status per check with an artifact path, equation or run-log locator and a reason. The reviewer cannot waive a check. Conflicting reviews remain UNRESOLVED with the disputed check identified. The release rule is the conjunction of G1–G6, followed separately by full instrument and analysis qualification and the named signatures. All six checks are currently UNRESOLVED; P1 does not close them.
 
 ### What calibration can establish
 
-The calibrated actuator supplies a known conventional force. Driving it with a waveform proportional to CM can validate the detector and analysis, but cannot establish the proposed interaction. Keep such injections separate from the scientific source, with independent calibration and blinded codes. Neither actuator recovery nor synthetic-data success satisfies Stage zero.
+A calibrated actuator establishes known conventional force and detector recovery. Driving it with CM validates the measurement chain only. Keep injections separate from the scientific source and independently calibrated. Synthetic-data success and actuator recovery cannot satisfy the theoretical derivation or demonstrate a new interaction.
 
 ## Apparatus
 
@@ -76,17 +95,35 @@ The 10 g mass has approximately 98 mN vertical weight; that ratio alone does not
 
 These sample rates are starting choices for a seconds-scale response. Qualification determines the final bandwidth, anti-alias rejection, settling and fit window. The statistical unit is a complete randomized history pair, not each 200 Hz sample. Freeze a revised schedule if the independently measured circuit time differs from 2 s.
 
-## Stage one apparatus qualification
+## Stage one conservative eight pair screen
 
-### Eight pair preliminary sensitivity screen
+### Decision rule for the original 10 µN option
 
-After force calibration, run eight diagnostic pairs before the larger qualification blocks. Use the high and low conditioning histories, ending both at measured C ≈ 0 with the source driven. Balance four high-first and four low-first orders in a randomized sequence. Use the planned timing and final wiring. Report paired amplitude SD, drift and witness-channel pickup. The zero-history-force expectation is conditional on the proposed CM ansatz.
+After valid force calibration, acquire exactly eight diagnostic pairs in the fixed configuration. Use high and low conditioning histories, ending both at measured C ≈ 0 with the source driven. Randomize four high-first and four low-first orders. Keep the planned timing and final wiring. The zero-history-force expectation is conditional on the CM ansatz; this is instrument characterization, not an EFMW null experiment.
 
-For this screen and all zero-injection noise blocks, fit an independently fixed unit-force temporal template passed through the calibrated readout. Do not normalize by CΔM at C ≈ 0. Freeze the template and fit window before the screen; known-force injections establish its physical scale.
+Fit a fixed unit-force temporal template through the calibrated readout and compute the sample SD s₈ of the eight paired force amplitudes in µN, with divisor seven. Do not divide by CΔM at C ≈ 0. Freeze the template and fit window before acquisition. Let U₀.₉₅ denote the one-sided 95% upper confidence bound on the true paired SD σ. [7]
 
-For the original 10 µN planning option, stop after this screen if paired SD s₈ > 2 µN or a frozen nuisance limit fails; do not start the full confirmatory schedule. A screen pass permits further qualification only. Eight pairs cannot certify the true SD: for independent normal pair amplitudes with observed SD 2 µN, the calculated 95% interval is about 1.3–4.1 µN. This is illustrative, not measured performance. Complete the pilot decision record below. [7]
+Advance only if U₀.₉₅ < 2 µN and the predeclared nuisance and data-quality limits pass. Equality does not pass. Stop the original planning option if a valid bound is at least 2 µN. If the bound is not justified or data are incomplete, record UNRESOLVED and do not advance. A pass permits full qualification only; it never releases Stage two.
 
-Record all pilot configurations, injection levels, counts and disturbance ranges before collection. Pilot data never enter the confirmatory sample. Freeze the developed estimator before fresh qualification data; retain every failed attempt and revision. The eight-pair screen supplements the blocks below.
+$$
+U_{0.95}(\sigma)=s_8\sqrt{\frac{7}{\chi^2_{0.05,7}}}\approx1.7971507317\,s_8.
+$$
+
+For eight independent normal paired amplitudes, divide seven by the lower 5th percentile of chi-square with seven degrees of freedom, 2.1673499093, then take the square root. Thus the strict criterion is s₈ < 1.1128727072 µN. Use the full-precision calculation in the companion arithmetic script; the rounded figures here are explanatory. [7]
+
+| Illustration | Bound and decision under the stated assumptions |
+| --- | --- |
+| Observed s₈ = 1 µN | U₀.₉₅ ≈ 1.797 µN. Meets the noise criterion; nuisance checks and all later qualification remain required. |
+| Observed s₈ = 2 µN | U₀.₉₅ ≈ 3.594 µN. Does not pass. The earlier 1.3–4.1 µN interval was two-sided 95%; its upper endpoint is not this one-sided bound. |
+| True σ = 2 µN | For a single valid screen the corrected noise criterion passes with probability 5%, compared with about 57% for s₈ ≤ 2 µN. These are calculated properties, not measured bench performance. |
+
+The chi-square rule requires independent normal paired amplitudes with one stable variance. Justify those assumptions before the screen from the measurement model and independent calibration history; eight observations cannot establish them. Correlation, changing variance or non-normal tails invalidate this particular bound. Do not invent effective degrees of freedom or use an unqualified eight-point bootstrap. The stated factor treats the calibrated force scale as fixed; material scale uncertainty requires a validated joint upper bound, otherwise record UNRESOLVED.
+
+One screen applies to one frozen configuration. Preserve every result; no extra pairs, selective replacement or repeat-until-pass. A redesigned apparatus requires a new prospective record and disclosure of prior attempts. Do not aggregate repeated attempts into a claim of a 5% overall false-clearance risk. The small screen deliberately requires a margin below the 2 µN ceiling.
+
+## Full apparatus qualification
+
+Begin this work only under the separate qualification scope. For the original 10 µN option, the valid upper-bound screen must pass first. Record all configurations, injections, counts and disturbance ranges before collection. Pilot data never enter the confirmatory sample. Freeze the developed estimator before fresh qualification; retain every failed attempt and revision. An alternative bound-setting study requires a new prospective scope, not a relabeled screen failure.
 
 | Qualification block | Required measurement |
 | --- | --- |
@@ -117,7 +154,7 @@ For C = 0.5, starting tolerances are measured coherence within ±0.01 and per-ch
 
 ## Confirmatory sample and control allocation
 
-The former 96-pair schedule (48 primary, 24 C = 0 and 24 controller-sham pairs) remains a planning example. It must not start before the eight-pair screen, full qualification and Stage zero release. After qualification, freeze exact counts, day and order allocation, and resource limits. Size the complete decision rule for both signs at A<sub>test</sub>, including same-sign effects on each day. Require at least two separately calibrated days. A pooled 48-pair calculation does not establish power for each day.
+The former 96-pair schedule (48 primary, 24 C = 0 and 24 controller-sham pairs) remains an example. It cannot start before G1–G6 are MET, the applicable upper-bound screen passes, full qualification succeeds and all release signatures are recorded. Freeze exact counts, day and order allocation, and resource limits prospectively. Size the complete rule for both signs at A<sub>test</sub>, including same-sign effects on at least two separately calibrated days; pooled 48-pair power does not establish each day’s power.
 
 | Control | What it must establish |
 | --- | --- |
@@ -130,13 +167,13 @@ The former 96-pair schedule (48 primary, 24 C = 0 and 24 controller-sham pairs) 
 
 HYP-001A reported 99.9% false positives for naive regression and 9.9% for nuisance-adjusted HAC regression at nominal 5% significance [2]. Those are synthetic results, not force measurements. Neither pipeline is qualified for this confirmatory experiment. Validate a newly frozen estimator before interpreting experimental residuals.
 
-After Stage zero, use the released interaction law to generate the signed force predictor for every pair and pass it through the calibrated sensor transfer. The simple X(t) = C<sub>H</sub>(t)M<sub>H</sub>(t) − C<sub>L</sub>(t)M<sub>L</sub>(t) form is valid only if that law justifies it in the frozen geometry. Retain pair-specific scales and uncertainty when fitting κ and reporting amplitude A. Any changed law or predictor requires new qualification and a new freeze before Stage two; do not select it from active force contrasts.
+After the model handoff, generate each signed force predictor from the released law and pass it through the calibrated sensor transfer. X(t) = C<sub>H</sub>(t)M<sub>H</sub>(t) − C<sub>L</sub>(t)M<sub>L</sub>(t) is valid only if the derivation justifies it in the frozen geometry. Retain pair-specific scales and uncertainty. Any changed law, added assumption or predictor must repeat affected G1–G6 checks and qualification before new confirmatory acquisition; do not choose it from active force contrasts.
 
 Use randomization inference at the actual randomized unit, or a validated correlation-aware interval method. Preserve within-run and between-pair dependence and day structure; do not treat 200 Hz samples as replicates. Propagate force-scale, memory, transfer-function and nuisance uncertainty into each interval. Specify distributions, covariance assumptions and how bounded biases enter the interval. Shared drift and systematic uncertainty do not shrink merely by dividing by the square root of the number of pairs. [6]
 
 Run at least 10,000 fresh synthetic null repetitions for each declared stress family: drift, thermal lag, crosstalk, imperfect nuisance sensors, order effects and between-pair dependence. Validate the complete frozen decision rule, not only an isolated regression test. Require a one-sided 95% upper confidence bound on false-positive probability ≤1%, and a 95% lower bound on power ≥90% for each sign at ±A<sub>test</sub>. Use fresh injected repetitions for power, with counts frozen in advance. Include uncertainty in pilot-derived noise and nuisance parameters. Synthetic qualification does not establish that all physical confounders are represented.
 
-Conditional planning example: if 48 independent paired amplitudes actually have SD 2 µN, their mean has standard error about 0.29 µN and an ideal normal 99% random-error half-width about 0.74 µN. These exclude systematic uncertainty and separate day tests. The 2 µN screen ceiling in v0.4 is an early feasibility rule for the original 10 µN planning option, not a certified noise floor or a universal scientific threshold. Full qualification must include uncertainty in measured noise and support the frozen A<sub>test</sub>, control bounds and objective.
+Conditional planning example: 48 independent paired amplitudes with true SD 2 µN give standard error about 0.29 µN and an ideal normal 99% random-error half-width about 0.74 µN. These exclude systematic uncertainty and separate day tests. Version 0.5 replaces the point-estimate screen with U₀.₉₅ < 2 µN for the original planning option. Full qualification must still include uncertainty in noise, nuisance transfer and drift; a screen pass is not a power calculation.
 
 Calibrate interval coverage at zero and across the proposed coupling range, and check robustness to model misspecification. Keep analysis-development, synthetic validation, physical calibration and confirmatory data identifiable and separate. If validation fails, revise the estimator and use new validation data. Do not reuse failed validation outcomes to claim an unchanged preregistered pass.
 
@@ -148,7 +185,7 @@ Freeze all primary and control endpoints, multiplicity handling, exclusions, con
 
 | Outcome | Required interpretation |
 | --- | --- |
-| Stage two not released | The source-to-probe interaction or required signatures are incomplete. Report specification incomplete and do not begin the force experiment. Instrument results may be reported separately. This is the present status, not a null result or a failure of EFMW. |
+| Stage two not released | Any G1–G6 check, required qualification or signature is incomplete. Do not begin the EFMW force experiment. Instrument feasibility and theory non-closure reports may be delivered separately. This is the current status, not a physical null or a failure of EFMW. |
 | Null within the tested range | The released model, calibration and controls pass. The systematic-inclusive 99% amplitude interval contains zero and lies inside ±δ<sub>science</sub> if specified; otherwise report its endpoints as a bound-setting result. A κ bound requires the released physical mapping and predictor uncertainty. Exclude only the stated range of that model in this apparatus. |
 | Candidate positive | The frozen template fits a signed history-force difference and its systematic-inclusive 99% interval excludes zero on each separately calibrated day with the same sign. All controls, calibration and frozen decision gates pass. Report the amplitude and interval, including effects below A<sub>test</sub> or δ<sub>science</sub>; do not relabel them as target-sized results. |
 | Confirmed anomaly only | A separate operator and independently calibrated instrument reproduce the frozen effect and control behavior on new data. This supports an apparatus anomaly. An EFMW-specific interpretation still requires a defensible physical mapping, exclusion of conventional mechanisms and comparison with alternative models. |
@@ -156,7 +193,7 @@ Freeze all primary and control endpoints, multiplicity handling, exclusions, con
 
 ## When the experimentalist stops
 
-Before Stage two: stop if Stage zero is incomplete, or calibration, injection recovery, analysis qualification, custodian independence or signatures are missing. A fully specified phenomenological interaction may be tested with its assumptions explicit. An unspecified interaction cannot proceed merely under a conditional label. Freeze a justified δ<sub>science</sub> or a bound-setting objective for the released model.
+Before Stage two: require every G1–G6 check to be MET, the applicable upper-bound screen to pass, and calibration, recovery, analysis qualification, independent custody and signatures to be complete. A model paper is a research output, not something a laboratory reviewer supplies by approval. An independently postulated force search needs its own hypothesis and protocol. Freeze a justified δ<sub>science</sub> or a finite bound-setting objective.
 
 During qualification: stop advancement to Stage two if the chosen objective cannot be resolved, held-out validation fails, or a conventional effect is indistinguishable from the proposed template. Redesign or register a weaker bound-setting objective before new confirmatory data. A matching exponential is insufficient because force-sensor creep can also have exponential components. [3]
 
@@ -168,13 +205,13 @@ The confirmatory run count is fixed before collection. Do not stop when signific
 
 ## Bench release and independent custody
 
-After Stages zero and one, all signatories must approve the same coupling model, protocol version and hashes before Stage two acquisition. Blank entries are not approvals. Publish only the secret key’s commitment hash before release.
+Stage two release requires six MET model checks, completed instrument and analysis qualification, and approval of the same version and hashes by every named signatory. A general endorsement cannot waive a criterion. Blank entries are not approvals. Publish only the secret key’s commitment hash before release.
 
 | Item | Record to freeze |
 | --- | --- |
 | Apparatus | Actual frequencies, amplitudes, loads, shielding, geometry and gap; sensor axis, stiffness and bandwidth; photographs and wiring; calibration traceability, uncertainty and safe operating range. |
-| Memory and coupling | Measured circuit response and uncertainty; component IDs and reference; complete Stage zero record including model, mapping, geometry, shielding response, independent contrast, predictor code and interpretation. |
-| Sensitivity | Paired spread and dependence; day drift; nuisance transfers and covariance; total uncertainty budget; measured injection recovery; δ<sub>science</sub> or bound-setting objective; D and A<sub>test</sub>; control equivalence and drift limits. |
+| Memory and coupling | Measured circuit response and uncertainty; G1–G6 model paper, mapping, derivation, conservation calculation, fixtures, independent replay, discrimination matrices, parameter domain and permitted interpretation. |
+| Sensitivity | Screen s₈ and U₀.₉₅, assumption record and decision; paired dependence, drift, nuisance covariance, total uncertainty, injection recovery, δ<sub>science</sub> or bound-setting objective, D and A<sub>test</sub>, and control limits. |
 | Design | Exact primary and control counts by day; washout; assignment; exclusions and stops; custodian identity; secret key location and hash; access restrictions; release procedure and timestamps. |
 | Analysis | Estimator, source and code hashes; fresh null and injection validation; interval and multiplicity rules; template, fit window and endpoint; immutable raw-data paths and checksums. |
 
@@ -186,7 +223,7 @@ Name a custodian independent of Matthew Wright, hypothesis development and outco
 | --- | --- | --- |
 | Laboratory lead | Calibration, controls, operating envelope and feasibility | Unappointed |
 | Analysis lead | Frozen estimator, power, coverage and decision rule | Unappointed |
-| Independent technical reviewer | Complete coupling specification, testable contrasts, uncertainty and permitted interpretation | Unappointed |
+| Independent technical reviewer | G1–G6 evidence locators, statuses and independent replay; no discretionary waivers | Unappointed |
 | Independent key custodian | Independence, access controls, commitment and key-release record | Unappointed |
 | Matthew Chenoweth Wright | Hypothesis and model selection, conditional scope and closure after a qualified null | Pending signature |
 
@@ -206,31 +243,31 @@ No appointment or engagement is assumed. Record key release separately after sea
 
 [[6] NIST  Basic definitions of measurement uncertainty](https://physics.nist.gov/cuu/Uncertainty/basic.html)
 
-[[7] NIST  Standard deviation confidence limits](https://itl.nist.gov/div898/software/dataplot/refman1/auxillar/sdconfli.htm)
+[[7] NIST  One sided and two sided confidence limits for standard deviation](https://www.itl.nist.gov/div898/handbook/prc/section2/prc231.htm)
 
 [[8] Eöt-Wash  Results and interaction assumptions for force limits](https://www.npl.washington.edu/eotwash/results)
 
-## Boardy recommendations and pilot record
+## Review recommendations and pilot record
 
-The following record connects Boardy’s recommendations to the protocol. A written requirement is not a completed measurement or an approval. No laboratory engagement or endorsement is implied.
+The record below includes the correction to v0.4’s point-estimate gate and the requirement for objective model handoff. Laboratory feasibility is a separate deliverable. No completed measurement, theory derivation or approval is claimed.
 
 | Recommendation | Protocol response | Evidence status |
 | --- | --- | --- |
-| Identify physical memory | Measure circuit response separately. Stage zero requires the physical carrier and the assumption connecting voltage to interaction-producing memory. | Mapping unresolved |
-| Specify the coupling path | Require source and probe properties, a force law, geometry and shielding response, a discriminating contrast and energy accounting before Stage two. P1 has the same gap. | Stage two blocked |
-| Measure sensitivity first | Eight driven C ≈ 0 pairs precede full qualification. For the original 10 µN option, observed SD above 2 µN stops that plan before a full run. | Screen not run |
-| Report real noise and nuisance transfer | Report measured SD with uncertainty, calibrated disturbance transfer and detectable amplitude D. State a weaker attainable bound honestly; retain the original scientific threshold. | Not measured |
-| Independent custody and freeze | Matthew cannot hold the key. Name the custodian and laboratory, analysis and independent-review signatories in the approval record before acquisition. | Unappointed |
+| Identify physical memory | G1 requires a physical carrier and dimensional mapping. An independently measured RC time does not identify physical memory. | Mapping unresolved |
+| Specify the coupling path | The model paper must satisfy G1–G6. The reviewer checks identified artifacts and replay results; no criterion may be waived. Theory non-closure is an allowed deliverable. | Stage two blocked |
+| Measure sensitivity first | Eight driven C ≈ 0 pairs precede qualification. Advance only with a justified one-sided upper 95% bound U₀.₉₅ < 2 µN and acceptable nuisance checks; s₈ alone cannot pass. | Screen not run |
+| Report real noise and nuisance transfer | A bounded instrument report can be commissioned without an EFMW law. Report actual noise, nuisance transfer and attainable sensitivity; do not call a capability estimate a physics bound. | Not measured |
+| Independent custody and freeze | Matthew cannot hold the key. Record G1–G6 evidence and all named signatures before Stage two acquisition. | Unappointed |
 
 ### Required pilot decision record
 
-Before the screen, record the force template, window, nuisance limits and 2 µN ceiling. Compute s₈ from all eight paired force amplitudes in µN using the sample SD with divisor seven. Report the mean and uncertainty too. Invalid data give an incomplete screen; do not replace pairs selectively or repeat until a pass.
+Before the screen, freeze its configuration, force template, window, nuisance limits and the independent normal-noise assumption record. Use all eight valid amplitudes with divisor seven; record U₀.₉₅ and its method. Missing justification gives UNRESOLVED, not permission to use s₈ instead. Invalid data give an incomplete screen; preserve all attempts.
 
 | Record | Required entry before a laboratory commits to Stage two |
 | --- | --- |
-| Screen result | Eight amplitudes, order, timestamps, raw-data and code hashes; mean, s₈, SD interval and dependence assessment. Current entry: NOT MEASURED. |
+| Screen result | Eight amplitudes, order, timestamps, raw-data and code hashes; mean, s₈, one-sided U₀.₉₅, assumption record and quality checks. Current entry: NOT MEASURED. |
 | Nuisance result | Dedicated perturbation ranges, transfer estimates and uncertainty; residual force budget and drift. Eight passive pairs do not supply this. Current entry: NOT MEASURED. |
-| Capability and scope | D with uncertainty, injection recovery, objective and proposed counts. Convert a force interval to κ only after the model and normalization are released. Current entry: NOT QUALIFIED. |
-| Decision and signatures | STOP ORIGINAL PLAN, PROCEED TO QUALIFICATION, or INCOMPLETE; reason, operator, lab lead and date. Stage two also requires the separate full signed release. Current entry: INCOMPLETE. |
+| Capability and scope | D and uncertainty, recovery and proposed counts. A κ limit requires all model checks and qualified normalization. Feasibility may be reported without that model. Current entry: NOT QUALIFIED. |
+| Decision and signatures | STOP ORIGINAL PLAN, PROCEED TO QUALIFICATION, or UNRESOLVED; criterion, evidence, operator, lab lead and date. Stage two separately requires G1–G6, qualification and full signed release. Current entry: UNRESOLVED. |
 
-For example, s₈ = 5 µN stops the original plan before any confirmatory run. Redesign or register a separately scoped bound-setting study prospectively; preserve the failed screen and do not relabel its noise as an achieved physics bound.
+For example, s₈ = 2 µN now stops the original plan because U₀.₉₅ ≈ 3.594 µN. Deliver that result as an instrument finding. A redesigned apparatus or different bound-setting objective needs a new prospective scope. No measurement service can stand in for the unfinished EFMW force derivation.
