@@ -35,6 +35,8 @@ For the network-wide subject menu and evidence boundaries, start with the [EFMW 
 4. [On Introspective Machines](On-Introspective-Machines-2026-11-13.md) — conceptual essay on auditability and mechanistic self-correction.
 5. [INT-001 benchmark protocol](EFMW-INT-001-Preregistered-Audit-Benchmark-Protocol-2026-11-13.md) — draft 300-item confirmatory protocol. [Pilot 60](research/efmw-int-001-pilot-60/README.md) is a frozen, public-label construction corpus. Construction PASS. Four-arm performance UNRESOLVED / NOT RUN.
 
+**HYP-001 P2 experimental follow-up (16 November):** [Memory hysteresis force protocol](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md) · [Word document](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.docx). Proposed apparatus, acquisition schedule, matched-history controls, null/positive criteria and stopping rules. **Experiment NOT RUN; physical coupling UNRESOLVED.**
+
 **Action-to-observable follow-up (14 November):** [C1-OBS-001](EFMW-C1-OBS-001-From-Action-to-Observable-2026-11-14.md) derives an optical response from an existing C1 coupling and records its equivalence to the generic scalar–photon model. [Code, results and assumptions](research/efmw-c1-obs-001/README.md).
 
 
@@ -92,6 +94,8 @@ These links open the GitHub source file, **not a running simulator**. See each r
 Research papers, proposals, theorem discussions and experimental plans. Browse the source documents below. The [interactive lab](index.html) can be downloaded and opened locally; this repository does not currently have GitHub Pages enabled.
 
 ## Documents
+
+- **[HYP-001 P2 — Memory Hysteresis Force Experiment](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md)** · [Word protocol](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.docx) — 16 November 2026. Proposed matched-history bench test with apparatus, sample rates, calibration gates, bounded null and positive criteria, and stopping rules. **NOT RUN: the 10 µN target and nominal two-second memory are design choices; analysis qualification and physical coupling remain unresolved.**
 
 - **[UNITY-001 — Source Derivation and Stationary Gravity Gate](research/unity-001/source-screen/README.md)** · [Reproduction script](research/unity-001/source-screen/screen.py) · [Results](research/unity-001/source-screen/results.json) — 16 November 2026. Derives the SI initial energy density of a pinned C1 free scalar branch. The isolated static solution is zero under the stated boundary conditions. Conventional Einstein–Klein–Gordon theory gives the same stress and response in this branch. **Physical prediction remains unresolved.**
 
@@ -340,5 +344,6 @@ These links provide direct access to nested reports, protocols, source snapshots
 
 > **Interpretation:** Cross-links represent research dependencies and comparisons. The Standard Model and continuum gravity are inputs in current QST calculations; their emergence from Base888 and the physical status of the pressure cycle remain **UNRESOLVED**.
 <!-- ENUMINOUS-RESEARCH-CHAIN:END -->
+
 
 
