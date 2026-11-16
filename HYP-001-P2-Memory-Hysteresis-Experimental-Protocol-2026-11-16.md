@@ -1,12 +1,12 @@
 # EFMW memory hysteresis force experiment
 
-**Publication status: proposed bench protocol v0.3; coupling specification INCOMPLETE; Stage two NOT RELEASED; experiment NOT RUN; physical coupling UNRESOLVED.**
+**Publication status: proposed bench protocol v0.4; coupling specification INCOMPLETE; Stage two NOT RELEASED; screen and experiment NOT RUN; physical coupling UNRESOLVED.**
 
 [Download the revised Word protocol](HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.docx) · [Papers index](README.md)
 
-**Revision v0.3 — 16 November 2026.** Supersedes [v0.2](https://github.com/enuminous/papers/blob/37e5eed03489421df4cd796cb3ab36fff32bdfe9/HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md). Stage zero now requires an explicit, testable source-to-probe interaction before Stage two can begin. The missing physical mapping and coupling law are stated as unresolved work, not supplied by an actuator or a fitted decay. Stage one adds an eight-pair diagnostic screen before full sensitivity qualification, using a calibrated unit-force template at the zero-coherence endpoint. The screen cannot certify a 2 µN noise floor; the universal threshold withdrawn in v0.2 remains withdrawn. Independent custody and signed release remain required.
+**Revision v0.4 — 16 November 2026.** Supersedes [v0.3](https://github.com/enuminous/papers/blob/1659cca7bfbb35b1cb0b841bd2a205af7084cd6a/HYP-001-P2-Memory-Hysteresis-Experimental-Protocol-2026-11-16.md) and makes the response to Boardy’s recommendations explicit. For the original 10 µN planning option, an eight-pair driven C ≈ 0 screen with observed paired SD above 2 µN stops that plan before the full run; passing advances only to full qualification. The ceiling is an early feasibility rule for that option, not a certified noise floor or a universal scientific threshold. A new pilot record requires actual noise, nuisance transfer, uncertainty and a signed decision before committing to Stage two. The missing coupling specification still blocks Stage two, and P1 does not supply the missing interaction. Independent custody and the full signed release remain required.
 
-HYP-001 P2  |  Proposed bench protocol v0.3  |  16 November 2026
+HYP-001 P2  |  Proposed bench protocol v0.4  |  16 November 2026
 
 Prepared for Matthew Chenoweth Wright and a prospective experimental physics laboratory. Status: coupling specification incomplete; Stage two is not released. Stage one can characterize instruments and conventional disturbances. A force experiment requires a specified interaction model, measured sensitivity, independent review and a signed freeze. No physical signal or laboratory engagement is established.
 
@@ -46,7 +46,7 @@ A test may begin from an explicit phenomenological hypothesis; a known new force
 | Discrimination and accounting | Specify at least one additional model-predicted contrast, such as separation, orientation or probe substitution, and conventional alternatives. Record the proposed energy source, reaction momentum and any unresolved dynamical completion; no energy-creation interpretation follows. |
 | Independent release | Archive the model, assumptions, prediction code and prospective parameter bounds with version and hashes. The laboratory lead, analysis lead and independent technical reviewer must approve testability and permitted interpretation before the full signed release. |
 
-The required physical mapping, interaction law and independent contrast are currently missing. This record is a specification task, not a completed model. The original κCM temporal ansatz must not be relabeled as an apparatus derivation merely by filling in κ numerically.
+The physical mapping, interaction law and independent contrast are currently missing. This is a specification task, not a completed model. The same missing coupling specification also limits P1; reusing its apparatus does not resolve it. The κCM temporal ansatz must not be relabeled as an apparatus derivation by filling in κ numerically.
 
 ### What calibration can establish
 
@@ -84,7 +84,7 @@ After force calibration, run eight diagnostic pairs before the larger qualificat
 
 For this screen and all zero-injection noise blocks, fit an independently fixed unit-force temporal template passed through the calibrated readout. Do not normalize by CΔM at C ≈ 0. Freeze the template and fit window before the screen; known-force injections establish its physical scale.
 
-Stop further bench work if faults or nuisance response exceed the prospectively agreed instrument feasibility limits. Otherwise proceed only to full qualification. Eight pairs do not certify a 2 µN SD: with independent normal pair amplitudes and observed SD 2 µN, the calculated 95% interval for the true SD is about 1.3–4.1 µN. This is an illustration, not measured performance. [7]
+For the original 10 µN planning option, stop after this screen if paired SD s₈ > 2 µN or a frozen nuisance limit fails; do not start the full confirmatory schedule. A screen pass permits further qualification only. Eight pairs cannot certify the true SD: for independent normal pair amplitudes with observed SD 2 µN, the calculated 95% interval is about 1.3–4.1 µN. This is illustrative, not measured performance. Complete the pilot decision record below. [7]
 
 Record all pilot configurations, injection levels, counts and disturbance ranges before collection. Pilot data never enter the confirmatory sample. Freeze the developed estimator before fresh qualification data; retain every failed attempt and revision. The eight-pair screen supplements the blocks below.
 
@@ -117,7 +117,7 @@ For C = 0.5, starting tolerances are measured coherence within ±0.01 and per-ch
 
 ## Confirmatory sample and control allocation
 
-The former schedule of 48 primary pairs over two days, plus 24 C = 0 and 24 controller-sham pairs, is a planning example only. After qualification, freeze exact primary and control counts, allocation by day and order, and resource limits. Size the complete decision rule for both signs at A<sub>test</sub>, including the requirement for same-sign effects on each day. At least two separately calibrated days are required. A pooled 48-pair calculation does not establish power for each day.
+The former 96-pair schedule (48 primary, 24 C = 0 and 24 controller-sham pairs) remains a planning example. It must not start before the eight-pair screen, full qualification and Stage zero release. After qualification, freeze exact counts, day and order allocation, and resource limits. Size the complete decision rule for both signs at A<sub>test</sub>, including same-sign effects on each day. Require at least two separately calibrated days. A pooled 48-pair calculation does not establish power for each day.
 
 | Control | What it must establish |
 | --- | --- |
@@ -136,7 +136,7 @@ Use randomization inference at the actual randomized unit, or a validated correl
 
 Run at least 10,000 fresh synthetic null repetitions for each declared stress family: drift, thermal lag, crosstalk, imperfect nuisance sensors, order effects and between-pair dependence. Validate the complete frozen decision rule, not only an isolated regression test. Require a one-sided 95% upper confidence bound on false-positive probability ≤1%, and a 95% lower bound on power ≥90% for each sign at ±A<sub>test</sub>. Use fresh injected repetitions for power, with counts frozen in advance. Include uncertainty in pilot-derived noise and nuisance parameters. Synthetic qualification does not establish that all physical confounders are represented.
 
-Conditional planning example: if 48 independent paired amplitudes actually have SD 2 µN, their mean has standard error about 0.29 µN and an ideal normal 99% random-error half-width about 0.74 µN. These values exclude systematic uncertainty and do not describe the separate day tests. The former SD ≤2 µN and systematic ≤2 µN limits are withdrawn as universal entry gates; measured performance must support the frozen A<sub>test</sub>, control bounds and scientific objective.
+Conditional planning example: if 48 independent paired amplitudes actually have SD 2 µN, their mean has standard error about 0.29 µN and an ideal normal 99% random-error half-width about 0.74 µN. These exclude systematic uncertainty and separate day tests. The 2 µN screen ceiling in v0.4 is an early feasibility rule for the original 10 µN planning option, not a certified noise floor or a universal scientific threshold. Full qualification must include uncertainty in measured noise and support the frozen A<sub>test</sub>, control bounds and objective.
 
 Calibrate interval coverage at zero and across the proposed coupling range, and check robustness to model misspecification. Keep analysis-development, synthetic validation, physical calibration and confirmatory data identifiable and separate. If validation fails, revise the estimator and use new validation data. Do not reuse failed validation outcomes to claim an unchanged preregistered pass.
 
@@ -209,3 +209,28 @@ No appointment or engagement is assumed. Record key release separately after sea
 [[7] NIST  Standard deviation confidence limits](https://itl.nist.gov/div898/software/dataplot/refman1/auxillar/sdconfli.htm)
 
 [[8] Eöt-Wash  Results and interaction assumptions for force limits](https://www.npl.washington.edu/eotwash/results)
+
+## Boardy recommendations and pilot record
+
+The following record connects Boardy’s recommendations to the protocol. A written requirement is not a completed measurement or an approval. No laboratory engagement or endorsement is implied.
+
+| Recommendation | Protocol response | Evidence status |
+| --- | --- | --- |
+| Identify physical memory | Measure circuit response separately. Stage zero requires the physical carrier and the assumption connecting voltage to interaction-producing memory. | Mapping unresolved |
+| Specify the coupling path | Require source and probe properties, a force law, geometry and shielding response, a discriminating contrast and energy accounting before Stage two. P1 has the same gap. | Stage two blocked |
+| Measure sensitivity first | Eight driven C ≈ 0 pairs precede full qualification. For the original 10 µN option, observed SD above 2 µN stops that plan before a full run. | Screen not run |
+| Report real noise and nuisance transfer | Report measured SD with uncertainty, calibrated disturbance transfer and detectable amplitude D. State a weaker attainable bound honestly; retain the original scientific threshold. | Not measured |
+| Independent custody and freeze | Matthew cannot hold the key. Name the custodian and laboratory, analysis and independent-review signatories in the approval record before acquisition. | Unappointed |
+
+### Required pilot decision record
+
+Before the screen, record the force template, window, nuisance limits and 2 µN ceiling. Compute s₈ from all eight paired force amplitudes in µN using the sample SD with divisor seven. Report the mean and uncertainty too. Invalid data give an incomplete screen; do not replace pairs selectively or repeat until a pass.
+
+| Record | Required entry before a laboratory commits to Stage two |
+| --- | --- |
+| Screen result | Eight amplitudes, order, timestamps, raw-data and code hashes; mean, s₈, SD interval and dependence assessment. Current entry: NOT MEASURED. |
+| Nuisance result | Dedicated perturbation ranges, transfer estimates and uncertainty; residual force budget and drift. Eight passive pairs do not supply this. Current entry: NOT MEASURED. |
+| Capability and scope | D with uncertainty, injection recovery, objective and proposed counts. Convert a force interval to κ only after the model and normalization are released. Current entry: NOT QUALIFIED. |
+| Decision and signatures | STOP ORIGINAL PLAN, PROCEED TO QUALIFICATION, or INCOMPLETE; reason, operator, lab lead and date. Stage two also requires the separate full signed release. Current entry: INCOMPLETE. |
+
+For example, s₈ = 5 µN stops the original plan before any confirmatory run. Redesign or register a separately scoped bound-setting study prospectively; preserve the failed screen and do not relabel its noise as an achieved physics bound.
