@@ -33,7 +33,7 @@ For the network-wide subject menu and evidence boundaries, start with the [EFMW 
 2. [HYP-001A: known-zero recovery](EFMW-HYP-001A-Known-Zero-Recovery-2026-11-13.md) — synthetic null: naive estimator FAIL; adjusted estimator UNRESOLVED.
 3. [HYP-001A reproduction files](EFMW-HYP-001A/) — script and summary; no independent replication claimed.
 4. [On Introspective Machines](On-Introspective-Machines-2026-11-13.md) — conceptual essay on auditability and mechanistic self-correction.
-5. [INT-001 benchmark protocol](EFMW-INT-001-Preregistered-Audit-Benchmark-Protocol-2026-11-13.md) — draft preregistration; corpus, custody and numerical gates not yet frozen.
+5. [INT-001 benchmark protocol](EFMW-INT-001-Preregistered-Audit-Benchmark-Protocol-2026-11-13.md) — draft 300-item confirmatory protocol. [Pilot 60](research/efmw-int-001-pilot-60/README.md) is a frozen, public-label construction corpus. Construction PASS. Four-arm performance UNRESOLVED / NOT RUN.
 
 **Action-to-observable follow-up (14 November):** [C1-OBS-001](EFMW-C1-OBS-001-From-Action-to-Observable-2026-11-14.md) derives an optical response from an existing C1 coupling and records its equivalence to the generic scalar–photon model. [Code, results and assumptions](research/efmw-c1-obs-001/README.md).
 
@@ -41,6 +41,8 @@ For the network-wide subject menu and evidence boundaries, start with the [EFMW 
 **Scientific validation roadmap (15 November):** [Computational experiments, mathematical proof and physical confirmation](EFMW-Scientific-Validation-Roadmap-2026-11-15.md) — an evidence-separated plan, with outstanding experiments, falsification criteria and publication gates.
 
 **Progression:** proposed mechanism → falsifiable test → negative result → introspection concept → prospective independent benchmark. This is an intellectual dependency map, **not** a proof of an EFMW-specific physical mechanism or an independently demonstrated auditing advantage.
+
+**Monitoring benchmarks:** [EXP-001–003 evidence and limitations](https://github.com/enuminous/EFMW-EXP-001/blob/main/EVIDENCE_INDEX.md) traces the frozen results, benign-pulse failure and exploratory variance-fault reversal.
 
 ## Interactive laboratory directory
 
@@ -114,7 +116,7 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 - **[IST-FAM-001 — Executed Full 717-Source Audit and Bounded Spectral-Route Closure](research/ist-fam-001/AUDIT_REPORT.md)** · [Verified execution receipt](research/ist-fam-001/EXECUTION.json) · [Reproducible auditor](research/ist-fam-001/audit.py) · [Final successful CI](https://github.com/enuminous/papers/actions/runs/42676059594) — 9 November 2026. Precommitted H1/H2 and tightened source-to-mode mapping rules applied to 585 FieldSpace + 102 canonical + 30 additional source records. Seven original Git blobs and 717/717 statements match; 19/19 tests pass. **Both H1 and H2: NO SOURCE SUPPORT; bounded stop rule invoked.** Zero new physical EFMW evidence; this is not a disproof of all EFMW formulations.
 
-- **[IST-FAM-001 — Referee Review, Conventional Spectral Containment, and Bounded Novelty Audit](IST-FAM-001-Referee-Review-and-Spectral-Novelty-Audit-2026-11-09.md)** · [Pre-search frozen two-hypothesis protocol](research/ist-fam-001/PROTOCOL.json) · [Machine-readable referee ledger](research/ist-fam-001/REVIEW_LEDGER.json) · [Review package](research/ist-fam-001/README.md) — 9 November 2026. Records Boardy-relayed and AI-assisted corrections to IST-001: external-drive conservation limits, existing bath counterterm, missing standalone memory mass, conventional spectral response-family containment, calibration versus discrimination, and a stop rule. **H1/H2 are speculative and NOT EXECUTED.** Original IST-001 mathematics and CI results are unchanged.
+- **[IST-FAM-001 — Referee Review, Conventional Spectral Containment, and Bounded Novelty Audit](IST-FAM-001-Referee-Review-and-Spectral-Novelty-Audit-2026-11-09.md)** · [Pre-search frozen two-hypothesis protocol](research/ist-fam-001/PROTOCOL.json) · [Machine-readable referee ledger](research/ist-fam-001/REVIEW_LEDGER.json) · [Review package](research/ist-fam-001/README.md) — 9 November 2026. Records Boardy-relayed and AI-assisted corrections to IST-001: external-drive conservation limits, existing bath counterterm, missing standalone memory mass, conventional spectral response-family containment, calibration versus discrimination, and a stop rule. **Pre-execution record.** The [subsequent bounded audit](research/ist-fam-001/AUDIT_REPORT.md) reported NO SOURCE SUPPORT for both H1 and H2 and invoked the stop rule.
 
 - **[IST-001 — Executed Hilbert Memory-Stress and Harmonic-Reservoir Audit](research/ist-001/IST001_REPORT.md)** · [Theory and derivation](IST-001-Deriving-Informational-Stress-from-Covariant-Memory-and-Reservoir-Models-2026-11-09.md) · [Code and tests](research/ist-001/README.md) · [CI](https://github.com/enuminous/papers/actions/runs/42669567461) — 9 November 2026. Bounded Hilbert stress, energy-exchange and finite-bath memory controls: 24/24 tests passed, 6/8 narrow gates PASS and 2 UNRESOLVED. No EFMW-specific physical stress or gravity effect established.
 

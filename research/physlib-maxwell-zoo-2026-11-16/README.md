@@ -23,6 +23,7 @@ After extracting, run `python3 report/replay.py --check-only` to check bundled b
 - [Zoo manifest failure](ZOO_MANIFEST_CHECK.json) · [Final CIRCUS gate](CIRCUS-final-result.json)
 - [Preserved corrections and failed attempts](AMENDMENTS.md)
 - [Four-root axiom/dependency harness](Audit.lean) · [Nonvacuity witness](ZeroWitness.lean)
+- [Subsequent Zoo manifest repair](https://github.com/enuminous/Monolithic-Zoo-Lean4/commit/b12200364f7d1424c4d9cdfbe20fff4d52de379d) — all 80 current manifest entries verified. The original replay bundle retains the observed failure.
 - [Proposed README manifest repair](ZOO_README_MANIFEST.patch) — not applied to the audited Zoo checkout.
 - [Original bundle file hashes](BUNDLE_SHA256.json)
 

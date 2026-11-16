@@ -7,6 +7,8 @@
 
 > The audit system must be permitted to FAIL. If it does not outperform the strongest baseline, the negative result will be published and the stronger baseline should be preferred.
 
+**Related release:** [Pilot 60](research/efmw-int-001-pilot-60/README.md) passed construction checks for a separate synthetic corpus. Its labels are public and the four-arm performance comparison was not run. The 300-item protocol below remains draft.
+
 ## 1. Research question
 
 Does a recursive inference-procedure audit system reduce false discoveries relative to the strongest independent baseline, while retaining a prespecified minimum recall of planted defects, on a blinded, independently held-out corpus?
