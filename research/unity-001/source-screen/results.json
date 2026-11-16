@@ -1,0 +1,16 @@
+{
+  "status": "CONDITIONAL_INITIAL_DATA_ONLY",
+  "input_energy_j": 1,
+  "width_m": 1,
+  "inverse_compton_m": 1,
+  "field_amplitude_sqrt_j_per_m": 0.37903785787191924,
+  "illustrative_total_energy_equivalent_mass_kg": 1.1126500560536185e-17,
+  "enclosed_energy_fractions_at_r_over_width": {
+    "0.5": 0.03716945939855185,
+    "1": 0.26155029656088224,
+    "2": 0.887853941177674,
+    "4": 0.9999962259052793,
+    "10": 1.0
+  },
+  "independent_quadrature_checks": 6
+}
