@@ -11,7 +11,7 @@ The parameters are the scalar mass m and the magnitude of its photon coupling |g
 For exposure i:
 
 \[
-\mu_i=b_i(\nu)+\eta_i N_{{\rm in},i}g^4K_i(m),
+\mu_i=b_i(\nu)+\eta_i N_{\mathrm{in},i}g^4K_i(m),
 \]
 
 \[
