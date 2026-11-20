@@ -4,6 +4,8 @@
 
 Matthew Chenoweth Wright · Monolithic LLC · November 19, 2026
 
+*Updated November 19, 2026 to include Jones’s live equation set and the radial energy derivation.*
+
 ### Abstract
 
 A. Beth Jones’s *Universal 13-Layer Tri-Sphere Blueprint* describes a toroidal circulation, an hourglass waist that divides paths, and a return loop that puts material back into circulation. A diverted tokamak offers a physical analogue for those three features. Its magnetic separatrix divides a region of nested toroidal flux surfaces from open field lines that can carry exhaust toward a divertor. This paper turns the comparison into two explicit balances, one for particles and one for energy. The balances show how fuel can return to the plasma while much of the energy carried out with it still leaves as heat or radiation. An illustrative calculation gives a 90% particle inventory after one routing step while retaining 77.5% of the initial energy under the stated assumptions. The result concerns the model and its chosen parameters. It supplies a way to test proposed return mechanisms without assigning physical meaning to the full thirteen-layer geometry.
@@ -22,6 +24,23 @@ $$
 
 The minimum at $(0,0)$ represents the magnetic axis in cross-section. The saddle at $(0,-1)$ has flux $1/6$. The contour through it has an upper closed lobe and lower branches. The model provides a simple realization of the hourglass crossing. The X-point sits at the edge of confinement, and the toroidal field can remain nonzero there. The plotted contours illustrate one flux topology with adjustable particle accounting. The blueprint’s exact layer count and its Time, Space, and Phase tori remain open as physical mappings. [Tri-Sphere / Tokamak Lab source](https://github.com/enuminous/Tokamak)
 
+### 1.1 Jones’s current equation of motion
+
+Jones’s live equations define concentric $S^3_\rho$ shells and assign a Hopf fibration on each nonzero shell. With $z_1,z_2\in\mathbb C$ and $|z_1|^2+|z_2|^2=\rho^2$, the unnormalized map $(|z_1|^2-|z_2|^2,\,2z_1\bar z_2)$ lands on a two-sphere of radius $\rho^2$ and is invariant under a common phase. At zero radius the shell reduces to a point. The Hopf circles are a feature of Jones’s shell construction. The tokamak comparison uses flux surfaces in physical three-space. [A. Beth Jones, *The 13-Layer Tri-Sphere: Equations for a Closed Loop*, equations 2–3](https://tri-sphere-text.abethjones.workers.dev/)
+
+Jones’s Equation 10 proposes
+$
+\ddot\rho=-V'(\rho)-\gamma\dot\rho+D(\rho,k).
+$
+For unit mass, multiplication by $\dot\rho$ gives
+$
+\frac{d}{dt}\left(\frac12\dot\rho^2+V(\rho)\right)
+=-\gamma\dot\rho^2+\dot\rho D(\rho,k).
+$
+A periodic excursion requires $\oint D\,d\rho=\gamma\int_0^T\dot\rho^2\,dt$. If $k$ is fixed and $D$ is a smooth single-valued function of $\rho$, its integral over an out-and-back path is zero. With positive damping, a sustained nontrivial cycle requires a specified source of work, such as a phase-timed actuator. The stated differential equation also leaves the location of the outer turning point dependent on initial energy, forcing and the boundary law. [Jones, equations 4, 8 and 10](https://tri-sphere-text.abethjones.workers.dev/)
+
+The lab illustrates one sufficient closure. In normalized units set $V=\rho^2/2$ and $0<\gamma<2$. Propagate the damped radial motion from the center to its next center crossing, then reflect and add work $K$. For $\omega=\sqrt{1-\gamma^2/4}$, $T=\pi/\omega$ and $q=e^{-\gamma T}$, the launch energy obeys $E_{j+1}=q E_j+K$. When $K>0$, it converges to $E_\ast=K/(1-q)$, where damping removes exactly $K$ per excursion. With $K=0$ the excursions decay. The center kick and harmonic well are choices for this example. Neither establishes a physical coupling of intent to energy nor a turn at layer 12. [Tokamak lab](https://enuminous.github.io/Tokamak/)
+
 ### 2. What comes back?
 
 At a divertor target, energy carried by incident particles can become heat that is removed by cooling. Recycled fuel can return as neutrals and later reionize. The returning neutral population can carry a different amount of energy per particle from the outgoing population. A particle budget therefore leaves the energy budget undetermined. [ITER Divertor](https://www.iter.org/machine/divertor) · [ITER Technical Basis, §1.3.6](https://www-pub.iaea.org/MTCD/Publications/PDF/ITER-EDA-DS-24.pdf)
@@ -33,7 +52,7 @@ $$
 \frac{W_1}{W_0}=1-\ell_W(1-r_W).
 $$
 
-With $\ell_N=\ell_W=0.25$, $r_N=0.60$, and $r_W=0.10$, the circuit returns $0.15N_0$ and $0.025W_0$. The updated inventories are $0.90N_0$ and $0.775W_0$. The return fractions are illustrative inputs. The equal outgoing fractions isolate the effect of differing return fractions in this example. The browser lab implements the particle equation. The energy calculation is the extension developed here. [Lab implementation](https://github.com/enuminous/Tokamak/blob/main/model.js)
+With $\ell_N=\ell_W=0.25$, $r_N=0.60$, and $r_W=0.10$, the circuit returns $0.15N_0$ and $0.025W_0$. The updated inventories are $0.90N_0$ and $0.775W_0$. The return fractions are illustrative inputs. The equal outgoing fractions isolate the effect of differing return fractions in this example. The browser lab implements both equations with independent controls. [Lab implementation](https://github.com/enuminous/Tokamak/blob/main/model.js)
 
 ### 3. An energy balance with a finite return time
 
