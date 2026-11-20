@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GRAND THEFT BANAL VI — Ragdoll Errand Simulator</title>
+<style>
+:root{color-scheme:dark;--ink:#c7d8c9;--muted:#839788;--hi:#f2d18c;--bg:#101611;--border:#394739}*{box-sizing:border-box}body{background:var(--bg);color:var(--ink);font:15px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;max-width:950px;margin:auto;padding:22px}h1{font-size:clamp(21px,5vw,39px);line-height:1.1;letter-spacing:-.045em;margin:0;color:#e8efdd}h2{font-size:14px;letter-spacing:.1em;color:var(--hi);margin:0 0 10px}p{margin:8px 0 20px;color:var(--muted)}.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:16px}.panel{border:1px solid var(--border);padding:16px;background:#151c16}.terminal{min-height:340px;white-space:pre;overflow:auto;color:#d7e6d7;font-size:13px;line-height:1.36}button{cursor:pointer;background:#1e2a21;border:1px solid #536b55;color:#edf1e8;font:inherit;padding:9px 10px;text-align:left}button:hover,button:focus-visible{border-color:var(--hi);color:var(--hi);outline:none}button:disabled{opacity:.4;cursor:not-allowed}.buttons{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.small{font-size:12px;color:var(--muted)}.stat{display:flex;justify-content:space-between;border-bottom:1px dashed #344235;padding:5px 0}.stat strong{color:var(--hi)}.log{margin:0;padding:0;list-style:none;height:230px;overflow:auto;font-size:13px}.log li{padding:6px 0;border-bottom:1px dotted #344235}.log li:first-child{color:#f2d18c}.titleline{font-size:12px;color:var(--hi);letter-spacing:.16em}.foot{font-size:12px;border-top:1px solid var(--border);margin-top:20px;padding-top:12px;color:var(--muted)}kbd{color:var(--hi)}@media(max-width:700px){.layout{grid-template-columns:1fr}.terminal{min-height:270px;font-size:12px}}@media(prefers-reduced-motion:no-preference){.blink{animation:blink 1.1s steps(2) infinite}@keyframes blink{50%{opacity:.2}}}
+</style>
+</head><body>
+<div class="titleline">AN EXTREMELY UNOFFICIAL WORK OF SATIRE · V1.0.0 · NOW WITH SHOULDERS</div>
+<h1>GRAND THEFT BANAL VI</h1>
+<p>A text-based ragdoll simulator about a man whose plans include checking the mail. No affiliations with Rockstar Games. Any resemblance to an interesting game is accidental.</p>
+<div class="layout">
+  <div class="panel"><h2>LIVE PHYSICS FEED // 4 FPS IN SPIRIT</h2><div class="terminal" id="screen" role="img" aria-label="Text art depicting the floppy ragdoll"></div><div class="small" id="caption" aria-live="polite"></div></div>
+  <div class="panel"><h2>MISSION: DO ALMOST NOTHING</h2><div class="stat"><span>Time passed</span><strong id="time">0.0 s</strong></div><div class="stat"><span>Balance</span><strong id="balance">100%</strong></div><div class="stat"><span>Posture</span><strong id="posture">upright, technically</strong></div><div class="stat"><span>Mail acquired</span><strong id="mail">no</strong></div><div class="stat"><span>Errands complete</span><strong id="errands">0 / 4</strong></div><div class="stat"><span>Wanted level</span><strong>☆☆☆☆☆</strong></div><div class="stat"><span>Insurance deductible</span><strong>$1,200</strong></div><h2 style="margin-top:22px">COMMANDS</h2><div class="buttons">
+<button data-a="step">W / Step forward</button><button data-a="curb">C / Negotiate curb</button><button data-a="wait">. / Wait politely</button><button data-a="mail">M / Check mailbox</button><button data-a="sit">S / Sit on bench</button><button data-a="rise">R / Stand up</button><button data-a="form">F / Fill form</button><button data-a="reset">↺ / New game</button>
+</div><p class="small" style="margin-top:12px">Keyboard: W C . M S R F. Space advances the ragdoll physics one tick.</p></div>
+</div>
+<div class="panel" style="margin-top:16px"><h2>CRIME &amp; CONSEQUENCES FEED</h2><ol class="log" id="log" aria-live="polite"></ol></div>
+<div class="foot">GRAND THEFT BANAL VI: LOADING TIMES APPROXIMATE THE EMOTIONAL EXPERIENCE OF WAITING AT THE DMV. This is an original parody, not GTA VI gameplay. All pedestrians are absent on purpose.</div>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const initial=()=>({time:0,balance:100,angle:0,angVel:0,height:0,vy:0,fallen:false,sitting:false,mail:false,form:false,bench:false,steps:0,tick:0,errands:new Set(),log:['You spawn in a suburban driveway. It is 10:14 AM. Nothing is on fire.']});
+let s=initial();
+const say=t=>{s.log.unshift(t);s.log=s.log.slice(0,15)};
+const fall=reason=>{if(s.fallen)return;s.fallen=true;s.sitting=false;s.balance=Math.max(0,s.balance-45);s.angle=68;s.angVel=4.5;s.height=0.3;s.vy=0.8;say(reason+' Your skeleton immediately requests a meeting.');};
+const physics=()=>{s.tick++;s.time+=.25;
+if(s.fallen){s.angVel*=.72;s.angle=Math.min(90,Math.max(15,s.angle+s.angVel));s.vy-=0.36;s.height=Math.max(0,s.height+s.vy*.25);if(s.height===0){s.vy=0;if(s.tick%4===0)say('Your left elbow continues to have opinions.');}}
+else if(s.sitting){s.angle=12;s.angVel=0;s.balance=Math.min(100,s.balance+.4)}
+else{s.angle=Math.sin(s.tick*.8)*Math.max(0,100-s.balance)*.12;s.balance=Math.min(100,s.balance+.2);if(s.balance<22)fall('A minor gust is administratively indistinguishable from disaster.');}
+};
+const doAction=a=>{if(a==='reset'){s=initial();render();return}
+if(a==='rise'){if(s.fallen||s.sitting){s.fallen=false;s.sitting=false;s.angle=0;s.angVel=0;s.height=0;s.vy=0;s.balance=Math.max(35,s.balance);say('You stand. The animation department declares a victory.')}else say('You are already standing. No achievement unlocked.');physics();render();return;}
+if(a==='wait'){say(['A distant leaf moves without authorization.','A car drives past. It belongs to someone else.','Your phone vibrates. It is a weather notification.','You consider a side quest, then decide against it.'][s.tick%4]);physics();render();return;}
+if(s.fallen){say('INPUT IGNORED: your body is currently distributed across the sidewalk. Press R to reassemble.');physics();render();return;}
+if(a==='step'){s.sitting=false;s.steps++;s.balance=Math.max(0,s.balance-5);say(s.steps%3===0?'You travel a further 0.8 meters. Your socks remain indoors.':'You move one step. The open world seems unaffected.');if(s.steps===4)s.errands.add('walk');if(s.balance<25)fall('Your right foot briefly questions the franchise.');}
+if(a==='curb'){s.sitting=false;fall('You attempt to descend a curb of approximately 11 centimeters.');}
+if(a==='mail'){if(s.steps<2){say('The mailbox is two steps away. This is a distance problem.')}else if(!s.mail){s.mail=true;s.errands.add('mail');say('MAIL ACQUIRED: a supermarket flyer and a letter addressed to CURRENT RESIDENT.')}else{say('The mailbox contains no additional narrative content.');}}
+if(a==='sit'){s.sitting=true;s.bench=true;s.errands.add('sit');s.balance=Math.min(100,s.balance+15);say('You sit on a public bench. The camera performs an expensive dolly shot.');}
+if(a==='form'){if(!s.mail)say('You cannot complete Form 6-B without first receiving correspondence.');else if(!s.form){s.form=true;s.errands.add('form');say('You fill in your address on Form 6-B. Nobody is impressed.');}else say('Form 6-B is already filled. It has not been processed.');}
+physics();render();};
+const pad=(str,n)=>str+(' '.repeat(Math.max(0,n-str.length)));
+function render(){const posture=s.fallen?'RAGDOLL / sidewalk':s.sitting?'SITTING / stable':'UPRIGHT / precarious';
+const art=s.fallen?['             _____','         ___/ o o \\___','        /     ___     \\','   ____/  __/   \\__   \\__','  /______/         \\______\\','      \u2191 left knee, inexplicably','______________________________']:
+s.sitting?['              o','             /|\\','             / \\','       ______|_|________','      |   PUBLIC BENCH   |','      |__________________|','______________________________']:
+['              o','             '+(s.tick%2?'\\':'/')+'|'+(s.tick%2?'/':'\\'),'              |','             '+(s.tick%2?'/ \\':'\\ /'),'______________________________'];
+$('screen').textContent=['+-----------------------------------------+','| VICE CITY ADJACENT SUBURBS // LEONIDA?   |','| WORLD EVENT: NONE                        |','+-----------------------------------------+','','                 [CLOUD: ORDINARY]','','',...art,'','[ SIDEWALK ] [ CURB ] [ MAILBOX ] [BENCH]','','RENDER QUALITY:             QUESTIONABLE','RAGDOLL SOLVER:              APPROXIMATE','NPCS IN VIEW:                          0','MUSIC LICENSES:                        0'].join('\n');
+$('caption').textContent=s.fallen?'Impact registered. The pavement has declined to press charges.':s.sitting?'You are experiencing premium bench physics.':'The engine computes ankle stability with unjustified confidence.';
+$('time').textContent=s.time.toFixed(2)+' s';$('balance').textContent=Math.round(s.balance)+'%';$('posture').textContent=posture;$('mail').textContent=s.mail?'one (1) flyer':'no';$('errands').textContent=s.errands.size+' / 4';
+$('log').replaceChildren(...s.log.map(t=>{let li=document.createElement('li');li.textContent=t;return li}));}
+document.querySelectorAll('[data-a]').forEach(b=>b.addEventListener('click',()=>doAction(b.dataset.a)));
+const keys={w:'step',c:'curb','.':'wait',m:'mail',s:'sit',r:'rise',f:'form',' ':'wait'};
+window.addEventListener('keydown',e=>{if(e.altKey||e.ctrlKey||e.metaKey||['INPUT','TEXTAREA'].includes(document.activeElement.tagName))return;const a=keys[e.key.toLowerCase()];if(a){e.preventDefault();doAction(a)}});
+render();})();
+</script>
+</body></html>
