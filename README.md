@@ -95,6 +95,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Tokamak Native Stability and Reactor Requirements — OPENSTEP-006](Tokamak-Native-Stability-and-Reactor-Requirements-OPENSTEP-006-2026-11-22.md)** · [Pinned code and numerical evidence](https://github.com/enuminous/Tokamak/tree/7f2842f3086fae73ad51c1b784830862c314658f/benchmarks/openstep-006) — 22 November 2026. Native DIII-D plasma/wall and feedback tests; temperature-dependent fusion, burn, cooling, fuel and electric-balance screens. **23 numerical/model checks PASS, 4 FAIL; 340 integrity checks PASS. Growth-rate validation, delayed control and reactor qualification remain unresolved.**
+
 - **[Tokamak Interim Report — OPENSTEP-001–005: Reproducible Equilibrium and Exhaust Screens](Tokamak-Interim-Report-OPENSTEP-001-005-2026-11-21.md)** · [Pinned computational evidence](https://github.com/enuminous/Tokamak/tree/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks) — 21 November 2026. Reports the reproduced equilibrium, fixed-pressure/current coil scan, retained numerical failures, contour validation and wall-corner heat sensitivity. **OPENSTEP-005: 2,064 assertions PASS, 0 FAIL. No coil variant has met the frozen improvement rule; device wall stability and engineering qualification remain unresolved.**
 
 - **[What If the Whole Universe Is Spinning? — A Layperson’s Guide to ROT-004–011](What-If-the-Whole-Universe-Is-Spinning-2026-11-18.md)** · [Rotation Lab and technical evidence](https://github.com/enuminous/Rotation) · [ROT-004–008 paper](Rotation-Under-Constraint-Covariant-and-Source-First-Audits-ROT004-ROT008-2026-11-17.md) · [ROT-009 paper](Beyond-the-Trace-ROT-009-Exact-Einstein-Source-Obstruction-2026-11-17.md) · [ROT-010 terminal ledger](https://github.com/enuminous/Rotation/blob/main/research/ROT-010_TERMINAL_LEDGER.json) · [ROT-011 terminal ledger](https://github.com/enuminous/Rotation/blob/main/research/ROT-011_TERMINAL_LEDGER.json) — 18 November 2026. Accessible science feature following eight exact mathematical investigations from Gödel's rotating but non-expanding cosmos to source-first scalar, Maxwell and Proca no-go tests. **Tests constrain specified models; observed universal cosmic rotation remains UNRESOLVED.**
@@ -351,6 +353,7 @@ These links provide direct access to nested reports, protocols, source snapshots
 
 > **Interpretation:** Cross-links represent research dependencies and comparisons. The Standard Model and continuum gravity are inputs in current QST calculations; their emergence from Base888 and the physical status of the pressure cycle remain **UNRESOLVED**.
 <!-- ENUMINOUS-RESEARCH-CHAIN:END -->
+
 
 
 
