@@ -1,0 +1,369 @@
+{
+  "report": "Tokamak-Interim-Report-OPENSTEP-001-005-2026-11-21.md",
+  "report_date": "2026-11-21",
+  "date_timezone": "America/Los_Angeles",
+  "source_repository": "enuminous/Tokamak",
+  "source_revision": "dcdfb6956dac7143066f0c308474fda2bb83f48e",
+  "publication_scope": "Interim synthesis of existing OPENSTEP-001\u2013005 results; no new physics runs",
+  "key_findings": {
+    "openstep_005_passed": 2064,
+    "openstep_005_failed": 0,
+    "openstep_004_initial_passed": 792,
+    "openstep_004_initial_failed": 220,
+    "accepted_scan_cases": 8,
+    "planned_scan_cases": 14,
+    "candidate_for_original_optional_refinement": null,
+    "device_wall_stability": "NOT RUN / UNRESOLVED",
+    "heat_peaks": [
+      {
+        "tag": "shift-+000mm-257",
+        "shift_m": 0,
+        "radius_m": 0.0,
+        "peak_heat_MW_m2": 13.692957590976766,
+        "offset_m": 0.009380950519343505,
+        "segment": "13",
+        "old_37_sample_max_MW_m2": 12.350723999936958,
+        "old_comparison_applicable": true,
+        "at_window_endpoint": false,
+        "at_sharp_corner": true
+      },
+      {
+        "tag": "shift-+000mm-257",
+        "shift_m": 0,
+        "radius_m": 0.001,
+        "peak_heat_MW_m2": 12.368962888954396,
+        "offset_m": 0.009938708511978195,
+        "segment": "arc-13",
+        "old_37_sample_max_MW_m2": 12.350723999936958,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": false,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "shift-+000mm-257",
+        "shift_m": 0,
+        "radius_m": 0.005,
+        "peak_heat_MW_m2": 11.820421775584164,
+        "offset_m": 0.00025,
+        "segment": "12",
+        "old_37_sample_max_MW_m2": 12.350723999936958,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": true,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "shift-+000mm-257",
+        "shift_m": 0,
+        "radius_m": 0.01,
+        "peak_heat_MW_m2": 11.820421775583968,
+        "offset_m": 0.00025,
+        "segment": "12",
+        "old_37_sample_max_MW_m2": 12.350723999936958,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": true,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "shift--010mm-257",
+        "shift_m": -0.01,
+        "radius_m": 0.0,
+        "peak_heat_MW_m2": 11.836714896387678,
+        "offset_m": 0.00025,
+        "segment": "12",
+        "old_37_sample_max_MW_m2": 11.836708379101957,
+        "old_comparison_applicable": true,
+        "at_window_endpoint": true,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "shift--010mm-257",
+        "shift_m": -0.01,
+        "radius_m": 0.001,
+        "peak_heat_MW_m2": 11.836714896387647,
+        "offset_m": 0.00025,
+        "segment": "12",
+        "old_37_sample_max_MW_m2": 11.836708379101957,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": true,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "shift--010mm-257",
+        "shift_m": -0.01,
+        "radius_m": 0.005,
+        "peak_heat_MW_m2": 11.8367148963878,
+        "offset_m": 0.00025,
+        "segment": "12",
+        "old_37_sample_max_MW_m2": 11.836708379101957,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": true,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "shift--010mm-257",
+        "shift_m": -0.01,
+        "radius_m": 0.01,
+        "peak_heat_MW_m2": 11.83671489638762,
+        "offset_m": 0.00025,
+        "segment": "12",
+        "old_37_sample_max_MW_m2": 11.836708379101957,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": true,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "inward-010mm-257",
+        "shift_m": 0.01,
+        "radius_m": 0.0,
+        "peak_heat_MW_m2": 21.97090100258098,
+        "offset_m": 0.0065672282493186495,
+        "segment": "13",
+        "old_37_sample_max_MW_m2": 21.535086056807923,
+        "old_comparison_applicable": true,
+        "at_window_endpoint": false,
+        "at_sharp_corner": true
+      },
+      {
+        "tag": "inward-010mm-257",
+        "shift_m": 0.01,
+        "radius_m": 0.001,
+        "peak_heat_MW_m2": 19.833788363019323,
+        "offset_m": 0.007128322162082601,
+        "segment": "arc-13",
+        "old_37_sample_max_MW_m2": 21.535086056807923,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": false,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "inward-010mm-257",
+        "shift_m": 0.01,
+        "radius_m": 0.005,
+        "peak_heat_MW_m2": 15.281095362966404,
+        "offset_m": 0.007871968883071064,
+        "segment": "arc-13",
+        "old_37_sample_max_MW_m2": 21.535086056807923,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": false,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "inward-010mm-257",
+        "shift_m": 0.01,
+        "radius_m": 0.01,
+        "peak_heat_MW_m2": 13.247749133274848,
+        "offset_m": 0.007625231578926742,
+        "segment": "arc-13",
+        "old_37_sample_max_MW_m2": 21.535086056807923,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": false,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "inward-050mm-257",
+        "shift_m": 0.05,
+        "radius_m": 0.0,
+        "peak_heat_MW_m2": 63.51799352016853,
+        "offset_m": 0.00025,
+        "segment": "13",
+        "old_37_sample_max_MW_m2": 63.51799361325003,
+        "old_comparison_applicable": true,
+        "at_window_endpoint": true,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "inward-050mm-257",
+        "shift_m": 0.05,
+        "radius_m": 0.001,
+        "peak_heat_MW_m2": 63.51799352016853,
+        "offset_m": 0.00025,
+        "segment": "13",
+        "old_37_sample_max_MW_m2": 63.51799361325003,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": true,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "inward-050mm-257",
+        "shift_m": 0.05,
+        "radius_m": 0.005,
+        "peak_heat_MW_m2": 63.51799352016853,
+        "offset_m": 0.00025,
+        "segment": "13",
+        "old_37_sample_max_MW_m2": 63.51799361325003,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": true,
+        "at_sharp_corner": false
+      },
+      {
+        "tag": "inward-050mm-257",
+        "shift_m": 0.05,
+        "radius_m": 0.01,
+        "peak_heat_MW_m2": 58.826933683741906,
+        "offset_m": 0.00025,
+        "segment": "arc-13",
+        "old_37_sample_max_MW_m2": 63.51799361325003,
+        "old_comparison_applicable": false,
+        "at_window_endpoint": true,
+        "at_sharp_corner": false
+      }
+    ]
+  },
+  "source_files": [
+    {
+      "path": "benchmarks/openstep-001/README.md",
+      "sha256": "6c91e702482720b0c171812ec39908398f2e8b506fb32b8477f58382c49d49ef",
+      "bytes": 6153,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-001/README.md"
+    },
+    {
+      "path": "benchmarks/openstep-001/results/summary.json",
+      "sha256": "6d8e13756c67f23246ba497cbc3d7650a85a0736bd83336b165e493ea5fe530c",
+      "bytes": 7895,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-001/results/summary.json"
+    },
+    {
+      "path": "benchmarks/openstep-001/results/verification.json",
+      "sha256": "ad3ac0dbc8d9a13fbaa6c204bccd9764eae25aab1b59167b3e6021919987a2ce",
+      "bytes": 7107,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-001/results/verification.json"
+    },
+    {
+      "path": "benchmarks/openstep-002/README.md",
+      "sha256": "653691752adfa9dea9a7b800c04710f3e00c9b45c28e3249aa04d10b99f3e62a",
+      "bytes": 13181,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-002/README.md"
+    },
+    {
+      "path": "benchmarks/openstep-002/results/summary.json",
+      "sha256": "be099087b559ec8f586c02c8483ead1e307549e90756641222bc542ad7fcec90",
+      "bytes": 37799,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-002/results/summary.json"
+    },
+    {
+      "path": "benchmarks/openstep-002/results/verification.json",
+      "sha256": "f5ea393c258feb9ab22b5c0e390446318b695cc03a2b98be8c867aa4e670d333",
+      "bytes": 9857,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-002/results/verification.json"
+    },
+    {
+      "path": "benchmarks/openstep-003/README.md",
+      "sha256": "fe3d0595d54a348948768b8d06c8947523b0df32cf07196cc75fb28ef3cce348",
+      "bytes": 6865,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-003/README.md"
+    },
+    {
+      "path": "benchmarks/openstep-003/results/summary.json",
+      "sha256": "826f4d06f36e5e56754e935b4b56c8575ba064ff86f956592419e9cff260a018",
+      "bytes": 53460,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-003/results/summary.json"
+    },
+    {
+      "path": "benchmarks/openstep-003/results/verification.json",
+      "sha256": "32bd8fa081ea4c2cf6ae1d7a015fc64dea59c25de2ebf9c3a9f6fd0d0c66584e",
+      "bytes": 17578,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-003/results/verification.json"
+    },
+    {
+      "path": "benchmarks/openstep-004/README.md",
+      "sha256": "ae9cb92eefec6966a5ceee4e9357279f4d752b4b3a143c532189440514e4e6e8",
+      "bytes": 9560,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-004/README.md"
+    },
+    {
+      "path": "benchmarks/openstep-004/results/summary.json",
+      "sha256": "393da0894f200580e9adaa2257598ed9ef151e36ad57ae649260150619b237b2",
+      "bytes": 60590,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-004/results/summary.json"
+    },
+    {
+      "path": "benchmarks/openstep-004/results/verification.json",
+      "sha256": "8f999fb8d9dc804ba34cc3b206eeba458d280883ffbe3b8c65ac231603373257",
+      "bytes": 196532,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-004/results/verification.json"
+    },
+    {
+      "path": "benchmarks/openstep-005/README.md",
+      "sha256": "d8b5516a6bf5ba31a2b13f3b8af3b33e669ea867b0215af66be51d761bdce65b",
+      "bytes": 8510,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/README.md"
+    },
+    {
+      "path": "benchmarks/openstep-005/results/summary.json",
+      "sha256": "bd1d135497e8faab6f1115a92e1d9b88185c5992aff92e82db64c44cddba85de",
+      "bytes": 19082,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/results/summary.json"
+    },
+    {
+      "path": "benchmarks/openstep-005/results/verification.json",
+      "sha256": "fccfef296c94b44968462780d0b1e40cf990e7cfb0ee4a86637c9f28f23e704c",
+      "bytes": 381411,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/results/verification.json"
+    },
+    {
+      "path": "benchmarks/openstep-001/METHODS.md",
+      "sha256": "bd3d478eceaff8424e48c5fb2d60ccf59ee49ff861681cfd21ee6b171ba02b2c",
+      "bytes": 5381,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-001/METHODS.md"
+    },
+    {
+      "path": "benchmarks/openstep-005/results/derivative-cache.json",
+      "sha256": "48b986f954b03da537f5e3668fc32cef970ddf663fd565a5e9a17ebfd679f121",
+      "bytes": 8496,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/results/derivative-cache.json"
+    },
+    {
+      "path": "benchmarks/openstep-005/results/footprints.json",
+      "sha256": "0a9346284393a88137a6889a72dc3372280d7dbc5b4001bd9a61c0c5b94cd240",
+      "bytes": 192026,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/results/footprints.json"
+    },
+    {
+      "path": "benchmarks/openstep-005/results/wall-feedback.json",
+      "sha256": "823b271e86abb3301135459eabb53bdc4b6cda074e6f52a9d42b7b7167b8f054",
+      "bytes": 10941,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/results/wall-feedback.json"
+    },
+    {
+      "path": "benchmarks/openstep-005/results/footprint-rounding.png",
+      "sha256": "7b74c0f7d6a886e1dc3367ba83326017571df9d1948ab9d0bd5f548a5607cd9e",
+      "bytes": 212021,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/results/footprint-rounding.png"
+    },
+    {
+      "path": "benchmarks/openstep-005/inputs.json",
+      "sha256": "65dcd0521cc328c0860aa635c8fb8e1591389beec587af0edc716dee6211b1d1",
+      "bytes": 3362,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/inputs.json"
+    },
+    {
+      "path": "benchmarks/openstep-005/DEVELOPMENT.md",
+      "sha256": "762fa27b8e9c912c558b952b5214180918010cced454312fd9e86f8aaf2c9126",
+      "bytes": 2100,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/DEVELOPMENT.md"
+    },
+    {
+      "path": "benchmarks/openstep-005/common.py",
+      "sha256": "6fb630c00c807fe98b89eb6d9a264de54a1e8e7a1b1911572b6cebb2dfb23004",
+      "bytes": 8127,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/common.py"
+    },
+    {
+      "path": "benchmarks/openstep-005/report.py",
+      "sha256": "82d181c3c2f6ee1b38f8a0221f3c27f237a209fab072c01b4fc8f36774993ac7",
+      "bytes": 18596,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/report.py"
+    },
+    {
+      "path": "benchmarks/openstep-005/artifact-manifest.json",
+      "sha256": "2f2320943c0e273a5984725a1243cfd0d9a9f4830680d5bbf3fb5acad060fc3e",
+      "bytes": 12007,
+      "url": "https://github.com/enuminous/Tokamak/blob/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks/openstep-005/artifact-manifest.json"
+    }
+  ],
+  "checks": {
+    "numerical_claims": "PASS",
+    "pinned_source_paths": "PASS",
+    "pinned_path_count": 21
+  }
+}
