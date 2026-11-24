@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Starting and sustaining the Tri-Sphere oscillator · eNuminous papers</title>
+<meta name="description" content="The Equation 10 correction distinguishes launching the Tri-Sphere oscillator from sustaining it with a timed return kick.">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#faf9f5;color:#222e30;font:1.08rem/1.65 Georgia,serif}main{max-width:51rem;margin:auto;padding:2rem clamp(1.15rem,5vw,3.5rem) 4.5rem}nav{font:0.9rem/1.5 system-ui,sans-serif;border-bottom:1px solid #aebbb4;padding-bottom:.85rem}h1{font-size:clamp(2.25rem,6vw,3.8rem);line-height:1.07;letter-spacing:-.035em;margin:.7em 0 .35em}h2{font-size:1.45rem;line-height:1.2;margin:1.7em 0 .6em}a{color:#195b59;text-underline-offset:.17em}a:focus-visible{outline:3px solid #af6828;outline-offset:2px}table{border-collapse:collapse;width:100%;font-size:.94em}td,th{text-align:left;vertical-align:top;padding:.65rem .55rem;border-bottom:1px solid #c9d1ca}th{background:#e7eeea}h1+p{font-size:.95rem;color:#485b59}p{margin:.75em 0}@media print{body{background:white}main{max-width:none;padding:0}nav{display:none}h2{break-after:avoid}tr{break-inside:avoid}}
+</style></head><body><main><nav aria-label="Papers"><a href="./index.html">eNuminous papers</a></nav><article><h1 id="starting-and-sustaining-the-tri-sphere-oscillator">Starting and sustaining the Tri-Sphere oscillator</h1>
+<p><em>Matthew Chenoweth Wright · Monolithic LLC · Technical correction · 24 November 2026</em></p>
+<h2 id="abstract">Abstract</h2>
+<p>Can the same pump start a motionless oscillator and sustain its swing? In the Tri-Sphere laboratory, the pump fires when the oscillator returns to the center. An oscillator resting there never triggers its first kick. Once launched, however, a damped harmonic oscillator can approach a repeating orbit because each kick replaces the energy lost on the previous trip. This distinction corrects Equation 10’s claim of a repeating orbit from every starting state. <a href="TriSphere-Blueprint-Equation-10-Corrected-2026-11-24.docx">Corrected blueprint (Word)</a> · <a href="https://github.com/enuminous/trisphere/blob/6735e3cab5c963a590e91acca31f9fd64e2cc1cf/source/equation-10.patch">Exact text changes</a></p>
+<h2 id="the-work-done-on-a-round-trip">The work done on a round trip</h2>
+<p>A. Beth Jones’s TGS:ATE / ORION blueprint describes an outward excursion from a center to a shell and a return through a Filter. Its tenth equation includes a restoring potential V, damping γ, and a drive D. Hold the valve setting fixed so that D depends only on radius. The work supplied on the outward path then cancels the work on the inward path. With positive damping, a moving oscillator still loses energy on both legs.</p>
+<p>More precisely, let W′(r) = D(r) and define E = v²/2 + V(r) − W(r). Along a smooth solution, dE/dt = −γv². A periodic orbit would recover its initial energy after one period. For γ &gt; 0, the integral of γv² can vanish only when the velocity stays zero. The laboratory’s Lean proof establishes this result under the stated smoothness and fixed-drive assumptions. <a href="https://github.com/enuminous/trisphere/blob/6735e3cab5c963a590e91acca31f9fd64e2cc1cf/TriSphere.lean">Lean source</a></p>
+<h2 id="a-pump-that-acts-on-return">A pump that acts on return</h2>
+<p>In the laboratory’s alternative model, the oscillator follows r″ + γr′ + r = 0 between center visits. An incoming center crossing reverses the velocity and adds energy J. Let Eₙ denote the energy just after a launch or kick. If each excursion retains a fraction q with 0 &lt; q &lt; 1, then</p>
+<p><strong>Eₙ₊₁ = qEₙ + J</strong>, with steady return energy <strong>E★ = J/(1 − q)</strong>.</p>
+<p>Each trip multiplies the deviation from E★ by q. The trajectory repeats exactly at E★. A positive launch energy approaches that orbit while the excursions stay inside the shell. At rest there is no crossing, so the recurrence has no first event. Substituting zero into the recurrence would insert a kick that the trigger never delivered.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Test in the dimensionless model</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Launch with E₀ = 2, damping γ = 0.35, and kick J = 1.2</td>
+<td>Return energy approaches 1.78393. The steady excursion peaks at radius 1.47411.</td>
+</tr>
+<tr class="even">
+<td>Keep the same launch and damping, then remove the kick</td>
+<td>Return energy falls to about 4 × 10⁻¹⁰ after 20 returns.</td>
+</tr>
+<tr class="odd">
+<td>Start at rest with the return pump enabled</td>
+<td>The oscillator stays at the center. It receives zero kicks.</td>
+</tr>
+</tbody>
+</table>
+<p>The full 80-case grid includes 20 zero-energy starts. All 20 stayed at rest. Nine numerical first-return comparisons checked the analytic flight time and the energy arriving back at the center. The Lean proofs cover the fixed point and convergence of the specified map. <a href="https://github.com/enuminous/trisphere/blob/6735e3cab5c963a590e91acca31f9fd64e2cc1cf/simulation/README.md">Numerical records</a> · <a href="https://github.com/enuminous/trisphere/blob/6735e3cab5c963a590e91acca31f9fd64e2cc1cf/evidence/sweep.json">Parameter sweep</a> · <a href="https://github.com/enuminous/trisphere/actions/runs/45510947721">Verification run</a></p>
+<h2 id="what-the-five-position-gps-describes">What the five-position GPS describes</h2>
+<p>In Jones’s revised blueprint, the thirteen layers form an atlas. The five positions describe one oscillator from the observer’s seat at Layer 6. The center and shell are the endpoints. The inner membrane represents inhalation, the Filter is the observer’s seat, and the outer membrane represents exhalation. The fixed-point result explains how a modeled breath can repeat. Deriving the thirteen-layer geometry from Filter imbalance and establishing periodicity for an entire density field remain open questions. <a href="https://tri-sphere-text.abethjones.workers.dev/">Author’s living blueprint</a> · <a href="https://github.com/enuminous/trisphere/blob/6735e3cab5c963a590e91acca31f9fd64e2cc1cf/source/blueprint-corrected.txt">Monolithic corrected text</a></p>
+<p>The accompanying Word document is the Monolithic editorial copy of Jones’s blueprint. The five edited paragraphs address the return trigger, the initial push, and the claims that depended on automatic periodicity. The original audit and the laboratory release identify the source versions and retain the earlier findings. <a href="https://github.com/enuminous/trisphere/blob/6735e3cab5c963a590e91acca31f9fd64e2cc1cf/AUDIT.md">Full audit</a> · <a href="https://enuminous.github.io/trisphere/">Open the laboratory</a> · <a href="https://github.com/enuminous/trisphere/releases/download/lab-v1.0.1/TriSphere_Laboratory.zip">Download release 1.0.1</a></p>
+</article></main></body></html>
