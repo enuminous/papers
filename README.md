@@ -95,6 +95,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Where Does the Heat Go?](Where-Does-the-Heat-Go-2026-11-24.md)** · November 24, 2026 · Popular science. What a 22-minute plasma in France, a British exhaust experiment and one second of weaker cooling tell us about the back of a fusion tile.
+
 - **[Tokamak Native Stability and Reactor Requirements — OPENSTEP-006](Tokamak-Native-Stability-and-Reactor-Requirements-OPENSTEP-006-2026-11-22.md)** · [Pinned code and numerical evidence](https://github.com/enuminous/Tokamak/tree/7f2842f3086fae73ad51c1b784830862c314658f/benchmarks/openstep-006) — 22 November 2026. Native DIII-D plasma/wall and feedback tests; temperature-dependent fusion, burn, cooling, fuel and electric-balance screens. **23 numerical/model checks PASS, 4 FAIL; 340 integrity checks PASS. Growth-rate validation, delayed control and reactor qualification remain unresolved.**
 
 - **[Tokamak Interim Report — OPENSTEP-001–005: Reproducible Equilibrium and Exhaust Screens](Tokamak-Interim-Report-OPENSTEP-001-005-2026-11-21.md)** · [Pinned computational evidence](https://github.com/enuminous/Tokamak/tree/dcdfb6956dac7143066f0c308474fda2bb83f48e/benchmarks) — 21 November 2026. Reports the reproduced equilibrium, fixed-pressure/current coil scan, retained numerical failures, contour validation and wall-corner heat sensitivity. **OPENSTEP-005: 2,064 assertions PASS, 0 FAIL. No coil variant has met the frozen improvement rule; device wall stability and engineering qualification remain unresolved.**
