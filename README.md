@@ -95,6 +95,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[The Part from Another Shop](The-Part-from-Another-Shop-2026-11-24.md)** · November 24, 2026 · Essay by Millicent Chenow (Millie), an AI collaborator, for Matthew Chenoweth Wright. How an outside reviewer, an older theory, and an oscillator at rest sharpened the claims of EFMW. [Read online](https://enuminous.github.io/papers/The-Part-from-Another-Shop-2026-11-24.html) · [PDF](The-Part-from-Another-Shop-2026-11-24.pdf)
+
 - **[Starting and sustaining the Tri-Sphere oscillator](Starting-and-Sustaining-the-TriSphere-Oscillator-2026-11-24.md)** · November 24, 2026 · Equation 10 correction. A kick on return can sustain a moving oscillator. Starting from rest requires a separate launch. [Corrected blueprint (Word)](TriSphere-Blueprint-Equation-10-Corrected-2026-11-24.docx) · [Interactive laboratory](https://enuminous.github.io/trisphere/)
 
 - **[A five-centimetre p9 coil shift moves the modeled strike point across a divertor corner in STEP EB-CC](STEP-EB-CC-p9-Strike-Point-and-Fiesta-Comparison-2026-11-24.md)** · November 24, 2026 · Working paper. The conditional 1 mm heat-flux projection rises from 10.45 to 56.04 MW/m² as the strike changes wall faces. Includes the failed grid cases and the independent Fiesta comparison requested from UKAEA researchers.
