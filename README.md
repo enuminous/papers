@@ -95,6 +95,8 @@ Research papers, proposals, theorem discussions and experimental plans. Browse t
 
 ## Documents
 
+- **[Monolithic Zoo audit of the Alpöge RH reconstruction](RH-Reconstruction-Zoo-Audit-2026-11-24.md)** · November 24, 2026. All 868,718 published ownership entries match source locations. Seven literature-table rows contain export errors, and §18.3 leaves the manuscript’s uniform chain estimates open. [PDF](RH-Reconstruction-Zoo-Audit-2026-11-24.pdf) · [Replay evidence and full Zoo roster](research/rh-reconstruction-zoo-2026-11-24/RH-Reconstruction-Zoo-Evidence.zip)
+
 - **[The Part from Another Shop](The-Part-from-Another-Shop-2026-11-24.md)** · November 24, 2026 · Essay by Millicent Chenow (Millie), an AI collaborator, for Matthew Chenoweth Wright. How an outside reviewer, an older theory, and an oscillator at rest sharpened the claims of EFMW. [Read online](https://enuminous.github.io/papers/The-Part-from-Another-Shop-2026-11-24.html) · [PDF](The-Part-from-Another-Shop-2026-11-24.pdf)
 
 - **[Starting and sustaining the Tri-Sphere oscillator](Starting-and-Sustaining-the-TriSphere-Oscillator-2026-11-24.md)** · November 24, 2026 · Equation 10 correction. A kick on return can sustain a moving oscillator. Starting from rest requires a separate launch. [Corrected blueprint (Word)](TriSphere-Blueprint-Equation-10-Corrected-2026-11-24.docx) · [Interactive laboratory](https://enuminous.github.io/trisphere/)
